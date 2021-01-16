@@ -1,0 +1,33 @@
+import json
+from pathlib import Path
+
+
+def extract_route(request):
+    first_line = request.split('\n')[0]
+    return first_line.split()[1][1:]
+
+
+def read_file(filepath):
+    if filepath.suffix in ['.txt', '.html', '.css', '.js']:
+        mode = 'r'
+    else:
+        mode = 'rb'
+
+    with open(filepath, mode=mode) as f:
+        return f.read()
+
+
+def load_data(path):
+    # with open(Path('data') / path) as f:
+    with open(f'data/{path}') as f:
+        return json.load(f)
+
+
+def load_template(path):
+    with open(f'templates/{path}') as f:
+        return f.read()
+
+
+def load_episodes(slug, path):
+    all_episodes = load_data(path)
+    return sorted([episode for episode in all_episodes if episode['slug-serie'] == slug], key=lambda e: e['numero'])

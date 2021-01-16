@@ -1,0 +1,81 @@
+site_name: Tecnologias Web - Insper 2021/1
+site_author: Andrew Kurauchi
+
+extra:
+    materia: Tecnologias Web
+    professor: Andrew Kurauchi
+    semestre: 2021/1
+
+theme:
+  feature:
+    tabs: true
+  name: 'material'
+  palette:
+      primary: 'indigo'
+      accent: 'blue'
+  font:
+    text: Roboto
+    code: Roboto Mono
+  custom_dir: 'custom_theme'
+
+docs_dir: material
+site_dir: docs
+
+site_url: https://insper.github.io/tecweb/
+
+
+nav:
+    - Home: index.md
+    - Aulas:
+        - '01 - Simpliflix':
+            - 'Parte 1: Criando o servidor': aulas/01-simpliflix/parte1.md
+            - 'Parte 2: Respondendo com páginas HTML': aulas/01-simpliflix/parte2.md
+            - 'Parte 3: Separando algumas responsabilidades': aulas/01-simpliflix/parte3.md
+            - 'Parte 4: Criando a página de detalhes': aulas/01-simpliflix/parte4.md
+
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
+    - translate-admonitions.js
+
+extra_css:
+    - css/printing.css
+    - css/tecweb.css
+
+markdown_extensions:
+  - markdown.extensions.tables
+  - tables
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.attr_list
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: material/aulas
+      check_paths: true
+plugins:
+    - search
