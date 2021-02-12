@@ -1,0 +1,47 @@
+[
+  {
+    "titulo": "Breaking Bad",
+    "slug": "breakingbad",
+    "imagem": "/img/breakingbad/breaking-bad.jpg"
+  },
+  {
+    "titulo": "Friends",
+    "slug": "friends",
+    "imagem": "/img/friends/friends.jpg"
+  },
+  {
+    "titulo": "Game of Thrones",
+    "slug": "gameofthrones",
+    "imagem": "/img/gameofthrones/game-of-thrones.jpg"
+  },
+  {
+    "titulo": "How I Met Your Mother",
+    "slug": "himym",
+    "imagem": "/img/himym/himym.jpg"
+  },
+  {
+    "titulo": "House of Cards",
+    "slug": "houseofcards",
+    "imagem": "/img/houseofcards/showcase.png"
+  },
+  {
+    "titulo": "Narcos",
+    "slug": "narcos",
+    "imagem": "/img/narcos/narcos.jpg"
+  },
+  {
+    "titulo": "Prison Break",
+    "slug": "prisonbreak",
+    "imagem": "/img/prisonbreak/prison-break.jpg"
+  },
+  {
+    "titulo": "Stranger Things",
+    "slug": "strangerthings",
+    "imagem": "/img/strangerthings/stranger-things.jpg"
+  },
+  {
+    "titulo": "Walking Dead",
+    "slug": "walkingdead",
+    "imagem": "/img/walkingdead/walking-dead.jpg"
+  }
+]

@@ -1,0 +1,867 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte2/">
+      
+      
+        <meta name="author" content="Andrew Kurauchi">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.2">
+    
+    
+      
+        <title>Parte 2: Respondendo com páginas HTML - Tecnologias Web - Insper 2021/1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.25b81cc6.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.80a78273.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../css/printing.css">
+    
+      <link rel="stylesheet" href="../../../css/tecweb.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#01-simpliflix" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+
+<script>
+  window.site_url = "https://toshikurauchi.github.io/tecweb/";
+</script>
+
+<div class="md-printing-header">
+  <img class="cabecalho" src="https://toshikurauchi.github.io/tecweb/css/cabecalho.png">
+  <img class="logo" src="https://toshikurauchi.github.io/tecweb/css/logo.png">
+
+  <div class="frontmatter">
+    <div class="materia"> Tecnologias Web </div>
+    <div class="professor"> Andrew Kurauchi </div>
+    <div class="semestre"> 2021/1 </div>
+  </div>
+</div>
+
+<header class="md-header" data-md-component="header">
+
+  <!-- Top-level navigation -->
+  <nav class="md-header-nav md-grid" aria-label="Header">
+
+    <!-- Link to home -->
+    <a
+      href="https://toshikurauchi.github.io/tecweb/"
+      title="Tecnologias Web - Insper 2021/1"
+      class="md-header-nav__button md-logo"
+      aria-label="Tecnologias Web - Insper 2021/1"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Tecnologias Web - Insper 2021/1
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Parte 2: Respondendo com páginas HTML
+            
+          </span>
+        </div>
+      
+    </div>
+
+    <!-- Button to open search dialogue -->
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository containing source -->
+    
+  </nav>
+</header>
+
+
+
+
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://toshikurauchi.github.io/tecweb/" title="Tecnologias Web - Insper 2021/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2021/1">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tecnologias Web - Insper 2021/1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Aulas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aulas" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aulas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
+    
+    <label class="md-nav__link" for="nav-2-1">
+      01 - Simpliflix
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="01 - Simpliflix" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        01 - Simpliflix
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte1/" title="Parte 1: Criando o servidor" class="md-nav__link">
+      Parte 1: Criando o servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Parte 2: Respondendo com páginas HTML
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Parte 2: Respondendo com páginas HTML" class="md-nav__link md-nav__link--active">
+      Parte 2: Respondendo com páginas HTML
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-respondendo-com-paginas-html" class="md-nav__link">
+    Parte 2: Respondendo com páginas HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agora-sim-o-html" class="md-nav__link">
+    Agora sim, o HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrando-a-lista-de-series" class="md-nav__link">
+    Mostrando a lista de séries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferenciando-rotas" class="md-nav__link">
+    Diferenciando rotas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte3/" title="Parte 3: Separando algumas responsabilidades" class="md-nav__link">
+      Parte 3: Separando algumas responsabilidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte4/" title="Parte 4: Criando a página de detalhes" class="md-nav__link">
+      Parte 4: Criando a página de detalhes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-respondendo-com-paginas-html" class="md-nav__link">
+    Parte 2: Respondendo com páginas HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agora-sim-o-html" class="md-nav__link">
+    Agora sim, o HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mostrando-a-lista-de-series" class="md-nav__link">
+    Mostrando a lista de séries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diferenciando-rotas" class="md-nav__link">
+    Diferenciando rotas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="01-simpliflix">01 - Simpliflix<a class="headerlink" href="#01-simpliflix" title="Permanent link">&para;</a></h1>
+<h2 id="parte-2-respondendo-com-paginas-html">Parte 2: Respondendo com páginas HTML<a class="headerlink" href="#parte-2-respondendo-com-paginas-html" title="Permanent link">&para;</a></h2>
+<p>Nosso servidor já responde com <code>Hello World</code>, mas queremos muito mais que isso. Queremos implementar o nosso Simpleflix e para isso a página precisa ter muito mais conteúdo e precisa ser apresentado de maneira estruturada. Está na hora de trazermos o bom e velho HTML de volta!</p>
+<p>Mas antes disso, nosso servidor atualmente responde uma requisição e para de rodar. Seria interessante que ele fosse capaz de responder mais do que uma requisição. Modifique seu programa da seguinte maneira:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0&#39;</span>
+<span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">8080</span>
+
+<span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">))</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Servidor escutando em (ctrl+click): http://</span><span class="si">{</span><span class="n">SERVER_HOST</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">SERVER_PORT</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="hll"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span>    <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="s1">&#39;HTTP/1.1 200 OK</span><span class="se">\n\n</span><span class="s1">Hello World&#39;</span>
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>A única diferença é que colocamos a parte do código que aceita a conexão do cliente, recebe a requisição e devolve a resposta dentro de um <code class="highlight"><span class="k">while</span> <span class="kc">True</span></code>. Então podemos recarregar a página no navegador quantas vezes quisermos e ela continuará a ser recebida.</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Agora o servidor é um programa em loop infinito. Se quiser parar de rodar, basta encerrar o programa com <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>.</p>
+</div>
+<h2 id="agora-sim-o-html">Agora sim, o HTML<a class="headerlink" href="#agora-sim-o-html" title="Permanent link">&para;</a></h2>
+<p>Vamos devolver uma página HTML simples, apenas para relembrar as coisas:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0&#39;</span>
+<span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">8080</span>
+
+<span class="hll"><span class="n">RESPONSE_TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;HTTP/1.1 200 OK</span>
+</span><span class="hll">
+</span><span class="hll"><span class="s1">&lt;!DOCTYPE html&gt;</span>
+</span><span class="hll"><span class="s1">&lt;html&gt;</span>
+</span><span class="hll"><span class="s1">&lt;head&gt;</span>
+</span><span class="hll"><span class="s1">&lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+</span><span class="hll"><span class="s1">&lt;title&gt;Simpliflix - Para quem gosta de assistir Netflix, não os filmes&lt;/title&gt;</span>
+</span><span class="hll"><span class="s1">&lt;/head&gt;</span>
+</span><span class="hll"><span class="s1">&lt;body&gt;</span>
+</span><span class="hll">
+</span><span class="hll"><span class="s1">&lt;h1&gt;Simpliflix&lt;/h1&gt;</span>
+</span><span class="hll"><span class="s1">&lt;p&gt;Para quem gosta de assistir Netflix, não os filmes&lt;/p&gt;</span>
+</span><span class="hll">
+</span><span class="hll"><span class="s1">&lt;/body&gt;</span>
+</span><span class="hll"><span class="s1">&lt;/html&gt;</span>
+</span><span class="hll"><span class="s1">&#39;&#39;&#39;</span>
+</span>
+<span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">))</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Servidor escutando em (ctrl+click): http://</span><span class="si">{</span><span class="n">SERVER_HOST</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">SERVER_PORT</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="hll">    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+</span>
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Testou? Funcionou? Podemos ir para o próximo passo.</p>
+<h2 id="mostrando-a-lista-de-series">Mostrando a lista de séries<a class="headerlink" href="#mostrando-a-lista-de-series" title="Permanent link">&para;</a></h2>
+<p>Podemos começar a pensar no conteúdo da nossa página principal. Vamos começar mostrando uma lista simples com os cartazes das séries, os nomes e os links para os detalhes. Você vai precisar baixar as <a href="../img.zip">imagens do handout clicando neste link</a>. Descompacte este arquivo zip na mesma pasta onde está o seu código do servidor. Ou seja, o conteúdo da sua pasta será:</p>
+<div class="highlight"><pre><span></span><code>- DIRETORIO-DO-SEU-SERVIDOR
+  |- servidor.py
+  |- img
+     |- breakingbad
+        |- ...
+     |- friends
+        |- ...
+     |- ...
+</code></pre></div>
+
+<p>Para mostrar a lista de séries vamos utilizar as tags HTML <em>unordered list</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span></code>), <em>list item</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span></code>), <em>anchor</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span></code>) e <em>image</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span></code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0&#39;</span>
+<span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">8080</span>
+
+<span class="n">RESPONSE_TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;HTTP/1.1 200 OK</span>
+
+<span class="s1">&lt;!DOCTYPE html&gt;</span>
+<span class="s1">&lt;html&gt;</span>
+<span class="s1">&lt;head&gt;</span>
+<span class="s1">&lt;meta charset=&quot;UTF-8&quot;&gt;</span>
+<span class="s1">&lt;title&gt;Simpliflix - Para quem gosta de assistir Netflix, não os filmes&lt;/title&gt;</span>
+<span class="s1">&lt;/head&gt;</span>
+<span class="s1">&lt;body&gt;</span>
+
+<span class="s1">&lt;h1&gt;Simpliflix&lt;/h1&gt;</span>
+<span class="s1">&lt;p&gt;Para quem gosta de assistir Netflix, não os filmes&lt;/p&gt;</span>
+
+<span class="hll"><span class="s1">&lt;ul&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/breakingbad&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/breakingbad/breaking-bad.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Breaking Bad</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/friends&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/friends/friends.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Friends</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/gameofthrones&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/gameofthrones/game-of-thrones.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Game of Thrones</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/himym&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/himym/himym.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      How I Met Your Mother</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/houseofcards&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/houseofcards/showcase.png&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      House of Cards</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/narcos&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/narcos/narcos.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Narcos</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/prisonbreak&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/prisonbreak/prison-break.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Prison Break</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/strangerthings&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/strangerthings/stranger-things.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Stranger Things</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;li&gt;</span>
+</span><span class="hll"><span class="s1">    &lt;a href=&quot;/walkingdead&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      &lt;img src=&quot;/img/walkingdead/walking-dead.jpg&quot;&gt;</span>
+</span><span class="hll"><span class="s1">      Walking Dead</span>
+</span><span class="hll"><span class="s1">    &lt;/a&gt;</span>
+</span><span class="hll"><span class="s1">  &lt;/li&gt;</span>
+</span><span class="hll"><span class="s1">&lt;/ul&gt;</span>
+</span>
+<span class="s1">&lt;/body&gt;</span>
+<span class="s1">&lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">))</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Servidor escutando em (ctrl+click): http://</span><span class="si">{</span><span class="n">SERVER_HOST</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">SERVER_PORT</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Se você rodou o código acima deve ter percebido que algo deu errado. Você não achou que seria tão simples assim, não é mesmo?</p>
+<p>Os arquivos existem no seu computador, mas o servidor precisa enviar esses arquivos como resposta quando forem solicitados.</p>
+<h2 id="diferenciando-rotas">Diferenciando rotas<a class="headerlink" href="#diferenciando-rotas" title="Permanent link">&para;</a></h2>
+<p>Temos que implementar algumas coisas, mas vamos por partes. Verifique a saída no seu terminal. Você deve encontrar vários blocos de texto, um para cada requisição feita pelo navegador. Alguns exemplos:</p>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">favicon.ico</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>GET /favicon.ico HTTP/1.1
+Host: 0.0.0.0:8080
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://0.0.0.0:8080/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,pt;q=0.8
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Stranger Things</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>GET /img/strangerthings/stranger-things.jpg HTTP/1.1
+Host: 0.0.0.0:8080
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://0.0.0.0:8080/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,pt;q=0.8
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Friends</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>GET /img/friends/friends.jpg HTTP/1.1
+Host: 0.0.0.0:8080
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://0.0.0.0:8080/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,pt;q=0.8
+</code></pre></div>
+
+</div>
+</div>
+<p>O nosso servidor responde a mesma página HTML para <strong>todas as requisições</strong>. Não importa se o cliente está pedindo a imagem <code>/img/strangerthings/stranger-things.jpg</code> ou o <code>favicon.ico</code>. Ele <strong>sempre</strong> responde a mesma página HTML.</p>
+<p>Repare que a primeira linha da requisição HTTP sempre possui uma palavra (<code>GET</code> - voltaremos a falar sobre ele mais para a frente no curso) seguida de uma rota (por exemplo, <code>/img/strangerthings/stranger-things.jpg</code>). Nós podemos utilizar essa rota no servidor para decidir o que devemos responder.</p>
+<p>Altere novamente o código do seu servidor para:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+</span><span class="hll"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">extract_route</span><span class="p">,</span> <span class="n">read_file</span>
+</span>
+<span class="hll"><span class="n">CUR_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+</span><span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0&#39;</span>
+<span class="n">SERVER_PORT</span> <span class="o">=</span> <span class="mi">8080</span>
+
+<span class="n">RESPONSE_TEMPLATE</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">HTML apagado por questão de espaço, mas você deve manter o código anterior aqui.</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">server_socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">setsockopt</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">SOL_SOCKET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SO_REUSEADDR</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">SERVER_HOST</span><span class="p">,</span> <span class="n">SERVER_PORT</span><span class="p">))</span>
+<span class="n">server_socket</span><span class="o">.</span><span class="n">listen</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Servidor escutando em (ctrl+click): http://</span><span class="si">{</span><span class="n">SERVER_HOST</span><span class="si">}</span><span class="s1">:</span><span class="si">{</span><span class="n">SERVER_PORT</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="hll">    <span class="n">route</span> <span class="o">=</span> <span class="n">extract_route</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span class="hll">    <span class="n">filepath</span> <span class="o">=</span> <span class="n">CUR_DIR</span> <span class="o">/</span> <span class="n">route</span>
+</span><span class="hll">    <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+</span><span class="hll">        <span class="n">response</span> <span class="o">=</span> <span class="s1">&#39;HTTP/1.1 200 OK</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="o">+</span> <span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">else</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">response</span> <span class="o">=</span> <span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+</span><span class="hll">    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span>
+    <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<p>Crie também o arquivo <code>utils.py</code> na pasta do seu servidor. Você deverá implementar os métodos <code class="highlight"><span class="n">extract_route</span></code> e <code class="highlight"><span class="n">read_file</span></code>. Para te ajudar, baixe também o arquivo <a href="../codigo/test_utils.py"><code>test_utils.py</code></a>. Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: <code>python test_utils.py</code> (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).</p>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Implemente a função <code class="highlight"><span class="n">extract_route</span></code>, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (<code class="highlight"><span class="o">/</span></code>). Por exemplo, para a requisição "Stranger Things" acima, sua função deve devolver <code class="highlight"><span class="s1">&#39;img/strangerthings/stranger-things.jpg&#39;</span></code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Implemente a função <code class="highlight"><span class="n">read_file</span></code>, que recebe um argumento do tipo <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path"><code class="highlight"><span class="n">Path</span></code></a> e devolve o conteúdo desse arquivo. Se a extensão do arquivo for alguma entre <code>.txt</code>, <code>.html</code>, <code>.css</code>, <code>.js</code>, sua função deve ler o arquivo como text e devolver uma string. Leia qualquer outro tipo de arquivo como binário e devolve os <code class="highlight"><span class="nb">bytes</span></code>. Se precisar refrescar a memória, leia a <a href="https://docs.python.org/3/library/functions.html#open">documentação da função <code class="highlight"><span class="nb">open</span></code></a>.</p>
+</div>
+<p>Depois de implementar as duas funções acima e atualizar o código, o servidor deve funcionar corretamente, mostrando as imagens. Sim, está feio, mas nós resolvemos isso na próxima aula. Por enquanto vai ficar assim mesmo.</p>
+<p>As páginas de detalhes ainda não estão prontas, mas antes disso precisamos refatorar o código porque ele já está acumulando muitas responsabilidades. Depois de se hidratar e fazer um alongamento, siga para a <a href="../parte3/">parte 3 do handout</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../parte1/" title="Parte 1: Criando o servidor" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Parte 1: Criando o servidor
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../parte3/" title="Parte 3: Separando algumas responsabilidades" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Parte 3: Separando algumas responsabilidades
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.806ca5c4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.01088dc6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="../../../translate-admonitions.js"></script>
+      
+    
+  </body>
+</html>
