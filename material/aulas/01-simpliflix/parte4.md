@@ -55,10 +55,4 @@ Os templates HTML já foram criados para você. Basta criar os arquivos `templat
 
 Depois de implementar a função `#!python details` a primeira versão do Simpliflix estará completa!
 
-Parabéns! Agora você pode pegar um pote de sorvete e mandar ver enquanto lê as descrições os episódios. Depois disso, se ainda tiver pique, é um bom momento para dar aquela relembrada em CSS para a próxima aula com essa lista de jogos:
-
-- [Flexbox Defense](http://www.flexboxdefense.com/)
-- [Flexbox Froggy](https://flexboxfroggy.com)
-- [Grid Garden](https://cssgridgarden.com)
-- [CSS Diner](http://flukeout.github.io/)
-- Se você tem alguma curiosidade sobre CSS você vai gostar disso: https://rupl.github.io/unfold/
+[Na próxima e última parte](parte5.md) nós vamos aprender a enviar dados para o servidor. Isso vai ser necessário no Projeto 1, então é dê aquela respirada e vamos lá!

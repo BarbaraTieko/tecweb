@@ -2,7 +2,7 @@
 
 ## Parte 1: Criando o servidor
 
-Vamos começar nosso curso com uma abordagem top-down. Vamos implementar uma página simples e, durante o desenvolvimento, discutiremos alguns dos detalhes e conceitos envolvidos. O objetivo deste handout é introduzir alguns conceitos de tecnologias web que serão importantes ao longo do curso a partir de uma abordagem mão na massa.
+Vamos começar nosso curso com um exemplo de implementação de uma página bem simples. Durante o desenvolvimento discutiremos alguns dos detalhes e conceitos envolvidos. O objetivo deste handout é introduzir alguns conceitos de tecnologias web que serão importantes ao longo do curso a partir de uma abordagem mão na massa.
 
 Após o final deste handout você terá um primeiro protótipo do Simpliflix, que é como o Netflix, mas sem a perda de tempo de assistir o filme. Você só fica olhando o catálogo e os detalhes dos filmes até dormir.
 

@@ -1,4 +1,4 @@
-from utils import load_data, load_template, load_episodes
+from utils import load_data, load_template, load_episodes, build_response
 
 
 def index():
@@ -11,7 +11,21 @@ def index():
     ]
     series = '\n'.join(series_li)
 
-    return load_template('index.html').format(series=series).encode()
+    return build_response(load_template('index.html').format(series=series))
+
+
+def login(request):
+    if request.startswith('POST'):
+        request = request.replace('\r', '')  # Remove caracteres indesejados
+        # Cabeçalho e corpo estão sempre separados por duas quebras de linha
+        partes = request.split('\n\n')
+        corpo = partes[1]
+        params = {}
+        for chave_valor in corpo.split('&'):
+            param = chave_valor.split('=')
+            params[param[0]] = param[1]
+        return build_response(code=303, reason='See Other', headers='Location: /')
+    return build_response(load_template('login.html'))
 
 
 def details(route):
@@ -25,5 +39,5 @@ def details(route):
             ]
             episodes = '\n'.join(episodes_li)
 
-            return load_template('details.html').format(title=serie['titulo'], image=serie['imagem'], episodes=episodes).encode()
-    return bytes()
+            return build_response(load_template('details.html').format(title=serie['titulo'], image=serie['imagem'], episodes=episodes))
+    return build_response()

@@ -14,7 +14,7 @@ Vamos começar separando a responsabilidade do modelo (lista de séries) da resp
 --8<-- "01-simpliflix/codigo/passo8.py"
 ```
 
-Você também vai precisar do arquivo [`series.json` (clique aqui para baixar)](../codigo/series.json). Coloque-o em uma pasta chamada `data`:
+Você também vai precisar do arquivo [`series.json` (clique aqui para baixar)](../codigo/data/series.json). Coloque-o em uma pasta chamada `data`:
 
 ```
 - DIRETORIO-DO-SEU-SERVIDOR

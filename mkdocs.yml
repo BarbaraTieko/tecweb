@@ -2,44 +2,44 @@ site_name: Tecnologias Web - Insper 2021/1
 site_author: Andrew Kurauchi
 
 extra:
-    materia: Tecnologias Web
-    professor: Andrew Kurauchi
-    semestre: 2021/1
+  materia: Tecnologias Web
+  professor: Andrew Kurauchi
+  semestre: 2021/1
 
 theme:
   feature:
     tabs: true
-  name: 'material'
+  name: "material"
   palette:
-      primary: 'indigo'
-      accent: 'blue'
+    primary: "indigo"
+    accent: "blue"
   font:
     text: Roboto
     code: Roboto Mono
-  custom_dir: 'custom_theme'
+  custom_dir: "custom_theme"
 
 docs_dir: material
 site_dir: docs
 
-site_url: https://insper.github.io/tecweb/
-
+site_url: https://toshikurauchi.github.io/tecweb/
 
 nav:
-    - Home: index.md
-    - Aulas:
-        - '01 - Simpliflix':
-            - 'Parte 1: Criando o servidor': aulas/01-simpliflix/parte1.md
-            - 'Parte 2: Respondendo com páginas HTML': aulas/01-simpliflix/parte2.md
-            - 'Parte 3: Separando algumas responsabilidades': aulas/01-simpliflix/parte3.md
-            - 'Parte 4: Criando a página de detalhes': aulas/01-simpliflix/parte4.md
+  - Home: index.md
+  - Aulas:
+      - "01 - Simpliflix":
+          - "Parte 1: Criando o servidor": aulas/01-simpliflix/parte1.md
+          - "Parte 2: Respondendo com páginas HTML": aulas/01-simpliflix/parte2.md
+          - "Parte 3: Separando algumas responsabilidades": aulas/01-simpliflix/parte3.md
+          - "Parte 4: Criando a página de detalhes": aulas/01-simpliflix/parte4.md
+          - "Parte 5: Fazendo login": aulas/01-simpliflix/parte5.md
 
 extra_javascript:
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
-    - translate-admonitions.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
+  - translate-admonitions.js
 
 extra_css:
-    - css/printing.css
-    - css/tecweb.css
+  - css/printing.css
+  - css/tecweb.css
 
 markdown_extensions:
   - markdown.extensions.tables
@@ -78,4 +78,4 @@ markdown_extensions:
       base_path: material/aulas
       check_paths: true
 plugins:
-    - search
+  - search
