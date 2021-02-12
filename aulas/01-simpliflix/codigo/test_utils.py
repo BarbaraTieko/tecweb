@@ -170,5 +170,27 @@ class LoadEpisodes(unittest.TestCase):
         self.assert_episodes_loaded('serie2', [eps[0], eps[3], eps[1]])
 
 
+@target_function('build_response')
+class ExtractRouteTestCase(unittest.TestCase):
+    def test_build_empty_response(self):
+        response = utils.build_response()
+        self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response)
+
+    def test_build_response_with_body(self):
+        response = utils.build_response('body of the response')
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response)
+
+    def test_build_response_with_body_kwarg(self):
+        response = utils.build_response(body='body of the response')
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response)
+
+    def test_build_response_with_code(self):
+        response = utils.build_response(code=404, reason='Not Found')
+        self.assertEqual('HTTP/1.1 404 Not Found\n\n'.encode(), response)
+
+    def test_build_response_with_code_and_header(self):
+        response = utils.build_response(code=302, reason='See Other', headers='Location /')
+        self.assertEqual('HTTP/1.1 302 See Other\nLocation /\n\n'.encode(), response)
+
 if __name__ == '__main__':
     unittest.main()

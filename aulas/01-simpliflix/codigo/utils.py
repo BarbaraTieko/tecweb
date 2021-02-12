@@ -31,3 +31,9 @@ def load_template(path):
 def load_episodes(slug, path):
     all_episodes = load_data(path)
     return sorted([episode for episode in all_episodes if episode['slug-serie'] == slug], key=lambda e: e['numero'])
+
+
+def build_response(body='', code=200, reason='OK', headers=''):
+    if headers:
+        headers = '\n' + headers
+    return f'HTTP/1.1 {code} {reason}{headers}\n\n{body}'.encode()
