@@ -1,27 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://toshikurauchi.github.io/tecweb/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://toshikurauchi.github.io/tecweb/notas/</loc>
+     <lastmod>2021-02-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/Aula01.pdf</loc>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte1/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte2/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte3/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte4/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://toshikurauchi.github.io/tecweb/aulas/01-simpliflix/parte5/</loc>
-     <lastmod>2021-02-12</lastmod>
+     <lastmod>2021-02-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://toshikurauchi.github.io/tecweb/aulas/02-desafio-css/</loc>
+     <lastmod>2021-02-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://toshikurauchi.github.io/tecweb/entregas/01-ELI5/</loc>
+     <lastmod>2021-02-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://toshikurauchi.github.io/tecweb/entregas/02-desafio-css/</loc>
+     <lastmod>2021-02-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
