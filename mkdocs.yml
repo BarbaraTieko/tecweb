@@ -27,13 +27,12 @@ nav:
   - Home: index.md
   - Cálculo da média: notas.md
   - Aulas:
-    - "01 - Simpliflix":
-      - "Slides": "aulas/01-simpliflix/Aula01.pdf"
-      - "Parte 1: Criando o servidor": aulas/01-simpliflix/parte1.md
-      - "Parte 2: Respondendo com páginas HTML": aulas/01-simpliflix/parte2.md
-      - "Parte 3: Separando algumas responsabilidades": aulas/01-simpliflix/parte3.md
-      - "Parte 4: Criando a página de detalhes": aulas/01-simpliflix/parte4.md
-      - "Parte 5: Fazendo login": aulas/01-simpliflix/parte5.md
+    - "01 - Get-it":
+      - "Slides": "aulas/01-getit/Aula01.pdf"
+      - "Parte 1: Criando o servidor": aulas/01-getit/parte1.md
+      - "Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
+      - "Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
+      - "Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
