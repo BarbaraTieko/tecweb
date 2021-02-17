@@ -1,6 +1,6 @@
 # 01 - Get-it
 
-Este handout está dividido em 5 partes. Você pode acessá-las nos links abaixo:
+Este handout está dividido em 4 partes. Você pode acessá-las nos links abaixo:
 
 - [Parte 1: Criando o servidor](01-getit/parte1.md)
 - [Parte 2: Respondendo com páginas HTML](01-getit/parte2.md)

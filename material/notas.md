@@ -21,7 +21,7 @@ Para fins de cálculo a seguinte conversão será utilizada (note a diferença n
 |    C+    |   6  |
 |    C     |   5  |
 |    D     |   3  |
-|    1     |   0  |
+|    I     |   0  |
 
 ## Atividades
 
@@ -37,4 +37,4 @@ $$Projetos = \frac{40\cdot Projeto1 + 30\cdot Projeto2 + 30\cdot Projeto3}{100}$
 
 Teremos 2 avaliações ao longo do semestre. A avaliação final **não** ocorrerá na semana de avaliações finais. A média de avaliações será calculada como:
 
-$$Avaliações = \frac{40\cdot AI + 60\cdot AF}{100}
+$$Avaliações = \frac{40\cdot AI + 60\cdot AF}{100}$$

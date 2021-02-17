@@ -37,6 +37,9 @@ nav:
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": entregas/02-desafio-css.md
+  - Projetos:
+    - "Projeto 1":
+      - "Parte A": projetos/projeto1/projeto1a.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
