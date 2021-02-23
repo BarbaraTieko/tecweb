@@ -787,6 +787,10 @@
 <h2 id="muito-bem-agora-vamos-entender-o-codigo-acima">Muito bem, agora vamos entender o código acima<a class="headerlink" href="#muito-bem-agora-vamos-entender-o-codigo-acima" title="Permanent link">&para;</a></h2>
 <p>O módulo <code class="highlight"><span class="n">socket</span></code> é utilizado para lidar com chamadas de rede em baixo nível. A <a href="https://docs.python.org/3/library/socket.html">documentação oficial</a> pode ser útil para entender as funções utilizadas.</p>
 <p>As constantes <code class="highlight"><span class="n">SERVER_HOST</span></code> e <code class="highlight"><span class="n">SERVER_PORT</span></code> definem o endereço do servidor (no caso, <code>0.0.0.0</code>) e a porta. Um computador pode ser acessado via rede através de uma porta. Por enquanto basta sabermos que um mesmo computador possui muitas portas e é necessário especificar qual porta queremos usar para a nossa conexão.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, tente acessar <code>localhost:8080</code> ao invés de <code>0.0.0.0:8080</code>.</p>
+</div>
 <p>As outras linhas antes do primeiro <code class="highlight"><span class="nb">print</span></code> basicamente dizem para o programa se conectar à porta desejada e aguardar requisições. O método <code class="highlight"><span class="n">accept</span><span class="p">()</span></code> trava a execução do programa até que uma requisição seja recebida.</p>
 <p>Quando um cliente se conecta ao servidor (isso ainda não é a requisição), o programa realiza o segundo <code class="highlight"><span class="nb">print</span></code>, fecha todas as conexões e termina. Note que o nosso servidor não enviou nenhuma resposta para o cliente e por isso o navegador mostrou a página de erro, dizendo que a página solicitada está inacessível.</p>
 <h2 id="entendi-mas-entao-como-eu-envio-a-resposta">Entendi, mas então como eu envio a resposta?<a class="headerlink" href="#entendi-mas-entao-como-eu-envio-a-resposta" title="Permanent link">&para;</a></h2>

@@ -28,11 +28,7 @@ def target_function(function_name):
 
 @target_function('extract_route')
 class ExtractRouteTestCase(unittest.TestCase):
-    def test_has_method(self):
-        if not hasattr(utils, 'extract_route'):
-            self.skipTest('Função não implementada')
-
-    def test_extract_root(self):
+    def test_extract_root_from_request(self):
         request = REQUEST_TEMPLATE.format(method='GET', route='/')
         self.assertEqual('', utils.extract_route(request))
 
@@ -112,7 +108,7 @@ class LoadTemplateTestCase(unittest.TestCase):
 
 
 @target_function('build_response')
-class ExtractRouteTestCase(unittest.TestCase):
+class BuildResponseTestCase(unittest.TestCase):
     def test_build_empty_response(self):
         response = utils.build_response()
         self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response)
