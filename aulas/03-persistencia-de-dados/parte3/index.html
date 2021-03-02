@@ -741,7 +741,11 @@
 </div>
 <p>Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método <code>execute</code> do atributo <code>conn</code>.</p>
 <div class="admonition danger">
-<p class="admonition-title">Importante</p>
+<p class="admonition-title">Importante 1</p>
+<p>Quando for adicionar strings no banco de dados, lembre-se de colocar as aspas ao redor dos valores.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Importante 2</p>
 <p>Depois de chamar o <code>execute</code> com o comando de inserção você precisa chamar o método <code>commit()</code> do atributo <code>conn</code> para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o <code>commit</code>.</p>
 </div>
 <div class="admonition example">
@@ -766,15 +770,15 @@
 
 <p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>.</p>
 </div>
-<p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code>:</p>
+<p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="highlight"><span class="n">Note</span></code> nesse arquivo):</p>
 <div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
 <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Lembrar de tomar água&#39;</span><span class="p">))</span>
 </code></pre></div>
 
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-<p>Toda vez que você executar o arquivo <code>exemplo_de_uso.py</code> esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo <code>banco.db</code> e executar o arquivo novamente.</p>
 </div>
+<p>Toda vez que você executar o arquivo <code>exemplo_de_uso.py</code> esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo <code>banco.db</code> e executar o arquivo novamente.</p>
 <p>Quando tiver terminado, siga para a <a href="../parte4/">próxima parte do handout</a>.</p>
                 
               
