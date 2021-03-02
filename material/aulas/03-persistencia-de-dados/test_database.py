@@ -13,7 +13,10 @@ TABLE_NAME = 'note'
 class DatabaseTestCase(unittest.TestCase):
     def setUp(self):
         db_file = Path.cwd() / DB_FILENAME
-        db_file.unlink(missing_ok=True)  # Apaga o arquivo, caso exista
+        try:
+            db_file.unlink()  # Apaga o arquivo, caso exista
+        except FileNotFoundError:
+            pass
 
     def test_connect_on_init(self):
         mock_connection = create_autospec(sqlite3.Connection)
