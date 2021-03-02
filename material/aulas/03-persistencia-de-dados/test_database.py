@@ -40,16 +40,19 @@ class DatabaseTestCase(unittest.TestCase):
 
         cursor = conn.execute(f"PRAGMA table_info({TABLE_NAME});")
         found_count = 0
-        for _, name, coltype, notnull, _, pk in cursor:
-            if name == 'id':
+        for i, (_, name, coltype, notnull, _, pk) in enumerate(cursor):
+            if i == 0:
+                assert name == 'id', 'Para facilitar os testes, a primeira coluna deve obrigatoriamente ser a coluna id.'
                 assert coltype == 'INTEGER', 'A coluna id deveria ser do tipo inteiro'
                 assert pk, 'A coluna id deveria ser a chave primária'
-            elif name == 'title':
-                assert coltype == 'STRING', 'A coluna title deveria ser do tipo texto'
+            elif i == 1:
+                assert name == 'title', 'Para facilitar os testes, a segunda coluna deve obrigatoriamente ser a coluna title.'
+                assert coltype == 'STRING' or coltype == 'TEXT', 'A coluna title deveria ser do tipo texto'
                 assert not notnull, 'A coluna title deveria poder ser vazia'
                 assert not pk, 'A coluna title não deveria ser chave primária'
-            elif name == 'content':
-                assert coltype == 'STRING', 'A coluna content deveria ser do tipo texto'
+            elif i == 2:
+                assert name == 'content', 'Para facilitar os testes, a terceira coluna deve obrigatoriamente ser a coluna content.'
+                assert coltype == 'STRING' or coltype == 'TEXT', 'A coluna content deveria ser do tipo texto'
                 assert notnull, 'A coluna content não deveria poder ser vazia'
                 assert not pk, 'A coluna content não deveria ser chave primária'
             else:

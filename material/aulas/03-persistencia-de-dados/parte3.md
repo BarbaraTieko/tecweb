@@ -11,7 +11,10 @@ INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00
 
 Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método `execute` do atributo `conn`.
 
-!!! danger "Importante"
+!!! danger "Importante 1"
+    Quando for adicionar strings no banco de dados, lembre-se de colocar as aspas ao redor dos valores.
+
+!!! danger "Importante 2"
     Depois de chamar o `execute` com o comando de inserção você precisa chamar o método `commit()` do atributo `conn` para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o `commit`.
 
 !!! example "Exercício"
@@ -39,7 +42,7 @@ Para executar os comandos no banco de dados através do Python, utilizaremos nov
 
     Depois de implementar o método `#!python add(self, note)`, teste-o com o arquivo `test_database.py`.
 
-Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py` e depois visualize o resultado no DB Browser clicando na aba `Browse Data`:
+Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py` e depois visualize o resultado no DB Browser clicando na aba `Browse Data` (observação: você vai precisar importar a classe `#!python Note` nesse arquivo):
 
 ```python
 db.add(Note(title='Pão doce', content='Abra o pão e coloque o seu suco em pó favorito.'))
@@ -47,6 +50,6 @@ db.add(Note(title=None, content='Lembrar de tomar água'))
 ```
 
 !!! danger "Importante"
-    Toda vez que você executar o arquivo `exemplo_de_uso.py` esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo `banco.db` e executar o arquivo novamente.
+Toda vez que você executar o arquivo `exemplo_de_uso.py` esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo `banco.db` e executar o arquivo novamente.
 
 Quando tiver terminado, siga para a [próxima parte do handout](parte4.md).
