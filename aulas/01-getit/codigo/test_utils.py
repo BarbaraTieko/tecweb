@@ -36,11 +36,11 @@ class ExtractRouteTestCase(unittest.TestCase):
 @target_function('read_file')
 class ReadFileTestCase(unittest.TestCase):
     def assert_read(self, filename, read_data):
-        filename = Path() / 'subdir' / 'textfile.txt'
+        fullpath = Path() / 'subdir' / filename
 
         m = mock_open(read_data=read_data)
         with patch('utils.open', m):
-            received = utils.read_file(filename)
+            received = utils.read_file(fullpath)
 
         self.assertEqual(received, read_data)
 
