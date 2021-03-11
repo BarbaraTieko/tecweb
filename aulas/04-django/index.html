@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://toshikurauchi.github.io/tecweb/aulas/03-persistencia-de-dados/">
+        <link rel="canonical" href="https://toshikurauchi.github.io/tecweb/aulas/04-django/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-persistencia-de-dados" class="md-skip">
+        <a href="#django" class="md-skip">
           Skip to content
         </a>
       
@@ -447,12 +447,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       03 - Persistência de Dados
@@ -466,6 +464,122 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
         03 - Persistência de Dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+      Handout Parte 1: Instalando o SQLite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+      Handout Parte 2: Criando a tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+      Handout Parte 3: Inserindo dados na tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+      Handout Parte 4: Consultando e selecionando dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+      Handout Parte 5: Atualizando os dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+      Handout Parte 6: Apagando dados
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-4">
+      04 - Django
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="04 - Django" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        04 - Django
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -511,56 +625,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
+  <a href="#instalando-o-django" class="md-nav__link">
+    Instalando o Django
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
+  <a href="#indice-do-handout" class="md-nav__link">
+    Índice do handout
   </a>
   
 </li>
@@ -578,121 +651,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
-      Handout Parte 1: Instalando o SQLite
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
-      Handout Parte 2: Criando a tabela
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
-      Handout Parte 3: Inserindo dados na tabela
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
-      Handout Parte 4: Consultando e selecionando dados
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
-      Handout Parte 5: Atualizando os dados
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
-      Handout Parte 6: Apagando dados
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
-    <label class="md-nav__link" for="nav-3-4">
-      04 - Django
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="04 - Django" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        04 - Django
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../04-django/" title="Handout" class="md-nav__link">
-      Handout
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
+    <a href="parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
       Handout Parte 1: Iniciando o projeto
     </a>
   </li>
@@ -704,7 +663,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
+    <a href="parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
       Handout Parte 2: Criando nosso primeiro app
     </a>
   </li>
@@ -716,7 +675,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
+    <a href="parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
       Handout Parte 3: Integrando com o banco de dados
     </a>
   </li>
@@ -728,7 +687,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
+    <a href="parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
       Handout Parte 4: O Django Admin
     </a>
   </li>
@@ -740,7 +699,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
+    <a href="parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
       Handout Parte 5: Usando templates
     </a>
   </li>
@@ -752,7 +711,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
+    <a href="parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
       Handout Parte 6: Trabalhando com formulários e o método POST
     </a>
   </li>
@@ -974,56 +933,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
+  <a href="#instalando-o-django" class="md-nav__link">
+    Instalando o Django
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
+  <a href="#indice-do-handout" class="md-nav__link">
+    Índice do handout
   </a>
   
 </li>
@@ -1044,38 +962,50 @@
                   
                 
                 
-                <h1 id="03-persistencia-de-dados">03 - Persistência de Dados<a class="headerlink" href="#03-persistencia-de-dados" title="Permanent link">&para;</a></h1>
-<p>Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.</p>
-<p>Opa! Espere um pouco. Arquivos?!</p>
-<p>É, arquivos. Por quê? Tem algum problema com isso?</p>
-<p>Vamos pensar um pouco sobre isso.</p>
-<h2 id="qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao">Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?<a class="headerlink" href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" title="Permanent link">&para;</a></h2>
-<h3 id="cenario-1">Cenário 1<a class="headerlink" href="#cenario-1" title="Permanent link">&para;</a></h3>
-<p>Imagine que a sua aplicação já está sendo utilizada há um tempo e o arquivo que contém os dados é razoavelmente grande. Seu servidor recebe uma requisição pedindo para atualizar uma informação que está armazenada no arquivo. O arquivo é aberto, o elemento a ser modificado é identificado e, enquanto o arquivo é salvo, ocorre um erro no computador, interrompendo a gravação do arquivo. Ao tentar acessar novamente o arquivo você descobre que ele está corrompido e todos os dados foram perdidos.</p>
-<h3 id="cenario-2">Cenário 2<a class="headerlink" href="#cenario-2" title="Permanent link">&para;</a></h3>
-<p>Sua página fica muito popular e passa a receber milhares de acessos por segundo. O arquivo contendo os dados demora 1 milissegundo para ser aberto e lido e ele pode ser aberto por apenas um processo por vez. Como apenas uma requisição pode ter o arquivo aberto de cada vez, em poucos segundos a sua aplicação para de responder. Você está recebendo mais requisições do que dá conta de responder.</p>
-<p>Você decide armazenar os dados na memória e apenas abrir o arquivo para salvar novas modificações. Duas requisições de modificação são enviadas simultaneamente e uma sobrescreve o que a outra acabou de escrever. Os dados da primeira requisição são perdidos.</p>
-<h3 id="cenario-3">Cenário 3<a class="headerlink" href="#cenario-3" title="Permanent link">&para;</a></h3>
-<p>Seu arquivo de dados já ocupa alguns gigabytes. Toda vez que algum usuário pede uma informação você precisa ler todo o arquivo em busca dela.</p>
-<h3 id="a-solucao">A solução<a class="headerlink" href="#a-solucao" title="Permanent link">&para;</a></h3>
-<p>Você decide que para resolver todos esses problemas vai criar um módulo responsável por lidar com escritas simultâneas (concorrentes) de dados, armazenamento de backups em caso de falhas, indexação dos dados para acelerar buscas, realizar o controle do acesso aos dados e tratar de diversos outros detalhes relacionados ao armazenamento. Parabéns, você acabou de implementar um sistema de gerenciamento de bancos de dados!</p>
-<h2 id="bancos-de-dados">Bancos de Dados<a class="headerlink" href="#bancos-de-dados" title="Permanent link">&para;</a></h2>
-<p>Nosso objetivo em Tecnologias Web não é entrar em detalhes sobre bancos de dados. Deixamos isso para vocês trabalharem em Megadados. Aqui nós teremos apenas um primeiro contato, possibilitando o armazenamento e recuperação dos dados de forma mais robusta do que utilizando apenas arquivos.</p>
-<p>Um dos tipos mais tradicionais de bancos de dados são os <strong>bancos de dados relacionais</strong>. A ideia é que cada "tipo de dado" é armazenado separadamente em uma tabela e as relações entre os objetos (chamados de <strong>entidades</strong>) são indicadas por identificadores únicos que permitem a localização do objeto relacionado na outra tabela. Ou seja, é um modelo que depende fortemente da representação dos dados como um conjunto de tabelas. Para interagir (criar, modificar, recuperar, deletar) com esse conjunto de tabelas foi criada uma linguagem chamada <em>Structured Query Language</em> (SQL).</p>
-<p>Como comentamos anteriormente, o nosso objetivo é começar a utilizar SQL em nossas aplicações. Não temos a intenção de desenvolver nenhum estudo aprofundado sobre SQL ou bancos de dados <strong>ainda</strong>. Neste handout teremos nosso primeiro contato com o SQL através de um banco de dados chamado <a href="https://www.sqlite.org/index.html">SQLite</a>.</p>
+                <h1 id="django">Django<a class="headerlink" href="#django" title="Permanent link">&para;</a></h1>
+<p>Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Django. Para isso, vamos refazer o backend da parte A do projeto.</p>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-<p>Você não deve utilizar o SQLite em um servidor web real. <a href="https://sqlite.org/whentouse.html">Ele não foi feito para isso</a>. Para ambientes de produção utilize sistemas mais robustos como o PostgreSQL, MySQL, ou SQL Server. Dito isso, os conceitos de SQL que veremos neste handout são os mesmos utilizados nesses outros sistemas. Optamos pelo SQLite por ele ser mais fácil de instalar e configurar.</p>
+<p>O Django possui <strong>muitas</strong> funcionalidades. O nosso objetivo neste handout é oferecer apenas uma introdução bastante breve. Você provavelmente vai precisar ler outros tutoriais, a documentação do Django e fazer pesquisas no Google para conseguir fazer o projeto.</p>
+<p>Conte com o professor para te ajudar com as dúvidas, mas é esperado que você desenvolva a maturidade para pesquisar e aprender o que falta por conta própria. Essa é uma habilidade essencial na vida de qualquer desenvolvedora/desenvolvedor.</p>
 </div>
-<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
-<p>O handout é divido nos seguintes passos:</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Em Tecnologias Web nós utilizaremos o Django 3.X. É importante levar isso em conta quando for procurar respostas no Google. O <a href="https://docs.djangoproject.com/en/3.1/releases/3.0/">Django 3.0</a> foi lançado no final de 2019, então será comum você encontrar respostas desatualizadas. <strong>Sempre</strong> que encontrar alguma função/método que não conhece, consulte a documentação da biblioteca para verificar se essa é a forma mais atualizada de se resolver o problema (essa dica vale para qualquer biblioteca/framework que for utilizar).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Referência</p>
+<p>Este handout é baseado no <a href="https://docs.djangoproject.com/en/3.0/intro/tutorial01/">tutorial disponível na própria documentação do Django</a>. A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).</p>
+</div>
+<h2 id="instalando-o-django">Instalando o Django<a class="headerlink" href="#instalando-o-django" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Crie uma pasta para a nova versão do projeto e, dentro dela, <a href="../../auxiliar/venv/">crie um ambiente virtual</a> (<code>venv</code>) chamado <code>env</code> para o seu projeto. <strong>Lembre-se de ativar o ambiente antes de seguir para o próximo exercício.</strong></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Agora sim, instale o Django:</p>
+<div class="codehilite"><pre><span></span><code>$ python -m pip install Django
+</code></pre></div>
+
+
+</div>
+<p>Para verificar se a instalação foi bem sucedida, inicie o Python em sua versão interativa (digite <code>python</code> no terminal) e utilize os seguintes comandos:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">django</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">django</span><span class="o">.</span><span class="n">get_version</span><span class="p">())</span>
+</code></pre></div>
+
+<p>O Django deve ter sido instalado em uma versão igual ou superior à 3.0.</p>
+<p>Quando o Django estiver instalado, siga para o <a href="parte1/">primeiro passo</a>.</p>
+<h2 id="indice-do-handout">Índice do handout<a class="headerlink" href="#indice-do-handout" title="Permanent link">&para;</a></h2>
+<p>Este handout está dividido nos passos a seguir:</p>
 <ul>
-<li><a href="parte1/">Parte 1: Instalando o SQLite</a></li>
-<li><a href="parte2/">Parte 2: Criando a tabela</a></li>
-<li><a href="parte3/">Parte 3: Inserindo dados na tabela</a></li>
-<li><a href="parte4/">Parte 4: Consultando e selecionando dados</a></li>
-<li><a href="parte5/">Parte 5: Atualizando os dados</a></li>
-<li><a href="parte6/">Parte 6: Apagando dados</a></li>
+<li><a href="parte1/">Parte 1: Iniciando o projeto</a></li>
+<li><a href="parte2/">Parte 2: Criando nosso primeiro app</a></li>
+<li><a href="parte3/">Parte 3: Integrando com o banco de dados</a></li>
+<li><a href="parte4/">Parte 4: O Django Admin</a></li>
+<li><a href="parte5/">Parte 5: Usando templates</a></li>
+<li><a href="parte6/">Parte 6: Trabalhando com formulários e o método POST</a></li>
 </ul>
                 
               
@@ -1095,7 +1025,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../02-desafio-css/" title="Handout" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1104,19 +1034,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Handout
+                Handout Parte 6: Apagando dados
               </div>
             </div>
           </a>
         
         
-          <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handout Parte 1: Instalando o SQLite
+                Handout Parte 1: Iniciando o projeto
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
