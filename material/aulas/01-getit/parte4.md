@@ -113,7 +113,7 @@ Modifique seu programa principal da seguinte maneira:
 !!! example "EXERCÍCIO"
     Modifique a função `#!python index` no arquivo `views.py` para que ela devolva o resultado de `#!python build_response`.
 
-    Dica: no `#!python if` do `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`. Caso contrário, `#!python build_response(load_template('login.html'))`.
+    Dica: no caso do `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
 
 Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.
 
