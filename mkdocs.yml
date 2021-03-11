@@ -46,6 +46,7 @@ nav:
       - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
       - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
     - "04 - Django":
+      - "Slides": "aulas/04-django/Aula07.pdf"
       - "Handout": aulas/04-django.md
       - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
       - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
