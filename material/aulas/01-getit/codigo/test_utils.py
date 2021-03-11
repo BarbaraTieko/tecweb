@@ -32,6 +32,17 @@ class ExtractRouteTestCase(unittest.TestCase):
         request = REQUEST_TEMPLATE.format(method='GET', route='/')
         self.assertEqual('', utils.extract_route(request))
 
+    def test_extract_simple_path_from_request(self):
+        request = REQUEST_TEMPLATE.format(method='GET', route='/some-path')
+        self.assertEqual('some-path', utils.extract_route(request))
+
+    def test_extract_compose_path_from_request(self):
+        request = REQUEST_TEMPLATE.format(method='GET', route='/some-path/other-path')
+        self.assertEqual('some-path/other-path', utils.extract_route(request))
+
+    def test_extract_filename_path_from_request(self):
+        request = REQUEST_TEMPLATE.format(method='GET', route='/css/style.css')
+        self.assertEqual('css/style.css', utils.extract_route(request))
 
 @target_function('read_file')
 class ReadFileTestCase(unittest.TestCase):
