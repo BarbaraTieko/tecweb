@@ -70,7 +70,7 @@ Vamos lá!
 A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou pelo menos parte dele. Você se lembra que no handout 1 os arquivos estáticos (imagem, css, js) também precisavam ser servidos pelo servidor? Pois é, não temos como fugir disso, mas o Django facilita esse processo.
 
 !!! example "Exercício"
-    Crie as pastas `notes/static/img` e salve [esta imagem](img/logo-getit.png) em `notes/static/img/logo-getit.png`.
+    Crie as pastas `notes/static/img` e salve [esta imagem](img/logo-getit.png) em `notes/static/notes/img/logo-getit.png`.
 
 !!! example "Exercício"
     Modifique o arquivo `notes/templates/notes/index.html` com o seguinte conteúdo:
