@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://toshikurauchi.github.io/tecweb/aulas/03-persistencia-de-dados/">
+        <link rel="canonical" href="https://toshikurauchi.github.io/tecweb/aulas/05-bd/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-persistencia-de-dados" class="md-skip">
+        <a href="#containers-e-bancos-de-dados" class="md-skip">
           Skip to content
         </a>
       
@@ -447,12 +447,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       03 - Persistência de Dados
@@ -474,101 +472,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Handout
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Handout" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/" title="Handout" class="md-nav__link">
       Handout
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -578,7 +486,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
       Handout Parte 1: Instalando o SQLite
     </a>
   </li>
@@ -590,7 +498,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
       Handout Parte 2: Criando a tabela
     </a>
   </li>
@@ -602,7 +510,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
       Handout Parte 3: Inserindo dados na tabela
     </a>
   </li>
@@ -614,7 +522,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
       Handout Parte 4: Consultando e selecionando dados
     </a>
   </li>
@@ -626,7 +534,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
       Handout Parte 5: Atualizando os dados
     </a>
   </li>
@@ -638,7 +546,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
       Handout Parte 6: Apagando dados
     </a>
   </li>
@@ -779,10 +687,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
     
     <label class="md-nav__link" for="nav-3-5">
       05 - Containers e Bancos de Dados
@@ -806,7 +716,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
+    <a href="Aula09.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -816,11 +726,74 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../05-bd/" title="Handout" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handout
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Handout" class="md-nav__link md-nav__link--active">
       Handout
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-inicial" class="md-nav__link">
+    Configuração inicial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-banco-de-dados" class="md-nav__link">
+    Configuração do banco de dados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-django" class="md-nav__link">
+    Configuração do Django
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1040,56 +1013,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
+  <a href="#configuracao-inicial" class="md-nav__link">
+    Configuração inicial
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
+  <a href="#configuracao-do-banco-de-dados" class="md-nav__link">
+    Configuração do banco de dados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-django" class="md-nav__link">
+    Configuração do Django
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
   </a>
   
 </li>
@@ -1110,38 +1056,96 @@
                   
                 
                 
-                <h1 id="03-persistencia-de-dados">03 - Persistência de Dados<a class="headerlink" href="#03-persistencia-de-dados" title="Permanent link">&para;</a></h1>
-<p>Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.</p>
-<p>Opa! Espere um pouco. Arquivos?!</p>
-<p>É, arquivos. Por quê? Tem algum problema com isso?</p>
-<p>Vamos pensar um pouco sobre isso.</p>
-<h2 id="qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao">Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?<a class="headerlink" href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" title="Permanent link">&para;</a></h2>
-<h3 id="cenario-1">Cenário 1<a class="headerlink" href="#cenario-1" title="Permanent link">&para;</a></h3>
-<p>Imagine que a sua aplicação já está sendo utilizada há um tempo e o arquivo que contém os dados é razoavelmente grande. Seu servidor recebe uma requisição pedindo para atualizar uma informação que está armazenada no arquivo. O arquivo é aberto, o elemento a ser modificado é identificado e, enquanto o arquivo é salvo, ocorre um erro no computador, interrompendo a gravação do arquivo. Ao tentar acessar novamente o arquivo você descobre que ele está corrompido e todos os dados foram perdidos.</p>
-<h3 id="cenario-2">Cenário 2<a class="headerlink" href="#cenario-2" title="Permanent link">&para;</a></h3>
-<p>Sua página fica muito popular e passa a receber milhares de acessos por segundo. O arquivo contendo os dados demora 1 milissegundo para ser aberto e lido e ele pode ser aberto por apenas um processo por vez. Como apenas uma requisição pode ter o arquivo aberto de cada vez, em poucos segundos a sua aplicação para de responder. Você está recebendo mais requisições do que dá conta de responder.</p>
-<p>Você decide armazenar os dados na memória e apenas abrir o arquivo para salvar novas modificações. Duas requisições de modificação são enviadas simultaneamente e uma sobrescreve o que a outra acabou de escrever. Os dados da primeira requisição são perdidos.</p>
-<h3 id="cenario-3">Cenário 3<a class="headerlink" href="#cenario-3" title="Permanent link">&para;</a></h3>
-<p>Seu arquivo de dados já ocupa alguns gigabytes. Toda vez que algum usuário pede uma informação você precisa ler todo o arquivo em busca dela.</p>
-<h3 id="a-solucao">A solução<a class="headerlink" href="#a-solucao" title="Permanent link">&para;</a></h3>
-<p>Você decide que para resolver todos esses problemas vai criar um módulo responsável por lidar com escritas simultâneas (concorrentes) de dados, armazenamento de backups em caso de falhas, indexação dos dados para acelerar buscas, realizar o controle do acesso aos dados e tratar de diversos outros detalhes relacionados ao armazenamento. Parabéns, você acabou de implementar um sistema de gerenciamento de bancos de dados!</p>
-<h2 id="bancos-de-dados">Bancos de Dados<a class="headerlink" href="#bancos-de-dados" title="Permanent link">&para;</a></h2>
-<p>Nosso objetivo em Tecnologias Web não é entrar em detalhes sobre bancos de dados. Deixamos isso para vocês trabalharem em Megadados. Aqui nós teremos apenas um primeiro contato, possibilitando o armazenamento e recuperação dos dados de forma mais robusta do que utilizando apenas arquivos.</p>
-<p>Um dos tipos mais tradicionais de bancos de dados são os <strong>bancos de dados relacionais</strong>. A ideia é que cada "tipo de dado" é armazenado separadamente em uma tabela e as relações entre os objetos (chamados de <strong>entidades</strong>) são indicadas por identificadores únicos que permitem a localização do objeto relacionado na outra tabela. Ou seja, é um modelo que depende fortemente da representação dos dados como um conjunto de tabelas. Para interagir (criar, modificar, recuperar, deletar) com esse conjunto de tabelas foi criada uma linguagem chamada <em>Structured Query Language</em> (SQL).</p>
-<p>Como comentamos anteriormente, o nosso objetivo é começar a utilizar SQL em nossas aplicações. Não temos a intenção de desenvolver nenhum estudo aprofundado sobre SQL ou bancos de dados <strong>ainda</strong>. Neste handout teremos nosso primeiro contato com o SQL através de um banco de dados chamado <a href="https://www.sqlite.org/index.html">SQLite</a>.</p>
+                <h1 id="containers-e-bancos-de-dados">Containers e Bancos de Dados<a class="headerlink" href="#containers-e-bancos-de-dados" title="Permanent link">&para;</a></h1>
+<p>Até o momento nós utilizamos o SQLite para as nossas operações com bancos de dados. Já discutimos que ele não é adequado para um ambiente de produção. A instalação e configuração de um banco de dados costumava ser um processo bastante manual, mas esse processo se tornou muito mais simples com o surgimento dos containers. Os containers são um tipo de virtualização de sistema operacional através dos quais é possível termos um ambiente isolado e controlado que contém apenas o que precisamos para a nossa aplicação. De maneira geral, basta compartilhar os arquivos de configuração e outra pessoa (ou máquina) pode executar uma cópia exata do seu container em outro computador. Neste handout nós utilizaremos um container Docker que já possui o banco de dados PostgreSQL instalado.</p>
+<h2 id="configuracao-inicial">Configuração inicial<a class="headerlink" href="#configuracao-inicial" title="Permanent link">&para;</a></h2>
+<p>Instale o Docker seguindo as instruções para o seu sistema operacional: <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a></p>
+<p>Faça o download da imagem do Postgres (é a definição de um sistema com o Postgres instalado):</p>
+<div class="codehilite"><pre><span></span><code>docker pull postgres
+</code></pre></div>
+
+
+<p>Crie uma pasta no seu computador para armazenar os dados do banco de dados (você pode criar em outro diretório se preferir):</p>
+<div class="codehilite"><pre><span></span><code>mkdir -p $HOME/docker/volumes/postgres
+</code></pre></div>
+
+
+<p>Execute o container:</p>
+<div class="codehilite"><pre><span></span><code>docker run --rm --name pg-docker -e POSTGRES_PASSWORD=escolhaumasenha -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+</code></pre></div>
+
+
+<p>No comando acima estamos executando um container chamado <code>pg-docker</code> (você pode mudar o nome), com <code>escolhaumasenha</code> como a senha do administrador do banco de dados, na porta <code>5432</code> (é a porta padrão do Postgres) e a pasta que criamos no penúltimo comando será mapeada dentro do container como a pasta <code>/var/lib/postgresql/data</code>. O <code>postgres</code> no final do comando é o nome da imagem que vamos utilizar (que foi baixada no <code>docker pull postgres</code>).</p>
+<p>Você pode verificar se o container está rodando com o comando:</p>
+<div class="codehilite"><pre><span></span><code>docker ps
+</code></pre></div>
+
+
+<h2 id="configuracao-do-banco-de-dados">Configuração do banco de dados<a class="headerlink" href="#configuracao-do-banco-de-dados" title="Permanent link">&para;</a></h2>
+<p>Agora que a aplicação está rodando, vamos configurar o banco de dados. O Docker está executando um container, que é como se o seu sistema operacional estivesse executando outro sistema operacional dentro dele. Precisamos entrar no terminal do container para executar os comandos de configuração. Utilize o comando a seguir para entrar no terminal do container:</p>
+<div class="codehilite"><pre><span></span><code>docker exec -it pg-docker bash
+</code></pre></div>
+
+
+<p>Dentro do terminal do container, execute o comando a seguir para iniciar a linha de comando do Postgres:</p>
+<div class="codehilite"><pre><span></span><code>psql -h localhost -U postgres
+</code></pre></div>
+
+
+<p>Agora, utilize os comandos a seguir para criar o banco de dados e o usuário que serão utilizados pela sua aplicação (algumas configurações a seguir são recomendadas pela <a href="https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration">documentação do Django</a>):</p>
+<div class="codehilite"><pre><span></span><code>CREATE DATABASE getit;
+CREATE USER getituser WITH PASSWORD &#39;getitsenha&#39;;
+ALTER ROLE getituser SET client_encoding TO &#39;utf8&#39;;
+ALTER ROLE getituser SET default_transaction_isolation TO &#39;read committed&#39;;
+ALTER ROLE getituser SET timezone TO &#39;UTC&#39;;
+GRANT ALL PRIVILEGES ON DATABASE getit TO getituser;
+\q
+</code></pre></div>
+
+
+<h2 id="configuracao-do-django">Configuração do Django<a class="headerlink" href="#configuracao-do-django" title="Permanent link">&para;</a></h2>
+<p>Agora vamos configurar o Django para que ele utilize o Postgres do nosso container ao invés do SQLite. Para isso será necessário instalar o módulo <code>psycopg2</code> (<strong>não se esqueça de ativar o ambiente virtual antes</strong>):</p>
+<div class="codehilite"><pre><span></span><code>$ pip install psycopg2
+</code></pre></div>
+
+
+<p>Se o comando acima não funcionar, tente este (ele <a href="https://www.psycopg.org/docs/install.html">não é adequado para uso em produção</a>):</p>
+<div class="codehilite"><pre><span></span><code>$ pip install psycopg2-binary
+</code></pre></div>
+
+
+<p>Procure o código a seguir no arquivo <code>getit/settings.py</code> no seu projeto:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Substitua esse dicionário por:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;getit&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;getituser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;getitsenha&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Pronto! Seu projeto Django está configurado para utilizar o Postgres!</p>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-<p>Você não deve utilizar o SQLite em um servidor web real. <a href="https://sqlite.org/whentouse.html">Ele não foi feito para isso</a>. Para ambientes de produção utilize sistemas mais robustos como o PostgreSQL, MySQL, ou SQL Server. Dito isso, os conceitos de SQL que veremos neste handout são os mesmos utilizados nesses outros sistemas. Optamos pelo SQLite por ele ser mais fácil de instalar e configurar.</p>
+<p>Você está usando um novo banco de dados, portanto será necessário executar novamente os comandos <code>python manage.py migrate</code> para aplicar as migrações e <code>python manage.py createsuperuser</code> para criar o usuário administrador.</p>
 </div>
-<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
-<p>O handout é divido nos seguintes passos:</p>
+<h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="parte1/">Parte 1: Instalando o SQLite</a></li>
-<li><a href="parte2/">Parte 2: Criando a tabela</a></li>
-<li><a href="parte3/">Parte 3: Inserindo dados na tabela</a></li>
-<li><a href="parte4/">Parte 4: Consultando e selecionando dados</a></li>
-<li><a href="parte5/">Parte 5: Atualizando os dados</a></li>
-<li><a href="parte6/">Parte 6: Apagando dados</a></li>
+<li><a href="https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198">https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04</a></li>
+<li><a href="https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration">https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration</a></li>
 </ul>
                 
               
@@ -1161,7 +1165,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../02-desafio-css/" title="Handout" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="Aula09.pdf" title="Slides" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1170,19 +1174,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Handout
+                Slides
               </div>
             </div>
           </a>
         
         
-          <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handout Parte 1: Instalando o SQLite
+                Usando Python com ambientes virtuais
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
