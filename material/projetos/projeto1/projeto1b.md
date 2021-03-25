@@ -2,7 +2,7 @@
 
 **Trabalho individual**
 
-**Prazo: 05/04/2021 (segunda-feira)**
+**Prazo: 12/04/2021 (segunda-feira)**
 
 **Entrega via GitHub (enviar endereço do repositório no Blackboard)**
 
