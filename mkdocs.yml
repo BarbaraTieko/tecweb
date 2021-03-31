@@ -59,11 +59,13 @@ nav:
       - "Handout": aulas/05-bd.md
     - "06 - Deploy da aplicação":
       - "Handout": aulas/06-deploy.md
+    - "07 - JavaScript": aulas/07-javascript.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": entregas/02-desafio-css.md
+    - "03 - Servidor de Exercícios JS": entregas/03-servidor-js.md
   - Projetos:
     - "Projeto 1":
       - "Parte A": projetos/projeto1/projeto1a.md
@@ -71,7 +73,8 @@ nav:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
-  - translate-admonitions.js
+  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
+  - markdown-enhancer.js
 
 extra_css:
   - css/printing.css
