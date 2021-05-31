@@ -2,7 +2,7 @@
 
 **Trabalho em duplas ou individual**
 
-**Prazo: 09/06/2021 (quarta-feira)**
+**Prazo: 16/06/2021 (quarta-feira)**
 
 **Entrega via GitHub (enviar endereço do repositório no Blackboard)**
 
