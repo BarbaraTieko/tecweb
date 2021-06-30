@@ -1,10 +1,10 @@
-site_name: Tecnologias Web - Insper 2021/1
+site_name: Tecnologias Web - Insper 2021/2
 site_author: Andrew Kurauchi
 
 extra:
   materia: Tecnologias Web
-  professor: Andrew Kurauchi
-  semestre: 2021/1
+  professor: Barbara Agena
+  semestre: 2021/2
 
 theme:
   feature:
@@ -21,7 +21,7 @@ theme:
 docs_dir: material
 site_dir: docs
 
-site_url: https://toshikurauchi.github.io/tecweb/
+site_url: https://barbaratieko.github.io/tecweb/
 
 nav:
   - Home: index.md

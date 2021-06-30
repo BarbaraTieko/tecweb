@@ -1,14 +1,14 @@
 # Tecnologias Web
 
-Bem vindo ao curso de Tecnologias Web 2021/1.
+Bem vindo ao curso de Tecnologias Web 2021/2.
 
-**Professor**
+**Professora**
 
-- Andrew Kurauchi
+- Barbara Agena
 
 **Professor Auxiliar**
 
-- Gustavo Calixto
+-
 
 **Aulas:**
 
