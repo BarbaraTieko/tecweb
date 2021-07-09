@@ -1479,7 +1479,17 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 <p>Crie também o arquivo <code>utils.py</code> na pasta do seu servidor. Você deverá implementar os métodos <code class="highlight"><span class="n">extract_route</span></code> e <code class="highlight"><span class="n">read_file</span></code>. Para te ajudar, baixe também o arquivo <a href="../codigo/test_utils.py"><code>test_utils.py</code></a>. Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: <code>python test_utils.py</code> (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).</p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
-<p>Implemente a função <code class="highlight"><span class="n">extract_route</span></code>, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (<code class="highlight"><span class="o">/</span></code>). Por exemplo, para a requisição "logo-getit.png" acima, sua função deve devolver <code class="highlight"><span class="s1">&#39;img/logo-getit.png&#39;</span></code>.</p>
+<p>Implemente a função <code class="highlight"><span class="n">extract_route</span></code>, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (<code class="highlight"><span class="o">/</span></code>). Por exemplo, para a requisição:
+<div class="highlight"><pre><span></span><code>GET /img/logo-getit.png HTTP/1.1
+Host: 0.0.0.0:8080
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://0.0.0.0:8080/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9,pt;q=0.8
+</code></pre></div></p>
+<p>Sua função deve devolver <code class="highlight"><span class="s1">&#39;img/logo-getit.png&#39;</span></code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
