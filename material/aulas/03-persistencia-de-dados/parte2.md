@@ -7,7 +7,7 @@ conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 ```
 
 !!! example "Exercício"
-    Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect`) em um atributo chamado `#!python conn`. O arquivo do banco de dados deve se chamar `banco.db`.
+    Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect`) em um atributo chamado `#!python conn`. Note que o arquivo do banco de dados possui a extensão `.db`.
 
     Lembre-se de importar o pacote: `#!python import sqlite3`.
 

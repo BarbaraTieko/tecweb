@@ -92,7 +92,19 @@ Altere novamente o código do seu servidor para:
 Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: `python test_utils.py` (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).
 
 !!! example "EXERCÍCIO"
-    Implemente a função `#!python extract_route`, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (`#!python /`). Por exemplo, para a requisição "logo-getit.png" acima, sua função deve devolver `#!python 'img/logo-getit.png'`.
+    Implemente a função `#!python extract_route`, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (`#!python /`). Por exemplo, para a requisição:
+    ```
+    GET /img/logo-getit.png HTTP/1.1
+    Host: 0.0.0.0:8080
+    Connection: keep-alive
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36
+    Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+    Referer: http://0.0.0.0:8080/
+    Accept-Encoding: gzip, deflate
+    Accept-Language: en-US,en;q=0.9,pt;q=0.8
+    ```
+
+    Sua função deve devolver `#!python 'img/logo-getit.png'`.
 
 !!! example "EXERCÍCIO"
     Implemente a função `#!python read_file`, que recebe um argumento do tipo [`#!python Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) e devolve o conteúdo desse arquivo. Se a extensão do arquivo for alguma entre `.txt`, `.html`, `.css`, `.js`, sua função deve ler o arquivo como text e devolver uma string. Leia qualquer outro tipo de arquivo como binário e devolve os `#!python bytes`. Se precisar refrescar a memória, leia a [documentação da função `#!python open`](https://docs.python.org/3/library/functions.html#open).
