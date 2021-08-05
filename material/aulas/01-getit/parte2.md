@@ -92,7 +92,9 @@ Altere novamente o código do seu servidor para:
 Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: `python test_utils.py` (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).
 
 !!! example "EXERCÍCIO"
-    Implemente a função `#!python extract_route`, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (`#!python /`). Por exemplo, para a requisição:
+    Implemente a função `#!python extract_route`, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (`#!python /`).
+
+    Por exemplo, para a requisição:
     ```
     GET /img/logo-getit.png HTTP/1.1
     Host: 0.0.0.0:8080

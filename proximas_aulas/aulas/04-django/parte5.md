@@ -1,11 +1,11 @@
 # Parte 5: Usando templates
 
-Atualmente a nossa página inicial mostra apenas um texto contendo no navegador. O nosso objetivo nesta parte do handout é mostrar a lista de anotações, assim como fizemos no [Handout 1](../01-getit.md).
+Atualmente a nossa página inicial mostra apenas um texto no navegador. O nosso objetivo nesta parte do handout é mostrar a lista de anotações, assim como fizemos no [Handout 1](../01-getit.md).
 
 Já vimos no primeiro handout que não é uma boa ideia criarmos uma string com todo o HTML dentro do código Python. A nossa vida será muito mais fácil se mantivermos as reposabilidades separadas. Por esse motivo, vamos pular diretamente para o uso de templates no Django.
 
 !!! example "Exercício"
-    Crie as pastas `notes/templates/notes` (sim, o `notes` é repetido mesmo) e então crie dois os dois arquivos a seguir
+    Crie as pastas `notes/templates/notes` (sim, o `notes` é repetido mesmo) e então crie os dois arquivos a seguir
 
     === "notes/templates/notes/base.html"
         ```html
@@ -70,7 +70,7 @@ Vamos lá!
 A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou pelo menos parte dele. Você se lembra que no handout 1 os arquivos estáticos (imagem, css, js) também precisavam ser servidos pelo servidor? Pois é, não temos como fugir disso, mas o Django facilita esse processo.
 
 !!! example "Exercício"
-    Crie as pastas `notes/static/img` e salve [esta imagem](img/logo-getit.png) em `notes/static/notes/img/logo-getit.png`.
+    Crie as pastas `notes/static/notes/img` e salve [esta imagem](img/logo-getit.png) em `notes/static/notes/img/logo-getit.png`.
 
 !!! example "Exercício"
     Modifique o arquivo `notes/templates/notes/index.html` com o seguinte conteúdo:

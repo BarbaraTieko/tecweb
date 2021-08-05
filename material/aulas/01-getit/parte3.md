@@ -28,7 +28,7 @@ Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](.
 ```
 
 !!! example "EXERCÍCIO"
-    Implemente a função `#!python load_data`, que recebe o caminho de um arquivo JSON e devolve o conteúdo do arquivo com esse nome **dentro da pasta `data`** carregado como um objeto Python. Por exemplo: se o conteúdo do arquivo `data/dados.json` for a string `{"chave": "valor"}`, sua função deve devolver o dicionário Python `#!python {"chave": "valor"}` para a entrada `dados.json` (note que o nome da pasta não é enviado como argumento). Dica: já existe uma [função Python para isso](https://docs.python.org/3/library/json.html) (e você viu em Design de Software).
+    Implemente a função `#!python load_data`, que recebe o nome de um arquivo JSON e devolve o conteúdo do arquivo carregado como um objeto Python (A função deve assumir que este arquivo JSON está localizado dentro da pasta `data`). Por exemplo: se o conteúdo do arquivo `data/dados.json` for a string `{"chave": "valor"}`, sua função deve devolver o dicionário Python `#!python {"chave": "valor"}` para a entrada `dados.json` (note que o nome da pasta não é enviado como argumento). Dica: já existe uma [função Python para isso](https://docs.python.org/3/library/json.html) (e você viu em Design de Software).
 
 ### Visualização
 
