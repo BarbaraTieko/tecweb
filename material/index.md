@@ -21,4 +21,4 @@ Bem-vind@ ao curso de Tecnologias Web 2021/2.
 
 **Algumas Datas**
 
-- 24/08: Entrega do [ELI5](entregas/01-ELI5.md)
+- 23/08: Entrega do [ELI5](entregas/01-ELI5.md)
