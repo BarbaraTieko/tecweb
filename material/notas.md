@@ -2,7 +2,7 @@
 
 A média é composta por 3 partes: $Atividades$ (atividades obrigatórias pontuais), $Projetos$ e $Avaliações$:
 
-$$Média = \frac{10\cdot Atividades + 45\cdot Projetos + 45\cdot Avaliações}{100}$$
+$$Média = \frac{10\cdot Atividades + 50\cdot Projetos + 40\cdot Avaliações}{100}$$
 
 Caso $Atividades < 5$, $Projetos < 5$ ou $Avaliações < 5$:
 
