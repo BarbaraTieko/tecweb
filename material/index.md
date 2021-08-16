@@ -1,6 +1,6 @@
 # Tecnologias Web
 
-Bem vindo ao curso de Tecnologias Web 2021/2.
+Bem-vind@ ao curso de Tecnologias Web 2021/2.
 
 **Professora**
 
@@ -12,12 +12,12 @@ Bem vindo ao curso de Tecnologias Web 2021/2.
 
 **Aulas:**
 
-- TER 07:30 - 09:30
-- QUI 15:45 - 17:45 (Aulas Híbridas)
+- TER 07:30 - 09:30 (Remoto)
+- QUI 15:45 - 17:45 (Híbrido - Laboratório Desenvolvimento Colaborativo Ágil 1 Prédio 2 - 4º andar)
 
 **Atendimento:**
 
-- SEG 13:30 - 15:00
+- QUI 09:45 - 11:15
 
 **Algumas Datas**
 
