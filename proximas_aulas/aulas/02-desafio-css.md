@@ -10,7 +10,7 @@ E produzir esta modificando apenas o CSS:
 
 ![](02-desafio-css/img/Get-it.gif)
 
-As instruções podem ser encontradas aqui: https://github.com/toshikurauchi/tecweb-2021-1-desafio-css
+As instruções podem ser encontradas aqui: https://github.com/barbaratieko/tecweb-2021-2-desafio-css
 
 ## IMPORTANTE
 
