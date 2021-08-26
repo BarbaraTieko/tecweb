@@ -36,6 +36,9 @@ Eu sei, me desculpe. Agora sim, vamos começar!
 
 Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842)):
 
+!!!danger "Atenção"
+    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, tente acessar `localhost:8080` ao invés de `0.0.0.0:8080`.
+
 ```python
 --8<-- "01-getit/codigo/passo1.py"
 ```
@@ -51,9 +54,6 @@ Agora que você chegou nesta linha sem se desesperar, olhe para o terminal. O ú
 O módulo `#!python socket` é utilizado para lidar com chamadas de rede em baixo nível. A [documentação oficial](https://docs.python.org/3/library/socket.html) pode ser útil para entender as funções utilizadas.
 
 As constantes `#!python SERVER_HOST` e `#!python SERVER_PORT` definem o endereço do servidor (no caso, `0.0.0.0`) e a porta. Um computador pode ser acessado via rede através de uma porta. Por enquanto basta sabermos que um mesmo computador possui muitas portas e é necessário especificar qual porta queremos usar para a nossa conexão.
-
-!!!danger "Atenção"
-    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, tente acessar `localhost:8080` ao invés de `0.0.0.0:8080`.
 
 As outras linhas antes do primeiro `#!python print` basicamente dizem para o programa se conectar à porta desejada e aguardar requisições. O método `#!python accept()` trava a execução do programa até que uma requisição seja recebida.
 

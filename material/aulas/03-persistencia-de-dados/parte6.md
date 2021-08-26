@@ -14,7 +14,7 @@ DELETE FROM dados_pessoais WHERE identificador = 5
 
 Note que depois dessa operação não vai mais existir uma linha com `identificador` igual a `5`. Os identificadores não são atualizados para preencher valores inexistentes.
 
-!!! example "Exercício"
+!!! example "Exercício 06"
     Implemente o método `#!python delete(self, note_id)`, que recebe o valor de um `id` e apaga essa entrada do banco de dados. Obs: lembre-se de chamar o método `#!python commit` depois do `#!python execute`.
 
     Teste sua função com o `#!python test_delete_row`.

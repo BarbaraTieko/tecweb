@@ -22,7 +22,7 @@ for linha in cursor:
    cpf = linha[2]
 ```
 
-!!! example "Exercício"
+!!! example "Exercício 04"
     Implemente o método `#!python get_all(self)` na classe `#!python Database`. Ele não recebe nenhum argumento e devolve uma lista de `Note`, com os valores obtidos do banco de dados.
 
     O teste `#!python test_select_rows` do `test_database.py` verifica se esse método está correto.

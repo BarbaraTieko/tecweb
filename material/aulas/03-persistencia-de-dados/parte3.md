@@ -17,7 +17,7 @@ Para executar os comandos no banco de dados através do Python, utilizaremos nov
 !!! danger "Importante 2"
     Depois de chamar o `execute` com o comando de inserção você precisa chamar o método `commit()` do atributo `conn` para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o `commit`.
 
-!!! example "Exercício"
+!!! example "Exercício 03"
     Crie um método `#!python add(self, note)` na classe `#!python Database`, que recebe um objeto do tipo `#!python Note` e insere seus dados no banco de dados. Adicione a definição da classe `#!python Note` no arquivo `database.py`:
 
     ```python

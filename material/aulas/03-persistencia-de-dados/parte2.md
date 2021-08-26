@@ -6,7 +6,7 @@ De modo geral, sistemas de bancos de dados são programas que ficam executando i
 conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 ```
 
-!!! example "Exercício"
+!!! example "Exercício 01"
     Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect`) em um atributo chamado `#!python conn`. Note que o arquivo do banco de dados possui a extensão `.db`.
 
     Lembre-se de importar o pacote: `#!python import sqlite3`.
@@ -36,7 +36,7 @@ Você poderia então, por exemplo, criar a tabela `dados_pessoais` com o comando
 
 Ok, já sei qual é o comando para criar uma tabela, mas como eu o envio para o banco de dados? Agora é a hora de utilizarmos a conexão que criamos no exercício anterior. O objeto armazenado no atributo `#!python conn` possui um método chamado `#!python execute`, que recebe uma string contendo um comando SQL e envia para o banco de dados.
 
-!!! example "Exercício"
+!!! example "Exercício 02"
     Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. A tabela deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
 
     Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta.

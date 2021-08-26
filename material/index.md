@@ -17,7 +17,7 @@ Bem-vind@ ao curso de Tecnologias Web 2021/2.
 
 **Atendimento:**
 
-- QUI 09:45 - 11:15
+- QUI 09:45 - 11:15 (Remoto)
 
 **Algumas Datas**
 
