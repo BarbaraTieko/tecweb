@@ -2,7 +2,9 @@
 
 **Trabalho individual**
 
-**Prazo: 08/09/2021 (quarta-feira)**
+~~**Prazo: 08/09/2021 (quarta-feira)**~~
+
+**Novo Prazo: 12/09/2021 (Domingo)**
 
 **Entrega via GitHub (enviar endereço do repositório no Blackboard)**
 
