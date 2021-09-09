@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://tecnologiasWeb2021.2.github.io/tecweb/aulas/03-persistencia-de-dados/parte6/">
+        <link rel="canonical" href="https://tecnologiasWeb2021.2.github.io/tecweb/aulas/04-django/parte6/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Handout Parte 6: Apagando dados - Tecnologias Web - Insper 2021/2</title>
+        <title>Handout Parte 6: Trabalhando com formulários e o método POST - Tecnologias Web - Insper 2021/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parte-6-apagando-dados" class="md-skip">
+        <a href="#parte-6-trabalhando-com-formularios-e-o-metodo-post" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Handout Parte 6: Apagando dados
+              Handout Parte 6: Trabalhando com formulários e o método POST
             
           </span>
         </div>
@@ -447,12 +447,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       03 - Persistência de Dados
@@ -476,7 +474,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Handout" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -488,7 +486,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
       Handout Parte 1: Instalando o SQLite
     </a>
   </li>
@@ -500,7 +498,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
       Handout Parte 2: Criando a tabela
     </a>
   </li>
@@ -512,7 +510,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
       Handout Parte 3: Inserindo dados na tabela
     </a>
   </li>
@@ -524,7 +522,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
       Handout Parte 4: Consultando e selecionando dados
     </a>
   </li>
@@ -536,7 +534,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+    <a href="../../03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
       Handout Parte 5: Atualizando os dados
     </a>
   </li>
@@ -546,20 +544,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Handout Parte 6: Apagando dados" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
       Handout Parte 6: Apagando dados
     </a>
-    
   </li>
 
         
@@ -572,10 +561,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
     
     <label class="md-nav__link" for="nav-3-4">
       04 - Django
@@ -599,7 +590,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/Aula07.pdf" title="Slides" class="md-nav__link">
+    <a href="../Aula07.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -611,7 +602,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/" title="Handout" class="md-nav__link">
+    <a href="../" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -623,7 +614,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
+    <a href="../parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
       Handout Parte 1: Iniciando o projeto
     </a>
   </li>
@@ -635,7 +626,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
+    <a href="../parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
       Handout Parte 2: Criando nosso primeiro app
     </a>
   </li>
@@ -647,7 +638,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
+    <a href="../parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
       Handout Parte 3: Integrando com o banco de dados
     </a>
   </li>
@@ -659,7 +650,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
+    <a href="../parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
       Handout Parte 4: O Django Admin
     </a>
   </li>
@@ -671,7 +662,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
+    <a href="../parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
       Handout Parte 5: Usando templates
     </a>
   </li>
@@ -681,11 +672,53 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handout Parte 6: Trabalhando com formulários e o método POST
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link md-nav__link--active">
       Handout Parte 6: Trabalhando com formulários e o método POST
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recebendo-requisicoes-post" class="md-nav__link">
+    Recebendo requisições POST
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -884,6 +917,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#recebendo-requisicoes-post" class="md-nav__link">
+    Recebendo requisições POST
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -898,22 +948,49 @@
                   
                 
                 
-                <h1 id="parte-6-apagando-dados">Parte 6: Apagando dados<a class="headerlink" href="#parte-6-apagando-dados" title="Permanent link">&para;</a></h1>
-<p>A última operação que falta para completarmos as operações CRUD (<b>C</b>reate, <b>R</b>ead, <b>U</b>pdate, <b>D</b>elete) é apagar uma linha. Para isso vamos utilizar o comando <code class="highlight"><span class="k">DELETE</span></code>:</p>
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">NOME_DA_TABELA</span> <span class="k">WHERE</span> <span class="n">CONDICAO</span><span class="p">;</span>
-</code></pre></div>
-
-<p>Por exemplo:</p>
-<div class="highlight"><pre><span></span><code><span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">dados_pessoais</span> <span class="k">WHERE</span> <span class="n">identificador</span> <span class="o">=</span> <span class="mi">5</span>
-</code></pre></div>
-
-<p>Note que depois dessa operação não vai mais existir uma linha com <code>identificador</code> igual a <code>5</code>. Os identificadores não são atualizados para preencher valores inexistentes.</p>
+                <h1 id="parte-6-trabalhando-com-formularios-e-o-metodo-post">Parte 6: Trabalhando com formulários e o método POST<a class="headerlink" href="#parte-6-trabalhando-com-formularios-e-o-metodo-post" title="Permanent link">&para;</a></h1>
+<p>Faça um teste na sua página. Preencha os dados no formulário e clique no botão para submetê-lo. Uma página parecida com essa deve ter aparecido:</p>
+<p><img alt="" src="../img/csrf.png" /></p>
+<p>O <a href="https://docs.djangoproject.com/en/3.1/ref/csrf/"><em>Cross Site Request Forgery</em></a> é um tipo de ataque no qual um site malicioso utiliza um link/form/javascript para submeter dados utilizando um usuário logado no seu sistema. Para se proteger desse tipo de ataque, todos os formulários do seu sistema devem enviar, através de um <a href="https://www.w3schools.com/tags/att_input_type_hidden.asp">campo escondido</a>, um token gerado pelo servidor. Assim, o servidor saberá que a requisição foi feita por um cliente confiável.</p>
+<p>Isso pode soar complexo, mas basta inserir uma template tag no seu formulário. O Django cuida do resto.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercício 06</p>
-<p>Implemente o método <code class="highlight"><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note_id</span><span class="p">)</span></code>, que recebe o valor de um <code>id</code> e apaga essa entrada do banco de dados. Obs: lembre-se de chamar o método <code class="highlight"><span class="n">commit</span></code> depois do <code class="highlight"><span class="n">execute</span></code>.</p>
-<p>Teste sua função com o <code class="highlight"><span class="n">test_delete_row</span></code>.</p>
+<p class="admonition-title">Exercício</p>
+<p>Modifique o <code class="highlight"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span></code> do arquivo <code>index.html</code> com o seguinte conteúdo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+<span class="hll">  {% csrf_token %}
+</span>  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;titulo&quot;</span><span class="p">&gt;</span>Título<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;titulo&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;titulo&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;detalhes&quot;</span><span class="p">&gt;</span>Detalhes<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;detalhes&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;detalhes&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Se você testar novamente, o erro não deve ocorrer mais.</p>
 </div>
-<p>Depois que estiver com todos os testes passando você já pode juntar o código deste handout com o restante do seu <a href="../../../projetos/projeto1/projeto1a/">Projeto 1: parte A</a>!</p>
+<h2 id="recebendo-requisicoes-post">Recebendo requisições POST<a class="headerlink" href="#recebendo-requisicoes-post" title="Permanent link">&para;</a></h2>
+<p>O próximo passo é diferenciar o tipo da requisição recebida. O objeto <code class="highlight"><span class="n">request</span></code> recebido como argumento nas suas views possui um <a href="https://docs.djangoproject.com/en/3.1/ref/request-response/#django.http.HttpRequest.method">atributo <code>method</code></a>. Esse atributo é uma string contendo o nome do método em letras maiúsculas (<code class="highlight"><span class="s1">&#39;GET&#39;</span></code> ou <code class="highlight"><span class="s1">&#39;POST&#39;</span></code>). Além disso, caso seja uma requisição do tipo POST, haverá também um <a href="https://docs.djangoproject.com/en/3.1/ref/request-response/#django.http.HttpRequest.POST">atributo <code>POST</code></a> com um dicionário (na verdade um <em>dictionary-like</em>) cujas chaves são os nomes (atributo <code class="highlight">name</code>) dos inputs e os valores são os valores contidos no input.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Modifique o arquivo <code>notes/views.py</code> com o seguinte conteúdo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Note</span>
+
+
+<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+<span class="hll">    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">title</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;titulo&#39;</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">content</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;detalhes&#39;</span><span class="p">)</span>
+</span><span class="hll">        <span class="c1"># TAREFA: Utilize o title e content para criar um novo Note no banco de dados</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</span><span class="hll">    <span class="k">else</span><span class="p">:</span>
+</span>        <span class="n">all_notes</span> <span class="o">=</span> <span class="n">Note</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;notes/index.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;notes&#39;</span><span class="p">:</span> <span class="n">all_notes</span><span class="p">})</span>
+</code></pre></div>
+
+<p>Como você pode ver no comentário, você tem a tarefa de criar um novo <code>Note</code> no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: <a href="https://docs.djangoproject.com/en/3.1/topics/db/queries/">https://docs.djangoproject.com/en/3.1/topics/db/queries/</a></p>
+</div>
+<p>Parabéns! Você terminou o handout de Django!</p>
                 
               
               
@@ -932,7 +1009,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../parte5/" title="Handout Parte 5: Atualizando os dados" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../parte5/" title="Handout Parte 5: Usando templates" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -941,19 +1018,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Handout Parte 5: Atualizando os dados
+                Handout Parte 5: Usando templates
               </div>
             </div>
           </a>
         
         
-          <a href="../../04-django/Aula07.pdf" title="Slides" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Slides
+                Usando Python com ambientes virtuais
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
