@@ -40,7 +40,7 @@ Nós já criamos um app para o nosso projeto, o `notes`. Vamos adicioná-lo na l
 
 Como vimos, o nosso projeto já tem diversos apps instalados. Vários desses apps utilizam o banco de dados para armazenar pelo menos uma tabela. Para que essas tabelas sejam criadas vamos utilizar o comando (no terminal):
 
-    $ python manage.py migrate
+    python manage.py migrate
 
 ## Criando seus próprios modelos
 

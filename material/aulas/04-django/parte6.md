@@ -51,5 +51,3 @@ O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!pyt
     Como você pode ver no comentário, você tem a tarefa de criar um novo `Note` no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: https://docs.djangoproject.com/en/3.1/topics/db/queries/
 
 Parabéns! Você terminou o handout de Django!
-
-Como comentei no começo do handout, o objetivo não era oferecer uma visão completa do Django. Você ainda vai precisar estudar alguns detalhes por conta própria para poder completar a [parte B do projeto 1](../../projetos/projeto1/projeto1b.md).

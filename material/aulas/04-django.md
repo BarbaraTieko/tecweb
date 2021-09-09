@@ -15,19 +15,19 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Dj
 
 ## Instalando o Django
 
-!!! example "Exercício"
+!!! example "Exercício 01"
     Crie uma pasta para a nova versão do projeto e, dentro dela, [crie um ambiente virtual](../auxiliar/venv.md) (`venv`) chamado `env` para o seu projeto. **Lembre-se de ativar o ambiente antes de seguir para o próximo exercício.**
 
-!!! example "Exercício"
+!!! example "Exercício 02"
     Agora sim, instale o Django:
 
-        $ python -m pip install Django
+        python -m pip install Django
 
 Para verificar se a instalação foi bem sucedida, inicie o Python em sua versão interativa (digite `python` no terminal) e utilize os seguintes comandos:
 
 ```python
->>> import django
->>> print(django.get_version())
+import django
+print(django.get_version())
 ```
 
 O Django deve ter sido instalado em uma versão igual ou superior à 3.0.

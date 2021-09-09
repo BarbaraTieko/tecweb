@@ -2,9 +2,19 @@
 
 Precisamos começar definindo uma importante diferença de conceitos no Django: projetos e apps. Apps são partes de um sistema responsáveis por uma tarefa específica. Um projeto é um conjunto de um ou mais apps e pode ser entendido como o sistema em si. Por exemplo: podemos ter um app responsável pelas anotações, outro app responsável pelo pagamento e outras operações financeiras, outro app responsável por implementar um tipo de autenticação customizada do seu sistema, e assim por diante. Todos esses apps podem ser utilizados em um mesmo projeto.
 
-Feita a diferenciação dos conceitos, no nosso caso vamos provavelmente ter apenas um app dentro do nosso projeto. Vamos criar o app chamado `notes`, no qual vamos reimplementar as funcionalidades do Projeto 1A. Execute o seguinte comando:
+<figure>
+  <img src="../img/projeto_app.jpg" />
+</figure>
 
-    $ python manage.py startapp notes
+Feita a diferenciação dos conceitos, no nosso caso vamos provavelmente ter apenas um app dentro do nosso projeto. Vamos criar o app chamado `notes`, no qual vamos reimplementar as funcionalidades do Projeto 1A. 
+
+<figure>
+  <img src="../img/app_notes.jpg" />
+</figure>
+
+Execute o seguinte comando:
+
+    python manage.py startapp notes
 
 Ele vai criar um diretório com alguns arquivos. Por enquanto não vamos entrar em detalhes sobre o que cada um deles faz. Quando precisarmos de algum deles nós explicaremos a sua função.
 
@@ -75,5 +85,10 @@ Ainda falta um detalhe. O arquivo responsável pelas rotas é o `getit/urls.py`,
 Agora sim, teste sua página. O texto `"Olá mundo! Este é o app notes de Tecnologias Web do Insper."` deve aparecer no navegador.
 
 A função `#!python include` fala para o Django incluir na rota especificada (no caso a rota vazia `''`) todas as rotas definidas no arquivo `notes/urls.py`. Ao receber uma requisição, o Django percorre a lista `#!python urlpatterns` do arquivo `getit/urls.py` procurando a primeira rota que seja igual à rota solicitada. Por esse motivo, a ordem dos elementos da lista `#!python urlpatterns` é muito importante: em caso de duas rotas com o mesmo nome, será escolhida a que ocorrer primeiro.
+
+
+<figure>
+  <img src="../img/urlpattern.jpg" width="600" />
+</figure>
 
 Por enquanto ainda não vimos muitas vantagens em usar o Django. No Projeto 1A nós fizemos o hello world com muito menos código (e arquivos!). Mas vai melhorar, prometo! Por enquanto, siga para o [próximo passo](parte3.md).

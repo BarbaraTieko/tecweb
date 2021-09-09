@@ -28,7 +28,7 @@ Como já vimos, a pasta `env` contém todos os arquivos referentes ao ambiente v
 
 Vamos testar essa configuração inicial:
 
-    $ python manage.py runserver
+    python manage.py runserver
 
 Acesse a página em [`http://localhost:8000`](http://localhost:8000).
 
