@@ -101,6 +101,9 @@ A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou p
 
     Agora sim, a imagem deve ser carregada.
 
+    !!! danger "Se a imagem não carregar"
+        Se você fez as modificações pedidas no exercício e a imagem não carregar, tente para a execução do servidor e rode novamente.
+
     !!! info "Outros arquivos estáticos"
         Assim como acabamos de fazer com a imagem, você pode adicionar outros arquivos estáticos (css, javascript, etc.) na pasta `notes/static/notes` e eles serão disponibilizados pelo servidor. Para manter a organização, você pode criar uma pasta `notes/static/notes/css` para colocar os arquivos css, um `notes/static/notes/script` para os arquivos javascript, e assim por diante.
 

@@ -4,11 +4,11 @@
 
 Para ter acesso a essa página vamos precisar criar um usuário administrador. Execute no terminal o comando a seguir e siga os passos para criar o seu usuário:
 
-    $ python manage.py createsuperuser
+    python manage.py createsuperuser
 
 Agora execute o servidor:
 
-    $ python manage.py runserver
+    python manage.py runserver
 
 E acesse a página de administração em [`http://localhost:8000/admin/`](http://localhost:8000/admin/). Ela ainda não possui muitos recursos, mas você já poderia criar usuários manualmente a partir dessa interface.
 
