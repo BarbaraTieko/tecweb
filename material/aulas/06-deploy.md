@@ -12,11 +12,11 @@ Instale a interface de linha de comando (CLI) do Heroku: [Heroku CLI](https://de
 
 Faça o login na sua conta do Heroku pelo terminal com o comando (você será redirecionado para a página do Heroku para completar o login):
 
-    $ heroku login
+    heroku login
 
 Agora você pode criar uma aplicação utilizando o comando (a documentação dos comandos está [disponível aqui](https://devcenter.heroku.com/articles/heroku-cli-commands)):
 
-    $ heroku create
+    heroku create
 
 Esse comando vai criar uma aplicação com nome aleatório e vai imprimir no terminal algo parecido com isso:
 
@@ -57,11 +57,11 @@ Entre na pasta do seu projeto pelo terminal.
 
 O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (**importante 1:** execute este comando na pasta raiz do seu projeto; **importante 2:** troque o `still-cove-69163` pelo nome do seu app gerado pelo Heroku):
 
-    $ heroku git:remote -a still-cove-69163
+    heroku git:remote -a still-cove-69163
 
 Para confirmar se está tudo certo, utilize o comando:
 
-    $ git remote -v
+    git remote -v
 
 Ele deve listar (além de outros) os seguintes repositórios (claro, com o nome do seu app):
 
@@ -74,11 +74,11 @@ heroku	https://git.heroku.com/still-cove-69163.git (push)
 
 Até o momento, nós utilizamos o `python manage.py runserver` para executar o nosso servidor localmente. Esse comando é apropriado apenas para testes no ambiente de desenvolvimento. Ele não é otimizado para uma aplicação real. Para isso precisamos de um servidor de **Web Server Gateway Interface (WSGI)**, que basicamente é um intermediário entre as requisições que chegam no servidor e o código Python. No nosso projeto nós utilizaremos o [Gunicorn (Green Unicorn)](https://gunicorn.org/). Você pode instalá-lo com (**importante:** lembre-se de ativar o ambiente virtual):
 
-    $ pip install gunicorn
+    pip install gunicorn
 
 Para testar sua aplicação com o Gunicorn, você pode executar o comando:
 
-    $ gunicorn getit.wsgi
+    gunicorn getit.wsgi
 
 !!! info "O arquivo `wsgi.py`"
     O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
@@ -103,7 +103,7 @@ A primeira linha faz com que o comando de migração do Django seja executado qu
 
 A partir de agora você pode testar sua aplicação com o comando (**importante:** a aplicação estará disponível na porta 5000 ao invés da 8000 que usamos até o momento, ou seja, [localhost:5000](http://localhost:5000)):
 
-    $ heroku local
+    heroku local
 
 ### Configurando os arquivos estáticos
 
@@ -111,7 +111,7 @@ Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro s
 
 Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o [WhiteNoise](http://whitenoise.evans.io/en/stable/):
 
-    $ pip install whitenoise
+    pip install whitenoise
 
 O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `getit/settings.py` e procure pela lista `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
 
@@ -137,13 +137,13 @@ Note que também adicionamos o `#!python 'localhost'` e o `#!python '127.0.0.1'`
 
 Cada projeto Python possui dependências diferentes. Quando outra pessoa (ou você mesmo em outro computador) vai executar o seu projeto é necessário executar uma série de `pip install` com cada uma das dependências. Para simplificar esse processo podemos criar o arquivo `requirements.txt`. Com esse arquivo basta executar `pip install -r requirements.txt` para instalar todas as dependências do projeto. O Heroku também utiliza esse mesmo arquivo para configurar o seu projeto no servidor deles. O `requirements.txt` é basicamente um arquivo texto com a lista das dependências. Ele pode ser criado com o comando:
 
-    $ pip freeze > requirements.txt
+    pip freeze > requirements.txt
 
 ## Fazendo o deploy
 
 Agora estamos prontos para fazer o deploy! Faça um commit com todas essas modificações e depois faça o push com o comando a seguir:
 
-    $ git push heroku master
+    git push heroku master
 
 Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor. Depois disso existem duas possibilidades:
 
@@ -166,11 +166,11 @@ Agora que você fez o primeiro deploy (por mais que tenha ocorrido um erro) o He
 
 Uma opção é acessar os dados de configuração desse banco e alterar manualmente o dicionário `#!python DATABASES` nas configurações. Entretanto, isso faria com que o seu código parasse de funcionar em desenvolvimento (no seu computador). Por isso, vamos utilizar o `dj-database-url`:
 
-    $ pip install dj-database-url
+    pip install dj-database-url
 
 Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o `requirements.txt`:
 
-    $ pip freeze > requirements.txt
+    pip freeze > requirements.txt
 
 Adicione o `#!python import` no `getit/settings.py`:
 

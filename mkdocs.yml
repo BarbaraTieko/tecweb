@@ -46,8 +46,8 @@ nav:
       - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
       - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
     - "04 - Django":
-      - "Slides": "aulas/04-django/Aula07.pdf"
-      - "Slides": "aulas/04-django/Aula08.pdf"
+      - "Slides - Aula 08": "aulas/04-django/Aula07.pdf"
+      - "Slides - Aula 09": "aulas/04-django/Aula08.pdf"
       - "Handout": aulas/04-django.md
       - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
       - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
@@ -58,6 +58,8 @@ nav:
     - "05 - Containers e Bancos de Dados":
       - "Slides": "aulas/05-bd/Aula09.pdf"
       - "Handout": aulas/05-bd.md
+    - "06 - Deploy da aplicação":
+      - "Handout": aulas/06-deploy.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
