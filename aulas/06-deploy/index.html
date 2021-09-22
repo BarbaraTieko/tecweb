@@ -1322,6 +1322,12 @@ web: gunicorn getit.wsgi
 </code></pre></div>
 
 
+<div class="admonition danger">
+<p class="admonition-title">Se o comando acima não funcionar</p>
+<p>Tente rodar o comando:
+<div class="highlight"><pre><span></span><code>git push heroku main
+</code></pre></div></p>
+</div>
 <p>Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor. Depois disso existem duas possibilidades:</p>
 <ol>
 <li>Você estava usando o SQLite e agora sua aplicação está disponível no Heroku! Basta acessar o endereço do seu app.</li>
