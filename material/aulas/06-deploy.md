@@ -145,6 +145,12 @@ Agora estamos prontos para fazer o deploy! Faça um commit com todas essas modif
 
     git push heroku master
 
+!!! danger "Se o comando acima não funcionar"
+    Tente rodar o comando:
+    ```
+    git push heroku main
+    ```
+
 Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor. Depois disso existem duas possibilidades:
 
 1. Você estava usando o SQLite e agora sua aplicação está disponível no Heroku! Basta acessar o endereço do seu app.
