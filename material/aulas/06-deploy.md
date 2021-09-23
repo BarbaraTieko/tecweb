@@ -4,6 +4,7 @@ Até agora você desenvolveu as suas aplicações e testou o servidor localmente
 
 Cada um tem suas vantagens e desvantagens. Em Tecnologias Web nós utilizaremos o [Heroku](https://www.heroku.com/) pela facilidade de deploy de aplicações Python e por possuir uma conta gratuita para projetos pequenos. Se você preferir (ou quiser testar) qualquer outra opção, fique à vontade para utilizá-la.
 
+
 ## Primeiros passos
 
 Para começar o processo de deploy, crie uma conta no [Heroku](https://www.heroku.com/).
@@ -31,6 +32,7 @@ No exemplo acima, a aplicação se chama `still-cove-69163`. Guarde o nome da su
     Você pode escolher o nome da sua aplicação com o comando `heroku create nome-da-aplicacao`, mas ele precisa ser único **em todo o Heroku**, ou seja, ninguém pode ter criado um projeto com o mesmo nome.
 
 Entre na pasta do seu projeto pelo terminal.
+
 
 !!! danger "Importante"
     Seu projeto deve estar no git. Se não estiver, crie um repositório antes de seguir para os próximos passos deste handout.
@@ -78,10 +80,14 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 
 Para testar sua aplicação com o Gunicorn, você pode executar o comando:
 
+
     gunicorn getit.wsgi
 
 !!! info "O arquivo `wsgi.py`"
     O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
+
+
+
 
 Acesse sua aplicação em [`localhost:8000`](http://localhost:8000) para verificar se está tudo funcionando até aqui. Depois que confirmar, pare o servidor (`ctrl+c`).
 

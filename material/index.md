@@ -25,3 +25,4 @@ Bem-vind@ ao curso de Tecnologias Web 2021/2.
 - 30/08: Entrega do [Desafio CSS](entregas/02-desafio-css.md)
 - 12/09: [Projeto 1A](projetos/projeto1/projeto1a.md)
 - 27/09: [Projeto 1B](projetos/projeto1/projeto1b.md)
+- 22/10: Entrega do [Servidor de Exercícios JS](entregas/03-servidor-js.md)
