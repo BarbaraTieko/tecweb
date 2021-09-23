@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://tecnologiasWeb2021.2.github.io/tecweb/aulas/03-persistencia-de-dados/">
+        <link rel="canonical" href="https://tecnologiasWeb2021.2.github.io/tecweb/entregas/03-servidor-js/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Handout - Tecnologias Web - Insper 2021/2</title>
+        <title>03 - Servidor de Exercícios JS - Tecnologias Web - Insper 2021/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-persistencia-de-dados" class="md-skip">
+        <a href="#servidor-de-exercicios-js" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Handout
+              03 - Servidor de Exercícios JS
             
           </span>
         </div>
@@ -264,12 +264,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -318,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/Aula01.pdf" title="Slides" class="md-nav__link">
+    <a href="../../aulas/01-getit/Aula01.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -330,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/" title="Handout" class="md-nav__link">
+    <a href="../../aulas/01-getit/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -342,7 +340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/parte1/" title="Handout Parte 1: Criando o servidor" class="md-nav__link">
+    <a href="../../aulas/01-getit/parte1/" title="Handout Parte 1: Criando o servidor" class="md-nav__link">
       Handout Parte 1: Criando o servidor
     </a>
   </li>
@@ -354,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/parte2/" title="Handout Parte 2: Respondendo com páginas HTML" class="md-nav__link">
+    <a href="../../aulas/01-getit/parte2/" title="Handout Parte 2: Respondendo com páginas HTML" class="md-nav__link">
       Handout Parte 2: Respondendo com páginas HTML
     </a>
   </li>
@@ -366,7 +364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/parte3/" title="Handout Parte 3: Separando algumas responsabilidades" class="md-nav__link">
+    <a href="../../aulas/01-getit/parte3/" title="Handout Parte 3: Separando algumas responsabilidades" class="md-nav__link">
       Handout Parte 3: Separando algumas responsabilidades
     </a>
   </li>
@@ -378,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../01-getit/parte4/" title="Handout Parte 4: Fazendo um formulário de criação de anotação" class="md-nav__link">
+    <a href="../../aulas/01-getit/parte4/" title="Handout Parte 4: Fazendo um formulário de criação de anotação" class="md-nav__link">
       Handout Parte 4: Fazendo um formulário de criação de anotação
     </a>
   </li>
@@ -420,7 +418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../02-desafio-css/Aula02.pdf" title="Slides" class="md-nav__link">
+    <a href="../../aulas/02-desafio-css/Aula02.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -432,7 +430,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../02-desafio-css/" title="Handout" class="md-nav__link">
+    <a href="../../aulas/02-desafio-css/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -447,12 +445,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       03 - Persistência de Dados
@@ -474,101 +470,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Handout
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Handout" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../aulas/03-persistencia-de-dados/" title="Handout" class="md-nav__link">
       Handout
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -578,7 +484,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
       Handout Parte 1: Instalando o SQLite
     </a>
   </li>
@@ -590,7 +496,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
       Handout Parte 2: Criando a tabela
     </a>
   </li>
@@ -602,7 +508,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
       Handout Parte 3: Inserindo dados na tabela
     </a>
   </li>
@@ -614,7 +520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
       Handout Parte 4: Consultando e selecionando dados
     </a>
   </li>
@@ -626,7 +532,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
       Handout Parte 5: Atualizando os dados
     </a>
   </li>
@@ -638,7 +544,7 @@
 
 
   <li class="md-nav__item">
-    <a href="parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+    <a href="../../aulas/03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
       Handout Parte 6: Apagando dados
     </a>
   </li>
@@ -680,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/Aula07.pdf" title="Slides - Aula 08" class="md-nav__link">
+    <a href="../../aulas/04-django/Aula07.pdf" title="Slides - Aula 08" class="md-nav__link">
       Slides - Aula 08
     </a>
   </li>
@@ -692,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/Aula08.pdf" title="Slides - Aula 09" class="md-nav__link">
+    <a href="../../aulas/04-django/Aula08.pdf" title="Slides - Aula 09" class="md-nav__link">
       Slides - Aula 09
     </a>
   </li>
@@ -704,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/" title="Handout" class="md-nav__link">
+    <a href="../../aulas/04-django/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -716,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
+    <a href="../../aulas/04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
       Handout Parte 1: Iniciando o projeto
     </a>
   </li>
@@ -728,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
+    <a href="../../aulas/04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
       Handout Parte 2: Criando nosso primeiro app
     </a>
   </li>
@@ -740,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
+    <a href="../../aulas/04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
       Handout Parte 3: Integrando com o banco de dados
     </a>
   </li>
@@ -752,7 +658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
+    <a href="../../aulas/04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
       Handout Parte 4: O Django Admin
     </a>
   </li>
@@ -764,7 +670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
+    <a href="../../aulas/04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
       Handout Parte 5: Usando templates
     </a>
   </li>
@@ -776,7 +682,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
+    <a href="../../aulas/04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
       Handout Parte 6: Trabalhando com formulários e o método POST
     </a>
   </li>
@@ -818,7 +724,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
+    <a href="../../aulas/05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -830,7 +736,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../05-bd/" title="Handout" class="md-nav__link">
+    <a href="../../aulas/05-bd/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -872,7 +778,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../06-deploy/" title="Handout" class="md-nav__link">
+    <a href="../../aulas/06-deploy/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -889,7 +795,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../07-javascript/" title="07 - JavaScript" class="md-nav__link">
+    <a href="../../aulas/07-javascript/" title="07 - JavaScript" class="md-nav__link">
       07 - JavaScript
     </a>
   </li>
@@ -946,10 +852,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Entregas
@@ -973,7 +881,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../entregas/01-ELI5/" title="01 - ELI5" class="md-nav__link">
+    <a href="../01-ELI5/" title="01 - ELI5" class="md-nav__link">
       01 - ELI5
     </a>
   </li>
@@ -985,7 +893,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../entregas/02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
+    <a href="../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
       02 - Desafio CSS
     </a>
   </li>
@@ -995,11 +903,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../entregas/03-servidor-js/" title="03 - Servidor de Exercícios JS" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="03 - Servidor de Exercícios JS" class="md-nav__link md-nav__link--active">
       03 - Servidor de Exercícios JS
     </a>
+    
   </li>
 
         
@@ -1109,71 +1026,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
-    Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
-  </a>
-  
-    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cenario-1" class="md-nav__link">
-    Cenário 1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-2" class="md-nav__link">
-    Cenário 2
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cenario-3" class="md-nav__link">
-    Cenário 3
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A solução
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bancos-de-dados" class="md-nav__link">
-    Bancos de Dados
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#proximos-passos" class="md-nav__link">
-    Próximos passos
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1188,39 +1040,11 @@
                   
                 
                 
-                <h1 id="03-persistencia-de-dados">03 - Persistência de Dados<a class="headerlink" href="#03-persistencia-de-dados" title="Permanent link">&para;</a></h1>
-<p>Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.</p>
-<p>Opa! Espere um pouco. Arquivos?!</p>
-<p>É, arquivos. Por quê? Tem algum problema com isso?</p>
-<p>Vamos pensar um pouco sobre isso.</p>
-<h2 id="qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao">Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?<a class="headerlink" href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" title="Permanent link">&para;</a></h2>
-<h3 id="cenario-1">Cenário 1<a class="headerlink" href="#cenario-1" title="Permanent link">&para;</a></h3>
-<p>Imagine que a sua aplicação já está sendo utilizada há um tempo e o arquivo que contém os dados é razoavelmente grande. Seu servidor recebe uma requisição pedindo para atualizar uma informação que está armazenada no arquivo. O arquivo é aberto, o elemento a ser modificado é identificado e, enquanto o arquivo é salvo, ocorre um erro no computador, interrompendo a gravação do arquivo. Ao tentar acessar novamente o arquivo você descobre que ele está corrompido e todos os dados foram perdidos.</p>
-<h3 id="cenario-2">Cenário 2<a class="headerlink" href="#cenario-2" title="Permanent link">&para;</a></h3>
-<p>Sua página fica muito popular e passa a receber milhares de acessos por segundo. O arquivo contendo os dados demora 1 milissegundo para ser aberto e lido e ele pode ser aberto por apenas um processo por vez. Como apenas uma requisição pode ter o arquivo aberto de cada vez, em poucos segundos a sua aplicação para de responder. Você está recebendo mais requisições do que dá conta de responder.</p>
-<p>Você decide armazenar os dados na memória e apenas abrir o arquivo para salvar novas modificações. Duas requisições de modificação são enviadas simultaneamente e uma sobrescreve o que a outra acabou de escrever. Os dados da primeira requisição são perdidos.</p>
-<h3 id="cenario-3">Cenário 3<a class="headerlink" href="#cenario-3" title="Permanent link">&para;</a></h3>
-<p>Seu arquivo de dados já ocupa alguns gigabytes. Toda vez que algum usuário pede uma informação você precisa ler todo o arquivo em busca dela.</p>
-<h3 id="a-solucao">A solução<a class="headerlink" href="#a-solucao" title="Permanent link">&para;</a></h3>
-<p>Você decide que para resolver todos esses problemas vai criar um módulo responsável por lidar com escritas simultâneas (concorrentes) de dados, armazenamento de backups em caso de falhas, indexação dos dados para acelerar buscas, realizar o controle do acesso aos dados e tratar de diversos outros detalhes relacionados ao armazenamento. Parabéns, você acabou de implementar um sistema de gerenciamento de bancos de dados!</p>
-<h2 id="bancos-de-dados">Bancos de Dados<a class="headerlink" href="#bancos-de-dados" title="Permanent link">&para;</a></h2>
-<p>Nosso objetivo em Tecnologias Web não é entrar em detalhes sobre bancos de dados. Deixamos isso para vocês trabalharem em Megadados. Aqui nós teremos apenas um primeiro contato, possibilitando o armazenamento e recuperação dos dados de forma mais robusta do que utilizando apenas arquivos.</p>
-<p>Um dos tipos mais tradicionais de bancos de dados são os <strong>bancos de dados relacionais</strong>. A ideia é que cada "tipo de dado" é armazenado separadamente em uma tabela e as relações entre os objetos (chamados de <strong>entidades</strong>) são indicadas por identificadores únicos que permitem a localização do objeto relacionado na outra tabela. Ou seja, é um modelo que depende fortemente da representação dos dados como um conjunto de tabelas. Para interagir (criar, modificar, recuperar, deletar) com esse conjunto de tabelas foi criada uma linguagem chamada <em>Structured Query Language</em> (SQL).</p>
-<p>Como comentamos anteriormente, o nosso objetivo é começar a utilizar SQL em nossas aplicações. Não temos a intenção de desenvolver nenhum estudo aprofundado sobre SQL ou bancos de dados <strong>ainda</strong>. Neste handout teremos nosso primeiro contato com o SQL através de um banco de dados chamado <a href="https://www.sqlite.org/index.html">SQLite</a>.</p>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Você não deve utilizar o SQLite em um servidor web real. <a href="https://sqlite.org/whentouse.html">Ele não foi feito para isso</a>. Para ambientes de produção utilize sistemas mais robustos como o PostgreSQL, MySQL, ou SQL Server. Dito isso, os conceitos de SQL que veremos neste handout são os mesmos utilizados nesses outros sistemas. Optamos pelo SQLite por ele ser mais fácil de instalar e configurar.</p>
-</div>
-<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
-<p>O handout é divido nos seguintes passos:</p>
-<ul>
-<li><a href="parte1/">Parte 1: Instalando o SQLite</a></li>
-<li><a href="parte2/">Parte 2: Criando a tabela</a></li>
-<li><a href="parte3/">Parte 3: Inserindo dados na tabela</a></li>
-<li><a href="parte4/">Parte 4: Consultando e selecionando dados</a></li>
-<li><a href="parte5/">Parte 5: Atualizando os dados</a></li>
-<li><a href="parte6/">Parte 6: Apagando dados</a></li>
-</ul>
+                <h1 id="servidor-de-exercicios-js">Servidor de Exercícios JS<a class="headerlink" href="#servidor-de-exercicios-js" title="Permanent link">&para;</a></h1>
+<p><strong>Data de entrega: 22/10</strong></p>
+<p>Você deve realizar os exercícios disponíveis no Servidor de desafios JS.</p>
+<p>O seu código (apenas um arquivo .js) deve ser entregue via Blackboard. Nenhum outro formato será aceito. Qualquer formato diferente de .js receberá nota zero. A única biblioteca externa permitida é o axios.</p>
+<p>Veja mais detalhes no próprio <a href="https://tecweb-js.insper-comp.com.br/">servidor de exercícios JS</a>.</p>
                 
               
               
@@ -1239,7 +1063,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../02-desafio-css/" title="Handout" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02-desafio-css/" title="02 - Desafio CSS" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1248,19 +1072,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Handout
+                02 - Desafio CSS
               </div>
             </div>
           </a>
         
         
-          <a href="parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../projetos/projeto1/projeto1a/" title="Parte A" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handout Parte 1: Instalando o SQLite
+                Parte A
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
