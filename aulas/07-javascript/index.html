@@ -1756,7 +1756,7 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Teste o código abaixo:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">promesa</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">promesa</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">promesa</span><span class="p">);</span>
 <span class="kd">let</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">promesa</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
@@ -1768,7 +1768,7 @@
 
 </div>
 <p>Hmmm... ainda não vi vantagem nesse tal de <code class="highlight"><span class="nx">async</span><span class="o">/</span><span class="nx">await</span></code>. Vamos lá. Agora começa a ficar mais interessante. A <em>promise</em> possui um método <code class="highlight"><span class="nx">then</span></code> que recebe uma função que será aplicada <strong>quando a promessa for cumprida</strong>. Reescrevendo o exemplo acima:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">objetoDaResposta</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">objetoDaResposta</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">()))</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoDaResposta</span><span class="p">.</span><span class="nx">fact</span><span class="p">);</span>
 </code></pre></div>
@@ -1777,7 +1777,7 @@
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Teste o código abaixo:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoDaResposta</span><span class="p">.</span><span class="nx">fact</span><span class="p">)))</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Esse console.log vai aparecer antes do console.log da sequência de promises acima&quot;</span><span class="p">);</span>
@@ -1788,11 +1788,11 @@
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>Qual será a ordem impressa no console?</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 1 OK&quot;</span><span class="p">)));</span>
 
-<span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 2 OK&quot;</span><span class="p">)));</span>
 </code></pre></div>
@@ -1810,10 +1810,10 @@
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>Qual será a ordem impressa no console?</p>
-<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 1 OK&quot;</span><span class="p">))).</span><span class="nx">then</span><span class="p">(</span>
-  <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://catfact.ninja/fact&quot;</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span>
+  <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">)).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 2 OK&quot;</span><span class="p">)));</span>
 </code></pre></div>
