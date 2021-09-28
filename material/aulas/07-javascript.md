@@ -472,7 +472,7 @@ Vamos trabalhar com um exemplo um pouco mais complexo. A função assíncrona `#
     Teste o código abaixo:
 
     ```javascript
-    let promesa = fetch("https://catfact.ninja/fact");
+    let promesa = fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact");
     console.log(promesa);
     let resultado = await promesa;
     console.log(resultado);
@@ -485,7 +485,7 @@ Vamos trabalhar com um exemplo um pouco mais complexo. A função assíncrona `#
 Hmmm... ainda não vi vantagem nesse tal de `#!javascript async/await`. Vamos lá. Agora começa a ficar mais interessante. A *promise* possui um método `#!javascript then` que recebe uma função que será aplicada **quando a promessa for cumprida**. Reescrevendo o exemplo acima:
 
 ```javascript
-let objetoDaResposta = await fetch("https://catfact.ninja/fact").then(
+let objetoDaResposta = await fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact").then(
   ((resultado) => resultado.json()))
 console.log(objetoDaResposta.fact);
 ```
@@ -496,7 +496,7 @@ Mas ainda dá pra melhorar. Nós podemos montar uma sequência de `#!javascript 
     Teste o código abaixo:
 
     ```javascript
-    fetch("https://catfact.ninja/fact").then(
+    fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact").then(
       ((resultado) => resultado.json())).then(
       ((objetoDaResposta) => console.log(objetoDaResposta.fact)))
     console.log("Esse console.log vai aparecer antes do console.log da sequência de promises acima");
@@ -508,11 +508,11 @@ No exemplo acima vemos uma vantagem de utilizar *promises*: você registra o que
     Qual será a ordem impressa no console?
 
     ```javascript
-    fetch("https://catfact.ninja/fact").then(
+    fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact").then(
       ((resultado) => resultado.json())).then(
       ((objetoDaResposta) => console.log("Resposta 1 OK")));
 
-    fetch("https://catfact.ninja/fact").then(
+    fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact").then(
       ((resultado) => resultado.json())).then(
       ((objetoDaResposta) => console.log("Resposta 2 OK")));
     ```
@@ -528,10 +528,10 @@ No exemplo acima vemos uma vantagem de utilizar *promises*: você registra o que
     Qual será a ordem impressa no console?
 
     ```javascript
-    fetch("https://catfact.ninja/fact").then(
+    fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact").then(
       ((resultado) => resultado.json())).then(
       ((objetoDaResposta) => console.log("Resposta 1 OK"))).then(
-      () => fetch("https://catfact.ninja/fact")).then(
+      () => fetch("https://enigmatic-bayou-56424.herokuapp.com/catfact")).then(
       ((resultado) => resultado.json())).then(
       ((objetoDaResposta) => console.log("Resposta 2 OK")));
     ```
