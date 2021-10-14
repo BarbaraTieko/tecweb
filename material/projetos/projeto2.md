@@ -2,8 +2,9 @@
 
 **Trabalho em duplas ou individual**
 
-**Inception do Projeto via Blackboard até: 28/04/2021 (quarta-feira)**
-**Prazo: 17/05/2021 (segunda-feira)**
+**Inception do Projeto até: 20/10/2021 (quarta-feira)**
+
+**Prazo: 10/11/2021 (quarta-feira)**
 
 **Entrega via GitHub (enviar endereço do repositório no Blackboard)**
 
@@ -26,7 +27,8 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 2. Escolha sua API externa. Dica de repositório para procurar APIs (algumas são pagas, mas tem várias opções gratuitas ou freemium): https://rapidapi.com/
 3. Liste 2 funcionalidades essenciais;
 4. Defina a arquitetura do projeto (que parte faz as requisições para a API externa, por exemplo);
-5. Envie no Blackboard (em "Entregas/Inception do Projeto 2") as respostas para as 3 primeiras perguntas até o dia 28/04 (quarta-feira). Basta enviar uma resposta por dupla.
+5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia  20/10/2021 (quarta-feira). [Clique aqui para acessar o formulário](https://forms.gle/Xn9ZiRBx7uHsxFQ36).
+Basta enviar uma resposta por dupla.
 
 ## Rubrica
 

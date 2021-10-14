@@ -61,6 +61,7 @@ nav:
     - "06 - Deploy da aplicação":
       - "Handout": aulas/06-deploy.md
     - "07 - JavaScript": aulas/07-javascript.md
+    - "08 - Django REST": aulas/08-django-rest.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
@@ -71,6 +72,7 @@ nav:
     - "Projeto 1":
       - "Parte A": projetos/projeto1/projeto1a.md
       - "Parte B": projetos/projeto1/projeto1b.md
+    - "Projeto 2": projetos/projeto2.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
 
