@@ -61,7 +61,11 @@ nav:
     - "06 - Deploy da aplicação":
       - "Handout": aulas/06-deploy.md
     - "07 - JavaScript": aulas/07-javascript.md
-    - "08 - Django REST": aulas/08-django-rest.md
+    - "08 - Django REST":
+        - "Slides": "aulas/08-django-rest/Aula15.pdf"
+        - "Handout": aulas/08-django-rest.md
+    - "09 - React":
+      - "Handout": aulas/09-react.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
