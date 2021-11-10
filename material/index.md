@@ -27,4 +27,5 @@ Bem-vind@ ao curso de Tecnologias Web 2021/2.
 - 27/09: [Projeto 1B](projetos/projeto1/projeto1b.md)
 - 20/10: Inception do [Projeto 2](projetos/projeto2.md)
 - 25/10: Entrega do [Servidor de Exercícios JS](entregas/03-servidor-js.md)
-- 27/09: [Projeto 2](projetos/projeto2.md)
+- 15/11: [Projeto 2](projetos/projeto2.md)
+- 08/12: [Projeto 3](projetos/projeto3.md)

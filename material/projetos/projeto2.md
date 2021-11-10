@@ -4,7 +4,9 @@
 
 **Inception do Projeto até: 20/10/2021 (quarta-feira)**
 
-**Prazo: 10/11/2021 (quarta-feira)**
+~~**Prazo: 10/11/2021 (quarta-feira)**~~
+**Prazo: 15/11/2021 (segunda-feira)**
+
 
 **Entrega via GitHub (enviar endereço do repositório no Blackboard)**
 
