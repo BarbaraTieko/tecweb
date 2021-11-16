@@ -27,7 +27,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 1. Decida se você vai fazer este projeto sozinho ou em dupla (a rubrica é a mesma, mas a exigência será maior em termos do que é considerado bem feito);
 2. Escolha seu projeto;
-3. Liste as funcionalidades essenciais: 1 difícil, 1 médias, **ou** 4 fáceis (a dificuldade deve ser validada com o professor);
+3. Liste as funcionalidades essenciais: 1 difícil, 1 médias, **ou** 4 fáceis (a dificuldade deve ser validada com o professor); [Responda o Formulário](https://forms.gle/LwC41rfzfibXc5ph6)
 4. Defina e desenhe a arquitetura do projeto;
 5. Crie o repositório no GitHub e envie o link no Blackboard;
 6. Inicie as sprints de desenvolvimento.
