@@ -27,7 +27,21 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 1. Decida se você vai fazer este projeto sozinho ou em dupla (a rubrica é a mesma, mas a exigência será maior em termos do que é considerado bem feito);
 2. Escolha seu projeto;
-3. Liste as funcionalidades essenciais: 1 difícil, 1 médias, **ou** 4 fáceis (a dificuldade deve ser validada com o professor); [Responda o Formulário](https://forms.gle/LwC41rfzfibXc5ph6)
+3. Liste as funcionalidades essenciais: 1 difícil, 1 média, **ou** 4 fáceis (a dificuldade deve ser validada com o professor); [Responda o Formulário](https://forms.gle/LwC41rfzfibXc5ph6)
 4. Defina e desenhe a arquitetura do projeto;
 5. Crie o repositório no GitHub e envie o link no Blackboard;
 6. Inicie as sprints de desenvolvimento.
+
+## Rubrica
+
+A rubrica a seguir será utilizada na correção do Projeto 2:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A    | Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, com um README completo, resultado bem acabado, implementação de alguma funcionalidade com dificuldade técnica bastante elevada) |
+|    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** o resultado está público na internet |
+|    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura |
+|    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
+|    I     | Não entregou ou o código não executa |
+
+O conceito A+ será dado aos trabalhos implementarem alguma funcionalidade adicional. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
