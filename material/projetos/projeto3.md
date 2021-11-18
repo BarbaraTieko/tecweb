@@ -34,7 +34,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 ## Rubrica
 
-A rubrica a seguir será utilizada na correção do Projeto 2:
+A rubrica a seguir será utilizada na correção do Projeto 3:
 
 | Conceito | Descrição |
 | :------: | :-------- |
