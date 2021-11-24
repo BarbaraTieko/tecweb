@@ -82,6 +82,7 @@ nav:
     - "Projeto 3": projetos/projeto3.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
+    - "Avaliação Final": simulado/avaliacao-final.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
