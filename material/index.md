@@ -1,6 +1,6 @@
 # Tecnologias Web
 
-Bem-vind@ ao curso de Tecnologias Web 2021/2.
+Bem-vind@ ao curso de Tecnologias Web 2022/1.
 
 **Professora**
 
@@ -12,20 +12,13 @@ Bem-vind@ ao curso de Tecnologias Web 2021/2.
 
 **Aulas:**
 
-- TER 07:30 - 09:30 (Remoto)
-- QUI 15:45 - 17:45 (Híbrido - Laboratório Desenvolvimento Colaborativo Ágil 1 Prédio 2 - 4º andar)
+- TER 07:30 - 09:30
+- QUI 07:30 - 09:30
 
 **Atendimento:**
 
-- QUI 09:45 - 11:15 (Remoto)
+- TER 09:45 - 11:15
 
 **Algumas Datas**
 
 - 23/08: Entrega do [ELI5](entregas/01-ELI5.md)
-- 30/08: Entrega do [Desafio CSS](entregas/02-desafio-css.md)
-- 12/09: [Projeto 1A](projetos/projeto1/projeto1a.md)
-- 27/09: [Projeto 1B](projetos/projeto1/projeto1b.md)
-- 20/10: Inception do [Projeto 2](projetos/projeto2.md)
-- 25/10: Entrega do [Servidor de Exercícios JS](entregas/03-servidor-js.md)
-- 15/11: [Projeto 2](projetos/projeto2.md)
-- 08/12: [Projeto 3](projetos/projeto3.md)
