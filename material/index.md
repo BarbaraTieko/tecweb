@@ -21,4 +21,4 @@ Bem-vind@ ao curso de Tecnologias Web 2022/1.
 
 **Algumas Datas**
 
-- 23/08: Entrega do [ELI5](entregas/01-ELI5.md)
+- 21/02: Entrega do [ELI5](entregas/01-ELI5.md)

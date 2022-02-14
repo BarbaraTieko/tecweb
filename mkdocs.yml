@@ -1,4 +1,4 @@
-site_name: Tecnologias Web - Insper 2021/2
+site_name: Tecnologias Web - Insper 2022/1
 site_author: Andrew Kurauchi
 
 extra:
@@ -37,7 +37,7 @@ nav:
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
-    - "01 - ELI5": entregas/01-ELI5.md    
+    - "01 - ELI5": entregas/01-ELI5.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
