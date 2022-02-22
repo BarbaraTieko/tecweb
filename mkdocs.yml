@@ -34,10 +34,14 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
+    - "02 - Desafio CSS":
+      - "Slides": "aulas/02-desafio-css/Aula02.pdf"
+      - "Handout": aulas/02-desafio-css.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
+    - "02 - Desafio CSS": entregas/02-desafio-css.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML

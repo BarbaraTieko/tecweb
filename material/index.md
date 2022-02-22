@@ -17,7 +17,8 @@ Bem-vind@ ao curso de Tecnologias Web 2022/1.
 
 **Atendimento:**
 
-- TER 09:45 - 11:15
+- ~~TER 09:45 - 11:15~~
+- TER 09:30 - 11:00
 
 **Algumas Datas**
 

@@ -1,20 +1,31 @@
 import json
+from pathlib import Path
 
 def extract_route(requisicao):
     return requisicao.split()[1][1:]
 
-def read_file(path):
-    with open(path, "rb") as arquivo:
-        content = arquivo.read()
-    return content
+def read_file(filepath):
+    # with open(path, "r+b") as arquivo:
+    #     content = arquivo.read()
+    # return content
+    if filepath.suffix in ['.txt', '.html', '.css', '.js']:
+        mode = 'r'
+    else:
+        mode = 'rb'
+
+    with open(filepath, mode=mode) as f:
+        return f.read()
 
 def load_data(file_name):
     with open(f"data/{file_name}", "r", encoding="utf-8") as file:
+    # with open(Path(__file__).parent.resolve() /"data"/file_name, "r", encoding="utf-8") as file:
+
         content = file.read()
     return json.loads(content)
 
 def load_template(file_name):
     with open(f"templates/{file_name}", encoding="utf-8") as file:
+    # with open(Path(__file__).parent.resolve() / "templates"/file_name, encoding="utf-8") as file:
         content = file.read()
     return content
 
