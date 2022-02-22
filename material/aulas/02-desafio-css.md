@@ -11,7 +11,7 @@ O nosso objetivo é partir da **Versão inicial:**
 ![](02-desafio-css/img/original.png)
 
 
-O seu objetivo é se aproximar o máximo possível da página a seguir (se precisar de uma imagem com resolução melhor [clique aqui](referencia.png)) utilizando apenas CSS puro.
+O seu objetivo é se aproximar o máximo possível da página a seguir (se precisar de uma imagem com resolução melhor [clique aqui](02-desafio-css/img/referencia.png)) utilizando apenas CSS puro.
 
 **Versão esperada:**
 ![Referência do resultado esperado](02-desafio-css/img/referencia.png)
