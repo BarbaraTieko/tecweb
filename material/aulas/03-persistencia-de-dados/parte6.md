@@ -17,6 +17,7 @@ Note que depois dessa operação não vai mais existir uma linha com `identifica
 !!! example "Exercício 06"
     Implemente o método `#!python delete(self, note_id)`, que recebe o valor de um `id` e apaga essa entrada do banco de dados. Obs: lembre-se de chamar o método `#!python commit` depois do `#!python execute`.
 
-    Teste sua função com o `#!python test_delete_row`.
+    Se tudo der certo. O teste `#!python test_delete_row` e todos os outros devem passar com sucesso.
 
-Depois que estiver com todos os testes passando você já pode juntar o código deste handout com o restante do seu [Projeto 1: parte A](../../projetos/projeto1/projeto1a.md)!
+!!! example "Exercício 07"
+    Depois que estiver com todos os testes passando, altere o código construído no [Handout 1](../01-getit.md) para armazenar as notas no banco de dados.

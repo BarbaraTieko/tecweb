@@ -2,7 +2,9 @@
 
 ## Desafio CSS
 
-**Data de entrega: 03/03**
+~~**Data de entrega: 03/03**~~
+
+**Data de entrega: 04/03**
 
 Na aula passada nós desenvolvemos a primeira versão do nosso primeiro site, o Get-it. Na aula de hoje nós vamos nos focar no estilo da página para relembrar e aprender alguns conceitos de CSS.
 
@@ -22,9 +24,9 @@ O gif abaixo mostra a página sendo recarregada manualmente diversas vezes. **AT
 
 ## Instruções
 
-Esta atividade deve ser realizada em duplas.
+Esta atividade deve ser realizada em duplas ou trios.
 
-Atualize o cabeçalho deste arquivo README.md com os dados do seu trabalho.
+Atualize o cabeçalho do arquivo README.md com os dados do seu trabalho.
 
 Você pode modificar apenas o conteúdo do arquivo **getit.css**.
 

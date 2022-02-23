@@ -6,20 +6,33 @@ De modo geral, sistemas de bancos de dados são programas que ficam executando i
 conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 ```
 
+Para mais detalhes, acesse: https://docs.python.org/3/library/sqlite3.html
+
+
 !!! example "Exercício 01"
     Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect`) em um atributo chamado `#!python conn`. Note que o arquivo do banco de dados possui a extensão `.db`.
 
     Lembre-se de importar o pacote: `#!python import sqlite3`.
 
-    Para testar o seu código, faça o download [deste arquivo](test_database.py) e salve na mesma pasta do arquivo `database.py`. Basta executar `python test_database.py` no terminal para rodar todos os testes.
+    Para testar o seu código, faça o download [deste arquivo](test_database.py) e salve na mesma pasta do arquivo `database.py`. Basta executar `python test_database.py` no terminal para rodar todos os testes. Para este exercício o teste `test_connect_on_init` deve passar com sucesso. Se ao executar os teste você **não** se deparar com nenhuma mensagem com o texto `FAIL: test_connect_on_init` então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)
 
-    Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame o professor.
+    Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame os professores.
 
 ## Criando a tabela
 
-Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando `#!sql CREATE TABLE NOME_DA_TABELA COLUNAS_DA_TABELA;`. Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.
+Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando:
 
-Para não precisar se preocupar com isso você pode usar adicionar `#!sql IF NOT EXISTS` para a tabela ser criada apenas se ainda não existir. Assim, você pode executar o comando múltiplas vezes sem se preocupar. O comando ficaria então: `#!sql CREATE TABLE IF NOT EXISTS NOME_DA_TABELA COLUNAS_DA_TABELA;`.
+```sql
+CREATE TABLE NOME_DA_TABELA COLUNAS_DA_TABELA;
+```
+
+Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.
+
+Para não precisar se preocupar com isso você pode usar adicionar `#!sql IF NOT EXISTS` para a tabela ser criada apenas se ainda não existir. Assim, você pode executar o comando múltiplas vezes sem se preocupar. O comando ficaria então:
+
+```sql
+CREATE TABLE IF NOT EXISTS NOME_DA_TABELA (COLUNAS_DA_TABELA);
+```
 
 As colunas da tabela são separadas por vírgula e são indicadas como `#!sql NOME_DA_COLUNA TIPO_DA_COLUNA RESTRICOES_ADICIONAIS`. Alguns exemplos:
 
@@ -27,7 +40,14 @@ As colunas da tabela são separadas por vírgula e são indicadas como `#!sql NO
 - `#!sql cpf TEXT NOT NULL UNIQUE` define uma coluna chamada `cpf`, na qual podem ser inseridos apenas valores do tipo texto e os valores devem ser únicos, ou seja, não pode haver dois CPFs iguais;
 - `#!sql identificador INTEGER PRIMARY KEY` define uma coluna chamada `identificador`, na qual podem ser inseridos apenas valores do tipo inteiro e ela será utilizada como **chave primária** (explicaremos abaixo o que isso significa).
 
-Você poderia então, por exemplo, criar a tabela `dados_pessoais` com o comando `#!sql CREATE TABLE IF NOT EXISTS dados_pessoais (nome_da_rua TEXT NOT NULL, cpf TEXT NOT NULL UNIQUE, identificador INTEGER PRIMARY KEY);` (note os parênteses e o ponto e vírgula).
+Você poderia então, por exemplo, criar a tabela `dados_pessoais` com o comando (note os parênteses e o ponto e vírgula):
+
+```sql
+CREATE TABLE IF NOT EXISTS dados_pessoais ( nome_da_rua TEXT NOT NULL,
+                                            cpf TEXT NOT NULL UNIQUE,
+                                            identificador INTEGER PRIMARY KEY);
+```
+
 
 !!! info "Chave primária"
     Uma das características de bancos de dados é a possibilidade de encontrar dados rapidamente. Para isso é comum o uso de identificadores únicos. Identificadores do tipo inteiro, além de facilitarem a busca, podem ser utilizados em diversas otimizações.
@@ -39,7 +59,7 @@ Ok, já sei qual é o comando para criar uma tabela, mas como eu o envio para o 
 !!! example "Exercício 02"
     Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. A tabela deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
 
-    Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta.
+    Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, o teste `test_create_table_on_init` deve passar sem errors.
 
 ### Validando o resultado com o DB Browser for SQLite
 

@@ -37,11 +37,13 @@ nav:
     - "02 - Desafio CSS":
       - "Slides": "aulas/02-desafio-css/Aula02.pdf"
       - "Handout": aulas/02-desafio-css.md
+    - "03 - Persistencia de dados":
+      - "Handout": aulas/03-persistencia-de-dados.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
-    - "02 - Desafio CSS": entregas/02-desafio-css.md
+    - "02 - Desafio CSS": aulas/02-desafio-css.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
