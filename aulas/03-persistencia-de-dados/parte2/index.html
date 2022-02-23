@@ -451,13 +451,55 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
+      03 - Persistencia de dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="03 - Persistencia de dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        03 - Persistencia de dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
       Material Auxiliar
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Material Auxiliar" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-3-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -531,7 +573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../entregas/02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
+    <a href="../../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
       02 - Desafio CSS
     </a>
   </li>
@@ -614,23 +656,33 @@
 <p>De modo geral, sistemas de bancos de dados são programas que ficam executando infinitamente. Um programa externo pode se conectar a esse programa para interagir com o banco de dados. Esse vai ser o nosso primeiro passo. Como queremos realizar múltiplas operações no banco de dados, vamos encapsular (lembra desse termo de Desenvolvimento Colaborativo Ágil?) a responsabilidade de se comunicar com o banco de dados em uma classe chamada <code class="highlight"><span class="n">Database</span></code>. A função para se conectar ao banco de dados é:</p>
 <div class="highlight"><pre><span></span><code><span class="n">conexao</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">NOME_DO_ARQUIVO_DO_BANCO</span><span class="p">)</span>
 </code></pre></div>
+<p>Para mais detalhes, acesse: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
 <div class="admonition example">
 <p class="admonition-title">Exercício 01</p>
 <p>Crie um arquivo chamado <code>database.py</code>. Nesse arquivo, crie uma classe chamada <code class="highlight"><span class="n">Database</span></code>. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função <code class="highlight"><span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span></code>) em um atributo chamado <code class="highlight"><span class="n">conn</span></code>. Note que o arquivo do banco de dados possui a extensão <code>.db</code>.</p>
 <p>Lembre-se de importar o pacote: <code class="highlight"><span class="kn">import</span> <span class="nn">sqlite3</span></code>.</p>
-<p>Para testar o seu código, faça o download <a href="../test_database.py">deste arquivo</a> e salve na mesma pasta do arquivo <code>database.py</code>. Basta executar <code>python test_database.py</code> no terminal para rodar todos os testes.</p>
-<p>Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame o professor.</p>
+<p>Para testar o seu código, faça o download <a href="../test_database.py">deste arquivo</a> e salve na mesma pasta do arquivo <code>database.py</code>. Basta executar <code>python test_database.py</code> no terminal para rodar todos os testes. Para este exercício o teste <code>test_connect_on_init</code> deve passar com sucesso. Se ao executar os teste você <strong>não</strong> se deparar com nenhuma mensagem com o texto <code>FAIL: test_connect_on_init</code> então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)</p>
+<p>Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame os professores.</p>
 </div>
 <h2 id="criando-a-tabela">Criando a tabela<a class="headerlink" href="#criando-a-tabela" title="Permanent link">&para;</a></h2>
-<p>Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando <code class="highlight"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">NOME_DA_TABELA</span> <span class="n">COLUNAS_DA_TABELA</span><span class="p">;</span></code>. Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.</p>
-<p>Para não precisar se preocupar com isso você pode usar adicionar <code class="highlight"><span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span></code> para a tabela ser criada apenas se ainda não existir. Assim, você pode executar o comando múltiplas vezes sem se preocupar. O comando ficaria então: <code class="highlight"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">NOME_DA_TABELA</span> <span class="n">COLUNAS_DA_TABELA</span><span class="p">;</span></code>.</p>
+<p>Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">NOME_DA_TABELA</span> <span class="n">COLUNAS_DA_TABELA</span><span class="p">;</span>
+</code></pre></div>
+<p>Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.</p>
+<p>Para não precisar se preocupar com isso você pode usar adicionar <code class="highlight"><span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span></code> para a tabela ser criada apenas se ainda não existir. Assim, você pode executar o comando múltiplas vezes sem se preocupar. O comando ficaria então:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">NOME_DA_TABELA</span> <span class="p">(</span><span class="n">COLUNAS_DA_TABELA</span><span class="p">);</span>
+</code></pre></div>
 <p>As colunas da tabela são separadas por vírgula e são indicadas como <code class="highlight"><span class="n">NOME_DA_COLUNA</span> <span class="n">TIPO_DA_COLUNA</span> <span class="n">RESTRICOES_ADICIONAIS</span></code>. Alguns exemplos:</p>
 <ul>
 <li><code class="highlight"><span class="n">nome_da_rua</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span></code> define uma coluna chamada <code>nome_da_rua</code>, na qual podem ser inseridos apenas valores do tipo texto e ela não pode ser vazia;</li>
 <li><code class="highlight"><span class="n">cpf</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span></code> define uma coluna chamada <code>cpf</code>, na qual podem ser inseridos apenas valores do tipo texto e os valores devem ser únicos, ou seja, não pode haver dois CPFs iguais;</li>
 <li><code class="highlight"><span class="n">identificador</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span></code> define uma coluna chamada <code>identificador</code>, na qual podem ser inseridos apenas valores do tipo inteiro e ela será utilizada como <strong>chave primária</strong> (explicaremos abaixo o que isso significa).</li>
 </ul>
-<p>Você poderia então, por exemplo, criar a tabela <code>dados_pessoais</code> com o comando <code class="highlight"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">dados_pessoais</span> <span class="p">(</span><span class="n">nome_da_rua</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span> <span class="n">cpf</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">,</span> <span class="n">identificador</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">);</span></code> (note os parênteses e o ponto e vírgula).</p>
+<p>Você poderia então, por exemplo, criar a tabela <code>dados_pessoais</code> com o comando (note os parênteses e o ponto e vírgula):</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">dados_pessoais</span> <span class="p">(</span> <span class="n">nome_da_rua</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+                                            <span class="n">cpf</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">,</span>
+                                            <span class="n">identificador</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">);</span>
+</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Chave primária</p>
 <p>Uma das características de bancos de dados é a possibilidade de encontrar dados rapidamente. Para isso é comum o uso de identificadores únicos. Identificadores do tipo inteiro, além de facilitarem a busca, podem ser utilizados em diversas otimizações.</p>
@@ -640,7 +692,7 @@
 <div class="admonition example">
 <p class="admonition-title">Exercício 02</p>
 <p>Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe <code class="highlight"><span class="n">Database</span></code>. A tabela deve se chamar <code>note</code> e deve ter as colunas <code>id</code> (chave primária do tipo inteiro), <code>title</code> (do tipo string), <code>content</code> (do tipo string e não pode ser vazia).</p>
-<p>Como no exercício anterior, rode os testes no arquivo <code>test_database.py</code> para verificar se a sua implementação está correta.</p>
+<p>Como no exercício anterior, rode os testes no arquivo <code>test_database.py</code> para verificar se a sua implementação está correta. Se tudo der certo, o teste <code>test_create_table_on_init</code> deve passar sem errors.</p>
 </div>
 <h3 id="validando-o-resultado-com-o-db-browser-for-sqlite">Validando o resultado com o DB Browser for SQLite<a class="headerlink" href="#validando-o-resultado-com-o-db-browser-for-sqlite" title="Permanent link">&para;</a></h3>
 <p>Crie um arquivo chamado <code>exemplo_de_uso.py</code> na mesma pasta com o seguinte conteúdo:</p>

@@ -68,8 +68,11 @@ class DatabaseTestCase(unittest.TestCase):
             ('Pão doce', 'Abra o pão e coloque o seu suco em pó favorito.'),
             ('', 'Lembrar de tomar água'),
         ]
-        for title, content in data:
-            db.add(database.Note(title=title, content=content))
+        try:
+            for title, content in data:
+                db.add(database.Note(title=title, content=content))
+        except sqlite3.OperationalError:
+            raise SyntaxError("Algo deu errado! Veja se não esqueceu as aspas em torno dos valores.")
 
         conn = sqlite3.connect(DB_FILENAME)
         cursor = conn.execute(f"SELECT * FROM {TABLE_NAME}")
@@ -89,7 +92,11 @@ class DatabaseTestCase(unittest.TestCase):
         for note in data:
             db.add(note)
 
-        notes = sorted(db.get_all(), key=lambda n: n.title)
+        try:
+            notes = sorted(db.get_all(), key=lambda n: n.title)
+        except:
+            raise Exception("Verifique se o método get_all está retornando uma lista de Note")
+
         assert isinstance(notes, list), f'O método get_all deveria devolver uma lista. Obtido: {notes}'
         assert len(data) == len(notes), f'A lista devolvida tem uma quantidade de elementos diferente do esperado. Esperado: {len(data)}. Obtido: {len(notes)}.'
         assert all(d.title == n.title and d.content == n.content for d, n in zip(data, notes)), f'A lista de anotações é diferente da esperada. Esperada: {data}. Obtida: {notes}.'
@@ -112,9 +119,15 @@ class DatabaseTestCase(unittest.TestCase):
         updated_row = notes[1]
         updated_row.title = new_title
         updated_row.content = new_content
-        db.update(updated_row)
+
+        try:
+            db.update(updated_row)
+        except sqlite3.OperationalError:
+            raise SyntaxError("Algo deu errado! Veja se não esqueceu as aspas em torno dos valores.")
 
         notes = sorted(db.get_all(), key=lambda n: n.title)
+
+
         data[1].title = new_title
         data[1].content = new_content
         assert isinstance(notes, list), f'O método get_all deveria devolver uma lista. Obtido: {notes}'

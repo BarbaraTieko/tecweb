@@ -451,13 +451,55 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
+      03 - Persistencia de dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="03 - Persistencia de dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        03 - Persistencia de dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
       Material Auxiliar
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Material Auxiliar" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-3">
+      <label class="md-nav__title" for="nav-3-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -531,7 +573,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../entregas/02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
+    <a href="../../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
       02 - Desafio CSS
     </a>
   </li>
@@ -574,7 +616,10 @@
                 
                 
                 <h1 id="parte-3-inserindo-dados-na-tabela">Parte 3: Inserindo dados na tabela<a class="headerlink" href="#parte-3-inserindo-dados-na-tabela" title="Permanent link">&para;</a></h1>
-<p>Nossa tabela foi criada, mas ainda não possui nenhum dado. Para inserir dados na tabela utilizamos o comando SQL <code class="highlight"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">NOME_DA_TABELA</span> <span class="n">NOMES_DAS_COLUNAS</span> <span class="k">VALUES</span> <span class="n">VALORES_DAS_COLUNAS</span></code>. Por exemplo, na tabela <code>dados_pessoais</code>, que usamos de exemplo na parte 2, poderíamos adicionar uma nova linha com o comando</p>
+<p>Nossa tabela foi criada, mas ainda não possui nenhum dado. Para inserir dados na tabela utilizamos o comando SQL:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">NOME_DA_TABELA</span> <span class="p">(</span><span class="n">NOMES_DAS_COLUNAS</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="n">VALORES_DAS_COLUNAS</span><span class="p">)</span><span class="o">`</span>
+</code></pre></div>
+<p>Por exemplo, na tabela <code>dados_pessoais</code>, que usamos de exemplo na parte 2, poderíamos adicionar uma nova linha com o comando</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">dados_pessoais</span> <span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
 </code></pre></div>
 <div class="admonition danger">
@@ -608,16 +653,35 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
 </code></pre></div>
-<p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>.</p>
+<p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. O teste <code>test_add_rows</code> deve passar com sucesso.</p>
 </div>
 <p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="highlight"><span class="n">Note</span></code> nesse arquivo):</p>
 <div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
 <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Lembrar de tomar água&#39;</span><span class="p">))</span>
 </code></pre></div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>O que o trecho de código a seguir faz?</p>
+<div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
+</code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria uma tabela nova no banco de dados.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria somente um objeto do tipo <code>Note</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Cria um objeto do tipo <code>Note</code> e inseri os dados no banco de dados.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nenhuma das opções anteriores.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Um objeto do tipo <code>Note</code> é criado com o seguinte código:
+<code class="highlight"><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">)</span></code></p>
+<p>Esse objeto criado é passado como argumento para o método <code>add</code> da classe <code>Database</code> que criamos no exercício anterior.</p>
+<p>Esse método é responsável por inserir os dados da nota no banco de dados. </p>
+</div>
+</div>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-</div>
 <p>Toda vez que você executar o arquivo <code>exemplo_de_uso.py</code> esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo <code>banco.db</code> e executar o arquivo novamente.</p>
+</div>
 <p>Quando tiver terminado, siga para a <a href="../parte4/">próxima parte do handout</a>.</p>
                 
               

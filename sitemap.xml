@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/notas/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/Aula01.pdf</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/parte1/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/parte2/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/parte3/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/01-getit/parte4/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/02-desafio-css/Aula02.pdf</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/02-desafio-css/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/03-persistencia-de-dados/</loc>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/auxiliar/venv/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2022.1/entregas/01-ELI5/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://barbaratieko.github.io/tecweb.2022.1/entregas/02-desafio-css/</loc>
-     <lastmod>2022-02-22</lastmod>
+     <loc>https://barbaratieko.github.io/tecweb.2022.1/aulas/02-desafio-css/</loc>
+     <lastmod>2022-02-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
