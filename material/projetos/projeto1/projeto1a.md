@@ -2,7 +2,7 @@
 
 **Trabalho individual**
 
-~~**Prazo: 11/03/2022**~~
+~~**Prazo: 11/03/2022**~~  
 **Novo Prazo: 14/03/2022**
 
 **Entrega via GitHub Classroom**
