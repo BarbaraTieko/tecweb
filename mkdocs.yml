@@ -45,6 +45,9 @@ nav:
       - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
       - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
       - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
+    - "04 - Django":
+      - "Slides": "aulas/04-django/Aula07.pdf"
+      - "Handout": aulas/04-django.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:

@@ -13,7 +13,7 @@ DATABASES = {
 }
 ```
 
-Esse dicionário está configurando o SQLite como o banco de dados da aplicação (será criado um banco de dados no arquivo `db.sqlite3` dentro da pasta principal do seu projeto). Se você quiser utilizar outro banco de dados, basta instalar as bibliotecas necessárias (em geral disponíveis para ser instaladas via `pip install`) e modificar os itens desse dicionário. Se quiser saber mais, consulte a [documentação do Django](https://docs.djangoproject.com/en/3.0/intro/tutorial02/#database-setup).
+Esse dicionário está configurando o SQLite como o banco de dados da aplicação (será criado um banco de dados no arquivo `db.sqlite3` dentro da pasta principal do seu projeto). Se você quiser utilizar outro banco de dados, basta instalar as bibliotecas necessárias (em geral disponíveis para ser instaladas via `pip install`) e modificar os itens desse dicionário. Se quiser saber mais, consulte a [documentação do Django](https://docs.djangoproject.com/en/4.0/intro/tutorial02/#database-setup).
 
 Já que estamos no arquivo de configuração, aproveite para procurar pela lista `#!python INSTALLED_APPS`. Ela deve ser parecida com essa:
 
@@ -60,7 +60,7 @@ Começamos esta parte do handout comentando que o Django já tem uma integraçã
     Nesse código nós criamos um modelo chamado `#!python Note` que possui um atributo `#!python title`, que será mapeado no banco de dados em uma coluna cujos valores são strings de no máximo 200 caracteres.
 
 !!! example "Exercício"
-    Leia a [documentação do `#!python CharField`](https://docs.djangoproject.com/en/3.1/ref/models/fields/#charfield). Ele não é recomendável para textos grandes. Crie na classe `#!python Note` um atributo `#!python content` com o tipo apropriado.
+    Leia a [documentação do `#!python CharField`](https://docs.djangoproject.com/en/4.0/ref/models/fields/#charfield). Ele não é recomendável para textos grandes. Crie na classe `#!python Note` um atributo `#!python content` com o tipo apropriado.
 
     Existem diversos tipos de colunas que podem ser utilizados nos modelos. Por exemplo, relacionamentos entre entidades (tabelas) podem ser representados com o `models.ForeignKey` ou o `models.ManyToManyField`.
 

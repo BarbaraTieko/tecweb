@@ -39,7 +39,7 @@ Depois de adicionar algumas anotações, a sua lista deve estar mais ou menos as
 Não sei para você, mas para mim esses nomes `Note object (x)` não parecem muito úteis. Seria melhor se ele mostrasse o título da anotação. A boa notícia é que você pode modificar o que aparece na lista da página de admin. Para mostrar um objeto qualquer, por exemplo `note`, na interface, ele utiliza a função `#!python str` para transformar o objeto em uma string (`#!python str(note)`). Nós podemos modificar essa funcionalidade sobrescrevendo (lembra dessa palavra de Desenvolvimento Colaborativo Ágil?) [o método mágico `#!python __str__()`](https://docs.python.org/3/reference/datamodel.html#object.__str__).
 
 !!! example "Exercício"
-    Implemente o método `#!python __str__(self)` na classe `#!python Note`. Ele deve devolver uma string no seguinte formato: `ID. TITULO`, onde `ID` é o [id do objeto](https://docs.djangoproject.com/en/3.1/topics/db/models/#automatic-primary-key-fields) e `TITULO` é o título do objeto (atributo `title`).
+    Implemente o método `#!python __str__(self)` na classe `#!python Note`. Ele deve devolver uma string no seguinte formato: `ID. TITULO`, onde `ID` é o [id do objeto](https://docs.djangoproject.com/en/4.0/topics/db/models/#automatic-primary-key-fields) e `TITULO` é o título do objeto (atributo `title`).
 
     Depois de implementar esse método, a lista de anotações na tela de admin deve estar mais ou menos assim:
 
