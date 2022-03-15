@@ -31,7 +31,7 @@ O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!pyt
 !!! example "Exercício"
     Modifique o arquivo `notes/views.py` com o seguinte conteúdo:
 
-    ```python hl_lines="6-11"
+    ```python hl_lines="1 6-11"
     from django.shortcuts import render, redirect
     from .models import Note
 
