@@ -19,7 +19,7 @@
     
     
       
-        <title>Projeto 1: Parte B - Tecnologias Web - Insper 2022/1</title>
+        <title>Parte B - Tecnologias Web - Insper 2022/1</title>
       
     
     
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Projeto 1: Parte B
+              Parte B
             
           </span>
         </div>
@@ -840,10 +840,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Projetos
@@ -865,10 +867,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
     
     <label class="md-nav__link" for="nav-5-1">
       Projeto 1
@@ -895,6 +899,74 @@
     <a href="../projeto1a/" title="Parte A" class="md-nav__link">
       Parte A
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Parte B
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Parte B" class="md-nav__link md-nav__link--active">
+      Parte B
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reimplementando-projeto-1a-usando-django" class="md-nav__link">
+    Reimplementando Projeto 1A usando Django
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistema-de-tags" class="md-nav__link">
+    Sistema de tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica" class="md-nav__link">
+    Rubrica
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -972,20 +1044,20 @@
                 
                 <h1 id="projeto-1-parte-b">Projeto 1: Parte B<a class="headerlink" href="#projeto-1-parte-b" title="Permanent link">&para;</a></h1>
 <p><strong>Trabalho individual</strong></p>
-<p><del><strong>Prazo: 23/09/2021 (quinta-feira)</strong></del></p>
-<p><strong>Novo Prazo: 27/09/2021 (segunda-feira)</strong></p>
-<p><strong>Entrega via GitHub (enviar endereço do repositório no Blackboard)</strong></p>
+<p><strong>Prazo: 30/03/2022 (quarta-feira)</strong></p>
+<p><strong>Entrega via GitHub Classroom</strong></p>
+<p>Acesse o link <a href="https://classroom.github.com/a/qjMDQOcs">Github classroom</a> para criar o repositório para este projeto.</p>
 <p>Na <a href="../projeto1a/">parte A</a> você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.</p>
 <h2 id="reimplementando-projeto-1a-usando-django">Reimplementando Projeto 1A usando Django<a class="headerlink" href="#reimplementando-projeto-1a-usando-django" title="Permanent link">&para;</a></h2>
 <p>Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações.</p>
 <p>Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
-Como discutido na aula 08, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.</p>
-<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/3.2/topics/http/urls/">URL Dispatcher</a></p>
+Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.</p>
+<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/http/urls/">URL Dispatcher</a></p>
 <h2 id="sistema-de-tags">Sistema de tags<a class="headerlink" href="#sistema-de-tags" title="Permanent link">&para;</a></h2>
 <p>Na parte B você deve implementar um sistema de tags para as anotações. Cada anotação pode ter no máximo uma tag (pode não ter nenhuma).</p>
 <p>No formulário de criação/edição de anotações deve haver um campo de texto adicional para o usuário digitar o nome da tag. No backend (no <code>view.py</code>), se essa tag já existir, você deve associar a anotação a ela, senão, crie uma nova tag no banco de dados e associe à anotação.</p>
 <p>Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.</p>
-<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_one/">Relação Um para Muitos</a></p>
+<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/">Relação Um para Muitos</a></p>
 <h2 id="rubrica">Rubrica<a class="headerlink" href="#rubrica" title="Permanent link">&para;</a></h2>
 <p>As tarefas a serem realizadas são:</p>
 <ol>
@@ -1038,6 +1110,7 @@ Como discutido na aula 08, utilize mais de uma rota para mapear as diferentes re
 </tbody>
 </table>
 <p>O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.</p>
+<p>É importante que você deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.</p>
                 
               
               
@@ -1052,6 +1125,27 @@ Como discutido na aula 08, utilize mais de uma rota para mapear as diferentes re
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../projeto1a/" title="Parte A" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Parte A
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
