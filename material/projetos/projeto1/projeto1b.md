@@ -2,11 +2,11 @@
 
 **Trabalho individual**
 
-~~**Prazo: 23/09/2021 (quinta-feira)**~~
+**Prazo: 30/03/2022 (quarta-feira)**
 
-**Novo Prazo: 27/09/2021 (segunda-feira)**
+**Entrega via GitHub Classroom**
 
-**Entrega via GitHub (enviar endereço do repositório no Blackboard)**
+Acesse o link [Github classroom](https://classroom.github.com/a/qjMDQOcs) para criar o repositório para este projeto.
 
 Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.
 
@@ -14,9 +14,9 @@ Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de
 Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações.
 
 Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
-Como discutido na aula 08, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.
+Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.
 
-Para mais informações veja: [URL Dispatcher](https://docs.djangoproject.com/en/3.2/topics/http/urls/)
+Para mais informações veja: [URL Dispatcher](https://docs.djangoproject.com/en/4.0/topics/http/urls/)
 
 ## Sistema de tags
 
@@ -26,7 +26,7 @@ No formulário de criação/edição de anotações deve haver um campo de texto
 
 Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.
 
-Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/3.2/topics/db/examples/many_to_one/)
+Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/)
 
 ## Rubrica
 
@@ -51,3 +51,5 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
 |    I     | Não entregou ou o código não executa |
 
 O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
+
+É importante que você deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
