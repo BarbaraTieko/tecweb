@@ -57,6 +57,17 @@ Entre na pasta do seu projeto pelo terminal.
     tests/report/
     ```
 
+!!! danger "Importante 2"
+    O projeto Django deve estar na raiz do repositório github.
+    ```
+    > REPOSITÓRIO GIT
+        > getit
+        > notes
+        manage.py
+        Procfile
+        requirements.txt
+    ```
+
 O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (**importante 1:** execute este comando na pasta raiz do seu projeto; **importante 2:** troque o `still-cove-69163` pelo nome do seu app gerado pelo Heroku):
 
     heroku git:remote -a still-cove-69163
@@ -78,18 +89,9 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 
     pip install gunicorn
 
-Para testar sua aplicação com o Gunicorn, você pode executar o comando:
-
-
-    gunicorn getit.wsgi
-
 !!! info "O arquivo `wsgi.py`"
     O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
 
-
-
-
-Acesse sua aplicação em [`localhost:8000`](http://localhost:8000) para verificar se está tudo funcionando até aqui. Depois que confirmar, pare o servidor (`ctrl+c`).
 
 Agora vamos definir o arquivo de configuração do Heroku. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
 
@@ -99,17 +101,6 @@ web: gunicorn getit.wsgi
 ```
 
 A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.
-
-!!! danger "Usuários Windows"
-    Para realizar testes em desenvolvimento no Windows é necessário criar um arquivo adicional chamado `Procfile.windows` com o conteúdo:
-
-    ```
-    web: python manage.py runserver 0.0.0.0:5000
-    ```
-
-A partir de agora você pode testar sua aplicação com o comando (**importante:** a aplicação estará disponível na porta 5000 ao invés da 8000 que usamos até o momento, ou seja, [localhost:5000](http://localhost:5000)):
-
-    heroku local
 
 ### Configurando os arquivos estáticos
 
@@ -144,6 +135,9 @@ Note que também adicionamos o `#!python 'localhost'` e o `#!python '127.0.0.1'`
 Cada projeto Python possui dependências diferentes. Quando outra pessoa (ou você mesmo em outro computador) vai executar o seu projeto é necessário executar uma série de `pip install` com cada uma das dependências. Para simplificar esse processo podemos criar o arquivo `requirements.txt`. Com esse arquivo basta executar `pip install -r requirements.txt` para instalar todas as dependências do projeto. O Heroku também utiliza esse mesmo arquivo para configurar o seu projeto no servidor deles. O `requirements.txt` é basicamente um arquivo texto com a lista das dependências. Ele pode ser criado com o comando:
 
     pip freeze > requirements.txt
+
+!!! danger "Importante"
+    Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado. Após rodar o comando verifique o arquivo `requirements.txt` que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.
 
 ## Fazendo o deploy
 
