@@ -59,6 +59,8 @@ nav:
       - "Handout": aulas/05-bd.md
     - "06 - Deploy da aplicação":
       - "Handout": aulas/06-deploy.md
+    - "07 - Javascript":
+      - "Handout": aulas/07-javascript.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Simulado:

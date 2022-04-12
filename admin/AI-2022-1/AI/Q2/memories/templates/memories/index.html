@@ -1,0 +1,9 @@
+{% extends "memories/base.html" %} {% block content %}
+<form method="post">
+  {% csrf_token %}
+  <label for="memoria">Memória</label>
+  <textarea id="memoria" name="memoria"></textarea>
+  <input type="submit" />
+</form>
+<p>{{ memoria.texto }}</p>
+{% endblock %}

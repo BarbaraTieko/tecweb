@@ -34,19 +34,11 @@ class Database:
             notes.append(note)
         return notes
 
-    # def update(self, entry):
-    #     update = f'UPDATE note SET title = "{entry.title}", content = "{entry.content}" WHERE id = "{entry.id}" '
-    #     self.conn.execute(update)
-    #     self.conn.commit()
-
-    def update(self,entry):
-        teste = f"UPDATE note SET title = '{entry.title}', content = '{entry.content}' WHERE id = {entry.id}"
-        print("-------------------------")
-        print("\n\n\n")
-        print(teste)
-        self.conn.execute(teste)
-                           #UPDATE dados_pessoais SET cpf = '555.555.555-55' WHERE identificador = 2
+    def update(self, entry):
+        update = f'UPDATE note SET title = "{entry.title}", content = "{entry.content}" WHERE id = "{entry.id}" '
+        self.conn.execute(update)
         self.conn.commit()
+
 
     def delete(self, note_id):
         self.conn.execute(f"DELETE FROM note WHERE id = {note_id}")
