@@ -2,18 +2,17 @@
 
 **Trabalho em duplas ou individual**
 
-**Inception do Projeto até: 20/10/2021 (quarta-feira)**
+**Inception do Projeto até: 04/05/2021 (quarta-feira)**
 
-~~**Prazo: 10/11/2021 (quarta-feira)**~~
-**Prazo: 15/11/2021 (segunda-feira)**
+**Prazo: 17/05/2021 (terça-feira)**
 
 
-**Entrega via GitHub (enviar endereço do repositório no Blackboard)**
+**Entrega via GitHub Classroom:** 
 
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
 !!! danger "Importante"
-    A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
+    A sua proposta deve ser validada pela professora antes de iniciar a implementação =)
 
 ## Restrições
 
@@ -26,20 +25,20 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 ## Roadmap
 
 1. Decida se você vai fazer este projeto sozinho ou em dupla (a rubrica é a mesma, mas a exigência será maior em termos do que é considerado bem feito);
-2. Escolha sua API externa. Dica de repositório para procurar APIs (algumas são pagas, mas tem várias opções gratuitas ou freemium): https://rapidapi.com/
+2. Escolha sua API externa.
+
+    !!! tip "Dica"
+        Dica de repositório para procurar APIs: https://rapidapi.com/
+
+        Algumas APIs disponíveis pela RapidAPI são pagas, mas tem várias opções gratuitas ou freemium. Evite utilizar APIs que peçam o cadastro de cartão de crédito.
+
+        Se você tiver um tema definido, também é bem fácil de achar APIs gratuitas procurando no Google.
+
 3. Liste 2 funcionalidades essenciais;
 4. Defina a arquitetura do projeto (que parte faz as requisições para a API externa, por exemplo);
-5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia  20/10/2021 (quarta-feira). [Clique aqui para acessar o formulário](https://forms.gle/Xn9ZiRBx7uHsxFQ36).
-Basta enviar uma resposta por dupla.
+5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia  04/05/2022 (quarta-feira). [Clique aqui para acessar o formulário](https://forms.gle/Xn9ZiRBx7uHsxFQ36).
+Basta enviar uma resposta por dupla. Além disso, crie um código exemplo fazendo alguma requisição para a API escolhida e disponibilize no repositório do Github.
 
 ## Rubrica
 
-A rubrica a seguir será utilizada na correção do Projeto 2:
-
-| Conceito | Descrição |
-| :------: | :-------- |
-|    A     | Atingiu o conceito B e implementou o frontend usando React |
-|    B     | Atingiu o conceito C e colocou em produção (está disponível na internet) |
-|    C     | Entregou as 2 funcionalidades essenciais |
-|    D     | Entregou apenas 1 funcionalidade essencial |
-|    I     | Não entregou ou o código não executa |
+(Será disponibilizado em breve ...)
