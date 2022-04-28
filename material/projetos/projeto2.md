@@ -7,7 +7,7 @@
 **Prazo: 17/05/2021 (terça-feira)**
 
 
-**Entrega via GitHub Classroom:** 
+**Entrega via GitHub Classroom:** https://classroom.github.com/a/SU2vxVV3
 
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
