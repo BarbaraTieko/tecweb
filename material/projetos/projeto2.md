@@ -7,7 +7,12 @@
 **Prazo: 17/05/2021 (terça-feira)**
 
 
-**Entrega via GitHub Classroom:** https://classroom.github.com/a/SU2vxVV3
+**Entrega via GitHub Classroom:**
+Para este projeto será necessário criar dois repositório GitHub, um para o frontend e outro para o backend.
+Essa divisão é necessária para subir o projeto no Heroku.
+
+- Frontend: https://classroom.github.com/a/mADCrTBY
+- Backend: https://classroom.github.com/a/SU2vxVV3
 
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
@@ -41,4 +46,16 @@ Basta enviar uma resposta por dupla. Além disso, crie um código exemplo fazend
 
 ## Rubrica
 
-(Será disponibilizado em breve ...)
+A rubrica a seguir será utilizada na correção do Projeto 2:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A     | Atingiu o conceito B e implementou o frontend usando React |
+|    B     | Atingiu o conceito C e colocou em produção (está disponível na internet) |
+|    C     | Entregou as 2 funcionalidades essenciais |
+|    D     | Entregou apenas 1 funcionalidade essencial |
+|    I     | Não entregou ou o código não executa |
+
+O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
+
+É importante que você deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.

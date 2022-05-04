@@ -29,3 +29,4 @@ Bem-vind@ ao curso de Tecnologias Web 2022/1.
 - 11/04: Entrega do [Projeto 1 - Parte B](projetos/projeto1/projeto1b.md)
 - ~~19/04: Entrega do [Servidor JS]~~
 - 25/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
+- 17/05: Entrega do [Projeto 2](projetos/projeto2.md)
