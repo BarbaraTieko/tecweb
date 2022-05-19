@@ -4,7 +4,7 @@
 
 **Prazo: 08/06/2022 (quarta-feira)**
 
-**Entrega via GitHub Classroom**
+**Entrega via GitHub Classroom:** https://classroom.github.com/a/rpdYzNww
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
 
