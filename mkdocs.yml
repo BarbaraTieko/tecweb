@@ -81,7 +81,9 @@ nav:
       - "Parte A": projetos/projeto1/projeto1a.md
       - "Parte B": projetos/projeto1/projeto1b.md
     - "Projeto 2": projetos/projeto2.md
-    - "Projeto 3": projetos/projeto3.md
+    - "Projeto 3":
+      - Enunciado: projetos/projeto3.md
+      - 'Trabalho em Equipe': projetos/teamwork.md
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
