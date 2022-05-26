@@ -68,6 +68,7 @@ nav:
       - "Handout": aulas/08-django-rest.md
     - "09 - React":
       - "Handout": aulas/09-react.md
+    - "10 - Autenticação": aulas/10-autenticacao.md
     - "Material Auxiliar":
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Simulado:
