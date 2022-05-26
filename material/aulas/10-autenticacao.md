@@ -270,6 +270,12 @@ def api_note_list(request):
 
 Com isso, a requisição deve retornar menos notas. Se quiser dar uma olhada no arquivo `notes.json`, lá podemos ver que algumas notas pertencem ao usuário com id `1` e outras notas pertencem ao usuário com id `2`.
 
+## Próximos passos
+
+Altere as outras funções da `views.py` que o usuário possa criar, editar e excluir somente as notas que pertençam a este usuário.
+
+Em seguida, tente utilizar isso no frontend.
+Veja o tutorial [How To Add Login Authentication to React Applications](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
 
 ## Referências
 
