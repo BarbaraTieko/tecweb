@@ -73,6 +73,7 @@ nav:
       - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
+    - "Avaliação Final": simulado/avaliacao-final.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
@@ -85,6 +86,7 @@ nav:
     - "Projeto 3":
       - Enunciado: projetos/projeto3.md
       - 'Trabalho em Equipe': projetos/teamwork.md
+  - Avaliação do Professor: avaliacao.md
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
