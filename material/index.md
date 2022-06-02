@@ -31,4 +31,7 @@ Bem-vind@ ao curso de Tecnologias Web 2022/1.
 - 25/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
 - ~~17/05: Entrega do [Projeto 2]~~
 - 22/05: Entrega do [Projeto 2](projetos/projeto2.md)
-- 08/06: Entrega do [Projeto 3](projetos/projeto3.md)
+- 30/05: Preencher [Formulário Avaliação Individual dos Membros Sprint 1](https://forms.gle/xUUq9YRcv5r9g3WG8)
+- 06/06: Preencher [Formulário Avaliação Individual dos Membros Sprint 2](projetos/formulario.md)
+- ~~08/06: Entrega do [Projeto 3](projetos/projeto3.md)~~
+- 14/06: Entrega do [Projeto 3](projetos/projeto3.md)

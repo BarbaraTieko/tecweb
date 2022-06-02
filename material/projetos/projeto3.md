@@ -2,7 +2,9 @@
 
 **Trabalho em grupos de 3 ou 4**
 
-**Prazo: 08/06/2022 (quarta-feira)**
+**~~Prazo: 08/06/2022 (quarta-feira)~~**
+
+**Prazo: 14/06/2022 (terça-feira)**
 
 **Entrega via GitHub Classroom:** https://classroom.github.com/a/rpdYzNww
 
