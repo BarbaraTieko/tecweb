@@ -1271,8 +1271,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1280,16 +1287,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1334,9 +1334,11 @@
 <p>A sintaxe do comando é:</p>
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">NOME_DA_TABELA</span> <span class="k">SET</span> <span class="n">NOME_DA_COLUNA</span> <span class="o">=</span> <span class="n">NOVO_VALOR_DA_COLUNA</span> <span class="k">WHERE</span> <span class="n">CONDICAO</span>
 </code></pre></div>
+
 <p>Por exemplo, o código a seguir modifica o valor da coluna <code>cpf</code> para <code>555.555.555-55</code> da linha cujo valor da coluna <code>identificador</code> é igual a 2:</p>
 <div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">dados_pessoais</span> <span class="k">SET</span> <span class="n">cpf</span> <span class="o">=</span> <span class="s1">&#39;555.555.555-55&#39;</span> <span class="k">WHERE</span> <span class="n">identificador</span> <span class="o">=</span> <span class="mi">2</span>
 </code></pre></div>
+
 <p>A condição do <code class="highlight"><span class="k">WHERE</span></code> pode ser bastante complexa. Você pode, por exemplo, selecionar todas as linhas cujo <code>cpf</code> começa com a string <code>00</code>, por exemplo. Nesse caso, todas as linhas que se encaixarem nessa condição serão atualizadas.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercício 05</p>

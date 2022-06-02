@@ -1324,8 +1324,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1333,16 +1340,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1418,6 +1418,7 @@
 <p>De modo geral, sistemas de bancos de dados são programas que ficam executando infinitamente. Um programa externo pode se conectar a esse programa para interagir com o banco de dados. Esse vai ser o nosso primeiro passo. Como queremos realizar múltiplas operações no banco de dados, vamos encapsular (lembra desse termo de Desenvolvimento Colaborativo Ágil?) a responsabilidade de se comunicar com o banco de dados em uma classe chamada <code class="highlight"><span class="n">Database</span></code>. A função para se conectar ao banco de dados é:</p>
 <div class="highlight"><pre><span></span><code><span class="n">conexao</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">NOME_DO_ARQUIVO_DO_BANCO</span><span class="p">)</span>
 </code></pre></div>
+
 <p>Para mais detalhes, acesse: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
 <div class="admonition example">
 <p class="admonition-title">Exercício 01</p>
@@ -1430,10 +1431,12 @@
 <p>Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">NOME_DA_TABELA</span> <span class="n">COLUNAS_DA_TABELA</span><span class="p">;</span>
 </code></pre></div>
+
 <p>Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.</p>
 <p>Para não precisar se preocupar com isso você pode usar adicionar <code class="highlight"><span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span></code> para a tabela ser criada apenas se ainda não existir. Assim, você pode executar o comando múltiplas vezes sem se preocupar. O comando ficaria então:</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">NOME_DA_TABELA</span> <span class="p">(</span><span class="n">COLUNAS_DA_TABELA</span><span class="p">);</span>
 </code></pre></div>
+
 <p>As colunas da tabela são separadas por vírgula e são indicadas como <code class="highlight"><span class="n">NOME_DA_COLUNA</span> <span class="n">TIPO_DA_COLUNA</span> <span class="n">RESTRICOES_ADICIONAIS</span></code>. Alguns exemplos:</p>
 <ul>
 <li><code class="highlight"><span class="n">nome_da_rua</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span></code> define uma coluna chamada <code>nome_da_rua</code>, na qual podem ser inseridos apenas valores do tipo texto e ela não pode ser vazia;</li>
@@ -1445,6 +1448,7 @@
                                             <span class="n">cpf</span> <span class="nb">TEXT</span> <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">UNIQUE</span><span class="p">,</span>
                                             <span class="n">identificador</span> <span class="nb">INTEGER</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">);</span>
 </code></pre></div>
+
 <div class="admonition info">
 <p class="admonition-title">Chave primária</p>
 <p>Uma das características de bancos de dados é a possibilidade de encontrar dados rapidamente. Para isso é comum o uso de identificadores únicos. Identificadores do tipo inteiro, além de facilitarem a busca, podem ser utilizados em diversas otimizações.</p>
@@ -1462,6 +1466,7 @@
 
 <span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">(</span><span class="s1">&#39;banco&#39;</span><span class="p">)</span>
 </code></pre></div>
+
 <p>Após executar este programa, um arquivo chamado <code>banco.db</code> deve ter aparecido na sua pasta. Esse arquivo contém todo o seu banco de dados. Na maioria dos bancos de dados os arquivos não ficam tão acessíveis, mas como o SQLite é uma opção mais simples e direta, se quiser apagar o banco, basta apagar esse arquivo (e na verdade é o que fazemos no <code>test_database.py</code>).</p>
 <p>Abra o arquivo <code>banco.db</code> no DB Browser for SQLite (clique no botão <code>Open Database</code> e selecione o arquivo). Você deve ver uma tela parecida com esta:</p>
 <p><img alt="" src="../tela1.png" /></p>

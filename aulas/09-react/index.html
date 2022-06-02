@@ -1367,8 +1367,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1376,16 +1383,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1521,6 +1521,7 @@
 <div class="highlight"><pre><span></span><code>$ cd notes-frontend
 $ npm start
 </code></pre></div>
+
 <p>O app estará disponível em <a href="http://localhost:3000"><code>localhost:3000</code></a>.</p>
 </li>
 </ol>
@@ -1539,6 +1540,7 @@ $ npm start
 <span class="p">}</span>
 </code></pre></div>
 </td></tr></table>
+
 </li>
 <li>
 <p>Modifique o código do arquivo <code>src/App.js</code>:</p>
@@ -1567,6 +1569,7 @@ $ npm start
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
 </td></tr></table>
+
 </li>
 <li>
 <p>Recarregue a página para ver o resultado.</p>
@@ -1614,6 +1617,7 @@ $ npm start
 </span>  <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+
 <p>Crie também o arquivo <code>src/components/Note/index.css</code> com o seguinte conteúdo:</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card</span> <span class="p">{</span>
   <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
@@ -1643,6 +1647,7 @@ $ npm start
   <span class="k">color</span><span class="p">:</span> <span class="mh">#4c4c4c</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
+
 <p>Recarregue a página para ver o resultado.</p>
 <div class="admonition info">
 <p class="admonition-title">Encapsulamento (de novo)</p>
@@ -1663,6 +1668,7 @@ $ npm start
   <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span>
 <span class="p">/&gt;</span>
 </code></pre></div>
+
 <h2 id="customizando-o-componente">Customizando o componente<a class="headerlink" href="#customizando-o-componente" title="Permanent link">&para;</a></h2>
 <p>O nosso componente não é muito útil. Se utilizarmos múltiplos <code>&lt;Note&gt;</code> teremos o mesmo cartão, com o mesmo conteúdo, repetido várias vezes. Para definir parâmetros para o nosso componente utilizaremos as <strong>props</strong>.</p>
 <p>Queremos utilizar o componente da seguinte maneira. Modifique o seu <code>src/Apps.js</code>:</p>
@@ -1685,6 +1691,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>Ou seja, queremos definir atributos, como no HTML, para o título e adicionar o conteúdo como filho desse componente. Chamamos de filho todos os componentes colocados entre a abertura e fechamento da tag.</p>
 <p>O React passa todas essas informações para o seu componente em um único argumento chamado <strong>props</strong>. Ele é um objeto JavaScript a partir do qual podemos acessar cada propriedade separadamente (lembrando que objetos podem ser utilizados como dicionários). Modifique o <code>src/components/Note/index.js</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
@@ -1699,6 +1706,7 @@ $ npm start
   <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+
 <p>Note que <code>title</code> é o nome do atributo que utilizamos no componente no outro arquivo. Já o <code>children</code> é sempre enviado com esse mesmo nome para o componente e é uma lista dos seus filhos.</p>
 <p>Outro detalhe importante é que o <code>props.title</code> e <code>props.children</code> estão entre chaves. Esse é um recurso do JSX que permite que adicionemos valores do JavaScript nas tags.</p>
 <div class="admonition example">
@@ -1734,6 +1742,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>A versão acima deve funcionar, mas o console do navegador vai apresentar uma mensagem parecida com essa: <code>index.js:1 Warning: Each child in a list should have a unique "key" prop.</code></p>
 <p>Quando utilizamos o map, o resultado devolvido é um array contendo os resultados de cada execução da função. Para o React realizar as otimizações de renderização é necessário que cada elemento desse array possua um atributo <code>key</code> com um valor único. Adicione então o <code>key</code> no componente <code>Note</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">Note</span> <span class="nx">from</span> <span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
@@ -1767,11 +1776,13 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>Você poderia utilizar qualquer string, desde que fosse única. Vamos utilizar o padrão <code class="highlight"><span class="s2">&quot;note__1&quot;</span></code>, <code class="highlight"><span class="s2">&quot;note__2&quot;</span></code>, <code class="highlight"><span class="s2">&quot;note__3&quot;</span></code>, etc.</p>
 <h2 id="recebendo-dados">Recebendo dados<a class="headerlink" href="#recebendo-dados" title="Permanent link">&para;</a></h2>
 <p>Os dados ainda estão fixos. Queremos obter a lista de anotações de algum servidor. Ainda bem que já implementamos o servidor REST na aula anterior! Agora só precisamos implementar o cliente. Para isso, vamos utilizar o axios. Comece instalando o axios no nosso projeto:</p>
 <div class="codehilite"><pre><span></span><code>npm i axios
 </code></pre></div>
+
 
 <p>Agora modifique o seu código do <code>src/App.js</code> para utilizar o axios para realizar uma requisição GET para o servidor REST desenvolvido na última aula:</p>
 <div class="highlight"><pre><span></span><code><span class="hll"><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
@@ -1791,6 +1802,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <div class="admonition danger">
 <p class="admonition-title">Importante!</p>
 <p>Antes de testar, lembre-se de colocar o servidor da aula passada para rodar.</p>
@@ -1802,11 +1814,13 @@ $ npm start
 &#39;http://localhost:3000&#39; has been blocked by CORS policy: No
 &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.
 </code></pre></div>
+
 <p>Esse erro ocorre porque o navegador está tentando te proteger. Ele não fará requisições para servidores que não aceitam explicitamente requisições de outros endereços. O nosso frontend está rodando em <code>localhost:3000</code> e o backend em <code>localhost:8000</code>. Eles são endereços diferentes, então a requisição é bloqueada.</p>
 <p>Para esse tipo de requisição ser bloqueada, precisamos adicionar o header CORS, indicando que <a href="https://drawings.jvns.ca/cors/">aceitamos essa requisição</a>:</p>
 <p><strong>No projeto Django,</strong> adicione o módulo <code>django-cors-headers</code>:</p>
 <div class="highlight"><pre><span></span><code>pip install django-cors-headers
 </code></pre></div>
+
 <p>Adicione o app no <code class="highlight"><span class="n">INSTALLED_APPS</span></code> no arquivo <code>getit/settings.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">...</span>
@@ -1814,15 +1828,18 @@ $ npm start
     <span class="o">...</span>
 <span class="p">]</span>
 </code></pre></div>
+
 <p>Adicione também o <code class="highlight"><span class="n">MIDDLEWARE</span></code> como o primeiro elemento da lista, no mesmo arquivo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s1">&#39;corsheaders.middleware.CorsMiddleware&#39;</span><span class="p">,</span>
     <span class="o">...</span>
 <span class="p">]</span>
 </code></pre></div>
+
 <p>Finalmente, no final do mesmo arquivo de configuração, adicione:</p>
 <div class="highlight"><pre><span></span><code><span class="n">CORS_ORIGIN_ALLOW_ALL</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
+
 </div>
 <p>Depois de realizar as adaptações no servidor, seu código deve funcionar e a requisição devolve a lista de anotações do servidor.</p>
 <h2 id="guardando-os-dados">Guardando os dados<a class="headerlink" href="#guardando-os-dados" title="Permanent link">&para;</a></h2>
@@ -1847,6 +1864,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>O <code>useState</code> devolve o valor do estado atual e uma função que permite modificar o estado. Ele também recebe o valor inicial do estado, no caso um array vazio.</p>
 <p>Ao executar o código acima, o console do navegador deve mostrar o JSON de anotações diversas vezes (recomendo que você feche a aba até implementar o resto do código). O que acontece é que toda vez que o estado muda, o componente é renderizado novamente, ou seja, a função é re-executada. Assim, quando a requisição é finalizada, os dados são utilizados para atualizar a variável <code>notes</code> do estado. Quando isso ocorre, o componente é renderizado novamente. Isso faz com que uma nova requisição ocorra, que por sua vez realizará outra atualização do estado, que  fará com que uma nova requisição ocorra, que por sua vez... enfim, você acabou de implementar a versão de componentes React de um loop infinito!</p>
 <p>Queremos realizar a requisição apenas uma vez. Para isso, existe um outro <strong>hook</strong> chamado <code>useEffect</code>, que permite definir algumas condições para quando ele deve ser re-executado. Modifique novamente o arquivo <code>src/App.js</code>:</p>
@@ -1873,6 +1891,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>O primeiro argumento do <code>useEffect</code> é uma função. Essa função será executada quando o conteúdo do segundo argumento (um array) mudar. Como o array está vazio, a função será executada apenas uma vez.</p>
 <h2 id="carregando-imagens-e-outros-arquivos-estaticos">Carregando imagens e outros arquivos estáticos<a class="headerlink" href="#carregando-imagens-e-outros-arquivos-estaticos" title="Permanent link">&para;</a></h2>
 <p>Além de JavaScript e CSS, a nossa interface também precisa de algumas imagens. Elas podem ser adicionadas à pasta <code>public</code>. Faça o download da imagem do <a href="https://raw.githubusercontent.com/toshikurauchi/tecweb-2021-1-desafio-css/main/docs/img/logo-getit.png">logo do Get-it</a> e salve-o na pasta <code>public</code>. Agora a imagem estará disponível na rota <code>/logo-geti.png</code>. Agora você pode adicioná-lo em <code>src/App.js</code>:</p>
@@ -1895,6 +1914,7 @@ $ npm start
 
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
+
 <p>Esta é uma forma mais direta de adicionar a imagem, mas você poderia criar um novo componente para mostrar a imagem com o estilo correto.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercício</p>

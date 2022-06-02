@@ -1304,8 +1304,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1313,16 +1320,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1389,6 +1389,7 @@
 <div class="codehilite"><pre><span></span><code>python manage.py startapp notes
 </code></pre></div>
 
+
 <p>Ele vai criar um diretório com alguns arquivos. Por enquanto não vamos entrar em detalhes sobre o que cada um deles faz. Quando precisarmos de algum deles nós explicaremos a sua função.</p>
 <div class="admonition info">
 <p class="admonition-title">Aprofundando os conhecimentos sobre uma biblioteca</p>
@@ -1406,6 +1407,7 @@
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="s2">&quot;Olá mundo! Este é o app notes de Tecnologias Web do Insper.&quot;</span><span class="p">)</span>
 </code></pre></div>
+
 </div>
 <p>Salve seu arquivo.</p>
 <div class="admonition info">
@@ -1426,6 +1428,7 @@
     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
 <span class="p">]</span>
 </code></pre></div>
+
 </div>
 <p>Estamos essencialmente dizendo para o Django que, quando a rota vazia (<code>''</code>) for acessada, ele deve utilizar a função <code class="highlight"><span class="n">views</span><span class="o">.</span><span class="n">index</span></code> para construir a resposta.</p>
 <div class="admonition danger">
@@ -1444,6 +1447,7 @@
     <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="s1">&#39;notes.urls&#39;</span><span class="p">)),</span>
 <span class="p">]</span>
 </code></pre></div>
+
 </div>
 <p>Agora sim, teste sua página. O texto <code>"Olá mundo! Este é o app notes de Tecnologias Web do Insper."</code> deve aparecer no navegador.</p>
 <p>A função <code class="highlight"><span class="n">include</span></code> fala para o Django incluir na rota especificada (no caso a rota vazia <code>''</code>) todas as rotas definidas no arquivo <code>notes/urls.py</code>. Ao receber uma requisição, o Django percorre a lista <code class="highlight"><span class="n">urlpatterns</span></code> do arquivo <code>getit/urls.py</code> procurando a primeira rota que seja igual à rota solicitada. Por esse motivo, a ordem dos elementos da lista <code class="highlight"><span class="n">urlpatterns</span></code> é muito importante: em caso de duas rotas com o mesmo nome, será escolhida a que ocorrer primeiro.</p>

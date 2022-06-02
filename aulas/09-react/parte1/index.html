@@ -1258,8 +1258,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1267,16 +1274,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1333,21 +1333,22 @@
 <p>Precisamos instalar a biblioteca com o seguinte comando:</p>
 <div class="highlight"><pre><span></span><code>npm install react-router-dom
 </code></pre></div>
+
 <h2 id="editar-nota">Editar nota<a class="headerlink" href="#editar-nota" title="Permanent link">&para;</a></h2>
 <p>Adicione o código abaixo no arquivo <code>index.html</code> dentro da tag <code>head</code>.</p>
 <div class="highlight"><pre><span></span><code>&lt;script src=&quot;https://kit.fontawesome.com/7ae3e92237.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
 </code></pre></div>
+
 <p>import { Link } from 'react-router-dom';
 return (
-<br />
-<div className="card" style={style}>
+  <div className="card" style={style}>
     <h3 className="card-title">{props.title}</h3>
     <div className="card-content">
       {props.children}
-      <Link to={`edit/${props.id}`}>Editar</Link>
+      <Link to={<code>edit/${props.id}</code>}>Editar</Link>
     </div>
-  </div></p>
-<p>);</p>
+  </div>
+);</p>
                 
               
               

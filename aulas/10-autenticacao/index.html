@@ -1365,8 +1365,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1374,16 +1381,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1511,6 +1511,7 @@
 <li>Instale as dependência com o comando:<div class="codehilite"><pre><span></span><code>npm install
 </code></pre></div>
 
+
 </li>
 </ul>
 </li>
@@ -1522,17 +1523,20 @@
 <div class="codehilite"><pre><span></span><code>python -m venv env
 </code></pre></div>
 
+
 </li>
 <li>
 <p>Instale as dependências com o comando:</p>
 <div class="codehilite"><pre><span></span><code>pip install -r requirements.txt
 </code></pre></div>
 
+
 </li>
 <li>
 <p>Aplique as migrações do projeto:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py migrate
 </code></pre></div>
+
 
 </li>
 <li>
@@ -1559,6 +1563,7 @@
     <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
 <span class="hll">    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
 </span></code></pre></div>
+
 <p>Agora, toda nota criada deve pertencer a um usuário.</p>
 <h2 id="passo-3">Passo 3<a class="headerlink" href="#passo-3" title="Permanent link">&para;</a></h2>
 <p>Ao tentar fazer a requisição: <code>GET /api/notes</code> atualmente, obtemos algo similar a imagem a seguir:</p>
@@ -1594,6 +1599,7 @@
     <span class="n">serialized_note</span> <span class="o">=</span> <span class="n">NoteSerializer</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serialized_note</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
+
 <p>Ao tentar fazer a mesma requisição obtemos o seguinte resultado:</p>
 <figure>
   <img src="../10-autenticacao/get_api_notes_forbidden.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
@@ -1614,6 +1620,7 @@
 <span class="hll">    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">api_get_token</span><span class="p">),</span>
 </span><span class="p">]</span>
 </code></pre></div>
+
 <p>No arquivo <code>settings.py</code> adicione <code class="highlight"><span class="s1">&#39;rest_framework.authtoken&#39;</span><span class="p">,</span></code> em <code>INSTALLED_APPS</code>. Depois disso, é necessário executar o comando <code>python manage.py migrate</code>.</p>
 <p>Ainda no arquivo <code>settings.py</code>, logo depois da lista <code>INSTALLED_APPS</code>, adicione o trecho de código abaixo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
@@ -1622,6 +1629,7 @@
     <span class="p">],</span>
 <span class="p">}</span>
 </code></pre></div>
+
 <p>Em seguida, adiciona a função <code>api_get_token</code> no arquivo <code>views.py</code> e adicione alguns imports necessários:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
 <span class="kn">from</span> <span class="nn">rest_framework.decorators</span> <span class="kn">import</span> <span class="n">api_view</span><span class="p">,</span> <span class="n">permission_classes</span>
@@ -1651,16 +1659,19 @@
 </span><span class="hll">    <span class="k">except</span><span class="p">:</span>
 </span><span class="hll">        <span class="k">return</span> <span class="n">HttpResponseForbidden</span><span class="p">()</span>
 </span></code></pre></div>
+
 <p>A função acima recebe um <code>nome de usuário</code> e uma <code>senha</code>, faz a autenticação e retorna um token para o usuário.</p>
 <h2 id="passo-5">Passo 5<a class="headerlink" href="#passo-5" title="Permanent link">&para;</a></h2>
 <p>Para testarmos este endpoint, crie dois usuários via comando:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py createsuperuser --username USUARIO --email ALGUMEMAIL@EXEMPLO.COM
 </code></pre></div>
 
+
 <p>Em seguida baixe o arquivo a seguir <a href="notes.json">Download <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /> notes.json</a> na raíz do projeto <code>notes_backend</code>.</p>
 <p>E rode o comando a seguir:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py loaddata notes.json
 </code></pre></div>
+
 
 <p>O comando acima irá popular nossa base de dados.</p>
 <div class="admonition danger">
@@ -1725,6 +1736,7 @@
 
 <span class="c1"># SUAS OUTRAS FUNÇÕES CONTINUAM AQUI</span>
 </code></pre></div>
+
 <p>Com isso, a requisição deve retornar menos notas. Se quiser dar uma olhada no arquivo <code>notes.json</code>, lá podemos ver que algumas notas pertencem ao usuário com id <code>1</code> e outras notas pertencem ao usuário com id <code>2</code>.</p>
 <h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
 <p>Altere as outras funções da <code>views.py</code> que o usuário possa criar, editar e excluir somente as notas que pertençam a este usuário.</p>

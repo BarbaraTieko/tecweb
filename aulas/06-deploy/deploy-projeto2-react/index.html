@@ -1311,8 +1311,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1320,16 +1327,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1396,14 +1396,17 @@
 <div class="codehilite"><pre><span></span><code>heroku login
 </code></pre></div>
 
+
 <p>Crie uma aplicação utilizando o comando:</p>
 <div class="codehilite"><pre><span></span><code>heroku create
 </code></pre></div>
+
 
 <p>Esse comando vai criar uma aplicação com nome aleatório e vai imprimir no terminal algo parecido com isso:</p>
 <div class="highlight"><pre><span></span><code>Creating app... done, ⬢ pacific-atoll-56033
 https://pacific-atoll-56033.herokuapp.com/ | https://git.heroku.com/pacific-atoll-56033.git
 </code></pre></div>
+
 <p>No exemplo acima, a aplicação se chama <code>still-cove-69163</code>. Guarde o nome da sua aplicação.</p>
 <details class="info"><summary>Criando uma aplicação com nome específico</summary><p>Você pode escolher o nome da sua aplicação com o comando <code>heroku create nome-da-aplicacao</code>, mas ele precisa ser único <strong>em todo o Heroku</strong>, ou seja, ninguém pode ter criado um projeto com o mesmo nome.</p>
 </details>
@@ -1515,23 +1518,28 @@ dist
 # TernJS port file
 .tern-port
 </code></pre></div>
+
 </details>
 <p>O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (<strong>importante 1:</strong> execute este comando na pasta raiz do seu projeto; <strong>importante 2:</strong> troque o <code>still-cove-69163</code> pelo nome do seu app gerado pelo Heroku):</p>
 <div class="codehilite"><pre><span></span><code>heroku git:remote -a &lt;nome do app&gt;
 </code></pre></div>
 
+
 <p>Para confirmar se está tudo certo, utilize o comando:</p>
 <div class="codehilite"><pre><span></span><code>git remote -v
 </code></pre></div>
+
 
 <p>Ele deve listar (além de outros) os seguintes repositórios (claro, com o nome do seu app):</p>
 <div class="highlight"><pre><span></span><code>heroku  https://git.heroku.com/pacific-atoll-56033.git (fetch)
 heroku  https://git.heroku.com/pacific-atoll-56033.git (push)
 </code></pre></div>
+
 <h2 id="fazendo-o-deploy">Fazendo o deploy<a class="headerlink" href="#fazendo-o-deploy" title="Permanent link">&para;</a></h2>
 <p>Agora estamos prontos para fazer o deploy! <strong>Faça um commit com todas essas modificações</strong> e depois faça o push com o comando a seguir:</p>
 <div class="codehilite"><pre><span></span><code>git push heroku master
 </code></pre></div>
+
 
 <div class="admonition danger">
 <p class="admonition-title">Se o comando acima não funcionar</p>

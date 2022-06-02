@@ -1304,8 +1304,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1313,16 +1320,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1384,6 +1384,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+
 <p>Esse dicionário está configurando o SQLite como o banco de dados da aplicação (será criado um banco de dados no arquivo <code>db.sqlite3</code> dentro da pasta principal do seu projeto). Se você quiser utilizar outro banco de dados, basta instalar as bibliotecas necessárias (em geral disponíveis para ser instaladas via <code>pip install</code>) e modificar os itens desse dicionário. Se quiser saber mais, consulte a <a href="https://docs.djangoproject.com/en/4.0/intro/tutorial02/#database-setup">documentação do Django</a>.</p>
 <p>Já que estamos no arquivo de configuração, aproveite para procurar pela lista <code class="highlight"><span class="n">INSTALLED_APPS</span></code>. Ela deve ser parecida com essa:</p>
 <div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
@@ -1395,6 +1396,7 @@
     <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
 <span class="p">]</span>
 </code></pre></div>
+
 <p>Na <a href="../parte2/">parte 2</a> comentamos que um projeto é composto por múltiplos apps, que são partes de um sistema. A lista <code class="highlight"><span class="n">INSTALLED_APPS</span></code> define os nomes dos apps utilizados pelo seu projeto. Por exemplo, há um app que é responsável por gerenciar arquivos estáticos (imagens, css, javascript, etc.), outro responsável pela autenticação (usuário, senha, mudança de senha) e assim por diante.</p>
 <p>Nós já criamos um app para o nosso projeto, o <code>notes</code>. Vamos adicioná-lo na lista de apps nas configurações.</p>
 <div class="admonition example">
@@ -1407,6 +1409,7 @@
 <div class="codehilite"><pre><span></span><code>python manage.py migrate
 </code></pre></div>
 
+
 <h2 id="criando-seus-proprios-modelos">Criando seus próprios modelos<a class="headerlink" href="#criando-seus-proprios-modelos" title="Permanent link">&para;</a></h2>
 <p>Começamos esta parte do handout comentando que o Django já tem uma integração com o banco de dados. Para isso nós precisamos criar classes do Python para representar os nossos modelos, cujos dados serão armazenados em tabelas nos bancos de dados relacionais. Vamos criar o nosso primeiro modelo.</p>
 <div class="admonition example">
@@ -1418,6 +1421,7 @@
 <span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 </code></pre></div>
+
 <p>Nesse código nós criamos um modelo chamado <code class="highlight"><span class="n">Note</span></code> que possui um atributo <code class="highlight"><span class="n">title</span></code>, que será mapeado no banco de dados em uma coluna cujos valores são strings de no máximo 200 caracteres.</p>
 </div>
 <div class="admonition example">
@@ -1434,9 +1438,11 @@
 <div class="codehilite"><pre><span></span><code>python manage.py makemigrations
 </code></pre></div>
 
+
 <p>Seguido por</p>
 <div class="codehilite"><pre><span></span><code>python manage.py migrate
 </code></pre></div>
+
 
 <p>O primeiro comando criou o script de criação da tabela que armazenará as anotações. O segundo comando aplicou esse script, efetivamente criando a tabela no banco de dados.</p>
 <div class="admonition info">

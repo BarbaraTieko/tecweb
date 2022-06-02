@@ -1304,8 +1304,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1313,16 +1320,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1391,6 +1391,7 @@
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
+
 <p>Se você testar novamente, o erro não deve ocorrer mais.</p>
 </div>
 <h2 id="recebendo-requisicoes-post">Recebendo requisições POST<a class="headerlink" href="#recebendo-requisicoes-post" title="Permanent link">&para;</a></h2>
@@ -1412,6 +1413,7 @@
 </span>        <span class="n">all_notes</span> <span class="o">=</span> <span class="n">Note</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;notes/index.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;notes&#39;</span><span class="p">:</span> <span class="n">all_notes</span><span class="p">})</span>
 </code></pre></div>
+
 <p>Como você pode ver no comentário, você tem a tarefa de criar um novo <code>Note</code> no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: <a href="https://docs.djangoproject.com/en/4.0/topics/db/queries/">https://docs.djangoproject.com/en/4.0/topics/db/queries/</a></p>
 </div>
 <p>Parabéns! Você terminou o handout de Django!</p>

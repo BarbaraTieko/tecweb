@@ -1325,8 +1325,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1334,16 +1341,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1445,6 +1445,7 @@
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>A única diferença é que colocamos a parte do código que aceita a conexão do cliente, recebe a requisição e devolve a resposta dentro de um <code class="highlight"><span class="k">while</span> <span class="kc">True</span></code>. Então podemos recarregar a página no navegador quantas vezes quisermos e ela continuará a ser recebida.</p>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
@@ -1493,6 +1494,7 @@
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>Testou? Funcionou? Podemos ir para o próximo passo.</p>
 <h2 id="mostrando-a-lista-de-anotacoes">Mostrando a lista de anotações<a class="headerlink" href="#mostrando-a-lista-de-anotacoes" title="Permanent link">&para;</a></h2>
 <p>Podemos começar a pensar no conteúdo da nossa página principal. Vamos começar mostrando uma lista simples com os títulos e detalhes das anotações. Você vai precisar baixar a seguinte <a href="../codigo/img/logo-getit.png">imagem clicando neste link</a>. Salve essa imagem dentro de uma pasta <code>img</code> na mesma pasta onde está o seu código do servidor. Ou seja, o conteúdo da sua pasta será:</p>
@@ -1501,6 +1503,7 @@
   |- img
      |- logo-getit.png
 </code></pre></div>
+
 <p>Para a lista de anotações vamos utilizar as tags HTML <em>unordered list</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span></code>), <em>list item</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span></code>), <em>heading</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span></code>) e <em>paragraph</em> (<code class="highlight"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span></code>). Além disso, vamos mostrar uma imagem com o logo ao invés de um texto com o título:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
@@ -1574,6 +1577,7 @@
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>Se você rodou o código acima deve ter percebido que algo deu errado. Você não achou que seria tão simples assim, não é mesmo?</p>
 <p>O arquivo da imagem do logo existe no seu computador (ou deveria existir - caso contrário, não se esqueça de baixar as imagens), mas o servidor precisa enviar esses arquivos como resposta quando forem solicitados.</p>
 <h2 id="diferenciando-rotas">Diferenciando rotas<a class="headerlink" href="#diferenciando-rotas" title="Permanent link">&para;</a></h2>
@@ -1590,6 +1594,7 @@ Referer: http://0.0.0.0:8080/
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,pt;q=0.8
 </code></pre></div>
+
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">logo-getit.png</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>GET /img/logo-getit.png HTTP/1.1
@@ -1601,6 +1606,7 @@ Referer: http://0.0.0.0:8080/
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,pt;q=0.8
 </code></pre></div>
+
 </div>
 </div>
 <p>O nosso servidor responde a mesma página HTML para <strong>todas as requisições</strong>. Não importa se o cliente está pedindo a imagem <code>/img/logo-getit.png</code> ou o <code>favicon.ico</code>. Ele <strong>sempre</strong> responde com a mesma página HTML.</p>
@@ -1643,6 +1649,7 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>Crie também o arquivo <code>utils.py</code> na pasta do seu servidor. Você deverá implementar os métodos <code class="highlight"><span class="n">extract_route</span></code> e <code class="highlight"><span class="n">read_file</span></code>. Para te ajudar, baixe também o arquivo <a href="../codigo/test_utils.py"><code>test_utils.py</code></a>. Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: <code>python test_utils.py</code> (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).</p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>

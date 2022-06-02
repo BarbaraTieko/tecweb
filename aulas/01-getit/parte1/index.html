@@ -1339,8 +1339,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1348,16 +1355,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1488,6 +1488,7 @@
 <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <div class="admonition danger">
 <p class="admonition-title">Atenção</p>
 <p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, tente acessar <code>localhost:8080</code> ao invés de <code>0.0.0.0:8080</code>.</p>
@@ -1523,6 +1524,7 @@
 <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 1024 bytes. O resultado é devolvido como um valor do tipo <code class="highlight"><span class="nb">bytes</span></code>, portanto convertemos ele para uma string utilizando o método <code class="highlight"><span class="n">decode</span><span class="p">()</span></code> (se tiver curiosidade, teste novamente sem o <code class="highlight"><span class="n">decode</span><span class="p">()</span></code> para ver o resultado).</p>
 <p>O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">MacOS - Safari</label><div class="tabbed-content">
@@ -1535,6 +1537,7 @@ Accept-Language: en-us
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
 </code></pre></div>
+
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">MacOS - Firefox</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>GET / HTTP/1.1
@@ -1547,6 +1550,7 @@ Connection: keep-alive
 Cookie: _ga=GA1.1.16347193.1542986176
 Upgrade-Insecure-Requests: 1
 </code></pre></div>
+
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Android - Chrome</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>GET / HTTP/1.1
@@ -1559,6 +1563,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/a
 Accept-Encoding: gzip, deflate
 Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
 </code></pre></div>
+
 </div>
 </div>
 <p>Sugiro que você também tente acessar o mesmo endereço a partir de navegadores e dispositivos diferentes. Caso você queira testar o acesso de um dispositivo diferente você vai precisar descobrir o IP do servidor.</p>
@@ -1590,6 +1595,7 @@ Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
 <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <p>É essencial que existam duas quebras de linha (<code class="highlight"><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span></code>) entre o <code class="highlight"><span class="s1">&#39;HTTP/1.1 200 OK&#39;</span></code> e o <code class="highlight"><span class="s1">&#39;Hello World&#39;</span></code>. Se houvesse apenas uma, o <code class="highlight"><span class="s1">&#39;Hello World&#39;</span></code> seria considerado como parte do cabeçalho da resposta.</p>
 <p>Execute o servidor novamente e acesse a página pelo seu navegador. Pronto, nosso primeiro servidor está funcionando!</p>
 <p>É só seguir para a <a href="../parte2/">parte 2 deste handout</a>.</p>

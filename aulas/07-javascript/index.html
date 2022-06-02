@@ -1401,8 +1401,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1410,16 +1417,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1592,6 +1592,7 @@
 <p>Abra o <em>developer tools</em> do seu navegador e execute o código a seguir no console:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Olá mundo!&quot;</span><span class="p">)</span>
 </code></pre></div>
+
 </div>
 <h2 id="a-sintaxe-do-javascript">A sintaxe do JavaScript<a class="headerlink" href="#a-sintaxe-do-javascript" title="Permanent link">&para;</a></h2>
 <p>Vamos começar pela sintaxe da linguagem. Novamente, existem guias muito mais completos, então vamos diretamente para um resumo, sem muitas explicações. Você deve se aprofundar em cada tópico conforme a necessidade surgir.</p>
@@ -1602,6 +1603,7 @@
 <p>Execute o código a seguir no console:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Olá mundo!&quot;</span><span class="p">)</span>
 </code></pre></div>
+
 </div>
 <h3 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h3>
 <p>Assim como em Python, strings podem ser delimitadas por aspas simples ou duplas. Mas existe uma terceira maneira de definir strings que é equivalente a uma junção das strings de múltiplas linhas (<code>'''</code>) com <a href="https://realpython.com/python-f-strings/">f-strings</a> do Python. Esse terceiro tipo de string é conhecido como <strong>template literal</strong> e é definido com o acento grave (`).</p>
@@ -1614,6 +1616,7 @@
 <span class="sb">Esta é uma string com múltiplas linhas.`</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mensagem</span><span class="p">)</span>
 </code></pre></div>
+
 </div>
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
@@ -1625,6 +1628,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">c</span><span class="p">);</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">$</span><span class="p">{</span><span class="nx">a</span><span class="p">}</span></code> e <code class="highlight"><span class="nx">$</span><span class="p">{</span><span class="nx">a</span><span class="p">}</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">A</span></code> e <code class="highlight"><span class="nx">A</span></code>;</li>
@@ -1689,6 +1693,7 @@
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">minhaFuncao</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 </code></pre></div>
+
 <p>A segunda maneira é chamada de <em>arrow function</em>, que define uma função que pode ser armazenada em uma variável:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1700,6 +1705,7 @@
 <span class="kr">const</span> <span class="nx">aMesmaFuncao</span> <span class="o">=</span> <span class="nx">minhaFuncao</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">aMesmaFuncao</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">));</span>
 </code></pre></div>
+
 </div>
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
@@ -1711,6 +1717,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">funcaoC</span><span class="p">(</span><span class="nx">funcaoA</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">funcaoC</span><span class="p">(</span><span class="nx">funcaoB</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> e <code class="highlight"><span class="o">-</span><span class="mi">1</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="o">-</span><span class="mi">1</span></code> e <code class="highlight"><span class="mi">5</span></code>;</li>
@@ -1735,6 +1742,7 @@
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">montaNomeCompleto</span><span class="p">(</span><span class="s2">&quot;Fulano&quot;</span><span class="p">,</span> <span class="s2">&quot;Silva&quot;</span><span class="p">))</span>
 </code></pre></div>
+
 </div>
 <p>No código acima, o ponto e vírgula foi inserido automaticamente após o <code class="highlight"><span class="k">return</span></code>.</p>
 <div class="admonition example">
@@ -1747,6 +1755,7 @@
 <span class="p">}</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">montaNomeCompleto</span><span class="p">(</span><span class="s2">&quot;Fulano&quot;</span><span class="p">,</span> <span class="s2">&quot;Silva&quot;</span><span class="p">))</span>
 </code></pre></div>
+
 </div>
 <h3 id="escopo-de-variaveis">Escopo de variáveis<a class="headerlink" href="#escopo-de-variaveis" title="Permanent link">&para;</a></h3>
 <p>Existem 4 maneiras de declarar variáveis em JavaScript. Se definirmos uma variável como fazemos normalmente em Python, a variável será global.</p>
@@ -1764,6 +1773,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
 </code></pre></div>
+
 </div>
 <p>A segunda maneira de declarar variáveis é utilizando o <code class="highlight"><span class="kd">var</span></code>. Variáveis declaradas com <code class="highlight"><span class="kd">var</span></code> são globais apenas quando declaradas no contexto global (fora das funções):</p>
 <div class="admonition example">
@@ -1781,6 +1791,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// Esta variável é a mesma fora e dentro da função</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// Esta variável não existe fora da função, então ocorrerá um erro</span>
 </code></pre></div>
+
 </div>
 <p>A terceira maneira é utilizando o <code class="highlight"><span class="kd">let</span></code>, que declara uma variável local (em geral é esse tipo de variável que você vai usar em seu código):</p>
 <div class="admonition example">
@@ -1797,6 +1808,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// Esta variável é a mesma fora e dentro da função</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// Esta variável não existe fora da função, então ocorrerá um erro</span>
 </code></pre></div>
+
 </div>
 <p>A última maneira é utilizando o <code class="highlight"><span class="kr">const</span></code>, que declara uma variável que não pode receber outro valor (os seus atributos ainda podem ser modificados).</p>
 <div class="admonition example">
@@ -1808,6 +1820,7 @@
 
 <span class="nx">a</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// Erro, pois a não pode ser modificada</span>
 </code></pre></div>
+
 </div>
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
@@ -1829,6 +1842,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="mi">10</span></code> e <code class="highlight"><span class="mi">20</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="mi">15</span></code> e <code class="highlight"><span class="mi">30</span></code>;</li>
@@ -1857,6 +1871,7 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;2&#39;</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// false</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;2&#39;</span> <span class="o">!==</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// true</span>
 </code></pre></div>
+
 </div>
 <p>O <code class="highlight"><span class="o">==</span></code> e <code class="highlight"><span class="o">!=</span></code> são comparadores "fracos". Eles verificam se os valores são iguais fazendo algumas concessões para tipos diferentes. O <code class="highlight"><span class="o">===</span></code> e <code class="highlight"><span class="o">!==</span></code>, além de verificarem os valores, também comparam os tipos.</p>
 <h3 id="arrays-e-um-pouco-de-programacao-funcional">Arrays e um pouco de programação funcional<a class="headerlink" href="#arrays-e-um-pouco-de-programacao-funcional" title="Permanent link">&para;</a></h3>
@@ -1865,16 +1880,19 @@
 <span class="kd">let</span> <span class="nx">dobro</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="mi">2</span> <span class="o">*</span> <span class="nx">n</span><span class="p">);</span> <span class="c1">// O argumento do map é uma função que recebe um número e devolve o seu dobro</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dobro</span><span class="p">);</span>
 </code></pre></div>
+
 <p>Temos também o <code class="highlight"><span class="nx">reduce</span></code>, que recebe uma função que recebe dois argumentos e um valor inicial. O <code class="highlight"><span class="nx">reduce</span></code> e percorre o array aplicando a função passando o valor atual e o resultado da aplicação anterior da função. Por exemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">somaMaisVinte</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span> <span class="c1">// 20 é o valor que será passado na primeira chamada da função</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">somaMaisVinte</span><span class="p">);</span>
 </code></pre></div>
+
 <p>O método <code class="highlight"><span class="nx">filter</span></code> recebe uma função que recebe um número e devolve um booleano que indica se aquele elemento deve estar presente no resultado ou não. O resultado da aplicação do <code class="highlight"><span class="nx">filter</span></code> é um novo array contendo apenas os elementos para os quais a função devolveu <code class="highlight"><span class="kc">true</span></code>. Por exemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
 <span class="kd">let</span> <span class="nx">pares</span> <span class="o">=</span> <span class="nx">numeros</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">n</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">0</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">pares</span><span class="p">)</span>
 </code></pre></div>
+
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>Qual é o resultado do código a seguir?</p>
@@ -1884,6 +1902,7 @@
   <span class="p">(</span><span class="nx">c</span><span class="p">,</span> <span class="nx">d</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">c</span> <span class="o">+</span> <span class="nx">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span></code>;</li>
@@ -1908,6 +1927,7 @@
 <span class="nx">cachorro</span><span class="p">[</span><span class="s2">&quot;idade&quot;</span><span class="p">]</span><span class="o">++</span><span class="p">;</span> <span class="c1">// As duas sintaxes são equivalentes</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">cachorro</span><span class="p">);</span>
 </code></pre></div>
+
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>Quais dos códigos abaixo resultarão em erro?</p>
@@ -1962,6 +1982,7 @@
 <span class="kd">let</span> <span class="nx">oQueEleDevolveu</span> <span class="o">=</span> <span class="nx">processaString</span><span class="p">(</span><span class="s2">&quot;Fulano&quot;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">oQueEleDevolveu</span><span class="p">);</span>
 </code></pre></div>
+
 </div>
 <p>A função não devolveu a string <code class="highlight"><span class="s2">&quot;Olá Fulano&quot;</span></code> e sim uma coisa chamada <em>promise</em>. Uma <em>promise</em> é um objeto que pode ser utilizado para esperar o resultado de uma operação demorada. Você pode, por exemplo, esperar o resultado da <em>promise</em> com:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">async</span> <span class="kd">function</span> <span class="nx">processaString</span><span class="p">(</span><span class="nx">nome</span><span class="p">)</span> <span class="p">{</span>
@@ -1972,6 +1993,7 @@
 <span class="kd">let</span> <span class="nx">resultado</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">promessa</span><span class="p">;</span> <span class="c1">// O código vai ficar parado nesta linha até a operação ser concluida</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultado</span><span class="p">);</span>
 </code></pre></div>
+
 <p>Vamos trabalhar com um exemplo um pouco mais complexo. A função assíncrona <code class="highlight"><span class="nx">fetch</span></code> pode ser utilizada para realizar uma requisição.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -1985,12 +2007,14 @@
 <span class="kd">let</span> <span class="nx">objetoDaResposta</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">jsonDaResposta</span><span class="p">;</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoDaResposta</span><span class="p">.</span><span class="nx">fact</span><span class="p">);</span> <span class="c1">// Agora sim!</span>
 </code></pre></div>
+
 </div>
 <p>Hmmm... ainda não vi vantagem nesse tal de <code class="highlight"><span class="nx">async</span><span class="o">/</span><span class="nx">await</span></code>. Vamos lá. Agora começa a ficar mais interessante. A <em>promise</em> possui um método <code class="highlight"><span class="nx">then</span></code> que recebe uma função que será aplicada <strong>quando a promessa for cumprida</strong>. Reescrevendo o exemplo acima:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nx">objetoDaResposta</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://enigmatic-bayou-56424.herokuapp.com/catfact&quot;</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">()))</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoDaResposta</span><span class="p">.</span><span class="nx">fact</span><span class="p">);</span>
 </code></pre></div>
+
 <p>Mas ainda dá pra melhorar. Nós podemos montar uma sequência de <code class="highlight"><span class="nx">then</span></code>, pois ele também devolve uma <em>promise</em>:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -2000,6 +2024,7 @@
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">objetoDaResposta</span><span class="p">.</span><span class="nx">fact</span><span class="p">)))</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Esse console.log vai aparecer antes do console.log da sequência de promises acima&quot;</span><span class="p">);</span>
 </code></pre></div>
+
 </div>
 <p>No exemplo acima vemos uma vantagem de utilizar <em>promises</em>: você registra o que deve ser feito quando a promessa for cumprida e continuar executando o resto do código.</p>
 <div class="admonition question choice">
@@ -2013,6 +2038,7 @@
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 2 OK&quot;</span><span class="p">)));</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">Resposta</span> <span class="mi">1</span> <span class="nx">OK</span></code> e depois <code class="highlight"><span class="nx">Resposta</span> <span class="mi">2</span> <span class="nx">OK</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">Resposta</span> <span class="mi">2</span> <span class="nx">OK</span></code> e depois <code class="highlight"><span class="nx">Resposta</span> <span class="mi">1</span> <span class="nx">OK</span></code>;</li>
@@ -2033,6 +2059,7 @@
   <span class="p">((</span><span class="nx">resultado</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">resultado</span><span class="p">.</span><span class="nx">json</span><span class="p">())).</span><span class="nx">then</span><span class="p">(</span>
   <span class="p">((</span><span class="nx">objetoDaResposta</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Resposta 2 OK&quot;</span><span class="p">)));</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">Resposta</span> <span class="mi">1</span> <span class="nx">OK</span></code> e depois <code class="highlight"><span class="nx">Resposta</span> <span class="mi">2</span> <span class="nx">OK</span></code>;</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code class="highlight"><span class="nx">Resposta</span> <span class="mi">2</span> <span class="nx">OK</span></code> e depois <code class="highlight"><span class="nx">Resposta</span> <span class="mi">1</span> <span class="nx">OK</span></code>;</li>

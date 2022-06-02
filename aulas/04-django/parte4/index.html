@@ -1304,8 +1304,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1313,16 +1320,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1380,9 +1380,11 @@
 <div class="codehilite"><pre><span></span><code>python manage.py createsuperuser
 </code></pre></div>
 
+
 <p>Agora execute o servidor:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py runserver
 </code></pre></div>
+
 
 <p>E acesse a página de administração em <a href="http://localhost:8000/admin/"><code>http://localhost:8000/admin/</code></a>. Ela ainda não possui muitos recursos, mas você já poderia criar usuários manualmente a partir dessa interface.</p>
 <h2 id="voce-me-enganou-onde-esta-a-interface-do-app-notes">Você me enganou... onde está a interface do app notes?<a class="headerlink" href="#voce-me-enganou-onde-esta-a-interface-do-app-notes" title="Permanent link">&para;</a></h2>
@@ -1396,6 +1398,7 @@
 
 <span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Note</span><span class="p">)</span>
 </code></pre></div>
+
 <p>Agora sim, entre novamente na página de admin (não precisa nem reiniciar o comando <code>runserver</code> - ele já faz isso automaticamente).</p>
 </div>
 <div class="admonition example">

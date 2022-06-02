@@ -1271,8 +1271,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1280,16 +1287,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1328,9 +1328,11 @@
 <p>Nossa tabela foi criada, mas ainda não possui nenhum dado. Para inserir dados na tabela utilizamos o comando SQL:</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">NOME_DA_TABELA</span> <span class="p">(</span><span class="n">NOMES_DAS_COLUNAS</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="n">VALORES_DAS_COLUNAS</span><span class="p">)</span><span class="o">`</span>
 </code></pre></div>
+
 <p>Por exemplo, na tabela <code>dados_pessoais</code>, que usamos de exemplo na parte 2, poderíamos adicionar uma nova linha com o comando</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">dados_pessoais</span> <span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
 </code></pre></div>
+
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
 <p>Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.</p>
@@ -1355,6 +1357,7 @@
     <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 </code></pre></div>
+
 <p><strong>Observação:</strong> o código acima só é válido a partir do Python 3.7. Se você está usando uma versão mais antiga do Python, substitua esse código pelo código abaixo:</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
@@ -1362,17 +1365,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
 </code></pre></div>
+
 <p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. O teste <code>test_add_rows</code> deve passar com sucesso.</p>
 </div>
 <p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="highlight"><span class="n">Note</span></code> nesse arquivo):</p>
 <div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
 <span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Lembrar de tomar água&#39;</span><span class="p">))</span>
 </code></pre></div>
+
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>O que o trecho de código a seguir faz?</p>
 <div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
 </code></pre></div>
+
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria uma tabela nova no banco de dados.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria somente um objeto do tipo <code>Note</code>.</li>

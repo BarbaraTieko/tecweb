@@ -1311,8 +1311,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1320,16 +1327,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1407,6 +1407,7 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">notes/templates/notes/index.html</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>{% extends &quot;notes/base.html&quot; %}
@@ -1428,6 +1429,7 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 {% endblock %}
 </code></pre></div>
+
 </div>
 </div>
 </div>
@@ -1444,6 +1446,7 @@
 <span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;notes/index.html&#39;</span><span class="p">)</span>
 </code></pre></div>
+
 <p>A função <code>render</code> recebe um <code>request</code> e o nome de um arquivo de template e carrega o seu conteúdo.</p>
 <p>Teste sua página.</p>
 </div>
@@ -1475,6 +1478,7 @@
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 {% endblock %}
 </code></pre></div>
+
 <p>Nessas linhas nós indicamos para a engine de template do Django que queremos usar a <a href="https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#static">template tag <code>static</code></a> (template tags são as tags entre <code>{%%}</code>) e depois a utilizamos para carregar o caminho completo do arquivo estático <code>notes/img/logo-getit.png</code>.</p>
 <p>Agora sim, a imagem deve ser carregada.</p>
 <div class="admonition danger">
@@ -1501,6 +1505,7 @@
 </span><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="n">all_notes</span><span class="p">)</span>
 </span><span class="hll">    <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;notes/index.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;notes&#39;</span><span class="p">:</span> <span class="n">all_notes</span><span class="p">})</span>
 </span></code></pre></div>
+
 <p>Nós estamos importando o modelo <code class="highlight"><span class="n">Note</span></code> e carregando todas as entradas dessa tabela. O template recebe um dicionário que define as variáveis que estarão disponíveis para ele (chamamos esse dicionário de contexto).</p>
 <div class="admonition info">
 <p class="admonition-title">O <code>Manager</code> <code>objects</code></p>
@@ -1514,6 +1519,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>{{notes}}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
+
 <p>Ele deve mostrar algo estranho como: <code>&lt;QuerySet [&lt;Note: 1. Receita de miojo&gt;, &lt;Note: 2. Pão doce&gt;, &lt;Note: 3. Sorvete com cristais de leite&gt;]&gt;</code></p>
 <p>Esse é o mesmo objeto que estava guardado na variável <code>all_notes</code> e foi passado para o contexto do template!</p>
 </div>
@@ -1526,6 +1532,7 @@
   {% endfor %}
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
+
 <p>Agora sim!</p>
 </div>
 <p>O template tag <code>{% for %}{% endfor %}</code> funciona de forma muito parecida com o <code class="highlight"><span class="k">for</span></code> do Python. O seu conteúdo é executado para cada elemento na lista fornecida. Uma das principais diferenças é a necessidade do <code>{% endfor %}</code> ao final. Isso acontece porque no HTML as indentações não podem ser utilizadas para definir blocos como no Python.</p>

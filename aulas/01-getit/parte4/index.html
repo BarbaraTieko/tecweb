@@ -1332,8 +1332,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1341,16 +1348,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1448,6 +1448,7 @@
   <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- O RESTO DO HTML A PARTIR DAQUI --&gt;</span>
 </code></pre></div>
+
 <p>Seu código do programa principal não precisa ser modificado ainda.</p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
@@ -1475,6 +1476,7 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 
 titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.
 </code></pre></div>
+
 <p>Há dois pontos importantes:</p>
 <ol>
 <li>A primeira linha da requisição está diferente. Existe um <code>POST</code> ao invés de <code>GET</code>, mas a rota é a mesma (<code>/</code>).</li>
@@ -1502,6 +1504,7 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 
     <span class="c1"># O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...</span>
 </code></pre></div>
+
 <p><strong>Importante:</strong> note que você terá que passar a requisição na chamada da função.</p>
 </div>
 <div class="admonition example">
@@ -1558,6 +1561,7 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Modifique a função <code class="highlight"><span class="n">index</span></code> no arquivo <code>views.py</code> para que ela devolva o resultado de <code class="highlight"><span class="n">build_response</span></code>.</p>

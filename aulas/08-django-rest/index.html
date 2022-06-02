@@ -1345,8 +1345,15 @@
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../projetos/formulario/" title="Formulários de Avaliação Individual dos Membros" class="md-nav__link">
+      Formulários de Avaliação Individual dos Membros
+    </a>
   </li>
 
         
@@ -1354,16 +1361,9 @@
     </nav>
   </li>
 
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../avaliacao/" title="Avaliação do Professor" class="md-nav__link">
-      Avaliação do Professor
-    </a>
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -1469,12 +1469,14 @@
 pip install markdown
 pip install django-filter
 </code></pre></div>
+
 <p>Precisamos indicar para o Django que queremos utilizar o DRF. Para isso, abra o <code>settings.py</code> do seu projeto e adicione <code class="highlight"><span class="s1">&#39;rest_framework&#39;</span></code> aos <code class="highlight"><span class="n">INSTALLED_APPS</span></code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
     <span class="o">...</span>
     <span class="s1">&#39;rest_framework&#39;</span><span class="p">,</span>
 <span class="p">]</span>
 </code></pre></div>
+
 <p>Aproveite para configurar o <code class="highlight"><span class="n">DEBUG</span></code> como <code class="highlight"><span class="kc">True</span></code> e substituir o banco de dados pelo SQLite novamente, para facilitar o desenvolvimento:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Resto do código...</span>
 <span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1488,6 +1490,7 @@ pip install django-filter
 <span class="p">}</span>
 <span class="c1"># Resto do código...</span>
 </code></pre></div>
+
 <h2 id="criando-nosso-serializador">Criando nosso serializador<a class="headerlink" href="#criando-nosso-serializador" title="Permanent link">&para;</a></h2>
 <p>O objetivo do serviço RESTful é disponibilizar recursos para o cliente. No nosso caso vamos trabalhar com o formato JSON, então o serviço deve saber como representar objetos do modelo (no caso as anotações) no formato JSON. Esse é o papel dos serializadores. Crie um arquivo <code>notes/serializers.py</code> com o seguinte conteúdo:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">rest_framework</span> <span class="kn">import</span> <span class="n">serializers</span>
@@ -1499,6 +1502,7 @@ pip install django-filter
         <span class="n">model</span> <span class="o">=</span> <span class="n">Note</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">]</span>
 </code></pre></div>
+
 <p>A classe acima será utilizada pelo DRF para serializar objetos do tipo <code class="highlight"><span class="n">Note</span></code>. O JSON gerado conterá os atributos <code>'id'</code>, <code>'title'</code> e <code>'content'</code>.</p>
 <h2 id="criando-as-views-da-api">Criando as views da API<a class="headerlink" href="#criando-as-views-da-api" title="Permanent link">&para;</a></h2>
 <p>O DRF disponibiliza uma forma bastante <a href="https://www.django-rest-framework.org/api-guide/viewsets/">enxuta de criação de views para APIs REST</a>. Você pode (e até deve?) utilizá-la nos seus projetos, mas ela já encapsula alguns passos importantes. Como o nosso objetivo também é entender o que está acontecendo por baixo dos panos, vamos seguir pelo caminho mais longo.</p>
@@ -1521,6 +1525,7 @@ pip install django-filter
 </span><span class="hll">    <span class="n">serialized_note</span> <span class="o">=</span> <span class="n">NoteSerializer</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
 </span><span class="hll">    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serialized_note</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </span></code></pre></div>
+
 <p>O código acima cria uma view do DRF que aceita GET e POST (vamos deixar o POST para depois). Quando uma requisição GET é recebida, a anotação é carregada do banco de dados, serializada utilizando a classe que criamos anteriormente e então o resultado é devolvido. Agora só falta criarmos a rota no <code>notes/urls.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
 
@@ -1532,6 +1537,7 @@ pip install django-filter
 </span>    <span class="c1"># Você possivelmente tem outras rotas aqui.</span>
 <span class="p">]</span>
 </code></pre></div>
+
 <p>Muito bem, agora execute o servidor e acesse a página na rota <code>api/notes/1</code> (assumindo que existe pelo menos uma anotação no banco de dados). O resultado deve ser parecido com este:</p>
 <p><img alt="" src="view.png" /></p>
 <p>O próprio DRF gera a página de visualização, mas você poderia fazer a requisição através de um código JavaScript, por exemplo, e a resposta seria o JSON apresentado.</p>
@@ -1555,6 +1561,7 @@ pip install django-filter
     <span class="n">serialized_note</span> <span class="o">=</span> <span class="n">NoteSerializer</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serialized_note</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
 </code></pre></div>
+
 <p>A única diferença é que no caso do POST queremos editar o conteúdo de uma anotação. O <code class="highlight"><span class="n">request</span><span class="o">.</span><span class="n">data</span></code> possui os dados enviados pelo POST em um dicionário. Portanto, utilizamos esses dados para atualizar a anotação, salvamos e depois voltamos ao fluxo normal da função, devolvendo a anotação atualizada. Note que a única diferença com o caso do GET é que não passamos pelo passo de modificar o banco de dados.</p>
 <p>Você pode testar o POST entrando na mesma página, preenchendo um dicionário (JSON) com algumas alterações e clicando em POST:</p>
 <p><img alt="" src="post.png" /></p>
