@@ -35,6 +35,6 @@ $$Projetos = \frac{40\cdot Projeto1 + 30\cdot Projeto2 + 30\cdot Projeto3}{100}$
 
 ## Avaliações
 
-Teremos 2 avaliações ao longo do semestre. A avaliação final **não** ocorrerá na semana de avaliações finais. A média de avaliações será calculada como:
+Teremos 2 avaliações ao longo do semestre. A média de avaliações será calculada como:
 
 $$Avaliações = \frac{40\cdot AI + 60\cdot AF}{100}$$

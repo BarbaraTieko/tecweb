@@ -1,10 +1,10 @@
-site_name: Tecnologias Web - Insper 2022/1
+site_name: Tecnologias Web - Insper 2022/2
 site_author: Andrew Kurauchi
 
 extra:
   materia: Tecnologias Web
   professor: Barbara Agena
-  semestre: 2022/1
+  semestre: 2022/2
 
 theme:
   feature:
@@ -21,7 +21,7 @@ theme:
 docs_dir: material
 site_dir: docs
 
-site_url: https://barbaratieko.github.io/tecweb.2022.1/
+site_url: https://barbaratieko.github.io/tecweb.2022.2/
 
 nav:
   - Home: index.md
@@ -34,59 +34,6 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
-    - "02 - Desafio CSS":
-      - "Slides": "aulas/02-desafio-css/Aula02.pdf"
-      - "Handout": aulas/02-desafio-css.md
-    - "03 - Persistencia de dados":
-      - "Handout": aulas/03-persistencia-de-dados.md
-      - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
-      - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
-      - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
-      - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
-      - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
-      - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
-    - "04 - Django":
-      - "Slides": "aulas/04-django/Aula07.pdf"
-      - "Handout": aulas/04-django.md
-      - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
-      - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
-      - "Handout Parte 3: Integrando com o banco de dados": aulas/04-django/parte3.md
-      - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
-      - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
-      - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
-    - "05 - Containers e Bancos de Dados":
-      - "Slides": "aulas/05-bd/Aula09.pdf"
-      - "Handout": aulas/05-bd.md
-    - "06 - Deploy da aplicação":
-      - "Handout": aulas/06-deploy.md
-      - "Deploy - Projeto2 (Django REST) ": aulas/06-deploy/deploy-projeto2-django_rest.md
-      - "Deploy - Projeto2 (React) ": aulas/06-deploy/deploy-projeto2-react.md
-    - "07 - Javascript":
-      - "Handout": aulas/07-javascript.md
-    - "08 - Django REST":
-      - "Slides": aulas/08-django-rest/Aula18.pdf
-      - "Handout": aulas/08-django-rest.md
-    - "09 - React":
-      - "Handout": aulas/09-react.md
-    - "10 - Autenticação": aulas/10-autenticacao.md
-    - "Material Auxiliar":
-      - "Usando Python com ambientes virtuais": auxiliar/venv.md
-  - Simulado:
-    - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
-    - "Avaliação Final": simulado/avaliacao-final.md
-  - Entregas:
-    - "01 - ELI5": entregas/01-ELI5.md
-    - "02 - Desafio CSS": aulas/02-desafio-css.md
-    - "03 - Servidor JS": entregas/03-servidor-js.md
-  - Projetos:
-    - "Projeto 1":
-      - "Parte A": projetos/projeto1/projeto1a.md
-      - "Parte B": projetos/projeto1/projeto1b.md
-    - "Projeto 2": projetos/projeto2.md
-    - "Projeto 3":
-      - Enunciado: projetos/projeto3.md
-      - 'Trabalho em Equipe': projetos/teamwork.md
-      - 'Formulários de Avaliação Individual dos Membros': projetos/formulario.md
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
