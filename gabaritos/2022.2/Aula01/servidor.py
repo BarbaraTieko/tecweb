@@ -10,15 +10,9 @@ server_socket.listen()
 
 print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
 
-while True:
-    client_connection, client_address = server_socket.accept()
+client_connection, client_address = server_socket.accept()
 
-    request = client_connection.recv(16384).decode()
-    print(request)
+print('Um cliente se conectou!')
 
-    response = 'HTTP/1.1 200 OK\n\nHello World'
-    client_connection.sendall(response.encode())
-
-    client_connection.close()
-
+client_connection.close()
 server_socket.close()
