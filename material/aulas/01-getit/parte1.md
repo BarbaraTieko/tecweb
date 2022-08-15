@@ -69,7 +69,7 @@ Uma conexão foi criada, mas o servidor ainda não visualizou a requisição. Mo
 --8<-- "01-getit/codigo/passo2.py"
 ```
 
-Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 1024 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` (se tiver curiosidade, teste novamente sem o `#!python decode()` para ver o resultado).
+Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 16384 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` (se tiver curiosidade, teste novamente sem o `#!python decode()` para ver o resultado).
 
 O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):
 
