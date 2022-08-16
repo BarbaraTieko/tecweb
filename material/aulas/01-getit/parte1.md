@@ -69,7 +69,7 @@ Uma conexão foi criada, mas o servidor ainda não visualizou a requisição. Mo
 --8<-- "01-getit/codigo/passo2.py"
 ```
 
-Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 16384 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` (se tiver curiosidade, teste novamente sem o `#!python decode()` para ver o resultado).
+Agora sim estamos lendo os dados enviados pelo cliente. No comando utilizado indicamos que queremos ler no máximo 1024 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` (se tiver curiosidade, teste novamente sem o `#!python decode()` para ver o resultado).
 
 O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispositivos que eu tinha disponíveis no momento):
 
@@ -120,7 +120,32 @@ Nos testes acima eu acessei o servidor a partir do Android e, no meu laptop, do 
 
 Os 3 exemplos mostrados acima são muito semelhantes, apesar de virem de fabricantes diferentes. Isso acontece porque todos eles seguem o mesmo *protocolo*, o <b>H</b>yper <b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol. O que precisamos saber por enquanto é que ele define como devem ser as requisições e respostas nessa comunicação. Como o HTTP é padronizado, se o seu servidor souber se comunicar em HTTP ele poderá se comunicar com qualquer navegador, independente das implementações específicas.
 
-Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o **cabeçalho (header)** da requisição ou resposta. Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.
+Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o **cabeçalho (header)** da requisição [(request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests) ou resposta [(response)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses). Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.
+
+!!! question choice
+    Considere o texto a seguir:
+
+        ```
+        GET / HTTP/1.1
+        Host: 192.168.15.14:8080
+        Connection: keep-alive
+        Save-Data: on
+        Upgrade-Insecure-Requests: 1
+        User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36
+        Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+        Accept-Encoding: gzip, deflate
+        Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+        ```
+
+    Escolhe o opção verdadeira:
+
+    - [ ] O texto representa um Servidor de Nome de Domínio.
+    - [ ] O texto representa uma resposta HTTP.
+    - [X] O texto representa uma requisição HTTP.
+    - [ ] O texto representa os dados enviados pelo Cliente.
+
+    !!! details "Resposta"
+        O texto representa uma requisição HTTP. Para mais detalhes veja [(request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests). 
 
 ## E agora, já podemos enviar a resposta?
 

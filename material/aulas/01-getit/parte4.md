@@ -106,7 +106,7 @@ Agora que você implementou a função `#!python build_response`, vamos refatora
 
 Modifique seu programa principal da seguinte maneira:
 
-```python hl_lines="3 27 33"
+```python hl_lines="3 28 34"
 --8<-- "01-getit/codigo/passo11.py"
 ```
 

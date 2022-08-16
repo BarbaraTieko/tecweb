@@ -19,7 +19,7 @@ A única diferença é que colocamos a parte do código que aceita a conexão do
 
 Vamos devolver uma página HTML simples, apenas para relembrar as coisas:
 
-```python hl_lines="6-21 36"
+```python hl_lines="6-21 37"
 --8<-- "01-getit/codigo/passo5.py"
 ```
 
@@ -85,11 +85,28 @@ Repare que a primeira linha da requisição HTTP sempre possui uma palavra (`GET
 
 Altere novamente o código do seu servidor para:
 
-```python hl_lines="2-3 5 26-32"
+```python hl_lines="2-3 5 27-33"
 --8<-- "01-getit/codigo/passo7.py"
 ```
 
-Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: `python test_utils.py` (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).
+Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. 
+
+Para executar os testes basta rodar o arquivo no terminal (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).: 
+
+    python test_utils.py
+
+Ao rodar os teste a saída do terminal deverá ser algo parecido com as mensagens a seguir:
+
+    A função extract_route não foi implementada, portanto não é possível testá-la.
+    A função read_file não foi implementada, portanto não é possível testá-la.
+    A função load_data não foi implementada, portanto não é possível testá-la.
+    A função load_template não foi implementada, portanto não é possível testá-la.
+    A função build_response não foi implementada, portanto não é possível testá-la.
+
+    ----------------------------------------------------------------------
+    Ran 0 tests in 0.000s
+
+    OK
 
 !!! example "EXERCÍCIO"
     Implemente a função `#!python extract_route`, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (`#!python /`).
@@ -106,10 +123,14 @@ Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implem
     Accept-Language: en-US,en;q=0.9,pt;q=0.8
     ```
 
-    Sua função deve devolver `#!python 'img/logo-getit.png'`.
+    Sua função deve devolver `#!python 'img/logo-getit.png'`. 
+
+!!! tip "Dica"
+    É possível verificar se a implementação da função pedida no exercício anterior está correta, basta rodar os testes.
+    Por exemplo, se a implementação da função `extract_route` não estiver correta, então algumas mensagens de erro serão apresentadas no terminal ao rodar os testes.
 
 !!! example "EXERCÍCIO"
-    Implemente a função `#!python read_file`, que recebe um argumento do tipo [`#!python Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) e devolve o conteúdo desse arquivo. Se a extensão do arquivo for alguma entre `.txt`, `.html`, `.css`, `.js`, sua função deve ler o arquivo como text e devolver uma string. Leia qualquer outro tipo de arquivo como binário e devolve os `#!python bytes`. Se precisar refrescar a memória, leia a [documentação da função `#!python open`](https://docs.python.org/3/library/functions.html#open).
+    Implemente a função `#!python read_file`, que recebe um argumento do tipo [`#!python Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) e devolve o conteúdo desse arquivo. Sua função deve ler o arquivo e devolver o conteúdo como binário (`#!python bytes`). Se precisar refrescar a memória, leia a [documentação da função `#!python open`](https://docs.python.org/3/library/functions.html#open).
 
 Depois de implementar as duas funções acima e atualizar o código, o servidor deve funcionar corretamente, mostrando as imagens. Sim, está feio, mas nós resolvemos isso na próxima aula. Por enquanto vai ficar assim mesmo.
 

@@ -1,3 +1,4 @@
+from asyncore import read
 import utils
 
 import unittest
@@ -44,16 +45,24 @@ class ExtractRouteTestCase(unittest.TestCase):
         request = REQUEST_TEMPLATE.format(method='GET', route='/css/style.css')
         self.assertEqual('css/style.css', utils.extract_route(request))
 
+    def test_extract_filename_path_from_post_request(self):
+        request = REQUEST_TEMPLATE.format(method='POST', route='/')
+        self.assertEqual('', utils.extract_route(request))
+    
+    def test_extract_filename_path_from_delete_request(self):
+        request = REQUEST_TEMPLATE.format(method='DELETE', route='/')
+        self.assertEqual('', utils.extract_route(request))
+
 @target_function('read_file')
 class ReadFileTestCase(unittest.TestCase):
     def assert_read(self, filename, read_data):
         fullpath = Path() / 'subdir' / filename
-
         m = mock_open(read_data=read_data)
         with patch('utils.open', m):
             received = utils.read_file(fullpath)
 
-        self.assertEqual(received, read_data)
+        self.assertEqual(read_data, received)
+
 
     def test_read_txt_file(self):
         filename = Path() / 'subdir' / 'textfile.txt'

@@ -10,7 +10,7 @@ Essas três responsabilidades acumuladas no mesmo arquivo estão relacionadas a 
 
 Vamos começar separando a responsabilidade do modelo (lista de anotações) da responsabilidade de visualização (string HTML). Para isso, vamos criar uma lista de dicionários que contém os dados das anotações e a string HTML será gerada dinamicamente a partir desses dados:
 
-```python hl_lines="3 9-13 28-30 54-62"
+```python hl_lines="3 9-13 28-30 55-63"
 --8<-- "01-getit/codigo/passo8.py"
 ```
 
@@ -56,7 +56,7 @@ Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, sepa
 
 Vamos atualizar o código do servidor:
 
-```python hl_lines="3 25 29 31 36 37"
+```python hl_lines="3 26 30 32 37 38"
 --8<-- "01-getit/codigo/passo9.py"
 ```
 
@@ -64,7 +64,7 @@ Vamos atualizar o código do servidor:
 
 O código do servidor ainda possui duas responsabilidades diferentes: decidir qual rota seguir e o que fazer em cada rota (o que pode ser tão complexo quanto se queira). Vamos separar a responsabilidade de cada rota em uma função diferente:
 
-```python hl_lines="3 4 28-31"
+```python hl_lines="3 4 29-32"
 --8<-- "01-getit/codigo/passo10.py"
 ```
 
