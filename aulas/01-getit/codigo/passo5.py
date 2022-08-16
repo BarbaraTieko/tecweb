@@ -30,7 +30,7 @@ print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
 while True:
     client_connection, client_address = server_socket.accept()
 
-    request = client_connection.recv(16384).decode()
+    request = client_connection.recv(1024).decode()
     print('*'*100)
     print(request)
 

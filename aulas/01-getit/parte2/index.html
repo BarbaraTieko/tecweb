@@ -547,7 +547,7 @@
 <span class="hll"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
 </span>    <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
 
-    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">16384</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 
@@ -598,12 +598,12 @@
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
 
-    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">16384</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="hll">
-</span>    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 
+<span class="hll">    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+</span>
     <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -682,7 +682,7 @@
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
 
-    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">16384</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 
@@ -749,24 +749,43 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="n">client_connection</span><span class="p">,</span> <span class="n">client_address</span> <span class="o">=</span> <span class="n">server_socket</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
 
-    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">16384</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+    <span class="n">request</span> <span class="o">=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="hll">
-</span><span class="hll">    <span class="n">route</span> <span class="o">=</span> <span class="n">extract_route</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="hll">    <span class="n">route</span> <span class="o">=</span> <span class="n">extract_route</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </span><span class="hll">    <span class="n">filepath</span> <span class="o">=</span> <span class="n">CUR_DIR</span> <span class="o">/</span> <span class="n">route</span>
 </span><span class="hll">    <span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
 </span><span class="hll">        <span class="n">response</span> <span class="o">=</span> <span class="s1">&#39;HTTP/1.1 200 OK</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="o">+</span> <span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 </span><span class="hll">    <span class="k">else</span><span class="p">:</span>
 </span><span class="hll">        <span class="n">response</span> <span class="o">=</span> <span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
-</span>    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-
+</span><span class="hll">    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span>
     <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
-<p>Crie também o arquivo <code>utils.py</code> na pasta do seu servidor. Você deverá implementar os métodos <code class="highlight"><span class="n">extract_route</span></code> e <code class="highlight"><span class="n">read_file</span></code>. Para te ajudar, baixe também o arquivo <a href="../codigo/test_utils.py"><code>test_utils.py</code></a>. Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. Para executar os testes basta rodar o arquivo no terminal: <code>python test_utils.py</code> (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).</p>
+<p>Crie também o arquivo <code>utils.py</code> na pasta do seu servidor. Você deverá implementar os métodos <code class="highlight"><span class="n">extract_route</span></code> e <code class="highlight"><span class="n">read_file</span></code>. Para te ajudar, baixe também o arquivo <a href="../codigo/test_utils.py"><code>test_utils.py</code></a>. Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. </p>
+<p>Para executar os testes basta rodar o arquivo no terminal (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).: </p>
+<div class="codehilite"><pre><span></span><code>python test_utils.py
+</code></pre></div>
+
+
+<p>Ao rodar os teste a saída do terminal deverá ser algo parecido com as mensagens a seguir:</p>
+<div class="codehilite"><pre><span></span><code>A função extract_route não foi implementada, portanto não é possível testá-la.
+A função read_file não foi implementada, portanto não é possível testá-la.
+A função load_data não foi implementada, portanto não é possível testá-la.
+A função load_template não foi implementada, portanto não é possível testá-la.
+A função build_response não foi implementada, portanto não é possível testá-la.
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+</code></pre></div>
+
+
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Implemente a função <code class="highlight"><span class="n">extract_route</span></code>, que recebe uma string com a requisição e devolve a rota, excluindo o primeiro caractere (<code class="highlight"><span class="o">/</span></code>).</p>
@@ -780,11 +799,16 @@ Referer: http://0.0.0.0:8080/
 Accept-Encoding: gzip, deflate
 Accept-Language: en-US,en;q=0.9,pt;q=0.8
 </code></pre></div></p>
-<p>Sua função deve devolver <code class="highlight"><span class="s1">&#39;img/logo-getit.png&#39;</span></code>.</p>
+<p>Sua função deve devolver <code class="highlight"><span class="s1">&#39;img/logo-getit.png&#39;</span></code>. </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>É possível verificar se a implementação da função pedida no exercício anterior está correta, basta rodar os testes.
+Por exemplo, se a implementação da função <code>extract_route</code> não estiver correta, então algumas mensagens de erro serão apresentadas no terminal ao rodar os testes.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
-<p>Implemente a função <code class="highlight"><span class="n">read_file</span></code>, que recebe um argumento do tipo <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path"><code class="highlight"><span class="n">Path</span></code></a> e devolve o conteúdo desse arquivo. Se a extensão do arquivo for alguma entre <code>.txt</code>, <code>.html</code>, <code>.css</code>, <code>.js</code>, sua função deve ler o arquivo como text e devolver uma string. Leia qualquer outro tipo de arquivo como binário e devolve os <code class="highlight"><span class="nb">bytes</span></code>. Se precisar refrescar a memória, leia a <a href="https://docs.python.org/3/library/functions.html#open">documentação da função <code class="highlight"><span class="nb">open</span></code></a>.</p>
+<p>Implemente a função <code class="highlight"><span class="n">read_file</span></code>, que recebe um argumento do tipo <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path"><code class="highlight"><span class="n">Path</span></code></a> e devolve o conteúdo desse arquivo. Sua função deve ler o arquivo e devolver o conteúdo como binário (<code class="highlight"><span class="nb">bytes</span></code>). Se precisar refrescar a memória, leia a <a href="https://docs.python.org/3/library/functions.html#open">documentação da função <code class="highlight"><span class="nb">open</span></code></a>.</p>
 </div>
 <p>Depois de implementar as duas funções acima e atualizar o código, o servidor deve funcionar corretamente, mostrando as imagens. Sim, está feio, mas nós resolvemos isso na próxima aula. Por enquanto vai ficar assim mesmo.</p>
 <p>As páginas de detalhes ainda não estão prontas, mas antes disso precisamos refatorar o código porque ele já está acumulando muitas responsabilidades. Depois de se hidratar e fazer um alongamento, siga para a <a href="../parte3/">parte 3 do handout</a>.</p>
