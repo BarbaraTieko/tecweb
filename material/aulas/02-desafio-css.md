@@ -2,9 +2,7 @@
 
 ## Desafio CSS
 
-~~**Data de entrega: 03/03**~~
-
-**Data de entrega: 04/03**
+**Data de entrega: 02/09**
 
 Na aula passada nós desenvolvemos a primeira versão do nosso primeiro site, o Get-it. Na aula de hoje nós vamos nos focar no estilo da página para relembrar e aprender alguns conceitos de CSS.
 
@@ -38,11 +36,7 @@ A sua página deve **obrigatoriamente** estar disponível no GitHub pages seguin
 
 Será considerado o último commit enviado antes do prazo.
 
-Pra esta atividade vamos utilizar o github classroom. Depois de definir a sua dupla, siga os próximos passos:
-
-1. Um integrante da dupla deve acessar o link abaixo e criar o grupo (**Obs.:** Para o nome do grupo utilize a seguinte forma <USUARIO_INSPER_1>_<USUARIO_INSPER_2>. Exemplo: barbarata_gustavomc5):
-https://classroom.github.com/a/m42DQ6EZ
-2. Depois de criado o grupo, o segundo integrante deve acessar o link e escolher o grupo já existente.
+Pra esta atividade vamos utilizar o github classroom que pode ser acessado em: https://classroom.github.com/a/fWyXtOBI
 
 Pronto! Depois de seguir esses passos vocês devem ter acesso ao repositório da atividade.
 
