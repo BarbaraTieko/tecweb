@@ -13,7 +13,7 @@ class Database:
 
         #test_create_table_on_init
         create = '''
-        CREATE TABLE IF NOT EXISTS note ( id INTEGER PRIMARY KEY,
+        create table IF NOT EXISTS note ( id INTEGER PRIMARY KEY,
                                           title TEXT,
                                           content TEXT NOT NULL
                                           );

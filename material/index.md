@@ -23,4 +23,5 @@ Bem-vind@ ao curso de Tecnologias Web 2022/2
 
 - 22/08: Entrega do [ELI5](entregas/01-ELI5.md)
 - 02/09: Entrega do [Desafio CSS](entregas/02-desafio-css.md)
+- 06/09: Entrega do [Projeto 1 parte A](projetos/projeto1/projeto1a.md)
 

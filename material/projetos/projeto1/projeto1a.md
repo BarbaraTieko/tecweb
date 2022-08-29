@@ -2,12 +2,11 @@
 
 **Trabalho individual**
 
-~~**Prazo: 11/03/2022**~~  
-**Novo Prazo: 14/03/2022**
+**Prazo: 06/09/2022**
 
 **Entrega via GitHub Classroom**
 
-Acesse o link [Github classroom](https://classroom.github.com/a/q2mWyUP-) e crie o grupo com o nome sendo seu usuário Insper.
+Acesse o link [Github classroom](https://classroom.github.com/a/2Hd7WLd-).
 
 Durante o primeiro handout nós desenvolvemos o [Get-it](../../aulas/01-getit.md) com as funcionalidades de listagem e criação de anotações. No [Desafio CSS](../../aulas/02-desafio-css.md) você implementou um possível estilo para a página. No segundo handout, você aprendeu a armazenar e recuperar dados de um banco de dados SQLite. Agora, no Projeto 1A, o seu objetivo é aplicar o que aprendeu nos handouts e no desafio para adicionar as seguintes funcionalidades ao sistema:
 
