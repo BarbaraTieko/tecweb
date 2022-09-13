@@ -25,3 +25,4 @@ Bem-vind@ ao curso de Tecnologias Web 2022/2
 - 02/09: Entrega do [Desafio CSS](entregas/02-desafio-css.md)
 - ~~06/09: Entrega do [Projeto 1 parte A](projetos/projeto1/projeto1a.md)~~
 - 07/09: Entrega do [Projeto 1 parte A](projetos/projeto1/projeto1a.md)
+- 27/09: Entrega do [Projeto 1 parte B](projetos/projeto1/projeto1b.md)

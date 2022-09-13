@@ -46,6 +46,8 @@ nav:
       - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
       - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
     - "04 - Django":
+      - "Slides": "aulas/04-django/Aula07.pdf"
+      - "Slides Rotas": "aulas/04-django/rotas.pdf"
       - "Handout": aulas/04-django.md
       - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
       - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
@@ -53,7 +55,9 @@ nav:
       - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
       - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
       - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
-
+    - "05 - Containers e Bancos de Dados":
+          - "Slides": "aulas/05-bd/Aula09.pdf"
+          - "Handout": aulas/05-bd.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
