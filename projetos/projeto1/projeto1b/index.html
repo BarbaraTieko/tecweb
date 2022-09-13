@@ -586,6 +586,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../aulas/04-django/Aula07.pdf" title="Slides" class="md-nav__link">
+      Slides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../aulas/04-django/rotas.pdf" title="Slides Rotas" class="md-nav__link">
+      Slides Rotas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../aulas/04-django/" title="Handout" class="md-nav__link">
       Handout
     </a>
@@ -660,6 +684,60 @@
   <li class="md-nav__item">
     <a href="../../../aulas/04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
       Handout Parte 6: Trabalhando com formulários e o método POST
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      05 - Containers e Bancos de Dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="05 - Containers e Bancos de Dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        05 - Containers e Bancos de Dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../aulas/05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
+      Slides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../aulas/05-bd/" title="Handout" class="md-nav__link">
+      Handout
     </a>
   </li>
 
@@ -834,13 +912,12 @@
                 
                 <h1 id="projeto-1-parte-b">Projeto 1: Parte B<a class="headerlink" href="#projeto-1-parte-b" title="Permanent link">&para;</a></h1>
 <p><strong>Trabalho individual</strong></p>
-<p><strong><del>Prazo: 30/03/2022 (quarta-feira)</del></strong></p>
-<p><strong>Novo Prazo: 11/04/2022 (segunda-feira)</strong></p>
+<p><strong>Prazo: 27/09/2022 (terça-feira)</strong></p>
 <p><strong>Entrega via GitHub Classroom</strong></p>
-<p>Acesse o link <a href="https://classroom.github.com/a/qjMDQOcs">Github classroom</a> para criar o repositório para este projeto.</p>
+<p>Acesse o link <a href="https://classroom.github.com/a/KDIr3h7A">Github classroom</a> para criar o repositório para este projeto.</p>
 <p>Na <a href="../projeto1a/">parte A</a> você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.</p>
 <h2 id="reimplementando-projeto-1a-usando-django">Reimplementando Projeto 1A usando Django<a class="headerlink" href="#reimplementando-projeto-1a-usando-django" title="Permanent link">&para;</a></h2>
-<p>Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações.</p>
+<p>Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações. Agora você deve fazer a edição das notas em uma página separa.</p>
 <p>Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
 Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.</p>
 <p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/http/urls/">URL Dispatcher</a></p>
@@ -848,7 +925,8 @@ Como discutido na aula anterior, utilize mais de uma rota para mapear as diferen
 <p>Na parte B você deve implementar um sistema de tags para as anotações. Cada anotação pode ter no máximo uma tag (pode não ter nenhuma).</p>
 <p>No formulário de criação/edição de anotações deve haver um campo de texto adicional para o usuário digitar o nome da tag. No backend (no <code>view.py</code>), se essa tag já existir, você deve associar a anotação a ela, senão, crie uma nova tag no banco de dados e associe à anotação.</p>
 <p>Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.</p>
-<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/">Relação Um para Muitos</a></p>
+<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/">Relação Um para Muitos</a>
+<strong>Obs.:</strong> O sistema de tags deve utilizar a relação de um para muitos.</p>
 <h2 id="rubrica">Rubrica<a class="headerlink" href="#rubrica" title="Permanent link">&para;</a></h2>
 <p>As tarefas a serem realizadas são:</p>
 <ol>
@@ -901,7 +979,7 @@ Como discutido na aula anterior, utilize mais de uma rota para mapear as diferen
 </tbody>
 </table>
 <p>O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.</p>
-<p>É importante que você deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.</p>
+<p>É importante que você valide com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.</p>
                 
               
               
