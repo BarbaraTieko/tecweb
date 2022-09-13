@@ -37,7 +37,7 @@ As tarefas a serem realizadas são:
 3. Implementar o sistema de tags para as anotações;
 4. Publicar a página.
 
-A rubrica a seguir será utilizada na correção do Projeto 1A:
+A rubrica a seguir será utilizada na correção do Projeto 1B:
 
 | Conceito | Descrição |
 | :------: | :-------- |
