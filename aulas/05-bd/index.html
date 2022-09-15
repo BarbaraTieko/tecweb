@@ -821,6 +821,90 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      06 - Deploy da aplicação
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="06 - Deploy da aplicação" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        06 - Deploy da aplicação
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../06-deploy/" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Material Auxiliar
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Material Auxiliar" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Material Auxiliar
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-nav__link">
+      Usando Python com ambientes virtuais
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1014,10 +1098,6 @@
 <p>Até o momento nós utilizamos o SQLite para as nossas operações com bancos de dados. Já discutimos que ele não é adequado para um ambiente de produção. A instalação e configuração de um banco de dados costumava ser um processo bastante manual, mas esse processo se tornou muito mais simples com o surgimento dos containers. Os containers são um tipo de virtualização de sistema operacional através dos quais é possível termos um ambiente isolado e controlado que contém apenas o que precisamos para a nossa aplicação. De maneira geral, basta compartilhar os arquivos de configuração e outra pessoa (ou máquina) pode executar uma cópia exata do seu container em outro computador. Neste handout nós utilizaremos um container Docker que já possui o banco de dados PostgreSQL instalado.</p>
 <h2 id="configuracao-inicial">Configuração inicial<a class="headerlink" href="#configuracao-inicial" title="Permanent link">&para;</a></h2>
 <p>Instale o Docker seguindo as instruções para o seu sistema operacional: <a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a></p>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Quando você instalar o Docker será necessário também criar uma conta clicando no botão Sign In.</p>
-</div>
 <p>Faça o download da imagem do Postgres (é a definição de um sistema com o Postgres instalado):</p>
 <div class="codehilite"><pre><span></span><code>docker pull postgres
 </code></pre></div>
@@ -1054,7 +1134,7 @@
 </code></pre></div>
 
 
-<p>Agora, utilize os comandos a seguir para criar o banco de dados e o usuário que serão utilizados pela sua aplicação (algumas configurações a seguir são recomendadas pela <a href="https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration">documentação do Django</a>):</p>
+<p>Agora, utilize os comandos a seguir para criar o banco de dados e o usuário que serão utilizados pela sua aplicação (algumas configurações a seguir são recomendadas pela <a href="https://docs.djangoproject.com/en/4.1/ref/databases/#optimizing-postgresql-s-configuration">documentação do Django</a>):</p>
 <div class="codehilite"><pre><span></span><code>CREATE DATABASE getit;
 CREATE USER getituser WITH PASSWORD &#39;getitsenha&#39;;
 ALTER ROLE getituser SET client_encoding TO &#39;utf8&#39;;
@@ -1120,7 +1200,7 @@ GRANT ALL PRIVILEGES ON DATABASE getit TO getituser;
 <ul>
 <li><a href="https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198">https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198</a></li>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04">https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-16-04</a></li>
-<li><a href="https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration">https://docs.djangoproject.com/en/3.1/ref/databases/#optimizing-postgresql-s-configuration</a></li>
+<li><a href="https://docs.djangoproject.com/en/4.1/ref/databases/#optimizing-postgresql-s-configuration">https://docs.djangoproject.com/en/4.1/ref/databases/#optimizing-postgresql-s-configuration</a></li>
 </ul>
                 
               
@@ -1155,13 +1235,13 @@ GRANT ALL PRIVILEGES ON DATABASE getit TO getituser;
           </a>
         
         
-          <a href="../../entregas/01-ELI5/" title="01 - ELI5" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../06-deploy/" title="Handout" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                01 - ELI5
+                Handout
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
