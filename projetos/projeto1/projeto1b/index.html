@@ -1002,6 +1002,48 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Simulado
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Simulado" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Simulado
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../simulado/avaliacao-intermediaria/" title="Avaliação Intermediária" class="md-nav__link">
+      Avaliação Intermediária
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -1074,12 +1116,12 @@
 <p>Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações. <strong>Agora você deve fazer a edição das notas em uma página separa.</strong></p>
 <p>Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
 Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.</p>
-<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/http/urls/">URL Dispatcher</a></p>
+<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.1/topics/http/urls/">URL Dispatcher</a></p>
 <h2 id="sistema-de-tags">Sistema de tags<a class="headerlink" href="#sistema-de-tags" title="Permanent link">&para;</a></h2>
 <p>Na parte B você deve implementar um sistema de tags para as anotações. Cada anotação pode ter no máximo uma tag (pode não ter nenhuma).</p>
 <p>No formulário de criação/edição de anotações deve haver um campo de texto adicional para o usuário digitar o nome da tag. No backend (no <code>view.py</code>), se essa tag já existir, você deve associar a anotação a ela, senão, crie uma nova tag no banco de dados e associe à anotação.</p>
 <p>Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.</p>
-<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/">Relação Um para Muitos</a>
+<p>Para mais informações veja: <a href="https://docs.djangoproject.com/en/4.1/topics/db/examples/many_to_one/">Relação Um para Muitos</a>
 <strong>Obs.:</strong> O sistema de tags deve utilizar a relação de um para muitos.</p>
 <h2 id="rubrica">Rubrica<a class="headerlink" href="#rubrica" title="Permanent link">&para;</a></h2>
 <p>As tarefas a serem realizadas são:</p>
@@ -1166,6 +1208,20 @@ Como discutido na aula anterior, utilize mais de uma rota para mapear as diferen
             </div>
           </a>
         
+        
+          <a href="../../../simulado/avaliacao-intermediaria/" title="Avaliação Intermediária" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Avaliação Intermediária
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
