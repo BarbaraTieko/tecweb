@@ -11,7 +11,7 @@ Acesse o link [Github classroom](https://classroom.github.com/a/KDIr3h7A) para c
 Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.
 
 ## Reimplementando Projeto 1A usando Django
-Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações. Agora você deve fazer a edição das notas em uma página separa.
+Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações. **Agora você deve fazer a edição das notas em uma página separa.**
 
 Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
 Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.
