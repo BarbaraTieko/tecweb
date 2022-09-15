@@ -11,7 +11,7 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Dj
     Em Tecnologias Web nós utilizaremos o Django 4.X. É importante levar isso em conta quando for procurar respostas no Google. O [Django 4.0](https://docs.djangoproject.com/en/4.0/releases/4.0/) foi lançado no final de 2021, então será comum você encontrar respostas desatualizadas. **Sempre** que encontrar alguma função/método que não conhece, consulte a documentação da biblioteca para verificar se essa é a forma mais atualizada de se resolver o problema (essa dica vale para qualquer biblioteca/framework que for utilizar).
 
 !!! info "Referência"
-    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/4.0/intro/tutorial01/). A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
+    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/4.1/intro/tutorial01/). A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
 
 ## Instalando o Django
 

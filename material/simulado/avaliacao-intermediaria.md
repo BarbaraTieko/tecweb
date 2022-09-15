@@ -15,7 +15,7 @@ Mas se preferir tem liberdade para colocar outra imagem e modificar o HTML.
 
 Baseado no que você aprendeu com o Projeto 1B, crie um novo projeto em Django chamado Memo. O Memo é um sistema simples de anotações que sempre mostra **apenas** a última anotação criada. Ou seja, quando o usuário cria uma nova anotação ele **não terá mais acesso às anotações antigas**.
 
-Dica: https://docs.djangoproject.com/en/4.0/ref/models/querysets/#last
+Dica: https://docs.djangoproject.com/en/4.1/ref/models/querysets/#last
 
 Você pode se basear no código do Projeto 1B se preferir, mas pode ser mais fácil criar um projeto do zero.
 

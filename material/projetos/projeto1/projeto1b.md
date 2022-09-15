@@ -16,7 +16,7 @@ Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidad
 Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
 Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.
 
-Para mais informações veja: [URL Dispatcher](https://docs.djangoproject.com/en/4.0/topics/http/urls/)
+Para mais informações veja: [URL Dispatcher](https://docs.djangoproject.com/en/4.1/topics/http/urls/)
 
 ## Sistema de tags
 
@@ -26,7 +26,7 @@ No formulário de criação/edição de anotações deve haver um campo de texto
 
 Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.
 
-Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/)
+Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/4.1/topics/db/examples/many_to_one/)
 **Obs.:** O sistema de tags deve utilizar a relação de um para muitos.
 ## Rubrica
 
