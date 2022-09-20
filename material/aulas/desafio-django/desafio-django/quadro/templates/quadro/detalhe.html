@@ -1,0 +1,35 @@
+{% extends "quadro/base.html" %}
+{% load static %}
+{% block content %}
+
+<h1 class="titulo-tarefa">Tarefa: {{tarefa.titulo}}</h1>
+
+<div class="box-pessoas">
+
+  {% for responsavel in responsaveis_da_tarefa %}
+    <div class="tag">
+      <img src="{% static 'img/pessoa.png' %}" class="perfil" />{{responsavel.pessoa.nome}}
+      <a href="" class="excluir" data-tooltip="Remover">x</a>
+    </div>
+  {% endfor %}
+
+  {%if not responsaveis_da_tarefa %}
+    Ainda não há nenhum responsável pela tarefa.
+  {% endif %}
+
+</div>
+
+<form class="box" method="post">
+  {%csrf_token%}
+  <select id="responsavel" name="responsavel_id" class="form-card-select">
+    <option>Escolha Responsável</option>
+    {% for pessoa in pessoas %}
+    <option value="{{ pessoa.id }}">{{pessoa.nome}}</option>
+    {% endfor %}
+  </select>
+
+  <button class="btn" type="submit">Adicionar Responsável</button>
+</form>
+
+
+{% endblock %}
