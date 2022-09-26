@@ -226,6 +226,9 @@ Existem 4 maneiras de declarar variáveis em JavaScript. Se definirmos uma vari�
 
 A segunda maneira de declarar variáveis é utilizando o `#!javascript var`. Variáveis declaradas com `#!javascript var` são globais apenas quando declaradas no contexto global (fora das funções):
 
+!!! tip
+    Recarregue a página do navegador para que as variáveis dos exemplos anteriores que você criou não influencie no comportamento do próximo exemplo.
+
 !!! example
     Teste o código a seguir:
 
@@ -245,6 +248,9 @@ A segunda maneira de declarar variáveis é utilizando o `#!javascript var`. Var
 
 A terceira maneira é utilizando o `#!javascript let`, que declara uma variável local (em geral é esse tipo de variável que você vai usar em seu código):
 
+!!! tip
+    Recarregue a página do navegador para que as variáveis dos exemplos anteriores que você criou não influencie no comportamento do próximo exemplo.
+
 !!! example
     Teste o código a seguir (se você colocar o `#!javascript console.log(a)` no começo do código - como no código acima - ocorrerá um erro):
 
@@ -262,6 +268,9 @@ A terceira maneira é utilizando o `#!javascript let`, que declara uma variável
     ```
 
 A última maneira é utilizando o `#!javascript const`, que declara uma variável que não pode receber outro valor (os seus atributos ainda podem ser modificados).
+
+!!! tip
+    Recarregue a página do navegador para que as variáveis dos exemplos anteriores que você criou não influencie no comportamento do próximo exemplo.
 
 !!! example
     Teste o código a seguir:

@@ -2,7 +2,9 @@
 
 **Trabalho individual**
 
-**Prazo: 27/09/2022 (terça-feira)**
+~~**Prazo: 27/09/2022 (terça-feira)**~~
+
+**Novo Prazo: 09/10/2022**
 
 **Entrega via GitHub Classroom**
 

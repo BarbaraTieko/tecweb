@@ -89,6 +89,10 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 
     pip install gunicorn
 
+Para testar sua aplicação com o Gunicorn, você pode executar o comando:
+
+    gunicorn getit.wsgi
+
 !!! info "O arquivo `wsgi.py`"
     O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
 
