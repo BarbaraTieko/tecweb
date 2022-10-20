@@ -23,7 +23,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 1. Precisa utilizar algum tipo de persistência em um banco de dados (não vale arquivos ou SQLite);
 2. Precisa consumir uma API externa (de terceiros). Essa API externa pode ser consumida tanto pelo frontend quanto pelo backend. Como você preferir;
-3. Backend deve ser feito em Django (pode usar Django REST framework, mas não é obrigatório).
+3. Backend deve ser feito utilizando Django REST framework. (Sua API deve ser RESTful)
 
 ## Roadmap
 
