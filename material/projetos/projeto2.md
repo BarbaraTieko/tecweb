@@ -4,7 +4,7 @@
 
 **Inception do Projeto até: 21/10/2022 (sexta-feira)**
 
-**Prazo: 06/10/2022**
+**Prazo: 06/11/2022**
 
 **Entrega via GitHub Classroom:**
 Para este projeto será necessário criar dois repositório GitHub, um para o frontend e outro para o backend.
