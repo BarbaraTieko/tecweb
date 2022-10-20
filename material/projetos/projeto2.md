@@ -46,8 +46,9 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 - **21/10:** O formulário deve ser preenchido no prazo.
 - **25/10:**
-  - Depois de validar a proposta crie um código exemplo fazendo alguma requisição para a API escolhida e disponibilize no repositório do Github.
-  - Esboce a arquitetura do projeto e algumas telas da aplicação. **Obs.:** Pode ser algo informal. Uma foto de um rascunho feito à mão, por exemplo.
+    - Depois de validar a proposta crie um código exemplo fazendo alguma requisição para a API escolhida e disponibilize no repositório do Github.
+    - Esboce a arquitetura do projeto e algumas telas da aplicação.
+    **Obs.:** Pode ser algo informal. Uma foto de um rascunho feito à mão, por exemplo.
 
 ## Rubrica
 
