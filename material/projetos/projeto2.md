@@ -52,4 +52,19 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 ## Rubrica
 
-**Em breve**
+A rubrica a seguir será utilizada na correção do Projeto 2:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A     | Atingiu o conceito B e implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.  |
+|    B     | Atingiu o conceito C e colocou em produção (está disponível na internet) |
+|    C     | Entregou as 2 funcionalidades essenciais |
+|    D     | Entregou apenas 1 funcionalidade essencial |
+|    I     | Não entregou ou o código não executa |
+
+!!! danger "Importante"
+    Além da rubrica, caso alguma das restrições citadas no enunciado não seja cumprida, poderão ocorrer descontos no conceito final do projeto.
+
+É **importante** que você valide com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
+
+O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
