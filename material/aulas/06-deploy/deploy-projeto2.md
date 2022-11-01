@@ -28,15 +28,6 @@ ALLOWED_HOSTS = ['django-rest-2022.fly.dev', 'localhost', '127.0.0.1']
 
 Note que também adicionamos o `#!python 'localhost'` e o `#!python '127.0.0.1'`. Eles serão necessários para você testar a aplicação no seu computador.
 
-### Criando o arquivo `requirements.txt`
-
-Atualize as dependências do projeto com o comando abaixo:
-
-    pip freeze > requirements.txt
-
-!!! danger "Importante"
-    Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado.
-
 ### Postgres
 
 
@@ -47,6 +38,9 @@ Instale o `dj-database-url`:
 Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o `requirements.txt`:
 
     pip freeze > requirements.txt
+
+!!! danger "Importante"
+    Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado.
 
 Adicione o `#!python import` no `getit/settings.py`:
 
@@ -70,6 +64,12 @@ DATABASES = {
 
 1. Para começar o processo de deploy, crie uma conta no [Fly.io](https://fly.io/).
 
+    Ao criar a conta, **NÃO** é necessário cadastrar o cartão de crédito. Basta clicar em **Try Fly.io for free**
+
+    <figure>
+      <img src="../flyio.png" width="60%" style="margin:auto;" alt="Cadastro Fly.io"/>
+    </figure>
+
 2. Instale a interface de linha de comando (CLI) do Fly.io: [Fly.io CLI](https://fly.io/docs/hands-on/install-flyctl/).
 
 
@@ -88,7 +88,13 @@ DATABASES = {
 
 3. Faça o login na sua conta do Fly.io pelo terminal com o comando:
 
-    fly auth login
+        fly auth login
+
+    Caso não funcione, utilize:
+
+        flyctl auth login
+
+    Este comando deve abrir o navegador para que você faça o login.
 
 4. Crie um arquivo chamado `Dockerfile` com o conteúdo abaixo. **Importante:** Modifique o valor `getit` em `getit.wsgi` pelo nome do projeto Django. Caso não saiba o nome do seu projeto, o nome é o mesmo que foi utilizado no comando `django-admin startproject getit .`, por exemplo.
 
@@ -144,6 +150,10 @@ DATABASES = {
 
 6. Agora rode o comando `fly deploy`
 7. E para abrir o endereço da aplicação rode: `fly open`
+
+## Deploy Frontend React
+
+Uma opção para o deploy do frontend
 
 ## Referências
 
