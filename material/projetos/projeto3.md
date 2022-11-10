@@ -4,6 +4,8 @@
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
 
+Github Classroom: https://classroom.github.com/a/pZq287Gt
+
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
