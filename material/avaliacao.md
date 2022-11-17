@@ -1,7 +1,15 @@
-# Avaliação do Professor
+# Avaliação do Professor (Barbara Agena)
 
 Link para avaliação: https://insper.avaliar.org/
 
-Código da avaliação: 66111  
+Código da avaliação: 65893  
 
-Chave: 378940
+Chave: 315706
+
+# Avaliação do Professor (Gustavo Calixto)
+
+Link para avaliação: https://insper.avaliar.org/
+
+Código da avaliação: 66491  
+
+Chave: 377795
