@@ -25,11 +25,6 @@ Baixe os dois projetos disponíveis nos links a seguir:
 
             pip install -r requirements.txt
 
-    - Aplique as migrações do projeto:
-
-            python manage.py migrate
-
-    - Além disso, adicione os estilos css criados no Desafio CSS.
 
 ## Passo 2
 
@@ -60,9 +55,15 @@ class Note(models.Model):
 
 Agora, toda nota criada deve pertencer a um usuário.
 
+- Execute os comandos:
+
+        python manage.py makemigrations
+
+        python manage.py migrate
+
 ## Passo 3
 
-Ao tentar fazer a requisição: `GET /api/notes` atualmente, obtemos algo similar a imagem a seguir:
+Na versão deste projeto feito no Handout [08 - Django - REST](08-django-rest.md), ao tentarmos fazer a requisição: `GET /api/notes`, obtemos algo similar a imagem a seguir:
 
 <figure>
   <img src="../10-autenticacao/api_notes_get.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint: api/notes"/>
@@ -129,7 +130,7 @@ urlpatterns = [
 
 ```
 
-No arquivo `settings.py` adicione `#!python 'rest_framework.authtoken',` em `INSTALLED_APPS`. Depois disso, é necessário executar o comando `python manage.py migrate`.
+No arquivo `settings.py` adicione `#!python 'rest_framework.authtoken',` em `INSTALLED_APPS`.
 
 Ainda no arquivo `settings.py`, logo depois da lista `INSTALLED_APPS`, adicione o trecho de código abaixo:
 
@@ -176,13 +177,15 @@ def api_get_token(request):
 
 A função acima recebe um `nome de usuário` e uma `senha`, faz a autenticação e retorna um token para o usuário.
 
+Depois disso, é necessário executar o comando `python manage.py migrate`.
+
 ## Passo 5
 
 Para testarmos este endpoint, crie dois usuários via comando:
 
     python manage.py createsuperuser --username USUARIO --email ALGUMEMAIL@EXEMPLO.COM
 
-Em seguida baixe o arquivo a seguir [Download :arrow_down: notes.json](10-autenticacao/notes.json) na raíz do projeto `notes_backend`.
+No projeto veja se existe um arquivo chamado `notes.json`. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.
 
 E rode o comando a seguir:
 
@@ -195,7 +198,7 @@ O comando acima irá popular nossa base de dados.
 
 ## Passo 6
 
-Pronto. Agora podemos testar nosso novo endpoint.
+Pronto. Agora podemos testar nosso novo endpoint. Coloque o servidor para funcionar: `python manage.py runserver`
 
 Para este teste precisaremos utilizar o POSTMAN.
 
