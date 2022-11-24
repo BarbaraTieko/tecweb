@@ -21,6 +21,7 @@ function createQuestions() {
     {group: 6, username: "fernandaop", fullname: "FERNANDA DE OLIVEIRA PEREIRA"},
     {group: 6, username: "marlonsp", fullname: "MARLON SILVA PEREIRA"},
     {group: 6, username: "guilhermesm9", fullname: "GUILHERME DOS SANTOS MARTINS"},
+    {group: 7, username: "albertom2", fullname: "ALBERTO MANSUR"},
     {group: 7, username: "felipec13", fullname: "FELIPE CATAPANO"},
     {group: 7, username: "rafaelek2", fullname: "RAFAEL ELI KATRI"},
     {group: 7, username: "fernandogab", fullname: "FERNANDO GIUSEPPE AVILA BELTRAMO"},
