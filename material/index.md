@@ -32,5 +32,6 @@ Bem-vind@ ao curso de Tecnologias Web 2022/2
 - 21/10: Inception Projeto 2 => [Clique aqui para acessar o formulário](https://forms.gle/dCETvtTMEeWbfFLi9)
 - 06/11: Entrega do [Projeto 2](projetos/projeto2.md)
 - 17/11: Responder Formulário [Avaliação do Professor](avaliacao.md)
-- 20/11: Responder Formulário Projeto 3 [Sprint 1](projetos/projeto3/sprint1.md)
+- 20/11: Responder Formulário Projeto 3 [Sprint 1]
+- 27/11: Responder Formulário Projeto 3 [Sprint 2](projetos/projeto3/sprint2.md)
 - 30/11: Entrega do [Projeto 3](projetos/projeto3.md)
