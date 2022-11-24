@@ -1600,16 +1600,6 @@
 
 
 </li>
-<li>
-<p>Aplique as migrações do projeto:</p>
-<div class="codehilite"><pre><span></span><code>python manage.py migrate
-</code></pre></div>
-
-
-</li>
-<li>
-<p>Além disso, adicione os estilos css criados no Desafio CSS.</p>
-</li>
 </ul>
 </li>
 </ul>
@@ -1633,8 +1623,17 @@
 </span></code></pre></div>
 
 <p>Agora, toda nota criada deve pertencer a um usuário.</p>
+<ul>
+<li>Execute os comandos:<div class="codehilite"><pre><span></span><code>python manage.py makemigrations
+
+python manage.py migrate
+</code></pre></div>
+
+
+</li>
+</ul>
 <h2 id="passo-3">Passo 3<a class="headerlink" href="#passo-3" title="Permanent link">&para;</a></h2>
-<p>Ao tentar fazer a requisição: <code>GET /api/notes</code> atualmente, obtemos algo similar a imagem a seguir:</p>
+<p>Na versão deste projeto feito no Handout <a href="../08-django-rest/">08 - Django - REST</a>, ao tentarmos fazer a requisição: <code>GET /api/notes</code>, obtemos algo similar a imagem a seguir:</p>
 <figure>
   <img src="../10-autenticacao/api_notes_get.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint: api/notes"/>
 </figure>
@@ -1689,7 +1688,7 @@
 </span><span class="p">]</span>
 </code></pre></div>
 
-<p>No arquivo <code>settings.py</code> adicione <code class="highlight"><span class="s1">&#39;rest_framework.authtoken&#39;</span><span class="p">,</span></code> em <code>INSTALLED_APPS</code>. Depois disso, é necessário executar o comando <code>python manage.py migrate</code>.</p>
+<p>No arquivo <code>settings.py</code> adicione <code class="highlight"><span class="s1">&#39;rest_framework.authtoken&#39;</span><span class="p">,</span></code> em <code>INSTALLED_APPS</code>.</p>
 <p>Ainda no arquivo <code>settings.py</code>, logo depois da lista <code>INSTALLED_APPS</code>, adicione o trecho de código abaixo:</p>
 <div class="highlight"><pre><span></span><code><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -1729,13 +1728,14 @@
 </span></code></pre></div>
 
 <p>A função acima recebe um <code>nome de usuário</code> e uma <code>senha</code>, faz a autenticação e retorna um token para o usuário.</p>
+<p>Depois disso, é necessário executar o comando <code>python manage.py migrate</code>.</p>
 <h2 id="passo-5">Passo 5<a class="headerlink" href="#passo-5" title="Permanent link">&para;</a></h2>
 <p>Para testarmos este endpoint, crie dois usuários via comando:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py createsuperuser --username USUARIO --email ALGUMEMAIL@EXEMPLO.COM
 </code></pre></div>
 
 
-<p>Em seguida baixe o arquivo a seguir <a href="notes.json">Download <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /> notes.json</a> na raíz do projeto <code>notes_backend</code>.</p>
+<p>No projeto veja se existe um arquivo chamado <code>notes.json</code>. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.</p>
 <p>E rode o comando a seguir:</p>
 <div class="codehilite"><pre><span></span><code>python manage.py loaddata notes.json
 </code></pre></div>
@@ -1747,7 +1747,7 @@
 <p>Para o comando acima funcionar você deve ter pelo menos dois usuários criados no banco de dados.</p>
 </div>
 <h2 id="passo-6">Passo 6<a class="headerlink" href="#passo-6" title="Permanent link">&para;</a></h2>
-<p>Pronto. Agora podemos testar nosso novo endpoint.</p>
+<p>Pronto. Agora podemos testar nosso novo endpoint. Coloque o servidor para funcionar: <code>python manage.py runserver</code></p>
 <p>Para este teste precisaremos utilizar o POSTMAN.</p>
 <figure>
   <img src="../10-autenticacao/postman.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
