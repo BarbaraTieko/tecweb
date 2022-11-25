@@ -137,8 +137,6 @@ Vamos gerar o `requirements.txt`
 
 Faça o commit das mudanças do seu projeto.
 
-___
-
 ## Deploy Frontend
 
 Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuita e fácil é o [Vercel](https://vercel.com/). O deploy no Vercel é bem intuitivo.
