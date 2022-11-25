@@ -1,8 +1,15 @@
 # Deploy da Aplicação
 
-Para o projeto 3 vamos ver algumas opções para fazer deploy. Lembrando que não há restrição para qual serviço devem utilizar.
+Para o projeto 3 vamos ver uma outra opções para fazer deploy. Lembrando que não há restrição para qual serviço devem utilizar. Estejam livres para utilizar o que preferirem.
 
-Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuita e fácil é o [Vercel](https://vercel.com/). O deploy no Vercel é bem intuitivo.
+Vamos utilizar o serviço [Railway](https://railway.app) que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.
+
+Abaixo estão algumas configurações que já estamos familiarizados e um vídeo para nos auxiliar no deploy da nossa aplicação:
+
+![type:video](https://www.youtube.com/embed/D58ug70Em8g)
+
+!!! tip "Vídeo"
+    O vídeo também pode ser acessado em: [https://www.youtube.com/watch?v=D58ug70Em8g](https://www.youtube.com/watch?v=D58ug70Em8g){:target="_blank"}
 
 ### Aplicações com Postgres
 
@@ -129,6 +136,19 @@ Vamos gerar o `requirements.txt`
 
 
 Faça o commit das mudanças do seu projeto.
+
+___
+
+## Deploy Frontend
+
+Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuita e fácil é o [Vercel](https://vercel.com/). O deploy no Vercel é bem intuitivo.
+
+
+![type:video](https://www.youtube.com/embed/3n-0kngCv4c)
+
+
+!!! tip "Vídeo"
+    O vídeo também pode ser acessado em: [https://youtu.be/3n-0kngCv4c](https://youtu.be/3n-0kngCv4c){:target="_blank"}
 
 ## Referências
 

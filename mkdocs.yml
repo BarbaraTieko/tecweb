@@ -60,10 +60,6 @@ nav:
           - "Handout": aulas/05-bd.md
     - "06 - Deploy da aplicação":
           - "[NOVO] Deploy": aulas/06-deploy/deploy.md
-        # - "Handout": aulas/06-deploy.md
-        # - "Deploy - Projeto 2 (Django REST)": aulas/06-deploy/deploy-projeto2-django_rest.md
-        # - "Deploy - Projeto 2 (React)": aulas/06-deploy/deploy-projeto2-react.md
-        # - "Deploy - Projeto 2": aulas/06-deploy/deploy-projeto2.md
     - "07 - Javascript":
         - "Handout": aulas/07-javascript.md
     - "08 - Django REST":
@@ -139,3 +135,4 @@ markdown_extensions:
       check_paths: true
 plugins:
   - search
+  - mkdocs-video
