@@ -134,7 +134,6 @@ Vamos gerar o `requirements.txt`
 !!! danger "Importante"
     Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado. Após rodar o comando verifique o arquivo `requirements.txt` que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.
 
-
 Faça o commit das mudanças do seu projeto.
 
 ## Deploy Frontend
