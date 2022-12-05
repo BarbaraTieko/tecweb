@@ -33,5 +33,7 @@ Bem-vind@ ao curso de Tecnologias Web 2022/2
 - 06/11: Entrega do [Projeto 2](projetos/projeto2.md)
 - 17/11: Responder Formulário [Avaliação do Professor](avaliacao.md)
 - 20/11: Responder Formulário Projeto 3 [Sprint 1]
-- 27/11: Responder Formulário Projeto 3 [Sprint 2](projetos/projeto3/sprint2.md)
-- 30/11: Entrega do [Projeto 3](projetos/projeto3.md)
+- 27/11: Responder Formulário Projeto 3 [Sprint 2]
+- ~~30/11: Entrega do [Projeto 3](projetos/projeto3.md)~~
+- 03/12: Entrega do [Projeto 3](projetos/projeto3.md)
+- 03/11: Responder Formulário Projeto 3 [Sprint 3](projetos/projeto3/sprint3.md)
