@@ -48,7 +48,7 @@ Conceito A+
 - Entregou o cronograma com entregas bem definidas e entregou o diagrama de arquitetura e com um README completo documentando bem o projeto;.
 - Não fez deploy da aplicação;
 
-Conceito A 9,5
+Conceito A (9,5)
 
 
 #GRupo05
@@ -60,7 +60,7 @@ Conceito A 9,5
 - Entregou o cronograma com entregas bem definidas
 - Possui um README documentando o projeto, incluindo instruções para rodar o código;
 - O link do deploy não funciona;
-9.5
+Conceito A (Nota 9.5)
 
 #Grupo06
 6	giovanaca1	GIOVANA CASSONI ANDRADE
@@ -72,7 +72,7 @@ Conceito A 9,5
 - Possui um README documentando o projeto, incluindo instruções para rodar o código;
 - Não fizeram o deploy da aplicação;
 
-9,5
+Conceito A (Nota 9,5)
 
 #GRupo07
 7	albertom2	ALBERTO MANSUR
