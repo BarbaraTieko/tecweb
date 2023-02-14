@@ -1,51 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/notas/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/Aula01.pdf</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/parte1/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/parte2/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/parte3/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/01-getit/parte4/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/02-desafio-css/Aula02.pdf</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/02-desafio-css/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte1/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte2/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte3/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte4/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte5/</loc>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/03-persistencia-de-dados/parte6/</loc>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/entregas/01-ELI5/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://barbaratieko.github.io/tecweb.2023.1/aulas/02-desafio-css/</loc>
-     <lastmod>2023-02-09</lastmod>
+     <lastmod>2023-02-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://barbaratieko.github.io/tecweb.2023.1/projetos/projeto1/projeto1a/</loc>
+     <lastmod>2023-02-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

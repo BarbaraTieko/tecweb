@@ -1,0 +1,1073 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.1/aulas/para_disponibilizar/10-autenticacao/">
+      
+      
+        <meta name="author" content="Andrew Kurauchi">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.2">
+    
+    
+      
+        <title>Autenticação - Tecnologias Web - Insper 2023/1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.25b81cc6.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.80a78273.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../css/printing.css">
+    
+      <link rel="stylesheet" href="../../../css/tecweb.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#autenticacao" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+<!--
+  Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+
+<script>
+  window.site_url = "https://barbaratieko.github.io/tecweb.2023.1/";
+</script>
+
+<div class="md-printing-header">
+  <img class="cabecalho" src="https://barbaratieko.github.io/tecweb.2023.1/css/cabecalho.png">
+  <img class="logo" src="https://barbaratieko.github.io/tecweb.2023.1/css/logo.png">
+
+  <div class="frontmatter">
+    <div class="materia"> Tecnologias Web </div>
+    <div class="professor"> Barbara Agena </div>
+    <div class="semestre"> 2023/1 </div>
+  </div>
+</div>
+
+<header class="md-header" data-md-component="header">
+
+  <!-- Top-level navigation -->
+  <nav class="md-header-nav md-grid" aria-label="Header">
+
+    <!-- Link to home -->
+    <a
+      href="https://barbaratieko.github.io/tecweb.2023.1/"
+      title="Tecnologias Web - Insper 2023/1"
+      class="md-header-nav__button md-logo"
+      aria-label="Tecnologias Web - Insper 2023/1"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Tecnologias Web - Insper 2023/1
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Autenticação
+            
+          </span>
+        </div>
+      
+    </div>
+
+    <!-- Button to open search dialogue -->
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+
+      <!-- Search interface -->
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    <!-- Repository containing source -->
+    
+  </nav>
+</header>
+
+
+
+
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://barbaratieko.github.io/tecweb.2023.1/" title="Tecnologias Web - Insper 2023/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2023/1">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Tecnologias Web - Insper 2023/1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../notas/" title="Cálculo da média" class="md-nav__link">
+      Cálculo da média
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Aulas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Aulas" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Aulas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+    
+    <label class="md-nav__link" for="nav-3-1">
+      01 - Get-it
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="01 - Get-it" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        01 - Get-it
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/Aula01.pdf" title="Slides" class="md-nav__link">
+      Slides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/parte1/" title="Handout Parte 1: Criando o servidor" class="md-nav__link">
+      Handout Parte 1: Criando o servidor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/parte2/" title="Handout Parte 2: Respondendo com páginas HTML" class="md-nav__link">
+      Handout Parte 2: Respondendo com páginas HTML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/parte3/" title="Handout Parte 3: Separando algumas responsabilidades" class="md-nav__link">
+      Handout Parte 3: Separando algumas responsabilidades
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01-getit/parte4/" title="Handout Parte 4: Fazendo um formulário de criação de anotação" class="md-nav__link">
+      Handout Parte 4: Fazendo um formulário de criação de anotação
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      02 - Desafio CSS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="02 - Desafio CSS" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        02 - Desafio CSS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02-desafio-css/Aula02.pdf" title="Slides" class="md-nav__link">
+      Slides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02-desafio-css/" title="Descrição" class="md-nav__link">
+      Descrição
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      03 - Persistencia de dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="03 - Persistencia de dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        03 - Persistencia de dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+      Handout Parte 1: Instalando o SQLite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+      Handout Parte 2: Criando a tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+      Handout Parte 3: Inserindo dados na tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+      Handout Parte 4: Consultando e selecionando dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+      Handout Parte 5: Atualizando os dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+      Handout Parte 6: Apagando dados
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Entregas
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Entregas" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Entregas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../entregas/01-ELI5/" title="01 - ELI5" class="md-nav__link">
+      01 - ELI5
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
+      02 - Desafio CSS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Projetos
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Projetos" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Projetos
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../projetos/projeto1/projeto1a/" title="Projeto 1A" class="md-nav__link">
+      Projeto 1A
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#passo-1" class="md-nav__link">
+    Passo 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-2" class="md-nav__link">
+    Passo 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-3" class="md-nav__link">
+    Passo 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-4" class="md-nav__link">
+    Passo 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-5" class="md-nav__link">
+    Passo 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-6" class="md-nav__link">
+    Passo 6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-7" class="md-nav__link">
+    Passo 7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-8" class="md-nav__link">
+    Passo 8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    Próximos passos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="autenticacao">Autenticação<a class="headerlink" href="#autenticacao" title="Permanent link">&para;</a></h1>
+<p>O objetivo deste handout é mostrar uma possível versão de implementaçao de autenticação.</p>
+<p>Este handout utiliza o material de vários tutoriais que podem ser utilizados para se aprofundar no assunto. Além disso, você pode escolher outras formas de autenticação que preferir.</p>
+<p>Para esta atividade, vamos implementar a autenticação no projeto Getit. Vamos utilizar os projetos React (frontend) e Djanfo REST (backend) desenvolvidos em aulas passadas.</p>
+<h2 id="passo-1">Passo 1<a class="headerlink" href="#passo-1" title="Permanent link">&para;</a></h2>
+<p>Baixe os dois projetos disponíveis nos links a seguir:</p>
+<ul>
+<li>
+<p><a href="notes_frontend.zip">Download <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /> notes_frontend</a></p>
+<ul>
+<li>Instale as dependência com o comando:<div class="codehilite"><pre><span></span><code>npm install
+</code></pre></div>
+
+
+</li>
+</ul>
+</li>
+<li>
+<p><a href="notes_backend.zip">Download <img alt="⬇️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/2b07.svg" title=":arrow_down:" /> notes_backend</a></p>
+<ul>
+<li>
+<p>Crie e ative o ambiente virtual;</p>
+<div class="codehilite"><pre><span></span><code>python -m venv env
+</code></pre></div>
+
+
+</li>
+<li>
+<p>Instale as dependências com o comando:</p>
+<div class="codehilite"><pre><span></span><code>pip install -r requirements.txt
+</code></pre></div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="passo-2">Passo 2<a class="headerlink" href="#passo-2" title="Permanent link">&para;</a></h2>
+<p>No projeto Django REST, podemos criar, listar, editar ou excluir uma nota. Porém o projeto não se preocupava com usuários. Mas agora, queremos adicionar a funcionalidade de lidar com usuários. Ou seja, queremos que as ações de criar, listar, editar ou excluir seja aplicada somente as notas pertencentes ao usuários.</p>
+<p>O Django já possui um modelo pronto para usuário que podemos utilizar.</p>
+<figure>
+  <img src="../10-autenticacao/admin_user.png" width="60%" style="margin:auto;" alt="User no Admin do Django"/>
+</figure>
+
+<p>Veja a documentação do Django <img alt="👀" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f440.svg" title=":eyes:" />: <a href="https://docs.djangoproject.com/en/4.0/ref/contrib/auth/#django.contrib.auth.models.User">Documentação User model</a></p>
+<p>Como queremos que cada usuários possa ter sua própria coleção de notas, o modelo do usuário precisa ganhar uma relação de <a href="https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_one/">Um-para-Muito</a>.</p>
+<p>Desta forma, substitua o código do arquivo <code>models.py</code> por:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span>
+<span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+<span class="hll">    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span></code></pre></div>
+
+<p>Agora, toda nota criada deve pertencer a um usuário.</p>
+<ul>
+<li>Execute os comandos:<div class="codehilite"><pre><span></span><code>python manage.py makemigrations
+
+python manage.py migrate
+</code></pre></div>
+
+
+</li>
+</ul>
+<h2 id="passo-3">Passo 3<a class="headerlink" href="#passo-3" title="Permanent link">&para;</a></h2>
+<p>Na versão deste projeto feito no Handout <a href="../08-django-rest/">08 - Django - REST</a>, ao tentarmos fazer a requisição: <code>GET /api/notes</code>, obtemos algo similar a imagem a seguir:</p>
+<figure>
+  <img src="../10-autenticacao/api_notes_get.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint: api/notes"/>
+</figure>
+
+<p>Agora queremos alterar as views para permitir as ações de editar, listar, editar e deletar somente se o usuário estiver autenticado.</p>
+<p>Modifique o arquivo <code>views.py</code> da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">rest_framework.decorators</span> <span class="kn">import</span> <span class="n">api_view</span><span class="p">,</span> <span class="n">permission_classes</span>
+</span><span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Note</span>
+<span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">NoteSerializer</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticated</span>
+</span>
+<span class="c1"># SUAS OUTRAS FUNÇÕES CONTINUAM AQUI</span>
+
+<span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="hll"><span class="nd">@permission_classes</span><span class="p">([</span><span class="n">IsAuthenticated</span><span class="p">])</span>
+</span><span class="k">def</span> <span class="nf">api_note_list</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">new_note_data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">new_note_data</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">new_note_data</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+        <span class="n">note</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">note</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="n">notes</span> <span class="o">=</span> <span class="n">Note</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+    <span class="n">serialized_note</span> <span class="o">=</span> <span class="n">NoteSerializer</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serialized_note</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Ao tentar fazer a mesma requisição obtemos o seguinte resultado:</p>
+<figure>
+  <img src="../10-autenticacao/get_api_notes_forbidden.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
+<p>A partir de agora, precisamos enviar um token para acessar a lista de notas.</p>
+<h2 id="passo-4">Passo 4<a class="headerlink" href="#passo-4" title="Permanent link">&para;</a></h2>
+<p>Vamos criar um endpoint para receber um nome de usuário e uma senha e com essas informações retornar um token.</p>
+<p>Altere o arquivo <code>notes/urls.py</code> da seguinte forma:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">path</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">views</span>
+
+<span class="n">urlpatterns</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/notes/&lt;int:note_id&gt;/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">api_note</span><span class="p">),</span>
+    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/notes/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">api_note_list</span><span class="p">),</span>
+<span class="hll">    <span class="n">path</span><span class="p">(</span><span class="s1">&#39;api/token/&#39;</span><span class="p">,</span> <span class="n">views</span><span class="o">.</span><span class="n">api_get_token</span><span class="p">),</span>
+</span><span class="p">]</span>
+</code></pre></div>
+
+<p>No arquivo <code>settings.py</code> adicione <code class="highlight"><span class="s1">&#39;rest_framework.authtoken&#39;</span><span class="p">,</span></code> em <code>INSTALLED_APPS</code>.</p>
+<p>Ainda no arquivo <code>settings.py</code>, logo depois da lista <code>INSTALLED_APPS</code>, adicione o trecho de código abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;DEFAULT_AUTHENTICATION_CLASSES&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;rest_framework.authentication.TokenAuthentication&#39;</span><span class="p">,</span>  
+    <span class="p">],</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Em seguida, adiciona a função <code>api_get_token</code> no arquivo <code>views.py</code> e adicione alguns imports necessários:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">rest_framework.decorators</span> <span class="kn">import</span> <span class="n">api_view</span><span class="p">,</span> <span class="n">permission_classes</span>
+<span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span><span class="p">,</span> <span class="n">HttpResponseForbidden</span><span class="p">,</span> <span class="n">JsonResponse</span>
+</span><span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Note</span>
+<span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">NoteSerializer</span>
+<span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticated</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">authenticate</span>
+</span><span class="hll"><span class="kn">from</span> <span class="nn">rest_framework.authtoken.models</span> <span class="kn">import</span> <span class="n">Token</span>
+</span>
+<span class="c1"># SUAS OUTRAS FUNÇÕES CONTINUAM AQUI</span>
+
+<span class="hll"><span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+</span><span class="hll"><span class="k">def</span> <span class="nf">api_get_token</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span class="hll">    <span class="k">try</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
+</span><span class="hll">            <span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">]</span>
+</span><span class="hll">            <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;password&#39;</span><span class="p">]</span>
+</span><span class="hll">            <span class="n">user</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll">            <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+</span><span class="hll">                <span class="n">token</span><span class="p">,</span> <span class="n">created</span> <span class="o">=</span> <span class="n">Token</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">user</span><span class="p">)</span>
+</span><span class="hll">                <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s2">&quot;token&quot;</span><span class="p">:</span><span class="n">token</span><span class="o">.</span><span class="n">key</span><span class="p">})</span>
+</span><span class="hll">            <span class="k">else</span><span class="p">:</span>
+</span><span class="hll">                <span class="k">return</span> <span class="n">HttpResponseForbidden</span><span class="p">()</span>
+</span><span class="hll">    <span class="k">except</span><span class="p">:</span>
+</span><span class="hll">        <span class="k">return</span> <span class="n">HttpResponseForbidden</span><span class="p">()</span>
+</span></code></pre></div>
+
+<p>A função acima recebe um <code>nome de usuário</code> e uma <code>senha</code>, faz a autenticação e retorna um token para o usuário.</p>
+<p>Depois disso, é necessário executar o comando <code>python manage.py migrate</code>.</p>
+<h2 id="passo-5">Passo 5<a class="headerlink" href="#passo-5" title="Permanent link">&para;</a></h2>
+<p>Para testarmos este endpoint, crie dois usuários via comando:</p>
+<div class="codehilite"><pre><span></span><code>python manage.py createsuperuser --username USUARIO --email ALGUMEMAIL@EXEMPLO.COM
+</code></pre></div>
+
+
+<p>No projeto veja se existe um arquivo chamado <code>notes.json</code>. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.</p>
+<p>E rode o comando a seguir:</p>
+<div class="codehilite"><pre><span></span><code>python manage.py loaddata notes.json
+</code></pre></div>
+
+
+<p>O comando acima irá popular nossa base de dados.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>Para o comando acima funcionar você deve ter pelo menos dois usuários criados no banco de dados.</p>
+</div>
+<h2 id="passo-6">Passo 6<a class="headerlink" href="#passo-6" title="Permanent link">&para;</a></h2>
+<p>Pronto. Agora podemos testar nosso novo endpoint. Coloque o servidor para funcionar: <code>python manage.py runserver</code></p>
+<p>Para este teste precisaremos utilizar o POSTMAN.</p>
+<figure>
+  <img src="../10-autenticacao/postman.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
+<p>Neste teste, vamos fazer uma requisição <code>POST</code> para <code>http://localhost:8000/api/token/</code> enviando um json com <code>username</code> e <code>password</code>.</p>
+<p>O resultado desta requisição deve ser um token.</p>
+<figure>
+  <img src="../10-autenticacao/postman_token.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
+<h2 id="passo-7">Passo 7<a class="headerlink" href="#passo-7" title="Permanent link">&para;</a></h2>
+<p>Com este token conseguiremos fazer a requisição das notas.</p>
+<p>Vamos testar então:</p>
+<figure>
+  <img src="../10-autenticacao/headers_token.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
+<p>Ao fazer a requisição obtemos a seguinte resposta:</p>
+<figure>
+  <img src="../10-autenticacao/resposta_autenticada.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
+<h2 id="passo-8">Passo 8<a class="headerlink" href="#passo-8" title="Permanent link">&para;</a></h2>
+<p>Ainda não terminamos. Se notar, a requisição retorna todas as notas. Mas precisamos retornar somente as notas deste usuário.</p>
+<p>Para isso, basta fazer algumas alterações no arquivo <code>views.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span> <span class="n">redirect</span>
+<span class="kn">from</span> <span class="nn">rest_framework.decorators</span> <span class="kn">import</span> <span class="n">api_view</span><span class="p">,</span> <span class="n">permission_classes</span>
+<span class="kn">from</span> <span class="nn">rest_framework.response</span> <span class="kn">import</span> <span class="n">Response</span>
+<span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">Http404</span><span class="p">,</span> <span class="n">HttpResponseForbidden</span><span class="p">,</span> <span class="n">JsonResponse</span>
+<span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Note</span>
+<span class="kn">from</span> <span class="nn">.serializers</span> <span class="kn">import</span> <span class="n">NoteSerializer</span>
+<span class="kn">from</span> <span class="nn">rest_framework.permissions</span> <span class="kn">import</span> <span class="n">IsAuthenticated</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth</span> <span class="kn">import</span> <span class="n">authenticate</span>
+<span class="kn">from</span> <span class="nn">rest_framework.authtoken.models</span> <span class="kn">import</span> <span class="n">Token</span>
+<span class="hll"><span class="kn">from</span> <span class="nn">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">User</span>
+</span>
+<span class="c1"># SUAS OUTRAS FUNÇÕES CONTINUAM AQUI</span>
+
+<span class="nd">@api_view</span><span class="p">([</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="nd">@permission_classes</span><span class="p">([</span><span class="n">IsAuthenticated</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">api_note_list</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&quot;POST&quot;</span><span class="p">:</span>
+        <span class="n">new_note_data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">new_note_data</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">new_note_data</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">]</span>
+        <span class="n">note</span> <span class="o">=</span> <span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+        <span class="n">note</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+<span class="hll">    <span class="n">notes</span> <span class="o">=</span> <span class="n">Note</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">)</span>
+</span>
+    <span class="n">serialized_note</span> <span class="o">=</span> <span class="n">NoteSerializer</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Response</span><span class="p">(</span><span class="n">serialized_note</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># SUAS OUTRAS FUNÇÕES CONTINUAM AQUI</span>
+</code></pre></div>
+
+<p>Com isso, a requisição deve retornar menos notas. Se quiser dar uma olhada no arquivo <code>notes.json</code>, lá podemos ver que algumas notas pertencem ao usuário com id <code>1</code> e outras notas pertencem ao usuário com id <code>2</code>.</p>
+<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
+<p>Altere as outras funções da <code>views.py</code> que o usuário possa criar, editar e excluir somente as notas que pertençam a este usuário.</p>
+<p>Em seguida, tente utilizar isso no frontend.
+Veja o tutorial <a href="https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications">How To Add Login Authentication to React Applications</a></p>
+<h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.djangoproject.com/en/4.0/topics/auth/#usage">User authentication in Django</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications">How To Add Login Authentication to React Applications</a></li>
+<li><a href="https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html">How to Implement Token Authentication using Django REST Framework</a></li>
+<li><a href="https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html">How to Extend Django User Model</a></li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.806ca5c4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.01088dc6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
+      
+        <script src="../../../markdown-enhancer.js"></script>
+      
+    
+  </body>
+</html>
