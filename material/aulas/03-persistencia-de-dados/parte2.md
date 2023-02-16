@@ -6,11 +6,13 @@ De modo geral, sistemas de bancos de dados são programas que ficam executando i
 conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 ```
 
-Para mais detalhes, acesse: https://docs.python.org/3/library/sqlite3.html
+Para mais detalhes, acesse: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
 
 
 !!! example "Exercício 01"
-    Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect`) em um atributo chamado `#!python conn`. Note que o arquivo do banco de dados possui a extensão `.db`.
+    Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect` mostrada acima) em um atributo chamado `#!python conn`.
+
+    **Atenção:** Note que o arquivo do banco de dados possui a extensão `.db`.
 
     Lembre-se de importar o pacote: `#!python import sqlite3`.
 
