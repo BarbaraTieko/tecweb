@@ -795,10 +795,11 @@
 <div class="highlight"><pre><span></span><code><span class="n">conexao</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">NOME_DO_ARQUIVO_DO_BANCO</span><span class="p">)</span>
 </code></pre></div>
 
-<p>Para mais detalhes, acesse: <a href="https://docs.python.org/3/library/sqlite3.html">https://docs.python.org/3/library/sqlite3.html</a></p>
+<p>Para mais detalhes, acesse: <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial">https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial</a></p>
 <div class="admonition example">
 <p class="admonition-title">Exercício 01</p>
-<p>Crie um arquivo chamado <code>database.py</code>. Nesse arquivo, crie uma classe chamada <code class="highlight"><span class="n">Database</span></code>. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função <code class="highlight"><span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span></code>) em um atributo chamado <code class="highlight"><span class="n">conn</span></code>. Note que o arquivo do banco de dados possui a extensão <code>.db</code>.</p>
+<p>Crie um arquivo chamado <code>database.py</code>. Nesse arquivo, crie uma classe chamada <code class="highlight"><span class="n">Database</span></code>. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função <code class="highlight"><span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span></code> mostrada acima) em um atributo chamado <code class="highlight"><span class="n">conn</span></code>.</p>
+<p><strong>Atenção:</strong> Note que o arquivo do banco de dados possui a extensão <code>.db</code>.</p>
 <p>Lembre-se de importar o pacote: <code class="highlight"><span class="kn">import</span> <span class="nn">sqlite3</span></code>.</p>
 <p>Para testar o seu código, faça o download <a href="../test_database.py">deste arquivo</a> e salve na mesma pasta do arquivo <code>database.py</code>. Basta executar <code>python test_database.py</code> no terminal para rodar todos os testes. Para este exercício o teste <code>test_connect_on_init</code> deve passar com sucesso. Se ao executar os teste você <strong>não</strong> se deparar com nenhuma mensagem com o texto <code>FAIL: test_connect_on_init</code> então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)</p>
 <p>Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame os professores.</p>
