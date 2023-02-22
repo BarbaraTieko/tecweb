@@ -451,17 +451,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
-      03 - Persistencia de dados
+      03 - Persistência de dados
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="03 - Persistencia de dados" data-md-level="2">
+    <nav class="md-nav" aria-label="03 - Persistência de dados" data-md-level="2">
       <label class="md-nav__title" for="nav-3-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        03 - Persistencia de dados
+        03 - Persistência de dados
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -655,9 +655,42 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Projeto 1A
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
     <a href="./" title="Projeto 1A" class="md-nav__link md-nav__link--active">
       Projeto 1A
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica" class="md-nav__link">
+    Rubrica
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -684,6 +717,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rubrica" class="md-nav__link">
+    Rubrica
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -706,11 +756,102 @@
 <p>Durante o primeiro handout nós desenvolvemos o <a href="../../../aulas/01-getit/">Get-it</a> com as funcionalidades de listagem e criação de anotações. No <a href="../../../aulas/02-desafio-css/">Desafio CSS</a> você implementou um possível estilo para a página. No segundo handout, você aprendeu a armazenar e recuperar dados de um banco de dados SQLite. Agora, no Projeto 1A, o seu objetivo é aplicar o que aprendeu nos handouts e no desafio para adicionar as seguintes funcionalidades ao sistema:</p>
 <ol>
 <li>Estilo da página (utilizando o CSS que você já fez ou adicionando um novo estilo);</li>
-<li>Editar anotações</li>
-<li>Apagar anotações</li>
 <li>Armazenamento em banco de dados SQLite ao invés de um arquivo texto</li>
+<li>Apagar anotações</li>
+<li>Editar anotações</li>
 </ol>
-<p><strong>Mais detalhes em breve ...</strong></p>
+<h2 id="rubrica">Rubrica<a class="headerlink" href="#rubrica" title="Permanent link">&para;</a></h2>
+<p>As 4 tarefas a serem realizadas são:</p>
+<ol>
+<li><strong>Estilo da página:</strong> Implementar o estilo da página;<ul>
+<li>O estilo css já foi implementado na atividade <strong>Desafio CSS</strong>, agora é necessário utilizar este estilo no código do <em>handout 01</em>.</li>
+<li>Caso queira, você pode fazer alterações no estilo da página.</li>
+</ul>
+</li>
+<li><strong>Persistência de dados:</strong> Implementar a persistência dos dados com SQLite (você deve escrever o SQL na mão, ou seja, não pode utilizar bibliotecas de ORM ou similares).<ul>
+<li>Utilize o arquivo <code>database.py</code> desenvolvido no handout de persistência de dados. Note que o arquivo <code>database.py</code> não deverá ser alterado.</li>
+<li><strong>Dica:</strong> Nesta etapa, as alterações podem ser feitas no arquivo <code>utils.py</code>. Você poderá utilizar os códigos utilizados no arquivo <code>exemplo_de_uso.py</code>. Além disso, talvez seja interessante alterar a função <code>load_data</code> do arquivo <code>utils.py</code> para carregar os dados do banco de dados, ao invés do arquivo <code>notes.json</code>. Mude também a função que você criou para salvar as notas no banco de dados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Apagar anotações</strong> Permitir que o usuário apague uma anotação;</p>
+<ul>
+<li>Adicione um botão no <code>card</code> de cada nota existente para excluir esta nota.</li>
+<li>Você pode utilizar o método <strong>GET</strong> ou <strong>POST</strong> para esta tarefa.<ul>
+<li><strong>GET:</strong> Caso opte pelo médoto <strong>GET</strong> a requisição deve seguir o seguinte formato:
+    <div class="highlight"><pre><span></span><code>GET /delete/&lt;NOTA_ID&gt; HTTP/1.1
+</code></pre></div></li>
+<li><strong>POST:</strong> Caso opte pelo método <strong>POST</strong> a requisição deve seguir o seguinte formato:
+    <div class="highlight"><pre><span></span><code>POST /delete HTTP/1.1
+&lt;HTTP_HEADERS&gt;
+
+id=&lt;NOTA_ID&gt;
+</code></pre></div></li>
+</ul>
+</li>
+<li><strong>Observação:</strong> Note que o <code>id</code> da nota não deve aparecer na tela, pois esta informação é irrelevante para o usuário.</li>
+</ul>
+</li>
+<li>
+<p><strong>Editar anotações:</strong> Permitir a edição de anotações existentes;</p>
+<ul>
+<li>Adicione um botão na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.</li>
+<li>A página de edição deve apresentar um formulário com o <code>título</code> e <code>conteúdo</code> já preenchidos.</li>
+<li>Esta página deve apresentar dois botões: <code>Salvar</code> e <code>Cancelar</code>.<ul>
+<li>Ao clicar no botão de <code>Cancelar</code> o usuário deve ser direcionado para a página principal.</li>
+<li>Ao clicar no botão de <code>Salvar</code> a aplicação deve receber uma requisição no seguinte formato:
+    <div class="highlight"><pre><span></span><code>POST /update HTTP/1.1
+&lt;HTTP_HEADERS&gt;
+
+id=&lt;NOTA_ID&gt;&amp;titulo=&lt;NOTA_TITULO&gt;&amp;detalhes=&lt;NOTA_DETALHES&gt;
+</code></pre></div>
+As alterações devem ser registradas no banco de dados e em seguida o usuário deve ser direcionado para a página inicial.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>A rubrica a seguir será utilizada na correção do Projeto 1A:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Conceito</th>
+<th align="left">Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="left">Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. (<strong>Obs.:</strong> Deve ter implementado a etapa do Desafio presente no final do Handout 01)</td>
+</tr>
+<tr>
+<td align="center">B+</td>
+<td align="left">Entregou o handout 01 e as 4 tarefas funcionando</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="left">Entregou o handout 01 e 3 das 4 tarefas funcionando</td>
+</tr>
+<tr>
+<td align="center">C+</td>
+<td align="left">Entregou o handout 01 e 2 das 4 tarefas funcionando</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="left">Entregou o handout 01 e 1 das 4 tarefas funcionando</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="left">Entregou apenas o resultado do handout 01 funcionando e nada mais</td>
+</tr>
+<tr>
+<td align="center">I</td>
+<td align="left">Não entregou ou o código não executa</td>
+</tr>
+</tbody>
+</table>
+<p>O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional (ex: realizar requisições assíncronas em JavaScript para não precisar recarregar a página inteira), apresentarem o estilo da página com qualidade acima do esperado (o que foi pedido no Desafio CSS é considerado o esperado).</p>
+<p>É importante que você discuta com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.</p>
                 
               
               
