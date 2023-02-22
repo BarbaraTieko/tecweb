@@ -37,7 +37,7 @@ nav:
     - "02 - Desafio CSS":
         - "Slides": aulas/02-desafio-css/Aula02.pdf
         - "Descrição": aulas/02-desafio-css.md
-    - "03 - Persistencia de dados":
+    - "03 - Persistência de dados":
       - "Handout": aulas/03-persistencia-de-dados.md
       - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
       - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
