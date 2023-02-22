@@ -62,7 +62,7 @@ Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` 
 !!! example "EXERCÍCIO"
     Modifique a sua função `index` no arquivo `views.py` para conter o seguinte conteúdo:
 
-    ```python
+    ```python hl_lines="1-15"
     def index(request):
         # A string de request sempre começa com o tipo da requisição (ex: GET, POST)
         if request.startswith('POST'):
@@ -82,7 +82,19 @@ Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` 
         # O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...
     ```
 
-    **Importante:** note que você terá que passar a requisição na chamada da função.
+!!! danger "IMPORTANTE"
+    Note que a função `index` agora está recebendo o `request` como argumento (`index(request)`).
+
+    Será necessário alterar o arquivo `servidor.py` para passar o `request`.
+
+    ```python hl_lines="4"
+    if filepath.is_file():
+        response = read_file(filepath)
+    elif route == '':
+        response = index(request)
+    else:
+        response = bytes()
+    ```
 
 !!! example "EXERCÍCIO"
     Ainda na função `#!python index(request)` do arquivo `views.py`, adicione a nova anotação (que deverá estar armazenada em `#!python params['titulo']` e `#!python params['detalhes']`) ao arquivo `notes.json`.
@@ -111,9 +123,11 @@ Modifique seu programa principal da seguinte maneira:
 ```
 
 !!! example "EXERCÍCIO"
-    Modifique a função `#!python index` no arquivo `views.py` para que ela devolva o resultado de `#!python build_response`.
+    Modifique a função `#!python index` no arquivo `views.py` para que ela utilize a função `#!python build_response`.
 
-    Dica: no caso do `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
+    Será necessário fazer duas alterações na função `index`:
+    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` da função `index` para utilizar a função `build_response`.
+    2. No caso de requisição com o método `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
 
 Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.
 
