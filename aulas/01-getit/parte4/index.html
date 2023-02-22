@@ -862,26 +862,38 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Modifique a sua função <code>index</code> no arquivo <code>views.py</code> para conter o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="c1"># A string de request sempre começa com o tipo da requisição (ex: GET, POST)</span>
-    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">):</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># Remove caracteres indesejados</span>
-        <span class="c1"># Cabeçalho e corpo estão sempre separados por duas quebras de linha</span>
-        <span class="n">partes</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
-        <span class="n">corpo</span> <span class="o">=</span> <span class="n">partes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="c1"># Preencha o dicionário params com as informações do corpo da requisição</span>
-        <span class="c1"># O dicionário conterá dois valores, o título e a descrição.</span>
-        <span class="c1"># Posteriormente pode ser interessante criar uma função que recebe a</span>
-        <span class="c1"># requisição e devolve os parâmetros para desacoplar esta lógica.</span>
-        <span class="c1"># Dica: use o método split da string e a função unquote_plus</span>
-        <span class="k">for</span> <span class="n">chave_valor</span> <span class="ow">in</span> <span class="n">corpo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">):</span>
-            <span class="c1"># AQUI É COM VOCÊ</span>
-
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span><span class="hll">    <span class="c1"># A string de request sempre começa com o tipo da requisição (ex: GET, POST)</span>
+</span><span class="hll">    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;POST&#39;</span><span class="p">):</span>
+</span><span class="hll">        <span class="n">request</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># Remove caracteres indesejados</span>
+</span><span class="hll">        <span class="c1"># Cabeçalho e corpo estão sempre separados por duas quebras de linha</span>
+</span><span class="hll">        <span class="n">partes</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">corpo</span> <span class="o">=</span> <span class="n">partes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span><span class="hll">        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class="hll">        <span class="c1"># Preencha o dicionário params com as informações do corpo da requisição</span>
+</span><span class="hll">        <span class="c1"># O dicionário conterá dois valores, o título e a descrição.</span>
+</span><span class="hll">        <span class="c1"># Posteriormente pode ser interessante criar uma função que recebe a</span>
+</span><span class="hll">        <span class="c1"># requisição e devolve os parâmetros para desacoplar esta lógica.</span>
+</span><span class="hll">        <span class="c1"># Dica: use o método split da string e a função unquote_plus</span>
+</span><span class="hll">        <span class="k">for</span> <span class="n">chave_valor</span> <span class="ow">in</span> <span class="n">corpo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&amp;&#39;</span><span class="p">):</span>
+</span><span class="hll">            <span class="c1"># AQUI É COM VOCÊ</span>
+</span>
     <span class="c1"># O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...</span>
 </code></pre></div>
 
-<p><strong>Importante:</strong> note que você terá que passar a requisição na chamada da função.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">IMPORTANTE</p>
+<p>Note que a função <code>index</code> agora está recebendo o <code>request</code> como argumento (<code>index(request)</code>).</p>
+<p>Será necessário alterar o arquivo <code>servidor.py</code> para passar o <code>request</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">route</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+<span class="hll">    <span class="n">response</span> <span class="o">=</span> <span class="n">index</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span class="k">else</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">()</span>
+</code></pre></div>
+
 </div>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
@@ -941,8 +953,10 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
-<p>Modifique a função <code class="highlight"><span class="n">index</span></code> no arquivo <code>views.py</code> para que ela devolva o resultado de <code class="highlight"><span class="n">build_response</span></code>.</p>
-<p>Dica: no caso do <code>POST</code>, você deve devolver o resultado de <code class="highlight"><span class="n">build_response</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="mi">303</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;See Other&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;Location: /&#39;</span><span class="p">)</span></code>.</p>
+<p>Modifique a função <code class="highlight"><span class="n">index</span></code> no arquivo <code>views.py</code> para que ela utilize a função <code class="highlight"><span class="n">build_response</span></code>.</p>
+<p>Será necessário fazer duas alterações na função <code>index</code>:
+1. No retorno principal, será necessário alterar a última linha <code class="highlight"><span class="k">return</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span></code> da função <code>index</code> para utilizar a função <code>build_response</code>.
+2. No caso de requisição com o método <code>POST</code>, você deve devolver o resultado de <code class="highlight"><span class="n">build_response</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="mi">303</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;See Other&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;Location: /&#39;</span><span class="p">)</span></code>.</p>
 </div>
 <p>Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.</p>
 <h2 id="desafio">Desafio<a class="headerlink" href="#desafio" title="Permanent link">&para;</a></h2>
