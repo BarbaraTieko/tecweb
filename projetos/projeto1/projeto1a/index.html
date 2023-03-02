@@ -779,9 +779,10 @@
 <ul>
 <li>Adicione um botão no <code>card</code> de cada nota existente para excluir esta nota.</li>
 <li>Você pode utilizar o método <strong>GET</strong> ou <strong>POST</strong> para esta tarefa.<ul>
-<li><strong>GET:</strong> Caso opte pelo médoto <strong>GET</strong> a requisição deve seguir o seguinte formato:
+<li><strong>GET:</strong> Caso opte pelo método <strong>GET</strong> a requisição deve seguir o seguinte formato:
     <div class="highlight"><pre><span></span><code>GET /delete/&lt;NOTA_ID&gt; HTTP/1.1
-</code></pre></div></li>
+</code></pre></div>
+    (Obs.: A rota pode variar um pouco dependendo da forma como você escolher implementar)</li>
 <li><strong>POST:</strong> Caso opte pelo método <strong>POST</strong> a requisição deve seguir o seguinte formato:
     <div class="highlight"><pre><span></span><code>POST /delete HTTP/1.1
 &lt;HTTP_HEADERS&gt;
@@ -798,6 +799,9 @@ id=&lt;NOTA_ID&gt;
 <ul>
 <li>Adicione um botão na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.</li>
 <li>A página de edição deve apresentar um formulário com o <code>título</code> e <code>conteúdo</code> já preenchidos.</li>
+</ul>
+<p>Você precisará de um método novo no arquivo <code>database.py</code> que dado um <code>id</code> de uma anotação retorna esta anotação no formato de um objeto do tipo <code>Note</code>. Caso precise, você pode encontrar o método feito em: <a href="../database.py"><code>database.py</code> (clique aqui para baixar)</a></p>
+<ul>
 <li>Esta página deve apresentar dois botões: <code>Salvar</code> e <code>Cancelar</code>.<ul>
 <li>Ao clicar no botão de <code>Cancelar</code> o usuário deve ser direcionado para a página principal.</li>
 <li>Ao clicar no botão de <code>Salvar</code> a aplicação deve receber uma requisição no seguinte formato:
