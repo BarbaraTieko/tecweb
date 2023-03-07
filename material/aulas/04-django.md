@@ -2,6 +2,8 @@
 
 Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Django. Para isso, vamos refazer o backend da parte A do projeto.
 
+Caso queira, acesse o [Github Classroom](https://classroom.github.com/a/0tdS0o7R) para criar o repositório do **Projeto 1B**.
+
 !!! danger "Importante"
     O Django possui **muitas** funcionalidades. O nosso objetivo neste handout é oferecer apenas uma introdução bastante breve. Você provavelmente vai precisar ler outros tutoriais, a documentação do Django e fazer pesquisas no Google para conseguir fazer o projeto.
 
