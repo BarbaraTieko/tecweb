@@ -24,8 +24,8 @@ def load_data(file_name):
     return json.loads(content)
 
 def load_template(file_name):
-    with open(f"templates/{file_name}", encoding="utf-8") as file:
-    # with open(Path(__file__).parent.resolve() / "templates"/file_name, encoding="utf-8") as file:
+    # with open(f"templates/{file_name}", encoding="utf-8") as file:
+    with open(Path(__file__).parent.resolve() / "templates"/file_name, encoding="utf-8") as file:
         content = file.read()
     return content
 

@@ -2,13 +2,11 @@
 
 **Trabalho individual**
 
-~~**Prazo: 27/09/2022 (terça-feira)**~~
-
-**Novo Prazo: 09/10/2022**
+**Prazo: 24/03/2023 (terça-feira)**
 
 **Entrega via GitHub Classroom**
 
-Acesse o link [Github classroom](https://classroom.github.com/a/KDIr3h7A) para criar o repositório para este projeto.
+Acesse o link [Github classroom](https://classroom.github.com/a/0tdS0o7R) para criar o repositório para este projeto.
 
 Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.
 
