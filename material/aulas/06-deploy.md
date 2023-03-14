@@ -7,7 +7,9 @@ Cada um tem suas vantagens e desvantagens. Em Tecnologias Web nós utilizaremos 
 
 ## Primeiros passos
 
-Para começar o processo de deploy, crie uma conta no [Heroku](https://www.heroku.com/).
+Para começar o processo de deploy, sua conta do github deverá ter os benefícios do [GitHub Student Developer Pack](https://education.github.com/students). Caso você não tenha se inscreva, é de graça.  
+
+Crie uma conta no [Heroku](https://www.heroku.com/github-students) e vincule com sua conta do github.
 
 Instale a interface de linha de comando (CLI) do Heroku: [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
 

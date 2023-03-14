@@ -57,6 +57,8 @@ nav:
     - "05 - Containers e Bancos de Dados":
       - "Slides": "aulas/05-bd/Aula09.pdf"
       - "Handout": aulas/05-bd.md
+    - "06 - Deploy":
+      - "Handout": aulas/06-deploy.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
