@@ -59,6 +59,9 @@ nav:
       - "Handout": aulas/05-bd.md
     - "06 - Deploy":
       - "Handout": aulas/06-deploy.md
+    - "07 - Javascript":
+        - "Handout": aulas/07-javascript.md
+  - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
@@ -69,6 +72,8 @@ nav:
     - "Projeto 1B": projetos/projeto1/projeto1b.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
+  - Desafio:
+    - "Desafio Django": aulas/desafio-django/index.md
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
