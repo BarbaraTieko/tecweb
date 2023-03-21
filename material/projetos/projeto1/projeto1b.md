@@ -2,7 +2,7 @@
 
 **Trabalho individual**
 
-**Prazo: 24/03/2023 (terça-feira)**
+**Prazo: 24/03/2023 (sexta-feira)**
 
 **Entrega via GitHub Classroom**
 

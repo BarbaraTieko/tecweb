@@ -26,3 +26,4 @@ Bem-vind@ ao curso de Tecnologias Web 2023/1
  - ~~28/02: Entrega do [Projeto 1A]~~
  - 04/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
  - 24/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
+ - 11/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
