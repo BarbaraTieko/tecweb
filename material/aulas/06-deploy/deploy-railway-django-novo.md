@@ -130,6 +130,24 @@ Vamos gerar o `requirements.txt`
 
 Faça o commit das mudanças do seu projeto.
 
+### Configurando os arquivos estáticos
+
+Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira **muito** mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.
+
+Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o [WhiteNoise](http://whitenoise.evans.io/en/stable/):
+
+    pip install whitenoise
+
+O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `getit/settings.py` e procure pela lista `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+Nesse mesmo arquivo, procure por `STATIC_URL = '/static/'` e adicione a seguinte linha logo em seguida:
+
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante `STATIC_ROOT` define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).
+
 ### Último passo
 
 Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o [vídeo](https://youtu.be/D58ug70Em8g?t=249){:target="_blank"}.
