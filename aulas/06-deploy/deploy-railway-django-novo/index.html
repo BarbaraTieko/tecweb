@@ -1197,6 +1197,24 @@ web: gunicorn getit.wsgi
 <p>Note que você deverá executar o comando <code>pip install -r requirements.txt</code> com o ambiente virtual ativado. Após rodar o comando verifique o arquivo <code>requirements.txt</code> que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.</p>
 </div>
 <p>Faça o commit das mudanças do seu projeto.</p>
+<h3 id="configurando-os-arquivos-estaticos">Configurando os arquivos estáticos<a class="headerlink" href="#configurando-os-arquivos-estaticos" title="Permanent link">&para;</a></h3>
+<p>Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira <strong>muito</strong> mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.</p>
+<p>Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o <a href="http://whitenoise.evans.io/en/stable/">WhiteNoise</a>:</p>
+<div class="codehilite"><pre><span></span><code>pip install whitenoise
+</code></pre></div>
+
+
+<p>O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo <code>getit/settings.py</code> e procure pela lista <code>MIDDLEWARE</code> e adicione o seguinte conteúdo logo depois de <code>'django.middleware.security.SecurityMiddleware',</code>:</p>
+<div class="codehilite"><pre><span></span><code>&#39;whitenoise.middleware.WhiteNoiseMiddleware&#39;,
+</code></pre></div>
+
+
+<p>Nesse mesmo arquivo, procure por <code>STATIC_URL = '/static/'</code> e adicione a seguinte linha logo em seguida:</p>
+<div class="codehilite"><pre><span></span><code>STATIC_ROOT = BASE_DIR / &#39;staticfiles&#39;
+</code></pre></div>
+
+
+<p>A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante <code>STATIC_ROOT</code> define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).</p>
 <h3 id="ultimo-passo">Último passo<a class="headerlink" href="#ultimo-passo" title="Permanent link">&para;</a></h3>
 <p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=249" target="_blank">vídeo</a>.</p>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
