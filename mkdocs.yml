@@ -57,6 +57,7 @@ nav:
     - "05 - Containers e Bancos de Dados":
       - "Slides": "aulas/05-bd/Aula09.pdf"
       - "Handout": aulas/05-bd.md
+    - "06 - Deploy": aulas/06-deploy/deploy-railway-django-novo.md
     - "07 - Javascript":
         - "Handout": aulas/07-javascript.md
   - "Avaliação do Professor": avaliacao.md
