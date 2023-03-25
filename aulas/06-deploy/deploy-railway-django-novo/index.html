@@ -1091,8 +1091,14 @@
 </div>
 <h1 id="crie-uma-conta">Crie uma conta<a class="headerlink" href="#crie-uma-conta" title="Permanent link">&para;</a></h1>
 <p>Vamos utilizar o serviço <a href="https://railway.app">Railway</a> que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.</p>
+<p>Veja o <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">Vídeo</a> até a duração de <code>0:50</code> para criar a conta.</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Não adicione/cadastre nenhum informação de pagamento.</p>
+</div>
 <h3 id="aplicacoes-com-postgres">Aplicações com Postgres<a class="headerlink" href="#aplicacoes-com-postgres" title="Permanent link">&para;</a></h3>
-<p>Caso sua aplicação utilize postgres, você deve seguir os passos abaixo.</p>
+<p>Para a configuração do banco de dados, siga os passos descritos no <a href="https://youtu.be/D58ug70Em8g?t=50" target="_blank">vídeo</a> a partir do tempo <code>0:50</code> até <code>1:17</code>.</p>
+<p>Em seguida faça as alterações abaixo em seu projeto no projeto.</p>
 <p>Vamos instalar o <code>dj-database-url</code>:</p>
 <div class="codehilite"><pre><span></span><code>pip install dj-database-url
 </code></pre></div>
@@ -1117,14 +1123,8 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>No campo <strong>default</strong> adicione a informação que apresentada no Postgres do Railway, campo <strong>Postgres Connection URL</strong>. Para mais detalhes veja o seguinte trecho do vídeo a seguir: <a href="https://youtu.be/D58ug70Em8g?t=131" target="_blank">Vídeo</a></p>
-<p>Será necessário alterar um pouco a string obtida.
-O padrão obtido no site do railway é <code>PGPASSWORD=&lt;SENHA&gt; psql -h containers-us-west-102.railway.app -U postgres -p 6025 -d railway</code></p>
-<p>Altere a sua string da seguinte forma: <code>postgresql://postgres:&lt;SENHA&gt;@containers-us-west-102.railway.app:6025/railway</code></p>
-<div class="admonition tip">
-<p class="admonition-title">Vídeo</p>
-<p>O vídeo também pode ser acessado em: <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">https://www.youtube.com/watch?v=D58ug70Em8g</a></p>
-</div>
+<p>No campo <strong>default</strong> adicione a informação que apresentada no Postgres do Railway, campo <strong>DATABASE URL</strong>.</p>
+<p><img alt="DATABASE URL" src="../postgres-railway.png" /></p>
 <h2 id="configurando-o-projeto">Configurando o projeto<a class="headerlink" href="#configurando-o-projeto" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
@@ -1194,9 +1194,9 @@ web: gunicorn getit.wsgi
 
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
-<p>Note que você deverá executar o comando <code>pip install -r requirements.txt</code> com o ambiente virtual ativado. Após rodar o comando verifique o arquivo <code>requirements.txt</code> que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.</p>
+<p>Note que você deverá executar o comando <code>pip freeze &gt; requirements.txt</code> com o ambiente virtual ativado. Após rodar o comando verifique o arquivo <code>requirements.txt</code> que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.</p>
 </div>
-<p>Faça o commit das mudanças do seu projeto.</p>
+<p>Abra o arquivo <code>requirements.txt</code> e altere a linha contendo <code>psycopg2==X.X.X</code> por <code>psycopg2-binary==X.X.X</code>. Mantenha a versão já existente.</p>
 <h3 id="configurando-os-arquivos-estaticos">Configurando os arquivos estáticos<a class="headerlink" href="#configurando-os-arquivos-estaticos" title="Permanent link">&para;</a></h3>
 <p>Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira <strong>muito</strong> mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.</p>
 <p>Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o <a href="http://whitenoise.evans.io/en/stable/">WhiteNoise</a>:</p>
@@ -1215,8 +1215,21 @@ web: gunicorn getit.wsgi
 
 
 <p>A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante <code>STATIC_ROOT</code> define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).</p>
+<p>Como instalamos o <code>whitenoise</code> precisamos atualizar o <code>requirements.txt</code>. Desta forma, rode o comando abaixo novamente.</p>
+<div class="codehilite"><pre><span></span><code>pip freeze &gt; requirements.txt
+</code></pre></div>
+
+
+<h3 id="faca-commit">Faça commit<a class="headerlink" href="#faca-commit" title="Permanent link">&para;</a></h3>
+<p>Faça o commit das mudanças do seu projeto.</p>
 <h3 id="ultimo-passo">Último passo<a class="headerlink" href="#ultimo-passo" title="Permanent link">&para;</a></h3>
-<p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=249" target="_blank">vídeo</a>.</p>
+<p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=252" target="_blank">vídeo</a>.</p>
+<div class="admonition dange">
+<p class="admonition-title">Importante</p>
+<p>Diferente do vídeo, você deve escolher o repositório com o nome <code>insper-tecnologias-web/{O NOME DO SEU REPOSITÓRIO}</code></p>
+<p>Será algo parecido com a imagem abaixo:
+<img alt="Selecionado repositório" src="../railway-escolhendo-projeto.png" /></p>
+</div>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): <a href="https://www.youtube.com/watch?v=kBwhtEIXGII">https://www.youtube.com/watch?v=kBwhtEIXGII</a></li>
