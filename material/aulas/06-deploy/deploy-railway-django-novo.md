@@ -11,9 +11,16 @@ Para o projeto 1B vamos ver uma outra opções para fazer deploy. Lembrando que 
 
 Vamos utilizar o serviço [Railway](https://railway.app) que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.
 
+Veja o [Vídeo](https://www.youtube.com/watch?v=D58ug70Em8g){:target="_blank"} até a duração de `0:50` para criar a conta.
+
+!!! danger "Importante"
+    Não adicione/cadastre nenhum informação de pagamento.
+
 ### Aplicações com Postgres
 
-Caso sua aplicação utilize postgres, você deve seguir os passos abaixo.
+Para a configuração do banco de dados, siga os passos descritos no [vídeo](https://youtu.be/D58ug70Em8g?t=50){:target="_blank"} a partir do tempo `0:50` até `1:17`.
+
+Em seguida faça as alterações abaixo em seu projeto no projeto.
 
 Vamos instalar o `dj-database-url`:
 
@@ -41,15 +48,9 @@ DATABASES = {
 }
 ```
 
-No campo **default** adicione a informação que apresentada no Postgres do Railway, campo **Postgres Connection URL**. Para mais detalhes veja o seguinte trecho do vídeo a seguir: [Vídeo](https://youtu.be/D58ug70Em8g?t=131){:target="_blank"}
+No campo **default** adicione a informação que apresentada no Postgres do Railway, campo **DATABASE URL**.
 
-Será necessário alterar um pouco a string obtida.
-O padrão obtido no site do railway é `PGPASSWORD=<SENHA> psql -h containers-us-west-102.railway.app -U postgres -p 6025 -d railway`
-
-Altere a sua string da seguinte forma: `postgresql://postgres:<SENHA>@containers-us-west-102.railway.app:6025/railway`
-
-!!! tip "Vídeo"
-    O vídeo também pode ser acessado em: [https://www.youtube.com/watch?v=D58ug70Em8g](https://www.youtube.com/watch?v=D58ug70Em8g){:target="_blank"}
+![DATABASE URL](postgres-railway.png)
 
 ## Configurando o projeto
 
@@ -126,9 +127,9 @@ Vamos gerar o `requirements.txt`
     pip freeze > requirements.txt
 
 !!! danger "Importante"
-    Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado. Após rodar o comando verifique o arquivo `requirements.txt` que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.
+    Note que você deverá executar o comando `pip freeze > requirements.txt` com o ambiente virtual ativado. Após rodar o comando verifique o arquivo `requirements.txt` que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.
 
-Faça o commit das mudanças do seu projeto.
+Abra o arquivo `requirements.txt` e altere a linha contendo `psycopg2==X.X.X` por `psycopg2-binary==X.X.X`. Mantenha a versão já existente.
 
 ### Configurando os arquivos estáticos
 
@@ -148,9 +149,22 @@ Nesse mesmo arquivo, procure por `STATIC_URL = '/static/'` e adicione a seguinte
 
 A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante `STATIC_ROOT` define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).
 
+Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta forma, rode o comando abaixo novamente.
+
+    pip freeze > requirements.txt
+
+### Faça commit
+Faça o commit das mudanças do seu projeto.
+
 ### Último passo
 
-Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o [vídeo](https://youtu.be/D58ug70Em8g?t=249){:target="_blank"}.
+Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o [vídeo](https://youtu.be/D58ug70Em8g?t=252){:target="_blank"}.
+
+!!! dange "Importante"
+    Diferente do vídeo, você deve escolher o repositório com o nome `insper-tecnologias-web/{O NOME DO SEU REPOSITÓRIO}`
+
+    Será algo parecido com a imagem abaixo:
+    ![Selecionado repositório](railway-escolhendo-projeto.png)
 
 ## Referências
 
