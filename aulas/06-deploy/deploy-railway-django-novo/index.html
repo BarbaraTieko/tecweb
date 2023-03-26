@@ -1168,7 +1168,7 @@ tests/report/
 <p>O comando acima executou o Gunicorn com o arquivo de configuração <code>getit/wsgi.py</code>. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo <code>wsgi.py</code> dentro da pasta do projeto.</p>
 </div>
 <p>Agora vamos definir o arquivo de configuração. Crie um arquivo chamado <code>Procfile</code> (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o <code>.txt</code> automaticamente) na raiz do projeto com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code>release: python manage.py migrate
+<div class="highlight"><pre><span></span><code>release: python manage.py migrate &amp;&amp; python manage.py collectstatic --noinput
 web: gunicorn getit.wsgi
 </code></pre></div>
 
@@ -1222,7 +1222,7 @@ web: gunicorn getit.wsgi
 
 <h3 id="faca-commit">Faça commit<a class="headerlink" href="#faca-commit" title="Permanent link">&para;</a></h3>
 <p>Faça o commit das mudanças do seu projeto.</p>
-<h3 id="ultimo-passo">Último passo<a class="headerlink" href="#ultimo-passo" title="Permanent link">&para;</a></h3>
+<h3 id="adicionando-projeto-no-railway">Adicionando projeto no Railway<a class="headerlink" href="#adicionando-projeto-no-railway" title="Permanent link">&para;</a></h3>
 <p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=252" target="_blank">vídeo</a>.</p>
 <div class="admonition dange">
 <p class="admonition-title">Importante</p>
@@ -1230,6 +1230,19 @@ web: gunicorn getit.wsgi
 <p>Será algo parecido com a imagem abaixo:
 <img alt="Selecionado repositório" src="../railway-escolhendo-projeto.png" /></p>
 </div>
+<h2 id="passo-final">Passo final<a class="headerlink" href="#passo-final" title="Permanent link">&para;</a></h2>
+<p>Vá no arquivo <code>settings.py</code> e atualize a variável <code>ALLOWED_HOSTS</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;web-production-a9f3.up.railway.app&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+</code></pre></div>
+
+<p>Substitua <code>web-production-a9f3.up.railway.app</code> pelo link da sua aplicação gerado pelo Railway.</p>
+<p>Adicione na linha seguinte:
+<div class="highlight"><pre><span></span><code><span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://web-production-a9f3.up.railway.app&#39;</span><span class="p">]</span>
+</code></pre></div></p>
+<p>Trocando também o link <code>https://web-production-a9f3.up.railway.app</code> pelo link da sua aplicação.</p>
+<h2 id="rodando-o-projeto-localmente">Rodando o projeto localmente<a class="headerlink" href="#rodando-o-projeto-localmente" title="Permanent link">&para;</a></h2>
+<p>Para rodar o projeto localmente, mude a variável <code>Debug</code> presente no arquivo <code>settings.py</code> para <code class="highlight"><span class="kc">True</span></code>.</p>
+<p>Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.</p>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): <a href="https://www.youtube.com/watch?v=kBwhtEIXGII">https://www.youtube.com/watch?v=kBwhtEIXGII</a></li>
