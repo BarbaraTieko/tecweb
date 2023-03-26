@@ -97,7 +97,7 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 Agora vamos definir o arquivo de configuração. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
 
 ```
-release: python manage.py migrate
+release: python manage.py migrate && python manage.py collectstatic --noinput
 web: gunicorn getit.wsgi
 ```
 
@@ -156,7 +156,7 @@ Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta 
 ### Faça commit
 Faça o commit das mudanças do seu projeto.
 
-### Último passo
+### Adicionando projeto no Railway
 
 Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o [vídeo](https://youtu.be/D58ug70Em8g?t=252){:target="_blank"}.
 
@@ -165,6 +165,28 @@ Vá no site do Railway para escolher o repositório github do projeto para fazer
 
     Será algo parecido com a imagem abaixo:
     ![Selecionado repositório](railway-escolhendo-projeto.png)
+
+## Passo final
+
+Vá no arquivo `settings.py` e atualize a variável `ALLOWED_HOSTS`:
+
+```python
+ALLOWED_HOSTS = ['web-production-a9f3.up.railway.app','localhost', '127.0.0.1']
+```
+
+Substitua `web-production-a9f3.up.railway.app` pelo link da sua aplicação gerado pelo Railway.
+
+Adicione na linha seguinte:
+```python
+CSRF_TRUSTED_ORIGINS = ['https://web-production-a9f3.up.railway.app']
+```
+
+Trocando também o link `https://web-production-a9f3.up.railway.app` pelo link da sua aplicação.
+
+## Rodando o projeto localmente
+Para rodar o projeto localmente, mude a variável `Debug` presente no arquivo `settings.py` para `#!python True`.
+
+Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.
 
 ## Referências
 
