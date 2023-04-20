@@ -64,6 +64,7 @@ nav:
         - "Slides": aulas/08-django-rest/Aula18.pdf
         - "Handout": aulas/08-django-rest.md
     - "09 - React": aulas/09-react.md
+  - "Docker 101 & Banco de Dados": Aula-Docker-TecWeb.pdf
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
