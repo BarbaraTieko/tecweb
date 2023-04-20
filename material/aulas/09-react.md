@@ -1,6 +1,6 @@
 # React
 
-O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Recomendo **fortemente** que você faça o [tutorial oficial do React](https://reactjs.org/docs/hello-world.html), pois ele é muito bem feito e completo. Este handout é baseado no [tutorial rápido do React](https://reactjs.org/tutorial/tutorial.html).
+O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Recomendo **fortemente** que você faça o [tutorial oficial do React](https://react.dev/learn), pois ele é muito bem feito e completo. 
 
 !!! danger "Importante"
     Nem todo código deste handout é JavaScript puro. Algumas (muitas) coisas são específicas do React e não funcionarão fora desse contexto.
