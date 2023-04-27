@@ -63,7 +63,9 @@ nav:
     - "08 - Django REST":
         - "Slides": aulas/08-django-rest/Aula18.pdf
         - "Handout": aulas/08-django-rest.md
-    - "09 - React": aulas/09-react.md
+    - "09 - React":
+        - "Handout": aulas/09-react.md
+        - "Slides": aulas/09-react/react-components.pdf
   - "Docker 101 & Banco de Dados": Aula-Docker-TecWeb.pdf
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":

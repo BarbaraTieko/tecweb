@@ -1,6 +1,6 @@
 # React
 
-O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Recomendo **fortemente** que você faça o [tutorial oficial do React](https://react.dev/learn), pois ele é muito bem feito e completo. 
+O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Recomendo **fortemente** que você faça o [tutorial oficial do React](https://react.dev/learn), pois ele é muito bem feito e completo.
 
 !!! danger "Importante"
     Nem todo código deste handout é JavaScript puro. Algumas (muitas) coisas são específicas do React e não funcionarão fora desse contexto.
@@ -360,7 +360,7 @@ Depois de realizar as adaptações no servidor, seu código deve funcionar e a r
 
 O app já é capaz de fazer a requisição e receber os dados, mas ainda não mostra nada na tela. O problema é que a requisição é feita em uma chamada assíncrona, assim, não sabemos **quando** o resultado será obtido. Como o componente é uma função, ele não pode armazenar estado como um objeto. Ela é executada para gerar a tela e termina a execução.
 
-Por isso foram criados os chamados [**hooks**](https://reactjs.org/docs/hooks-intro.html), que permitem o armazenamento de estado em componentes funcionais. Vamos utilizar o `#!js useState` para armazenar estado. Modifique o arquivo `src/App.js`:
+Por isso foram criados os chamados [**hooks**](https://react.dev/reference/react), que permitem o armazenamento de estado em componentes funcionais. Vamos utilizar o `#!js useState` para armazenar estado. Modifique o arquivo `src/App.js`:
 
 ```js hl_lines="1 7-11"
 import { useState } from "react";
