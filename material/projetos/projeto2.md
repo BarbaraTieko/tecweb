@@ -9,6 +9,9 @@
 **Entrega via GitHub Classroom:**
 Para este projeto será necessário criar dois repositório GitHub, um para o frontend e outro para o backend.
 
+!!! danger "Importante"
+    Por conta de problemas para reconfigurar as equipes do github classroom. Crie os repositórios em sua conta Github e faça o envio do endereço do repositório via Blackboard em: Conteúdos > Projeto 2 - Repositório Git
+
 - Frontend: [https://classroom.github.com/a/_ZpZ2-6u](https://classroom.github.com/a/_ZpZ2-6u){:target="_blank"}
 - Backend: [https://classroom.github.com/a/voDGW4xL](https://classroom.github.com/a/voDGW4xL){:target="_blank"}
 
@@ -21,10 +24,10 @@ O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
 O tema deste projeto é aberto, mas ele possui algumas restrições:
 
-1. Precisa utilizar algum tipo de persistência em um banco de dados (não vale arquivos ou SQLite);
+1. Precisa utilizar algum tipo de persistência em um banco de dados ~~(não vale arquivos ou SQLite)~~ (Pode utilizar SQlite);
 2. Precisa consumir uma API externa (de terceiros). Essa API externa pode ser consumida tanto pelo frontend quanto pelo backend. Como você preferir;
 3. Backend deve ser feito utilizando Django REST framework. (Sua API deve ser RESTful)
-4. Frontend deve ser feito utilizando React. 
+4. Frontend deve ser feito utilizando React.
 
 ## Roadmap
 
@@ -39,10 +42,10 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
         Se você tiver um tema definido, também é bem fácil de achar APIs gratuitas procurando no Google.
 
 3. Liste 2 funcionalidades essenciais;
-4. Defina a arquitetura do projeto (que parte faz as requisições para a API externa, por exemplo);
-5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia 27/04/2023 (quinta-feira). O formulário deve ser preenchido para que o tema seja validado. [Clique aqui para acessar o formulário](https://forms.gle/AjjibT1fzUVkGTyq6).
+4. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia 27/04/2023 (quinta-feira). O formulário deve ser preenchido para que o tema seja validado. [Clique aqui para acessar o formulário](https://forms.gle/AjjibT1fzUVkGTyq6).
 
 ## Entregas intermediárias
+A seguir, segue apenas uma sugestão de entrega.
 
 - **27/04:**
     - O formulário referente ao Inception do Projeto deve ser preenchido no prazo.
@@ -57,10 +60,18 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 A rubrica a seguir será utilizada na correção do Projeto 2:
 
+
+**Tarefas:** As tarefas a serem realizadas são:
+
+1. Funcionalidade essencial 1 indicada no Inception;
+2. Funcionalidade essencial 2 indicada no Inception;
+3. Implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.
+4. Colocou em produção (está disponível na internet)
+
 | Conceito | Descrição |
 | :------: | :-------- |
-|    A     | Atingiu o conceito B e implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.  |
-|    B     | Atingiu o conceito C e colocou em produção (está disponível na internet) |
+|    A     | Atingiu o conceito B **e** entregou a funcionalidade 3 **e** a funcionalidade 4) |
+|    B     | Atingiu o conceito C **e** (entregou a funcionalidade 3 **ou** a funcionalidade 4)|
 |    C     | Entregou as 2 funcionalidades essenciais |
 |    D     | Entregou apenas 1 funcionalidade essencial |
 |    I     | Não entregou ou o código não executa |
