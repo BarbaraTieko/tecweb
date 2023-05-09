@@ -25,8 +25,8 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
     - A quantidade de funcionalidades vai depender do tamanho do grupo e da dificuldade da dificuldade.
     - Vamos classificar as dificuldades em 3 escalas: fácil, médio e difícil.
     - Cada funcionalidade terá uma pontuação: (1) fácil, (1.5) médio e (2) difícil.
-    - Para grupos de 3 integrantes, a pontuação total da dificuldade deve alcançar 4 pontos. Ou seja, o grupo pode fazer 4 funcionalidades fáceis, 2 difíceis, 1 difícil e 2 fáceis, ou qualquer outra combinação de pelo menos 4 pontos.
-    - Para os grupos de 4 integrantes, a pontuação total da dificuldade deve alcançar pelo menos 6 pontos.
+    - Para grupos de 3 integrantes, a pontuação total da dificuldade deve alcançar 6 pontos. Ou seja, o grupo pode fazer 6 funcionalidades fáceis, 3 difíceis, 1 difícil e 2 médias e 1 fácil, ou qualquer outra combinação de pelo menos 6 pontos.
+    - Para os grupos de 4 integrantes, a pontuação total da dificuldade deve alcançar pelo menos 8 pontos.
     - A dificuldade deve ser validada com os professores.
     - Alguns exemplos de funcionalidades fáceis:
         - CRUD feito em Django;
@@ -39,3 +39,36 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
         - Utilização de outra linguagem, ferramenta, framework não vistos em sala de aula.
 4. Defina e desenhe a arquitetura do projeto;
 5. Inicie as sprints de desenvolvimento.
+
+## Rubrica
+
+A rubrica a seguir será utilizada na correção do Projeto 3:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A    | Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
+|    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código. |
+|    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura |
+|    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
+|    I     | Não entregou ou o código não executa |
+
+## Trabalho em Equipe
+
+Os questionários de cada sprint devem ser respondidos entre quinta-feira e domingo. Questionários respondidos fora deste período serão considerados como não respondidos. Para cada questionário de avaliação não respondido, será descontado 1 conceito.
+
+Acesse mais detalhes da avaliação em grupo: [Teamwork](teamwork.md)
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A    | Não teve nenhuma avaliação abaixo do esperado. Ou teve uma avaliação abaixo do esperado, seguida de duas avaliações acima do esperado. |
+|    B     | Teve avaliação abaixo do esperado em 1 sprint. |
+|    C     | Teve avaliação abaixo do esperado em 2 sprints. |
+|    D     | Teve avaliação de desempenho abaixo do esperado em 3 sprints. |
+|    I     | Não respondeu nenhum questionário dentro do prazo. Ou grupo possui menos de 3 integrantes.|
+
+## Pesos
+
+| Avaliação | Peso |
+| :------: | :-------- |
+|    Avaliação do Projeto    | 80% |
+|    Avaliação em Equipe    | 20%|
