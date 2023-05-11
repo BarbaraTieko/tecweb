@@ -7,6 +7,8 @@ O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
+    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/hTWV8YExVsubFNcm7){target="_blank"}
+
 ## Restrições
 
 O tema deste projeto é aberto, mas ele possui algumas restrições:
