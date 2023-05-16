@@ -42,6 +42,13 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 4. Defina e desenhe a arquitetura do projeto;
 5. Inicie as sprints de desenvolvimento.
 
+## Pesos
+
+| Avaliação | Peso |
+| :------: | :-------- |
+|    Avaliação do Projeto    | 80% |
+|    Avaliação em Equipe    | 20%|
+
 ## Rubrica
 
 A rubrica a seguir será utilizada na correção do Projeto 3:
@@ -49,7 +56,7 @@ A rubrica a seguir será utilizada na correção do Projeto 3:
 | Conceito | Descrição |
 | :------: | :-------- |
 |    A    | Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
-|    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código. |
+|    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código **e** entregou um vídeo com a demo do projeto |
 |    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura |
 |    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
 |    I     | Não entregou ou o código não executa |
@@ -67,10 +74,3 @@ Acesse mais detalhes da avaliação em grupo: [Teamwork](teamwork.md)
 |    C     | Teve avaliação abaixo do esperado em 2 sprints. |
 |    D     | Teve avaliação de desempenho abaixo do esperado em 3 sprints. |
 |    I     | Não respondeu nenhum questionário dentro do prazo. Ou grupo possui menos de 3 integrantes.|
-
-## Pesos
-
-| Avaliação | Peso |
-| :------: | :-------- |
-|    Avaliação do Projeto    | 80% |
-|    Avaliação em Equipe    | 20%|
