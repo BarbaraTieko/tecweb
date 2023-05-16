@@ -79,7 +79,10 @@ nav:
     - "Projeto 1A": projetos/projeto1/projeto1a.md
     - "Projeto 1B": projetos/projeto1/projeto1b.md
     - "Projeto 2": projetos/projeto2.md
-    - "Projeto 3": projetos/projeto3.md
+    - "Projeto 3":
+      - Enunciado: projetos/projeto3.md
+      - "Avaliação Individual dos Membros": projetos/teamwork.md
+      - "Formulário Sprint 1": projetos/projeto3/sprint1.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
   - Desafio:

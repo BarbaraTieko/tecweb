@@ -31,3 +31,4 @@ Bem-vind@ ao curso de Tecnologias Web 2023/1
  - ~~09/05: Entrega do [Projeto 2]~~
  - 11/05: Entrega do [Projeto 2](projetos/projeto2.md)
  - 31/05: Entrega do [Projeto 3](projetos/projeto3.md)
+ - 18/05 (limite 9h30): Responder Formulário Projeto 3 [Sprint 1](projetos/projeto3/sprint1.md)
