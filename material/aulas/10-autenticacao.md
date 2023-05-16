@@ -8,15 +8,8 @@ Para esta atividade, vamos implementar a autenticação no projeto Getit. Vamos 
 
 
 ## Passo 1
+Para realizar este handout utilize o código resultante do handout 08 Django REST ou utilize o código disponível em [Download :arrow_down: notes_backend](https://github.com/BarbaraTieko/2023.1-tecweb-handout-django-rest.git){target="_blank"}
 
-Baixe os dois projetos disponíveis nos links a seguir:
-
-- [Download :arrow_down: notes_frontend](10-autenticacao/notes_frontend.zip)
-    - Instale as dependência com o comando:
-
-            npm install
-
-- [Download :arrow_down: notes_backend](10-autenticacao/notes_backend.zip)
     - Crie e ative o ambiente virtual;
 
             python -m venv env
@@ -86,7 +79,7 @@ from rest_framework.permissions import IsAuthenticated
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def api_note_list(request):
+def api_notes(request):
 
     if request.method == "POST":
         new_note_data = request.data
@@ -116,15 +109,14 @@ Vamos criar um endpoint para receber um nome de usuário e uma senha e com essas
 
 Altere o arquivo `notes/urls.py` da seguinte forma:
 
-```python hl_lines="9"
+```python hl_lines="8"
 from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
     path('api/notes/<int:note_id>/', views.api_note),
-    path('api/notes/', views.api_note_list),
+    path('api/notes/', views.api_notes),
     path('api/token/', views.api_get_token),
 ]
 
@@ -181,17 +173,62 @@ Depois disso, é necessário executar o comando `python manage.py migrate`.
 
 ## Passo 5
 
-Para testarmos este endpoint, crie dois usuários via comando:
+Para testarmos este endpoint, precisamos criar dois usuários. Para isso, devemos criar uma endponit para criar usuário.
 
-    python manage.py createsuperuser --username USUARIO --email ALGUMEMAIL@EXEMPLO.COM
+Altere o arquivo `notes/urls.py` da seguinte forma:
 
-No projeto veja se existe um arquivo chamado `notes.json`. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.
+```python hl_lines="9"
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('api/notes/<int:note_id>/', views.api_note),
+    path('api/notes/', views.api_notes),
+    path('api/token/', views.api_get_token),
+    path('api/users/', views.api_user),
+]
+
+```
+
+Em seguida, adiciona a função `api_user` no arquivo `views.py` e adicione alguns imports necessários:
+
+```python hl_lines="10 14-23"
+from django.shortcuts import render, redirect
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from django.http import Http404, HttpResponseForbidden, JsonResponse
+from .models import Note
+from .serializers import NoteSerializer
+from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import authenticate
+from rest_framework.authtoken.models import Token
+from django.contrib.auth.models import User
+
+# SUAS OUTRAS FUNÇÕES CONTINUAM AQUI
+
+@api_view(['POST'])
+def api_user(request):
+    if request.method == 'POST':
+        username = request.data['username']
+        email = request.data['email']
+        password = request.data['password']
+
+        user = User.objects.create_user(username, email, password)
+        user.save()
+        return Response(status=204)
+
+```
+
+Agora crie pelo menos dois usuários através da endpoint criada.
+
+Baixe o seguinte arquivo e coloque-o dentro do projeto [:arrow_down: notes.json](notes.json){target="_blank"}. No projeto veja se existe um arquivo chamado `notes.json`. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.
 
 E rode o comando a seguir:
 
     python manage.py loaddata notes.json
 
-O comando acima irá popular nossa base de dados.
+O comando acima irá popular nossa base de dados e atrelar algumas notas como pertencentes ao usuário com o id 1 e as outras notas como pertencentes ao usuário com id 2.
 
 !!! danger "Atenção"
     Para o comando acima funcionar você deve ter pelo menos dois usuários criados no banco de dados.
@@ -237,7 +274,7 @@ Ainda não terminamos. Se notar, a requisição retorna todas as notas. Mas prec
 
 Para isso, basta fazer algumas alterações no arquivo `views.py`:
 
-```python hl_lines="10 24"
+```python hl_lines="24"
 from django.shortcuts import render, redirect
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -253,7 +290,7 @@ from django.contrib.auth.models import User
 
 @api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def api_note_list(request):
+def api_notes(request):
     if request.method == "POST":
         new_note_data = request.data
         title = new_note_data['title']

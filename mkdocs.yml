@@ -66,6 +66,7 @@ nav:
     - "09 - React":
         - "Handout": aulas/09-react.md
         - "Slides": aulas/09-react/react-components.pdf
+    - "10 - Autenticação": aulas/10-autenticacao.md
   - "Docker 101 & Banco de Dados": Aula-Docker-TecWeb.pdf
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
