@@ -2,7 +2,7 @@
 
 Atualmente a nossa página inicial mostra apenas um texto no navegador. O nosso objetivo nesta parte do handout é mostrar a lista de anotações, assim como fizemos no [Handout 1](../01-getit.md).
 
-Já vimos no primeiro handout que não é uma boa ideia criarmos uma string com todo o HTML dentro do código Python. A nossa vida será muito mais fácil se mantivermos as reposabilidades separadas. Por esse motivo, vamos pular diretamente para o uso de templates no Django.
+Já vimos no primeiro handout que não é uma boa ideia criarmos uma string com todo o HTML dentro do código Python. A nossa vida será muito mais fácil se mantivermos as responsabilidades separadas. Por esse motivo, vamos pular diretamente para o uso de templates no Django.
 
 !!! example "Exercício"
     Crie as pastas `notes/templates/notes` (sim, o `notes` é repetido mesmo) e então crie os dois arquivos a seguir
