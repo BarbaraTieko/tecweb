@@ -85,6 +85,7 @@ nav:
       - "Formulário Sprint 2": projetos/projeto3/sprint2.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
+    - "Avaliação Final": simulado/simulado-AF.pdf
   - Desafio:
     - "Desafio Django": aulas/desafio-django/index.md
 extra_javascript:
