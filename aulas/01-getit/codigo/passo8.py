@@ -3,7 +3,7 @@ from pathlib import Path
 from utils import extract_route, read_file, load_data
 
 CUR_DIR = Path(__file__).parent
-SERVER_HOST = '0.0.0.0'
+SERVER_HOST = 'localhost'
 SERVER_PORT = 8080
 
 NOTE_TEMPLATE = '''  <li>
@@ -38,7 +38,7 @@ server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server_socket.bind((SERVER_HOST, SERVER_PORT))
 server_socket.listen()
 
-print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
+print(f'Servidor escutando em: http://{SERVER_HOST}:{SERVER_PORT}')
 
 while True:
     client_connection, client_address = server_socket.accept()
