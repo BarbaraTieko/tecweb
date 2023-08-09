@@ -1,10 +1,10 @@
-site_name: Tecnologias Web - Insper 2023/1
+site_name: Tecnologias Web - Insper 2023/2
 site_author: Andrew Kurauchi
 
 extra:
   materia: Tecnologias Web
   professor: Barbara Agena
-  semestre: 2023/1
+  semestre: 2023/2
 
 theme:
   feature:
@@ -21,7 +21,7 @@ theme:
 docs_dir: material
 site_dir: docs
 
-site_url: https://barbaratieko.github.io/tecweb.2023.1/
+site_url: https://barbaratieko.github.io/tecweb.2023.2/
 
 nav:
   - Home: index.md
