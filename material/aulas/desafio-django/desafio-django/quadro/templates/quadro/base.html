@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Quadro Scrum</title>
+  </head>
+  <body>
+    <div class="appbar">
+      <a href="{% url 'quadro:index'%}">
+        <img src="{% static 'img/clipboard.png' %}" class="logo" />
+      </a>
+      <span class="subtitle">Lista de Tarefas</span>
+    </div>
+
+    <main class="container">{% block content %}{% endblock %}</main>
+  </body>
+</html>

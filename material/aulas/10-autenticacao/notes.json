@@ -1,0 +1,65 @@
+[
+    {
+        "model": "notes.note",
+        "pk":1,
+        "fields":{
+          "title": "Receita de miojo",
+          "content": "Bata com um martelo antes de abrir o pacote. Misture o tempero, coloque em uma vasilha e aproveite seu snack :)",
+          "user":1
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":2,
+        "fields":{
+          "title": "Pão doce",
+          "content": "Abra o pão e coloque o seu suco em pó favorito.",
+          "user":1
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":3,
+        "fields":{
+          "title": "Sorvete com cristais de leite",
+          "content": "Sirva o seu sorvete favorito em uma vasilha e jogue leite em cima.",
+          "user":1
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":4,
+        "fields":{
+          "title": "Iogurte natural",
+          "content": "Deixe o leite fora da geladeira (esse é mentira, não faça isso).",
+          "user":1
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":5,
+        "fields":{
+          "title": "Homer Simpson",
+          "content": "~( 8(|)",
+          "user": 2
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":6,
+        "fields":{
+          "title": "Numero mágico",
+          "content": "142857",
+          "user": 2
+        }
+    },
+    {
+        "model": "notes.note",
+        "pk":7,
+        "fields":{
+          "title": "Série da Fundação - Isaac Asimov",
+          "content": "É boa, leia.",
+          "user": 2
+        }
+    }
+]
