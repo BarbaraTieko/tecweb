@@ -67,9 +67,9 @@ Além disso, há o símbolo `&` indicando que um outro valor será apresentado e
 
 Em seguida, nos deparamos com o texto `detalhes=` que representa o texto digitado pelo usuário no campo `input` referente aos detalhes da anotação.
 
-Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus)
-
 !!! example "EXERCÍCIO"
+    Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus)
+
     Modifique a sua função `index` no arquivo `views.py` para conter o seguinte conteúdo:
 
     ```python hl_lines="1-15"
