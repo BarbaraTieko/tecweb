@@ -545,6 +545,10 @@
                 <h1 id="01-get-it">01 - Get-it<a class="headerlink" href="#01-get-it" title="Permanent link">&para;</a></h1>
 <h2 id="parte-4-fazendo-um-formulario-de-criacao-de-anotacao">Parte 4: Fazendo um formulário de criação de anotação<a class="headerlink" href="#parte-4-fazendo-um-formulario-de-criacao-de-anotacao" title="Permanent link">&para;</a></h2>
 <p>Vamos implementar agora a funcionalidade de adicionar anotações. O objetivo é que você aprenda como receber dados no servidor enviados pelo navegador.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>É possível que nas próximas etapas o servidor apresente erros inesperados. Tente acessar o servidor de um navegador com aba anônima.</p>
+</div>
 <p>Para começar, modifique o template <code>index.html</code> para adicionar o <code class="highlight"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span></code>:</p>
 <div class="highlight"><pre><span></span><code><span class="c">&lt;!-- DOCTYPE, HTML, HEAD DEVEM CONTINUAR AQUI --&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
@@ -592,8 +596,12 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 <p>Há dois pontos importantes:</p>
 <ol>
 <li>A primeira linha da requisição está diferente. Existe um <code>POST</code> ao invés de <code>GET</code>, mas a rota é a mesma (<code>/</code>).</li>
-<li>O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho.</li>
+<li>O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho. </li>
 </ol>
+<p>O valor <code>titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.</code> ao fim da reuisição representado os valores digitados pelo usuário nos campos <code>input</code>.
+Note que o que vem após <code>titulo=</code> é o que o usuário digitou no campo referente ao título. </p>
+<p>Além disso, há o símbolo <code>&amp;</code> indicando que um outro valor será apresentado em seguido.</p>
+<p>Em seguida, nos deparamos com o texto <code>detalhes=</code> que representa o texto digitado pelo usuário no campo <code>input</code> referente aos detalhes da anotação.</p>
 <p>Vamos utilizar o começo da string de requisição para saber o seu tipo (<code>GET</code> ou <code>POST</code>). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função <code class="highlight"><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote_plus</span></code> <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus">(veja a documentação aqui)</a></p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
@@ -643,10 +651,15 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Implemente a função <code class="highlight"><span class="n">build_response</span></code> no arquivo <code>utils.py</code>. Ele deve receber os seguintes argumentos: <code class="highlight"><span class="n">build_response</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">code</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;OK&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span></code> (talvez você queira ler isso: <a href="https://docs.python.org/3/tutorial/controlflow.html#default-argument-values">https://docs.python.org/3/tutorial/controlflow.html#default-argument-values</a>).</p>
+<p>Acesse o link a seguir para ver um exemplo de <code>response</code>: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses</a></p>
 <p>Lembre-se de testar a sua função com <code>python test_utils.py</code>.</p>
 </div>
 <p>Agora que você implementou a função <code class="highlight"><span class="n">build_response</span></code>, vamos refatorar o código para utilizá-la.</p>
 <p>Modifique seu programa principal da seguinte maneira:</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>O código abaixo funcionará somente após finalizar o exercício abaixo.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 <span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="hll"><span class="kn">from</span> <span class="nn">utils</span> <span class="kn">import</span> <span class="n">extract_route</span><span class="p">,</span> <span class="n">read_file</span><span class="p">,</span> <span class="n">build_response</span>
@@ -678,8 +691,8 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 </span>    <span class="k">elif</span> <span class="n">route</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">index</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="n">build_response</span><span class="p">()</span>
-
+<span class="hll">        <span class="n">response</span> <span class="o">=</span> <span class="n">build_response</span><span class="p">()</span>
+</span>
 <span class="hll">    <span class="n">client_connection</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 </span>
     <span class="n">client_connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -690,9 +703,11 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Modifique a função <code class="highlight"><span class="n">index</span></code> no arquivo <code>views.py</code> para que ela utilize a função <code class="highlight"><span class="n">build_response</span></code>.</p>
-<p>Será necessário fazer duas alterações na função <code>index</code>:
-1. No retorno principal, será necessário alterar a última linha <code class="highlight"><span class="k">return</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span></code> da função <code>index</code> para utilizar a função <code>build_response</code>.
-2. No caso de requisição com o método <code>POST</code>, você deve devolver o resultado de <code class="highlight"><span class="n">build_response</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="mi">303</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;See Other&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;Location: /&#39;</span><span class="p">)</span></code>.</p>
+<p>Será necessário fazer duas alterações na função <code>index</code>:</p>
+<ol>
+<li>No retorno principal, será necessário alterar a última linha <code class="highlight"><span class="k">return</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span></code> para utilizar a função <code>build_response</code>.</li>
+<li>No caso de requisição com o método <code>POST</code>, você deve devolver o resultado de <code class="highlight"><span class="n">build_response</span><span class="p">(</span><span class="n">code</span><span class="o">=</span><span class="mi">303</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s1">&#39;See Other&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="s1">&#39;Location: /&#39;</span><span class="p">)</span></code>.</li>
+</ol>
 </div>
 <p>Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.</p>
 <h2 id="desafio">Desafio<a class="headerlink" href="#desafio" title="Permanent link">&para;</a></h2>

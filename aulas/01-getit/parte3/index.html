@@ -616,6 +616,66 @@
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No código anterior, estamos utilizando formatação de <code>string</code> um pouco diferente do que aprendemos em DesSoft.</p>
+<p>Vamos relembrar como utilizávamos o método <code>.format</code>
+Considere o código a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="n">texto</span> <span class="o">=</span> <span class="s1">&#39;O retângulo de lados </span><span class="si">{0}</span><span class="s1"> e </span><span class="si">{1}</span><span class="s1"> tem área </span><span class="si">{2}</span><span class="s1">&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">texto</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Escolhe o será impresso no terminal:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados {0} e {1} tem área {2}</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados 0 e 1 tem área 2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> O retângulo de lados 3 e 4 tem área 12</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O retângulo de lados 4 e 3 tem área 12</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Será impresso <code>O retângulo de lados 3 e 4 tem área 12</code>, pois o método <code>.format</code> substituirá os valores entre chaves de acordo com a ordem em que os argumentos <code>x</code>, <code>y</code> e <code>z</code> foram passados. Para mais detalhes acesse: <a href="https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method">https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method</a></p>
+</div>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No código do servidor, utilizamos o método <code>.format</code> de outra maneira possível.
+A maneira utilizada é similar ao código a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This </span><span class="si">{food}</span><span class="s1"> is </span><span class="si">{adjective}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">adjective</span><span class="o">=</span><span class="s1">&#39;absolutely horrible&#39;</span><span class="p">,</span> <span class="n">food</span><span class="o">=</span><span class="s1">&#39;spam&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+<p>Escolhe o será impresso no terminal:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> This spam is absolutely horrible.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This {food} is {adjective}.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This absolutely horrible is spam.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> This food is adjective.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Será impresso <code>This spam is absolutely horrible.</code>, pois o método <code>.format</code> substituirá os valores entre chaves de acordo com os nomes utilizados <code>food</code> e <code>adjective</code>. Para mais detalhes acesse: <a href="https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method">https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method</a></p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Tente reescrever o trecho de código abaixo utilizando o loop <code class="highlight"><span class="k">for</span></code>.
+  Caso não esteja familiarizado com <code>list-comprehensions</code> acesse: <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions</a></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cria uma lista de &lt;li&gt;&#39;s para cada anotação</span>
+<span class="c1"># Se tiver curiosidade: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions</span>
+<span class="n">notes_li</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="n">NOTE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;titulo&#39;</span><span class="p">],</span> <span class="n">details</span><span class="o">=</span><span class="n">dados</span><span class="p">[</span><span class="s1">&#39;detalhes&#39;</span><span class="p">])</span>
+   <span class="k">for</span> <span class="n">dados</span> <span class="ow">in</span> <span class="n">load_data</span><span class="p">(</span><span class="s1">&#39;notes.json&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">notes</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notes_li</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">RESPONSE_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
+</code></pre></div>
+
+</div>
 <p>Você também vai precisar do arquivo <a href="../codigo/data/notes.json"><code>notes.json</code> (clique aqui para baixar)</a>. Coloque-o em uma pasta chamada <code>data</code>:</p>
 <div class="highlight"><pre><span></span><code>- DIRETORIO-DO-SEU-SERVIDOR
   |- servidor.py

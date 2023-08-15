@@ -581,6 +581,10 @@
 <h2 id="voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo">Você disse que seria mão na massa, mas ainda não toquei no código!<a class="headerlink" href="#voce-disse-que-seria-mao-na-massa-mas-ainda-nao-toquei-no-codigo" title="Permanent link">&para;</a></h2>
 <p>Eu sei, me desculpe. Agora sim, vamos começar!</p>
 <p>Vamos implementar um servidor <strong>bastante</strong> simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado <code>servidor.py</code> (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado <a href="https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842">neste código</a>):</p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, tente acessar <code>localhost:8080</code> ao invés de <code>0.0.0.0:8080</code>.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="n">SERVER_HOST</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0&#39;</span>
@@ -601,12 +605,12 @@
 <span class="n">server_socket</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 
-<div class="admonition danger">
-<p class="admonition-title">Atenção</p>
-<p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, tente acessar <code>localhost:8080</code> ao invés de <code>0.0.0.0:8080</code>.</p>
-</div>
 <p>Antes de tentarmos entender o código, execute-o para vermos o que ele faz. O primeiro <code class="highlight"><span class="nb">print</span></code> deve ter sido executado, mas o segundo não.</p>
 <p>Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. <strong>Uma página de erro deve aparecer, mas não se desespere (se você me chamar porque não leu esta frase eu vou só apontar para ela e vou embora).</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>Alguns navegadores podem não funcionar como esperado. Desta forma, teste em outros navegadores.</p>
+</div>
 <p>Agora que você chegou nesta linha sem se desesperar, olhe para o terminal. O último <code class="highlight"><span class="nb">print</span></code> foi executado (caso contrário, agora você pode me chamar)!</p>
 <h2 id="muito-bem-agora-vamos-entender-o-codigo-acima">Muito bem, agora vamos entender o código acima<a class="headerlink" href="#muito-bem-agora-vamos-entender-o-codigo-acima" title="Permanent link">&para;</a></h2>
 <p>O módulo <code class="highlight"><span class="n">socket</span></code> é utilizado para lidar com chamadas de rede em baixo nível. A <a href="https://docs.python.org/3/library/socket.html">documentação oficial</a> pode ser útil para entender as funções utilizadas.</p>
@@ -685,8 +689,7 @@ Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
 <div class="admonition question choice">
 <p class="admonition-title">Question</p>
 <p>Considere o texto a seguir:</p>
-<div class="codehilite"><pre><span></span><code>```
-GET / HTTP/1.1
+<div class="codehilite"><pre><span></span><code>GET / HTTP/1.1
 Host: 192.168.15.14:8080
 Connection: keep-alive
 Save-Data: on
@@ -695,7 +698,6 @@ User-Agent: Mozilla/5.0 (Linux; Android 11; Pixel 3) AppleWebKit/537.36 (KHTML, 
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Accept-Encoding: gzip, deflate
 Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-```
 </code></pre></div>
 
 
