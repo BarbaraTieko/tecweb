@@ -602,9 +602,9 @@ titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.
 Note que o que vem após <code>titulo=</code> é o que o usuário digitou no campo referente ao título. </p>
 <p>Além disso, há o símbolo <code>&amp;</code> indicando que um outro valor será apresentado em seguido.</p>
 <p>Em seguida, nos deparamos com o texto <code>detalhes=</code> que representa o texto digitado pelo usuário no campo <code>input</code> referente aos detalhes da anotação.</p>
-<p>Vamos utilizar o começo da string de requisição para saber o seu tipo (<code>GET</code> ou <code>POST</code>). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função <code class="highlight"><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote_plus</span></code> <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus">(veja a documentação aqui)</a></p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
+<p>Vamos utilizar o começo da string de requisição para saber o seu tipo (<code>GET</code> ou <code>POST</code>). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função <code class="highlight"><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote_plus</span></code> <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus">(veja a documentação aqui)</a></p>
 <p>Modifique a sua função <code>index</code> no arquivo <code>views.py</code> para conter o seguinte conteúdo:</p>
 <div class="highlight"><pre><span></span><code><span class="hll"><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
 </span><span class="hll">    <span class="c1"># A string de request sempre começa com o tipo da requisição (ex: GET, POST)</span>
