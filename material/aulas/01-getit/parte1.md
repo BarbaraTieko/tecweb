@@ -36,16 +36,19 @@ Eu sei, me desculpe. Agora sim, vamos começar!
 
 Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842)):
 
+!!!danger "Atenção"
+    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, tente acessar `localhost:8080` ao invés de `0.0.0.0:8080`.
+
 ```python
 --8<-- "01-getit/codigo/passo1.py"
 ```
-
-!!!danger "Atenção"
-    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, tente acessar `localhost:8080` ao invés de `0.0.0.0:8080`.
     
 Antes de tentarmos entender o código, execute-o para vermos o que ele faz. O primeiro `#!python print` deve ter sido executado, mas o segundo não.
 
 Abra o navegador de sua preferência e entre no endereço apresentado pelo seu programa. **Uma página de erro deve aparecer, mas não se desespere (se você me chamar porque não leu esta frase eu vou só apontar para ela e vou embora).**
+
+!!! danger "Atenção"
+    Alguns navegadores podem não funcionar como esperado. Desta forma, teste em outros navegadores.
 
 Agora que você chegou nesta linha sem se desesperar, olhe para o terminal. O último `#!python print` foi executado (caso contrário, agora você pode me chamar)!
 
@@ -125,7 +128,6 @@ Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com 
 !!! question choice
     Considere o texto a seguir:
 
-        ```
         GET / HTTP/1.1
         Host: 192.168.15.14:8080
         Connection: keep-alive
@@ -135,7 +137,6 @@ Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com 
         Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
         Accept-Encoding: gzip, deflate
         Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
-        ```
 
     Escolhe o opção verdadeira:
 

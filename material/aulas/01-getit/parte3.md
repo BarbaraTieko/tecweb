@@ -14,6 +14,66 @@ Vamos começar separando a responsabilidade do modelo (lista de anotações) da 
 --8<-- "01-getit/codigo/passo8.py"
 ```
 
+!!! question choice
+    No código anterior, estamos utilizando formatação de `string` um pouco diferente do que aprendemos em DesSoft.
+
+    Vamos relembrar como utilizávamos o método `.format`
+    Considere o código a seguir:
+    
+    ```python
+    x = 3
+    y = 4
+    z = x * y
+    texto = 'O retângulo de lados {0} e {1} tem área {2}'
+
+    print(texto.format(x, y, z))
+    ``` 
+       
+    Escolhe o será impresso no terminal:
+
+    - [ ] O retângulo de lados {0} e {1} tem área {2}
+    - [ ] O retângulo de lados 0 e 1 tem área 2
+    - [X] O retângulo de lados 3 e 4 tem área 12
+    - [ ] O retângulo de lados 4 e 3 tem área 12
+
+    !!! details "Resposta"
+        Será impresso `O retângulo de lados 3 e 4 tem área 12`, pois o método `.format` substituirá os valores entre chaves de acordo com a ordem em que os argumentos `x`, `y` e `z` foram passados. Para mais detalhes acesse: https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method
+
+!!! question choice
+    No código do servidor, utilizamos o método `.format` de outra maneira possível.
+    A maneira utilizada é similar ao código a seguir:
+    
+    
+    ```python
+    print('This {food} is {adjective}.'.format(adjective='absolutely horrible', food='spam'))
+    ``` 
+       
+    Escolhe o será impresso no terminal:
+
+    - [X] This spam is absolutely horrible.
+    - [ ] This {food} is {adjective}.
+    - [ ] This absolutely horrible is spam.
+    - [ ] This food is adjective.
+
+    !!! details "Resposta"
+        Será impresso `This spam is absolutely horrible.`, pois o método `.format` substituirá os valores entre chaves de acordo com os nomes utilizados `food` e `adjective`. Para mais detalhes acesse: https://docs.python.org/3/tutorial/inputoutput.html#the-string-format-method
+
+!!! example "EXERCÍCIO"
+      Tente reescrever o trecho de código abaixo utilizando o loop `#!python for`.
+      Caso não esteja familiarizado com `list-comprehensions` acesse: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+
+      ```python
+      # Cria uma lista de <li>'s para cada anotação
+      # Se tiver curiosidade: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+      notes_li = [
+         NOTE_TEMPLATE.format(title=dados['titulo'], details=dados['detalhes'])
+         for dados in load_data('notes.json')
+      ]
+      notes = '\n'.join(notes_li)
+
+      response = RESPONSE_TEMPLATE.format(notes=notes).encode()
+      ```
+
 Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](../codigo/data/notes.json). Coloque-o em uma pasta chamada `data`:
 
 ```

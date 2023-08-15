@@ -4,6 +4,9 @@
 
 Vamos implementar agora a funcionalidade de adicionar anotações. O objetivo é que você aprenda como receber dados no servidor enviados pelo navegador.
 
+!!! danger "Atenção"
+    É possível que nas próximas etapas o servidor apresente erros inesperados. Tente acessar o servidor de um navegador com aba anônima.
+
 Para começar, modifique o template `index.html` para adicionar o `#!html <form>`:
 
 ```html
@@ -55,7 +58,14 @@ titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pro
 Há dois pontos importantes:
 
 1. A primeira linha da requisição está diferente. Existe um `POST` ao invés de `GET`, mas a rota é a mesma (`/`).
-2. O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho.
+2. O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho. 
+
+O valor `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` ao fim da reuisição representado os valores digitados pelo usuário nos campos `input`.
+Note que o que vem após `titulo=` é o que o usuário digitou no campo referente ao título. 
+
+Além disso, há o símbolo `&` indicando que um outro valor será apresentado em seguido.
+
+Em seguida, nos deparamos com o texto `detalhes=` que representa o texto digitado pelo usuário no campo `input` referente aos detalhes da anotação.
 
 Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus)
 
@@ -112,13 +122,18 @@ Até o momento o nosso servidor sempre utiliza o cabeçalho fixo com código 200
 !!! example "EXERCÍCIO"
     Implemente a função `#!python build_response` no arquivo `utils.py`. Ele deve receber os seguintes argumentos: `#!python build_response(body='', code=200, reason='OK', headers='')` (talvez você queira ler isso: https://docs.python.org/3/tutorial/controlflow.html#default-argument-values).
 
+    Acesse o link a seguir para ver um exemplo de `response`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses
+
     Lembre-se de testar a sua função com `python test_utils.py`.
 
 Agora que você implementou a função `#!python build_response`, vamos refatorar o código para utilizá-la.
 
 Modifique seu programa principal da seguinte maneira:
 
-```python hl_lines="3 28 34"
+!!! danger "Atenção"
+    O código abaixo funcionará somente após finalizar o exercício abaixo.
+
+```python hl_lines="3 28 32 34"
 --8<-- "01-getit/codigo/passo11.py"
 ```
 
@@ -126,7 +141,8 @@ Modifique seu programa principal da seguinte maneira:
     Modifique a função `#!python index` no arquivo `views.py` para que ela utilize a função `#!python build_response`.
 
     Será necessário fazer duas alterações na função `index`:
-    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` da função `index` para utilizar a função `build_response`.
+
+    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` para utilizar a função `build_response`.
     2. No caso de requisição com o método `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
 
 Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.
