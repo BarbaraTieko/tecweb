@@ -18,3 +18,7 @@ Bem-vind@ ao curso de Tecnologias Web 2023/2
 **Atendimento:**
 
 - QUI 09:30 - 11:00
+
+**Algumas Datas**
+
+ - 21/08: Entrega do [ELI5](entregas/01-ELI5.md)
