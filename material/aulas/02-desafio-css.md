@@ -2,7 +2,7 @@
 
 ## Desafio CSS
 
-**Data de entrega: 17/02**
+**Data de entrega: 28/08**
 
 Na aula passada nós desenvolvemos a primeira versão do nosso primeiro site, o Get-it. Na aula de hoje nós vamos nos focar no estilo da página para relembrar e aprender alguns conceitos de CSS.
 
@@ -24,7 +24,7 @@ O gif abaixo mostra a página sendo recarregada manualmente diversas vezes. **AT
 
 Esta atividade deve ser realizada em duplas ou trios.
 
-Atualize o cabeçalho do arquivo README.md com os dados do seu trabalho.
+Baixe os arquivos base neste link [Download](02-desafio-css/desafio-css.zip)
 
 Você pode modificar apenas o conteúdo do arquivo **getit.css**.
 
@@ -32,11 +32,13 @@ Você pode modificar apenas o conteúdo do arquivo **getit.css**.
 
 ## Entrega
 
+A entrega deve ser feita via github. O grupo deve criar um repositório contendo os arquivos necessários.
+
 A sua página deve **obrigatoriamente** estar disponível no GitHub pages seguindo [estes passos](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 Será considerado o último commit enviado antes do prazo.
 
-Pra esta atividade vamos utilizar o github classroom que pode ser acessado em: https://classroom.github.com/a/Sgdr1mQx
+Preencha o formulário a seguir, indicando os nomes dos integrantes do grupo e o endereço do repositório Github: https://forms.gle/X9sdv4kjuBk66wxA9
 
 Pronto! Depois de seguir esses passos vocês devem ter acesso ao repositório da atividade.
 
