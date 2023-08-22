@@ -25,6 +25,16 @@ for linha in cursor:
 !!! example "Exercício 04"
     Implemente o método `#!python get_all(self)` na classe `#!python Database`. Ele não recebe nenhum argumento e devolve uma lista de objetos do tipo `Note`, com os valores obtidos do banco de dados.
 
+    Para esta tarefa, reutilize o código a seguir e faça as modificações necessárias para lidar com os dados das anotações.
+
+    ```python
+    cursor = conn.execute("SELECT identificador, nome_da_rua, cpf FROM dados_pessoais")
+    for linha in cursor:
+    identificador = linha[0]
+    nome_da_rua = linha[1]
+    cpf = linha[2]
+    ```
+
     O teste `#!python test_select_rows` do `test_database.py` verifica se esse método está correto.
 
 Para testar a nova funcionalidade no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py`:

@@ -6,19 +6,23 @@ De modo geral, sistemas de bancos de dados são programas que ficam executando i
 conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 ```
 
-Para mais detalhes, acesse: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
+Para mais detalhes, acesse :point_right: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
 
+!!! info "Repositório Github"
+    Para esta atividade, continue trabalhando no repositório Github utilizado no handout 01.
 
 !!! example "Exercício 01"
     Crie um arquivo chamado `database.py`. Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect` mostrada acima) em um atributo chamado `#!python conn`.
 
-    **Atenção:** Note que o arquivo do banco de dados possui a extensão `.db`.
+    **Atenção:** Note que o arquivo do banco de dados deve possui a extensão `.db` (exemplo: NOME_DO_ARQUIVO_DO_BANCO + '.db').
 
     Lembre-se de importar o pacote: `#!python import sqlite3`.
 
-    Para testar o seu código, faça o download [deste arquivo](test_database.py) e salve na mesma pasta do arquivo `database.py`. Basta executar `python test_database.py` no terminal para rodar todos os testes. Para este exercício o teste `test_connect_on_init` deve passar com sucesso. Se ao executar os teste você **não** se deparar com nenhuma mensagem com o texto `FAIL: test_connect_on_init` então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)
+    Para testar o seu código, faça o download <a href="../test_database.py" download="test_database.py">deste arquivo :arrow_down:</a> e salve na mesma pasta do arquivo `database.py`. Basta executar `python test_database.py` no terminal para rodar todos os testes. Para este exercício o teste `test_connect_on_init` deve passar com sucesso. Se ao executar os teste você **não** se deparar com nenhuma mensagem com o texto `FAIL: test_connect_on_init` então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)
 
-    Se não se lembrar a sintaxe de classes em Python, procure no Google. Se não conseguir entender, chame os professores.
+    Se não se lembrar a sintaxe de classes em Python, procure no Google. Ou veja este exemplo :eye:: https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables
+
+    Se não conseguir entender, chame os professores.
 
 ## Criando a tabela
 
@@ -59,7 +63,20 @@ CREATE TABLE IF NOT EXISTS dados_pessoais ( nome_da_rua TEXT NOT NULL,
 Ok, já sei qual é o comando para criar uma tabela, mas como eu o envio para o banco de dados? Agora é a hora de utilizarmos a conexão que criamos no exercício anterior. O objeto armazenado no atributo `#!python conn` possui um método chamado `#!python execute`, que recebe uma string contendo um comando SQL e envia para o banco de dados.
 
 !!! example "Exercício 02"
-    Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. A tabela deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
+    Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. 
+    
+    Altere o exemplo abaixo, para criar uma tabela que deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
+
+    ```sql
+    CREATE TABLE IF NOT EXISTS dados_pessoais ( nome_da_rua TEXT NOT NULL,
+                                                cpf TEXT NOT NULL UNIQUE,
+                                                identificador INTEGER PRIMARY KEY);
+    ```
+
+   
+    Normalmente, utilizamos o comando acima no sistema de banco de dados. Porém, neste exercício queremos utilizar o Python para enviar o comando para o banco de dados. 
+
+    Veja um exemplo de como fazer isso: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
 
     Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, o teste `test_create_table_on_init` deve passar sem errors.
 
