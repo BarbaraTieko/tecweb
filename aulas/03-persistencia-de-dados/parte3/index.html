@@ -19,7 +19,7 @@
     
     
       
-        <title>Parte 3: Inserindo dados na tabela - Tecnologias Web - Insper 2023/2</title>
+        <title>Handout Parte 3: Inserindo dados na tabela - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Parte 3: Inserindo dados na tabela
+              Handout Parte 3: Inserindo dados na tabela
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -441,6 +443,131 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      03 - Persistência de dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="03 - Persistência de dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        03 - Persistência de dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+      Handout Parte 1: Instalando o SQLite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+      Handout Parte 2: Criando a tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link md-nav__link--active">
+      Handout Parte 3: Inserindo dados na tabela
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+      Handout Parte 4: Consultando e selecionando dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+      Handout Parte 5: Atualizando os dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+      Handout Parte 6: Apagando dados
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -540,8 +667,34 @@
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">dados_pessoais</span> <span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
 </code></pre></div>
 
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
+<div class="admonition example">
+<p class="admonition-title">Exercício 03</p>
+<p>Adicione a definição da classe <code class="highlight"><span class="n">Note</span></code> no arquivo <code>database.py</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</code></pre></div>
+<strong>Observação:</strong> o código acima só é válido a partir do Python 3.7. Se você está usando uma versão mais antiga do Python, substitua esse código pelo código abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+</code></pre></div>
+
+<p>Crie um método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code> na classe <code class="highlight"><span class="n">Database</span></code>, que recebe um objeto do tipo <code class="highlight"><span class="n">Note</span></code> e insere seus dados no banco de dados. </p>
+<p>Para inserir os dados no banco de dados, será necessário construir um comando SQL similar ao comando a seguir:</p>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">dados_pessoais</span> <span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span> <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Note que os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo <code>Note</code> recebido como argumento.</p>
+<p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. O teste <code>test_add_rows</code> deve passar com sucesso.</p>
+<div class="admonition info">
+<p class="admonition-title">Curiosidade</p>
 <p>Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.</p>
 </div>
 <p>Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método <code>execute</code> do atributo <code>conn</code>.</p>
@@ -552,28 +705,8 @@
 <div class="admonition danger">
 <p class="admonition-title">Importante 2</p>
 <p>Depois de chamar o <code>execute</code> com o comando de inserção você precisa chamar o método <code>commit()</code> do atributo <code>conn</code> para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o <code>commit</code>.</p>
+<p>Para mais detalhes, veja a documentação: <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial">https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial</a></p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Exercício 03</p>
-<p>Crie um método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code> na classe <code class="highlight"><span class="n">Database</span></code>, que recebe um objeto do tipo <code class="highlight"><span class="n">Note</span></code> e insere seus dados no banco de dados. Adicione a definição da classe <code class="highlight"><span class="n">Note</span></code> no arquivo <code>database.py</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
-
-<span class="nd">@dataclass</span>
-<span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
-    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
-    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-</code></pre></div>
-
-<p><strong>Observação:</strong> o código acima só é válido a partir do Python 3.7. Se você está usando uma versão mais antiga do Python, substitua esse código pelo código abaixo:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
-</code></pre></div>
-
-<p>Depois de implementar o método <code class="highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. O teste <code>test_add_rows</code> deve passar com sucesso.</p>
 </div>
 <p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="highlight"><span class="n">Note</span></code> nesse arquivo):</p>
 <div class="highlight"><pre><span></span><code><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
@@ -619,6 +752,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../parte2/" title="Handout Parte 2: Criando a tabela" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Handout Parte 2: Criando a tabela
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Handout Parte 4: Consultando e selecionando dados
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

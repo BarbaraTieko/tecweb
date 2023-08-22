@@ -19,7 +19,7 @@
     
     
       
-        <title>Parte 4: Consultando e selecionando dados - Tecnologias Web - Insper 2023/2</title>
+        <title>Handout Parte 4: Consultando e selecionando dados - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Parte 4: Consultando e selecionando dados
+              Handout Parte 4: Consultando e selecionando dados
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -441,6 +443,131 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+    
+    <label class="md-nav__link" for="nav-3-3">
+      03 - Persistência de dados
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="03 - Persistência de dados" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        03 - Persistência de dados
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Handout" class="md-nav__link">
+      Handout
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+      Handout Parte 1: Instalando o SQLite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+      Handout Parte 2: Criando a tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+      Handout Parte 3: Inserindo dados na tabela
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link md-nav__link--active">
+      Handout Parte 4: Consultando e selecionando dados
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
+      Handout Parte 5: Atualizando os dados
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+      Handout Parte 6: Apagando dados
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -550,6 +677,14 @@
 <div class="admonition example">
 <p class="admonition-title">Exercício 04</p>
 <p>Implemente o método <code class="highlight"><span class="n">get_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code> na classe <code class="highlight"><span class="n">Database</span></code>. Ele não recebe nenhum argumento e devolve uma lista de objetos do tipo <code>Note</code>, com os valores obtidos do banco de dados.</p>
+<p>Para esta tarefa, reutilize o código a seguir e faça as modificações necessárias para lidar com os dados das anotações.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT identificador, nome_da_rua, cpf FROM dados_pessoais&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
+<span class="n">identificador</span> <span class="o">=</span> <span class="n">linha</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">nome_da_rua</span> <span class="o">=</span> <span class="n">linha</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">cpf</span> <span class="o">=</span> <span class="n">linha</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre></div>
+
 <p>O teste <code class="highlight"><span class="n">test_select_rows</span></code> do <code>test_database.py</code> verifica se esse método está correto.</p>
 </div>
 <p>Para testar a nova funcionalidade no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code>:</p>
@@ -573,6 +708,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Handout Parte 3: Inserindo dados na tabela
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../parte5/" title="Handout Parte 5: Atualizando os dados" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Handout Parte 5: Atualizando os dados
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
