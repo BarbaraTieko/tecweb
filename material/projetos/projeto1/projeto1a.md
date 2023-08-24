@@ -2,13 +2,11 @@
 
 **Trabalho individual**
 
-~~**Prazo: 28/02/2023**~~
+**Prazo: 02/09/2023**
 
-**Prazo: 04/03/2023**
+**Entrega via GitHub**
 
-**Entrega via GitHub Classroom**
-
-Acesse o link [Github classroom](https://classroom.github.com/a/2KNGPcPu).
+Indique o repositório Github no Blackboard.
 
 Durante o primeiro handout nós desenvolvemos o [Get-it](../../aulas/01-getit.md) com as funcionalidades de listagem e criação de anotações. No [Desafio CSS](../../aulas/02-desafio-css.md) você implementou um possível estilo para a página. No segundo handout, você aprendeu a armazenar e recuperar dados de um banco de dados SQLite. Agora, no Projeto 1A, o seu objetivo é aplicar o que aprendeu nos handouts e no desafio para adicionar as seguintes funcionalidades ao sistema:
 
