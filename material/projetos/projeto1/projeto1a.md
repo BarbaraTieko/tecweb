@@ -46,7 +46,7 @@ As 4 tarefas a serem realizadas são:
     - Adicione um botão na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.
     - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
 
-    Você precisará de um método novo no arquivo `database.py` que dado um `id` de uma anotação retorna esta anotação no formato de um objeto do tipo `Note`. Caso precise, você pode encontrar o método feito em: [`database.py` (clique aqui para baixar)](database.py)
+    Você precisará de um método novo no arquivo `database.py` que dado um `id` de uma anotação retorna esta anotação no formato de um objeto do tipo `Note`. 
 
     - Esta página deve apresentar dois botões: `Salvar` e `Cancelar`.
         - Ao clicar no botão de `Cancelar` o usuário deve ser direcionado para a página principal.
