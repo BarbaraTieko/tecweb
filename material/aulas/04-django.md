@@ -1,8 +1,32 @@
 # Django
 
-Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Django. Para isso, vamos refazer o backend da parte A do projeto.
+!!! danger "Repositório Github"
+    Acesso o link [Github Classroom](https://classroom.github.com/a/ix0TCuMq){target=_blank} para criar o repositório do **Projeto 1B**.
 
-Caso queira, acesse o [Github Classroom](https://classroom.github.com/a/0tdS0o7R) para criar o repositório do **Projeto 1B**.
+    Efetue o handout neste repositório e faça commits contínuos.
+
+    Quando for criar o repositório, adicione um arquivo chamado `.gitignore` com o seguinte conteúdo:
+
+    ```
+    env/
+    *.egg-info
+    *.pot
+    *.py[co]
+    .tox/
+    __pycache__
+    MANIFEST
+    dist/
+    docs/_build/
+    docs/locale/
+    node_modules/
+    tests/coverage_html/
+    tests/.coverage
+    build/
+    tests/report/
+    ```
+
+
+Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando Django. Para isso, vamos refazer o backend da parte A do projeto.
 
 !!! danger "Importante"
     O Django possui **muitas** funcionalidades. O nosso objetivo neste handout é oferecer apenas uma introdução bastante breve. Você provavelmente vai precisar ler outros tutoriais, a documentação do Django e fazer pesquisas no Google para conseguir fazer o projeto.
@@ -13,12 +37,12 @@ Caso queira, acesse o [Github Classroom](https://classroom.github.com/a/0tdS0o7R
     Em Tecnologias Web nós utilizaremos o Django 4.X. É importante levar isso em conta quando for procurar respostas no Google. O [Django 4.0](https://docs.djangoproject.com/en/4.0/releases/4.0/) foi lançado no final de 2021, então será comum você encontrar respostas desatualizadas. **Sempre** que encontrar alguma função/método que não conhece, consulte a documentação da biblioteca para verificar se essa é a forma mais atualizada de se resolver o problema (essa dica vale para qualquer biblioteca/framework que for utilizar).
 
 !!! info "Referência"
-    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/4.1/intro/tutorial01/). A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
+    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/4.2/intro/tutorial01/). A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
 
 ## Instalando o Django
 
 !!! example "Exercício 01"
-    Crie uma pasta para a nova versão do projeto e, dentro dela, [crie um ambiente virtual](../auxiliar/venv.md) (`venv`) chamado `env` para o seu projeto. **Lembre-se de ativar o ambiente antes de seguir para o próximo exercício.**
+    Dentro da pasta do repositório Github do Projeto 1B, [crie um ambiente virtual](../auxiliar/venv.md) (`venv`) chamado `env` para o seu projeto. **Lembre-se de ativar o ambiente antes de seguir para o próximo exercício.**
 
 !!! example "Exercício 02"
     Agora sim, instale o Django:
