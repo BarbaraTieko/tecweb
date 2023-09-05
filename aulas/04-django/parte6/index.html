@@ -921,7 +921,7 @@
                 <h1 id="parte-6-trabalhando-com-formularios-e-o-metodo-post">Parte 6: Trabalhando com formulários e o método POST<a class="headerlink" href="#parte-6-trabalhando-com-formularios-e-o-metodo-post" title="Permanent link">&para;</a></h1>
 <p>Faça um teste na sua página. Preencha os dados no formulário e clique no botão para submetê-lo. Uma página parecida com essa deve ter aparecido:</p>
 <p><img alt="" src="../img/csrf.png" /></p>
-<p>O <a href="https://docs.djangoproject.com/en/4.0/ref/csrf/"><em>Cross Site Request Forgery</em></a> é um tipo de ataque no qual um site malicioso utiliza um link/form/javascript para submeter dados utilizando um usuário logado no seu sistema. Para se proteger desse tipo de ataque, todos os formulários do seu sistema devem enviar, através de um <a href="https://www.w3schools.com/tags/att_input_type_hidden.asp">campo escondido</a>, um token gerado pelo servidor. Assim, o servidor saberá que a requisição foi feita por um cliente confiável.</p>
+<p>O <a href="https://docs.djangoproject.com/en/4.2/ref/csrf/"><em>Cross Site Request Forgery</em></a> é um tipo de ataque no qual um site malicioso utiliza um link/form/javascript para submeter dados utilizando um usuário logado no seu sistema. Para se proteger desse tipo de ataque, todos os formulários do seu sistema devem enviar, através de um <a href="https://www.w3schools.com/tags/att_input_type_hidden.asp">campo escondido</a>, um token gerado pelo servidor. Assim, o servidor saberá que a requisição foi feita por um cliente confiável.</p>
 <p>Isso pode soar complexo, mas basta inserir uma template tag no seu formulário. O Django cuida do resto.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercício</p>
@@ -939,7 +939,7 @@
 <p>Se você testar novamente, o erro não deve ocorrer mais.</p>
 </div>
 <h2 id="recebendo-requisicoes-post">Recebendo requisições POST<a class="headerlink" href="#recebendo-requisicoes-post" title="Permanent link">&para;</a></h2>
-<p>O próximo passo é diferenciar o tipo da requisição recebida. O objeto <code class="highlight"><span class="n">request</span></code> recebido como argumento nas suas views possui um <a href="https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpRequest.method">atributo <code>method</code></a>. Esse atributo é uma string contendo o nome do método em letras maiúsculas (<code class="highlight"><span class="s1">&#39;GET&#39;</span></code> ou <code class="highlight"><span class="s1">&#39;POST&#39;</span></code>). Além disso, caso seja uma requisição do tipo POST, haverá também um <a href="https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpRequest.POST">atributo <code>POST</code></a> com um dicionário (na verdade um <em>dictionary-like</em>) cujas chaves são os nomes (atributo <code class="highlight">name</code>) dos inputs e os valores são os valores contidos no input.</p>
+<p>O próximo passo é diferenciar o tipo da requisição recebida. O objeto <code class="highlight"><span class="n">request</span></code> recebido como argumento nas suas views possui um <a href="https://docs.djangoproject.com/en/4.2/ref/request-response/#django.http.HttpRequest.method">atributo <code>method</code></a>. Esse atributo é uma string contendo o nome do método em letras maiúsculas (<code class="highlight"><span class="s1">&#39;GET&#39;</span></code> ou <code class="highlight"><span class="s1">&#39;POST&#39;</span></code>). Além disso, caso seja uma requisição do tipo POST, haverá também um <a href="https://docs.djangoproject.com/en/4.2/ref/request-response/#django.http.HttpRequest.POST">atributo <code>POST</code></a> com um dicionário (na verdade um <em>dictionary-like</em>) cujas chaves são os nomes (atributo <code class="highlight">name</code>) dos inputs e os valores são os valores contidos no input.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercício</p>
 <p>Modifique o arquivo <code>notes/views.py</code> com o seguinte conteúdo:</p>
@@ -958,7 +958,7 @@
         <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;notes/index.html&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;notes&#39;</span><span class="p">:</span> <span class="n">all_notes</span><span class="p">})</span>
 </code></pre></div>
 
-<p>Como você pode ver no comentário, você tem a tarefa de criar um novo <code>Note</code> no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: <a href="https://docs.djangoproject.com/en/4.0/topics/db/queries/">https://docs.djangoproject.com/en/4.0/topics/db/queries/</a></p>
+<p>Como você pode ver no comentário, você tem a tarefa de criar um novo <code>Note</code> no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: <a href="https://docs.djangoproject.com/en/4.2/topics/db/queries/">https://docs.djangoproject.com/en/4.2/topics/db/queries/</a></p>
 </div>
 <p>Parabéns! Você terminou o handout de Django!</p>
                 
