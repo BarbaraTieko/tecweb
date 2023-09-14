@@ -93,3 +93,12 @@ O código `#!python escritor = Escritor.objects.get(id=id)` faz uma busca no ban
 
 O código `livro = Livro(titulo=titulo_aleatorio, escritor=escritor)` cria um objeto do tipo `Livro`. Em seguida, o novo livro é salvo no banco com o comando `#!python livro.save()`
 
+O interessante é que a partir do objeto do tipo `Livro` é possível acessar o objeto do `Escritor`.
+
+Veja um exemplo disso no arquivo `templates/livro/livros.html` 
+
+```html 
+<td>{{ livro.escritor.nome }}</td>
+```
+
+
