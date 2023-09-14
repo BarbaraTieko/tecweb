@@ -1028,7 +1028,6 @@
   <img src="../many-to-one/foreign_key.png" />
 </figure>
 
-<hr />
 <h2 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h2>
 <p>Para te auxiliar na tarefa de implementar a funcionalidade das <code>Tags</code> no Projeto 1B, vamos apresentar um exemplo em Django. </p>
 <p>Neste exemplo, vamos utilizar dois modelos: <code>Escritor</code> e <code>Livro</code>.
@@ -1037,7 +1036,6 @@ Assim, podemos utilizar a relação de banco de dados um para muitos, onde um es
 <p class="admonition-title">Outro Exemplo</p>
 <p>A documentação oficial do Django apresenta um exemplo que pode ser acessa em: <a href="https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/">Documentação Oficial Django - Many-to-one</a></p>
 </div>
-<hr />
 <p>Faça o download do projeto no repositório: <a href="https://github.com/BarbaraTieko/2023.2-tecweb-django-many-to-one-example">https://github.com/BarbaraTieko/2023.2-tecweb-django-many-to-one-example</a></p>
 <ul>
 <li>Crie um ambiente virtual</li>
@@ -1069,7 +1067,6 @@ Este é um bom exemplo para auxiliar o desenvolvimento da etapa de criação de 
 </ul>
 </li>
 </ul>
-<hr />
 <p>No arquivo <code>models.py</code>, a classe <code>Livro</code> possui um campo do tipo <code>ForeignKey</code> para armazenar o <code>id</code> do escrito.</p>
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Escritor</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">nome</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
