@@ -26,7 +26,6 @@ A tabela `Note` ganha uma coluna nova para armazenar o `id` da `Tag`. Essa colun
   <img src="../many-to-one/foreign_key.png" />
 </figure>
 
-___
 
 ## Exemplo
 
@@ -38,7 +37,6 @@ Assim, podemos utilizar a relação de banco de dados um para muitos, onde um es
 !!! tip "Outro Exemplo"
     A documentação oficial do Django apresenta um exemplo que pode ser acessa em: [Documentação Oficial Django - Many-to-one](https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/)
 
-___
 
 Faça o download do projeto no repositório: https://github.com/BarbaraTieko/2023.2-tecweb-django-many-to-one-example
 
@@ -60,7 +58,6 @@ Faça o download do projeto no repositório: https://github.com/BarbaraTieko/202
     - Este link chamará a função `views.exemplo`. Veja o que a função está fazendo.
     Este é um bom exemplo para auxiliar o desenvolvimento da etapa de criação de Tags
 
-___
 
 No arquivo `models.py`, a classe `Livro` possui um campo do tipo `ForeignKey` para armazenar o `id` do escrito.
 
