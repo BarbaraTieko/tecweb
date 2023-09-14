@@ -1,3 +1,5 @@
+!!! danger "IMPORTANTE"
+    É importante que você crie uma branch nova no repositório do projeto, pois ao fazer o commit da solução a versão entregue no projeto se matenha inalterada.
 
 # Questão 1
 
