@@ -37,8 +37,8 @@ Caso queira, veja o seguinte material para auxiliar o desenvolvimento desta etap
 As tarefas a serem realizadas são:
 
 1. Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações aplicando o mesmo estilo (css);
-2. Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite;
-3. Implementar o sistema de tags para as anotações;
+2. Implementar o sistema de tags para as anotações;
+3. Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite;
 4. Publicar a página.
 
 
@@ -46,11 +46,11 @@ A rubrica a seguir será utilizada na correção do Projeto 1B:
 
 | Conceito | Descrição |
 | :------: | :-------- |
-|    A+    | Todas tarefas completas e superou as expectativas (a combinar) |
-|    A     | Todas as 4 tarefas completas |
-|    B+    | Tarefas 1 e **três** das outras tarefas completas (tarefas 2, 3 ou 4) |
-|    B     | Tarefas 1 e **duas** das outras tarefas completas (tarefas 2, 3 ou 4)|
-|    C+    | Tarefas 1 e **uma** das outras tarefas completas (tarefas 2, 3 ou 4)|
+|    A+    | Tarefas 1, 2, 3 e 4 completas e superou as expectativas (a combinar) |
+|    A     | Tarefas 1, 2, 3 e 4 completas |
+|    B+    | Tarefas 1, 2 e 3 completas |
+|    B     | Tarefas 1 e 2 completas |
+|    C+    | Tarefas 1 e tarefa 2 parcial|
 |    C     | Tarefa 1 completa |
 |    D     | O código funciona, mas a tarefa 1 não está completa |
 |    I     | Não entregou ou o código não executa |
