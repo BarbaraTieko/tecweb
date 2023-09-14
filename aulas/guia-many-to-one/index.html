@@ -9,23 +9,23 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/03-persistencia-de-dados/parte5/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/guia-many-to-one/">
       
       
         <meta name="author" content="Andrew Kurauchi">
       
-      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.2">
     
     
       
-        <title>Handout Parte 5: Atualizando os dados - Tecnologias Web - Insper 2023/2</title>
+        <title>Guia Many-to-one - Tecnologias Web - Insper 2023/2</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.25b81cc6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.25b81cc6.min.css">
       
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.80a78273.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.80a78273.min.css">
       
       
         
@@ -43,9 +43,9 @@
     
     
     
-      <link rel="stylesheet" href="../../../css/printing.css">
+      <link rel="stylesheet" href="../../css/printing.css">
     
-      <link rel="stylesheet" href="../../../css/tecweb.css">
+      <link rel="stylesheet" href="../../css/tecweb.css">
     
     
       
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parte-5-atualizando-os-dados" class="md-skip">
+        <a href="#relacao-many-to-one" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Handout Parte 5: Atualizando os dados
+              Guia Many-to-one
             
           </span>
         </div>
@@ -242,7 +242,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -254,7 +254,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../notas/" title="Cálculo da média" class="md-nav__link">
+    <a href="../../notas/" title="Cálculo da média" class="md-nav__link">
       Cálculo da média
     </a>
   </li>
@@ -264,12 +264,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -318,7 +316,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/Aula01.pdf" title="Slides" class="md-nav__link">
+    <a href="../01-getit/Aula01.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -330,7 +328,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/" title="Handout" class="md-nav__link">
+    <a href="../01-getit/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -342,7 +340,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/parte1/" title="Handout Parte 1: Criando o servidor" class="md-nav__link">
+    <a href="../01-getit/parte1/" title="Handout Parte 1: Criando o servidor" class="md-nav__link">
       Handout Parte 1: Criando o servidor
     </a>
   </li>
@@ -354,7 +352,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/parte2/" title="Handout Parte 2: Respondendo com páginas HTML" class="md-nav__link">
+    <a href="../01-getit/parte2/" title="Handout Parte 2: Respondendo com páginas HTML" class="md-nav__link">
       Handout Parte 2: Respondendo com páginas HTML
     </a>
   </li>
@@ -366,7 +364,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/parte3/" title="Handout Parte 3: Separando algumas responsabilidades" class="md-nav__link">
+    <a href="../01-getit/parte3/" title="Handout Parte 3: Separando algumas responsabilidades" class="md-nav__link">
       Handout Parte 3: Separando algumas responsabilidades
     </a>
   </li>
@@ -378,7 +376,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01-getit/parte4/" title="Handout Parte 4: Fazendo um formulário de criação de anotação" class="md-nav__link">
+    <a href="../01-getit/parte4/" title="Handout Parte 4: Fazendo um formulário de criação de anotação" class="md-nav__link">
       Handout Parte 4: Fazendo um formulário de criação de anotação
     </a>
   </li>
@@ -420,7 +418,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02-desafio-css/" title="Enunciado" class="md-nav__link">
+    <a href="../02-desafio-css/" title="Enunciado" class="md-nav__link">
       Enunciado
     </a>
   </li>
@@ -432,7 +430,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02-desafio-css/Aula02.pdf" title="Slides" class="md-nav__link">
+    <a href="../02-desafio-css/Aula02.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -447,12 +445,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
     
     <label class="md-nav__link" for="nav-3-3">
       03 - Persistência de dados
@@ -476,7 +472,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../" title="Handout" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -488,7 +484,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte1/" title="Handout Parte 1: Instalando o SQLite" class="md-nav__link">
       Handout Parte 1: Instalando o SQLite
     </a>
   </li>
@@ -500,7 +496,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte2/" title="Handout Parte 2: Criando a tabela" class="md-nav__link">
       Handout Parte 2: Criando a tabela
     </a>
   </li>
@@ -512,7 +508,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte3/" title="Handout Parte 3: Inserindo dados na tabela" class="md-nav__link">
       Handout Parte 3: Inserindo dados na tabela
     </a>
   </li>
@@ -524,7 +520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-nav__link">
       Handout Parte 4: Consultando e selecionando dados
     </a>
   </li>
@@ -534,20 +530,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Handout Parte 5: Atualizando os dados" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../03-persistencia-de-dados/parte5/" title="Handout Parte 5: Atualizando os dados" class="md-nav__link">
       Handout Parte 5: Atualizando os dados
     </a>
-    
   </li>
 
         
@@ -557,7 +544,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
+    <a href="../03-persistencia-de-dados/parte6/" title="Handout Parte 6: Apagando dados" class="md-nav__link">
       Handout Parte 6: Apagando dados
     </a>
   </li>
@@ -599,7 +586,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/Aula07.pdf" title="Slides" class="md-nav__link">
+    <a href="../04-django/Aula07.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -611,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/" title="Handout" class="md-nav__link">
+    <a href="../04-django/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -623,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
+    <a href="../04-django/parte1/" title="Handout Parte 1: Iniciando o projeto" class="md-nav__link">
       Handout Parte 1: Iniciando o projeto
     </a>
   </li>
@@ -635,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
+    <a href="../04-django/parte2/" title="Handout Parte 2: Criando nosso primeiro app" class="md-nav__link">
       Handout Parte 2: Criando nosso primeiro app
     </a>
   </li>
@@ -647,7 +634,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
+    <a href="../04-django/parte3/" title="Handout Parte 3: Integrando com o banco de dados" class="md-nav__link">
       Handout Parte 3: Integrando com o banco de dados
     </a>
   </li>
@@ -659,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
+    <a href="../04-django/parte4/" title="Handout Parte 4: O Django Admin" class="md-nav__link">
       Handout Parte 4: O Django Admin
     </a>
   </li>
@@ -671,7 +658,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
+    <a href="../04-django/parte5/" title="Handout Parte 5: Usando templates" class="md-nav__link">
       Handout Parte 5: Usando templates
     </a>
   </li>
@@ -683,7 +670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
+    <a href="../04-django/parte6/" title="Handout Parte 6: Trabalhando com formulários e o método POST" class="md-nav__link">
       Handout Parte 6: Trabalhando com formulários e o método POST
     </a>
   </li>
@@ -725,7 +712,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
+    <a href="../05-bd/Aula09.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -737,7 +724,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../05-bd/" title="Handout" class="md-nav__link">
+    <a href="../05-bd/" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -757,10 +744,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Material Auxiliar
@@ -784,7 +773,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-nav__link">
+    <a href="../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-nav__link">
       Usando Python com ambientes virtuais
     </a>
   </li>
@@ -806,11 +795,53 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../guia-many-to-one/" title="Guia Many-to-one" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Guia Many-to-one
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Guia Many-to-one" class="md-nav__link md-nav__link--active">
       Guia Many-to-one
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -850,7 +881,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../entregas/01-ELI5/" title="01 - ELI5" class="md-nav__link">
+    <a href="../../entregas/01-ELI5/" title="01 - ELI5" class="md-nav__link">
       01 - ELI5
     </a>
   </li>
@@ -862,7 +893,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
+    <a href="../02-desafio-css/" title="02 - Desafio CSS" class="md-nav__link">
       02 - Desafio CSS
     </a>
   </li>
@@ -904,7 +935,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projetos/projeto1/projeto1a/" title="Projeto 1A" class="md-nav__link">
+    <a href="../../projetos/projeto1/projeto1a/" title="Projeto 1A" class="md-nav__link">
       Projeto 1A
     </a>
   </li>
@@ -916,7 +947,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projetos/projeto1/projeto1b/" title="Projeto 1B" class="md-nav__link">
+    <a href="../../projetos/projeto1/projeto1b/" title="Projeto 1B" class="md-nav__link">
       Projeto 1B
     </a>
   </li>
@@ -944,6 +975,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    Exemplo
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -958,34 +1006,97 @@
                   
                 
                 
-                <h1 id="parte-5-atualizando-os-dados">Parte 5: Atualizando os dados<a class="headerlink" href="#parte-5-atualizando-os-dados" title="Permanent link">&para;</a></h1>
-<p>Você também pode atualizar os dados armazenados no banco com o comando <code class="highlight"><span class="k">UPDATE</span></code>. Para a atualização você precisa definir:</p>
-<ol>
-<li>Quais colunas serão modificadas;</li>
-<li>Quais serão os novos valores armazenados nessas colunas;</li>
-<li>Quais linhas você quer modificar.</li>
-</ol>
-<p>A sintaxe do comando é:</p>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">NOME_DA_TABELA</span> <span class="k">SET</span> <span class="n">NOME_DA_COLUNA</span> <span class="o">=</span> <span class="n">NOVO_VALOR_DA_COLUNA</span> <span class="k">WHERE</span> <span class="n">CONDICAO</span>
-</code></pre></div>
+                <h1 id="relacao-many-to-one">Relação Many-to-One<a class="headerlink" href="#relacao-many-to-one" title="Permanent link">&para;</a></h1>
+<p>Para implementar o sistema de tags para as anotações será necessário utilizar a relação de Um para muitos do banco de dados.</p>
+<p>Atualmente, o projeto possui apenas uma tabela para armazenar as informações das anotações.</p>
+<figure style="width:60%;">
+  <img src="../many-to-one/note_table.png" />
+</figure>
 
-<p>Por exemplo, o código a seguir modifica o valor da coluna <code>cpf</code> para <code>555.555.555-55</code> da linha cujo valor da coluna <code>identificador</code> é igual a 2:</p>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">dados_pessoais</span> <span class="k">SET</span> <span class="n">cpf</span> <span class="o">=</span> <span class="s1">&#39;555.555.555-55&#39;</span> <span class="k">WHERE</span> <span class="n">identificador</span> <span class="o">=</span> <span class="mi">2</span>
-</code></pre></div>
-
-<p>A condição do <code class="highlight"><span class="k">WHERE</span></code> pode ser bastante complexa. Você pode, por exemplo, selecionar todas as linhas cujo <code>cpf</code> começa com a string <code>00</code>, por exemplo. Nesse caso, todas as linhas que se encaixarem nessa condição serão atualizadas.</p>
-<div class="admonition example">
-<p class="admonition-title">Exercício 05</p>
-<p>Implemente o método <code class="highlight"><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">)</span></code>, que recebe um valor do tipo <code class="highlight"><span class="n">Note</span></code> (assuma que todos os atributos, inclusive o <code class="highlight"><span class="nb">id</span></code>, estão preenchidos) e atualiza essa entrada no banco de dados. </p>
-<p>Altere o comando abaixo para atualizar o <code>title</code> e <code>content</code> da anotação onde o <code>id</code> presente no objeto recebido como argumento.</p>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span> <span class="n">dados_pessoais</span> <span class="k">SET</span> <span class="n">cpf</span> <span class="o">=</span> <span class="s1">&#39;555.555.555-55&#39;</span> <span class="k">WHERE</span> <span class="n">identificador</span> <span class="o">=</span> <span class="mi">2</span>
-</code></pre></div>
-
-<p>Novamente você terá que usar o método <code>execute</code>. Não se esqueça de chamar o método <code>commit</code>, assim como na <a href="../parte3/">inserção de dados</a>.</p>
-<p>O teste <code class="highlight"><span class="n">test_update_row</span></code> verifica se a sua implementação está correta.</p>
+<p>Agora, precisamos armazenar no banco de dados as informações referentes a Tags. Poderíamos simplemeste criar uma nova coluna a tabela chamada <code>Tag</code>. Porém, como estamos utilizando banco de dados relacionais e queremos utilizar os recursos que este tipo de banco de dados nos oferece. Queremos criar uma tabela nova para armazenar as informações da <code>Tag</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Não se preocupe</p>
+<p>Caso tudo isso pareça muito complicado. Não se preocupe. Vocês se aprofundarão no conteúdo de Banco de Dados Relacionais na Disciplina de Mega Dados.</p>
 </div>
-<p>Você pode modificar o arquivo <code>exemplo_de_uso.py</code> para atualizar alguma das entradas utilizando o seu novo método.</p>
-<p>Estamos acabando! A <a href="../parte6/">próxima parte</a> é a última!</p>
+<p>Ao criar uma tabela nova para armazenar as informações de tags, nosso banco de dados ficará da seguinte forma:</p>
+<figure>
+  <img src="../many-to-one/nota_tag_tables.png" />
+</figure>
+
+<p>A tabela <code>Note</code> ganha uma coluna nova para armazenar o <code>id</code> da <code>Tag</code>. Essa coluna chamamos de Chave Estrangeira (Foreign Key), pois a coluna armazena o <code>id</code> originário de outra tabela do banco de dados.</p>
+<figure>
+  <img src="../many-to-one/foreign_key.png" />
+</figure>
+
+<hr />
+<h2 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h2>
+<p>Para te auxiliar na tarefa de implementar a funcionalidade das <code>Tags</code> no Projeto 1B, vamos apresentar um exemplo em Django. </p>
+<p>Neste exemplo, vamos utilizar dois modelos: <code>Escritor</code> e <code>Livro</code>.
+Assim, podemos utilizar a relação de banco de dados um para muitos, onde um escritor pode estar vinculado a vários livros e um livro está vinculado a apenas um escritor.</p>
+<div class="admonition tip">
+<p class="admonition-title">Outro Exemplo</p>
+<p>A documentação oficial do Django apresenta um exemplo que pode ser acessa em: <a href="https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/">Documentação Oficial Django - Many-to-one</a></p>
+</div>
+<hr />
+<p>Faça o download do projeto no repositório: <a href="https://github.com/BarbaraTieko/2023.2-tecweb-django-many-to-one-example">https://github.com/BarbaraTieko/2023.2-tecweb-django-many-to-one-example</a></p>
+<ul>
+<li>Crie um ambiente virtual</li>
+<li>Ative o ambiente virtual</li>
+<li>Instale o Django</li>
+<li>
+<p>Rode os seguintes comandos</p>
+<div class="codehilite"><pre><span></span><code>python manage.py migrate
+python manage.py loaddata dados-iniciais.json
+</code></pre></div>
+
+
+</li>
+<li>
+<p>Em seguite, rode:</p>
+<div class="codehilite"><pre><span></span><code>python manage.py runserver
+</code></pre></div>
+
+
+</li>
+<li>
+<p>Acesse: <a href="http://localhost:8000/">http://localhost:8000/</a></p>
+</li>
+<li>
+<p>Na página, clique em: <code>Criar um livro para este escritor</code></p>
+<ul>
+<li>Este link chamará a função <code>views.exemplo</code>. Veja o que a função está fazendo.
+Este é um bom exemplo para auxiliar o desenvolvimento da etapa de criação de Tags</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>No arquivo <code>models.py</code>, a classe <code>Livro</code> possui um campo do tipo <code>ForeignKey</code> para armazenar o <code>id</code> do escrito.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Escritor</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">nome</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">biografia</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">Livro</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">titulo</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">escritor</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Escritor</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Ao criar um livro, é necessário informar um escritor já existente no banco de dados.</p>
+<p>No arquivo <code>views.py</code>, a função <code>exemplo</code> possui um exemplo para a criação de um livro no banco de dados.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">exemplo</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+
+    <span class="c1"># Buscando o escritor no banco de dados</span>
+    <span class="n">escritor</span> <span class="o">=</span> <span class="n">Escritor</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span>
+
+    <span class="c1"># Criando um livro e vinculando ao escritor</span>
+    <span class="n">titulo_aleatorio</span> <span class="o">=</span> <span class="n">get_titulo_aleatorio</span><span class="p">()</span>
+    <span class="n">livro</span> <span class="o">=</span> <span class="n">Livro</span><span class="p">(</span><span class="n">titulo</span><span class="o">=</span><span class="n">titulo_aleatorio</span><span class="p">,</span> <span class="n">escritor</span><span class="o">=</span><span class="n">escritor</span><span class="p">)</span>
+    <span class="n">livro</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<p>O código <code class="highlight"><span class="n">escritor</span> <span class="o">=</span> <span class="n">Escritor</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">)</span></code> faz uma busca no banco de dados para obter o registro do <code>escritor</code>.</p>
+<p>O código <code>livro = Livro(titulo=titulo_aleatorio, escritor=escritor)</code> cria um objeto do tipo <code>Livro</code>. Em seguida, o novo livro é salvo no banco com o comando <code class="highlight"><span class="n">livro</span><span class="o">.</span><span class="n">save</span><span class="p">()</span></code></p>
                 
               
               
@@ -1004,7 +1115,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../parte4/" title="Handout Parte 4: Consultando e selecionando dados" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../auxiliar/venv/" title="Usando Python com ambientes virtuais" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1013,19 +1124,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Handout Parte 4: Consultando e selecionando dados
+                Usando Python com ambientes virtuais
               </div>
             </div>
           </a>
         
         
-          <a href="../parte6/" title="Handout Parte 6: Apagando dados" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../entregas/01-ELI5/" title="01 - ELI5" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handout Parte 6: Apagando dados
+                01 - ELI5
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1052,15 +1163,15 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/vendor.592d4e23.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.806ca5c4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.592d4e23.min.js"></script>
+      <script src="../../assets/javascripts/bundle.806ca5c4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "../../..",
+          base: "../..",
           features: [],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.01088dc6.min.js"
+            worker: "../../assets/javascripts/worker/search.01088dc6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
@@ -1069,7 +1180,7 @@
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js"></script>
       
-        <script src="../../../markdown-enhancer.js"></script>
+        <script src="../../markdown-enhancer.js"></script>
       
     
   </body>
