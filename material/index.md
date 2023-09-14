@@ -25,3 +25,7 @@ Bem-vind@ ao curso de Tecnologias Web 2023/2
  - 28/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
  - 02/09: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
  - 30/09: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
+
+ **Lição de Casa**
+
+ - 19/09: Fazer a instalação do WSL e Docker - [Acesse](https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows)

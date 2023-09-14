@@ -28,6 +28,10 @@ Você também precisa criar mais duas páginas: uma com a lista com todas as tag
 
 Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/)
 **Obs.:** O sistema de tags deve utilizar a relação de um para muitos.
+
+Caso queira, veja o seguinte material para auxiliar o desenvolvimento desta etapa.
+[Clique aqui](../../aulas/guia-many-to-one.md)
+
 ## Rubrica
 
 As tarefas a serem realizadas são:
@@ -37,4 +41,28 @@ As tarefas a serem realizadas são:
 3. Implementar o sistema de tags para as anotações;
 4. Publicar a página.
 
-**Pendente...**
+
+A rubrica a seguir será utilizada na correção do Projeto 1B:
+
+| Conceito | Descrição |
+| :------: | :-------- |
+|    A+    | Todas tarefas completas e superou as expectativas (a combinar) |
+|    A     | Todas as 4 tarefas completas |
+|    B+    | Tarefas 1 e **três** das outras tarefas completas (tarefas 2, 3 ou 4) |
+|    B     | Tarefas 1 e **duas** das outras tarefas completas (tarefas 2, 3 ou 4)|
+|    C+    | Tarefas 1 e **uma** das outras tarefas completas (tarefas 2, 3 ou 4)|
+|    C     | Tarefa 1 completa |
+|    D     | O código funciona, mas a tarefa 1 não está completa |
+|    I     | Não entregou ou o código não executa |
+
+O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
+
+É importante que você valide com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
+
+## Sugestão de Cronograma
+
+Segue abaixo uma sugestão de cronograma para auxialiar o desenvolvimento do Projeto 1B.
+
+![Atividades](cronograma.png)
+
+![Calendário](calendario.png)
