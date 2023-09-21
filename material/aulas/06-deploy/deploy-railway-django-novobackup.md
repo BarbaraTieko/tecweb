@@ -97,12 +97,14 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 Agora vamos definir o arquivo de configuração. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
 
 ```
-release: python manage.py migrate
+release: python manage.py migrate && python manage.py collectstatic --noinput
 web: gunicorn getit.wsgi
 ```
 
 A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.
 
+!!! danger
+    Provavelmente o seu projeto Django possui outro nome, então você deve alterar a linha **web: gunicorn getit.wsgi** por **web: gunicorn NOME_DO_SEU_PROJETO.wsgi**
 
 ### Outras modificações nas configurações
 
@@ -185,6 +187,15 @@ Trocando também o link `https://web-production-a9f3.up.railway.app` pelo link d
 Para rodar o projeto localmente, mude a variável `Debug` presente no arquivo `settings.py` para `#!python True`.
 
 Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.
+
+## Deploy Frontend
+
+Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuita e fácil é o [Vercel](https://vercel.com/). O deploy no Vercel é bem intuitivo.
+
+![type:video](https://www.youtube.com/embed/3n-0kngCv4c)
+
+!!! tip "Vídeo"
+    O vídeo também pode ser acessado em: [https://youtu.be/3n-0kngCv4c](https://youtu.be/3n-0kngCv4c){:target="_blank"}
 
 ## Referências
 

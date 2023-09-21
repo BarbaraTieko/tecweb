@@ -57,6 +57,8 @@ nav:
     - "05 - Containers e Bancos de Dados":
       - "Slides": "aulas/05-bd/Aula09.pdf"
       - "Handout": aulas/05-bd.md
+    - "06 - Deploy": 
+      - "Deploy Railway": aulas/06-deploy/deploy-railway-django-novo.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
