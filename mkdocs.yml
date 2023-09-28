@@ -59,6 +59,7 @@ nav:
       - "Handout": aulas/05-bd.md
     - "06 - Deploy": 
       - "Deploy Railway": aulas/06-deploy/deploy-railway-django-novo.md
+      - "Deploy Render": aulas/06-deploy/deploy-render.md
     - "07 - Javascript":
         - "Handout": aulas/07-javascript.md
   - "Avaliação do Professor": avaliacao.md

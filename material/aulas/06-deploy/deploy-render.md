@@ -1,30 +1,28 @@
 # Deploy da Aplicação
 
-O serviço Railway é uma opção entre várias disponíveis para a hospedagem de aplicações.
+O serviço Render é uma opção entre várias disponíveis para a hospedagem de aplicações.
 
-Como utilizamos o Railway no projeto 2 é possível que você não consigo fazer o deploy da sua aplicação no serviço Railway.
-
-Desta forma, podemos utilizar um outro serviço para fazer o deploy da API Django Rest. Neste handout vamos fazer o deploy da API utilizando o serviço https://render.com
+Neste handout vamos fazer o deploy da API utilizando o serviço https://render.com
 
 Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a [Amazon AWS](https://aws.amazon.com/), [DigitalOcean](https://www.digitalocean.com/), [PythonAnywhere](https://www.pythonanywhere.com/), [Linode](https://www.linode.com/), [Heroku](https://www.heroku.com/) ...
 
-Para o projeto 1B vamos ver uma outra opções para fazer deploy. Lembrando que não há restrição para qual serviço devem utilizar. Estejam livres para utilizar o que preferirem.
-
-!!! tip "Vídeo"
-    Vídeo com algumas instruções para fazer o deploy: [https://www.youtube.com/watch?v=D58ug70Em8g](https://www.youtube.com/watch?v=D58ug70Em8g){:target="_blank"}
 
 # Crie uma conta
 
-Vamos utilizar o serviço [Railway](https://railway.app) que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.
+Vamos utilizar o serviço [Render](https://render.com) que oferece a opção gratuita para testarmos o seu serviço.
 
-Veja o [Vídeo](https://www.youtube.com/watch?v=D58ug70Em8g){:target="_blank"} até a duração de `0:50` para criar a conta.
+Desta forma, acesso [Render](https://render.com) e faça o login via Github.
+
+![render.com](./render.png)
 
 !!! danger "Importante"
     Não adicione/cadastre nenhum informação de pagamento.
 
 ### Aplicações com Postgres
 
-Para a configuração do banco de dados, siga os passos descritos no [vídeo](https://youtu.be/D58ug70Em8g?t=50){:target="_blank"} a partir do tempo `0:50` até `1:17`.
+Precisamos criar um banco de dados PostgreSQL que fique disponível fora do ambiente de desenvolvimento (por exemplo, nosso computador).
+
+Para isso veja o vídeo a seguir para verificar como criar um banco de dados no Render, acesse [vídeo](https://youtu.be/J_BAJqCQuVM){:target="_blank"}
 
 Em seguida faça as alterações abaixo em seu projeto no projeto.
 
@@ -54,9 +52,7 @@ DATABASES = {
 }
 ```
 
-No campo **default** adicione a informação que apresentada no Postgres do Railway, campo **DATABASE URL**.
-
-![DATABASE URL](postgres-railway.png)
+No campo **default** adicione a informação que apresentada no Postgres do Render, campo **External DATABASE URL**.
 
 ## Configurando o projeto
 
@@ -100,17 +96,6 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 !!! info "O arquivo `wsgi.py`"
     O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
 
-Agora vamos definir o arquivo de configuração. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
-
-```
-release: python manage.py migrate && python manage.py collectstatic --noinput
-web: gunicorn getit.wsgi
-```
-
-A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.
-
-!!! danger
-    Provavelmente o seu projeto Django possui outro nome, então você deve alterar a linha **web: gunicorn getit.wsgi** por **web: gunicorn NOME_DO_SEU_PROJETO.wsgi**
 
 ### Outras modificações nas configurações
 
@@ -118,12 +103,6 @@ Aproveite que está com o `settings.py` aberto e modifique o valor da constante 
 
 ```python
 ALLOWED_HOSTS = ['*']
-```
-
-Quando tivermos o host gerado vamos alterar o *ALLOWED_HOSTS*  para adicionar o nome do host gerado, `#!python 'localhost'` e o `#!python '127.0.0.1'`.
-
-```python
-ALLOWED_HOSTS = ['NOME_DO_HOST_GERADO', 'localhost', '127.0.0.1']
 ```
 
 ### Criando o arquivo `requirements.txt`
@@ -162,46 +141,91 @@ Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta 
 ### Faça commit
 Faça o commit das mudanças do seu projeto.
 
-### Adicionando projeto no Railway
+### Adicionando projeto no Render
 
-Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o [vídeo](https://youtu.be/D58ug70Em8g?t=252){:target="_blank"}.
+Após realizar as alterações acima, siga o vídeo:
 
-!!! dange "Importante"
-    Diferente do vídeo, você deve escolher o repositório com o nome `insper-tecnologias-web/{O NOME DO SEU REPOSITÓRIO}`
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hJuQb5L1Eq0?si=hGfNHqHmhyW9FJE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    Será algo parecido com a imagem abaixo:
-    ![Selecionado repositório](railway-escolhendo-projeto.png)
+## Start Command
+
+Comando utilizado no vídeo, na configuração do projeto no campo `Start Command`:
+
+    python manage.py migrate && python manage.py collectstatic && gunicorn getit.wsgi:application
 
 ## Passo final
+
+Após realizar a etapa acima com sucesso, realize as últimas configurações.
 
 Vá no arquivo `settings.py` e atualize a variável `ALLOWED_HOSTS`:
 
 ```python
-ALLOWED_HOSTS = ['web-production-a9f3.up.railway.app','localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['getit-projeto1b.onrender.com','localhost', '127.0.0.1']
 ```
+**Importante:** Para `ALLOWED_HOSTS` **não** deve utilizar o `https://`
 
-Substitua `web-production-a9f3.up.railway.app` pelo link da sua aplicação gerado pelo Railway.
+Substitua `getit-projeto1b.onrender.com` pelo link da sua aplicação gerado pelo Railway.
 
 Adicione na linha seguinte:
 ```python
-CSRF_TRUSTED_ORIGINS = ['https://web-production-a9f3.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://getit-projeto1b.onrender.com']
 ```
 
-Trocando também o link `https://web-production-a9f3.up.railway.app` pelo link da sua aplicação.
+Trocando também o link `https://getit-projeto1b.onrender.com` pelo link da sua aplicação.
+
+**Importante:** Para `CSRF_TRUSTED_ORIGINS` deve-se manter o `https://`
+
+Faça um novo commit.
 
 ## Rodando o projeto localmente
+
 Para rodar o projeto localmente, mude a variável `Debug` presente no arquivo `settings.py` para `#!python True`.
 
-Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.
+Além disso, mude as configurações do banco de dados para uma das configurações abaixo:
 
-## Deploy Frontend
+Configuração para utilizar SQlite3:
 
-Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuita e fácil é o [Vercel](https://vercel.com/). O deploy no Vercel é bem intuitivo.
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
 
-![type:video](https://www.youtube.com/embed/3n-0kngCv4c)
+Configuração para utilizar PostgreSQL:
 
-!!! tip "Vídeo"
-    O vídeo também pode ser acessado em: [https://youtu.be/3n-0kngCv4c](https://youtu.be/3n-0kngCv4c){:target="_blank"}
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'getit',
+        'USER': 'getituser',
+        'PASSWORD': 'getitsenha',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+Caso utilize a configuração abaixo:
+```python
+DATABASES = {
+    'default': dj_database_url.config(
+        default='',
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
+}
+```
+
+Qualquer teste que for feito localmente estará alterando o banco de dados que está no render.com
+
+Sempre que você commitar mudanças no repositório Github na branch principal, o Render fará um novo deploy.
+
+O ideal seria criar uma branch nova para implementar novas funcionalidades e fazer um merge com a branch main somente quando a funcionalidade estiver funcionando e finalizada.
+
 
 ## Referências
 
@@ -210,3 +234,5 @@ Caso o seu projeto tenha algum projeto **frontend** (React), uma opção gratuit
 - Heroku Postgres - connecting with Django: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-with-django
 - Heroku - Django migrations: https://help.heroku.com/GDQ74SU2/django-migrations
 - Heroku - Working with Django: https://devcenter.heroku.com/categories/working-with-django
+- Deploy a Django web app to a Render live server with PostgreSQL - https://youtu.be/AgTr5mw4zdI?si=DNWuSTXZEu92XHZR
+- Deploy Django com PostgreSQL - utilizando Free Trial Render https://youtu.be/hJuQb5L1Eq0

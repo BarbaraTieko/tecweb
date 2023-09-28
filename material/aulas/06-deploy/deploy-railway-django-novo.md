@@ -112,12 +112,6 @@ Aproveite que está com o `settings.py` aberto e modifique o valor da constante 
 ALLOWED_HOSTS = ['*']
 ```
 
-Quando tivermos o host gerado vamos alterar o *ALLOWED_HOSTS*  para adicionar o nome do host gerado, `#!python 'localhost'` e o `#!python '127.0.0.1'`.
-
-```python
-ALLOWED_HOSTS = ['NOME_DO_HOST_GERADO', 'localhost', '127.0.0.1']
-```
-
 ### Criando o arquivo `requirements.txt`
 
 Vamos gerar o `requirements.txt`
@@ -152,6 +146,7 @@ Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta 
     pip freeze > requirements.txt
 
 ### Faça commit
+
 Faça o commit das mudanças do seu projeto.
 
 ### Adicionando projeto no Railway
@@ -166,11 +161,14 @@ Vá no site do Railway para escolher o repositório github do projeto para fazer
 
 ## Passo final
 
+Após realizar a etapa acima com sucesso, realize as últimas configurações.
+
 Vá no arquivo `settings.py` e atualize a variável `ALLOWED_HOSTS`:
 
 ```python
 ALLOWED_HOSTS = ['web-production-a9f3.up.railway.app','localhost', '127.0.0.1']
 ```
+**Importante:** Para `ALLOWED_HOSTS` **não** deve utilizar o `https://`
 
 Substitua `web-production-a9f3.up.railway.app` pelo link da sua aplicação gerado pelo Railway.
 
@@ -181,10 +179,56 @@ CSRF_TRUSTED_ORIGINS = ['https://web-production-a9f3.up.railway.app']
 
 Trocando também o link `https://web-production-a9f3.up.railway.app` pelo link da sua aplicação.
 
+**Importante:** Para `CSRF_TRUSTED_ORIGINS` deve-se manter o `https://`
+
 ## Rodando o projeto localmente
+
 Para rodar o projeto localmente, mude a variável `Debug` presente no arquivo `settings.py` para `#!python True`.
 
+Além disso, mude as configurações do banco de dados para uma das configurações abaixo:
+
+Configuração para utilizar SQlite3:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
+
+Configuração para utilizar PostgreSQL:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'getit',
+        'USER': 'getituser',
+        'PASSWORD': 'getitsenha',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+Caso utilize a configuração abaixo:
+```python
+DATABASES = {
+    'default': dj_database_url.config(
+        default='',
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
+}
+```
+
+Qualquer teste que for feito localmente estará alterando o banco de dados que está no render.com
+
 Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.
+
+O ideal seria criar uma branch nova para implementar novas funcionalidades e fazer um merge com a branch main somente quando a funcionalidade estiver funcionando e finalizada.
 
 ## Referências
 

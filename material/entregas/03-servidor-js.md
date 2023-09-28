@@ -1,6 +1,6 @@
 # Servidor de Exercícios JS
 
-**Data de entrega: A definir**
+**Data de entrega: 19/10 (quinta-feira)**
 
 Você deve realizar os exercícios disponíveis no Servidor de desafios JS.
 
