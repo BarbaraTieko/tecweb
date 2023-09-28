@@ -1194,7 +1194,7 @@ tests/report/
 <p>O comando acima executou o Gunicorn com o arquivo de configuração <code>getit/wsgi.py</code>. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo <code>wsgi.py</code> dentro da pasta do projeto.</p>
 </div>
 <p>Agora vamos definir o arquivo de configuração. Crie um arquivo chamado <code>Procfile</code> (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o <code>.txt</code> automaticamente) na raiz do projeto com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code>release: python manage.py migrate
+<div class="highlight"><pre><span></span><code>release: python manage.py migrate &amp;&amp; python manage.py collectstatic
 web: gunicorn getit.wsgi
 </code></pre></div>
 
