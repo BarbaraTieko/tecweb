@@ -97,7 +97,7 @@ Até o momento, nós utilizamos o `python manage.py runserver` para executar o n
 Agora vamos definir o arquivo de configuração. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
 
 ```
-release: python manage.py migrate
+release: python manage.py migrate && python manage.py collectstatic
 web: gunicorn getit.wsgi
 ```
 
