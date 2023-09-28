@@ -19,7 +19,7 @@
     
     
       
-        <title>Deploy da Aplicação - Tecnologias Web - Insper 2023/2</title>
+        <title>Deploy Render - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deploy da Aplicação
+              Deploy Render
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -739,10 +741,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
     
     <label class="md-nav__link" for="nav-3-6">
       06 - Deploy
@@ -769,6 +773,27 @@
     <a href="../deploy-railway-django-novo/" title="Deploy Railway" class="md-nav__link">
       Deploy Railway
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Deploy Render" class="md-nav__link md-nav__link--active">
+      Deploy Render
+    </a>
+    
   </li>
 
         
@@ -1084,24 +1109,20 @@
                 
                 
                 <h1 id="deploy-da-aplicacao">Deploy da Aplicação<a class="headerlink" href="#deploy-da-aplicacao" title="Permanent link">&para;</a></h1>
-<p>O serviço Railway é uma opção entre várias disponíveis para a hospedagem de aplicações.</p>
-<p>Como utilizamos o Railway no projeto 2 é possível que você não consigo fazer o deploy da sua aplicação no serviço Railway.</p>
-<p>Desta forma, podemos utilizar um outro serviço para fazer o deploy da API Django Rest. Neste handout vamos fazer o deploy da API utilizando o serviço <a href="https://render.com">https://render.com</a></p>
+<p>O serviço Render é uma opção entre várias disponíveis para a hospedagem de aplicações.</p>
+<p>Neste handout vamos fazer o deploy da API utilizando o serviço <a href="https://render.com">https://render.com</a></p>
 <p>Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a <a href="https://aws.amazon.com/">Amazon AWS</a>, <a href="https://www.digitalocean.com/">DigitalOcean</a>, <a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, <a href="https://www.linode.com/">Linode</a>, <a href="https://www.heroku.com/">Heroku</a> ...</p>
-<p>Para o projeto 1B vamos ver uma outra opções para fazer deploy. Lembrando que não há restrição para qual serviço devem utilizar. Estejam livres para utilizar o que preferirem.</p>
-<div class="admonition tip">
-<p class="admonition-title">Vídeo</p>
-<p>Vídeo com algumas instruções para fazer o deploy: <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">https://www.youtube.com/watch?v=D58ug70Em8g</a></p>
-</div>
 <h1 id="crie-uma-conta">Crie uma conta<a class="headerlink" href="#crie-uma-conta" title="Permanent link">&para;</a></h1>
-<p>Vamos utilizar o serviço <a href="https://railway.app">Railway</a> que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.</p>
-<p>Veja o <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">Vídeo</a> até a duração de <code>0:50</code> para criar a conta.</p>
+<p>Vamos utilizar o serviço <a href="https://render.com">Render</a> que oferece a opção gratuita para testarmos o seu serviço.</p>
+<p>Desta forma, acesso <a href="https://render.com">Render</a> e faça o login via Github.</p>
+<p><img alt="render.com" src="../render.png" /></p>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
 <p>Não adicione/cadastre nenhum informação de pagamento.</p>
 </div>
 <h3 id="aplicacoes-com-postgres">Aplicações com Postgres<a class="headerlink" href="#aplicacoes-com-postgres" title="Permanent link">&para;</a></h3>
-<p>Para a configuração do banco de dados, siga os passos descritos no <a href="https://youtu.be/D58ug70Em8g?t=50" target="_blank">vídeo</a> a partir do tempo <code>0:50</code> até <code>1:17</code>.</p>
+<p>Precisamos criar um banco de dados PostgreSQL que fique disponível fora do ambiente de desenvolvimento (por exemplo, nosso computador).</p>
+<p>Para isso veja o vídeo a seguir para verificar como criar um banco de dados no Render, acesse <a href="https://youtu.be/J_BAJqCQuVM" target="_blank">vídeo</a></p>
 <p>Em seguida faça as alterações abaixo em seu projeto no projeto.</p>
 <p>Vamos instalar o <code>dj-database-url</code>:</p>
 <div class="codehilite"><pre><span></span><code>pip install dj-database-url
@@ -1127,8 +1148,7 @@
 <span class="p">}</span>
 </code></pre></div>
 
-<p>No campo <strong>default</strong> adicione a informação que apresentada no Postgres do Railway, campo <strong>DATABASE URL</strong>.</p>
-<p><img alt="DATABASE URL" src="../postgres-railway.png" /></p>
+<p>No campo <strong>default</strong> adicione a informação que apresentada no Postgres do Render, campo <strong>External DATABASE URL</strong>.</p>
 <h2 id="configurando-o-projeto">Configurando o projeto<a class="headerlink" href="#configurando-o-projeto" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Importante</p>
@@ -1171,23 +1191,9 @@ tests/report/
 <p class="admonition-title">O arquivo <code>wsgi.py</code></p>
 <p>O comando acima executou o Gunicorn com o arquivo de configuração <code>getit/wsgi.py</code>. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo <code>wsgi.py</code> dentro da pasta do projeto.</p>
 </div>
-<p>Agora vamos definir o arquivo de configuração. Crie um arquivo chamado <code>Procfile</code> (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o <code>.txt</code> automaticamente) na raiz do projeto com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code>release: python manage.py migrate &amp;&amp; python manage.py collectstatic --noinput
-web: gunicorn getit.wsgi
-</code></pre></div>
-
-<p>A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Provavelmente o seu projeto Django possui outro nome, então você deve alterar a linha <strong>web: gunicorn getit.wsgi</strong> por <strong>web: gunicorn NOME_DO_SEU_PROJETO.wsgi</strong></p>
-</div>
 <h3 id="outras-modificacoes-nas-configuracoes">Outras modificações nas configurações<a class="headerlink" href="#outras-modificacoes-nas-configuracoes" title="Permanent link">&para;</a></h3>
 <p>Aproveite que está com o <code>settings.py</code> aberto e modifique o valor da constante <code>DEBUG</code> para <code>False</code>. Além disso, procure pela lista <code>ALLOWED_HOSTS</code>. Ela deve ser uma lista vazia.</p>
 <div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<p>Quando tivermos o host gerado vamos alterar o <em>ALLOWED_HOSTS</em>  para adicionar o nome do host gerado, <code class="highlight"><span class="s1">&#39;localhost&#39;</span></code> e o <code class="highlight"><span class="s1">&#39;127.0.0.1&#39;</span></code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NOME_DO_HOST_GERADO&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
 </code></pre></div>
 
 <h3 id="criando-o-arquivo-requirementstxt">Criando o arquivo <code>requirements.txt</code><a class="headerlink" href="#criando-o-arquivo-requirementstxt" title="Permanent link">&para;</a></h3>
@@ -1226,34 +1232,66 @@ web: gunicorn getit.wsgi
 
 <h3 id="faca-commit">Faça commit<a class="headerlink" href="#faca-commit" title="Permanent link">&para;</a></h3>
 <p>Faça o commit das mudanças do seu projeto.</p>
-<h3 id="adicionando-projeto-no-railway">Adicionando projeto no Railway<a class="headerlink" href="#adicionando-projeto-no-railway" title="Permanent link">&para;</a></h3>
-<p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=252" target="_blank">vídeo</a>.</p>
-<div class="admonition dange">
-<p class="admonition-title">Importante</p>
-<p>Diferente do vídeo, você deve escolher o repositório com o nome <code>insper-tecnologias-web/{O NOME DO SEU REPOSITÓRIO}</code></p>
-<p>Será algo parecido com a imagem abaixo:
-<img alt="Selecionado repositório" src="../railway-escolhendo-projeto.png" /></p>
-</div>
-<h2 id="passo-final">Passo final<a class="headerlink" href="#passo-final" title="Permanent link">&para;</a></h2>
-<p>Vá no arquivo <code>settings.py</code> e atualize a variável <code>ALLOWED_HOSTS</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;web-production-a9f3.up.railway.app&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+<h3 id="adicionando-projeto-no-render">Adicionando projeto no Render<a class="headerlink" href="#adicionando-projeto-no-render" title="Permanent link">&para;</a></h3>
+<p>Após realizar as alterações acima, siga o vídeo:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hJuQb5L1Eq0?si=hGfNHqHmhyW9FJE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="start-command">Start Command<a class="headerlink" href="#start-command" title="Permanent link">&para;</a></h2>
+<p>Comando utilizado no vídeo, na configuração do projeto no campo <code>Start Command</code>:</p>
+<div class="codehilite"><pre><span></span><code>python manage.py migrate &amp;&amp; python manage.py collectstatic &amp;&amp; gunicorn getit.wsgi:application
 </code></pre></div>
 
-<p>Substitua <code>web-production-a9f3.up.railway.app</code> pelo link da sua aplicação gerado pelo Railway.</p>
+
+<h2 id="passo-final">Passo final<a class="headerlink" href="#passo-final" title="Permanent link">&para;</a></h2>
+<p>Após realizar a etapa acima com sucesso, realize as últimas configurações.</p>
+<p>Vá no arquivo <code>settings.py</code> e atualize a variável <code>ALLOWED_HOSTS</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;getit-projeto1b.onrender.com&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+</code></pre></div>
+<strong>Importante:</strong> Para <code>ALLOWED_HOSTS</code> <strong>não</strong> deve utilizar o <code>https://</code></p>
+<p>Substitua <code>getit-projeto1b.onrender.com</code> pelo link da sua aplicação gerado pelo Railway.</p>
 <p>Adicione na linha seguinte:
-<div class="highlight"><pre><span></span><code><span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://web-production-a9f3.up.railway.app&#39;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://getit-projeto1b.onrender.com&#39;</span><span class="p">]</span>
 </code></pre></div></p>
-<p>Trocando também o link <code>https://web-production-a9f3.up.railway.app</code> pelo link da sua aplicação.</p>
+<p>Trocando também o link <code>https://getit-projeto1b.onrender.com</code> pelo link da sua aplicação.</p>
+<p><strong>Importante:</strong> Para <code>CSRF_TRUSTED_ORIGINS</code> deve-se manter o <code>https://</code></p>
+<p>Faça um novo commit.</p>
 <h2 id="rodando-o-projeto-localmente">Rodando o projeto localmente<a class="headerlink" href="#rodando-o-projeto-localmente" title="Permanent link">&para;</a></h2>
 <p>Para rodar o projeto localmente, mude a variável <code>Debug</code> presente no arquivo <code>settings.py</code> para <code class="highlight"><span class="kc">True</span></code>.</p>
-<p>Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.</p>
-<h2 id="deploy-frontend">Deploy Frontend<a class="headerlink" href="#deploy-frontend" title="Permanent link">&para;</a></h2>
-<p>Caso o seu projeto tenha algum projeto <strong>frontend</strong> (React), uma opção gratuita e fácil é o <a href="https://vercel.com/">Vercel</a>. O deploy no Vercel é bem intuitivo.</p>
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/3n-0kngCv4c" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
-<div class="admonition tip">
-<p class="admonition-title">Vídeo</p>
-<p>O vídeo também pode ser acessado em: <a href="https://youtu.be/3n-0kngCv4c" target="_blank">https://youtu.be/3n-0kngCv4c</a></p>
-</div>
+<p>Além disso, mude as configurações do banco de dados para uma das configurações abaixo:</p>
+<p>Configuração para utilizar SQlite3:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Configuração para utilizar PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;getit&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;getituser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;getitsenha&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Caso utilize a configuração abaixo:
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">dj_database_url</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="n">conn_max_age</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+        <span class="n">ssl_require</span><span class="o">=</span><span class="ow">not</span> <span class="n">DEBUG</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Qualquer teste que for feito localmente estará alterando o banco de dados que está no render.com</p>
+<p>Sempre que você commitar mudanças no repositório Github na branch principal, o Render fará um novo deploy.</p>
+<p>O ideal seria criar uma branch nova para implementar novas funcionalidades e fazer um merge com a branch main somente quando a funcionalidade estiver funcionando e finalizada.</p>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): <a href="https://www.youtube.com/watch?v=kBwhtEIXGII">https://www.youtube.com/watch?v=kBwhtEIXGII</a></li>
@@ -1261,6 +1299,8 @@ web: gunicorn getit.wsgi
 <li>Heroku Postgres - connecting with Django: <a href="https://devcenter.heroku.com/articles/heroku-postgresql#connecting-with-django">https://devcenter.heroku.com/articles/heroku-postgresql#connecting-with-django</a></li>
 <li>Heroku - Django migrations: <a href="https://help.heroku.com/GDQ74SU2/django-migrations">https://help.heroku.com/GDQ74SU2/django-migrations</a></li>
 <li>Heroku - Working with Django: <a href="https://devcenter.heroku.com/categories/working-with-django">https://devcenter.heroku.com/categories/working-with-django</a></li>
+<li>Deploy a Django web app to a Render live server with PostgreSQL - <a href="https://youtu.be/AgTr5mw4zdI?si=DNWuSTXZEu92XHZR">https://youtu.be/AgTr5mw4zdI?si=DNWuSTXZEu92XHZR</a></li>
+<li>Deploy Django com PostgreSQL - utilizando Free Trial Render <a href="https://youtu.be/hJuQb5L1Eq0">https://youtu.be/hJuQb5L1Eq0</a></li>
 </ul>
                 
               
@@ -1276,6 +1316,41 @@ web: gunicorn getit.wsgi
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../deploy-railway-django-novo/" title="Deploy Railway" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Deploy Railway
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../07-javascript/" title="Handout" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Handout
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

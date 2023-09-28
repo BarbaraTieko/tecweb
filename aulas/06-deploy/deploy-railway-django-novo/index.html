@@ -785,6 +785,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploy-render/" title="Deploy Render" class="md-nav__link">
+      Deploy Render
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1192,10 +1204,6 @@ web: gunicorn getit.wsgi
 <div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
 </code></pre></div>
 
-<p>Quando tivermos o host gerado vamos alterar o <em>ALLOWED_HOSTS</em>  para adicionar o nome do host gerado, <code class="highlight"><span class="s1">&#39;localhost&#39;</span></code> e o <code class="highlight"><span class="s1">&#39;127.0.0.1&#39;</span></code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NOME_DO_HOST_GERADO&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
-</code></pre></div>
-
 <h3 id="criando-o-arquivo-requirementstxt">Criando o arquivo <code>requirements.txt</code><a class="headerlink" href="#criando-o-arquivo-requirementstxt" title="Permanent link">&para;</a></h3>
 <p>Vamos gerar o <code>requirements.txt</code></p>
 <div class="codehilite"><pre><span></span><code>pip freeze &gt; requirements.txt
@@ -1241,18 +1249,54 @@ web: gunicorn getit.wsgi
 <img alt="Selecionado repositório" src="../railway-escolhendo-projeto.png" /></p>
 </div>
 <h2 id="passo-final">Passo final<a class="headerlink" href="#passo-final" title="Permanent link">&para;</a></h2>
+<p>Após realizar a etapa acima com sucesso, realize as últimas configurações.</p>
 <p>Vá no arquivo <code>settings.py</code> e atualize a variável <code>ALLOWED_HOSTS</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;web-production-a9f3.up.railway.app&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+<p><div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;web-production-a9f3.up.railway.app&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
 </code></pre></div>
-
+<strong>Importante:</strong> Para <code>ALLOWED_HOSTS</code> <strong>não</strong> deve utilizar o <code>https://</code></p>
 <p>Substitua <code>web-production-a9f3.up.railway.app</code> pelo link da sua aplicação gerado pelo Railway.</p>
 <p>Adicione na linha seguinte:
 <div class="highlight"><pre><span></span><code><span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://web-production-a9f3.up.railway.app&#39;</span><span class="p">]</span>
 </code></pre></div></p>
 <p>Trocando também o link <code>https://web-production-a9f3.up.railway.app</code> pelo link da sua aplicação.</p>
+<p><strong>Importante:</strong> Para <code>CSRF_TRUSTED_ORIGINS</code> deve-se manter o <code>https://</code></p>
 <h2 id="rodando-o-projeto-localmente">Rodando o projeto localmente<a class="headerlink" href="#rodando-o-projeto-localmente" title="Permanent link">&para;</a></h2>
 <p>Para rodar o projeto localmente, mude a variável <code>Debug</code> presente no arquivo <code>settings.py</code> para <code class="highlight"><span class="kc">True</span></code>.</p>
+<p>Além disso, mude as configurações do banco de dados para uma das configurações abaixo:</p>
+<p>Configuração para utilizar SQlite3:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Configuração para utilizar PostgreSQL:</p>
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.postgresql_psycopg2&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;getit&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;USER&#39;</span><span class="p">:</span> <span class="s1">&#39;getituser&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s1">&#39;getitsenha&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;HOST&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;PORT&#39;</span><span class="p">:</span> <span class="s1">&#39;5432&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Caso utilize a configuração abaixo:
+<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">dj_database_url</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="n">conn_max_age</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+        <span class="n">ssl_require</span><span class="o">=</span><span class="ow">not</span> <span class="n">DEBUG</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>Qualquer teste que for feito localmente estará alterando o banco de dados que está no render.com</p>
 <p>Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.</p>
+<p>O ideal seria criar uma branch nova para implementar novas funcionalidades e fazer um merge com a branch main somente quando a funcionalidade estiver funcionando e finalizada.</p>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): <a href="https://www.youtube.com/watch?v=kBwhtEIXGII">https://www.youtube.com/watch?v=kBwhtEIXGII</a></li>
@@ -1294,13 +1338,13 @@ web: gunicorn getit.wsgi
           </a>
         
         
-          <a href="../../07-javascript/" title="Handout" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../deploy-render/" title="Deploy Render" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Handout
+                Deploy Render
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
