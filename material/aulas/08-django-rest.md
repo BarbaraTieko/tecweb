@@ -4,10 +4,12 @@ Já conversamos um pouco sobre REST na introdução da aula, mas para se aprofun
 
 O objetivo deste handout é disponibilizarmos uma API REST a partir do resultado do nosso Projeto 1B utilizando o [Django REST Framework (DRF)](https://www.django-rest-framework.org/). Vamos começar com as instalações.
 
+!!! danger "IMPORTANTE"
+    Antes de começar o handout, crie uma branch nova no repostiório github do Projeto 1B para a realização deste handout. 
+
 ## Primeiros passos
 
-!!! danger "Importante"
-    Lembre-se de ativar o ambiente virtual!
+**Lembre-se** de ativar o ambiente virtual!
 
 Instale o DRF e suas dependências:
 
@@ -137,7 +139,15 @@ Você pode testar o POST entrando na mesma página, preenchendo um dicionário (
 
 ## Agora é com você!
 
-!!! example "Exercício"
+!!! example "Exercício 1"
+
+    Implemente a funcionalidade de deletar uma anotação. 
+    
+    **Dica:** Ainda na função `api_note`, adicione alguma lógica para quando uma requisição DELETE for recebida, delete a anotação de id `note_id`.
+    
+    Neste caso, como deletamos a nota, não faz sentido retornar um json com as informações desta nota. Desta forma, tente descobrir como retornor um response com o código 204 (Código indica que o servidor realizou com sucesso a requisição, mas que não há nenhum conteúdo para retornar na resposta).
+
+!!! example "Exercício 2"
     Implemente uma nova view do DRF para a rota `#!python api/notes/`. Ao receber uma requisição GET ela deve devolver a lista de todas as anotações. Ao receber um POST ela deve criar uma nova anotação e devolver a lista de todas as anotações incluindo a nova.
 
     **Dica:** você pode passar um argumento adicional ao serializador `#!python many=True` quando o primeiro argumento é uma lista de objetos ao invés de um único objeto. O serializador do DRF usa essa informação para criar o JSON corretamente. Para saber mais [leia a documentação](https://www.django-rest-framework.org/api-guide/serializers/#serializing-multiple-objects).
