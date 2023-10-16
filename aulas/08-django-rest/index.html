@@ -19,7 +19,7 @@
     
     
       
-        <title>Django REST Framework - Tecnologias Web - Insper 2023/2</title>
+        <title>Handout - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Django REST Framework
+              Handout
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -831,6 +833,145 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8" checked>
+    
+    <label class="md-nav__link" for="nav-3-8">
+      08 - Django REST
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="08 - Django REST" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        08 - Django REST
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="Aula18.pdf" title="Slides" class="md-nav__link">
+      Slides
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Handout
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Handout" class="md-nav__link md-nav__link--active">
+      Handout
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeiros-passos" class="md-nav__link">
+    Primeiros passos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-nosso-serializador" class="md-nav__link">
+    Criando nosso serializador
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-as-views-da-api" class="md-nav__link">
+    Criando as views da API
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando as views da API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementando-o-post" class="md-nav__link">
+    Implementando o POST
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agora-e-com-voce" class="md-nav__link">
+    Agora é com você!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postman" class="md-nav__link">
+    POSTMAN
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1168,11 +1309,12 @@
                 <h1 id="django-rest-framework">Django REST Framework<a class="headerlink" href="#django-rest-framework" title="Permanent link">&para;</a></h1>
 <p>Já conversamos um pouco sobre REST na introdução da aula, mas para se aprofundar mais você pode encontrar <a href="https://restfulapi.net/">excelentes documentações na internet</a>.</p>
 <p>O objetivo deste handout é disponibilizarmos uma API REST a partir do resultado do nosso Projeto 1B utilizando o <a href="https://www.django-rest-framework.org/">Django REST Framework (DRF)</a>. Vamos começar com as instalações.</p>
-<h2 id="primeiros-passos">Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Permanent link">&para;</a></h2>
 <div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Lembre-se de ativar o ambiente virtual!</p>
+<p class="admonition-title">IMPORTANTE</p>
+<p>Antes de começar o handout, crie uma branch nova no repostiório github do Projeto 1B para a realização deste handout. </p>
 </div>
+<h2 id="primeiros-passos">Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Permanent link">&para;</a></h2>
+<p><strong>Lembre-se</strong> de ativar o ambiente virtual!</p>
 <p>Instale o DRF e suas dependências:</p>
 <div class="highlight"><pre><span></span><code>pip install djangorestframework
 pip install markdown
@@ -1276,7 +1418,13 @@ pip install django-filter
 <p><img alt="" src="post.png" /></p>
 <h2 id="agora-e-com-voce">Agora é com você!<a class="headerlink" href="#agora-e-com-voce" title="Permanent link">&para;</a></h2>
 <div class="admonition example">
-<p class="admonition-title">Exercício</p>
+<p class="admonition-title">Exercício 1</p>
+<p>Implemente a funcionalidade de deletar uma anotação. </p>
+<p><strong>Dica:</strong> Ainda na função <code>api_note</code>, adicione alguma lógica para quando uma requisição DELETE for recebida, delete a anotação de id <code>note_id</code>.</p>
+<p>Neste caso, como deletamos a nota, não faz sentido retornar um json com as informações desta nota. Desta forma, tente descobrir como retornor um response com o código 204 (Código indica que o servidor realizou com sucesso a requisição, mas que não há nenhum conteúdo para retornar na resposta).</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercício 2</p>
 <p>Implemente uma nova view do DRF para a rota <code class="highlight"><span class="n">api</span><span class="o">/</span><span class="n">notes</span><span class="o">/</span></code>. Ao receber uma requisição GET ela deve devolver a lista de todas as anotações. Ao receber um POST ela deve criar uma nova anotação e devolver a lista de todas as anotações incluindo a nova.</p>
 <p><strong>Dica:</strong> você pode passar um argumento adicional ao serializador <code class="highlight"><span class="n">many</span><span class="o">=</span><span class="kc">True</span></code> quando o primeiro argumento é uma lista de objetos ao invés de um único objeto. O serializador do DRF usa essa informação para criar o JSON corretamente. Para saber mais <a href="https://www.django-rest-framework.org/api-guide/serializers/#serializing-multiple-objects">leia a documentação</a>.</p>
 </div>
@@ -1305,6 +1453,41 @@ pip install django-filter
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="Aula18.pdf" title="Slides" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Slides
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../avaliacao/" title="Avaliação do Professor" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Avaliação do Professor
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
