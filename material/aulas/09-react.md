@@ -1,6 +1,6 @@
 # React
 
-O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Recomendo **fortemente** que você faça o [tutorial oficial do React](https://react.dev/learn), pois ele é muito bem feito e completo.
+O objetivo deste handout é que você tenha um primeiro contato com o React. Ao final do handout você terá alguma ideia de qual é a "cara" de um app React. Para saber mais sobre React veja o [tutorial oficial do React](https://react.dev/learn).
 
 !!! danger "Importante"
     Nem todo código deste handout é JavaScript puro. Algumas (muitas) coisas são específicas do React e não funcionarão fora desse contexto.
@@ -445,6 +445,8 @@ Esta é uma forma mais direta de adicionar a imagem, mas você poderia criar um 
 
 !!! example "Exercício"
     Agora é com você! É possível implementar todas as outras funcionalidades do frontend do Get-it utilizando componentes funcionais, os hooks `useEffect` e `useState` e o axios.
+
+    Tente implementar a criação de anotações, a edição e a exclusão.
 
 ## Bônus: implementando a rotação dos cartões
 

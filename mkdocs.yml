@@ -65,6 +65,9 @@ nav:
     - "08 - Django REST":
         - "Slides": aulas/08-django-rest/Aula18.pdf
         - "Handout": aulas/08-django-rest.md
+    - "09 - React":
+      - "Handout": aulas/09-react.md
+      - "Slides": aulas/09-react/react-components.pdf
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
