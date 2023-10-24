@@ -9,9 +9,6 @@
 **Entrega via GitHub Classroom:**
 Para este projeto será necessário criar dois repositório GitHub, um para o frontend e outro para o backend.
 
-!!! danger "Importante"
-    Por conta de problemas para reconfigurar as equipes do github classroom. Crie os repositórios em sua conta Github e faça o envio do endereço do repositório via Blackboard em: Conteúdos > Projeto 2 - Repositório Git
-
 - Frontend: [https://classroom.github.com/a/XPBfFVt4](https://classroom.github.com/a/XPBfFVt4){:target="_blank"}
 - Backend: [https://classroom.github.com/a/RtGowBce](https://classroom.github.com/a/RtGowBce){:target="_blank"}
 
