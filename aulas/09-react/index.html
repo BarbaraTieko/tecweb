@@ -1018,6 +1018,55 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#implementando-a-criacao-de-anotacoes" class="md-nav__link">
+    Implementando a Criação de Anotações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adicionando-componente-formulario-no-app" class="md-nav__link">
+    Adicionando componente Formulario no App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armazenado-valor-digitado-pelo-usuario-nos-inputs" class="md-nav__link">
+    Armazenado valor digitado pelo usuário nos Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviar-os-dados-para-o-servidor" class="md-nav__link">
+    Enviar os dados para o servidor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualizando-a-lista-de-anotacoes" class="md-nav__link">
+    Atualizando a lista de anotações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chamando-a-funcao-carreganotas-no-componente-formulario" class="md-nav__link">
+    Chamando a função carregaNotas no componente Formulario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpando-os-valores-dos-campos-do-formulario" class="md-nav__link">
+    Limpando os valores dos campos do Formulário
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bonus-implementando-a-rotacao-dos-cartoes" class="md-nav__link">
     Bônus: implementando a rotação dos cartões
   </a>
@@ -1389,6 +1438,55 @@
         <li class="md-nav__item">
   <a href="#carregando-imagens-e-outros-arquivos-estaticos" class="md-nav__link">
     Carregando imagens e outros arquivos estáticos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-a-criacao-de-anotacoes" class="md-nav__link">
+    Implementando a Criação de Anotações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adicionando-componente-formulario-no-app" class="md-nav__link">
+    Adicionando componente Formulario no App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armazenado-valor-digitado-pelo-usuario-nos-inputs" class="md-nav__link">
+    Armazenado valor digitado pelo usuário nos Inputs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviar-os-dados-para-o-servidor" class="md-nav__link">
+    Enviar os dados para o servidor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atualizando-a-lista-de-anotacoes" class="md-nav__link">
+    Atualizando a lista de anotações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chamando-a-funcao-carreganotas-no-componente-formulario" class="md-nav__link">
+    Chamando a função carregaNotas no componente Formulario
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limpando-os-valores-dos-campos-do-formulario" class="md-nav__link">
+    Limpando os valores dos campos do Formulário
   </a>
   
 </li>
@@ -1837,6 +1935,420 @@ $ npm start
 <p>Agora é com você! É possível implementar todas as outras funcionalidades do frontend do Get-it utilizando componentes funcionais, os hooks <code>useEffect</code> e <code>useState</code> e o axios.</p>
 <p>Tente implementar a criação de anotações, a edição e a exclusão.</p>
 </div>
+<h2 id="implementando-a-criacao-de-anotacoes">Implementando a Criação de Anotações<a class="headerlink" href="#implementando-a-criacao-de-anotacoes" title="Permanent link">&para;</a></h2>
+<p>Vamos criar um componente para o formulário de criação.</p>
+<ol>
+<li>Crie o arquivo <code>src/components/Formulario/index.js</code> com o seguinte conteúdo:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Crie o arquivo <code>src/components/Formulario/index.css</code> e coloque o estilo CSS das classes <code>form-card</code>, <code>form-card-tag</code> e <code>btn</code> utilizado nos projetos anteriores.</p>
+<h2 id="adicionando-componente-formulario-no-app">Adicionando componente Formulario no App<a class="headerlink" href="#adicionando-componente-formulario-no-app" title="Permanent link">&para;</a></h2>
+<p>Precisamos adicionar o componente <code>Formulario</code> no <code>src/App.js</code>. Podemos pensar no componente como uma função javascript que retorna html. Para utilizar um componente, basta colocar o nome dele entre tags, como se fosse uma tag HTML. Veja o exemplo abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Note</span> <span class="nx">from</span> <span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<span class="hll"><span class="kr">import</span> <span class="nx">Formulario</span> <span class="nx">from</span> <span class="s2">&quot;./components/Formulario&quot;</span><span class="p">;</span>
+</span>
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">notes</span><span class="p">,</span> <span class="nx">setNotes</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">axios</span>
+      <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setNotes</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+<span class="hll">      <span class="o">&lt;</span><span class="nx">Formulario</span> <span class="o">/&gt;</span>
+</span>      <span class="p">{</span><span class="nx">notes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">note</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">Note</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`note__</span><span class="si">${</span><span class="nx">note</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/Note&gt;</span>
+      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div>
+
+<h2 id="armazenado-valor-digitado-pelo-usuario-nos-inputs">Armazenado valor digitado pelo usuário nos Inputs<a class="headerlink" href="#armazenado-valor-digitado-pelo-usuario-nos-inputs" title="Permanent link">&para;</a></h2>
+<p>Vamos armazenar os valores digitados pelo usuário nas variáveis <code>titulo</code> e <code>conteudo</code>. Para isso, vamos criar duas variáveis utilizando <code>useState</code> do React;</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="hll">    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class="hll">    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>As variáveis inicialmente começam como <code>strings</code> vazias <code class="highlight"><span class="s2">&quot;&quot;</span></code>. Conforme o usuário digita, o valor das variáveis é atualizado. Para isso podemos utilizar o atributo <code>onChange</code> do HTML, veja o exemplo abaixo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+<span class="hll">    <span class="kr">const</span> <span class="nx">tituloOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">setTitulo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+<span class="hll">                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">tituloOnChange</span><span class="p">}</span>
+</span>            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+Sempre que o usuário interagir com o campo <code>input</code> o evento <code>onChange</code> chamará a função passada, neste caso, a função <code>tituloOnChange</code> será chamada. A função atualiza o valor da variável <code>titulo</code> com o valor digitado pelo usuário utilizando a função <code>setTitulo</code>.</p>
+<p>Outra forma de realizar a mesma coisa é utilizando uma função anônima, veja o exemplo abaixo para o campo <code>content</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">tituloOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTitulo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">tituloOnChange</span><span class="p">}</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+<span class="hll">                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
+</span>            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="enviar-os-dados-para-o-servidor">Enviar os dados para o servidor<a class="headerlink" href="#enviar-os-dados-para-o-servidor" title="Permanent link">&para;</a></h2>
+<p>Agora vamos enviar os dados para o servidor. Para isso, vamos utilizar o atributo <code>onSubmit</code> do HTML. Veja o exemplo abaixo:</p>
+<p>O comando <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault">event.preventDefault()</a> previne que o formulário seja enviado para o servidor. Assim, podemos enviar os dados utilizando o axios.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">tituloOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTitulo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="hll">    <span class="kr">const</span> <span class="nx">criarNote</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class="hll">            <span class="s2">&quot;title&quot;</span> <span class="o">:</span> <span class="nx">titulo</span><span class="p">,</span>
+</span><span class="hll">            <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">content</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">
+</span><span class="hll">        <span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>
+    <span class="k">return</span> <span class="p">(</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">criarNote</span><span class="p">}</span><span class="o">&gt;</span>
+</span>            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">tituloOnChange</span><span class="p">}</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
+            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="atualizando-a-lista-de-anotacoes">Atualizando a lista de anotações<a class="headerlink" href="#atualizando-a-lista-de-anotacoes" title="Permanent link">&para;</a></h2>
+<p>Agora que já enviamos os dados para o servidor, precisamos atualizar a lista de anotações. Se olharmos o código do arquivo <code>src/App.js</code> queremos executar o código contido nas linhas marcadas abaixo, pois queremos atualizar a lista de anotações.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Note</span> <span class="nx">from</span> <span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Formulario</span> <span class="nx">from</span> <span class="s2">&quot;./components/Formulario&quot;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">notes</span><span class="p">,</span> <span class="nx">setNotes</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">axios</span>
+</span><span class="hll">      <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">)</span>
+</span><span class="hll">      <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setNotes</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+</span>  <span class="p">},</span> <span class="p">[]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Formulario</span> <span class="o">/&gt;</span>
+      <span class="p">{</span><span class="nx">notes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">note</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">Note</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`note__</span><span class="si">${</span><span class="nx">note</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/Note&gt;</span>
+      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Para isso, vamos mover esse trecho de código para dentro de uma função, para que possamos enviar essa função para o componente <code>Formulario</code>.</p>
+<p>Os componentes são função, desta forma, podemos enviar argumentos para as funções. No caso, vamos enviar a função <code>carregaNotas</code> para o componente <code>Formulario</code> utilizando o nome <code>funcao</code> (pode ser qualquer nome que desejar).</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Note</span> <span class="nx">from</span> <span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">Formulario</span> <span class="nx">from</span> <span class="s2">&quot;./components/Formulario&quot;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">notes</span><span class="p">,</span> <span class="nx">setNotes</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+<span class="hll">  <span class="kr">const</span> <span class="nx">carregaNotas</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span><span class="hll">      <span class="nx">axios</span>
+</span><span class="hll">        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">)</span>
+</span><span class="hll">        <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">setNotes</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">));</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="hll">    <span class="nx">carregaNotas</span><span class="p">();</span>
+</span>  <span class="p">},</span> <span class="p">[]);</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+<span class="hll">      <span class="o">&lt;</span><span class="nx">Formulario</span> <span class="nx">funcao</span><span class="o">=</span><span class="p">{</span><span class="nx">carregaNotas</span><span class="p">}</span><span class="o">/&gt;</span>
+</span>      <span class="p">{</span><span class="nx">notes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">note</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">Note</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`note__</span><span class="si">${</span><span class="nx">note</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span> <span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="err">/Note&gt;</span>
+      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</code></pre></div>
+
+<h2 id="chamando-a-funcao-carreganotas-no-componente-formulario">Chamando a função <code>carregaNotas</code> no componente <code>Formulario</code><a class="headerlink" href="#chamando-a-funcao-carreganotas-no-componente-formulario" title="Permanent link">&para;</a></h2>
+<p>O componente <code>Formulario</code> recebe o argumento <code>props</code> que contém todas as informações enviadas para o componente.
+Como enviamos a função <code>carregaNotas</code> com o nome de <code>funcao</code>, para chamar a função <code>carregaNotas</code> dentro do componente <code>Formulario</code> utilizamos o comando <code class="highlight"><span class="nx">props</span><span class="p">.</span><span class="nx">funcao</span><span class="p">()</span></code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">tituloOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTitulo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">criarNote</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;title&quot;</span> <span class="o">:</span> <span class="nx">titulo</span><span class="p">,</span>
+            <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">content</span>
+        <span class="p">}</span>
+
+        <span class="nx">axios</span>
+          <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="hll">            <span class="nx">props</span><span class="p">.</span><span class="nx">funcao</span><span class="p">();</span>
+</span>          <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">criarNote</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">tituloOnChange</span><span class="p">}</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
+            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="limpando-os-valores-dos-campos-do-formulario">Limpando os valores dos campos do Formulário<a class="headerlink" href="#limpando-os-valores-dos-campos-do-formulario" title="Permanent link">&para;</a></h2>
+<p>Basta atualizar as variáveis <code>titulo</code> e <code>content</code> com o valor <code class="highlight"><span class="s2">&quot;&quot;</span></code> (string vazia). Além disso, é necessário utilizar essas variáveis para definir o valor dos campos do formulário. Veja o exemplo abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Formulario</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">titulo</span><span class="p">,</span> <span class="nx">setTitulo</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">content</span><span class="p">,</span> <span class="nx">setContent</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">tituloOnChange</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setTitulo</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">criarNote</span> <span class="o">=</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;title&quot;</span> <span class="o">:</span> <span class="nx">titulo</span><span class="p">,</span>
+            <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="nx">content</span>
+        <span class="p">}</span>
+
+        <span class="nx">axios</span>
+          <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/api/notes/&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">props</span><span class="p">.</span><span class="nx">funcao</span><span class="p">();</span>
+<span class="hll">            <span class="nx">setTitulo</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class="hll">            <span class="nx">setContent</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span>          <span class="p">})</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="nx">onSubmit</span><span class="o">=</span><span class="p">{</span><span class="nx">criarNote</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">tituloOnChange</span><span class="p">}</span>
+<span class="hll">                <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">titulo</span><span class="p">}</span>
+</span>            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">textarea</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
+<span class="hll">                <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">}</span>
+</span>            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+            <span class="o">&lt;</span><span class="nx">input</span>
+                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
+                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
+                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
+            <span class="o">/&gt;</span>
+            <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+        <span class="o">&lt;</span><span class="err">/form&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
 <h2 id="bonus-implementando-a-rotacao-dos-cartoes">Bônus: implementando a rotação dos cartões<a class="headerlink" href="#bonus-implementando-a-rotacao-dos-cartoes" title="Permanent link">&para;</a></h2>
 <p>Para implementar a rotação dos cartões vamos utilizar novamente o <code>useEffect</code> e o <code>useState</code>. Modifique o <code>src/componentes/Note/index.js</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
