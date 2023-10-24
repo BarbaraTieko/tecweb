@@ -448,6 +448,451 @@ Esta é uma forma mais direta de adicionar a imagem, mas você poderia criar um 
 
     Tente implementar a criação de anotações, a edição e a exclusão.
 
+## Implementando a Criação de Anotações
+
+Vamos criar um componente para o formulário de criação.
+
+1. Crie o arquivo `src/components/Formulario/index.js` com o seguinte conteúdo:
+
+```js
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+
+    return (
+        <form className="form-card" method="post">
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
+
+Crie o arquivo `src/components/Formulario/index.css` e coloque o estilo CSS das classes `form-card`, `form-card-tag` e `btn` utilizado nos projetos anteriores.
+
+## Adicionando componente Formulario no App
+
+Precisamos adicionar o componente `Formulario` no `src/App.js`. Podemos pensar no componente como uma função javascript que retorna html. Para utilizar um componente, basta colocar o nome dele entre tags, como se fosse uma tag HTML. Veja o exemplo abaixo:
+
+```js hl_lines="5 18"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Note from "./components/Note";
+import Formulario from "./components/Formulario";
+
+function App() {
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/notes/")
+      .then((res) => setNotes(res.data));
+  }, []);
+
+  return (
+    <div className="App">
+      <Formulario />
+      {notes.map((note) => (
+        <Note key={`note__${note.id}`} title={note.title}>
+          {note.content}
+        </Note>
+      ))}
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Armazenado valor digitado pelo usuário nos Inputs
+
+Vamos armazenar os valores digitados pelo usuário nas variáveis `titulo` e `conteudo`. Para isso, vamos criar duas variáveis utilizando `useState` do React;
+
+```js hl_lines="5-6"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    return (
+        <form className="form-card" method="post">
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
+As variáveis inicialmente começam como `strings` vazias `#!python ""`. Conforme o usuário digita, o valor das variáveis é atualizado. Para isso podemos utilizar o atributo `onChange` do HTML, veja o exemplo abaixo:
+
+```js hl_lines="8-10 19"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    const tituloOnChange = (event) => {
+        setTitulo(event.target.value);
+    }
+
+    return (
+        <form className="form-card" method="post">
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                onChange={tituloOnChange}
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+Sempre que o usuário interagir com o campo `input` o evento `onChange` chamará a função passada, neste caso, a função `tituloOnChange` será chamada. A função atualiza o valor da variável `titulo` com o valor digitado pelo usuário utilizando a função `setTitulo`.
+
+Outra forma de realizar a mesma coisa é utilizando uma função anônima, veja o exemplo abaixo para o campo `content`:
+
+
+```js hl_lines="25"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    const tituloOnChange = (event) => {
+        setTitulo(event.target.value);
+    }
+
+    return (
+        <form className="form-card" method="post">
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                onChange={tituloOnChange}
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+                onChange={ (event)=>{setContent(event.target.value)} }
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
+## Enviar os dados para o servidor
+Agora vamos enviar os dados para o servidor. Para isso, vamos utilizar o atributo `onSubmit` do HTML. Veja o exemplo abaixo:
+
+O comando [event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) previne que o formulário seja enviado para o servidor. Assim, podemos enviar os dados utilizando o axios.
+
+```js hl_lines="12-21 24"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    const tituloOnChange = (event) => {
+        setTitulo(event.target.value);
+    }
+
+    const criarNote = (event) => {
+        event.preventDefault();
+        
+        const data = {
+            "title" : titulo,
+            "content": content
+        }
+
+        axios.post("http://localhost:8000/api/notes/", data)
+    }
+
+    return (
+        <form className="form-card" method="post" onSubmit={criarNote}>
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                onChange={tituloOnChange}
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+                onChange={ (event)=>{setContent(event.target.value)} }
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
+## Atualizando a lista de anotações
+Agora que já enviamos os dados para o servidor, precisamos atualizar a lista de anotações. Se olharmos o código do arquivo `src/App.js` queremos executar o código contido nas linhas marcadas abaixo, pois queremos atualizar a lista de anotações.
+
+```js hl_lines="11-13"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Note from "./components/Note";
+import Formulario from "./components/Formulario";
+
+function App() {
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/notes/")
+      .then((res) => setNotes(res.data));
+  }, []);
+
+  return (
+    <div className="App">
+      <Formulario />
+      {notes.map((note) => (
+        <Note key={`note__${note.id}`} title={note.title}>
+          {note.content}
+        </Note>
+      ))}
+    </div>
+  );
+}
+
+export default App;
+```
+
+Para isso, vamos mover esse trecho de código para dentro de uma função, para que possamos enviar essa função para o componente `Formulario`.
+
+Os componentes são função, desta forma, podemos enviar argumentos para as funções. No caso, vamos enviar a função `carregaNotas` para o componente `Formulario` utilizando o nome `funcao` (pode ser qualquer nome que desejar).
+
+
+```js hl_lines="10-14 17 22"
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Note from "./components/Note";
+import Formulario from "./components/Formulario";
+
+function App() {
+  const [notes, setNotes] = useState([]);
+
+  const carregaNotas = () => {
+      axios
+        .get("http://localhost:8000/api/notes/")
+        .then((res) => setNotes(res.data));
+    }
+
+  useEffect(() => {
+    carregaNotas();
+  }, []);
+
+  return (
+    <div className="App">
+      <Formulario funcao={carregaNotas}/>
+      {notes.map((note) => (
+        <Note key={`note__${note.id}`} title={note.title}>
+          {note.content}
+        </Note>
+      ))}
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Chamando a função `carregaNotas` no componente `Formulario`
+
+O componente `Formulario` recebe o argumento `props` que contém todas as informações enviadas para o componente.
+Como enviamos a função `carregaNotas` com o nome de `funcao`, para chamar a função `carregaNotas` dentro do componente `Formulario` utilizamos o comando `#!js props.funcao()`.
+
+```js hl_lines="23"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    const tituloOnChange = (event) => {
+        setTitulo(event.target.value);
+    }
+
+    const criarNote = (event) => {
+        event.preventDefault();
+        
+        const data = {
+            "title" : titulo,
+            "content": content
+        }
+
+        axios
+          .post("http://localhost:8000/api/notes/", data)
+          .then(() => {
+            props.funcao();
+          })
+    }
+
+    return (
+        <form className="form-card" method="post" onSubmit={criarNote}>
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                onChange={tituloOnChange}
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+                onChange={ (event)=>{setContent(event.target.value)} }
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
+## Limpando os valores dos campos do Formulário
+
+Basta atualizar as variáveis `titulo` e `content` com o valor `#!python ""` (string vazia). Além disso, é necessário utilizar essas variáveis para definir o valor dos campos do formulário. Veja o exemplo abaixo:
+
+```js hl_lines="24-25 37 44"
+import axios from "axios";
+import React, { useState } from "react";
+
+export default function Formulario(props) {
+    const [titulo, setTitulo] = useState("");
+    const [content, setContent] = useState("");
+
+    const tituloOnChange = (event) => {
+        setTitulo(event.target.value);
+    }
+
+    const criarNote = (event) => {
+        event.preventDefault();
+        
+        const data = {
+            "title" : titulo,
+            "content": content
+        }
+
+        axios
+          .post("http://localhost:8000/api/notes/", data)
+          .then(() => {
+            props.funcao();
+            setTitulo("");
+            setContent("");
+          })
+    }
+
+    return (
+        <form className="form-card" method="post" onSubmit={criarNote}>
+            <input
+                className="form-card-title"
+                type="text"
+                name="titulo"
+                placeholder="Título"
+                onChange={tituloOnChange}
+                value={titulo}
+            />
+            <textarea
+                className="autoresize"
+                name="detalhes"
+                placeholder="Digite o conteúdo..."
+                onChange={ (event)=>{setContent(event.target.value)} }
+                value={content}
+            ></textarea>
+            <input
+                className="form-card-tag"
+                type="text"
+                name="tag"
+                placeholder="Adicione uma tag"
+            />
+            <button className="btn" type="submit">Criar</button>
+        </form>
+    );
+}
+```
+
 ## Bônus: implementando a rotação dos cartões
 
 Para implementar a rotação dos cartões vamos utilizar novamente o `useEffect` e o `useState`. Modifique o `src/componentes/Note/index.js`:
