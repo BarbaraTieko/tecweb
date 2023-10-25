@@ -473,12 +473,6 @@ export default function Formulario(props) {
                 name="detalhes"
                 placeholder="Digite o conteúdo..."
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
@@ -486,7 +480,7 @@ export default function Formulario(props) {
 ```
 
 
-Crie o arquivo `src/components/Formulario/index.css` e coloque o estilo CSS das classes `form-card`, `form-card-tag` e `btn` utilizado nos projetos anteriores.
+Crie o arquivo `src/components/Formulario/index.css` e coloque o estilo CSS das classes `form-card`, `form-card-title` e `btn` utilizado nos projetos anteriores.
 
 ## Adicionando componente Formulario no App
 
@@ -548,12 +542,6 @@ export default function Formulario(props) {
                 name="detalhes"
                 placeholder="Digite o conteúdo..."
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
@@ -588,18 +576,12 @@ export default function Formulario(props) {
                 name="detalhes"
                 placeholder="Digite o conteúdo..."
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
 }
 ```
-Sempre que o usuário interagir com o campo `input` o evento `onChange` chamará a função passada, neste caso, a função `tituloOnChange` será chamada. A função atualiza o valor da variável `titulo` com o valor digitado pelo usuário utilizando a função `setTitulo`.
+Sempre que o usuário interagir com o campo `input` o evento `onChange` chamará a função `tituloOnChange`. A função atualiza o valor da variável `titulo` com o valor digitado pelo usuário utilizando a função `setTitulo`.
 
 Outra forma de realizar a mesma coisa é utilizando uma função anônima, veja o exemplo abaixo para o campo `content`:
 
@@ -631,12 +613,6 @@ export default function Formulario(props) {
                 placeholder="Digite o conteúdo..."
                 onChange={ (event)=>{setContent(event.target.value)} }
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
@@ -686,12 +662,6 @@ export default function Formulario(props) {
                 placeholder="Digite o conteúdo..."
                 onChange={ (event)=>{setContent(event.target.value)} }
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
@@ -734,7 +704,7 @@ export default App;
 
 Para isso, vamos mover esse trecho de código para dentro de uma função, para que possamos enviar essa função para o componente `Formulario`.
 
-Os componentes são função, desta forma, podemos enviar argumentos para as funções. No caso, vamos enviar a função `carregaNotas` para o componente `Formulario` utilizando o nome `funcao` (pode ser qualquer nome que desejar).
+Vamos enviar a função `carregaNotas` para o componente `Formulario` utilizando o nome `funcao` (pode ser qualquer nome que desejar).
 
 
 ```js hl_lines="10-14 17 22"
@@ -819,12 +789,6 @@ export default function Formulario(props) {
                 placeholder="Digite o conteúdo..."
                 onChange={ (event)=>{setContent(event.target.value)} }
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
@@ -881,12 +845,6 @@ export default function Formulario(props) {
                 onChange={ (event)=>{setContent(event.target.value)} }
                 value={content}
             ></textarea>
-            <input
-                className="form-card-tag"
-                type="text"
-                name="tag"
-                placeholder="Adicione uma tag"
-            />
             <button className="btn" type="submit">Criar</button>
         </form>
     );
