@@ -1958,19 +1958,13 @@ $ npm start
                 <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
             <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 
-<p>Crie o arquivo <code>src/components/Formulario/index.css</code> e coloque o estilo CSS das classes <code>form-card</code>, <code>form-card-tag</code> e <code>btn</code> utilizado nos projetos anteriores.</p>
+<p>Crie o arquivo <code>src/components/Formulario/index.css</code> e coloque o estilo CSS das classes <code>form-card</code>, <code>form-card-title</code> e <code>btn</code> utilizado nos projetos anteriores.</p>
 <h2 id="adicionando-componente-formulario-no-app">Adicionando componente Formulario no App<a class="headerlink" href="#adicionando-componente-formulario-no-app" title="Permanent link">&para;</a></h2>
 <p>Precisamos adicionar o componente <code>Formulario</code> no <code>src/App.js</code>. Podemos pensar no componente como uma função javascript que retorna html. Para utilizar um componente, basta colocar o nome dele entre tags, como se fosse uma tag HTML. Veja o exemplo abaixo:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
@@ -2025,12 +2019,6 @@ $ npm start
                 <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
             <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
@@ -2063,18 +2051,12 @@ $ npm start
                 <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
             <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-Sempre que o usuário interagir com o campo <code>input</code> o evento <code>onChange</code> chamará a função passada, neste caso, a função <code>tituloOnChange</code> será chamada. A função atualiza o valor da variável <code>titulo</code> com o valor digitado pelo usuário utilizando a função <code>setTitulo</code>.</p>
+Sempre que o usuário interagir com o campo <code>input</code> o evento <code>onChange</code> chamará a função <code>tituloOnChange</code>. A função atualiza o valor da variável <code>titulo</code> com o valor digitado pelo usuário utilizando a função <code>setTitulo</code>.</p>
 <p>Outra forma de realizar a mesma coisa é utilizando uma função anônima, veja o exemplo abaixo para o campo <code>content</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
@@ -2102,12 +2084,6 @@ Sempre que o usuário interagir com o campo <code>input</code> o evento <code>on
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
 <span class="hll">                <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
 </span>            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
@@ -2154,12 +2130,6 @@ Sempre que o usuário interagir com o campo <code>input</code> o evento <code>on
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
                 <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
             <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
@@ -2199,7 +2169,7 @@ Sempre que o usuário interagir com o campo <code>input</code> o evento <code>on
 </code></pre></div>
 
 <p>Para isso, vamos mover esse trecho de código para dentro de uma função, para que possamos enviar essa função para o componente <code>Formulario</code>.</p>
-<p>Os componentes são função, desta forma, podemos enviar argumentos para as funções. No caso, vamos enviar a função <code>carregaNotas</code> para o componente <code>Formulario</code> utilizando o nome <code>funcao</code> (pode ser qualquer nome que desejar).</p>
+<p>Vamos enviar a função <code>carregaNotas</code> para o componente <code>Formulario</code> utilizando o nome <code>funcao</code> (pode ser qualquer nome que desejar).</p>
 <div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s2">&quot;axios&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
@@ -2278,12 +2248,6 @@ Como enviamos a função <code>carregaNotas</code> com o nome de <code>funcao</c
                 <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
                 <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
             <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
@@ -2337,12 +2301,6 @@ Como enviamos a função <code>carregaNotas</code> com o nome de <code>funcao</c
                 <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="p">(</span><span class="nx">event</span><span class="p">)=&gt;{</span><span class="nx">setContent</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">)}</span> <span class="p">}</span>
 <span class="hll">                <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">content</span><span class="p">}</span>
 </span>            <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
-            <span class="o">&lt;</span><span class="nx">input</span>
-                <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-tag&quot;</span>
-                <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
-                <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;tag&quot;</span>
-                <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Adicione uma tag&quot;</span>
-            <span class="o">/&gt;</span>
             <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
         <span class="o">&lt;</span><span class="err">/form&gt;</span>
     <span class="p">);</span>
