@@ -67,6 +67,7 @@ nav:
         - "Handout": aulas/08-django-rest.md
     - "09 - React":
       - "Handout": aulas/09-react.md
+      - "Edição: React Router": aulas/09-react/parte2.md
       - "Slides": aulas/09-react/react-components.pdf
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
