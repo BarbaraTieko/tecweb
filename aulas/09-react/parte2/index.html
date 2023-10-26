@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/06-deploy/deploy-projeto2-react/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/09-react/parte2/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Deploy - Projeto 2 (React) - Tecnologias Web - Insper 2023/2</title>
+        <title>Edição: React Router - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploy-projeto-2-react" class="md-skip">
+        <a href="#continuacao" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deploy - Projeto 2 (React)
+              Edição: React Router
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -766,7 +768,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../deploy-railway-django-novo/" title="Deploy Railway" class="md-nav__link">
+    <a href="../../06-deploy/deploy-railway-django-novo/" title="Deploy Railway" class="md-nav__link">
       Deploy Railway
     </a>
   </li>
@@ -778,7 +780,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../deploy-render/" title="Deploy Render" class="md-nav__link">
+    <a href="../../06-deploy/deploy-render/" title="Deploy Render" class="md-nav__link">
       Deploy Render
     </a>
   </li>
@@ -889,10 +891,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-9" type="checkbox" id="nav-3-9" checked>
     
     <label class="md-nav__link" for="nav-3-9">
       09 - React
@@ -916,7 +920,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../09-react/" title="Handout" class="md-nav__link">
+    <a href="../" title="Handout" class="md-nav__link">
       Handout
     </a>
   </li>
@@ -926,11 +930,88 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../09-react/parte2/" title="Edição: React Router" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Edição: React Router
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Edição: React Router" class="md-nav__link md-nav__link--active">
       Edição: React Router
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementando-a-edicao-de-anotacoes" class="md-nav__link">
+    Implementando a edição de anotações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-inicial" class="md-nav__link">
+    Configuração Inicial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-pagina-de-edicao" class="md-nav__link">
+    Criando a página de edição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definindo-uma-nova-rota" class="md-nav__link">
+    Definindo uma nova rota
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegando-para-a-pagina-de-edicao" class="md-nav__link">
+    Navegando para a página de edição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-o-id-da-anotacao" class="md-nav__link">
+    Obtendo o ID da anotação
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -940,7 +1021,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../09-react/react-components.pdf" title="Slides" class="md-nav__link">
+    <a href="../react-components.pdf" title="Slides" class="md-nav__link">
       Slides
     </a>
   </li>
@@ -1234,15 +1315,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#primeiros-passos" class="md-nav__link">
-    Primeiros passos
+  <a href="#implementando-a-edicao-de-anotacoes" class="md-nav__link">
+    Implementando a edição de anotações
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fazendo-o-deploy" class="md-nav__link">
-    Fazendo o deploy
+  <a href="#configuracao-inicial" class="md-nav__link">
+    Configuração Inicial
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-pagina-de-edicao" class="md-nav__link">
+    Criando a página de edição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definindo-uma-nova-rota" class="md-nav__link">
+    Definindo uma nova rota
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegando-para-a-pagina-de-edicao" class="md-nav__link">
+    Navegando para a página de edição
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-o-id-da-anotacao" class="md-nav__link">
+    Obtendo o ID da anotação
   </a>
   
 </li>
@@ -1263,166 +1372,196 @@
                   
                 
                 
-                <h1 id="deploy-projeto-2-react">Deploy - Projeto 2 (React)<a class="headerlink" href="#deploy-projeto-2-react" title="Permanent link">&para;</a></h1>
-<h2 id="primeiros-passos">Primeiros passos<a class="headerlink" href="#primeiros-passos" title="Permanent link">&para;</a></h2>
-<p>Faça primeiramente o <a href="/aulas/06-deploy/deploy-projeto2-django_rest">deploy da sua API Django REST</a></p>
-<p>Depois de ter feito o deploy do backend, altere no seu projeto React todas as requisições com <code>http://localhost:8000</code> pela URL do Heroku. Por exemplo, trocar <code>http://localhost:8000</code> por <code>https://still-cove-69163.herokuapp.com/</code>.</p>
-<p>Faça o login na sua conta do Heroku pelo terminal com o comando (você será redirecionado para a página do Heroku para completar o login):</p>
-<div class="codehilite"><pre><span></span><code>heroku login
+                <h1 id="continuacao">Continuação<a class="headerlink" href="#continuacao" title="Permanent link">&para;</a></h1>
+<h2 id="implementando-a-edicao-de-anotacoes">Implementando a edição de anotações<a class="headerlink" href="#implementando-a-edicao-de-anotacoes" title="Permanent link">&para;</a></h2>
+<p>Para a edição de anotações precisamos implementar uma página nova. Para isso, vamos utilizar o componente <code>Route</code> do <code>react-router-dom</code>. Para instalar o <code>react-router-dom</code> execute o comando:</p>
+<div class="codehilite"><pre><span></span><code>    npm install react-router-dom
 </code></pre></div>
 
 
-<p>Crie uma aplicação utilizando o comando:</p>
-<div class="codehilite"><pre><span></span><code>heroku create
+<p>Para mais detalhes visite: <a href="https://reactrouter.com/en/main/start/overview">https://reactrouter.com/en/main/start/overview</a></p>
+<h2 id="configuracao-inicial">Configuração Inicial<a class="headerlink" href="#configuracao-inicial" title="Permanent link">&para;</a></h2>
+<p>Faça as seguintes atualizações no arquivo <code>src/index.js</code>:</p>
+<p>Vamos utilizar o React Router para definir qual componente devemos renderizar dependendo da rota.</p>
+<p>A princípio estamos definindo que ao acessar a rota <code>/</code> queremos renderizar o componente <code>App</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/client&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;./index.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">reportWebVitals</span> <span class="nx">from</span> <span class="s1">&#39;./reportWebVitals&#39;</span><span class="p">;</span>
+<span class="hll"><span class="kr">import</span> <span class="p">{</span> <span class="nx">createBrowserRouter</span><span class="p">,</span> <span class="nx">RouterProvider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+</span>
+<span class="hll"><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">createBrowserRouter</span><span class="p">([</span>
+</span><span class="hll">  <span class="p">{</span>
+</span><span class="hll">    <span class="nx">path</span><span class="o">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="nx">element</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="hll"><span class="p">]);</span>
+</span>
+<span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+<span class="hll">    <span class="o">&lt;</span><span class="nx">RouterProvider</span> <span class="nx">router</span><span class="o">=</span><span class="p">{</span><span class="nx">router</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span>  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;</span>
+<span class="p">);</span>
 </code></pre></div>
 
-
-<p>Esse comando vai criar uma aplicação com nome aleatório e vai imprimir no terminal algo parecido com isso:</p>
-<div class="highlight"><pre><span></span><code>Creating app... done, ⬢ pacific-atoll-56033
-https://pacific-atoll-56033.herokuapp.com/ | https://git.heroku.com/pacific-atoll-56033.git
+<h2 id="criando-a-pagina-de-edicao">Criando a página de edição<a class="headerlink" href="#criando-a-pagina-de-edicao" title="Permanent link">&para;</a></h2>
+<p>Vamos criar um componente novo para a página de edição. Crie um arquivo <code>src/components/Edit/index.js</code> com o seguinte conteúdo:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Edit</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">main</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">input</span>
+                        <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                        <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                        <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                    <span class="o">/&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">textarea</span>
+                        <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                        <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+                    <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+                <span class="o">&lt;</span><span class="err">/form&gt;</span>
+            <span class="o">&lt;</span><span class="err">/main &gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<p>No exemplo acima, a aplicação se chama <code>still-cove-69163</code>. Guarde o nome da sua aplicação.</p>
-<details class="info"><summary>Criando uma aplicação com nome específico</summary><p>Você pode escolher o nome da sua aplicação com o comando <code>heroku create nome-da-aplicacao</code>, mas ele precisa ser único <strong>em todo o Heroku</strong>, ou seja, ninguém pode ter criado um projeto com o mesmo nome.</p>
-</details>
-<p>Entre na pasta do seu projeto pelo terminal.</p>
-<details class="danger"><summary>Importante - .gitignore</summary><p>Seu projeto deve estar no git. Se não estiver, crie um repositório antes de seguir para os próximos passos deste handout.</p>
-<p>Quando for criar o repositório, adicione um arquivo chamado <code>.gitignore</code> com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code># Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+<p>O conteúdo é basicamente o formulário que já tínhamos na página principal. Porém vamos utilizá-lo para editar uma anotação.</p>
+<h2 id="definindo-uma-nova-rota">Definindo uma nova rota<a class="headerlink" href="#definindo-uma-nova-rota" title="Permanent link">&para;</a></h2>
+<p>Agora vamos definir uma nova rota para a página de edição. Queremos definir a rota <code>/edit/:noteId</code> para que possamos editar uma anotação específica.
+Para isso, vamos atualizar o arquivo <code>src/index.js</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom/client&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;./index.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">reportWebVitals</span> <span class="nx">from</span> <span class="s1">&#39;./reportWebVitals&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createBrowserRouter</span><span class="p">,</span> <span class="nx">RouterProvider</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+<span class="hll"><span class="kr">import</span> <span class="nx">Edit</span> <span class="nx">from</span> <span class="s1">&#39;./components/Edit&#39;</span><span class="p">;</span>
+</span>
+<span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">createBrowserRouter</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">path</span><span class="o">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="nx">element</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="hll">  <span class="p">{</span>
+</span><span class="hll">    <span class="nx">path</span><span class="o">:</span> <span class="s2">&quot;edit/:noteId&quot;</span><span class="p">,</span>
+</span><span class="hll">    <span class="nx">element</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Edit</span> <span class="o">/&gt;</span><span class="p">,</span>
+</span><span class="hll">  <span class="p">}</span>
+</span><span class="p">]);</span>
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Directory for instrumented libs generated by jscoverage/JSCover
-lib-cov
-
-# Coverage directory used by tools like istanbul
-coverage
-*.lcov
-
-# nyc test coverage
-.nyc_output
-
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
-.grunt
-
-# Bower dependency directory (https://bower.io/)
-bower_components
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
-
-# TypeScript v1 declaration files
-typings/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of &#39;npm pack&#39;
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env
-.env.test
-
-# parcel-bundler cache (https://parceljs.org/)
-.cache
-
-# Next.js build output
-.next
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-# Comment in the public line in if your project uses Gatsby and *not* Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
+<span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+<span class="nx">root</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+  <span class="o">&lt;</span><span class="nx">React</span><span class="p">.</span><span class="nx">StrictMode</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">RouterProvider</span> <span class="nx">router</span><span class="o">=</span><span class="p">{</span><span class="nx">router</span><span class="p">}</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;</span><span class="err">/React.StrictMode&gt;</span>
+<span class="p">);</span>
 </code></pre></div>
 
-</details>
-<p>O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (<strong>importante 1:</strong> execute este comando na pasta raiz do seu projeto; <strong>importante 2:</strong> troque o <code>still-cove-69163</code> pelo nome do seu app gerado pelo Heroku):</p>
-<div class="codehilite"><pre><span></span><code>heroku git:remote -a &lt;nome do app&gt;
+<h2 id="navegando-para-a-pagina-de-edicao">Navegando para a página de edição<a class="headerlink" href="#navegando-para-a-pagina-de-edicao" title="Permanent link">&para;</a></h2>
+<p>Vamos criar um link para navegar para a página de edição. Não vamos utilizar a tag html <code>#!html&lt;a&gt;</code>, vamos utilizar o componente <code>Link</code> do <code>react-router-dom</code>. </p>
+<p>Para isso, vamos atualizar o arquivo <code>src/components/Note/index.js</code>:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react&quot;</span><span class="p">;</span>
+<span class="hll"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Link</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;react-router-dom&quot;</span><span class="p">;</span>
+</span><span class="kr">import</span> <span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">randomInt</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">min</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
+    <span class="nx">max</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="nx">min</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">randomColor</span><span class="p">(){</span>
+    <span class="kr">const</span> <span class="nx">cores</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#ead3a7&quot;</span><span class="p">,</span> <span class="s2">&quot;#9de0f5&quot;</span><span class="p">,</span> <span class="s2">&quot;#ef89ba&quot;</span><span class="p">,</span> <span class="s2">&quot;#fae890&quot;</span><span class="p">,</span> <span class="s2">&quot;#abe9c1&quot;</span><span class="p">]</span>
+    <span class="kr">const</span> <span class="nx">indice</span> <span class="o">=</span> <span class="nx">randomInt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">cores</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">cores</span><span class="p">[</span><span class="nx">indice</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Note</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">[</span><span class="nx">rotation</span><span class="p">,</span> <span class="nx">setRotation</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">setRotation</span><span class="p">(</span><span class="nx">randomInt</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span>
+    <span class="p">},</span> <span class="p">[]);</span>
+
+    <span class="kr">const</span> <span class="nx">style</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">transform</span><span class="o">:</span> <span class="sb">`rotate(</span><span class="si">${</span><span class="nx">rotation</span><span class="si">}</span><span class="sb">deg)`</span><span class="p">,</span> <span class="nx">backgroundColor</span><span class="o">:</span> <span class="nx">randomColor</span><span class="p">()</span> <span class="p">};</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+<span class="hll">        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card&quot;</span> <span class="nx">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span class="hll">            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-action&quot;</span><span class="o">&gt;</span>
+</span><span class="hll">                <span class="o">&lt;</span><span class="nx">h3</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-title&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
+</span><span class="hll">                <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;icons&quot;</span><span class="o">&gt;</span>
+</span><span class="hll">                    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span class="hll">                        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">to</span><span class="o">=</span><span class="p">{</span><span class="sb">`edit/</span><span class="si">${</span><span class="nx">props</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span class="hll">                            <span class="o">&lt;</span><span class="nx">i</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;fas fa-edit&quot;</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+</span><span class="hll">                        <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+</span><span class="hll">                    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class="hll">                <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class="hll">            <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class="hll">            <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-content&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class="hll">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span>    <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<div style="width: 50%; margin-left:10rem;">
+  <img alt="Imagem de um card" src="../card.png" />
+</div></p>
+<p>Para utilizar um ícone de excluir foi utilizado o <a href="https://fontawesome.com/">Font Awesome</a>. Adicione o código abaixo dentro da tag <code class="highlight"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span></code> do arquivo <code>public/index.html</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://kit.fontawesome.com/7ae3e92237.js&quot;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
+<p>Adicione também o seguinte estilo no arquivo <code>src/components/Note/index.css</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">card-action</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+    <span class="k">justify-content</span><span class="p">:</span> <span class="kc">space-between</span><span class="p">;</span>
+<span class="p">}</span>
 
-<p>Para confirmar se está tudo certo, utilize o comando:</p>
-<div class="codehilite"><pre><span></span><code>git remote -v
+<span class="p">.</span><span class="nc">icons</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 
+<p>Agora, ao clicar no botão de editar, vamos navegar para a página de edição através da rota <code>edit/noteID</code>.</p>
+<h2 id="obtendo-o-id-da-anotacao">Obtendo o ID da anotação<a class="headerlink" href="#obtendo-o-id-da-anotacao" title="Permanent link">&para;</a></h2>
+<p>Para obter o ID da anotação, vamos utilizar o <code>useParams</code> do <code>react-router-dom</code>. Para isso, vamos atualizar o arquivo <code>src/components/Edit/index.js</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="hll"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useParams</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+</span><span class="kr">import</span> <span class="nx">axios</span> <span class="nx">from</span> <span class="s1">&#39;axios&#39;</span><span class="p">;</span>
 
-<p>Ele deve listar (além de outros) os seguintes repositórios (claro, com o nome do seu app):</p>
-<div class="highlight"><pre><span></span><code>heroku  https://git.heroku.com/pacific-atoll-56033.git (fetch)
-heroku  https://git.heroku.com/pacific-atoll-56033.git (push)
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Edit</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="kr">const</span> <span class="p">{</span> <span class="nx">noteId</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useParams</span><span class="p">();</span>
+</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;App&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">main</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">input</span>
+                        <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;form-card-title&quot;</span>
+                        <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+                        <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;titulo&quot;</span>
+                        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Título&quot;</span>
+                    <span class="o">/&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">textarea</span>
+                        <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;autoresize&quot;</span>
+                        <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;detalhes&quot;</span>
+                        <span class="nx">placeholder</span><span class="o">=</span><span class="s2">&quot;Digite o conteúdo...&quot;</span>
+                    <span class="o">&gt;&lt;</span><span class="err">/textarea&gt;</span>
+                    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&quot;btn&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="nx">Criar</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+                <span class="o">&lt;</span><span class="err">/form&gt;</span>
+            <span class="o">&lt;</span><span class="err">/main &gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
 
-<h2 id="fazendo-o-deploy">Fazendo o deploy<a class="headerlink" href="#fazendo-o-deploy" title="Permanent link">&para;</a></h2>
-<p>Agora estamos prontos para fazer o deploy! <strong>Faça um commit com todas essas modificações</strong> e depois faça o push com o comando a seguir:</p>
-<div class="codehilite"><pre><span></span><code>git push heroku master
-</code></pre></div>
-
-
-<div class="admonition danger">
-<p class="admonition-title">Se o comando acima não funcionar</p>
-<p>Tente rodar o comando:
-<div class="highlight"><pre><span></span><code>git push heroku main
-</code></pre></div></p>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Tente implementar o restante do componente para finalizar a edição de anotações. </p>
 </div>
-<p>Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor.</p>
                 
               
               
@@ -1437,6 +1576,41 @@ heroku  https://git.heroku.com/pacific-atoll-56033.git (push)
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../" title="Handout" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Handout
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../react-components.pdf" title="Slides" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Slides
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
