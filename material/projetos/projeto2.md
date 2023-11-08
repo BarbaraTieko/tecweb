@@ -4,7 +4,9 @@
 
 **Inception do Projeto até: 23/10/2023 (terça-feira)** [[Clique aqui para acessar o formulário]](https://forms.gle/xri6TkeRbNHWpZwc9){:target="_blank"}
 
-**Entrega: 09/11/2023**
+~~Entrega: 09/11/2023~~
+
+**Entrega: 12/11/2023**
 
 **Entrega via GitHub Classroom:**
 Para este projeto será necessário criar dois repositório GitHub, um para o frontend e outro para o backend.

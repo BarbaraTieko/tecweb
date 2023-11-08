@@ -27,7 +27,8 @@ Bem-vind@ ao curso de Tecnologias Web 2023/2
  - 30/09: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
  - ~~19/10: Entrega do [Servidor JS]~~
  - 26/10: Entrega do [Servidor JS](entregas/03-servidor-js.md)
- - 09/11: Entrega do [Projeto 2](projetos/projeto2.md)
+ - ~~09/11: Entrega do [Projeto 2]~~
+ - 12/11: Entrega do [Projeto 2](projetos/projeto2.md)
 
  **Lição de Casa**
 
