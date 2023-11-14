@@ -2,6 +2,11 @@
 
 **Entrega: 29/11/2023**
 
+**Entrega via GitHub Classroom:**
+
+- Github Classroom: [https://classroom.github.com/a/Jt8DU81q](https://classroom.github.com/a/Jt8DU81q){:target="_blank"}
+
+
 **Trabalho em grupos de 3 ou 4**
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
