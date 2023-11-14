@@ -70,6 +70,7 @@ nav:
       - "Handout": aulas/09-react.md
       - "Edição: React Router": aulas/09-react/parte2.md
       - "Slides": aulas/09-react/react-components.pdf
+    - "10 - Autenticação Django REST": aulas/10-autenticacao.md
   - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
