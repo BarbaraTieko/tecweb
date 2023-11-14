@@ -60,6 +60,7 @@ nav:
     - "06 - Deploy": 
       - "Deploy Railway": aulas/06-deploy/deploy-railway-django-novo.md
       - "Deploy Render": aulas/06-deploy/deploy-render.md
+      - "Deploy Render frontend": aulas/06-deploy/deploy-render-django-novo.md
     - "07 - Javascript":
         - "Handout": aulas/07-javascript.md
     - "08 - Django REST":
@@ -82,6 +83,7 @@ nav:
     - "Projeto 1A": projetos/projeto1/projeto1a.md
     - "Projeto 1B": projetos/projeto1/projeto1b.md
     - "Projeto 2": projetos/projeto2.md
+    - "Projeto 3": projetos/projeto3.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
 extra_javascript:

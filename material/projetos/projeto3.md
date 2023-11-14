@@ -1,5 +1,7 @@
 # Projeto 3: Livre
 
+**Entrega: 29/11/2023**
+
 **Trabalho em grupos de 3 ou 4**
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
@@ -7,7 +9,7 @@ O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
-    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/hTWV8YExVsubFNcm7){target="_blank"}
+    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/SLkuvojSwhm9nB3m7){target="_blank"}
 
 ## Restrições
 
@@ -34,7 +36,6 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
         - CRUD feito em Django;
         - Funcionalidades no frontend feitas em aulas e projetos passados;
     - Alguns exemplos de funcionalidades médias:
-        - Frontend React utilizando algum componente pronto/diferente.
         - Funcionalidade fácil para frontend, com capricho acima do esperado (Utilizando algum componente pronto ou estilo css);
     - Alguns exemplos de funcionalidades difíceis:
         - Autenticação de usuário;
@@ -73,4 +74,4 @@ Acesse mais detalhes da avaliação em grupo: [Teamwork](teamwork.md)
 |    B     | Teve avaliação abaixo do esperado em 1 sprint. |
 |    C     | Teve avaliação abaixo do esperado em 2 sprints. |
 |    D     | Teve avaliação de desempenho abaixo do esperado em 3 sprints. |
-|    I     | Não respondeu nenhum questionário dentro do prazo. Ou grupo possui menos de 3 integrantes.|
+|    I     | Não respondeu nenhum questionário dentro do prazo. Ou grupo possui menos de 3 integrantes. Ou não possui nenhum contribuição significativa no projeto.|
