@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/06-deploy/deploy-railway-django-novo-20231/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2023.2/aulas/06-deploy/deploy-render-django-novo/">
       
       
         <meta name="author" content="Andrew Kurauchi">
@@ -19,7 +19,7 @@
     
     
       
-        <title>Deploy da Aplicação - Tecnologias Web - Insper 2023/2</title>
+        <title>Deploy Render frontend - Tecnologias Web - Insper 2023/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deploy-da-aplicacao" class="md-skip">
+        <a href="#deploy-frontend" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deploy da Aplicação
+              Deploy Render frontend
             
           </span>
         </div>
@@ -264,10 +264,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Aulas
@@ -739,10 +741,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6" checked>
     
     <label class="md-nav__link" for="nav-3-6">
       06 - Deploy
@@ -788,11 +792,56 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../deploy-render-django-novo/" title="Deploy Render frontend" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy Render frontend
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Deploy Render frontend" class="md-nav__link md-nav__link--active">
       Deploy Render frontend
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-frontend" class="md-nav__link">
+    Deploy Frontend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1246,8 +1295,30 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-frontend" class="md-nav__link">
+    Deploy Frontend
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    Referências
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1263,167 +1334,15 @@
                   
                 
                 
-                <h1 id="deploy-da-aplicacao">Deploy da Aplicação<a class="headerlink" href="#deploy-da-aplicacao" title="Permanent link">&para;</a></h1>
-<p>Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a <a href="https://aws.amazon.com/">Amazon AWS</a>, <a href="https://www.digitalocean.com/">DigitalOcean</a>, <a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, <a href="https://www.linode.com/">Linode</a>, <a href="https://www.heroku.com/">Heroku</a> ...</p>
-<p>Para o projeto 1B vamos ver uma outra opções para fazer deploy. Lembrando que não há restrição para qual serviço devem utilizar. Estejam livres para utilizar o que preferirem.</p>
+                  <h1>Deploy Render frontend</h1>
+                
+                <h2 id="deploy-frontend">Deploy Frontend<a class="headerlink" href="#deploy-frontend" title="Permanent link">&para;</a></h2>
+<p>Caso o seu projeto tenha algum projeto <strong>frontend</strong> (React), uma opção gratuita e fácil é o <a href="https://vercel.com/">Vercel</a>. O deploy no Vercel é bem intuitivo.</p>
+<p><div class="video-container"><iframe src="https://www.youtube.com/embed/3n-0kngCv4c" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
 <div class="admonition tip">
 <p class="admonition-title">Vídeo</p>
-<p>Vídeo com algumas instruções para fazer o deploy: <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">https://www.youtube.com/watch?v=D58ug70Em8g</a></p>
+<p>O vídeo também pode ser acessado em: <a href="https://youtu.be/3n-0kngCv4c" target="_blank">https://youtu.be/3n-0kngCv4c</a></p>
 </div>
-<h1 id="crie-uma-conta">Crie uma conta<a class="headerlink" href="#crie-uma-conta" title="Permanent link">&para;</a></h1>
-<p>Vamos utilizar o serviço <a href="https://railway.app">Railway</a> que oferece um valor de $5 dólares para que possamos testar o serviço e o que é suficiente para o nosso projeto.</p>
-<p>Veja o <a href="https://www.youtube.com/watch?v=D58ug70Em8g" target="_blank">Vídeo</a> até a duração de <code>0:50</code> para criar a conta.</p>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Não adicione/cadastre nenhum informação de pagamento.</p>
-</div>
-<h3 id="aplicacoes-com-postgres">Aplicações com Postgres<a class="headerlink" href="#aplicacoes-com-postgres" title="Permanent link">&para;</a></h3>
-<p>Para a configuração do banco de dados, siga os passos descritos no <a href="https://youtu.be/D58ug70Em8g?t=50" target="_blank">vídeo</a> a partir do tempo <code>0:50</code> até <code>1:17</code>.</p>
-<p>Em seguida faça as alterações abaixo em seu projeto no projeto.</p>
-<p>Vamos instalar o <code>dj-database-url</code>:</p>
-<div class="codehilite"><pre><span></span><code>pip install dj-database-url
-</code></pre></div>
-
-
-<p>Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o <code>requirements.txt</code>:</p>
-<div class="codehilite"><pre><span></span><code>pip freeze &gt; requirements.txt
-</code></pre></div>
-
-
-<p>Adicione o <code class="highlight"><span class="kn">import</span></code> no <code>settings.py</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">dj_database_url</span>
-</code></pre></div>
-
-<p>Depois substitua o dicionário <code class="highlight"><span class="n">DATABASES</span></code> pelo código abaixo:</p>
-<div class="highlight"><pre><span></span><code><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">dj_database_url</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
-        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
-        <span class="n">conn_max_age</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
-        <span class="n">ssl_require</span><span class="o">=</span><span class="ow">not</span> <span class="n">DEBUG</span>
-    <span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<p>No campo <strong>default</strong> adicione a informação que apresentada no Postgres do Railway, campo <strong>DATABASE URL</strong>.</p>
-<p><img alt="DATABASE URL" src="../postgres-railway.png" /></p>
-<h2 id="configurando-o-projeto">Configurando o projeto<a class="headerlink" href="#configurando-o-projeto" title="Permanent link">&para;</a></h2>
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Seu projeto deve estar no git. Se não estiver, crie um repositório antes de seguir para os próximos passos deste handout.</p>
-<p>Quando for criar o repositório, adicione um arquivo chamado <code>.gitignore</code> com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code>env/
-*.egg-info
-*.pot
-*.py[co]
-.tox/
-__pycache__
-MANIFEST
-dist/
-docs/_build/
-docs/locale/
-node_modules/
-tests/coverage_html/
-tests/.coverage
-build/
-tests/report/
-</code></pre></div>
-
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Importante 2</p>
-<p>O projeto Django deve estar na raiz do repositório github.
-<div class="highlight"><pre><span></span><code>&gt; REPOSITÓRIO GIT
-    &gt; getit
-    &gt; notes
-    manage.py
-    requirements.txt
-</code></pre></div></p>
-</div>
-<p>Até o momento, nós utilizamos o <code>python manage.py runserver</code> para executar o nosso servidor localmente. Esse comando é apropriado apenas para testes no ambiente de desenvolvimento. Ele não é otimizado para uma aplicação real. Para isso precisamos de um servidor de <strong>Web Server Gateway Interface (WSGI)</strong>, que basicamente é um intermediário entre as requisições que chegam no servidor e o código Python. No nosso projeto nós utilizaremos o <a href="https://gunicorn.org/">Gunicorn (Green Unicorn)</a>. Você pode instalá-lo com (<strong>importante:</strong> lembre-se de ativar o ambiente virtual):</p>
-<div class="codehilite"><pre><span></span><code>pip install gunicorn
-</code></pre></div>
-
-
-<div class="admonition info">
-<p class="admonition-title">O arquivo <code>wsgi.py</code></p>
-<p>O comando acima executou o Gunicorn com o arquivo de configuração <code>getit/wsgi.py</code>. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo <code>wsgi.py</code> dentro da pasta do projeto.</p>
-</div>
-<p>Agora vamos definir o arquivo de configuração. Crie um arquivo chamado <code>Procfile</code> (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o <code>.txt</code> automaticamente) na raiz do projeto com o seguinte conteúdo:</p>
-<div class="highlight"><pre><span></span><code>release: python manage.py migrate
-web: gunicorn getit.wsgi
-</code></pre></div>
-
-<p>A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Provavelmente o seu projeto Django possui outro nome, então você deve alterar a linha <strong>web: gunicorn getit.wsgi</strong> por <strong>web: gunicorn NOME_DO_SEU_PROJETO.wsgi</strong></p>
-</div>
-<h3 id="outras-modificacoes-nas-configuracoes">Outras modificações nas configurações<a class="headerlink" href="#outras-modificacoes-nas-configuracoes" title="Permanent link">&para;</a></h3>
-<p>Aproveite que está com o <code>settings.py</code> aberto e modifique o valor da constante <code>DEBUG</code> para <code>False</code>. Além disso, procure pela lista <code>ALLOWED_HOSTS</code>. Ela deve ser uma lista vazia.</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<p>Quando tivermos o host gerado vamos alterar o <em>ALLOWED_HOSTS</em>  para adicionar o nome do host gerado, <code class="highlight"><span class="s1">&#39;localhost&#39;</span></code> e o <code class="highlight"><span class="s1">&#39;127.0.0.1&#39;</span></code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NOME_DO_HOST_GERADO&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<h3 id="criando-o-arquivo-requirementstxt">Criando o arquivo <code>requirements.txt</code><a class="headerlink" href="#criando-o-arquivo-requirementstxt" title="Permanent link">&para;</a></h3>
-<p>Vamos gerar o <code>requirements.txt</code></p>
-<div class="codehilite"><pre><span></span><code>pip freeze &gt; requirements.txt
-</code></pre></div>
-
-
-<div class="admonition danger">
-<p class="admonition-title">Importante</p>
-<p>Note que você deverá executar o comando <code>pip freeze &gt; requirements.txt</code> com o ambiente virtual ativado. Após rodar o comando verifique o arquivo <code>requirements.txt</code> que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.</p>
-</div>
-<p>Abra o arquivo <code>requirements.txt</code> e altere a linha contendo <code>psycopg2==X.X.X</code> por <code>psycopg2-binary==X.X.X</code>. Mantenha a versão já existente.</p>
-<h3 id="configurando-os-arquivos-estaticos">Configurando os arquivos estáticos<a class="headerlink" href="#configurando-os-arquivos-estaticos" title="Permanent link">&para;</a></h3>
-<p>Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira <strong>muito</strong> mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.</p>
-<p>Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o <a href="http://whitenoise.evans.io/en/stable/">WhiteNoise</a>:</p>
-<div class="codehilite"><pre><span></span><code>pip install whitenoise
-</code></pre></div>
-
-
-<p>O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo <code>getit/settings.py</code> e procure pela lista <code>MIDDLEWARE</code> e adicione o seguinte conteúdo logo depois de <code>'django.middleware.security.SecurityMiddleware',</code>:</p>
-<div class="codehilite"><pre><span></span><code>&#39;whitenoise.middleware.WhiteNoiseMiddleware&#39;,
-</code></pre></div>
-
-
-<p>Nesse mesmo arquivo, procure por <code>STATIC_URL = '/static/'</code> e adicione a seguinte linha logo em seguida:</p>
-<div class="codehilite"><pre><span></span><code>STATIC_ROOT = BASE_DIR / &#39;staticfiles&#39;
-</code></pre></div>
-
-
-<p>A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante <code>STATIC_ROOT</code> define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).</p>
-<p>Como instalamos o <code>whitenoise</code> precisamos atualizar o <code>requirements.txt</code>. Desta forma, rode o comando abaixo novamente.</p>
-<div class="codehilite"><pre><span></span><code>pip freeze &gt; requirements.txt
-</code></pre></div>
-
-
-<h3 id="faca-commit">Faça commit<a class="headerlink" href="#faca-commit" title="Permanent link">&para;</a></h3>
-<p>Faça o commit das mudanças do seu projeto.</p>
-<h3 id="adicionando-projeto-no-railway">Adicionando projeto no Railway<a class="headerlink" href="#adicionando-projeto-no-railway" title="Permanent link">&para;</a></h3>
-<p>Vá no site do Railway para escolher o repositório github do projeto para fazer o deploy. Para mais detalhes veja o <a href="https://youtu.be/D58ug70Em8g?t=252" target="_blank">vídeo</a>.</p>
-<div class="admonition dange">
-<p class="admonition-title">Importante</p>
-<p>Diferente do vídeo, você deve escolher o repositório com o nome <code>insper-tecnologias-web/{O NOME DO SEU REPOSITÓRIO}</code></p>
-<p>Será algo parecido com a imagem abaixo:
-<img alt="Selecionado repositório" src="../railway-escolhendo-projeto.png" /></p>
-</div>
-<h2 id="passo-final">Passo final<a class="headerlink" href="#passo-final" title="Permanent link">&para;</a></h2>
-<p>Vá no arquivo <code>settings.py</code> e atualize a variável <code>ALLOWED_HOSTS</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;web-production-a9f3.up.railway.app&#39;</span><span class="p">,</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
-</code></pre></div>
-
-<p>Substitua <code>web-production-a9f3.up.railway.app</code> pelo link da sua aplicação gerado pelo Railway.</p>
-<p>Adicione na linha seguinte:
-<div class="highlight"><pre><span></span><code><span class="n">CSRF_TRUSTED_ORIGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;https://web-production-a9f3.up.railway.app&#39;</span><span class="p">]</span>
-</code></pre></div></p>
-<p>Trocando também o link <code>https://web-production-a9f3.up.railway.app</code> pelo link da sua aplicação.</p>
-<h2 id="rodando-o-projeto-localmente">Rodando o projeto localmente<a class="headerlink" href="#rodando-o-projeto-localmente" title="Permanent link">&para;</a></h2>
-<p>Para rodar o projeto localmente, mude a variável <code>Debug</code> presente no arquivo <code>settings.py</code> para <code class="highlight"><span class="kc">True</span></code>.</p>
-<p>Sempre que você commitar mudanças no repositório Github na branch principal, o Railway fará um novo deploy.</p>
 <h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): <a href="https://www.youtube.com/watch?v=kBwhtEIXGII">https://www.youtube.com/watch?v=kBwhtEIXGII</a></li>
@@ -1446,6 +1365,41 @@ web: gunicorn getit.wsgi
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../deploy-render/" title="Deploy Render" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Deploy Render
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../07-javascript/" title="Handout" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Handout
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
