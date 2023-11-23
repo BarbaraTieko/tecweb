@@ -31,6 +31,7 @@ Bem-vind@ ao curso de Tecnologias Web 2023/2
  - 12/11: Entrega do [Projeto 2](projetos/projeto2.md)
  - 29/11: Entrega do [Projeto 3](projetos/projeto3.md)
 
- **Lição de Casa**
+ **Avaliação Final - Ponto Extra**
 
- - 19/09: Fazer a instalação do WSL e Docker - [Acesse](https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows)
+ - [Ponto Extra AF](simulado/avaliacao-final-ponto-extra.md)
+
