@@ -87,6 +87,7 @@ nav:
     - "Projeto 3": projetos/projeto3.md
   - Simulado:
     - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
+    - "Avaliação Final": simulado/avaliacao-final-2023-2.md
   - "Avaliação do Professor": avaliacao.md
   - "Ponto extra - Avaliação Final": simulado/avaliacao-final-ponto-extra.md
 extra_javascript:
