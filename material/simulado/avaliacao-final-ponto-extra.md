@@ -39,10 +39,11 @@ Para ganhar 1 ponto na prova da avaliação final você deve seguir os passos ab
 
 - Caso o projeto React esteja fazendo requisições para o projeto backend Django, altere as rotas o `localhost`;
 
-- Feitas as alterações acima, mostre para a professora para validar o ponto;
-
 - Crie um ambiente virtual para o projeto backend;
 
 - Teste o projeto para verificar se tudo está funcionando corretamente;
+
+- Feitas as alterações acima, mostre para a professora para validar o ponto;
+
 
 Note que a nota máxima da prova são 10 pontos;
