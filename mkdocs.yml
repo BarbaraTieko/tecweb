@@ -1,10 +1,10 @@
-site_name: Tecnologias Web - Insper 2023/2
+site_name: Tecnologias Web - Insper 2024/1
 site_author: Andrew Kurauchi
 
 extra:
   materia: Tecnologias Web
   professor: Barbara Agena
-  semestre: 2023/2
+  semestre: 2024/1
 
 theme:
   feature:
@@ -34,62 +34,10 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
-    - "02 - Desafio CSS": 
-      - "Enunciado": aulas/02-desafio-css.md
-      - "Slides": aulas/02-desafio-css/Aula02.pdf
-    - "03 - Persistência de dados":
-      - "Handout": aulas/03-persistencia-de-dados.md
-      - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
-      - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
-      - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
-      - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
-      - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
-      - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
-    - "04 - Django":
-      - "Slides": "aulas/04-django/Aula07.pdf"
-      - "Handout": aulas/04-django.md
-      - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
-      - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
-      - "Handout Parte 3: Integrando com o banco de dados": aulas/04-django/parte3.md
-      - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
-      - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
-      - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
-    - "05 - Containers e Bancos de Dados":
-      - "Slides": "aulas/05-bd/Aula09.pdf"
-      - "Handout": aulas/05-bd.md
-    - "06 - Deploy": 
-      - "Deploy Railway": aulas/06-deploy/deploy-railway-django-novo.md
-      - "Deploy Render": aulas/06-deploy/deploy-render.md
-      - "Deploy Render frontend": aulas/06-deploy/deploy-render-django-novo.md
-    - "07 - Javascript":
-        - "Handout": aulas/07-javascript.md
-    - "08 - Django REST":
-        - "Slides": aulas/08-django-rest/Aula18.pdf
-        - "Handout": aulas/08-django-rest.md
-    - "09 - React":
-      - "Handout": aulas/09-react.md
-      - "Edição: React Router": aulas/09-react/parte2.md
-      - "Slides": aulas/09-react/react-components.pdf
-    - "10 - Autenticação Django REST": aulas/10-autenticacao.md
-  - "Avaliação do Professor": avaliacao.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
-    - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
-    - "Guia Many-to-one": aulas/guia-many-to-one.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
-    - "02 - Desafio CSS": aulas/02-desafio-css.md
-    - "03 - Servidor JS": entregas/03-servidor-js.md
-  - Projetos:
-    - "Projeto 1A": projetos/projeto1/projeto1a.md
-    - "Projeto 1B": projetos/projeto1/projeto1b.md
-    - "Projeto 2": projetos/projeto2.md
-    - "Projeto 3": projetos/projeto3.md
-  - Simulado:
-    - "Avaliação Intermediária": simulado/avaliacao-intermediaria.md
-    - "Avaliação Final": simulado/avaliacao-final-2023-2.md
-  - "Avaliação do Professor": avaliacao.md
-  - "Ponto extra - Avaliação Final": simulado/avaliacao-final-ponto-extra.md
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
