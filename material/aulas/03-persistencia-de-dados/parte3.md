@@ -78,7 +78,7 @@ db.add(Note(title=None, content='Lembrar de tomar água'))
 
     - [ ] Cria uma tabela nova no banco de dados.
     - [ ] Cria somente um objeto do tipo `Note`.
-    - [X] Cria um objeto do tipo `Note` e inseri os dados no banco de dados.
+    - [X] Cria um objeto do tipo `Note` e insere os dados no banco de dados.
     - [ ] Nenhuma das opções anteriores.
 
     !!! details "Resposta"

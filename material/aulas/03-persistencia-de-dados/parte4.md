@@ -30,9 +30,9 @@ for linha in cursor:
     ```python
     cursor = conn.execute("SELECT identificador, nome_da_rua, cpf FROM dados_pessoais")
     for linha in cursor:
-    identificador = linha[0]
-    nome_da_rua = linha[1]
-    cpf = linha[2]
+        identificador = linha[0]
+        nome_da_rua = linha[1]
+        cpf = linha[2]
     ```
 
     O teste `#!python test_select_rows` do `test_database.py` verifica se esse método está correto.

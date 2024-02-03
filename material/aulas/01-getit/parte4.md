@@ -142,7 +142,7 @@ Modifique seu programa principal da seguinte maneira:
 
     Será necessário fazer duas alterações na função `index`:
 
-    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` para utilizar a função `build_response`.
+    1. No retorno principal, será necessário alterar a última linha `#!python return load_template('index.html').format(notes=notes).encode()` para utilizar a função `build_response`. Certifique-se de não estar chamando a função `encode` duas vezes.
     2. No caso de requisição com o método `POST`, você deve devolver o resultado de `#!python build_response(code=303, reason='See Other', headers='Location: /')`.
 
 Se tudo estiver correto você pode preencher o formulário e enviar. A lista de anotações deve ser atualizada e, ao recarregar a página, o navegador não deve perguntar novamente se você quer reenviar o formulário.
