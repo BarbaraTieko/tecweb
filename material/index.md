@@ -6,7 +6,7 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 
 - Barbara Agena (barbarata@insper.edu.br)
 
-**Professor Auxiliar**
+**Professora Auxiliar**
 
 - Manoela Campos (manoelaclc1@insper.edu.br)
 
@@ -20,3 +20,5 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 - QUI 09:30 - 11:00
 
 **Algumas Datas**
+
+- 09/02: Entrega do [ELI5](entregas/01-ELI5.md)
