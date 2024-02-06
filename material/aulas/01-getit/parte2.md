@@ -89,6 +89,7 @@ Altere novamente o código do seu servidor para:
 --8<-- "01-getit/codigo/passo7.py"
 ```
 
+
 Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. 
 
 Para executar os testes basta rodar o arquivo no terminal (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).: 
@@ -128,6 +129,49 @@ Ao rodar os teste a saída do terminal deverá ser algo parecido com as mensagen
 !!! tip "Dica"
     É possível verificar se a implementação da função pedida no exercício anterior está correta, basta rodar os testes.
     Por exemplo, se a implementação da função `extract_route` não estiver correta, então algumas mensagens de erro serão apresentadas no terminal ao rodar os testes.
+
+!!! question choice
+    No código do `servidor.py`, adicionamos um import para a biblioteca `#!python pathlib`. Essa biblioteca é utilizada para manipulação de caminhos de arquivos e diretórios. Qual o conteúdo da variável `CUR_DIR` após a execução do código a seguir?
+
+
+    ```python
+    CUR_DIR = Path(__file__).parent
+    ``` 
+       
+    Escolhe a opção correta:
+
+    - [X] `CUR_DIR` é uma string com o caminho do diretório onde o arquivo `servidor.py` está localizado.
+    - [ ] `CUR_DIR` é uma string com o caminho do diretório onde o arquivo `servidor.py` está localizado, mas com o nome do arquivo incluso.
+    - [ ] `CUR_DIR` é uma string com o caminho do diretório onde o arquivo `servidor.py` está localizado, mas com o nome do arquivo e a extensão inclusos.
+    - [ ] `CUR_DIR` é uma string com o caminho do diretório onde o arquivo `servidor.py` está localizado, mas com o nome do arquivo, a extensão e o nome do diretório inclusos.
+
+    !!! details "Resposta"
+        A variável `CUR_DIR` é uma string com o caminho do diretório onde o arquivo `servidor.py` está localizado. Ou seja, será algo como `'/home/usuario/tecweb/aulas/01-getit'`.
+        Para mais detalhes acesse: https://docs.python.org/3/library/pathlib.html#pathlib.Path.parent
+
+!!! question choice
+    Ainda explorando o uso da biblioteca `#!python pathlib`, o que será impresso no terminal ao executar o código a seguir?
+
+    Suponha que a variável `CUR_DIR` seja a string `/home/usuario/tecweb/aulas/01-getit`
+
+    ```python
+    CUR_DIR = Path(__file__).parent
+    route = 'img/logo-getit.png'
+    filepath = CUR_DIR / route
+    print(filepath)
+    ``` 
+       
+    Escolhe a opção correta:
+
+    - [ ] `img/logo-getit.png`
+    - [ ] `/home/usuario/tecweb/aulas/01-getit`
+    - [X] `/home/usuario/tecweb/aulas/01-getit/img/logo-getit.png`
+    - [ ] Ocorrerá algum erro.
+
+    !!! details "Resposta"
+        Será impresso `/home/usuario/tecweb/aulas/01-getit/img/logo-getit.png`, pois a operação `/` entre dois objetos do tipo `#!python Path` concatena os caminhos. Para mais detalhes acesse: https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.__truediv__
+
+        Ao desenvolver aplicações que manipulam arquivos e diretórios, é comum utilizar a biblioteca `#!python pathlib` para manipular caminhos de arquivos e diretórios. Não é uma boa prática utilizar caminhos absolutos.
 
 !!! example "EXERCÍCIO"
     Implemente a função `#!python read_file`, que recebe um argumento do tipo [`#!python Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) e devolve o conteúdo desse arquivo. Sua função deve ler o arquivo e devolver o conteúdo como binário (`#!python bytes`). Se precisar refrescar a memória, leia a [documentação da função `#!python open`](https://docs.python.org/3/library/functions.html#open).
