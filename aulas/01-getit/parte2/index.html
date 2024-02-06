@@ -890,6 +890,48 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 <p>É possível verificar se a implementação da função pedida no exercício anterior está correta, basta rodar os testes.
 Por exemplo, se a implementação da função <code>extract_route</code> não estiver correta, então algumas mensagens de erro serão apresentadas no terminal ao rodar os testes.</p>
 </div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No código do <code>servidor.py</code>, adicionamos um import para a biblioteca <code class="highlight"><span class="n">pathlib</span></code>. Essa biblioteca é utilizada para manipulação de caminhos de arquivos e diretórios. Qual o conteúdo da variável <code>CUR_DIR</code> após a execução do código a seguir?</p>
+<div class="highlight"><pre><span></span><code><span class="n">CUR_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+</code></pre></div>
+
+<p>Escolhe a opção correta:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>CUR_DIR</code> é uma string com o caminho do diretório onde o arquivo <code>servidor.py</code> está localizado.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>CUR_DIR</code> é uma string com o caminho do diretório onde o arquivo <code>servidor.py</code> está localizado, mas com o nome do arquivo incluso.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>CUR_DIR</code> é uma string com o caminho do diretório onde o arquivo <code>servidor.py</code> está localizado, mas com o nome do arquivo e a extensão inclusos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>CUR_DIR</code> é uma string com o caminho do diretório onde o arquivo <code>servidor.py</code> está localizado, mas com o nome do arquivo, a extensão e o nome do diretório inclusos.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>A variável <code>CUR_DIR</code> é uma string com o caminho do diretório onde o arquivo <code>servidor.py</code> está localizado. Ou seja, será algo como <code>'/home/usuario/tecweb/aulas/01-getit'</code>.
+Para mais detalhes acesse: <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path.parent">https://docs.python.org/3/library/pathlib.html#pathlib.Path.parent</a></p>
+</div>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>Ainda explorando o uso da biblioteca <code class="highlight"><span class="n">pathlib</span></code>, o que será impresso no terminal ao executar o código a seguir?</p>
+<p>Suponha que a variável <code>CUR_DIR</code> seja a string <code>/home/usuario/tecweb/aulas/01-getit</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">CUR_DIR</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+<span class="n">route</span> <span class="o">=</span> <span class="s1">&#39;img/logo-getit.png&#39;</span>
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">CUR_DIR</span> <span class="o">/</span> <span class="n">route</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Escolhe a opção correta:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>img/logo-getit.png</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>/home/usuario/tecweb/aulas/01-getit</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>/home/usuario/tecweb/aulas/01-getit/img/logo-getit.png</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ocorrerá algum erro.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Será impresso <code>/home/usuario/tecweb/aulas/01-getit/img/logo-getit.png</code>, pois a operação <code>/</code> entre dois objetos do tipo <code class="highlight"><span class="n">Path</span></code> concatena os caminhos. Para mais detalhes acesse: <a href="https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.__truediv">https://docs.python.org/3/library/pathlib.html#pathlib.PurePath.__truediv</a>__</p>
+<p>Ao desenvolver aplicações que manipulam arquivos e diretórios, é comum utilizar a biblioteca <code class="highlight"><span class="n">pathlib</span></code> para manipular caminhos de arquivos e diretórios. Não é uma boa prática utilizar caminhos absolutos.</p>
+</div>
+</div>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
 <p>Implemente a função <code class="highlight"><span class="n">read_file</span></code>, que recebe um argumento do tipo <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path"><code class="highlight"><span class="n">Path</span></code></a> e devolve o conteúdo desse arquivo. Sua função deve ler o arquivo e devolver o conteúdo como binário (<code class="highlight"><span class="nb">bytes</span></code>). Se precisar refrescar a memória, leia a <a href="https://docs.python.org/3/library/functions.html#open">documentação da função <code class="highlight"><span class="nb">open</span></code></a>.</p>

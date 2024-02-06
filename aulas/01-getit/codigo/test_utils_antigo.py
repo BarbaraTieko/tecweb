@@ -125,32 +125,28 @@ class LoadTemplateTestCase(unittest.TestCase):
         expected = '<p>{text}</p>'
         self.assert_template_loaded('components/component.html', expected)
 
-def error_message(msg):
-    marker = '\033[91m'
-    end_marker = '\033[0m'
-    return f'{marker}{msg}{end_marker}'
 
 @target_function('build_response')
 class BuildResponseTestCase(unittest.TestCase):
     def test_build_empty_response(self):
         response = utils.build_response()
-        self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\n\'"\npara a chamada build_response(), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response)
 
     def test_build_response_with_body(self):
         response = utils.build_response('body of the response')
-        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response("body of the response"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response)
 
     def test_build_response_with_body_kwarg(self):
         response = utils.build_response(body='body of the response')
-        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response(body="body of the response"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response)
 
     def test_build_response_with_code(self):
         response = utils.build_response(code=404, reason='Not Found')
-        self.assertEqual('HTTP/1.1 404 Not Found\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 404 Not Found\\n\\n\'"\npara a chamada build_response(code=404, reason="Not Found"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 404 Not Found\n\n'.encode(), response)
 
     def test_build_response_with_code_and_header(self):
         response = utils.build_response(code=302, reason='See Other', headers='Location /')
-        self.assertEqual('HTTP/1.1 302 See Other\nLocation /\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 302 See Other\\nLocation /\\n\\n\'"\npara a chamada build_response(code=302, reason="See Other", headers="Location /"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 302 See Other\nLocation /\n\n'.encode(), response)
 
 if __name__ == '__main__':
     unittest.main()
