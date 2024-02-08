@@ -777,7 +777,13 @@ A maneira utilizada é similar ao código a seguir:</p>
 </div>
 <h3 id="visualizacao">Visualização<a class="headerlink" href="#visualizacao" title="Permanent link">&para;</a></h3>
 <p>Ufa, já está um pouco melhor. Se quisermos adicionar mais anotações basta modificar o arquivo <code>notes.json</code>. Lembra da ideia de mantermos um baixo acoplamento? Aqui nós conseguimos melhorar esse ponto. Se eu quero adicionar mais dados eu só modifico o arquivo de dados (<code>notes.json</code>) e nenhum outro. O resto do código é independente disso.</p>
-<p>Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, separando a responsabilidade de visualização (HTML). Para isso, crie uma pasta chamada <code>templates</code> e crie dentro dela um arquivo <code>index.html</code> com o conteúdo da string <code class="highlight"><span class="n">RESPONSE_TEMPLATE</span></code> a partir da terceira linha, inclusive, ou seja, a partir de <code>&lt;!DOCTYPE html&gt;</code>. Ainda dentro da pasta <code>templates</code>, crie outra pasta chamada <code>components</code> e dentro dessa nova pasta um arquivo <code>note.html</code> com o conteúdo da string <code class="highlight"><span class="n">NOTE_TEMPLATE</span></code>. A sua estrutura de arquivos agora deve ser:</p>
+<p>Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, separando a responsabilidade de visualização (HTML). </p>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Crie uma pasta chamada <code>templates</code> e crie dentro dela um arquivo <code>index.html</code> com o conteúdo da string <code class="highlight"><span class="n">RESPONSE_TEMPLATE</span></code> a partir da terceira linha, inclusive, ou seja, a partir de <code>&lt;!DOCTYPE html&gt;</code>. O <code>HTTP/1.1 200 OK</code> não deve ser incluído. Além disso, não coloque aspas entorno do html.</p>
+<p>Ainda dentro da pasta <code>templates</code>, crie outra pasta chamada <code>components</code> e dentro dessa nova pasta um arquivo <code>note.html</code> com o conteúdo da string <code class="highlight"><span class="n">NOTE_TEMPLATE</span></code>. </p>
+</div>
+<p>A sua estrutura de arquivos agora deve ser:</p>
 <div class="highlight"><pre><span></span><code>- DIRETORIO-DO-SEU-SERVIDOR
   |- servidor.py
   |- utils.py

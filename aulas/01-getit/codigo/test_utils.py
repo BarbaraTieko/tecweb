@@ -104,8 +104,8 @@ class LoadDataTestCase(unittest.TestCase):
         m = mock_open(read_data=json.dumps(expected))
         with patch('utils.open', m):
             received = utils.load_data('data.json')
-        self.assertEqual(expected, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "data.json" deveria ser {expected}, mas foi {received}'))
-        self.assertEqual(Path(m.call_args[0][0]), Path('data/data.json'), msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "data/data.json", mas foi {Path(m.call_args[0][0])}'))
+        self.assertEqual(expected, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "data.json" deveria ser "{expected}", mas foi "{received}"'))
+        self.assertEqual(Path(m.call_args[0][0]), Path('data/data.json'), msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "data/data.json", mas foi "{Path(m.call_args[0][0])}"'))
 
 
 @target_function('load_template')
@@ -115,7 +115,7 @@ class LoadTemplateTestCase(unittest.TestCase):
         with patch('utils.open', m):
             received = utils.load_template(filename)
         self.assertEqual(expected, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "{filename}" deveria ser "{expected}", mas foi "{received}"'))
-        self.assertEqual(Path(m.call_args[0][0]), Path('templates') / filename, msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "templates/{filename}", mas foi {Path(m.call_args[0][0])}'))
+        self.assertEqual(Path(m.call_args[0][0]), Path('templates') / filename, msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "templates/{filename}", mas foi "{Path(m.call_args[0][0])}"'))
 
     def test_load_template_from_file(self):
         expected = '<h1>{title}</h1>'
