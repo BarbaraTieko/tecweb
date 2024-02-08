@@ -40,8 +40,11 @@ Eu sei, me desculpe. Agora sim, vamos começar!
 Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842)):
 
 !!!danger "Atenção"
-    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, tente acessar `localhost:8080` ao invés de `0.0.0.0:8080`.
+    É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, ao invés de acessar `0.0.0.0:8080`, acesse umas das opções a seguir:
 
+    - `localhost:8080`
+    - `127.0.0.0:8080`
+    
 ```python
 --8<-- "01-getit/codigo/passo1.py"
 ```
