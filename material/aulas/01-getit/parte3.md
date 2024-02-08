@@ -156,4 +156,32 @@ def index():
     return load_template('index.html').format(notes=notes).encode()
 ```
 
+!!! question choice
+    No trecho de código retirado do arquivo `servidor.py`:
+    
+    ```python
+    filepath = CUR_DIR / route
+    if filepath.is_file():
+        response = read_file(filepath)
+    elif route == '':
+        response = index()
+    else:
+        response = bytes()
+    ``` 
+    
+    A condição `#!python if filepath.is_file():` será verdadeira se:
+       
+    - [X] O arquivo `filepath` for um arquivo.
+    - [ ] O arquivo `filepath` não for um arquivo.
+    - [ ] O arquivo `filepath` for um diretório.
+    - [ ] O arquivo `filepath` não for um diretório.
+
+    !!! details "Resposta"
+        A condição `if filepath.is_file():` será verdadeira se `filepath` for um arquivo. Em alguns casos, `filepath` será `img/logo-getit.png` e, portanto, a condição será verdadeira, pois `logo-getit.png` é um arquivo. 
+
+        Desta forma, a função `read_file` será chamada e o conteúdo do arquivo `logo-getit.png` será retornado e enviado como resposta para o navegador.
+
+!!! example "EXERCÍCIO"
+    Momento de reflexão: Pense em quais casos o servidor entrará no `#!python elif route == '':` e no `#!python else:`.
+
 Agora o nosso código está pronto para a [parte 4 do handout!](parte4.md)

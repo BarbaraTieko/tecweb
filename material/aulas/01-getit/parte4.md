@@ -55,6 +55,24 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.
 ```
 
+!!! danger "Atenção"
+    Caso o corpo da requisição não apareça, tente acessar o servidor de um navegador com aba anônima.
+
+    Caso o problema persista, altere o código do `servidor.py`, adicionando as linhas abaixo:
+
+    ```python hl_lines="5 6"
+    filepath = CUR_DIR / route
+    if filepath.is_file():
+        response = read_file(filepath)
+    elif route == '':
+        if request.split()[0] == 'POST' and len(request.split("\n\n")) == 1:
+            request += client_connection.recv(1024).decode()
+            
+        response = index()
+    else:
+        response = bytes()
+    ```
+
 Há dois pontos importantes:
 
 1. A primeira linha da requisição está diferente. Existe um `POST` ao invés de `GET`, mas a rota é a mesma (`/`).
