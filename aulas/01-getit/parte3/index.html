@@ -905,6 +905,35 @@ A maneira utilizada é similar ao código a seguir:</p>
     <span class="k">return</span> <span class="n">load_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">notes</span><span class="o">=</span><span class="n">notes</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span>
 </code></pre></div>
 
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>No trecho de código retirado do arquivo <code>servidor.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">filepath</span> <span class="o">=</span> <span class="n">CUR_DIR</span> <span class="o">/</span> <span class="n">route</span>
+<span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">route</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">index</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">()</span>
+</code></pre></div>
+
+<p>A condição <code class="highlight"><span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span></code> será verdadeira se:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> O arquivo <code>filepath</code> for um arquivo.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O arquivo <code>filepath</code> não for um arquivo.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O arquivo <code>filepath</code> for um diretório.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> O arquivo <code>filepath</code> não for um diretório.</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>A condição <code>if filepath.is_file():</code> será verdadeira se <code>filepath</code> for um arquivo. Em alguns casos, <code>filepath</code> será <code>img/logo-getit.png</code> e, portanto, a condição será verdadeira, pois <code>logo-getit.png</code> é um arquivo. </p>
+<p>Desta forma, a função <code>read_file</code> será chamada e o conteúdo do arquivo <code>logo-getit.png</code> será retornado e enviado como resposta para o navegador.</p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">EXERCÍCIO</p>
+<p>Momento de reflexão: Pense em quais casos o servidor entrará no <code class="highlight"><span class="k">elif</span> <span class="n">route</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span></code> e no <code class="highlight"><span class="k">else</span><span class="p">:</span></code>.</p>
+</div>
 <p>Agora o nosso código está pronto para a <a href="../parte4/">parte 4 do handout!</a></p>
                 
               

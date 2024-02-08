@@ -677,6 +677,23 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.
 </code></pre></div>
 
+<div class="admonition danger">
+<p class="admonition-title">Atenção</p>
+<p>Caso o corpo da requisição não apareça, tente acessar o servidor de um navegador com aba anônima.</p>
+<p>Caso o problema persista, altere o código do <code>servidor.py</code>, adicionando as linhas abaixo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">filepath</span> <span class="o">=</span> <span class="n">CUR_DIR</span> <span class="o">/</span> <span class="n">route</span>
+<span class="k">if</span> <span class="n">filepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">route</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+<span class="hll">    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+</span><span class="hll">        <span class="n">request</span> <span class="o">+=</span> <span class="n">client_connection</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">index</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">()</span>
+</code></pre></div>
+
+</div>
 <p>Há dois pontos importantes:</p>
 <ol>
 <li>A primeira linha da requisição está diferente. Existe um <code>POST</code> ao invés de <code>GET</code>, mas a rota é a mesma (<code>/</code>).</li>
