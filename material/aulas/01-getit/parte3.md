@@ -96,7 +96,15 @@ Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](.
 
 Ufa, já está um pouco melhor. Se quisermos adicionar mais anotações basta modificar o arquivo `notes.json`. Lembra da ideia de mantermos um baixo acoplamento? Aqui nós conseguimos melhorar esse ponto. Se eu quero adicionar mais dados eu só modifico o arquivo de dados (`notes.json`) e nenhum outro. O resto do código é independente disso.
 
-Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, separando a responsabilidade de visualização (HTML). Para isso, crie uma pasta chamada `templates` e crie dentro dela um arquivo `index.html` com o conteúdo da string `#!python RESPONSE_TEMPLATE` a partir da terceira linha, inclusive, ou seja, a partir de `<!DOCTYPE html>`. Ainda dentro da pasta `templates`, crie outra pasta chamada `components` e dentro dessa nova pasta um arquivo `note.html` com o conteúdo da string `#!python NOTE_TEMPLATE`. A sua estrutura de arquivos agora deve ser:
+Mas ainda dá para melhorar. Vamos refatorar um pouco mais o nosso código, separando a responsabilidade de visualização (HTML). 
+
+!!! example "EXERCÍCIO"
+    Crie uma pasta chamada `templates` e crie dentro dela um arquivo `index.html` com o conteúdo da string `#!python RESPONSE_TEMPLATE` a partir da terceira linha, inclusive, ou seja, a partir de `<!DOCTYPE html>`. O `HTTP/1.1 200 OK` não deve ser incluído. Além disso, não coloque aspas entorno do html.
+    
+    Ainda dentro da pasta `templates`, crie outra pasta chamada `components` e dentro dessa nova pasta um arquivo `note.html` com o conteúdo da string `#!python NOTE_TEMPLATE`. 
+
+
+A sua estrutura de arquivos agora deve ser:
 
 ```
 - DIRETORIO-DO-SEU-SERVIDOR
