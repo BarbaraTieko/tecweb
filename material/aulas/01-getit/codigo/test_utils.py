@@ -30,27 +30,27 @@ def target_function(function_name):
 class ExtractRouteTestCase(unittest.TestCase):
     def test_extract_root_from_request(self):
         request = REQUEST_TEMPLATE.format(method='GET', route='/')
-        self.assertEqual('', utils.extract_route(request))
+        self.assertEqual('', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "", mas foi "{utils.extract_route(request)}"'))
 
     def test_extract_simple_path_from_request(self):
         request = REQUEST_TEMPLATE.format(method='GET', route='/some-path')
-        self.assertEqual('some-path', utils.extract_route(request))
+        self.assertEqual('some-path', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "some-path", mas foi "{utils.extract_route(request)}"'))
 
     def test_extract_compose_path_from_request(self):
         request = REQUEST_TEMPLATE.format(method='GET', route='/some-path/other-path')
-        self.assertEqual('some-path/other-path', utils.extract_route(request))
+        self.assertEqual('some-path/other-path', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "some-path/other-path", mas foi "{utils.extract_route(request)}"'))
 
     def test_extract_filename_path_from_request(self):
         request = REQUEST_TEMPLATE.format(method='GET', route='/css/style.css')
-        self.assertEqual('css/style.css', utils.extract_route(request))
+        self.assertEqual('css/style.css', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "css/style.css", mas foi "{utils.extract_route(request)}"'))
 
     def test_extract_filename_path_from_post_request(self):
         request = REQUEST_TEMPLATE.format(method='POST', route='/')
-        self.assertEqual('', utils.extract_route(request))
+        self.assertEqual('', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "", mas foi "{utils.extract_route(request)}"'))
     
     def test_extract_filename_path_from_delete_request(self):
         request = REQUEST_TEMPLATE.format(method='DELETE', route='/')
-        self.assertEqual('', utils.extract_route(request))
+        self.assertEqual('', utils.extract_route(request), msg=error_message(f'Algo deu errado! A rota extraída do request\n"{request}" deveria ser "", mas foi "{utils.extract_route(request)}"'))
 
 @target_function('read_file')
 class ReadFileTestCase(unittest.TestCase):
@@ -60,7 +60,7 @@ class ReadFileTestCase(unittest.TestCase):
         with patch('utils.open', m):
             received = utils.read_file(fullpath)
 
-        self.assertEqual(read_data, received)
+        self.assertEqual(read_data, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "{fullpath}" deveria ser "{read_data}", mas foi "{received}"'))
 
 
     def test_read_txt_file(self):
@@ -104,8 +104,8 @@ class LoadDataTestCase(unittest.TestCase):
         m = mock_open(read_data=json.dumps(expected))
         with patch('utils.open', m):
             received = utils.load_data('data.json')
-        self.assertEqual(expected, received)
-        self.assertEqual(Path(m.call_args[0][0]), Path('data/data.json'))
+        self.assertEqual(expected, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "data.json" deveria ser {expected}, mas foi {received}'))
+        self.assertEqual(Path(m.call_args[0][0]), Path('data/data.json'), msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "data/data.json", mas foi {Path(m.call_args[0][0])}'))
 
 
 @target_function('load_template')
@@ -114,8 +114,8 @@ class LoadTemplateTestCase(unittest.TestCase):
         m = mock_open(read_data=expected)
         with patch('utils.open', m):
             received = utils.load_template(filename)
-        self.assertEqual(expected, received)
-        self.assertEqual(Path(m.call_args[0][0]), Path('templates') / filename)
+        self.assertEqual(expected, received, msg=error_message(f'Algo deu errado! O conteúdo do arquivo "{filename}" deveria ser "{expected}", mas foi "{received}"'))
+        self.assertEqual(Path(m.call_args[0][0]), Path('templates') / filename, msg=error_message(f'Algo deu errado! O arquivo aberto deveria ser "templates/{filename}", mas foi {Path(m.call_args[0][0])}'))
 
     def test_load_template_from_file(self):
         expected = '<h1>{title}</h1>'
@@ -134,23 +134,23 @@ def error_message(msg):
 class BuildResponseTestCase(unittest.TestCase):
     def test_build_empty_response(self):
         response = utils.build_response()
-        self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\n\'"\npara a chamada build_response(), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\n'.encode(), response, msg=error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\n\'"\npara a chamada build_response(), mas foi recebido\n"{response}"'))
 
     def test_build_response_with_body(self):
         response = utils.build_response('body of the response')
-        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response("body of the response"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, msg=error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response("body of the response"), mas foi recebido\n"{response}"'))
 
     def test_build_response_with_body_kwarg(self):
         response = utils.build_response(body='body of the response')
-        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response(body="body of the response"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 200 OK\n\nbody of the response'.encode(), response, msg=error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 200 OK\\n\\nbody of the response\'"\npara a chamada build_response(body="body of the response"), mas foi recebido\n"{response}"'))
 
     def test_build_response_with_code(self):
         response = utils.build_response(code=404, reason='Not Found')
-        self.assertEqual('HTTP/1.1 404 Not Found\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 404 Not Found\\n\\n\'"\npara a chamada build_response(code=404, reason="Not Found"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 404 Not Found\n\n'.encode(), response, msg=error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 404 Not Found\\n\\n\'"\npara a chamada build_response(code=404, reason="Not Found"), mas foi recebido\n"{response}"'))
 
     def test_build_response_with_code_and_header(self):
         response = utils.build_response(code=302, reason='See Other', headers='Location /')
-        self.assertEqual('HTTP/1.1 302 See Other\nLocation /\n\n'.encode(), response, error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 302 See Other\\nLocation /\\n\\n\'"\npara a chamada build_response(code=302, reason="See Other", headers="Location /"), mas foi recebido\n"{response}"'))
+        self.assertEqual('HTTP/1.1 302 See Other\nLocation /\n\n'.encode(), response, msg=error_message(f'\nA resposta deve ser\n"b\'HTTP/1.1 302 See Other\\nLocation /\\n\\n\'"\npara a chamada build_response(code=302, reason="See Other", headers="Location /"), mas foi recebido\n"{response}"'))
 
 if __name__ == '__main__':
     unittest.main()

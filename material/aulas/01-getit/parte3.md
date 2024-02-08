@@ -14,6 +14,25 @@ Vamos começar separando a responsabilidade do modelo (lista de anotações) da 
 --8<-- "01-getit/codigo/passo8.py"
 ```
 
+
+Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](../codigo/data/notes.json). Coloque-o em uma pasta chamada `data`:
+
+```
+- DIRETORIO-DO-SEU-SERVIDOR
+  |- servidor.py
+  |- utils.py
+  |- test_utils.py
+  |- data
+     |- notes.json
+  |- img
+     |- logo-getit.png
+```
+
+!!! example "EXERCÍCIO"
+    Implemente a função `#!python load_data`, que recebe o nome de um arquivo JSON e devolve o conteúdo do arquivo carregado como um objeto Python (A função deve assumir que este arquivo JSON está localizado dentro da pasta `data`). Por exemplo: se o conteúdo do arquivo `data/dados.json` for a string `{"chave": "valor"}`, sua função deve devolver o dicionário Python `#!python {"chave": "valor"}` para a entrada `dados.json` (note que o nome da pasta não é enviado como argumento). Dica: já existe uma [função Python para isso](https://docs.python.org/3/library/json.html) (e você viu em Design de Software).
+
+___
+
 !!! question choice
     No código anterior, estamos utilizando formatação de `string` um pouco diferente do que aprendemos em DesSoft.
 
@@ -73,22 +92,6 @@ Vamos começar separando a responsabilidade do modelo (lista de anotações) da 
 
       response = RESPONSE_TEMPLATE.format(notes=notes).encode()
       ```
-
-Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](../codigo/data/notes.json). Coloque-o em uma pasta chamada `data`:
-
-```
-- DIRETORIO-DO-SEU-SERVIDOR
-  |- servidor.py
-  |- utils.py
-  |- test_utils.py
-  |- data
-     |- notes.json
-  |- img
-     |- logo-getit.png
-```
-
-!!! example "EXERCÍCIO"
-    Implemente a função `#!python load_data`, que recebe o nome de um arquivo JSON e devolve o conteúdo do arquivo carregado como um objeto Python (A função deve assumir que este arquivo JSON está localizado dentro da pasta `data`). Por exemplo: se o conteúdo do arquivo `data/dados.json` for a string `{"chave": "valor"}`, sua função deve devolver o dicionário Python `#!python {"chave": "valor"}` para a entrada `dados.json` (note que o nome da pasta não é enviado como argumento). Dica: já existe uma [função Python para isso](https://docs.python.org/3/library/json.html) (e você viu em Design de Software).
 
 ### Visualização
 
