@@ -671,7 +671,11 @@
 <p>Vamos implementar um servidor <strong>bastante</strong> simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado <code>servidor.py</code> (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado <a href="https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842">neste código</a>):</p>
 <div class="admonition danger">
 <p class="admonition-title">Atenção</p>
-<p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, tente acessar <code>localhost:8080</code> ao invés de <code>0.0.0.0:8080</code>.</p>
+<p>É possível que o endereço <code>0.0.0.0</code> não funcione no seu computador. Se isso acontecer, ao invés de acessar <code>0.0.0.0:8080</code>, acesse umas das opções a seguir:</p>
+<ul>
+<li><code>localhost:8080</code></li>
+<li><code>127.0.0.0:8080</code></li>
+</ul>
 </div>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
