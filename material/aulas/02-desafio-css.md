@@ -52,8 +52,6 @@ O seu objetivo :octicons-goal-24: é se aproximar o máximo possível da página
 !!! example "Exercício"
     Inspecione um card no navegador e veja procure pela classe CSS que está sendo aplicada para a cor de fundo. 
 
----
-
 ## Instruções
 
 Baixe os arquivos base no botão abaixo.
