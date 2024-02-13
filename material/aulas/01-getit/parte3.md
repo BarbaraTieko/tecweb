@@ -15,7 +15,7 @@ Vamos começar separando a responsabilidade do modelo (lista de anotações) da 
 ```
 
 
-Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](../codigo/data/notes.json). Coloque-o em uma pasta chamada `data`:
+Você também vai precisar do arquivo [`notes.json` (clique aqui para baixar)](codigo/data/notes.json). Coloque-o em uma pasta chamada `data`:
 
 ```
 - DIRETORIO-DO-SEU-SERVIDOR
