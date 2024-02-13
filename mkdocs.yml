@@ -7,16 +7,23 @@ extra:
   semestre: 2024/1
 
 theme:
-  feature:
-    tabs: true
-  name: "material"
+  name: material
   palette:
-    primary: "indigo"
-    accent: "blue"
-  font:
-    text: Roboto
-    code: Roboto Mono
-  custom_dir: "custom_theme"
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - content.code.select
+  custom_dir: overrides
 
 docs_dir: material
 site_dir: docs
@@ -38,51 +45,50 @@ nav:
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
+  - Projetos:
+    - "Projeto 1A": projetos/projeto1/projeto1a.md
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - def_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: material/aulas
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+ 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML
-  - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.0.0/js-yaml.min.js
-  - markdown-enhancer.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/progress-check.js
+  - javascripts/quiz.js
+  - javascripts/short-questions.js
+  - javascripts/translate-admonitions.js
+
 
 extra_css:
   - css/printing.css
   - css/tecweb.css
 
-markdown_extensions:
-  - markdown.extensions.tables
-  - tables
-  - markdown.extensions.admonition
-  - markdown.extensions.codehilite:
-      guess_lang: false
-  - markdown.extensions.def_list
-  - markdown.extensions.footnotes
-  - markdown.extensions.meta
-  - markdown.extensions.attr_list
-  - markdown.extensions.toc:
-      permalink: true
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.tabbed
-  - pymdownx.superfences
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
-  - pymdownx.snippets:
-      base_path: material/aulas
-      check_paths: true
 plugins:
   - search
-  - mkdocs-video

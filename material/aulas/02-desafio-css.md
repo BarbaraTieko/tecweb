@@ -69,6 +69,6 @@ A nota deste trabalho é a soma dos pontos abaixo. Será feita uma inspeção vi
 
 - No caso de entrega com atraso, a nota será a metade da soma dos pontos obtidos.
 - **Trabalhos não identificados (sem nome neste arquivo README) serão considerados atrasados (veja o item acima).** O mesmo vale se o nome do aluno não constar entre os autores e for adicionado posteriormente.
-- A nota de trabalhos com modificações em outros arquivos além do README.md e do [docs/getit.css](docs/getit.css) será limitada a no máximo 7 (equivalente ao conceito B). Modificações em outros arquivos devem ser explicitamente aprovadas pelo professor.
+- A nota de trabalhos com modificações em outros arquivos além do README.md e do `docs/getit.css` será limitada a no máximo 7 (equivalente ao conceito B). Modificações em outros arquivos devem ser explicitamente aprovadas pelo professor.
 - Para este trabalho você não precisa se preocupar com a versão mobile da página. Ela será testada apenas em um monitor.
 - Ao testar a sua página CSS no navegador é importante utilizar o **Hard Refresh/Hard Reload** ou utilize uma aba anônima.

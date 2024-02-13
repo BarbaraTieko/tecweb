@@ -27,7 +27,7 @@ Testou? Funcionou? Podemos ir para o próximo passo.
 
 ## Mostrando a lista de anotações
 
-Podemos começar a pensar no conteúdo da nossa página principal. Vamos começar mostrando uma lista simples com os títulos e detalhes das anotações. Você vai precisar baixar a seguinte [imagem clicando neste link](../codigo/img/logo-getit.png). Salve essa imagem dentro de uma pasta `img` na mesma pasta onde está o seu código do servidor. Ou seja, o conteúdo da sua pasta será:
+Podemos começar a pensar no conteúdo da nossa página principal. Vamos começar mostrando uma lista simples com os títulos e detalhes das anotações. Você vai precisar baixar a seguinte [imagem clicando neste link](codigo/img/logo-getit.png). Salve essa imagem dentro de uma pasta `img` na mesma pasta onde está o seu código do servidor. Ou seja, o conteúdo da sua pasta será:
 
 ```
 - DIRETORIO-DO-SEU-SERVIDOR
@@ -90,7 +90,7 @@ Altere novamente o código do seu servidor para:
 ```
 
 
-Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](../codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. 
+Crie também o arquivo `utils.py` na pasta do seu servidor. Você deverá implementar os métodos `#!python extract_route` e `#!python read_file`. Para te ajudar, baixe também o arquivo [`test_utils.py`](codigo/test_utils.py). Ele possui alguns testes para verificar se a sua implementação está dentro do esperado. 
 
 Para executar os testes basta rodar o arquivo no terminal (ele tem alguns testes para outras funções das próximas partes do handout - você pode ignorar os erros delas por enquanto).: 
 

@@ -2,9 +2,9 @@
 
 **Trabalho individual**
 
-**Prazo: 02/09/2023**
+**Prazo: **
 
-**Entrega via GitHub**
+**Entrega via GitHub Classroom:**
 
 Indique o repositório Github no Blackboard.
 
