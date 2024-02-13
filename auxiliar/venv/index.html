@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/auxiliar/venv/">
       
       
-        <link rel="prev" href="../../aulas/01-getit/parte4/">
+        <link rel="prev" href="../../aulas/02-desafio-css/">
       
       
         <link rel="next" href="../../entregas/01-ELI5/">
@@ -34,6 +34,12 @@
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
 
 
     
@@ -61,7 +67,16 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -472,6 +487,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aulas/02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -789,10 +825,10 @@
 
 <h1 id="ambientes-virtuais-em-python-venv">Ambientes virtuais em Python (<code>venv</code>)</h1>
 <p>Em Desenvolvimento Colaborativo Ágil, vocês aprenderam o conceito de gerenciamento de configuração. A ideia é essencialmente ter um conjunto de ferramentas que auxiliam o desenvolvedor a manter a configuração do projeto em um estado desejável. No nosso contexto isso quer dizer: a versão do Python, os pacotes instalados e as suas versões específicas.</p>
-<p><img alt="" src="../python_venv.jpg" /></p>
+<p><a class="glightbox" href="../python_venv.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../python_venv.jpg" /></a></p>
 <p>Depois de alguns semestres programando você já produziu uma quantidade razoável de projetos em Python. Quando vocês começaram a programar em Python, a versão mais recente era provavelmente o Python 3.7 ou 3.8. Atualmente estamos no Python 3.9 e o lançamento do Python 3.10 já está em um horizonte próximo. Qual o problema disso? Do ponto de vista do avanço da tecnologia isso parece ótimo! Mas pense nos seus projetos antigos. O que acontecerá com eles quando você atualizar a versão do Python no seu computador para uma versão mais recente que muda um comportamento ou remove uma função que você utilizava no projeto?</p>
 <figure>
-  <img src="../codenotworkink.jpg" width="300" />
+  <a class="glightbox" href="../codenotworkink.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../codenotworkink.jpg" width="300" /></a>
 </figure>
 
 <p>O exemplo da versão do Python é um pouco mais drástico, mas e quanto às inúmeras bibliotecas/pacotes que você utiliza em cada projeto? Durante a graduação, os projetos são, na grande maioria, abandonados assim que você acaba o semestre. No mercado de trabalho você não poderá se dar a esse luxo: projetos antigos são em geral mantidos por bastante tempo.</p>
@@ -816,7 +852,7 @@
 </div>
 <p>Esse comando vai criar uma pasta chamada <code>env</code> dentro da pasta onde ele foi executado. Todos os arquivos necessários estarão dentro da pasta <code>env</code>.</p>
 <figure>
-  <img src="../env_folder.jpg" width="200" />
+  <a class="glightbox" href="../env_folder.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../env_folder.jpg" width="200" /></a>
 </figure>
 
 <div class="admonition info">
@@ -825,7 +861,7 @@
 </div>
 <h2 id="ativando-um-ambiente-virtual">Ativando um ambiente virtual</h2>
 <figure>
-  <img src="../turn-on.png" width="100" />
+  <a class="glightbox" href="../turn-on.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../turn-on.png" width="100" /></a>
 </figure>
 
 <p>Será necessário ativar o ambiente virtual <strong>toda vez que você for trabalhar com ele</strong>. No começo isso pode parecer um pouco maçante, mas é apenas um comando e você logo vai se acostumar:</p>
@@ -928,5 +964,5 @@
     
 <!-- Add scripts that need to run afterwards here -->
 
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
