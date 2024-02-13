@@ -24,6 +24,8 @@ theme:
     - content.code.copy
     - content.code.select
   custom_dir: overrides
+  icon:
+    annotation: material/arrow-right-circle
 
 docs_dir: material
 site_dir: docs
@@ -41,6 +43,7 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
+    - "02 - Desafio CSS": aulas/02-desafio-css.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
@@ -74,6 +77,9 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
  
 extra_javascript:
@@ -92,3 +98,4 @@ extra_css:
 
 plugins:
   - search
+  - glightbox
