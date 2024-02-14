@@ -48,9 +48,7 @@ nav:
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
-  - Projetos:
-    - "Projeto 1A": projetos/projeto1/projeto1a.md
-
+  
 markdown_extensions:
   - tables
   - attr_list
