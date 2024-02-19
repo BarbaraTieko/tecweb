@@ -10,26 +10,28 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/aulas/03-persistencia-de-dados/parte3/">
       
       
+        <link rel="prev" href="../parte2/">
       
-        <link rel="next" href="notas/">
+      
+        <link rel="next" href="../parte4/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Tecnologias Web - Insper 2024/1</title>
+        <title>Handout Parte 3: Inserindo dados na tabela - Tecnologias Web - Insper 2024/1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="css/printing.css">
+      <link rel="stylesheet" href="../../../css/printing.css">
     
-      <link rel="stylesheet" href="css/tecweb.css">
+      <link rel="stylesheet" href="../../../css/tecweb.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -74,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -93,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tecnologias-web" class="md-skip">
+        <a href="#parte-3-inserindo-dados-na-tabela" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -129,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Handout Parte 3: Inserindo dados na tabela
             
           </span>
         </div>
@@ -230,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -245,19 +247,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +259,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -278,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notas/" class="md-nav__link">
+      <a href="../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -319,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -368,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/" class="md-nav__link">
+      <a href="../../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/Aula02.pdf" class="md-nav__link">
+      <a href="../../02-desafio-css/Aula02.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,17 +578,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -608,7 +604,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Persistência de dados
@@ -622,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte1/" class="md-nav__link">
+      <a href="../parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte2/" class="md-nav__link">
+      <a href="../parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,10 +678,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte3/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -694,6 +699,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -706,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte4/" class="md-nav__link">
+      <a href="../parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte5/" class="md-nav__link">
+      <a href="../parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte6/" class="md-nav__link">
+      <a href="../parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/venv/" class="md-nav__link">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -957,30 +963,80 @@
                   
 
 
-<h1 id="tecnologias-web">Tecnologias Web</h1>
-<p>Bem-vind@ ao curso de Tecnologias Web 2024/1</p>
-<p><strong>Professora</strong></p>
-<ul>
-<li>Barbara Agena (barbarata@insper.edu.br)</li>
+<h1 id="parte-3-inserindo-dados-na-tabela">Parte 3: Inserindo dados na tabela</h1>
+<p>Nossa tabela foi criada, mas ainda não possui nenhum dado. Para inserir dados na tabela utilizamos o comando SQL:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">NOME_DA_TABELA</span><span class="w"> </span><span class="p">(</span><span class="n">NOMES_DAS_COLUNAS</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="n">VALORES_DAS_COLUNAS</span><span class="p">)</span><span class="o">`</span>
+</span></code></pre></div>
+<p>Por exemplo, na tabela <code>dados_pessoais</code>, que usamos de exemplo na parte 2, poderíamos adicionar uma nova linha com o comando</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dados_pessoais</span><span class="w"> </span><span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercício 03</p>
+<p>Adicione a definição da classe <code class="language-python highlight"><span class="n">Note</span></code> no arquivo <code>database.py</code>:</p>
+<p><div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nd">@dataclass</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">content</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></code></pre></div>
+<strong>Observação:</strong> o código acima só é válido a partir do Python 3.7. Se você está usando uma versão mais antiga do Python, substitua esse código pelo código abaixo:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">class</span> <span class="nc">Note</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+</span></code></pre></div>
+<p>Crie um método <code class="language-python highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code> na classe <code class="language-python highlight"><span class="n">Database</span></code>, que recebe um objeto do tipo <code class="language-python highlight"><span class="n">Note</span></code> e insere seus dados no banco de dados. </p>
+<p>Para inserir os dados no banco de dados, será necessário construir um comando SQL similar ao comando a seguir:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dados_pessoais</span><span class="w"> </span><span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>Note que os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo <code>Note</code> recebido como argumento.</p>
+<p>Depois de implementar o método <code class="language-python highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. O teste <code>test_add_rows</code> deve passar com sucesso.</p>
+<div class="admonition info">
+<p class="admonition-title">Curiosidade</p>
+<p>Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.</p>
+</div>
+<p>Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método <code>execute</code> do atributo <code>conn</code>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante 1</p>
+<p>Quando for adicionar strings no banco de dados, lembre-se de colocar as aspas ao redor dos valores.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Importante 2</p>
+<p>Depois de chamar o <code>execute</code> com o comando de inserção você precisa chamar o método <code>commit()</code> do atributo <code>conn</code> para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o <code>commit</code>.</p>
+<p>Para mais detalhes, veja a documentação: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial</p>
+</div>
+</div>
+<p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="language-python highlight"><span class="n">Note</span></code> nesse arquivo):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Lembrar de tomar água&#39;</span><span class="p">))</span>
+</span></code></pre></div>
+<div class="admonition question choice">
+<p class="admonition-title">Question</p>
+<p>O que o trecho de código a seguir faz?</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
+</span></code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria uma tabela nova no banco de dados.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cria somente um objeto do tipo <code>Note</code>.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Cria um objeto do tipo <code>Note</code> e inseri os dados no banco de dados.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nenhuma das opções anteriores.</li>
 </ul>
-<p><strong>Professora Auxiliar</strong></p>
-<ul>
-<li>Manoela Campos (manoelaclc1@insper.edu.br)</li>
-</ul>
-<p><strong>Aulas:</strong></p>
-<ul>
-<li>TER 07:30 - 09:30</li>
-<li>QUI 07:30 - 09:30</li>
-</ul>
-<p><strong>Atendimento:</strong></p>
-<ul>
-<li>QUI 09:30 - 11:00</li>
-</ul>
-<p><strong>Algumas Datas</strong></p>
-<ul>
-<li>09/02: Entrega do <a href="entregas/01-ELI5/">ELI5</a></li>
-<li>23/02: Entrega do <a href="aulas/02-desafio-css/">Desafio CSS</a></li>
-</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Um objeto do tipo <code>Note</code> é criado com o seguinte código:
+<code class="language-python highlight"><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">)</span></code></p>
+<p>Esse objeto criado é passado como argumento para o método <code>add</code> da classe <code>Database</code> que criamos no exercício anterior.</p>
+<p>Esse método é responsável por inserir os dados da nota no banco de dados. </p>
+</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Toda vez que você executar o arquivo <code>exemplo_de_uso.py</code> esses dados serão adicionados novamente ao banco. Para começar um novo banco, basta apagar o arquivo <code>banco.db</code> e executar o arquivo novamente.</p>
+</div>
+<p>Quando tiver terminado, siga para a <a href="../parte4/">próxima parte do handout</a>.</p>
 
 
 
@@ -1027,7 +1083,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1035,21 +1091,21 @@
 </script>
 
 
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="javascripts/progress-check.js"></script>
+        <script src="../../../javascripts/progress-check.js"></script>
       
-        <script src="javascripts/quiz.js"></script>
+        <script src="../../../javascripts/quiz.js"></script>
       
-        <script src="javascripts/short-questions.js"></script>
+        <script src="../../../javascripts/short-questions.js"></script>
       
-        <script src="javascripts/translate-admonitions.js"></script>
+        <script src="../../../javascripts/translate-admonitions.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->

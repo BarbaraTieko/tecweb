@@ -10,26 +10,28 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/aulas/03-persistencia-de-dados/">
       
       
+        <link rel="prev" href="../02-desafio-css/">
       
-        <link rel="next" href="notas/">
+      
+        <link rel="next" href="parte1/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Tecnologias Web - Insper 2024/1</title>
+        <title>Handout - Tecnologias Web - Insper 2024/1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="css/printing.css">
+      <link rel="stylesheet" href="../../css/printing.css">
     
-      <link rel="stylesheet" href="css/tecweb.css">
+      <link rel="stylesheet" href="../../css/tecweb.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -74,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -93,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tecnologias-web" class="md-skip">
+        <a href="#03-persistencia-de-dados" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -129,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Handout
             
           </span>
         </div>
@@ -230,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -245,19 +247,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,7 +259,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -278,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="notas/" class="md-nav__link">
+      <a href="../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -319,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -368,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/" class="md-nav__link">
+      <a href="../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -410,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -431,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/Aula02.pdf" class="md-nav__link">
+      <a href="../02-desafio-css/Aula02.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -558,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,17 +578,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -608,7 +604,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Persistência de dados
@@ -619,10 +615,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -631,6 +647,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      A solução
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bancos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bancos de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próximos passos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -643,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte1/" class="md-nav__link">
+      <a href="parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -664,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte2/" class="md-nav__link">
+      <a href="parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -685,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte3/" class="md-nav__link">
+      <a href="parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -706,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte4/" class="md-nav__link">
+      <a href="parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte5/" class="md-nav__link">
+      <a href="parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/03-persistencia-de-dados/parte6/" class="md-nav__link">
+      <a href="parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -819,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="auxiliar/venv/" class="md-nav__link">
+      <a href="../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -944,6 +1049,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      A solução
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bancos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bancos de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próximos passos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -957,29 +1139,38 @@
                   
 
 
-<h1 id="tecnologias-web">Tecnologias Web</h1>
-<p>Bem-vind@ ao curso de Tecnologias Web 2024/1</p>
-<p><strong>Professora</strong></p>
+<h1 id="03-persistencia-de-dados">03 - Persistência de Dados</h1>
+<p>Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.</p>
+<p>Opa! Espere um pouco. Arquivos?!</p>
+<p>É, arquivos. Por quê? Tem algum problema com isso?</p>
+<p>Vamos pensar um pouco sobre isso. <img alt="🤔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f914.svg" title=":thinking:" /></p>
+<h2 id="qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao">Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?</h2>
+<h3 id="cenario-1">Cenário 1</h3>
+<p>Imagine que a sua aplicação já está sendo utilizada há um tempo e o arquivo que contém os dados é razoavelmente grande. Seu servidor recebe uma requisição pedindo para atualizar uma informação que está armazenada no arquivo. O arquivo é aberto, o elemento a ser modificado é identificado e, enquanto o arquivo é salvo, ocorre um erro no computador, interrompendo a gravação do arquivo. Ao tentar acessar novamente o arquivo você descobre que ele está corrompido e todos os dados foram perdidos.</p>
+<h3 id="cenario-2">Cenário 2</h3>
+<p>Sua página fica muito popular e passa a receber milhares de acessos por segundo. O arquivo contendo os dados demora 1 milissegundo para ser aberto e lido e ele pode ser aberto por apenas um processo por vez. Como apenas uma requisição pode ter o arquivo aberto de cada vez, em poucos segundos a sua aplicação para de responder. Você está recebendo mais requisições do que dá conta de responder.</p>
+<p>Você decide armazenar os dados na memória e apenas abrir o arquivo para salvar novas modificações. Duas requisições de modificação são enviadas simultaneamente e uma sobrescreve o que a outra acabou de escrever. Os dados da primeira requisição são perdidos.</p>
+<h3 id="cenario-3">Cenário 3</h3>
+<p>Seu arquivo de dados já ocupa alguns gigabytes. Toda vez que algum usuário pede uma informação você precisa ler todo o arquivo em busca dela.</p>
+<h3 id="a-solucao">A solução</h3>
+<p>Você decide que para resolver todos esses problemas vai criar um módulo responsável por lidar com escritas simultâneas (concorrentes) de dados, armazenamento de backups em caso de falhas, indexação dos dados para acelerar buscas, realizar o controle do acesso aos dados e tratar de diversos outros detalhes relacionados ao armazenamento. Parabéns, você acabou de implementar um sistema de gerenciamento de bancos de dados!</p>
+<h2 id="bancos-de-dados">Bancos de Dados</h2>
+<p>Nosso objetivo em Tecnologias Web não é entrar em detalhes sobre bancos de dados. Deixamos isso para vocês trabalharem em Megadados. Aqui nós teremos apenas um primeiro contato, possibilitando o armazenamento e recuperação dos dados de forma mais robusta do que utilizando apenas arquivos.</p>
+<p>Um dos tipos mais tradicionais de bancos de dados são os <strong>bancos de dados relacionais</strong>. A ideia é que cada "tipo de dado" é armazenado separadamente em uma tabela e as relações entre os objetos (chamados de <strong>entidades</strong>) são indicadas por identificadores únicos que permitem a localização do objeto relacionado na outra tabela. Ou seja, é um modelo que depende fortemente da representação dos dados como um conjunto de tabelas. Para interagir (criar, modificar, recuperar, deletar) com esse conjunto de tabelas foi criada uma linguagem chamada <em>Structured Query Language</em> (SQL).</p>
+<p>Como comentamos anteriormente, o nosso objetivo é começar a utilizar SQL em nossas aplicações. Não temos a intenção de desenvolver nenhum estudo aprofundado sobre SQL ou bancos de dados <strong>ainda</strong>. Neste handout teremos nosso primeiro contato com o SQL através de um banco de dados chamado <a href="https://www.sqlite.org/index.html">SQLite</a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Você não deve utilizar o SQLite em um servidor web real. <a href="https://sqlite.org/whentouse.html">Ele não foi feito para isso</a>. Para ambientes de produção utilize sistemas mais robustos como o PostgreSQL, MySQL, ou SQL Server. Dito isso, os conceitos de SQL que veremos neste handout são os mesmos utilizados nesses outros sistemas. Optamos pelo SQLite por ele ser mais fácil de instalar e configurar.</p>
+</div>
+<h2 id="proximos-passos">Próximos passos</h2>
+<p>O handout é divido nos seguintes passos:</p>
 <ul>
-<li>Barbara Agena (barbarata@insper.edu.br)</li>
-</ul>
-<p><strong>Professora Auxiliar</strong></p>
-<ul>
-<li>Manoela Campos (manoelaclc1@insper.edu.br)</li>
-</ul>
-<p><strong>Aulas:</strong></p>
-<ul>
-<li>TER 07:30 - 09:30</li>
-<li>QUI 07:30 - 09:30</li>
-</ul>
-<p><strong>Atendimento:</strong></p>
-<ul>
-<li>QUI 09:30 - 11:00</li>
-</ul>
-<p><strong>Algumas Datas</strong></p>
-<ul>
-<li>09/02: Entrega do <a href="entregas/01-ELI5/">ELI5</a></li>
-<li>23/02: Entrega do <a href="aulas/02-desafio-css/">Desafio CSS</a></li>
+<li><a href="parte1/">Parte 1: Instalando o SQLite</a></li>
+<li><a href="parte2/">Parte 2: Criando a tabela</a></li>
+<li><a href="parte3/">Parte 3: Inserindo dados na tabela</a></li>
+<li><a href="parte4/">Parte 4: Consultando e selecionando dados</a></li>
+<li><a href="parte5/">Parte 5: Atualizando os dados</a></li>
+<li><a href="parte6/">Parte 6: Apagando dados</a></li>
 </ul>
 
 
@@ -1027,7 +1218,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.code.select"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1035,21 +1226,21 @@
 </script>
 
 
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="javascripts/progress-check.js"></script>
+        <script src="../../javascripts/progress-check.js"></script>
       
-        <script src="javascripts/quiz.js"></script>
+        <script src="../../javascripts/quiz.js"></script>
       
-        <script src="javascripts/short-questions.js"></script>
+        <script src="../../javascripts/short-questions.js"></script>
       
-        <script src="javascripts/translate-admonitions.js"></script>
+        <script src="../../javascripts/translate-admonitions.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
