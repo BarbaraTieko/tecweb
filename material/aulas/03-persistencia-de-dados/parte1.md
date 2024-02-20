@@ -6,12 +6,13 @@ Tecnicamente não é necessário instalar o SQLite, pois o Python já vem com um
 python -c "import sqlite3"
 ```
 
-Nós vamos instalar também uma extensão do VS Code que nos permite visualizar o banco de dados SQLite. Abra o VS Code e clique no ícone de extensões na barra lateral esquerda. Na barra de pesquisa digite `SQLite Viewer` e instale a extensão.
+Nós vamos instalar também o DB Browser for SQLite, um programa que utilizaremos para visualizar o nosso banco de dados. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Faça o download e instale o programa [clicando neste link e seguindo as instruções](https://sqlitebrowser.org/dl/){: target="_blank"}.
+<!-- Nós vamos instalar também uma extensão do VS Code que nos permite visualizar o banco de dados SQLite. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Abra o VS Code e clique no ícone de extensões na barra lateral esquerda. Na barra de pesquisa digite `SQLite Viewer` e instale a extensão.
 
 
 <figure markdown="span">
   ![Extensão SQLite Viewer](img/sqlite-viewer.png){ width="70%" }
   <figcaption>Extensão SQLite Viewer</figcaption>
-</figure>
+</figure> -->
 
 Depois de instalar o programa, siga para a :point_right: [parte 2](parte2.md).

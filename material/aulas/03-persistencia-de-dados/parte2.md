@@ -1,5 +1,12 @@
 # Parte 2: Criando a tabela
 
+
+<figure markdown="span">
+  ![Acessando dados](img/acessando-dados.png){ width="70%" }
+  <figcaption>Acessando dados</figcaption>
+</figure>
+
+
 De modo geral, sistemas de bancos de dados são programas que ficam executando infinitamente. Um programa externo pode se conectar a esse programa para interagir com o banco de dados. Esse vai ser o nosso primeiro passo. Como queremos realizar múltiplas operações no banco de dados, vamos encapsular (lembra desse termo de Desenvolvimento Colaborativo Ágil?) a responsabilidade de se comunicar com o banco de dados em uma classe chamada `#!python Database`. A função para se conectar ao banco de dados é:
 
 ```python
@@ -14,7 +21,10 @@ Para mais detalhes, acesse :point_right: [Documentação SQLite3](https://docs.p
 !!! example "Exercício 01"
     1. **Criando arquivo:** Crie um arquivo chamado `database.py`. 
     1. **Importe:** Importe o pacote `#!python sqlite3`.
-    1. **Criando a Classe** Nesse arquivo, crie uma classe chamada `#!python Database`. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect` mostrada acima) em um atributo chamado `#!python conn`.
+    1. **Criando a Classe** Nesse arquivo, crie uma classe chamada `#!python Database`. 
+        
+        1. O construtor da classe receberá o nome do banco de dados. 
+        2. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função `#!python sqlite3.connect` mostrada acima) em um atributo chamado `#!python conn`.
 
         **Atenção:** Note que o arquivo do banco de dados deve possui a extensão `.db` (exemplo: NOME_DO_ARQUIVO + '.db').
 
@@ -31,11 +41,23 @@ Para mais detalhes, acesse :point_right: [Documentação SQLite3](https://docs.p
             ```bash
             python3 test_database.py
             ```
-        Para este exercício o teste `test_connect_on_init` deve passar com sucesso. Se ao executar os teste você **não** se deparar com nenhuma mensagem com o texto `FAIL: test_connect_on_init` então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)
+
+    !!! success "Exercício passando com sucesso" 
+        Caso nenhuma mensagem de erro começando com `EXERCÍCIO01` apareça, sua solução está passando com sucesso nos testes.
+        
+        As outras mensagens são referentes aos próximos exercícios.
 
 ## Criando a tabela
 
-Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando:
+Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. 
+
+
+<figure markdown="span">
+  ![Tabela Note](img/table-note.png){ width="80%" }
+  <figcaption>Tabela Note</figcaption>
+</figure>
+
+Para criar uma tabela com SQL utilizamos o comando:
 
 ```sql
 CREATE TABLE NOME_DA_TABELA COLUNAS_DA_TABELA;
@@ -71,23 +93,26 @@ CREATE TABLE IF NOT EXISTS dados_pessoais ( nome_da_rua TEXT NOT NULL,
 
 Ok, já sei qual é o comando para criar uma tabela, mas como eu o envio para o banco de dados? Agora é a hora de utilizarmos a conexão que criamos no exercício anterior. O objeto armazenado no atributo `#!python conn` possui um método chamado `#!python execute`, que recebe uma string contendo um comando SQL e envia para o banco de dados.
 
+Caso queira, procure um exemplo do uso do método `#!python execute` no link a seguir: :point_right: [Documentação SQLite3](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}.
+
+
 !!! example "Exercício 02"
     Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. 
     
     Altere o exemplo abaixo, para criar uma tabela que deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
 
     ```sql
-    CREATE TABLE IF NOT EXISTS dados_pessoais ( nome_da_rua TEXT NOT NULL,
-                                                cpf TEXT NOT NULL UNIQUE,
-                                                identificador INTEGER PRIMARY KEY);
+    CREATE TABLE IF NOT EXISTS dados_pessoais ( identificador INTEGER PRIMARY KEY,
+                                                nome_da_rua TEXT NOT NULL,
+                                                cpf TEXT NOT NULL UNIQUE );
     ```
 
    
     Normalmente, utilizamos o comando acima no sistema de banco de dados. Porém, neste exercício queremos utilizar o Python para enviar o comando para o banco de dados. 
 
-    Veja um exemplo de como fazer isso: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
+    Veja um exemplo de como fazer isso: [Documentação SQLite3](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}
 
-    Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, o teste `test_create_table_on_init` deve passar sem errors.
+    Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, nenhuma mesangem de erro começando com `EXERCÍCIO02` deve aparecer.
 
 ### Validando o resultado com o DB Browser for SQLite
 

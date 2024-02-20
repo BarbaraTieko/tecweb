@@ -21,7 +21,7 @@ UPDATE dados_pessoais SET cpf = '555.555.555-55' WHERE identificador = 2
 A condição do `#!sql WHERE` pode ser bastante complexa. Você pode, por exemplo, selecionar todas as linhas cujo `cpf` começa com a string `00`, por exemplo. Nesse caso, todas as linhas que se encaixarem nessa condição serão atualizadas.
 
 !!! example "Exercício 05"
-    Implemente o método `#!python update(self, entry)`, que recebe um valor do tipo `#!python Note` (assuma que todos os atributos, inclusive o `#!python id`, estão preenchidos) e atualiza essa entrada no banco de dados. 
+    Implemente o método `#!python update(self, entry)`, que recebe objeto do tipo `#!python Note` (assuma que todos os atributos, inclusive o `#!python id`, estão preenchidos) e atualiza essa entrada no banco de dados. 
 
     Altere o comando abaixo para atualizar o `title` e `content` da anotação onde o `id` presente no objeto recebido como argumento.
 
@@ -29,9 +29,10 @@ A condição do `#!sql WHERE` pode ser bastante complexa. Você pode, por exempl
     UPDATE dados_pessoais SET cpf = '555.555.555-55' WHERE identificador = 2
     ``` 
 
-    Novamente você terá que usar o método `execute`. Não se esqueça de chamar o método `commit`, assim como na [inserção de dados](parte3.md).
+    Novamente você terá que usar o método `execute`. Não se esqueça de chamar o método `commit`, assim como feito no exercício da [inserção de dados](parte3.md).
 
-    O teste `#!python test_update_row` verifica se a sua implementação está correta.
+    Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO05` deve aparecer.
+
 
 Você pode modificar o arquivo `exemplo_de_uso.py` para atualizar alguma das entradas utilizando o seu novo método.
 

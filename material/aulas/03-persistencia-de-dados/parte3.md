@@ -59,10 +59,12 @@ INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00
     !!! danger "Importante 2"
         Depois de chamar o `execute` com o comando de inserção você precisa chamar o método `commit()` do atributo `conn` para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o `commit`.
 
-        Para mais detalhes, veja a documentação: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial
+        Procure um exemplo com `INSERT` na documentação a seguir [:point_right: Documentação](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}.
 
+    !!! success "Passando nos testes"
+        Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO03` deve aparecer.
 
-Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py` e depois visualize o resultado no DB Browser clicando na aba `Browse Data` (observação: você vai precisar importar a classe `#!python Note` nesse arquivo):
+Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py`, execute o arquivo e depois visualize o resultado no DB Browser clicando na aba `Browse Data` (observação: você vai precisar importar a classe `#!python Note` nesse arquivo):
 
 ```python
 db.add(Note(title='Pão doce', content='Abra o pão e coloque o seu suco em pó favorito.'))
