@@ -1068,6 +1068,10 @@
 
 
 <h1 id="parte-2-criando-a-tabela">Parte 2: Criando a tabela</h1>
+<figure>
+  <a class="glightbox" href="../img/acessando-dados.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Acessando dados" src="../img/acessando-dados.png" width="70%" /></a>
+  <figcaption>Acessando dados</figcaption>
+</figure>
 <p>De modo geral, sistemas de bancos de dados são programas que ficam executando infinitamente. Um programa externo pode se conectar a esse programa para interagir com o banco de dados. Esse vai ser o nosso primeiro passo. Como queremos realizar múltiplas operações no banco de dados, vamos encapsular (lembra desse termo de Desenvolvimento Colaborativo Ágil?) a responsabilidade de se comunicar com o banco de dados em uma classe chamada <code class="language-python highlight"><span class="n">Database</span></code>. A função para se conectar ao banco de dados é:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">conexao</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">NOME_DO_ARQUIVO_DO_BANCO</span><span class="p">)</span>
 </span></code></pre></div>
@@ -1082,7 +1086,11 @@
 <li><strong>Criando arquivo:</strong> Crie um arquivo chamado <code>database.py</code>. </li>
 <li><strong>Importe:</strong> Importe o pacote <code class="language-python highlight"><span class="n">sqlite3</span></code>.</li>
 <li>
-<p><strong>Criando a Classe</strong> Nesse arquivo, crie uma classe chamada <code class="language-python highlight"><span class="n">Database</span></code>. O construtor da classe receberá o nome do banco de dados. Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função <code class="language-python highlight"><span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span></code> mostrada acima) em um atributo chamado <code class="language-python highlight"><span class="n">conn</span></code>.</p>
+<p><strong>Criando a Classe</strong> Nesse arquivo, crie uma classe chamada <code class="language-python highlight"><span class="n">Database</span></code>. </p>
+<ol>
+<li>O construtor da classe receberá o nome do banco de dados. </li>
+<li>Na construção, o objeto deve guardar a conexão com o banco (resultado da chamada da função <code class="language-python highlight"><span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span></code> mostrada acima) em um atributo chamado <code class="language-python highlight"><span class="n">conn</span></code>.</li>
+</ol>
 <p><strong>Atenção:</strong> Note que o arquivo do banco de dados deve possui a extensão <code>.db</code> (exemplo: NOME_DO_ARQUIVO + '.db').</p>
 <p>Se não se lembrar a sintaxe de classes em Python, procure no Google ou acesse a <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" />  <a href="https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables" target="_blank">documentação</a>. </p>
 </li>
@@ -1103,12 +1111,21 @@
 </div>
 </div>
 </div>
-<p>Para este exercício o teste <code>test_connect_on_init</code> deve passar com sucesso. Se ao executar os teste você <strong>não</strong> se deparar com nenhuma mensagem com o texto <code>FAIL: test_connect_on_init</code> então isso significa que deu tudo certo. (As outras mensagens são referentes aos próximos exercícios.)</p>
 </li>
 </ol>
+<div class="admonition success">
+<p class="admonition-title">Exercício passando com sucesso</p>
+<p>Caso nenhuma mensagem de erro começando com <code>EXERCÍCIO01</code> apareça, sua solução está passando com sucesso nos testes.</p>
+<p>As outras mensagens são referentes aos próximos exercícios.</p>
+</div>
 </div>
 <h2 id="criando-a-tabela">Criando a tabela</h2>
-<p>Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. Para criar uma tabela com SQL utilizamos o comando:</p>
+<p>Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. </p>
+<figure>
+  <a class="glightbox" href="../img/table-note.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tabela Note" src="../img/table-note.png" width="80%" /></a>
+  <figcaption>Tabela Note</figcaption>
+</figure>
+<p>Para criar uma tabela com SQL utilizamos o comando:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">NOME_DA_TABELA</span><span class="w"> </span><span class="n">COLUNAS_DA_TABELA</span><span class="p">;</span>
 </span></code></pre></div>
 <p>Uma tabela só pode ser criada uma única vez. Você deveria encontrar um lugar para colocar o código de criação da tabela que só fosse executado uma única vez. Se você tentar criar a tabela mais de uma vez ocorrerá um erro.</p>
@@ -1132,17 +1149,18 @@
 </div>
 <h3 id="enviando-um-comando-sql-para-o-banco-de-dados">Enviando um comando SQL para o banco de dados</h3>
 <p>Ok, já sei qual é o comando para criar uma tabela, mas como eu o envio para o banco de dados? Agora é a hora de utilizarmos a conexão que criamos no exercício anterior. O objeto armazenado no atributo <code class="language-python highlight"><span class="n">conn</span></code> possui um método chamado <code class="language-python highlight"><span class="n">execute</span></code>, que recebe uma string contendo um comando SQL e envia para o banco de dados.</p>
+<p>Caso queira, procure um exemplo do uso do método <code class="language-python highlight"><span class="n">execute</span></code> no link a seguir: <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial" target="_blank">Documentação SQLite3</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercício 02</p>
 <p>Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe <code class="language-python highlight"><span class="n">Database</span></code>. </p>
 <p>Altere o exemplo abaixo, para criar uma tabela que deve se chamar <code>note</code> e deve ter as colunas <code>id</code> (chave primária do tipo inteiro), <code>title</code> (do tipo string), <code>content</code> (do tipo string e não pode ser vazia).</p>
-<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dados_pessoais</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">nome_da_rua</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">                                            </span><span class="n">cpf</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">,</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">                                            </span><span class="n">identificador</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">);</span>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">dados_pessoais</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">identificador</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">                                            </span><span class="n">nome_da_rua</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">                                            </span><span class="n">cpf</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">);</span>
 </span></code></pre></div>
 <p>Normalmente, utilizamos o comando acima no sistema de banco de dados. Porém, neste exercício queremos utilizar o Python para enviar o comando para o banco de dados. </p>
-<p>Veja um exemplo de como fazer isso: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial</p>
-<p>Como no exercício anterior, rode os testes no arquivo <code>test_database.py</code> para verificar se a sua implementação está correta. Se tudo der certo, o teste <code>test_create_table_on_init</code> deve passar sem errors.</p>
+<p>Veja um exemplo de como fazer isso: <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial" target="_blank">Documentação SQLite3</a></p>
+<p>Como no exercício anterior, rode os testes no arquivo <code>test_database.py</code> para verificar se a sua implementação está correta. Se tudo der certo, nenhuma mesangem de erro começando com <code>EXERCÍCIO02</code> deve aparecer.</p>
 </div>
 <h3 id="validando-o-resultado-com-o-db-browser-for-sqlite">Validando o resultado com o DB Browser for SQLite</h3>
 <p>Crie um arquivo chamado <code>exemplo_de_uso.py</code> na mesma pasta com o seguinte conteúdo:</p>

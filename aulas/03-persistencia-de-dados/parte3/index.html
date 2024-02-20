@@ -1006,10 +1006,14 @@
 <div class="admonition danger">
 <p class="admonition-title">Importante 2</p>
 <p>Depois de chamar o <code>execute</code> com o comando de inserção você precisa chamar o método <code>commit()</code> do atributo <code>conn</code> para que a inserção seja executada. Isso é necessário porque as modificações na conexão atual só são efetivamente enviadas todas de uma vez para o banco de dados após o <code>commit</code>.</p>
-<p>Para mais detalhes, veja a documentação: https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial</p>
+<p>Procure um exemplo com <code>INSERT</code> na documentação a seguir <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial" target="_blank"><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> Documentação</a>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Passando nos testes</p>
+<p>Se tudo der certo, nenhuma mensagem de erro começando com <code>EXERCÍCIO03</code> deve aparecer.</p>
 </div>
 </div>
-<p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code> e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="language-python highlight"><span class="n">Note</span></code> nesse arquivo):</p>
+<p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code>, execute o arquivo e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="language-python highlight"><span class="n">Note</span></code> nesse arquivo):</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pão doce&#39;</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Abra o pão e coloque o seu suco em pó favorito.&#39;</span><span class="p">))</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">db</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Note</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">content</span><span class="o">=</span><span class="s1">&#39;Lembrar de tomar água&#39;</span><span class="p">))</span>
 </span></code></pre></div>
