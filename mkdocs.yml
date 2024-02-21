@@ -60,7 +60,11 @@ nav:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
   # - Projetos:
-  #   - "Projeto 1A": projetos/projeto1/projeto1a.md
+  #   - "Projeto 1A": 
+  #     - "Enunciado": projetos/projeto1/projeto1a.md
+  #     - "Configurando Webhook": projetos/projeto1/projeto1a/configurando-webhook.md
+  #     - "Organização do Repo": projetos/projeto1/projeto1a/organizacao-repositorio.md
+  #     - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
   
 markdown_extensions:
   - tables
@@ -101,6 +105,7 @@ extra_javascript:
   - javascripts/quiz.js
   - javascripts/short-questions.js
   - javascripts/translate-admonitions.js
+  - javascripts/webhook-config.js
 
 
 extra_css:
