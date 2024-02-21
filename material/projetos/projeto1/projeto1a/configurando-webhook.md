@@ -27,7 +27,7 @@
 
     - Payload URL: 
         ``` 
-        http://3.19.41.18:8000/tecweb/projeto1a
+        http://3.19.41.18:8000/tecweb/Projeto1A
         ```
     - Content type: `application/json`
 
@@ -63,7 +63,7 @@
     ```html title="Conteúdo do README.md"
     ## Status da Entrega
     <img 
-        src="http://3.19.41.18:8000/tecweb/projeto1a/svg/insper-tecnologias-web/NOME DO SEU REPOSITORIO" 
+        src="http://3.19.41.18:8000/tecweb/Projeto1A/svg/insper-tecnologias-web/NOME DO SEU REPOSITORIO" 
         alt="svg" 
         width="100%" 
         height="300px"
