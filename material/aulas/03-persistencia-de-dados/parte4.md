@@ -37,6 +37,7 @@ for linha in cursor:
         cpf = linha[2]
     ```
 
+    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
     Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO04` deve aparecer.
     
 

@@ -17,6 +17,8 @@ Note que depois dessa operação não vai mais existir uma linha com `identifica
 !!! example "Exercício 06"
     Implemente o método `#!python delete(self, note_id)`, que recebe o valor de um `id` e apaga essa entrada do banco de dados. Obs: lembre-se de chamar o método `#!python commit` depois do `#!python execute`.
 
+    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
+
     Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO06` deve aparecer.
 
 <!-- !!! example "Exercício 07"

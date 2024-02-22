@@ -66,7 +66,7 @@ Para que o corretor automático possa corrigir o seu projeto, é necessário cri
 
 Pronto! Agora os testes vão rodar. (Pode levar alguns minutos para que os testes sejam executados).
 
-Caso os testes não passem, uma `issue` será aberta no seu repositório indicando o que está errado.
+Sempre que algum teste não passar com sucesso, uma `issue` será aberta no seu repositório indicando o que está errado. Como não implementamos todas as funcionalidades do projeto, uma issue será aberta indicando quais itens faltam implementar.
 
 <figure markdown="span">
     ![Issue](webhook-config-13.png){ width="100%" }
@@ -80,6 +80,18 @@ Se tudo estiver correto, uma imagem aparecerá no README do seu repositório ind
     <figcaption>Testes handout 01 ok</figcaption>
 </figure>
 
+!!! danger "Importante"
+    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
+
+    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
+    
+    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
+    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
+    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
+
+!!! danger "Importante"
+    O servidor deverá utilizar a porta `8080`
+    
 Agora podemos começar a tabalhar nas tarefas do Projeto 1A.
 
 [Tarefas do Projeto 1A](tarefas-projeto1a.md){ .md-button }

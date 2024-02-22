@@ -60,13 +60,17 @@ titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pro
 
     Caso o problema persista, altere o código do `servidor.py`, adicionando as linhas abaixo:
 
-    ```python hl_lines="5 6"
+    ```python hl_lines="5-10"
     filepath = CUR_DIR / route
     if filepath.is_file():
         response = read_file(filepath)
     elif route == '':
-        if request.split()[0] == 'POST' and len(request.split("\n\n")) == 1:
-            request += client_connection.recv(1024).decode()
+        if request.split()[0] == 'POST' and len(request.split("\n\n")) == 1 and 'Content-Length:' in request:
+            content_length = int(request.split('Content-Length: ')[1].split('\n')[0])
+            body_start = request.find('\r\n\r\n') + 4
+            body_received = request[body_start:]
+            bytes_to_read = content_length - len(body_received)
+            request += client_connection.recv(bytes_to_read).decode()
             
         response = index()
     else:

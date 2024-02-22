@@ -45,8 +45,9 @@ INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00
 
     Note que os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo `Note` recebido como argumento.
 
-    Depois de implementar o método `#!python add(self, note)`, teste-o com o arquivo `test_database.py`. O teste `test_add_rows` deve passar com sucesso.
+    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
 
+    Depois de implementar o método `#!python add(self, note)`, teste-o com o arquivo `test_database.py`. Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO03` deve aparecer.
 
     !!! info "Curiosidade"
         Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.

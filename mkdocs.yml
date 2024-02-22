@@ -23,6 +23,7 @@ theme:
   features:
     - content.code.copy
     - content.code.select
+    - content.tooltips
   custom_dir: overrides
   icon:
     annotation: material/arrow-right-circle
@@ -67,6 +68,7 @@ nav:
       - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
   
 markdown_extensions:
+  - abbr
   - tables
   - attr_list
   - def_list
@@ -82,6 +84,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path: material/aulas
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.superfences
   - pymdownx.critic
   - pymdownx.caret
@@ -95,6 +99,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+
+    
 
  
 extra_javascript:
@@ -115,3 +122,6 @@ extra_css:
 plugins:
   - search
   - glightbox
+
+watch:
+  - includes

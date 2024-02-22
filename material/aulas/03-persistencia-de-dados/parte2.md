@@ -47,6 +47,26 @@ Para mais detalhes, acesse :point_right: [Documentação SQLite3](https://docs.p
         
         As outras mensagens são referentes aos próximos exercícios.
 
+!!! danger "Erro de permissão"
+    Caso se depara com o seguinte erro:
+    ```bash
+    PermissionError: [WinError 32] O arquivo já está sendo usado por outro processo
+    ```
+
+    Abra o arquivo `test_database.py` e comente as linhas 42 a 52:
+    ```python hl_lines="4-7"
+    class DatabaseTestCase(unittest.TestCase):
+    def setUp(self):
+        db_file = Path.cwd() / DB_FILENAME
+        try:
+            db_file.unlink()  
+        except FileNotFoundError:
+            pass
+    ```
+
+    Antes de rodar os testes apague o arquivo `banco-teste.db` que foi criado na pasta.
+
+
 ## Criando a tabela
 
 Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. 
@@ -112,7 +132,10 @@ Caso queira, procure um exemplo do uso do método `#!python execute` no link a s
 
     Veja um exemplo de como fazer isso: [Documentação SQLite3](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}
 
+    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
+
     Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, nenhuma mesangem de erro começando com `EXERCÍCIO02` deve aparecer.
+
 
 ### Validando o resultado com o DB Browser for SQLite
 
@@ -126,9 +149,13 @@ db = Database('banco')
 
 Após executar este programa, um arquivo chamado `banco.db` deve ter aparecido na sua pasta. Esse arquivo contém todo o seu banco de dados. Na maioria dos bancos de dados os arquivos não ficam tão acessíveis, mas como o SQLite é uma opção mais simples e direta, se quiser apagar o banco, basta apagar esse arquivo (e na verdade é o que fazemos no `test_database.py`).
 
+#### Visualizando o banco de dados (Opção 1 - DB Brower for SQLite)
 Abra o arquivo `banco.db` no DB Browser for SQLite (clique no botão `Open Database` e selecione o arquivo). Você deve ver uma tela parecida com esta:
 
 ![](tela1.png)
+
+<!-- #### Visualizando o banco de dados (Opção 2 - Extensão VS Code SQLite3 Viewer) -->
+
 
 Veja que a tabela foi criada e as colunas estão listadas corretamente.
 

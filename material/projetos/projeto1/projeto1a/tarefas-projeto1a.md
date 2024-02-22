@@ -1,10 +1,12 @@
 
 # Tarefas do Projeto 1A
 
-As 4 tarefas a serem realizadas são:
+No handout 01 várias trechos de código pronto foram apresentados e explicações foram dadas sobre como cada trecho funciona. Neste projeto será necessário que vocês implementes funcionalidades novas ao código base para verificarem que compreenderam o funcionamento do código.
+
+Para este projeto, vocês devem implementar as 4 funcionalidades a seguir:
 
 
-## Estilo da página: 
+## **1. Estilo da página** :dress:
 
 - O estilo css já foi implementado na atividade **Desafio CSS**, agora é necessário adicionar este estilo no código do *handout 01*.
 
@@ -13,28 +15,75 @@ Para isso, será necessário:
 - Adicionar os arquivos `getit.css` e `getit.js` do Desafio CSS na pasta do repositório do projeto.
 
 - Fazer um merge manual dos arquivos `index.html` e `notes.html` do Desafio CSS + Handout 01. Esta etapa deve ser realizada com cuidado pois existem trechos de uma versão que não existem na outra.
+    - Leia o arquivo `index.html` do Handout 01 e avalie quais trechos devem ser mantidos;
+    - Leia o arquivo `index.html` do Desafio CSS e procure por possíveis comentários e avalie se algo deve ser alterado;
+    - Leia o arquivo `index.html` do Desafio CSS e avalie qual trecho de código não é necessário;
+    - Leia o arquivo `notes.html` do Handout 01 e avalie quais trechos devem ser mantidos.      
+        - Avalie o que deveria ser adicionado.
+        - Qual trecho de HTML representa uma nota? :thinking:
+
+Realize alguns testes para inserir novas notas para verificar se as funcionalidades do Handout 01 continuam funcionando.
 
 Ao finalizar esta etapa, a página deve estar com o estilo do Desafio CSS e com as funcionalidades do Handout 01.
 
-## Persistência de dados: 
+Crie uma issue no repositório do projeto. Para esta tarefa, não há testes automatizados, mas um print screen da página inicial com o estilo deve aparecer no README.md do repositório.
 
-Implementar a persistência dos dados com SQLite. Nesta etapa, você deverá utilizar o resultado obtido no Handout 03.
+<figure markdown="span">
+    ![README.md com print screen](webhook-config-14.png){ width="100%" }
+    <figcaption>Testes handout 01 ok</figcaption>
+</figure>
+
+!!! danger "Importante"
+    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
+
+    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
+    
+    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
+    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
+    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
+
+## **2. Persistência de dados** :material-dice-6:
+
+Nesta etapa, você deverá implementar a persistência dos dados com SQLite utilizando o resultado obtido no Handout 03.
 
 - Utilize o arquivo `database.py` desenvolvido no handout de persistência de dados. 
 
 **Dica** :material-alarm-light:
 
 - Nesta etapa, as alterações podem ser feitas no arquivo `utils.py`. Procure todos os trechos de código que realizam leitura e escrita do arquivo `notes.json` e altere para que estas operações sejam realizadas no banco de dados.
+    - **Dica** Faça as alterações aos poucos e testes. Evite fazer muitas alterações de uma vez só. Por exemplo, altere a função que lê o arquivo `notes.json` para que ela leia do banco de dados e verifique se a aplicação continua funcionando. Muito provavelmente, você perceberá que esqueceu de alterar alguma coisa e terá que consertar o código.
 
-- Os códigos do arquivo `exemplo_de_uso.py` são um bom exemplo de como vocês utilizarão a classe `Database` para realizar as operações de CRUD.
+    Somente prossiga para a próxima alteração quando tiver certeza que a alteração anterior está funcionando corretamente.
+
+- Os códigos do arquivo `exemplo_de_uso.py` são um bom exemplo de como você deverá utilizar a classe `Database` para realizar as operações de CRUD (Create, Read, Update and Delete ).
 
 - Ao finalizar esta etapa, caso não utilize mais o arquivo `notes.json`, apague o arquivo do repositório.
 
-## Apagar anotações
+Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Persistência de dados` passaram com sucesso.
+
+<figure markdown="span">
+    ![README.md com testes passando](webhook-config-15.png){ width="100%" }
+    <figcaption>Testes passando para Persistência de dados</figcaption>
+</figure>
+
+
+!!! danger "Importante"
+    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
+
+    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
+    
+    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
+    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
+    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
+
+## **3. Apagar anotações** :material-delete:
 
 Permitir que o usuário apague uma anotação;
 
-- Adicione um botão no `card` de cada nota existente para excluir esta nota.
+- Adicione um botão/link no `card` de cada nota existente para excluir esta nota.
+- Um botão/link geram uma requisição quando o usuário clica nele. Quando adicinar um botão/link faça um teste para ver a requisicão que é gerada.
+- O botão/link deve ter o atributo `name` com o valor `delete_button`. Caso esta propriedade não seja utilizada, o teste de apagar anotações não passará com sucesso.
+- **Dica:** Trabalhar com link (tag <a>) pode ser mais fácil do que trabalhar. Pesquise sobre a tag `#!html <a>`.
 - Você pode utilizar o método **GET** ou **POST** para esta tarefa.
     - **GET:** Caso opte pelo método **GET** a requisição deve seguir o seguinte formato:
         ```
@@ -48,17 +97,43 @@ Permitir que o usuário apague uma anotação;
 
         id=<NOTA_ID>
         ```
+        Para enviar o id no formulário, pesquise por `#!html <input type="hidden" />`
+- **Não** altere a função `views.index` para a implementação desta funcionalidade. Crie uma nova função para esta tarefa.
 - **Observação:** Note que o `id` da nota não deve aparecer na tela, pois esta informação é irrelevante para o usuário.
 
-## Editar anotações: 
+### Exemplo
+<figure markdown="span">
+    ![Exemplo da funcionalidade de deletar](tecweb-deletar.gif){ width="100%" }
+    <figcaption>Exemplo da funcionalidade de deletar</figcaption>
+</figure>
+
+### Criando a issue
+
+Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Apagar anotações` passaram com sucesso.
+
+<figure markdown="span">
+    ![README.md com testes passando](webhook-config-16.png){ width="100%" }
+    <figcaption>Testes passando para Apagar anotações</figcaption>
+</figure>
+
+
+!!! danger "Importante"
+    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
+
+    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
+    
+    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
+    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
+    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
+
+## **4. Editar anotações** :material-file-edit:
 Permitir a edição de anotações existentes;
 
-- Adicione um botão na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.
+- Adicione um botão/link na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.
+- O botão/link deve ter o atributo `name` com o valor `edit_button`. Caso esta propriedade não seja utilizada, o teste de editar anotações não passará com sucesso.
 - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
-
-Você precisará de um método novo no arquivo `database.py` que dado um `id` de uma anotação retorna esta anotação no formato de um objeto do tipo `Note`. 
-
-- Esta página deve apresentar dois botões: `Salvar` e `Cancelar`.
+- Você precisará de um método novo no arquivo `database.py` que recebe como argumento o `id` de uma anotação retorna esta anotação no formato de um objeto do tipo `Note`. 
+- Esta página deve apresentar dois botões: `Salvar` e `Cancelar`. Caso os nomes sejam diferentes o teste de editar anotações não passará com sucesso.
     - Ao clicar no botão de `Cancelar` o usuário deve ser direcionado para a página principal.
     - Ao clicar no botão de `Salvar` a aplicação deve receber uma requisição no seguinte formato:
         ```
@@ -68,3 +143,36 @@ Você precisará de um método novo no arquivo `database.py` que dado um `id` de
         id=<NOTA_ID>&titulo=<NOTA_TITULO>&detalhes=<NOTA_DETALHES>
         ```
     As alterações devem ser registradas no banco de dados e em seguida o usuário deve ser direcionado para a página inicial.
+- **Não** altere a função `views.index` para a implementação desta funcionalidade. Crie uma nova função para esta tarefa.
+
+### Exemplo
+<figure markdown="span">
+    ![Exemplo da funcionalidade de editar](projeto1a-editar.gif){ width="100%" }
+    <figcaption>Exemplo da funcionalidade de editar</figcaption>
+</figure>
+
+### Criando a issue
+
+Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Editar anotações` passaram com sucesso.
+
+<figure markdown="span">
+    ![README.md com testes passando](webhook-config-16.png){ width="100%" }
+    <figcaption>Testes passando para Editar anotações</figcaption>
+</figure>
+
+
+!!! danger "Importante"
+    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
+
+    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
+    
+    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
+    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
+    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
+
+
+## Conceito A+
+
+Para o conceito A+, converse com a professora e combine qual funcionalidade será entregue para atingir este conceito. Essa funcionalidade deve ser validada com a professora. Funcionalidades não validadas não serão consideradas para o conceito A+.
+
+Além disso, a funcionalidade extra será considerada somente se o projeto atingir o conceito A.
