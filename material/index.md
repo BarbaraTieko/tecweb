@@ -22,7 +22,9 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 **Algumas Datas**
 
 - 09/02: Entrega do [ELI5](entregas/01-ELI5.md)
-- 23/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
+- ~~23/02: Entrega do [Desafio CSS]~~
+- 25/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
+- 03/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 
 **Bug Fixes**
 
