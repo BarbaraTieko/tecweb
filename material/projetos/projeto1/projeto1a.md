@@ -32,6 +32,9 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
 |    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
 |    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. (**Obs.:** Deve ter implementado a etapa do Desafio presente no final do Handout 01)|
 
+!!! danger "Importante"
+    A validação da funcionalidade será feita através de testes automatizados. Portanto, é importante que siga as instruções descritas nas tarefas do Projeto 1A.
+
 !!! danger "Conceito A+"
     O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional (ex: realizar requisições assíncronas em JavaScript para não precisar recarregar a página inteira) .
 
