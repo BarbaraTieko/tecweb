@@ -80,6 +80,7 @@ Se tudo estiver correto, uma imagem aparecerá no README do seu repositório ind
     <figcaption>Testes handout 01 ok</figcaption>
 </figure>
 
+
 !!! danger "Importante"
     Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
 
@@ -91,6 +92,31 @@ Se tudo estiver correto, uma imagem aparecerá no README do seu repositório ind
 
 !!! danger "Importante"
     O servidor deverá utilizar a porta `8080`
+
+## Erro no handout01
+
+
+<figure markdown="span">
+    ![Corretor não identifica handout 01](webhook-config-17.png){ width="100%" }
+    <figcaption>Corretor não identifica handout 01</figcaption>
+</figure>
+
+No arquivo `servidor.py` a variável `SERVER_HOST` deve ser `#!python "0.0.0.0"`. Para testar sua aplicação em seu computador (ambiente local), basta acessar `http://localhost:8080` ou `http://127.0.0.1:8080`.
+
+Caso queira, pode alterar o `print` marcado abaixo por `#!python print('Servidor escutando em (ctrl+click): http://localhost:8080')`
+
+```python hl_lines="2 10"
+CUR_DIR = Path(__file__).parent
+SERVER_HOST = '0.0.0.0'
+SERVER_PORT = 8080
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+server_socket.bind((SERVER_HOST, SERVER_PORT))
+server_socket.listen()
+
+print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
+```
     
 Agora podemos começar a tabalhar nas tarefas do Projeto 1A.
 
