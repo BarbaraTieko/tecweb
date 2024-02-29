@@ -6,7 +6,7 @@ Caso não tenha feito a configuração do WebHook, [clique aqui](configurando-we
 
 ## Estrutura de diretórios
 
-O repositório do projeto deve seguir a seguinte estrutura de diretórios:
+Copie os arquivos referentes ao Handout 01. O repositório do projeto deve seguir a seguinte estrutura de diretórios:
 
 <figure markdown="span">
     ![Organização do Repositório](organizacao-repositorio.png){ width="30%" }

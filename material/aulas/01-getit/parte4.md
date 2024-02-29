@@ -56,7 +56,7 @@ titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pro
 ```
 
 !!! danger "Atenção"
-    Caso o corpo da requisição não apareça, tente acessar o servidor de um navegador com aba anônima.
+    Caso o corpo da requisição não apareça, tente acessar o servidor de um navegador com **aba anônima**.
 
     Caso o problema persista, altere o código do `servidor.py`, adicionando as linhas abaixo:
 
@@ -75,6 +75,15 @@ titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pro
         response = index()
     else:
         response = bytes()
+    ```
+
+    Além disso, altere a função `utils.extract_route` da seguinte forma:
+
+    ```python hl_lines="2-3"
+    def extract_route(request):
+        if len(request) == 0:
+            return ""
+        return request.split()[1][1:]
     ```
 
 Há dois pontos importantes:

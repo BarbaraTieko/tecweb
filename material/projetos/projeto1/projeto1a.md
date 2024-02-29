@@ -22,10 +22,19 @@ Durante o primeiro handout nós desenvolvemos o [Get-it](../../aulas/01-getit.md
 
 A rubrica a seguir será utilizada na correção do Projeto 1A:
 
-| Conceito | Descrição |
+<!-- | Conceito | Descrição |
 | :------: | :-------- |
 |    I     | Não entregou ou o código não executa |
 |    D     | Não efetuou as configuraçoes do repositório ou Entregou apenas o resultado do handout 01 funcionando e nada mais |
+|    C     | Entregou o handout 01 e 1 das 4 tarefas funcionando |
+|    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
+|    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |
+|    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
+|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. (**Obs.:** Deve ter implementado a etapa do Desafio presente no final do Handout 01)| -->
+| Conceito | Descrição |
+| :------: | :-------- |
+|    I     | Não entregou ou o código não executa |
+|    D     | Entregou apenas o resultado do handout 01 funcionando e nada mais |
 |    C     | Entregou o handout 01 e 1 das 4 tarefas funcionando |
 |    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
 |    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |

@@ -129,12 +129,18 @@ Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparece
 ## **4. Editar anotações** :material-file-edit:
 Permitir a edição de anotações existentes;
 
-- Adicione um botão/link na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página nova de edição.
+- Adicione um botão/link na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página html nova de edição.
+    - Ao clicar no botão/link, o servidor deverá receber uma requisição no seguinte formato:
+        ```
+        GET /delete/<NOTA_ID> HTTP/1.1
+        ```
 - O botão/link deve ter o atributo `name` com o valor `edit_button`. Caso esta propriedade não seja utilizada, o teste de editar anotações não passará com sucesso.
 - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
-- Você precisará de um método novo no arquivo `database.py` que recebe como argumento o `id` de uma anotação retorna esta anotação no formato de um objeto do tipo `Note`. 
+- Você precisará de um método novo no arquivo `database.py` que recebe como argumento o `id` de uma anotação e retorna esta anotação no formato de um objeto do tipo `Note`. 
 - Esta página deve apresentar dois botões: `Salvar` e `Cancelar`. Caso os nomes sejam diferentes o teste de editar anotações não passará com sucesso.
-    - Ao clicar no botão de `Cancelar` o usuário deve ser direcionado para a página principal.
+    - Ao clicar no botão/link de `Cancelar` o usuário deve ser direcionado para a página principal.
+        - O botão/link deverá ter o texto `Cancelar`
+        - O botão/link deverá ter a propriedade `name` igual `edit_cancel`
     - Ao clicar no botão de `Salvar` a aplicação deve receber uma requisição no seguinte formato:
         ```
         POST /update HTTP/1.1
