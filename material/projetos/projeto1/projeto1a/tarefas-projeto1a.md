@@ -26,22 +26,6 @@ Realize alguns testes para inserir novas notas para verificar se as funcionalida
 
 Ao finalizar esta etapa, a página deve estar com o estilo do Desafio CSS e com as funcionalidades do Handout 01.
 
-Crie uma issue no repositório do projeto. Para esta tarefa, não há testes automatizados, mas um print screen da página inicial com o estilo deve aparecer no README.md do repositório.
-
-<figure markdown="span">
-    ![README.md com print screen](webhook-config-14.png){ width="100%" }
-    <figcaption>Testes handout 01 ok</figcaption>
-</figure>
-
-!!! danger "Importante"
-    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
-
-    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
-    
-    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
-    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
-    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
-
 ## **2. Persistência de dados** :material-dice-6:
 
 Nesta etapa, você deverá implementar a persistência dos dados com SQLite utilizando o resultado obtido no Handout 03.
@@ -59,22 +43,6 @@ Nesta etapa, você deverá implementar a persistência dos dados com SQLite util
 
 - Ao finalizar esta etapa, caso não utilize mais o arquivo `notes.json`, apague o arquivo do repositório.
 
-Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Persistência de dados` passaram com sucesso.
-
-<figure markdown="span">
-    ![README.md com testes passando](webhook-config-15.png){ width="100%" }
-    <figcaption>Testes passando para Persistência de dados</figcaption>
-</figure>
-
-
-!!! danger "Importante"
-    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
-
-    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
-    
-    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
-    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
-    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
 
 ## **3. Apagar anotações** :material-delete:
 
@@ -98,7 +66,6 @@ Permitir que o usuário apague uma anotação;
         id=<NOTA_ID>
         ```
         Para enviar o id no formulário, pesquise por `#!html <input type="hidden" />`
-- **Não** altere a função `views.index` para a implementação desta funcionalidade. Crie uma nova função para esta tarefa.
 - **Observação:** Note que o `id` da nota não deve aparecer na tela, pois esta informação é irrelevante para o usuário.
 
 ### Exemplo
@@ -107,24 +74,6 @@ Permitir que o usuário apague uma anotação;
     <figcaption>Exemplo da funcionalidade de deletar</figcaption>
 </figure>
 
-### Criando a issue
-
-Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Apagar anotações` passaram com sucesso.
-
-<figure markdown="span">
-    ![README.md com testes passando](webhook-config-16.png){ width="100%" }
-    <figcaption>Testes passando para Apagar anotações</figcaption>
-</figure>
-
-
-!!! danger "Importante"
-    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
-
-    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
-    
-    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
-    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
-    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
 
 ## **4. Editar anotações** :material-file-edit:
 Permitir a edição de anotações existentes;
@@ -149,32 +98,12 @@ Permitir a edição de anotações existentes;
         id=<NOTA_ID>&titulo=<NOTA_TITULO>&detalhes=<NOTA_DETALHES>
         ```
     As alterações devem ser registradas no banco de dados e em seguida o usuário deve ser direcionado para a página inicial.
-- **Não** altere a função `views.index` para a implementação desta funcionalidade. Crie uma nova função para esta tarefa.
 
 ### Exemplo
 <figure markdown="span">
     ![Exemplo da funcionalidade de editar](projeto1a-editar.gif){ width="100%" }
     <figcaption>Exemplo da funcionalidade de editar</figcaption>
 </figure>
-
-### Criando a issue
-
-Crie uma issue no repositório do projeto. Se tudo der certo, uma imagem aparecerá no README do seu repositório indicando que os testes para a `Editar anotações` passaram com sucesso.
-
-<figure markdown="span">
-    ![README.md com testes passando](webhook-config-16.png){ width="100%" }
-    <figcaption>Testes passando para Editar anotações</figcaption>
-</figure>
-
-
-!!! danger "Importante"
-    Sempre que gerar uma issue no repositório, para atualizar a imagem no README é recomendado que faça um hard refresh no navegador.
-
-    Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. 
-    
-    - No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. 
-    - No MacOS :material-apple:, pressione `Cmd + Shift + R`. 
-    - Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
 
 
 ## Conceito A+
