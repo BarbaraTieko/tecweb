@@ -1,7 +1,9 @@
 # Projeto 1: Parte A
 
 !!! success "Entrega"
-    :date: 03/03 (domingo)
+    :date: ~~03/03 (domingo)~~
+    
+    :date: 05/03 (terça-feira)
     
     :clock1: Commits até as 23:59
 
@@ -54,11 +56,9 @@ Este projeto possui correção automática, desta forma, será necessário confi
 Antes de iniciar o projeto, você deve configurar o repositório do projeto. Para isso, siga os passos a seguir: 
 
 1. Acesse o link para o [ :point_right: GitHub Classroom](https://classroom.github.com/a/6BRGExNc){: target="_blank"}.
-2. [:point_right: Configurando o WebHook](projeto1a/configurando-webhook.md).
+2. ~~[:point_right: Configurando o WebHook](projeto1a/configurando-webhook.md).~~ (Não é necessário seguir esta etapa.)
 3. [:point_right: Organização do Repositório](projeto1a/organizacao-repositorio.md).
 
-!!! danger "Atenção"
-    Caso você não configure o WebHook, a correção do projeto ficará comprometida.
     
 ## Detalhes das Tarefas :material-magnify-plus-outline:
 
