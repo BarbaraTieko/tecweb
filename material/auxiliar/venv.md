@@ -20,18 +20,28 @@ Para resolver esse (e outros) problema, foram criados os ambientes virtuais (`ve
 ## Criando um ambiente virtual
 
 
-Para criar um ambiente virtual (`venv`), utilize o comando:
+Para criar um ambiente virtual (`venv`), utilizaremos um comando similar a este:
 
+=== "Windows :material-microsoft-windows:/Linux :simple-linux:"
+    ```bash
+    python -m venv NOME_DA_PASTA_DO_VENV
+    ```
+=== "MacOS :material-apple:"
+    ```bash
     python3 -m venv NOME_DA_PASTA_DO_VENV
+    ```
+    
+É comum utilizarmos nomes como `env` ou `.env` para o `NOME_DA_PASTA_DO_VENV`. Para Tecnologias Web, vamos padronizar o uso do nome `env`. Assim, o comando que vamos utilizar é:
 
-É comum utilizarmos nomes como `env` ou `.env` para o `NOME_DA_PASTA_DO_VENV`. Para Tecnologias Web, vamos padronizar o uso do nome `env`. Assim, o comando seria:
-
+=== "Windows :material-microsoft-windows:/Linux :simple-linux:"
+    ```bash
+    python -m venv env
+    ```
+=== "MacOS :material-apple:"
+    ```bash
     python3 -m venv env
+    ```
 
-!!! danger "Se o comando acima não funcionar"
-    Caso o comando acima não funcione, tente o seguinte comando:
-
-        python -m venv env
 
 Esse comando vai criar uma pasta chamada `env` dentro da pasta onde ele foi executado. Todos os arquivos necessários estarão dentro da pasta `env`.
 
@@ -53,15 +63,15 @@ Será necessário ativar o ambiente virtual **toda vez que você for trabalhar c
 
 === "Windows PowerShell"
 
-    `$ env\Scripts\Activate.ps1`
+        env\Scripts\Activate.ps1
 
 === "Windows Prompt de Comando"
 
-    `$ env\Scripts\activate.bat`
+        env\Scripts\activate.bat
 
 === "Linux/MacOS"
 
-    `$ source env/bin/activate`
+        source env/bin/activate
 
 !!! danger "Importante"
     Se você utilizar um nome diferente de `env` para o seu ambiente virtual, lembre-se de substituí-lo no comando acima. Por exemplo: se o seu ambiente virtual se chama `meu-ambiente`, o comando será `source meu-ambiente/bin/activate` (ou `meu-ambiente\Scripts\activate.bat`, no Windows).
@@ -70,7 +80,11 @@ Pronto! Agora quando você utilizar o Python **nesse terminal**, será utilizada
 
 !!! tip "Importante"
     Para saber se o ambiente virtual foi ativado com sucesso, basta verificar se no terminal aparece o nome do ambiente virtual no começo da linha.
-    
+
+    <figure markdown="span">
+        ![Ambiente Virtual ativo](ativando-env.png)
+        <figcaption>Ambiente Virtual ativo</figcaption>
+    </figure>
 
 !!! danger "Importante"
     Os comandos acima ativam o ambiente virtual **para aquela instância do terminal**. Ou seja, se você abrir outro terminal, mesmo que seja na mesma pasta, você estará utilizando o Python do sistema.
