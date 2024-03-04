@@ -13,10 +13,10 @@ Copie os arquivos referentes ao Handout 01. O repositório do projeto deve segui
     <figcaption>Organização do Repositório</figcaption>
 </figure>
 
-!!! danger "Importante"
+<!-- !!! danger "Importante"
     Como o projeto será corrigido automaticamente, é importante que você siga a estrutura de diretórios apresentada acima.
 
-    Além disso, o arquivo principal do projeto deve se chamar `servidor.py`.
+    Além disso, o arquivo principal do projeto deve se chamar `servidor.py`. -->
 
 ### Arquivo .gitignore
 Existem arquivos que não devem ser versionados no repositório. Um exemplo é a pasta `__pycache__` que é criado pelo Python. Se você procurar em seu repositório Github criado para o handout 1 verá que este pasta está lá.
@@ -27,7 +27,7 @@ Essa pasta é desnecessária para o repositório, pois é criada automaticamente
 __pycache__/
 ```
 
-Faça um commit e um push. Agora vamos verificar se o webhook está funcionando corretamente.
+<!-- Faça um commit e um push. Agora vamos verificar se o webhook está funcionando corretamente.
 
 ## Criando um release
 
@@ -116,7 +116,7 @@ server_socket.bind((SERVER_HOST, SERVER_PORT))
 server_socket.listen()
 
 print(f'Servidor escutando em (ctrl+click): http://{SERVER_HOST}:{SERVER_PORT}')
-```
+``` -->
     
 Agora podemos começar a tabalhar nas tarefas do Projeto 1A.
 
