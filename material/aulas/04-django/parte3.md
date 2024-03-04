@@ -189,12 +189,20 @@ Se olhamos com atenção para a mensagem apresentada pelo Django, podemos ver qu
 
     Em seguida, você deve inserir o valor padrão para a nova coluna, caso hajam dados já salvos no banco de dados.
 
-    Em nosso caso, vamos escolher a string vazia, desta forma, digite as "" (abrindo e fechando as aspas) e pressione enter.
-
-    Pronto! Pode rodar o comando `python manage.py migrate` e verificar se uma nova coluna foi criada.
+    Em nosso caso, vamos escolher a string vazia, desta forma, digite as `""` (abrindo e fechando as aspas) e pressione enter.
 
 !!! Example "Opção 2"
+    Caso opte pela opção 2, você deve digitar no terminal o número `2` e pressione enter.
+
+    Em seguida, vá no arquivo `models.py` e adicione o argumento `#!python null=True` no campo `content`, ficando `#!python content = models.TextField(null=True)`. Com esse argumento, estamos especificando que a coluna pode receber valores nulos.
 
 
+Pronto! Pode rodar o comando `python manage.py migrate` e verificar se uma nova coluna foi criada.
+
+Ao acessar a tabela `notes_note` podemos verificar que uma nova coluna foi criada.
+
+<figure markdown="span">
+    ![](img/notes_note_finalizada.png){ width="60%" }
+</figure>
 
 Ok, nós criamos o banco de dados, mas como eu adiciono dados nele e vejo o que está armazenado? Boa pergunta! Siga para a [parte 4](parte4.md)!

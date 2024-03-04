@@ -70,7 +70,9 @@ Vamos lá!
 A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou pelo menos parte dele. Você se lembra que no handout 1 os arquivos estáticos (imagem, css, js) também precisavam ser servidos pelo servidor? Pois é, não temos como fugir disso, mas o Django facilita esse processo.
 
 !!! example "Exercício"
-    Crie as pastas `notes/static/notes/img` e salve [esta imagem](img/logo-getit.png) em `notes/static/notes/img/logo-getit.png`.
+    Crie as pastas `notes/static/notes/img` e salve a imagem abaixo em `notes/static/notes/img/logo-getit.png`.
+    
+    [Download :material-download:](img/logo-getit.png){ .md-button download="logo-getit.png"}
 
 !!! example "Exercício"
     Modifique o arquivo `notes/templates/notes/index.html` com o seguinte conteúdo:
@@ -97,7 +99,7 @@ A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou p
     {% endblock %}
     ```
 
-    Nessas linhas nós indicamos para a engine de template do Django que queremos usar a [template tag `static`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#static) (template tags são as tags entre `{%%}`) e depois a utilizamos para carregar o caminho completo do arquivo estático `notes/img/logo-getit.png`.
+    Nessas linhas nós indicamos para a engine de template do Django que queremos usar a [template tag `static`](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#static){:target="_blank"} (template tags são as tags entre `{%%}`) e depois a utilizamos para carregar o caminho completo do arquivo estático `notes/img/logo-getit.png`.
 
     Agora sim, a imagem deve ser carregada.
 
@@ -130,7 +132,7 @@ O template do Django é capaz de executar um código parecido com Python e inclu
     Nós estamos importando o modelo `#!python Note` e carregando todas as entradas dessa tabela. O template recebe um dicionário que define as variáveis que estarão disponíveis para ele (chamamos esse dicionário de contexto).
 
     !!! info "O `Manager` `objects`"
-        O atributo `objects` é um objeto do tipo [`Manager`](https://docs.djangoproject.com/en/4.2/topics/db/managers/#django.db.models.Manager) criado pelo Django. Ele possui diversos métodos que permitem interagir com o banco de dados. O `all()` lista todas as entradas, mas existem outros métodos bastante úteis, como o `filter()` e o `get()`. Este handout é bastante introdutório, então não vamos discutir todo o potencial desta funcionalidade, mas é provável que você precise desses outros métodos para o projeto.
+        O atributo `objects` é um objeto do tipo [`Manager`](https://docs.djangoproject.com/en/5.0/topics/db/managers/#django.db.models.Manager){:target="_blank"} criado pelo Django. Ele possui diversos métodos que permitem interagir com o banco de dados. O `all()` lista todas as entradas, mas existem outros métodos bastante úteis, como o `filter()` e o `get()`. Este handout é bastante introdutório, então não vamos discutir todo o potencial desta funcionalidade, mas é provável que você precise desses outros métodos para o projeto.
 
 !!! example "Exercício"
     Modifique o conteúdo da tag `#!html <ul>` no arquivo `index.html` para:
@@ -164,8 +166,5 @@ Quando queremos mostrar o valor de uma variável no HTML (equivalente ao que faz
 
 !!! danger "Importante"
     Muitas coisas aconteceram nesse último exercício. Pare por um instante para refletir e garantir que entendeu o que está acontecendo nele.
-
-!!! example "Exercício"
-    Modifique seu projeto para que o conteúdo das anotações também seja mostrado (como no handout 1).
 
 Acabou? Vamos para a [parte 6](parte6.md)!

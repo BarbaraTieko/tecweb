@@ -57,10 +57,10 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando o 
     Conte com o professor para te ajudar com as dúvidas, mas é esperado que você desenvolva a maturidade para pesquisar e aprender o que falta por conta própria. Essa é uma habilidade essencial na vida de qualquer desenvolvedora/desenvolvedor.
 
 !!! note "Versão do Django"
-    Em Tecnologias Web nós utilizaremos o Django 5.X. É importante levar isso em conta quando for procurar respostas no Google. O [Django 5.0](https://docs.djangoproject.com/en/5.0/releases/5.0/) foi lançado no final de 2023, então será comum você encontrar respostas desatualizadas. **Sempre** que encontrar alguma função/método que não conhece, consulte a documentação da biblioteca para verificar se essa é a forma mais atualizada de se resolver o problema (essa dica vale para qualquer biblioteca/framework que for utilizar).
+    Em Tecnologias Web nós utilizaremos o Django 5.X. É importante levar isso em conta quando for procurar respostas no Google. O [Django 5.0](https://docs.djangoproject.com/en/5.0/releases/5.0/){:target="_blank"} foi lançado no final de 2023, então será comum você encontrar respostas desatualizadas. **Sempre** que encontrar alguma função/método que não conhece, consulte a documentação da biblioteca para verificar se essa é a forma mais atualizada de se resolver o problema (essa dica vale para qualquer biblioteca/framework que for utilizar).
 
 !!! info "Referência"
-    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/5.0/intro/tutorial01/). A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
+    Este handout é baseado no [tutorial disponível na própria documentação do Django](https://docs.djangoproject.com/en/5.0/intro/tutorial01/){:target="_blank"}. A intenção é desenvolvê-lo de forma mais conectada com o que já fizemos na parte A do projeto, mas a documentação é muito mais completa e é possível se aprofundar mais em diversas questões. Recomendo a leitura (a documentação do Django é muito bem feita).
 
 ## Instalando o Django
 
