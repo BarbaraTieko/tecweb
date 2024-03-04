@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/01-getit/parte1/</loc>
          <lastmod>2024-03-04</lastmod>
          <changefreq>daily</changefreq>
@@ -72,6 +77,36 @@
     </url>
     <url>
          <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/03-persistencia-de-dados/parte6/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte1/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte2/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte3/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte4/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte5/</loc>
+         <lastmod>2024-03-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte6/</loc>
          <lastmod>2024-03-04</lastmod>
          <changefreq>daily</changefreq>
     </url>

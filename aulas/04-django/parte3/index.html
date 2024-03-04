@@ -1,0 +1,1690 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrew Kurauchi">
+      
+      
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/aulas/04-django/parte3/">
+      
+      
+        <link rel="prev" href="../parte2/">
+      
+      
+        <link rel="next" href="../parte4/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Handout Parte 3: Integrando com o banco de dados - Tecnologias Web - Insper 2024/1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/printing.css">
+    
+      <link rel="stylesheet" href="../../../css/tecweb.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parte-3-integrando-com-o-banco-de-dados" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tecnologias Web - Insper 2024/1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Handout Parte 3: Integrando com o banco de dados
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tecnologias Web - Insper 2024/1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cálculo da média
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 - Get-it
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 - Get-it
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Criando o servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Respondendo com páginas HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Separando algumas responsabilidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Fazendo um formulário de criação de anotação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            02 - Desafio CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/Aula02.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 - Persistência de dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Persistência de dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Instalando o SQLite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando a tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Inserindo dados na tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Consultando e selecionando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Atualizando os dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Apagando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04 - Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 - Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aula07.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Iniciando o projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando nosso primeiro app
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Integrando com o banco de dados
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Integrando com o banco de dados
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Banco de dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-seus-proprios-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando seus próprios modelos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando seus próprios modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possivel-problema-com-makemigration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possível problema com makemigration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: O Django Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Usando templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Trabalhando com formulários e o método POST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Material Auxiliar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Material Auxiliar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Python com ambientes virtuais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entregas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 - ELI5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projetos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Projetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto 1A
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto 1A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/configurando-webhook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configurando Webhook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/organizacao-repositorio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organização do Repo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Banco de dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-seus-proprios-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando seus próprios modelos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando seus próprios modelos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#possivel-problema-com-makemigration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Possível problema com makemigration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="parte-3-integrando-com-o-banco-de-dados">Parte 3: Integrando com o banco de dados</h1>
+<p>No handout 2 nós começamos a utilizar o SQLite para armazenar os dados do sistema. Para interagir com o banco foi necessário construir as strings com os comandos SQL, misturando a sintaxe do Python com a do SQL. A boa notícia é que o Django já possui uma integração com o banco de dados pronta. Melhor ainda, é muito simples trocar o banco de dados utilizado (SQLite, PostgreSQL, MySQL, etc.).</p>
+<p>Abra o arquivo <code>getit/settings.py</code>. Procure o seguinte trecho de código:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="s1">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s1">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">BASE_DIR</span> <span class="o">/</span> <span class="s1">&#39;db.sqlite3&#39;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Esse dicionário está configurando o SQLite como o banco de dados da aplicação (será criado um banco de dados no arquivo <code>db.sqlite3</code> dentro da pasta principal do seu projeto). Se você quiser utilizar outro banco de dados, basta instalar as bibliotecas necessárias (em geral disponíveis para ser instaladas via <code>pip install</code>) e modificar os itens desse dicionário. Se quiser saber mais, consulte a <a href="https://docs.djangoproject.com/en/4.2/intro/tutorial02/#database-setup">documentação do Django</a>.</p>
+<p>Já que estamos no arquivo de configuração, aproveite para procurar pela lista <code class="language-python highlight"><span class="n">INSTALLED_APPS</span></code>. Ela deve ser parecida com essa:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">]</span>
+</span></code></pre></div>
+<p>Na <a href="../parte2/">parte 2</a> comentamos que um projeto é composto por múltiplos apps, que são partes de um sistema. A lista <code class="language-python highlight"><span class="n">INSTALLED_APPS</span></code> define os nomes dos apps utilizados pelo seu projeto. Por exemplo, há um app que é responsável por gerenciar arquivos estáticos (imagens, css, javascript, etc.), outro responsável pela autenticação (usuário, senha, mudança de senha) e assim por diante.</p>
+<p>Nós já criamos um app para o nosso projeto, o <code>notes</code>. Vamos adicioná-lo na lista de apps nas configurações.</p>
+<div class="admonition question choice">
+<p class="admonition-title">Exercício</p>
+<p>Adicione o <code class="language-python highlight"><span class="s1">&#39;notes.apps.NotesConfig&#39;</span></code> como o primeiro elemento da lista <code class="language-python highlight"><span class="n">INSTALLED_APPS</span></code>.</p>
+<details class="info">
+<summary>O que raios é <code class="language-python highlight"><span class="s1">&#39;notes.apps.NotesConfig&#39;</span></code>?</summary>
+<p>Esse é o nome completo da classe de configuração. Ela foi criada automaticamente para você. Se tiver curiosidade, abra o arquivo <code>notes/apps.py</code>.</p>
+</details>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>ADICIONEI</strong> a configuração!</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>NÃO ADICIONEI</strong> a configuração!</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Ao criar um app, no nosso caso <code>notes</code>, é necessário indicar que vamos utilizar este app em nosso projeto. Se essa estapa não for realizada, o projeto ignorará o app <code>notes</code>.</p>
+</div>
+</div>
+<h2 id="banco-de-dados">Banco de dados</h2>
+<p>Projetos Django utilizam o banco de dados relacional <code>SQLite3</code> por padrão. Verifique nos arquivos do projeto se existe o arquivo <code>db.sqlite3</code>. </p>
+<p>Vamos instalar uma extensão do VS Code para que possamos visualizar o banco de dados do nosso projeto. </p>
+<ol>
+<li>Com o VS Code aberto, vá em <code>Extensions</code>/<code>Extensões</code></li>
+<li>Na barra de busca, digite <code>sqlite</code></li>
+<li>Instale a extensão <code>SQLite Viewer</code></li>
+</ol>
+<figure>
+    <a class="glightbox" href="../img/sqlite3-extention.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/sqlite3-extention.png" width="40%" /></a>
+</figure>
+<p>Ao clicar no arquivo <code>db.sqlite3</code>, podemos visualizar o banco de dados do projeto. Porém, é possível notar que o banco de dados está vazio.</p>
+<figure>
+    <a class="glightbox" href="../img/visualizacao-banco-de-dados-v1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/visualizacao-banco-de-dados-v1.png" width="60%" /></a>
+</figure>
+<p>O nosso projeto já tem diversos apps instalados. Vários desses apps utilizam o banco de dados para armazenar pelo menos uma tabela. Para que essas tabelas sejam criadas vamos utilizar o comando (no terminal):</p>
+<div class="language-text highlight"><pre><span></span><code>python manage.py migrate
+</code></pre></div>
+<p>Atualize o banco de dados e veja que várias tabelas foram criadas. O projeto Django já oferece uma estrutura pronta para criar usuários, senhas, permissões entre outras coisas.</p>
+<figure>
+    <a class="glightbox" href="../img/visualizacao-banco-de-dados-v2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/visualizacao-banco-de-dados-v2.png" width="60%" /></a>
+</figure>
+<h2 id="criando-seus-proprios-modelos">Criando seus próprios modelos</h2>
+<p>Em nosso projeto, precisamos criar uma tabela no banco de dados armazenar as informações das anotações. Queremos algo como a imagem a seguir:</p>
+<figure>
+    <a class="glightbox" href="../img/table-note.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/table-note.png" width="60%" /></a>
+</figure>
+<p>No projeto 1A tivemos que implementar uma classe <code>Database</code> com comandos em <code>SQL</code> para criarmos a tabela <code>note</code>. Agora que estamos utilizando o framework Django, não precisamos escrever <code>SQL</code>. </p>
+<p>O Django já tem uma integração com o banco de dados. Para isso nós precisamos criar classes do Python para representar os nossos modelos, cujos dados serão armazenados em tabelas nos bancos de dados relacionais. Vamos criar o nosso primeiro modelo.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Substitua o conteúdo do arquivo <code>notes/models.py</code> por:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">class</span> <span class="nc">Note</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Nesse código nós criamos um modelo chamado <code class="language-python highlight"><span class="n">Note</span></code> que possui um atributo <code class="language-python highlight"><span class="n">title</span></code>, que será mapeado no banco de dados em uma coluna cujos valores são strings de no máximo 200 caracteres.</p>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Exercício</p>
+<p>Para que a tabela <code>note</code> seja criada no banco de dados de acordo com o modelo que criamos acima, precisamos pedir para o Django criar as migrações. Uma migração é a forma do Django armazenar modificações no banco de dados (criação de novas tabelas, por exemplo). Para isso, execute o comando abaixo:</p>
+<div class="language-text highlight"><pre><span></span><code>python manage.py makemigrations
+</code></pre></div>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>FINALIZEI</strong> esta etapa!</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>NÃO FINALIZEI</strong> esta etapa!</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Após executar este comando, um arquivo será criada na pasta <code>notes/migrations</code>. Não é necessário que entenda o conteúdo destes arqvuivos, basta saber que são scripts com instruções para  atualização do banco de dados. No nosso caso, o script terá instruções para criar uma tabela nova chamada <code>notes_note</code> com o campo <code>title</code>. </p>
+<p>O Django utiliza o padrão de nome para a criação das tabelas sendo <code>AppName_ModelName</code>, desta forma, como nosso app chama <code>notes</code> e o modelo chama <code>note</code>, a tabela criada será <code>notes_note</code>.</p>
+<p><figure markdown="span">
+    <a class="glightbox" href="../img/migrations.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/migrations.png" width="20%" /></a>
+</figure></p>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercício</p>
+<p>Se procurarmos a tabela <code>notes_note</code> no banco de dados não vamos encontrar, pois ainda não efetuamos as alterações no banco de dados.</p>
+<p>Para aplicar as novas mudanças no banco de dados, precisamos executar outro comando.</p>
+<div class="language-text highlight"><pre><span></span><code>python manage.py migrate
+</code></pre></div>
+<p>Nós já havíamos executado o comando <code>python manage.py migrate</code> para criar as tabelas dos apps no banco de dados. Como o nosso app <code>notes</code> também está entre os <code class="language-python highlight"><span class="n">INSTALLED_APPS</span></code>, esse mesmo comando também vai criar a tabela do modelo <code class="language-python highlight"><span class="n">Note</span></code>.</p>
+<p>Agora a tabela deve aparecer no banco de dados:</p>
+<p><figure markdown="span">
+    <a class="glightbox" href="../img/notes_note-table.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/notes_note-table.png" width="100%" /></a>
+</figure></p>
+<p><strong>Note que</strong> não colocamos o campo <code>id</code> na model, porém a tabela já possui uma coluna para o <code>id</code>.
+Como todas as tabelas precisarão de uma coluna para armazenar o identificador, o próprio Django se responsabiliza por criar essa coluna.</p>
+</div>
+<div class="admonition question choice">
+<p class="admonition-title">Exercício</p>
+<p>Nossa tabela já está quase pronta, porém, falta a coluna <code>content</code>.</p>
+<p>Leia a <a href="https://docs.djangoproject.com/en/5.0/ref/models/fields/#charfield" target="_blank">documentação do <code class="language-python highlight"><span class="n">CharField</span></code></a>. Ele não é recomendável para textos grandes. Crie na classe <code class="language-python highlight"><span class="n">Note</span></code> um atributo <code class="language-python highlight"><span class="n">content</span></code> com o tipo apropriado.</p>
+<p>Existem diversos tipos de colunas que podem ser utilizados nos modelos. Por exemplo, relacionamentos entre entidades (tabelas) podem ser representados com o <code>models.BooleanField</code>, <code>models.DateField</code>, <code>models.DecimalField</code> entre outros.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong>CRIEI</strong> o atributo para <code>content</code>!</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>NÃO CRIEI</strong> o atributo para <code>content</code>!</li>
+</ul>
+<div class="admonition details">
+<p class="admonition-title">Resposta</p>
+<p>Na documentação do <code>CharField</code> é possível encontrar a menção do campo <code>TextField</code> para textos maiores.</p>
+</div>
+</div>
+<p>Sempre que atualizamos o arquivo <code>models.py</code> precisamos executar os comandos:</p>
+<div class="language-text highlight"><pre><span></span><code>python manage.py makemigrations
+</code></pre></div>
+<p>e</p>
+<div class="language-text highlight"><pre><span></span><code>python manage.py migrate
+</code></pre></div>
+<p>Lembrando que, o primeiro comando cria o script de criação/atualização da tabela. O segundo comando aplica esse script, efetivamente aplicando as mudanças no banco de dados.</p>
+<h3 id="possivel-problema-com-makemigration">Possível problema com makemigration</h3>
+<p>Ao executar o comando <code>python manage.py makemigrations</code> você deve ter se deparado com a seguinte mensagem:</p>
+<figure>
+    <a class="glightbox" href="../img/makemigrations-message-non-nullable.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/makemigrations-message-non-nullable.png" width="100%" /></a>
+</figure>
+<p>Explicando um pouco o que aconteceu.
+Criamos o modelo <code>Note</code> contento apenas as colunas <code>id</code> e <code>title</code>. Em seguida, decidimos adicionar uma nova coluna <code>content</code>.</p>
+<p>O problema é que o banco de dados pode já possuir valores armazenados. O que fazer com eles? Como atualizá-los? Qual deve ser o valor padrão utilizado nessa nova coluna para as linhas já existentes no banco? As migrações se responsabilizam por esse processo, facilitando a evolução do banco de dados em produção.</p>
+<figure>
+    <a class="glightbox" href="../img/table-note-makemigrations.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/table-note-makemigrations.png" width="70%" /></a>
+</figure>
+<p>Se olhamos com atenção para a mensagem apresentada pelo Django, podemos ver que ele oferece duas alternativas.</p>
+<figure>
+    <a class="glightbox" href="../img/makemigrations-message-non-nullable-v2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/makemigrations-message-non-nullable-v2.png" width="100%" /></a>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Opção 1</p>
+<p>Caso opte pela opção 1, você deve digitar no terminal o número <code>1</code> e pressione enter.</p>
+<p>Em seguida, você deve inserir o valor padrão para a nova coluna, caso hajam dados já salvos no banco de dados.</p>
+<p>Em nosso caso, vamos escolher a string vazia, desta forma, digite as <code>""</code> (abrindo e fechando as aspas) e pressione enter.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Opção 2</p>
+<p>Caso opte pela opção 2, você deve digitar no terminal o número <code>2</code> e pressione enter.</p>
+<p>Em seguida, vá no arquivo <code>models.py</code> e adicione o argumento <code class="language-python highlight"><span class="n">null</span><span class="o">=</span><span class="kc">True</span></code> no campo <code>content</code>, ficando <code class="language-python highlight"><span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>. Com esse argumento, estamos especificando que a coluna pode receber valores nulos.</p>
+</div>
+<p>Pronto! Pode rodar o comando <code>python manage.py migrate</code> e verificar se uma nova coluna foi criada.</p>
+<p>Ao acessar a tabela <code>notes_note</code> podemos verificar que uma nova coluna foi criada.</p>
+<figure>
+    <a class="glightbox" href="../img/notes_note_finalizada.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/notes_note_finalizada.png" width="60%" /></a>
+</figure>
+<p>Ok, nós criamos o banco de dados, mas como eu adiciono dados nele e vejo o que está armazenado? Boa pergunta! Siga para a <a href="../parte4/">parte 4</a>!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<script>
+    window.site_url = "https://barbaratieko.github.io/tecweb.2024.1/";
+</script>
+
+
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/progress-check.js"></script>
+      
+        <script src="../../../javascripts/quiz.js"></script>
+      
+        <script src="../../../javascripts/short-questions.js"></script>
+      
+        <script src="../../../javascripts/translate-admonitions.js"></script>
+      
+        <script src="../../../javascripts/webhook-config.js"></script>
+      
+    
+<!-- Add scripts that need to run afterwards here -->
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
