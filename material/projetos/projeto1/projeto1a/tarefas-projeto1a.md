@@ -81,7 +81,7 @@ Permitir a edição de anotações existentes;
 - Adicione um botão/link na nota para a função de editar. Ao clicar no botão de edição, o usuário deve ser direcionado para uma página html nova de edição.
     - Ao clicar no botão/link, o servidor deverá receber uma requisição no seguinte formato:
         ```
-        GET /delete/<NOTA_ID> HTTP/1.1
+        GET /update/<NOTA_ID> HTTP/1.1
         ```
 - O botão/link deve ter o atributo `name` com o valor `edit_button`. Caso esta propriedade não seja utilizada, o teste de editar anotações não passará com sucesso.
 - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
