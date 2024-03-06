@@ -1,7 +1,7 @@
 # Projeto 1: Parte B
 
 !!! success "Entrega"
-    :date: 
+    :date: 21/03 (quinta-feira)
     
     :clock1: Commits até as 23:59
 
@@ -9,44 +9,16 @@
 
     :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/WqLD3zMW){: target="_blank"}.
 
-**Trabalho individual**
-
-**Prazo: 30/09/2023 (sábado)**
-
-**Entrega via GitHub Classroom**
-
-Caso não tenha criado o repositório, acesse o link [Github classroom](https://classroom.github.com/a/WqLD3zMW) para criar o repositório para este projeto.
+Caso não tenha criado o repositório, acesse o link [Github classroom](https://classroom.github.com/a/WqLD3zMW){:target="_blank"} para criar o repositório para este projeto.
 
 Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.
-
-## Reimplementando Projeto 1A usando Django
-Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações. **Agora você deve fazer a edição das notas em uma página separa.**
-
-Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
-Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.
-
-Para mais informações veja: [URL Dispatcher](https://docs.djangoproject.com/en/4.2/topics/http/urls/)
-
-## Sistema de tags
-
-Na parte B você deve implementar um sistema de tags para as anotações. Cada anotação pode ter no máximo uma tag (pode não ter nenhuma).
-
-No formulário de criação/edição de anotações deve haver um campo de texto adicional para o usuário digitar o nome da tag. No backend (no `view.py`), se essa tag já existir, você deve associar a anotação a ela, senão, crie uma nova tag no banco de dados e associe à anotação.
-
-Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. A página de detalhes de uma tag deve mostrar o nome da tag e todas as anotações com aquela tag específica.
-
-Para mais informações veja: [Relação Um para Muitos](https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/)
-**Obs.:** O sistema de tags deve utilizar a relação de um para muitos.
-
-Caso queira, veja o seguinte material para auxiliar o desenvolvimento desta etapa.
-[Clique aqui](../../aulas/guia-many-to-one.md)
 
 ## Rubrica
 
 As tarefas a serem realizadas são:
 
-1. Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações aplicando o mesmo estilo (css);
-2. Implementar o sistema de tags para as anotações;
+1. Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações aplicando o mesmo estilo (css); [Para mais detalhes acesse aqui :link:](projeto1b/tarefa01.md)
+2. Implementar o sistema de tags para as anotações; [Para mais detalhes acesse aqui :link:](projeto1b/tarefa02.md)
 3. Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite;
 4. Publicar a página.
 
@@ -55,23 +27,45 @@ A rubrica a seguir será utilizada na correção do Projeto 1B:
 
 | Conceito | Descrição |
 | :------: | :-------- |
-|    A+    | Tarefas 1, 2, 3 e 4 completas e superou as expectativas (a combinar) |
-|    A     | Tarefas 1, 2, 3 e 4 completas |
-|    B+    | Tarefas 1, 2 e 3 completas |
-|    B     | Tarefas 1 e 2 completas |
-|    C+    | Tarefas 1 e tarefa 2 parcial|
-|    C     | Tarefa 1 completa |
-|    D     | O código funciona, mas a tarefa 1 não está completa |
 |    I     | Não entregou ou o código não executa |
-
-O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional de complexidade acima do esperado para esta parte do projeto. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
-
-É importante que você valide com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
+|    D     | O código funciona, mas a tarefa 1 não está completa |
+|    C     | Tarefa 1 completa |
+|    C+    | Tarefas 1 e tarefa 2 parcial|
+|    B     | Tarefas 1 e 2 completas |
+|    B+    | Tarefas 1, 2 e 3 completas |
+|    A     | Tarefas 1, 2, 3 e 4 completas |
+|    A+    | Tarefas 1, 2, 3 e 4 completas e implementou o sistema de tags Many-to-many [acesse aqui :link:](projeto1b/tags-many-to-many.md)|
 
 ## Sugestão de Cronograma
 
-Segue abaixo uma sugestão de cronograma para auxialiar o desenvolvimento do Projeto 1B.
+Segue abaixo uma sugestão de cronograma para auxialiar o desenvolvimento do Projeto 1B. 
 
-![Atividades](cronograma.png)
+**Obs.:** Esse cronograma foi pensando para atingir o conceito A+.
 
-![Calendário](calendario.png)
+<figure markdown="span">
+    ![Calendário com o cronograma](projeto1b/projeto1b-calendario-241.png){ width="80%" }
+    <figcaption>Calendário com o cronograma</figcaption>
+</figure>
+
+## Cronograma
+
+- [X] **05/03 (terça-feira)**
+    - [X] Realizar Handout de Django
+    - [X] Adicionar estilo CSS do Desafio CSS
+- [ ] **07/03 (quinta-feira)**
+    - [ ] Implementar a funcionalidade de deletar uma anotação.
+    - [ ] Implementar a funcionalidade de atualizar uma anotação.
+    - [ ] Atingiu o **Conceito C**
+- [ ] **12/03 (terça-feira)**
+    - Implementar o sistema de tags
+    - [ ] Atingiu o **Conceito B**
+- [ ] **14/03 (quinta-feira)**
+    - [ ] Utilizar o banco de dados relacionas PostgreSQL
+    - [ ] Atingiu o **Conceito B+**
+- [ ] **19/03 (terça-feira)**
+    - [ ] Realizar o Deploy do Projeto
+    - [ ] Atingiu o **Conceito A**
+- [ ] **21/03 (quinta-feira)**
+    - [ ] Aula Studio para finalizar o projeto
+    - [ ] Efetuar a entrega
+    - [ ] Atingiu o **Conceito A+**

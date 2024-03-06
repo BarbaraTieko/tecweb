@@ -3,7 +3,9 @@
 !!! success "Entrega"
     :date: ~~03/03 (domingo)~~
     
-    :date: 05/03 (terça-feira)
+    :date: ~~05/03 (terça-feira)~~
+
+    :date: 07/03 (quinta-feira)
     
     :clock1: Commits até as 23:59
 

@@ -75,6 +75,10 @@ nav:
       - "Configurando Webhook": projetos/projeto1/projeto1a/configurando-webhook.md
       - "Organização do Repo": projetos/projeto1/projeto1a/organizacao-repositorio.md
       - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
+    - "Projeto 1B":
+      - "Enunciado": projetos/projeto1/projeto1b.md
+      - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
+      - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
   
 markdown_extensions:
   - abbr

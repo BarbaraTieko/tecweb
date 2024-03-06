@@ -101,3 +101,13 @@ O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!pyt
     
     !!! details "Resposta"
         Parabéns! :clap: Você terminou o handout de Django! Agora você pode continuar desenvolvendo o Projeto 1B e implementar as funcionalidade de **deletar** e **editar** uma anotação.
+
+!!! question choice "Faça um commit"
+
+    Depois de realizar as tarefas pedidas pelo handout, faça um commit.
+    
+    - [X] Fiz o **commit** 
+    - [ ] Não fiz o **commit** 
+    
+    !!! details "Resposta"
+        Sempre que terminar a implementação de alguma funcionalidade é uma boa prática realizar um commit.
