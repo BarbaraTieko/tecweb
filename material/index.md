@@ -35,7 +35,7 @@ Para usuários do sistema operacional **Windows** :material-microsoft-windows: s
 
 Por conta de um bloqueio da rede do Insper, será necessário que vocês realizem o tutorial abaixo em uma rede que não seja a do Insper.
 
-Peço que realizem esta tarefa até o dia **14/03**.
+Peço que realizem esta tarefa até o dia **13/03**.
 
 [Guia de Instalação WSL e Docker para Windows](https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows){:target="_blank"}
 

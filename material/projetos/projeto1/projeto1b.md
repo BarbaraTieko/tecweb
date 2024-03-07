@@ -51,10 +51,10 @@ Segue abaixo uma sugestão de cronograma para auxialiar o desenvolvimento do Pro
 - [X] **05/03 (terça-feira)**
     - [X] Realizar Handout de Django
     - [X] Adicionar estilo CSS do Desafio CSS
-- [ ] **07/03 (quinta-feira)**
-    - [ ] Implementar a funcionalidade de deletar uma anotação.
-    - [ ] Implementar a funcionalidade de atualizar uma anotação.
-    - [ ] Atingiu o **Conceito C**
+- [X] **07/03 (quinta-feira)**
+    - [X] Implementar a funcionalidade de deletar uma anotação.
+    - [X] Implementar a funcionalidade de atualizar uma anotação.
+    - [X] Atingiu o **Conceito C**
 - [ ] **12/03 (terça-feira)**
     - Implementar o sistema de tags
     - [ ] Atingiu o **Conceito B**
