@@ -34,6 +34,7 @@ Ao clicar na tag `comida` na listagem de tags, o usuário é levado a outra tela
 
 - Na edição da anotação, não é necessário implementar a opção de editar uma `tag`.
 - Na tela de listagem de anotações por `tag`, não é necessário fornecer as opções de deletar ou editar. Basta mostar as anotações.
+- Caso não utilize a **relação Many-to-one** descrita abaixo para a implementação desta etapa, será descontado meio conceito do projeto;
 
 
 # Relação Many-to-One
