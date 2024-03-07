@@ -10,28 +10,24 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/aulas/03-persistencia-de-dados/parte1/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/projetos/backup-wsl/">
       
       
-        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../parte2/">
-      
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Handout Parte 1: Instalando o SQLite - Tecnologias Web - Insper 2024/1</title>
+        <title>Backup wsl - Tecnologias Web - Insper 2024/1</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,18 +52,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/printing.css">
+      <link rel="stylesheet" href="../../css/printing.css">
     
-      <link rel="stylesheet" href="../../../css/tecweb.css">
+      <link rel="stylesheet" href="../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -76,7 +72,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -95,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parte-1-instalando-o-sqlite" class="md-skip">
+        <a href="#guia-de-instalacao-do-docker-windows" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +107,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -131,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Handout Parte 1: Instalando o SQLite
+              Backup wsl
             
           </span>
         </div>
@@ -232,7 +228,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -250,7 +246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -270,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notas/" class="md-nav__link">
+      <a href="../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,19 +283,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -313,7 +307,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -362,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/" class="md-nav__link">
+      <a href="../../aulas/01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte1/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte2/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte3/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte4/" class="md-nav__link">
+      <a href="../../aulas/01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/Aula02.pdf" class="md-nav__link">
+      <a href="../../aulas/02-desafio-css/Aula02.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/" class="md-nav__link">
+      <a href="../../aulas/02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,19 +572,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -604,7 +596,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Persistência de dados
@@ -618,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,30 +628,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Handout Parte 1: Instalando o SQLite
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../aulas/03-persistencia-de-dados/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,44 +640,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#opcao-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opção 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#opcao-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opção 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -718,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte2/" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte3/" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte4/" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte5/" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte6/" class="md-nav__link">
+      <a href="../../aulas/03-persistencia-de-dados/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/Aula07.pdf" class="md-nav__link">
+      <a href="../../aulas/04-django/Aula07.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/" class="md-nav__link">
+      <a href="../../aulas/04-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte1/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte2/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte3/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte4/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte5/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte6/" class="md-nav__link">
+      <a href="../../aulas/04-django/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/" class="md-nav__link">
+      <a href="../../aulas/02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1287,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/" class="md-nav__link">
+      <a href="../projeto1/projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/configurando-webhook/" class="md-nav__link">
+      <a href="../projeto1/projeto1a/configurando-webhook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/organizacao-repositorio/" class="md-nav__link">
+      <a href="../projeto1/projeto1a/organizacao-repositorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
+      <a href="../projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1414,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/" class="md-nav__link">
+      <a href="../projeto1/projeto1b/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1435,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/tarefa01/" class="md-nav__link">
+      <a href="../projeto1/projeto1b/tarefa01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1456,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/tarefa02/" class="md-nav__link">
+      <a href="../projeto1/projeto1b/tarefa02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1512,18 +1446,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#opcao-1" class="md-nav__link">
+  <a href="#passo-1-atualizando-o-wsl" class="md-nav__link">
     <span class="md-ellipsis">
-      Opção 1
+      Passo 1 - Atualizando o WSL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Passo 1 - Atualizando o WSL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1a-windows-10-e-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.a - Windows 10 e 11
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#1b-versoes-anteriores-do-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.b: Versões Anteriores do Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#opcao-2" class="md-nav__link">
+  <a href="#passo-2-instalando-o-docker-no-windows" class="md-nav__link">
     <span class="md-ellipsis">
-      Opção 2
+      Passo 2: Instalando o Docker no Windows
     </span>
   </a>
   
@@ -1544,19 +1502,53 @@
                   
 
 
-<h1 id="parte-1-instalando-o-sqlite">Parte 1: Instalando o SQLite</h1>
-<p>Tecnicamente não é necessário instalar o SQLite, pois o Python já vem com uma versão do SQLite instalada. Para testar execute o comando no seu terminal. Se não der nenhum erro está tudo certo.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sqlite3&quot;</span>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Lab</strong></th>
+<th style="text-align: center;"><strong>Data</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Laboratório Ágil</td>
+<td style="text-align: center;">2023</td>
+</tr>
+</tbody>
+</table>
+<h1 id="guia-de-instalacao-do-docker-windows">Guia de Instalacao do Docker - Windows</h1>
+<p>Guia para instalação e atualização do Docker para o Windows, descrevendo como instalar uma distribuição Linux no WSL2.</p>
+<h2 id="passo-1-atualizando-o-wsl">Passo 1 - Atualizando o WSL</h2>
+<h3 id="1a-windows-10-e-11">1.a - Windows 10 e 11</h3>
+<p>Estas versões do Windows ja possuem o WSL instalado, porém ao rodar o comando <code>wsl</code> dentro do Prompt de Comando, teremos um aviso como o abaixo, dizendo que o wsl ainda não possui uma distribuição Linux associada para uso.</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225308152-447da342-ebff-44e1-8bf8-f1034586c099.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225308152-447da342-ebff-44e1-8bf8-f1034586c099.png" /></a></p>
+<p>Porém, antes de instalarmos uma distribuição, precisamos atualizar o WSL para ele utilizar por padrão as distribuições com arquitetura WSL2, que é a utilizada pelo Docker no Windows.</p>
+<p>Para isso, primeiramente iremos rodar no prompt de comando(preferencialmente com permissão administrativa) o comando abaixo:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wsl --update
 </span></code></pre></div>
-<h3 id="opcao-1">Opção 1</h3>
-<p>Nós vamos instalar também o DB Browser for SQLite, um programa que utilizaremos para visualizar o nosso banco de dados. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Faça o download e instale o programa <a href="https://sqlitebrowser.org/dl/" target="_blank">clicando neste link e seguindo as instruções</a>.</p>
-<h3 id="opcao-2">Opção 2</h3>
-<p>Também é possível utilizar uma extensão do VS Code que nos permite visualizar o banco de dados SQLite. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Abra o VS Code e clique no ícone de extensões na barra lateral esquerda. Na barra de pesquisa digite <code>SQLite Viewer</code> e instale a extensão.</p>
-<figure>
-  <a class="glightbox" href="../img/sqlite-viewer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extensão SQLite Viewer" src="../img/sqlite-viewer.png" width="70%" /></a>
-  <figcaption>Extensão SQLite Viewer</figcaption>
-</figure>
-<p>Depois de instalar o programa, siga para a <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> <a href="../parte2/">parte 2</a>.</p>
+⚠️Caso esteja utilizando a Rede interna do Insper de Alunos ou Colaboradores, pode acontecer do download da atualização não iniciar dependendo do servidor da Microsoft em que a requisição de download chegar. Para evitar problemas, é recomendado executar os comandos deste passo do guia em uma Rede externa.</p>
+<p>Após a conclusão da atualização, dando um novo comando <code>wsl</code> teremos uma tela como a abaixo:</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225321510-0360b75e-9ae0-4ff8-98db-959e6da804dd.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="chrome_xXk1sh20bw" src="https://user-images.githubusercontent.com/18387737/225321510-0360b75e-9ae0-4ff8-98db-959e6da804dd.png" /></a></p>
+<p>Agora nosso WSL está atualizado para a arquitetura WSL2. Para instalar uma distribuição Linux, vamos utilizar o comando <code>wsl.exe install &lt;distribuição&gt;</code>. Para saber o nome da distribuição que voçê quer instalar, podemos puxar uma lista dos subsistemas disponíveis com o comando abaixo:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wsl.exe --list --online
+</span></code></pre></div>
+<a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225322426-c473659e-8182-4f12-bf8e-8e95fdad961b.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225322426-c473659e-8182-4f12-bf8e-8e95fdad961b.png" /></a></p>
+<p>Depois de escolher sua versão (por padrão, escolha o Ubuntu), basta trocar o campo <code>&lt;distribuição&gt;</code> do comando acima pelo nome da distribuição na primeira coluna da lista exibida:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wsl.exe install Ubuntu
+</span></code></pre></div></p>
+<p>Aguarde o fim da instalação, e então será pedido para você criar um usuário e senha para o subsistema. Anote em um lugar seguro o que você escolher caso seja necessário utilizar futuramente, mas agora seu WSL está pronto para ser utilizado pelo Docker. Caso ainda não tenha instalado ele no seu computador, siga para o <a href="#passo-2-instalando-o-docker-no-windows">passo 2</a>.</p>
+<h3 id="1b-versoes-anteriores-do-windows">1.b: Versões Anteriores do Windows</h3>
+<p>Caso você esteja utilizando o Windows 8 ou anterior como seu OS, os passos acima podem não funcionar corretamente, então recomendamos seguir o guia da Microsoft para a instalação e atualização do WSL: https://learn.microsoft.com/pt-br/windows/wsl/install-manual</p>
+<p>Atualmente, o Docker só possui suporte para as versões do Windows que estão dentro de sua LifeCycle Policy, portanto recomendamos atualizar seu Sistema Operacional para o Windows 10 ou 11, e utilizar o passo <a href="#1a---windows-10-e-11">1.a</a> do guia.</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225332421-c1f52e9e-236b-45b8-a284-3f4cf7baf576.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="chrome_6eRyRAOKGa" src="https://user-images.githubusercontent.com/18387737/225332421-c1f52e9e-236b-45b8-a284-3f4cf7baf576.png" /></a></p>
+<h2 id="passo-2-instalando-o-docker-no-windows">Passo 2: Instalando o Docker no Windows</h2>
+<p>Para instalar o Docker, iremos utilizar o executável do Docker Desktop para Windows, que pode ser encontrado para download neste link: https://docs.docker.com/desktop/install/windows-install/</p>
+<p>Basta seguir o Instalador e o Docker ja estará pronto para ser usado na sua máquina. Caso ainda não tenha atualizado seu WSL, o aviso abaixo irá aparecer sempre que abrir o Docker Desktop:</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225328678-ab7325f8-e196-44a6-bbd3-b3bdfec3f3ca.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225328678-ab7325f8-e196-44a6-bbd3-b3bdfec3f3ca.png" /></a></p>
+<p>para corrigir este problema, utilize o <a href="#passo-1---atualizando-o-wsl">Passo 1</a> deste tutorial. Após concluir a configuração do WSL2, ele deverá estar desta forma:</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225329477-e9052219-3df3-4ec3-905e-054c37802724.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225329477-e9052219-3df3-4ec3-905e-054c37802724.png" /></a></p>
+<p>Com isso, você ja está pronto para usar o Docker. Caso queira testar no terminal se ele está instalado, basta digitar <code>docker</code>, e uma lista como a abaixo deverá aparecer:</p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/18387737/225329924-75af2ded-cd49-4244-86b7-610d93aae373.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://user-images.githubusercontent.com/18387737/225329924-75af2ded-cd49-4244-86b7-610d93aae373.png" /></a></p>
 
 
 
@@ -1603,7 +1595,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1611,23 +1603,23 @@
 </script>
 
 
-      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../javascripts/progress-check.js"></script>
+        <script src="../../javascripts/progress-check.js"></script>
       
-        <script src="../../../javascripts/quiz.js"></script>
+        <script src="../../javascripts/quiz.js"></script>
       
-        <script src="../../../javascripts/short-questions.js"></script>
+        <script src="../../javascripts/short-questions.js"></script>
       
-        <script src="../../../javascripts/translate-admonitions.js"></script>
+        <script src="../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../../javascripts/webhook-config.js"></script>
+        <script src="../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->

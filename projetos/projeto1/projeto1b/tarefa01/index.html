@@ -10,28 +10,28 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/aulas/03-persistencia-de-dados/parte1/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.1/projetos/projeto1/projeto1b/tarefa01/">
       
       
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../parte2/">
+        <link rel="next" href="../tarefa02/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Handout Parte 1: Instalando o SQLite - Tecnologias Web - Insper 2024/1</title>
+        <title>Tarefa 01 - Tecnologias Web - Insper 2024/1</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/printing.css">
+      <link rel="stylesheet" href="../../../../css/printing.css">
     
-      <link rel="stylesheet" href="../../../css/tecweb.css">
+      <link rel="stylesheet" href="../../../../css/tecweb.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -76,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parte-1-instalando-o-sqlite" class="md-skip">
+        <a href="#reimplementando-projeto-1a-usando-django" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../../../.." title="Tecnologias Web - Insper 2024/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Handout Parte 1: Instalando o SQLite
+              Tarefa 01
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
+    <a href="../../../.." title="Tecnologias Web - Insper 2024/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/1" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -250,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -270,7 +270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../notas/" class="md-nav__link">
+      <a href="../../../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -287,19 +287,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -313,7 +311,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -362,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -383,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte1/" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte2/" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte3/" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -467,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-getit/parte4/" class="md-nav__link">
+      <a href="../../../../aulas/01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -531,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/Aula02.pdf" class="md-nav__link">
+      <a href="../../../../aulas/02-desafio-css/Aula02.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/" class="md-nav__link">
+      <a href="../../../../aulas/02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,19 +576,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -604,7 +600,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             03 - Persistência de dados
@@ -618,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,30 +632,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Handout Parte 1: Instalando o SQLite
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,44 +644,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#opcao-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opção 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#opcao-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Opção 2
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -718,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte2/" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -739,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte3/" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte4/" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte5/" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../parte6/" class="md-nav__link">
+      <a href="../../../../aulas/03-persistencia-de-dados/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -866,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/Aula07.pdf" class="md-nav__link">
+      <a href="../../../../aulas/04-django/Aula07.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -887,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte1/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -929,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte2/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte3/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte4/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte5/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-django/parte6/" class="md-nav__link">
+      <a href="../../../../aulas/04-django/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../auxiliar/venv/" class="md-nav__link">
+      <a href="../../../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-desafio-css/" class="md-nav__link">
+      <a href="../../../../aulas/02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1214,17 +1152,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1238,7 +1178,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Projetos
@@ -1287,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/" class="md-nav__link">
+      <a href="../../projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/configurando-webhook/" class="md-nav__link">
+      <a href="../../projeto1a/configurando-webhook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/organizacao-repositorio/" class="md-nav__link">
+      <a href="../../projeto1a/organizacao-repositorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
+      <a href="../../projeto1a/tarefas-projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1376,17 +1316,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -1400,7 +1342,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
             Projeto 1B
@@ -1414,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,10 +1374,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/tarefa01/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tarefa 01
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1444,6 +1406,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#finalizando-handout-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Finalizando Handout Django
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deletando-uma-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deletando uma anotação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editando-uma-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editando uma anotação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editando uma anotação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acessando-pagina-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acessando página de edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizando-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando anotação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-de-cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opção de cancelar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxima-etapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próxima etapa
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1456,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../projetos/projeto1/projeto1b/tarefa02/" class="md-nav__link">
+      <a href="../tarefa02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1512,18 +1563,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#opcao-1" class="md-nav__link">
+  <a href="#finalizando-handout-django" class="md-nav__link">
     <span class="md-ellipsis">
-      Opção 1
+      Finalizando Handout Django
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#opcao-2" class="md-nav__link">
+  <a href="#deletando-uma-anotacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Opção 2
+      Deletando uma anotação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editando-uma-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editando uma anotação
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Editando uma anotação">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acessando-pagina-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acessando página de edição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizando-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando anotação
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opcao-de-cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opção de cancelar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxima-etapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próxima etapa
     </span>
   </a>
   
@@ -1544,19 +1646,59 @@
                   
 
 
-<h1 id="parte-1-instalando-o-sqlite">Parte 1: Instalando o SQLite</h1>
-<p>Tecnicamente não é necessário instalar o SQLite, pois o Python já vem com uma versão do SQLite instalada. Para testar execute o comando no seu terminal. Se não der nenhum erro está tudo certo.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import sqlite3&quot;</span>
-</span></code></pre></div>
-<h3 id="opcao-1">Opção 1</h3>
-<p>Nós vamos instalar também o DB Browser for SQLite, um programa que utilizaremos para visualizar o nosso banco de dados. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Faça o download e instale o programa <a href="https://sqlitebrowser.org/dl/" target="_blank">clicando neste link e seguindo as instruções</a>.</p>
-<h3 id="opcao-2">Opção 2</h3>
-<p>Também é possível utilizar uma extensão do VS Code que nos permite visualizar o banco de dados SQLite. Você não precisa dele para que o SQLite funcione. É apenas um programa que vai auxiliar a visualização do que está acontecendo. Abra o VS Code e clique no ícone de extensões na barra lateral esquerda. Na barra de pesquisa digite <code>SQLite Viewer</code> e instale a extensão.</p>
+<h1 id="reimplementando-projeto-1a-usando-django">Reimplementando Projeto 1A usando Django</h1>
+<p>Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações.</p>
+<p>Para esta etapa o ideal é utilizar a estrutura que o framework dispõe.
+Como discutido na aula anterior, utilize mais de uma rota para mapear as diferentes requisições que o cliente pode enviar ao servidor.</p>
+<h2 id="finalizando-handout-django">Finalizando Handout Django</h2>
+<p>Ao finalizar o handout de Django é esperado que você tenha o seguinte resultado.</p>
 <figure>
-  <a class="glightbox" href="../img/sqlite-viewer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Extensão SQLite Viewer" src="../img/sqlite-viewer.png" width="70%" /></a>
-  <figcaption>Extensão SQLite Viewer</figcaption>
+    <a class="glightbox" href="../handout-django-concluido.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Handout Django Concluído" src="../handout-django-concluido.png" width="80%" /></a>
+    <figcaption>Handout Django Concluído</figcaption>
 </figure>
-<p>Depois de instalar o programa, siga para a <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> <a href="../parte2/">parte 2</a>.</p>
+<h2 id="deletando-uma-anotacao">Deletando uma anotação</h2>
+<p>Implemente a funcionalidade de deletar uma anotação.</p>
+<figure>
+    <a class="glightbox" href="../projeto1b-delete.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fluxo para implementar funcionalidade" src="../projeto1b-delete.png" width="80%" /></a>
+    <figcaption>Fluxo para implementar funcionalidade</figcaption>
+</figure>
+<ul>
+<li>Para implementar a funcionalidade de deletar, será necessário entender como definir uma nova rota no arquivo <code>urls.py</code>. Acesse o link a seguir e tente descobrir como você deverá realizar esta tareha <a href="https://docs.djangoproject.com/en/5.0/topics/http/urls/#example" target="_blank">https://docs.djangoproject.com/en/5.0/topics/http/urls/#example</a></li>
+<li>Talvez você precise de algo deste link <a href="https://docs.djangoproject.com/en/5.0/topics/db/queries/#retrieving-a-single-object-with-get" target="_blank">https://docs.djangoproject.com/en/5.0/topics/db/queries/#retrieving-a-single-object-with-get</a></li>
+</ul>
+<h2 id="editando-uma-anotacao">Editando uma anotação</h2>
+<p>Para a edição de anotação o fluxo é bem similar ao realizado para a página inicial. Tente se basear na função <code>views.index</code> e pense o que deve ser modificado.</p>
+<p>Para essa funcionalidade temos as seguintes possibilidades:</p>
+<h3 id="acessando-pagina-de-edicao">Acessando página de edição</h3>
+<ul>
+<li>Usuário clica no botão de editar e é levado para a página de edição da nota;</li>
+</ul>
+<figure>
+    <a class="glightbox" href="../projeto1b-update-get.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fluxo para implementar funcionalidade" src="../projeto1b-update-get.png" width="100%" /></a>
+    <figcaption>Fluxo para implementar funcionalidade</figcaption>
+</figure>
+<h3 id="atualizando-anotacao">Atualizando anotação</h3>
+<ul>
+<li>Usuário digite um novo valor para título/conteúdo e clica no botão de <code>Salvar</code>.</li>
+<li>Após os dados serem atualizado no banco de dados o usuário é redirecionado para a página principal.</li>
+</ul>
+<figure>
+    <a class="glightbox" href="../projeto1b-update-post.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fluxo para implementar funcionalidade" src="../projeto1b-update-post.png" width="100%" /></a>
+    <figcaption>Fluxo para implementar funcionalidade</figcaption>
+</figure>
+<h3 id="opcao-de-cancelar">Opção de cancelar</h3>
+<ul>
+<li>Usuário clica no botão de cancelar e nenhum alteração é realizada;</li>
+<li>Veja que mesmo que o usuário digitar algo e clicar em cancelar a nota não pode ser alterada.</li>
+<li>Note que ao clicar em cancelar, a requisição será <code>GET / HTTP/1.1</code></li>
+</ul>
+<figure>
+    <a class="glightbox" href="../projeto1b-update-cancel.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Fluxo para implementar funcionalidade" src="../projeto1b-update-cancel.png" width="100%" /></a>
+    <figcaption>Fluxo para implementar funcionalidade</figcaption>
+</figure>
+<h2 id="proxima-etapa">Próxima etapa</h2>
+<p>Agora que implementou as funcionalidades acima, você pode prosseguir para a próxima etapa.</p>
+<p><a class="md-button" href="../tarefa02/">Próxima Etapa</a></p>
 
 
 
@@ -1603,7 +1745,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -1611,23 +1753,23 @@
 </script>
 
 
-      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../../javascripts/progress-check.js"></script>
+        <script src="../../../../javascripts/progress-check.js"></script>
       
-        <script src="../../../javascripts/quiz.js"></script>
+        <script src="../../../../javascripts/quiz.js"></script>
       
-        <script src="../../../javascripts/short-questions.js"></script>
+        <script src="../../../../javascripts/short-questions.js"></script>
       
-        <script src="../../../javascripts/translate-admonitions.js"></script>
+        <script src="../../../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../../../javascripts/webhook-config.js"></script>
+        <script src="../../../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
