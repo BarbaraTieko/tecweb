@@ -29,5 +29,13 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 - 07/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 - 21/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
 
+**Lição de Casa**
+
+Por conta de um bloqueio da rede do Insper, será necessário que vocês realizem o tutorial abaixo em uma rede que não seja a do Insper.
+
+Peço que realizem esta tarefa até o dia 14/03.
+
+[Guia de Instalação WSL e Docker para Windows](https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows){:target="_blank"}
+
 
 
