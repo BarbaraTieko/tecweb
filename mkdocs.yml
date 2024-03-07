@@ -66,6 +66,7 @@ nav:
       - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
+    - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md

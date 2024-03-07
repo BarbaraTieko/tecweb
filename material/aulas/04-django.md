@@ -78,6 +78,7 @@ Normalmente quando executamos o comando `pip install ALGUM_PACOTE`, instalamos a
         Para continuar o Handout é esperado que conclua as etapas listadas acima.
 
 !!! example "Instalando o Django"
+    Para este handout, seránecessário utilizar a versão do Python a partir do 3.10.
     Com o ambiente virtual ativo, instale o Django:
 
         python -m pip install Django

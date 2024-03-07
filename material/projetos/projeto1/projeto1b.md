@@ -22,7 +22,6 @@ As tarefas a serem realizadas são:
 3. Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite;
 4. Publicar a página.
 
-
 A rubrica a seguir será utilizada na correção do Projeto 1B:
 
 | Conceito | Descrição |
