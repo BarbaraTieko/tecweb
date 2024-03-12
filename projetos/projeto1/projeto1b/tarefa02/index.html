@@ -1533,14 +1533,21 @@
 </figure>
 <p>Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. </p>
 <ul>
-<li>A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. </li>
+<li>A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. <ul>
+<li>Para acessar esta página, implemente a rota <code>http://localhost:8000/tags/</code>;</li>
+<li>Adicione um botão/link na página inicial para acessar a lista de tags.</li>
+</ul>
+</li>
 </ul>
 <figure>
     <a class="glightbox" href="../lista-tags.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Lista de todas tags" src="../lista-tags.png" width="80%" /></a>
     <figcaption>Lista de todas tags</figcaption>
 </figure>
 <ul>
-<li>A página de detalhes de uma tag deve mostrar todas as anotações com aquela tag específica.</li>
+<li>A página de detalhes de uma tag deve mostrar todas as anotações com aquela tag específica.<ul>
+<li>Para acessar esta página, implemente a rota <code>http://localhost:8000/tags/&lt;tag_id&gt;/</code>;</li>
+</ul>
+</li>
 </ul>
 <p>Ao clicar na tag <code>comida</code> na listagem de tags, o usuário é levado a outra tela onde todas as anotações que possuem a tag <code>comida</code> são mostradas.</p>
 <figure>
