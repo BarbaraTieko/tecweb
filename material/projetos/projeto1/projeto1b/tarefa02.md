@@ -14,6 +14,8 @@ No formulário de criação/edição de anotações deve haver um campo de texto
 Você também precisa criar mais duas páginas: uma com a lista com todas as tags existentes e outra com as anotações de uma determinada tag. 
 
 - A lista das tags deve mostrar apenas os nomes das tags com um link para a sua respectiva página de detalhes. 
+    - Para acessar esta página, implemente a rota `http://localhost:8000/tags/`;
+    - Adicione um botão/link na página inicial para acessar a lista de tags.
 
 <figure markdown="span">
     ![Lista de todas tags](lista-tags.png){ width="80%" }
@@ -21,9 +23,9 @@ Você também precisa criar mais duas páginas: uma com a lista com todas as tag
 </figure>
 
 - A página de detalhes de uma tag deve mostrar todas as anotações com aquela tag específica.
+    - Para acessar esta página, implemente a rota `http://localhost:8000/tags/<tag_id>/`;
 
 Ao clicar na tag `comida` na listagem de tags, o usuário é levado a outra tela onde todas as anotações que possuem a tag `comida` são mostradas.
-
 
 <figure markdown="span">
     ![Anotações de uma tag específica](tags-filtro.png){ width="80%" }
