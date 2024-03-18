@@ -1,212 +1,333 @@
 # Deploy da Aplicação
 
-Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a [Amazon AWS](https://aws.amazon.com/), [DigitalOcean](https://www.digitalocean.com/), [PythonAnywhere](https://www.pythonanywhere.com/), [Linode](https://www.linode.com/), ...
-
-Cada um tem suas vantagens e desvantagens. Em Tecnologias Web nós utilizaremos o [Heroku](https://www.heroku.com/) pela facilidade de deploy de aplicações Python e por possuir uma conta gratuita para projetos pequenos. Se você preferir (ou quiser testar) qualquer outra opção, fique à vontade para utilizá-la.
+Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a [Amazon AWS](https://aws.amazon.com/){:target="_blank"}, [DigitalOcean](https://www.digitalocean.com/){:target="_blank"}, [PythonAnywhere](https://www.pythonanywhere.com/){:target="_blank"}, [Linode](https://www.linode.com/){:target="_blank"}, [Heroku](https://www.heroku.com/){:target="_blank"} ...
 
 
-## Primeiros passos
+## Crie uma conta
 
-Para começar o processo de deploy, sua conta do github deverá ter os benefícios do [GitHub Student Developer Pack](https://education.github.com/students). Caso você não tenha se inscreva, é de graça.  
+Vamos utilizar o serviço [Render](https://render.com){:target="_blank"} que oferece a opção gratuita para testarmos o seu serviço.
 
-Crie uma conta no [Heroku](https://www.heroku.com/github-students) e vincule com sua conta do github.
+<figure markdown="span">
+    ![](06-deploy/render.png){ width="70%" }
+</figure>
 
-Instale a interface de linha de comando (CLI) do Heroku: [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install).
 
-Faça o login na sua conta do Heroku pelo terminal com o comando (você será redirecionado para a página do Heroku para completar o login):
+Crie a conta utilizando a conta do Github.
 
-    heroku login
-
-Agora você pode criar uma aplicação utilizando o comando (a documentação dos comandos está [disponível aqui](https://devcenter.heroku.com/articles/heroku-cli-commands)):
-
-    heroku create
-
-Esse comando vai criar uma aplicação com nome aleatório e vai imprimir no terminal algo parecido com isso:
-
-```
-Creating app... done, ⬢ still-cove-69163
-https://still-cove-69163.herokuapp.com/ | https://git.heroku.com/still-cove-69163.git
-```
-
-No exemplo acima, a aplicação se chama `still-cove-69163`. Guarde o nome da sua aplicação.
-
-??? info "Criando uma aplicação com nome específico"
-    Você pode escolher o nome da sua aplicação com o comando `heroku create nome-da-aplicacao`, mas ele precisa ser único **em todo o Heroku**, ou seja, ninguém pode ter criado um projeto com o mesmo nome.
-
-Entre na pasta do seu projeto pelo terminal.
+<figure markdown="span">
+    ![](06-deploy/render_sign_in.png){ width="60%" }
+</figure>
 
 
 !!! danger "Importante"
-    Seu projeto deve estar no git. Se não estiver, crie um repositório antes de seguir para os próximos passos deste handout.
+    Não adicione/cadastre nenhum informação de pagamento.
 
-    Quando for criar o repositório, adicione um arquivo chamado `.gitignore` com o seguinte conteúdo:
+## Projeto Exemplo
 
-    ```
-    env/
-    *.egg-info
-    *.pot
-    *.py[co]
-    .tox/
-    __pycache__
-    MANIFEST
-    dist/
-    docs/_build/
-    docs/locale/
-    node_modules/
-    tests/coverage_html/
-    tests/.coverage
-    build/
-    tests/report/
-    ```
+Para este handout, vamos utilizar um projeto exemplo que está disponível no repositório: [https://github.com/BarbaraTieko/tecweb-projeto-exemplo.git](https://github.com/BarbaraTieko/tecweb-projeto-exemplo.git){:target="_blank"}
 
-!!! danger "Importante 2"
-    O projeto Django deve estar na raiz do repositório github.
-    ```
-    > REPOSITÓRIO GIT
-        > getit
-        > notes
-        manage.py
-        Procfile
-        requirements.txt
-    ```
+Acesse o link do repositório e faça um fork do projeto.
+<figure markdown="span">
+    ![](06-deploy/fork.png){ width="80%" }
+</figure>
 
-O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (**importante 1:** execute este comando na pasta raiz do seu projeto; **importante 2:** troque o `still-cove-69163` pelo nome do seu app gerado pelo Heroku):
+Ao realizar o fork, você terá uma cópia do projeto em seu repositório. Desta forma, você poderá realizar as alterações que desejar sem alterar o projeto original.
 
-    heroku git:remote -a still-cove-69163
+<figure markdown="span">
+    ![](06-deploy/fork_2.png){ width="80%" }
+</figure>
 
-Para confirmar se está tudo certo, utilize o comando:
+Clone o repositório que acabou de criar com o fork.
 
-    git remote -v
+## Criando PostgreSQL no Render
 
-Ele deve listar (além de outros) os seguintes repositórios (claro, com o nome do seu app):
+Atualmente estamos testando a aplicação localmente em nosso computador.
 
-```
-heroku	https://git.heroku.com/still-cove-69163.git (fetch)
-heroku	https://git.heroku.com/still-cove-69163.git (push)
-```
+<figure markdown="span">
+    ![](06-deploy/deploy.png){ width="60%" }
+</figure>
 
-## Preparando o projeto
+Para que a aplicação fique disponível para qualquer pessoa com acesso à internet, precisamos deixar nossa aplicação rodando 24 horas por dia. O nosso computador não é a melhor opção para isso. Para isso, vamos pegar emprestado um computador de uma empresa que oferece esse serviço. Neste handout vamos utilizar o `Render` que oferece uma opção gratuita para testarmos o seu serviço.
 
-Até o momento, nós utilizamos o `python manage.py runserver` para executar o nosso servidor localmente. Esse comando é apropriado apenas para testes no ambiente de desenvolvimento. Ele não é otimizado para uma aplicação real. Para isso precisamos de um servidor de **Web Server Gateway Interface (WSGI)**, que basicamente é um intermediário entre as requisições que chegam no servidor e o código Python. No nosso projeto nós utilizaremos o [Gunicorn (Green Unicorn)](https://gunicorn.org/). Você pode instalá-lo com (**importante:** lembre-se de ativar o ambiente virtual):
+O primeiro passo é criar um banco de dados PostgreSQL utilizando o Render. 
 
-    pip install gunicorn
+<figure markdown="span">
+    ![](06-deploy/deploy_v2.png){ width="80%" }
+</figure>
 
-Para testar sua aplicação com o Gunicorn, você pode executar o comando:
+Visite o site [https://render.com/](https://render.com/){:target="_blank"} e preenche o campo `name` com um nome para o banco de dados. Os outros campos são opcionais.
 
-    gunicorn getit.wsgi
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql.png){ width="80%" }
+</figure>
 
-!!! info "O arquivo `wsgi.py`"
-    O comando acima executou o Gunicorn com o arquivo de configuração `getit/wsgi.py`. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
+Escolha a opção gratuita. Não é necessário adicionar nenhuma informação de pagamento.
+Em seguida, clique em `Create Database`.
 
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql-2.png){ width="80%" }
+</figure>
 
-Agora vamos definir o arquivo de configuração do Heroku. Crie um arquivo chamado `Procfile` (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o `.txt` automaticamente) na raiz do projeto com o seguinte conteúdo:
+Será necessário esperar um pouco até que o banco de dados seja criado.
 
-```
-release: python manage.py migrate
-web: gunicorn getit.wsgi
-```
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql-3.png){ width="80%" }
+</figure>
 
-A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.
+Quando o `status` estiver como `Available`, desça a página e procure a área chamada `Connections`. Dentro dessa área, procure o campo `External Database URL`, essa informação será utilizada para conectar o banco de dados com a aplicação. 
 
-### Configurando os arquivos estáticos
+Clique no botão `Copy` e guarde essa informação, pois vamos precisar dela mais tarde. 
 
-Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira **muito** mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql-4.png){ width="80%" }
+</figure>
 
-Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o [WhiteNoise](http://whitenoise.evans.io/en/stable/):
+## Conectando a aplicação com o banco de dados PostgreSQL
 
-    pip install whitenoise
+- Abra o projeto exemplo.
+- Crie um ambiente virtual para este projeto e ative-o.
+- No projeto há um arquivo chamado `requirements.txt` que contém todas as dependências necessárias para rodar o projeto. Vamos instalar todas as dependências com o comando:
 
-O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `getit/settings.py` e procure pela lista `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
-
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-
-Nesse mesmo arquivo, procure por `STATIC_URL = '/static/'` e adicione a seguinte linha logo em seguida:
-
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante `STATIC_ROOT` define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).
-
-### Outras modificações nas configurações
-
-Aproveite que está com o `settings.py` aberto e modifique o valor da constante `DEBUG` para `False`. Além disso, procure pela lista `ALLOWED_HOSTS`. Ela deve ser uma lista vazia. Por questões de segurança, o servidor Django aceita apenas requisições vindas de domínios previamente identificados. Para isso, descubra qual é o domínio do seu app Heroku. A URL do app será parecida com essa: `https://still-cove-69163.herokuapp.com/` (lembrando que `still-cove-69163` é o nome da minha aplicação, então você terá que trocar o começo pelo nome gerado para a sua aplicação). Adicione o domínio (o que está entre o `https://` e a última `/`) na lista `ALLOWED_HOSTS`:
-
-```python
-ALLOWED_HOSTS = ['still-cove-69163.herokuapp.com', 'localhost', '127.0.0.1']
-```
-
-Note que também adicionamos o `#!python 'localhost'` e o `#!python '127.0.0.1'`. Eles serão necessários para você testar a aplicação no seu computador.
-
-### Criando o arquivo `requirements.txt`
-
-Cada projeto Python possui dependências diferentes. Quando outra pessoa (ou você mesmo em outro computador) vai executar o seu projeto é necessário executar uma série de `pip install` com cada uma das dependências. Para simplificar esse processo podemos criar o arquivo `requirements.txt`. Com esse arquivo basta executar `pip install -r requirements.txt` para instalar todas as dependências do projeto. O Heroku também utiliza esse mesmo arquivo para configurar o seu projeto no servidor deles. O `requirements.txt` é basicamente um arquivo texto com a lista das dependências. Ele pode ser criado com o comando:
-
-    pip freeze > requirements.txt
-
-!!! danger "Importante"
-    Note que você deverá executar o comando `pip install -r requirements.txt` com o ambiente virtual ativado. Após rodar o comando verifique o arquivo `requirements.txt` que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.
-
-## Fazendo o deploy
-
-Agora estamos prontos para fazer o deploy! Faça um commit com todas essas modificações e depois faça o push com o comando a seguir:
-
-    git push heroku master
-
-!!! danger "Se o comando acima não funcionar"
-    Tente rodar o comando:
-    ```
-    git push heroku main
+    ```shell
+    pip install -r requirements.txt
     ```
 
-Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor. Depois disso existem duas possibilidades:
+- Para conectarmos a aplicação com o banco de dados PostgreSQL que acabamos de criar, vamos utilizar a biblioteca `dj-database-url`. Essa biblioteca é responsável por fazer a conexão entre a aplicação e o banco de dados. Para instalar essa biblioteca, execute o comando:
 
-1. Você estava usando o SQLite e agora sua aplicação está disponível no Heroku! Basta acessar o endereço do seu app.
-2. Você estava usando o Postgres e ocorreu um erro parecido com esse:
-  ```
-  remote: django.db.utils.OperationalError: could not connect to server: Connection refused
-  remote: 	Is the server running on host "localhost" (127.0.0.1) and accepting
-  remote: 	TCP/IP connections on port 5432?
-  ```
-
-!!! danger "Aplicações utilizando o SQLite"
-    Apesar de ser mais fácil utilizar o SQLite, o Heroku pode apagar e subir uma nova instância da máquina que roda o seu servidor a qualquer momento. Quando ele faz isso, o arquivo do banco de dados é recriado e assim os seus dados são perdidos. Por esse motivo, o SQLite não deve ser utilizado em aplicações reais no Heroku.
-
-### Aplicações com Postgres
-
-Agora que você fez o primeiro deploy (por mais que tenha ocorrido um erro) o Heroku identificou que você está publicando uma aplicação Django. Assim, ele já disponibiliza uma instância do Postgres para você! Acesse a sua aplicação no [dashboard do Heroku](https://dashboard.heroku.com/apps) e o Postgres deve aparecer nos add-ons instalados:
-
-![](06-deploy/dashboard.png)
-
-Uma opção é acessar os dados de configuração desse banco e alterar manualmente o dicionário `#!python DATABASES` nas configurações. Entretanto, isso faria com que o seu código parasse de funcionar em desenvolvimento (no seu computador). Por isso, vamos utilizar o `dj-database-url`:
-
+    ```shell
     pip install dj-database-url
+    ```
 
-Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o `requirements.txt`:
+    Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o `requirements.txt`:
+        ```shell
+        pip freeze > requirements.txt
+        ```
 
-    pip freeze > requirements.txt
+    Veja que o arquivo `requirements.txt` foi atualizado com a nova dependência.
 
-Adicione o `#!python import` no `getit/settings.py`:
+
+- Adicione o `#!python import` no começo do arquivo `settings.py` (Pode ser logo após o código `#!python from pathlib import Path`):
 
 ```python
 import dj_database_url
 ```
 
-Depois substitua o dicionário `#!python DATABASES` por (assumindo que você utilizou a configuração do Postgres apresentada no handout anterior - caso contrário, adapte a URL):
+- ainda no arquivo `settings.py`, procure pelo dicionário `#!python DATABASES` e substitua pelo código abaixo:
 
 ```python
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://localhost/getit?user=getituser&password=getitsenha',
+        default='',
         conn_max_age=600,
         ssl_require=not DEBUG
     )
 }
 ```
 
-Faça um novo commit e dê o push em `heroku master` novamente. Acesse sua aplicação para verificar que está tudo funcionando.
+No campo **default** adicione a informação aquela informação que havíamos copiado anteriormente. (O campo **External DATABASE URL**)
 
-Parabéns, você acaba de publicar sua aplicação Django no Heroku e já pode compartilhar com todos os amigos e familiares!
+## Mais configurações do projeto
 
-<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/vmon3eAOp1WfK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/celebration-excited-loki-vmon3eAOp1WfK"></a></p>
+Até o momento, nós utilizamos o `python manage.py runserver` para executar o nosso servidor localmente. Esse comando é apropriado apenas para testes no ambiente de desenvolvimento. Ele não é otimizado para uma aplicação real. Para isso precisamos de um servidor de **Web Server Gateway Interface (WSGI)**, que basicamente é um intermediário entre as requisições que chegam no servidor e o código Python. No nosso projeto nós utilizaremos o [Gunicorn (Green Unicorn)](https://gunicorn.org/){:target="_blank"}. Você pode instalá-lo com (**importante:** lembre-se de ativar o ambiente virtual):
+
+    pip install gunicorn
+
+Será necessário atualizar o `requirements.txt`:
+    ```shell
+    pip freeze > requirements.txt
+    ```
+
+!!! info "O arquivo `wsgi.py`"
+    O comando acima executou o Gunicorn com o arquivo de configuração `wsgi.py` que existe no projeto. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo `wsgi.py` dentro da pasta do projeto.
+
+### Outras modificações nas configurações
+
+Aproveite que está com o `settings.py` aberto e modifique o valor da constante `DEBUG` para `False`. Além disso, procure pela lista `ALLOWED_HOSTS`, ela deve ser uma lista vazia, ou seja, `ALLOWED_HOSTS = []` altere para:
+
+```python
+ALLOWED_HOSTS = ['*']
+```
+
+### Configurando os arquivos estáticos
+
+Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira **muito** mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.
+
+Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o [WhiteNoise](http://whitenoise.evans.io/en/stable/){:target="_blank"}:
+
+    pip install whitenoise
+
+O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `getit/settings.py` e procure pela lista chamada `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
+
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+Nesse mesmo arquivo, procure por `STATIC_URL = '/static/'` e **adicione** a seguinte linha logo em seguida:
+
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante `STATIC_ROOT` define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).
+
+Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta forma, rode o comando abaixo novamente.
+
+    pip freeze > requirements.txt
+
+O arquivo `requirements.txt` deve se parecer com o exemplo abaixo:
+
+ <figure markdown="span">
+    ![](06-deploy/requirement.png){ width="80%" }
+</figure>
+
+Caso o arquivo `requirements.txt` possua muitas dependências, talvez você tenha se esquecido de utilizar o ambiente virtual. Neste caso, ative o ambiente virtual e rode o comando `pip freeze > requirements.txt` novamente.
+
+Se o arquivo possuir muitas dependências desnecessárias o deploy vai falhar.
+
+### Faça commit e um push
+Faça o commit das mudanças do seu projeto e faça um push para o seu repositório no Github.
+
+## Enviando o projeto para o Render
+
+- Acesse a página do Render e clique em `New +` e em seguida `Web Service`.
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-5.png){ width="80%" }
+    </figure>
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-6.png){ width="80%" }
+    </figure>
+
+- Escolha a opção de fazer o deploy a partir de um repositório do Github.
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-7.png){ width="80%" }
+    </figure>
+
+- Procure o repositório que você fez o fork do projeto e clique em `Connect`.
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-8.png){ width="80%" }
+    </figure>
+
+- Procure a opção `Start Command` e troque o comando existente pelo seguinte comando:
+
+    ```shell
+    python manage.py migrate && python manage.py collectstatic && gunicorn editora.wsgi:application
+    ```
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-9.png){ width="80%" }
+    </figure>
+
+    Veja o que cada comando faz:
+
+    - `python manage.py migrate` - Executa as migrações do banco de dados.
+    - `python manage.py collectstatic` - Coleta todos os arquivos estáticos e os coloca na pasta `staticfiles`.
+    - `gunicorn editora.wsgi:application` - Inicia o servidor com Gunicorn. Quando rodamos o comando `python manage.py runserver` o Django já inicia um servidor, mas para produção é necessário utilizar o Gunicorn.
+
+    Caso queira que alguns escritores sejam criados automaticamente, adicione o comando `python manage.py loaddata dados-iniciais.json`. Este comando irá carregar os dados do arquivo `dados-iniciais.json` para o banco de dados.
+    ```shell
+    python manage.py migrate && python manage.py loaddata dados-iniciais.json && python manage.py collectstatic && gunicorn editora.wsgi:application
+    ```
+
+- Selecione a opção gratuita e clique em `Create Web Service`.
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-10.png){ width="80%" }
+    </figure>
+    
+- O Render vai iniciar o processo de deploy. Aguarde até que o deploy seja finalizado. 
+    É possível acompanhar o processo do deploy no terminal do Render. 
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-11.png){ width="80%" }
+    </figure>
+
+- Caso o deploy tenha sido realizado com sucesso, você verá a seguinte mensagem:
+
+    <figure markdown="span">
+        ![](06-deploy/criando-postgresql-12.png){ width="80%" }
+    </figure>
+
+    É possível acessar a aplicação clicando no link que aparece no topo da página.
+
+
+## Passo final
+
+Após realizar a etapa acima com sucesso, realize as últimas configurações.
+
+Vá no arquivo `settings.py` e atualize a variável `ALLOWED_HOSTS` (A configuração da variável `ALLOWED_HOSTS` serve para evitar alguns ataques):
+
+```python
+ALLOWED_HOSTS = ['tecweb-projeto-exemplo.onrender.com', 'localhost', '127.0.0.1', '0.0.0.0']
+```
+**Importante:** Para `ALLOWED_HOSTS` **não** deve utilizar o `https://`
+
+Substitua `tecweb-projeto-exemplo.onrender.com` pelo link da sua aplicação gerado pelo Render.
+
+Faça um novo commit e realize um push para o seu repositório no Github.
+
+Sempre que você realizar um commit na branch principal, o Render fará um novo deploy.
+
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql-13.png){ width="80%" }
+</figure>
+
+<figure markdown="span">
+    ![](06-deploy/criando-postgresql-14.png){ width="80%" }
+</figure>
+
+## Rodando o projeto localmente
+
+Agora que o nosso projeto está rodando no Render, não podemos fazer um commit de uma implementação não finalizada. Desta forma, sempre que precisar implementar uma nova funcionalidade, crie uma nova branch e faça um merge com a branch principal somente quando a funcionalidade estiver funcionando e finalizada.
+
+Para implementar novas funcionalidades, será necessário rodar o projeto localmente novamente.
+
+Para rodar o projeto localmente, mude a variável `Debug` presente no arquivo `settings.py` para `#!python True`.
+
+Além disso, mude as configurações do banco de dados para uma das configurações abaixo:
+
+Configuração para utilizar SQlite3:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+```
+
+Configuração para utilizar PostgreSQL:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'getit',
+        'USER': 'getituser',
+        'PASSWORD': 'getitsenha',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+!!! info "Config do banco de dados"
+    Caso rode o projeto localmente e mantenha a configuração do banco de dados abaixo, você estará alterando o banco de dados que está no Render.com.
+    
+    ```python
+    DATABASES = {
+        'default': dj_database_url.config(
+            default='',
+            conn_max_age=600,
+            ssl_require=not DEBUG
+        )
+    }
+    ```
+
+    Qualquer teste que for feito localmente estará alterando o banco de dados que está no render.com
+
+!!! example "Fazendo o deploy do Projeto 1B"
+    Agora que você finalizou o deploy do projeto exemplo, faça o deploy do Projeto 1B.
 
 ## Referências
 
@@ -215,3 +336,5 @@ Parabéns, você acaba de publicar sua aplicação Django no Heroku e já pode c
 - Heroku Postgres - connecting with Django: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-with-django
 - Heroku - Django migrations: https://help.heroku.com/GDQ74SU2/django-migrations
 - Heroku - Working with Django: https://devcenter.heroku.com/categories/working-with-django
+- Deploy a Django web app to a Render live server with PostgreSQL - https://youtu.be/AgTr5mw4zdI?si=DNWuSTXZEu92XHZR
+- Deploy Django com PostgreSQL - utilizando Free Trial Render https://youtu.be/hJuQb5L1Eq0
