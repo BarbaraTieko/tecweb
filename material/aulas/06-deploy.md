@@ -92,6 +92,19 @@ Clique no botão `Copy` e guarde essa informação, pois vamos precisar dela mai
     pip install -r requirements.txt
     ```
 
+    !!! danger "Problema"
+        Caso o comando acima não funcione, tente instalar as dependências a seguir:
+
+        ```shell
+        pip install django
+        pip install psycopg2
+        ```
+
+    !!! tip "Projeto 1B"
+        Para o projeto 1B não será necessário seguir esta etapa, pois o seu projeto ainda não possui um arquivo `requirements.txt`.
+
+        Basta continuar com as próximas etapas.
+
 - Para conectarmos a aplicação com o banco de dados PostgreSQL que acabamos de criar, vamos utilizar a biblioteca `dj-database-url`. Essa biblioteca é responsável por fazer a conexão entre a aplicação e o banco de dados. Para instalar essa biblioteca, execute o comando:
 
     ```shell
@@ -156,7 +169,7 @@ Para que a nossa aplicação funcione com todos os arquivos estáticos será nec
 
     pip install whitenoise
 
-O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `getit/settings.py` e procure pela lista chamada `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
+O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo `settings.py` e procure pela lista chamada `MIDDLEWARE` e adicione o seguinte conteúdo logo depois de `'django.middleware.security.SecurityMiddleware',`:
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
@@ -172,8 +185,8 @@ Como instalamos o `whitenoise` precisamos atualizar o `requirements.txt`. Desta 
 
 O arquivo `requirements.txt` deve se parecer com o exemplo abaixo:
 
- <figure markdown="span">
-    ![](06-deploy/requirement.png){ width="80%" }
+<figure markdown="span">
+    ![](06-deploy/requirements.png){ width="40%" }
 </figure>
 
 Caso o arquivo `requirements.txt` possua muitas dependências, talvez você tenha se esquecido de utilizar o ambiente virtual. Neste caso, ative o ambiente virtual e rode o comando `pip freeze > requirements.txt` novamente.
@@ -222,6 +235,9 @@ Faça o commit das mudanças do seu projeto e faça um push para o seu repositó
     - `python manage.py migrate` - Executa as migrações do banco de dados.
     - `python manage.py collectstatic` - Coleta todos os arquivos estáticos e os coloca na pasta `staticfiles`.
     - `gunicorn editora.wsgi:application` - Inicia o servidor com Gunicorn. Quando rodamos o comando `python manage.py runserver` o Django já inicia um servidor, mas para produção é necessário utilizar o Gunicorn.
+
+    !!! danger "Importante"
+        Ao tentar realizar este handout com o seu Projeto 1B, você deve alterar o comando `gunicorn editora.wsgi:application` para `gunicorn getit.wsgi:application`.
 
     Caso queira que alguns escritores sejam criados automaticamente, adicione o comando `python manage.py loaddata dados-iniciais.json`. Este comando irá carregar os dados do arquivo `dados-iniciais.json` para o banco de dados.
     ```shell
@@ -328,6 +344,8 @@ DATABASES = {
 
 !!! example "Fazendo o deploy do Projeto 1B"
     Agora que você finalizou o deploy do projeto exemplo, faça o deploy do Projeto 1B.
+
+    Como o serviço do Render é gratuito, talvez tenha que excluir as instâncias do banco de dados e do projeto da editora de livros que acabou de criar para que possa criar novas instâncias para o Projeto 1B.
 
 ## Referências
 
