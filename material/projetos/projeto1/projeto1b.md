@@ -20,7 +20,7 @@ As tarefas a serem realizadas são:
 1. Reimplementar o CRUD da parte A em Django, ou seja, implementar as funcionalidades de criação, listagem, edição e remoção de anotações aplicando o mesmo estilo (css); [Para mais detalhes acesse aqui :link:](projeto1b/tarefa01.md)
 2. Implementar o sistema de tags para as anotações; [Para mais detalhes acesse aqui :link:](projeto1b/tarefa02.md)
 3. Utilizar o PostgreSQL (em um container Docker) ao invés do SQLite;
-4. Publicar a página.
+4. Publicar a página. Ao realizar o deploy do seu projeto 1B, adicione o link para acessar a aplicação no README.md do seu repositório.
 
 A rubrica a seguir será utilizada na correção do Projeto 1B:
 
@@ -55,15 +55,15 @@ Segue abaixo uma sugestão de cronograma para auxialiar o desenvolvimento do Pro
     - [X] Implementar a funcionalidade de deletar uma anotação.
     - [X] Implementar a funcionalidade de atualizar uma anotação.
     - [X] Atingiu o **Conceito C**
-- [ ] **12/03 (terça-feira)**
+- [X] **12/03 (terça-feira)**
     - Implementar o sistema de tags
-    - [ ] Atingiu o **Conceito B**
-- [ ] **14/03 (quinta-feira)**
-    - [ ] Utilizar o banco de dados relacionas PostgreSQL
-    - [ ] Atingiu o **Conceito B+**
-- [ ] **19/03 (terça-feira)**
-    - [ ] Realizar o Deploy do Projeto
-    - [ ] Atingiu o **Conceito A**
+    - [X] Atingiu o **Conceito B**
+- [X] **14/03 (quinta-feira)**
+    - [X] Utilizar o banco de dados relacionas PostgreSQL
+    - [X] Atingiu o **Conceito B+**
+- [X] **19/03 (terça-feira)**
+    - [X] Realizar o Deploy do Projeto
+    - [X] Atingiu o **Conceito A**
 - [ ] **21/03 (quinta-feira)**
     - [ ] Aula Studio para finalizar o projeto
     - [ ] Efetuar a entrega
