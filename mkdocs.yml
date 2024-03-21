@@ -85,6 +85,8 @@ nav:
       - "Enunciado": projetos/projeto1/projeto1b.md
       - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
       - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
+  - "Avaliação do Curso/Professor": avaliacao.md
+    
   - Simulado: simulado/avaliacao-intermediaria.pdf
   
 markdown_extensions:
