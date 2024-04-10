@@ -5,8 +5,6 @@
 !!! success "Entrega"
     :date:  19/04 (sexta-feira)
     
-    :clock1: Commits até as 23:59
-
     :material-account-group: Individual
 
     :material-truck-delivery-outline: Entrega via Blackboard.
