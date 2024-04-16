@@ -3,7 +3,7 @@
 Para implementar a rotação dos cartões vamos utilizar novamente o `useEffect` e o `useState`. Modifique o `src/componentes/Note/index.js`:
 
 ```js
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.css";
 
 function randomInt(min, max) {

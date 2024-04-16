@@ -459,8 +459,8 @@ export default function Formulario(props) {
 !!! exercise "Deletando uma anotação"
     Implemente a funcionalidade de deletar uma anotação. Para isso, crie um botão dentro do componente `Note` que ao ser clicado, envie uma requisição para a API Django REST para deletar a anotação. Após deletar a anotação, atualize a lista de anotações.
 
-## Implementando a Edição de Anotações
+<!-- ## Implementando a Edição de Anotações
 
 Para continuar, avance para a próxima etapa.
 
-[Implementando a edição de Anotações](parte-05-editando-anotacao.md){ .md-button .md-button--primary }
+[Implementando a edição de Anotações](parte-05-editando-anotacao.md){ .md-button .md-button--primary } -->

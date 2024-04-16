@@ -58,6 +58,8 @@ O objetivo deste handout é que você tenha um primeiro contato com o React. Ao 
 
     O projeto possui somente um arquivo HTML, o `index.html`, que é o ponto de entrada da aplicação. Se olharmos o conteúdo desse arquivo, veremos que ele possui uma única tag `<div id="root"></div>`. Essa tag é o ponto de entrada da aplicação React. O React irá renderizar os componentes dentro dessa tag.
 
+    [**Single Page Applications** (SPA)](){:target="_blank"} são aplicações que possuem uma única página HTML e que são atualizadas dinamicamente.
+
     O arquivo `src/App.jsx` é o componente principal da aplicação. Ele é o componente que será renderizado dentro da tag `<div id="root"></div>` do arquivo `index.html`. O arquivo `src/index.jsx` é o arquivo que renderiza o componente principal. Ele importa o componente principal e o renderiza dentro da tag `<div id="root"></div>`.
 
     O arquivo `src/App.css` é o arquivo de estilos do componente principal. Ele é importado no arquivo `src/App.jsx` e é aplicado ao componente principal.  
