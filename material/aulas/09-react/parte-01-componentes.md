@@ -234,7 +234,7 @@ A versão acima deve funcionar, mas o console do navegador vai apresentar uma me
 
 Quando utilizamos o map, o resultado devolvido é um array contendo os resultados de cada execução da função. Para o React realizar as otimizações de renderização é necessário que cada elemento desse array possua um atributo `key` com um valor único. Adicione então o `key` no componente `Note`:
 
-```js hl_lines="7 13 22"
+```js hl_lines="7 13 22-24"
 import Note from "./components/Note";
 import "./App.css";
 
