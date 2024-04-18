@@ -3,13 +3,13 @@ Além de JavaScript e CSS, a nossa interface também precisa de algumas imagens.
 
 Vamos criar um novo componente para o `AppBar`. Crie o arquivo `src/components/AppBar/index.jsx` adicione o seguinte conteúdo:
 
-```js
+```jsx
 import "./index.css";
 
 export default function AppBar() {
     return (
         <div className="appbar">
-            <img src="logo-getit.png" className="logo" />
+            <img src="/logo-getit.png" className="logo" />
             <span className="subtitle">Como o Post-it, mas com outro verbo</span>
         </div>
     );
@@ -20,7 +20,7 @@ Crie também o arquivo `src/components/AppBar/index.css` e adicione o seguinte c
 
 Em seguida, adicione o componente `AppBar` no `App`:
 
-```js hl_lines="4 18"
+```jsx hl_lines="4 18"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";
@@ -59,7 +59,7 @@ Altere o arquivo `src/App.css` adicionando as classes CSS `container` e `card-co
 
 Além disso, atualize o arquivo `src/App.jsx`:
 
-```js hl_lines="19 20 26 27"
+```jsx hl_lines="19 20 26 27"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";

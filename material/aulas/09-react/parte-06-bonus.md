@@ -1,8 +1,9 @@
 ## Bônus: implementando a rotação dos cartões
 
-Para implementar a rotação dos cartões vamos utilizar novamente o `useEffect` e o `useState`. Modifique o `src/componentes/Note/index.js`:
+Para implementar a rotação dos cartões vamos utilizar novamente o `useEffect` e o `useState`. Modifique o `src/componentes/Note/index.jsx`:
 
-```js
+```jsx
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./index.css";
 
@@ -21,10 +22,11 @@ export default function Note(props) {
   const style = { transform: `rotate(${rotation}deg)` };
 
   return (
-    <div className="card" style={style}>
-      <h3 className="card-title">{props.title}</h3>
-      <div className="card-content">{props.children}</div>
-    </div>
-  );
+      <div className="card">
+          <h3 className="card-title">{props.title}</h3>
+          <Link to={`edit/${props.id}`}>✏️</Link>
+          <div className="card-content">{props.children}</div>
+      </div>
+    );
 }
 ```

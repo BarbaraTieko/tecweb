@@ -29,6 +29,7 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 - 07/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 - 21/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
 - 19/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
+- 30/04: Entrega do [Projeto 2](projetos/projeto2.md)
 
 **Lição de Casa**
 

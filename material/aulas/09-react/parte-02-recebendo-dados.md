@@ -4,7 +4,7 @@ Os dados ainda estão fixos. Queremos obter a lista de anotações de algum serv
 
 Agora modifique o seu código do `src/App.js` para utilizar o axios para realizar uma requisição GET para o servidor REST desenvolvido na última aula:
 
-```js hl_lines="1 19-21"
+```jsx hl_lines="1 19-21"
 import axios from "axios";
 import Note from "./components/Note";
 import "./App.css";
@@ -94,7 +94,7 @@ Depois de realizar as adaptações no servidor, seu código deve funcionar e a r
 O app já é capaz de fazer a requisição e receber os dados, mas ainda não mostra nada na tela. Poderíamos simplesmente guardar os dados em uma variável e utilizá-la para renderizar os componentes. Pensamos em algo assim:
 
 
-```js hl_lines="7"
+```jsx hl_lines="7"
 import axios from "axios";
 import Note from "./components/Note";
 import "./App.css";
@@ -124,7 +124,7 @@ O problema é que a requisição é feita em uma chamada assíncrona, assim, nã
 
 Por isso foram criados os chamados [**hooks**](https://react.dev/reference/react), que permitem o armazenamento de estado em componentes funcionais. Vamos utilizar o `#!js useState` para armazenar estado. Modifique o arquivo `src/App.jsx`:
 
-```js hl_lines="2 7-11"
+```jsx hl_lines="2 7-11"
 import axios from "axios";
 import { useState } from "react";
 import Note from "./components/Note";
@@ -171,7 +171,7 @@ O que acontece é que toda vez que o estado muda, o componente é renderizado no
 
 Queremos realizar a requisição apenas uma vez. Para isso, existe um outro **hook** chamado `useEffect`, que permite definir algumas condições para quando ele deve ser re-executado. Modifique novamente o arquivo `src/App.js`:
 
-```js hl_lines="1 9-13"
+```jsx hl_lines="1 9-13"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";

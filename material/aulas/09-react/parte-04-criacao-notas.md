@@ -2,13 +2,13 @@ Vamos criar um componente para o formulário de criação.
 
 1. Crie o arquivo `src/components/Formulario/index.jsx` com o seguinte conteúdo:
 
-```js
+```jsx
 import "./index.css";
 
 export default function Formulario() {
 
     return (
-        <form className="form-card" method="post">
+        <form className="form-card">
             <input
                 className="form-card-title"
                 type="text"
@@ -33,7 +33,7 @@ Crie o arquivo `src/components/Formulario/index.css` e coloque o estilo CSS das 
 
 Precisamos adicionar o componente `Formulario` no `src/App.jsx`. Podemos pensar no componente como uma função javascript que retorna html. Para utilizar um componente, basta colocar o nome dele entre tags, como se fosse uma tag HTML. Veja o exemplo abaixo:
 
-```js hl_lines="5 21"
+```jsx hl_lines="5 21"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";
@@ -74,7 +74,7 @@ export default App;
 
 Vamos armazenar os valores digitados pelo usuário nas variáveis `titulo` e `conteudo`. Para isso, vamos criar duas variáveis utilizando `useState` do React;
 
-```js hl_lines="1 5-6"
+```jsx hl_lines="1 5-6"
 import { useState } from "react";
 import "./index.css";
 
@@ -103,7 +103,7 @@ export default function Formulario() {
 
 As variáveis inicialmente começam como `strings` vazias `#!python ""`. Conforme o usuário digita algum valor nos campos inputs, o valor das variáveis é atualizado. Para isso podemos utilizar o atributo `onChange` do HTML, veja o exemplo abaixo:
 
-```js hl_lines="15"
+```jsx hl_lines="15"
 import { useState } from "react";
 import "./index.css";
 
@@ -140,7 +140,7 @@ Sempre que o usuário interagir com o campo `input` o evento `onChange` chamará
 
 Vamos alterar a função `onChange` para armazenar o valor digitado pelo usuário na variável `titulo`. Para isso, vamos utilizar a função `setTitulo` passando o valor digitado pelo usuário `event.target.value`.
 
-```js hl_lines="15 21"
+```jsx hl_lines="15 21"
 import { useState } from "react";
 import "./index.css";
 
@@ -175,7 +175,7 @@ Agora vamos enviar os dados para o servidor. Para isso, vamos utilizar o atribut
 
 O comando [event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault){:target="_blank"} previne que o formulário seja enviado para o servidor. Assim, podemos enviar os dados utilizando o axios.
 
-```js hl_lines="1 9-20 23"
+```jsx hl_lines="1 9-20 23"
 import axios from "axios";
 import { useState } from "react";
 import "./index.css";
@@ -224,7 +224,7 @@ Parece que não está funcionando, certo? Se atualizar a página, perceberá que
 ## Atualizando a lista de anotações
 Agora que já enviamos os dados para o servidor, precisamos atualizar a lista de anotações. Se olharmos o código do arquivo `src/App.jsx` queremos executar o código contido nas linhas marcadas abaixo, pois queremos atualizar a lista de anotações.
 
-```js hl_lines="12-14"
+```jsx hl_lines="12-14"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";
@@ -265,7 +265,7 @@ Para isso, vamos mover esse trecho de código para dentro de uma função, para 
 
 
 
-```js hl_lines="11-15 18"
+```jsx hl_lines="11-15 18"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";
@@ -311,7 +311,7 @@ Lembra que os componentes são funções javascript? Em alguns casos, vamos quer
 
 Em nosso casso, estamos querendo passar a função `carregaNotas` como argumento para a função/componente `Formulario`. 
 
-```js hl_lines="25"
+```jsx hl_lines="25"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Note from "./components/Note";
@@ -357,7 +357,7 @@ export default App;
 O componente `Formulario` recebe o argumento `props` que contém todas as informações enviadas para o componente.
 Como enviamos a função `carregaNotas` com o nome de `loadNotes`, para chamar a função `carregaNotas` dentro do componente `Formulario` utilizamos o comando `#!js props.loadNotes()`.
 
-```js hl_lines="5 19"
+```jsx hl_lines="5 19"
 import axios from "axios";
 import { useState } from "react";
 import "./index.css";
@@ -406,7 +406,7 @@ export default function Formulario(props) {
 Ao criar uma nova anotação, os dados estão sendo salvos no banco de dados pela API Django REST e a página é atualizada com a nota anotação aparecendo na página. Porém, os campos do formulário não estão sendo limpos. Para limpar os campos do formulário, basta atualizar as variáveis `titulo` e `content` com o valor `#!python ""` (string vazia). Além disso, é necessário utilizar essas variáveis para definir o valor dos campos do formulário. Veja o exemplo abaixo:
 
 
-```js hl_lines="21-22 35 42"
+```jsx hl_lines="21-22 35 42"
 import axios from "axios";
 import { useState } from "react";
 import "./index.css";
@@ -459,8 +459,8 @@ export default function Formulario(props) {
 !!! exercise "Deletando uma anotação"
     Implemente a funcionalidade de deletar uma anotação. Para isso, crie um botão dentro do componente `Note` que ao ser clicado, envie uma requisição para a API Django REST para deletar a anotação. Após deletar a anotação, atualize a lista de anotações.
 
-<!-- ## Implementando a Edição de Anotações
+## Implementando a Edição de Anotações
 
 Para continuar, avance para a próxima etapa.
 
-[Implementando a edição de Anotações](parte-05-editando-anotacao.md){ .md-button .md-button--primary } -->
+[Implementando a edição de Anotações](parte-05-editando-anotacao.md){ .md-button .md-button--primary }

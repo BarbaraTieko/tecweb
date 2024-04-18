@@ -16,7 +16,7 @@ Vamos criar nosso primeiro componente, o `Note`. Ele será responsável por most
 
 1. Crie o arquivo `src/components/Note/index.jsx` (você vai precisar criar algumas pastas) no seu projeto com o seguinte conteúdo:
 
-    ```js linenums="1"
+    ```jsx linenums="1"
     export default function Note() {
       return <div>Olá mundo!</div>;
     }
@@ -29,7 +29,7 @@ Vamos criar nosso primeiro componente, o `Note`. Ele será responsável por most
 
 2. Substituia o código no arquivo `src/App.jsx` pelo código abaixo:
 
-    ```js linenums="1"
+    ```jsx linenums="1"
     import Note from "./components/Note";
     import "./App.css";
 
@@ -56,8 +56,8 @@ Vamos criar nosso primeiro componente, o `Note`. Ele será responsável por most
     !!! info "Programação Orientada a Objetos?"
         Lembra do POO? Uma das grandes vantagens do uso de componentes no React é bastante semelhante às vantagens de usar classes. Podemos encapsular comportamentos de forma a facilitar modificações, debug e testes de unidade. E já que tocamos no assunto, sim, dá pra fazer [testes de unidade de componentes React](https://reactjs.org/docs/testing.html)!
 
-    !!! info "O `src/App.js`"
-        O arquivo `src/App.js` também define um componente! A única diferença é que esse componente será pai de todos os outros componentes. Ou seja, todos os componentes que fazer parte da aplicação serão criados a partir do componente `App`.
+    !!! info "O `src/App.jsx`"
+        O arquivo `src/App.jsx` também define um componente! A única diferença é que esse componente será pai de todos os outros componentes. Ou seja, todos os componentes que fazer parte da aplicação serão criados a partir do componente `App`.
 
 3. Recarregue a página para ver o resultado.
 
@@ -70,7 +70,7 @@ Bom, o nosso componente `Note` não faz muita coisa. Vamos melhorá-lo.
 
 Modifique o `src/components/Note/index.jsx`:
 
-```js hl_lines="1 5-13"
+```jsx hl_lines="1 5-13"
 import "./index.css";
 
 export default function Note() {
@@ -144,9 +144,9 @@ Precisamos importar os arquivos de fonte de texto. Para isso, abra o arquivo `in
 
 O nosso componente não é muito útil. Se utilizarmos múltiplos `<Note>` teremos o mesmo cartão, com o mesmo conteúdo, repetido várias vezes. Para definir parâmetros para o nosso componente utilizaremos as **props**.
 
-Queremos utilizar o componente da seguinte maneira. Modifique o seu `src/Apps.js`:
+Queremos utilizar o componente da seguinte maneira. Modifique o seu `src/Apps.jsx`:
 
-```js hl_lines="7-13"
+```jsx hl_lines="7-13"
 import Note from "./components/Note";
 import "./App.css";
 
@@ -175,7 +175,7 @@ Ou seja, queremos definir atributos, como no HTML, para o título e adicionar o 
 
 O React passa todas essas informações para o seu componente em um único argumento chamado **props**. Ele é um objeto JavaScript a partir do qual podemos acessar cada propriedade separadamente (lembrando que objetos podem ser utilizados como dicionários). Modifique o `src/components/Note/index.jsx`:
 
-```js hl_lines="3 6-7"
+```jsx hl_lines="3 6-7"
 import "./index.css";
 
 export default function Note(props) {
@@ -196,7 +196,7 @@ Outro detalhe importante é que o `props.title` e `props.children` estão entre 
 
 Vamos avançar mais um passo na nossa interface. Atualmente temos duas anotações, mas sabemos que essa quantidade é variável. Vamos assumir que temos os dados das anotações em um array. Para renderizar múltiplos componentes podemos utilizar o método `map`:
 
-```js hl_lines="5-15 17-23"
+```jsx hl_lines="5-15 17-23"
 import Note from "./components/Note";
 import "./App.css";
 
@@ -234,7 +234,7 @@ A versão acima deve funcionar, mas o console do navegador vai apresentar uma me
 
 Quando utilizamos o map, o resultado devolvido é um array contendo os resultados de cada execução da função. Para o React realizar as otimizações de renderização é necessário que cada elemento desse array possua um atributo `key` com um valor único. Adicione então o `key` no componente `Note`:
 
-```js hl_lines="7 13 22-24"
+```jsx hl_lines="7 13 22-24"
 import Note from "./components/Note";
 import "./App.css";
 

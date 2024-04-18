@@ -80,8 +80,8 @@ nav:
       - "Recebendo Dados": aulas/09-react/parte-02-recebendo-dados.md
       - "Carregando imagens e arquivos estáticos": aulas/09-react/parte-03-carregando-estaticos.md
       - "Implementando a Criação de Anotações": aulas/09-react/parte-04-criacao-notas.md
-      # - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
-      # - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
+      - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
+      - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
       - "Edição: React Router": aulas/09-react/parte2.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
@@ -101,6 +101,8 @@ nav:
       - "Enunciado": projetos/projeto1/projeto1b.md
       - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
       - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
+    - "Projeto 2": projetos/projeto2.md
+    
   - "Avaliação do Curso/Professor": avaliacao.md
     
   - Simulado: simulado/avaliacao-intermediaria.pdf
