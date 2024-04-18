@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#bonus-implementando-a-rotacao-dos-cartoes" class="md-skip">
+        <a href="#adicionando-as-cores" class="md-skip">
           Skip to content
         </a>
       
@@ -1463,9 +1463,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bonus-implementando-a-rotacao-dos-cartoes" class="md-nav__link">
+  <a href="#adicionando-as-cores" class="md-nav__link">
     <span class="md-ellipsis">
-      Bônus: implementando a rotação dos cartões
+      Adicionando as cores
     </span>
   </a>
   
@@ -2045,9 +2045,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bonus-implementando-a-rotacao-dos-cartoes" class="md-nav__link">
+  <a href="#adicionando-as-cores" class="md-nav__link">
     <span class="md-ellipsis">
-      Bônus: implementando a rotação dos cartões
+      Adicionando as cores
     </span>
   </a>
   
@@ -2070,35 +2070,52 @@
 
   <h1>Bônus: implementando a rotação dos cartões</h1>
 
-<h2 id="bonus-implementando-a-rotacao-dos-cartoes">Bônus: implementando a rotação dos cartões</h2>
 <p>Para implementar a rotação dos cartões vamos utilizar novamente o <code>useEffect</code> e o <code>useState</code>. Modifique o <code>src/componentes/Note/index.jsx</code>:</p>
 <div class="language-jsx highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Link</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react-router-dom&quot;</span><span class="p">;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react&quot;</span><span class="p">;</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;react&quot;</span><span class="p">;</span>
+</span></span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">randomInt</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nx">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">}</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="kd">function</span><span class="w"> </span><span class="nx">randomInt</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span><span class="w"> </span><span class="nx">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="hll"><span class="w">  </span><span class="nx">min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">min</span><span class="p">);</span>
+</span></span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="hll"><span class="w">  </span><span class="nx">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">max</span><span class="p">);</span>
+</span></span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="hll"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nx">max</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">min</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">min</span><span class="p">;</span>
+</span></span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="hll"><span class="p">}</span>
+</span></span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Note</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rotation</span><span class="p">,</span><span class="w"> </span><span class="nx">setRotation</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nx">setRotation</span><span class="p">(</span><span class="nx">randomInt</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="sb">`rotate(</span><span class="si">${</span><span class="nx">rotation</span><span class="si">}</span><span class="sb">deg)`</span><span class="w"> </span><span class="p">};</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">rotation</span><span class="p">,</span><span class="w"> </span><span class="nx">setRotation</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+</span></span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="hll"><span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span></span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="hll"><span class="w">    </span><span class="nx">setRotation</span><span class="p">(</span><span class="nx">randomInt</span><span class="p">(</span><span class="o">-</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span>
+</span></span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="hll"><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span>
+</span></span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="hll">
+</span></span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="hll"><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="sb">`rotate(</span><span class="si">${</span><span class="nx">rotation</span><span class="si">}</span><span class="sb">deg)`</span><span class="w"> </span><span class="p">};</span>
+</span></span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">h3</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-title&quot;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="w"> </span><span class="na">style</span><span class="o">=</span><span class="p">{</span><span class="nx">style</span><span class="p">}&gt;</span>
+</span></span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">h3</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-title&quot;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">Link</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="p">{</span><span class="sb">`edit/</span><span class="si">${</span><span class="nx">props</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}&gt;</span><span class="err">✏️</span><span class="p">&lt;/</span><span class="nt">Link</span><span class="p">&gt;</span>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">          </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-content&quot;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="p">);</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
 </span></code></pre></div>
+<p>No exemplo acima, a função <code>randomInt</code> gera um número aleatório entre -5 e 5. A função <code>useEffect</code> é utilizada para definir o estado inicial de <code>rotation</code> com um valor aleatório.</p>
+<p>Ao acessar a aplicação, os cartões devem estar rotacionados de forma aleatória.</p>
+<h2 id="adicionando-as-cores">Adicionando as cores</h2>
+<p>Vamos utilizar a mesma ideia adotada na etapa anterior, para isso:</p>
+<ul>
+<li>
+<p>Crie um array com as possíveis cores para os cartões. </p>
+<ul>
+<li><code class="language-js highlight"><span class="p">[</span><span class="s2">&quot;#ead3a7&quot;</span><span class="p">,</span><span class="w">  </span><span class="s2">&quot;#9de0f5&quot;</span><span class="p">,</span><span class="w">  </span><span class="s2">&quot;#ef89ba&quot;</span><span class="p">,</span><span class="w">  </span><span class="s2">&quot;#fae890&quot;</span><span class="p">,</span><span class="w">  </span><span class="s2">&quot;#abe9c1&quot;</span><span class="p">]</span></code></li>
+</ul>
+</li>
+<li>
+<p>Crie um estado para armazenar a cor do cartão.</p>
+</li>
+<li>Utilize o <code>useEffect</code> para sortear uma cor aleatória para o cartão e atualize o estado com essa cor.</li>
+<li>Adicione uma chave <code class="language-js highlight"><span class="s2">&quot;background-color&quot;</span></code> no objeto <code>style</code> para aplicar a cor ao cartão.</li>
+</ul>
+<p>Após realizar essas alterações, as cores devem ser aplicadas aos cartões de forma aleatória. <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /> <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /> <img alt="👏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f44f.svg" title=":clap:" /></p>
 
 
 
