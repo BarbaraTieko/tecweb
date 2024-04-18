@@ -16,9 +16,9 @@ export default function AppBar() {
 }
 ```
 
-Crie também o arquivo `src/components/AppBar/index.css` e adicione o seguinte conteúdo e adicione as classes CSS `appbar`, `logo` e `subtitle`.
+Crie também o arquivo `src/components/AppBar/index.css` e adicione as classes CSS `appbar`, `logo` e `subtitle` implementadas no Desafio CSS.
 
-Em seguida, adicione o componente `AppBar` no `App`:
+Em seguida, modifique o arquivo src/App.jsx e adicione o componente `AppBar` no `App`:
 
 ```jsx hl_lines="4 18"
 import axios from "axios";

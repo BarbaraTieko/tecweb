@@ -388,34 +388,6 @@ export default function Editar() {
   // O Restante do seu código
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Bônus: implementando a rotação dos cartões
 
 Para continuar, avance para a próxima etapa.
