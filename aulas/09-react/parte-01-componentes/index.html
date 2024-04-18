@@ -1481,6 +1481,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../parte-05-editando-anotacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementando a edição de Anotações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-06-bonus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bônus: implementando a rotação dos cartões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../parte2/" class="md-nav__link">
         
   
@@ -1967,6 +2009,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projeto 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2112,10 +2175,10 @@
 <ol>
 <li>
 <p>Crie o arquivo <code>src/components/Note/index.jsx</code> (você vai precisar criar algumas pastas) no seu projeto com o seguinte conteúdo:</p>
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-jsx highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Note</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Olá</span><span class="w"> </span><span class="nx">mundo</span><span class="o">!&lt;</span><span class="err">/div&gt;;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">Olá</span><span class="w"> </span><span class="nx">mundo</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Vamos entender o que aconteceu no código acima. Começando pelo <code>src/components/Note/index.jsx</code>:</p>
@@ -2126,7 +2189,7 @@
 </li>
 <li>
 <p>Substituia o código no arquivo <code>src/App.jsx</code> pelo código abaixo:</p>
-<div class="language-js highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<div class="language-jsx highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
@@ -2140,7 +2203,7 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">Note</span><span class="w"> </span><span class="o">/&gt;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">Note</span><span class="w"> </span><span class="p">/&gt;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="p">);</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
@@ -2161,8 +2224,8 @@
 <p>Lembra do POO? Uma das grandes vantagens do uso de componentes no React é bastante semelhante às vantagens de usar classes. Podemos encapsular comportamentos de forma a facilitar modificações, debug e testes de unidade. E já que tocamos no assunto, sim, dá pra fazer <a href="https://reactjs.org/docs/testing.html">testes de unidade de componentes React</a>!</p>
 </div>
 <div class="admonition info">
-<p class="admonition-title">O <code>src/App.js</code></p>
-<p>O arquivo <code>src/App.js</code> também define um componente! A única diferença é que esse componente será pai de todos os outros componentes. Ou seja, todos os componentes que fazer parte da aplicação serão criados a partir do componente <code>App</code>.</p>
+<p class="admonition-title">O <code>src/App.jsx</code></p>
+<p>O arquivo <code>src/App.jsx</code> também define um componente! A única diferença é que esse componente será pai de todos os outros componentes. Ou seja, todos os componentes que fazer parte da aplicação serão criados a partir do componente <code>App</code>.</p>
 </div>
 </li>
 <li>
@@ -2175,19 +2238,19 @@
 <li>O projeto já vem com um pouco de estilo CSS. Vamos apagá-lo. Apague todo o conteúdo dos arquivos <code>src/App.css</code> e <code>src/index.css</code>.</li>
 </ol>
 <p>Modifique o <code>src/components/Note/index.jsx</code>:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="hll"><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
 </span></span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Note</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card&quot;</span><span class="o">&gt;</span>
-</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">h3</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-title&quot;</span><span class="o">&gt;</span><span class="nx">Receita</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">miojo</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
-</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-content&quot;</span><span class="o">&gt;</span>
-</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="hll"><span class="w">        </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">h3</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-title&quot;</span><span class="p">&gt;</span><span class="nx">Receita</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">miojo</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-content&quot;</span><span class="p">&gt;</span>
+</span></span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="hll"><span class="w">        </span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="hll"><span class="w">          </span><span class="nx">Bata</span><span class="w"> </span><span class="nx">com</span><span class="w"> </span><span class="nx">um</span><span class="w"> </span><span class="nx">martelo</span><span class="w"> </span><span class="nx">antes</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">abrir</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="nx">pacote</span><span class="p">.</span><span class="w"> </span><span class="nx">Misture</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="nx">tempero</span><span class="p">,</span>
 </span></span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="hll"><span class="w">          </span><span class="nx">coloque</span><span class="w"> </span><span class="nx">em</span><span class="w"> </span><span class="nx">uma</span><span class="w"> </span><span class="nx">vasilha</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="nx">aproveite</span><span class="w"> </span><span class="nx">seu</span><span class="w"> </span><span class="nx">snack</span><span class="w"> </span><span class="o">:</span><span class="p">)</span>
-</span></span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="hll"><span class="w">        </span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span></span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span></span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="hll"><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="hll"><span class="w">        </span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="hll"><span class="w">      </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="hll"><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="p">);</span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -2236,21 +2299,21 @@
 </span></code></pre></div>
 <h2 id="customizando-o-componente">Customizando o componente</h2>
 <p>O nosso componente não é muito útil. Se utilizarmos múltiplos <code>&lt;Note&gt;</code> teremos o mesmo cartão, com o mesmo conteúdo, repetido várias vezes. Para definir parâmetros para o nosso componente utilizaremos as <strong>props</strong>.</p>
-<p>Queremos utilizar o componente da seguinte maneira. Modifique o seu <code>src/Apps.js</code>:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<p>Queremos utilizar o componente da seguinte maneira. Modifique o seu <code>src/Apps.jsx</code>:</p>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="o">&lt;&gt;</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">Note</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Receita de miojo&quot;</span><span class="o">&gt;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p">&lt;&gt;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">Note</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">&quot;Receita de miojo&quot;</span><span class="p">&gt;</span>
 </span></span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="hll"><span class="w">        </span><span class="nx">Bata</span><span class="w"> </span><span class="nx">com</span><span class="w"> </span><span class="nx">um</span><span class="w"> </span><span class="nx">martelo</span><span class="w"> </span><span class="nx">antes</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">abrir</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="nx">pacote</span><span class="p">.</span><span class="w"> </span><span class="nx">Misture</span><span class="w"> </span><span class="nx">o</span><span class="w"> </span><span class="nx">tempero</span><span class="p">,</span><span class="w"> </span><span class="nx">coloque</span>
 </span></span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="hll"><span class="w">        </span><span class="nx">em</span><span class="w"> </span><span class="nx">uma</span><span class="w"> </span><span class="nx">vasilha</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="nx">aproveite</span><span class="w"> </span><span class="nx">seu</span><span class="w"> </span><span class="nx">snack</span><span class="w"> </span><span class="o">:</span><span class="p">)</span>
-</span></span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="err">/Note&gt;</span>
-</span></span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">Note</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="s2">&quot;Sorvete de banana&quot;</span><span class="o">&gt;</span>
+</span></span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="hll"><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Note</span><span class="p">&gt;</span>
+</span></span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">Note</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">&quot;Sorvete de banana&quot;</span><span class="p">&gt;</span>
 </span></span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="hll"><span class="w">        </span><span class="nx">Coloque</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">banana</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">congelador</span><span class="w"> </span><span class="nx">e</span><span class="w"> </span><span class="nx">espere</span><span class="p">.</span>
-</span></span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="err">/Note&gt;</span>
-</span></span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span></span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="hll"><span class="w">      </span><span class="p">&lt;/</span><span class="nt">Note</span><span class="p">&gt;</span>
+</span></span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="p">&lt;/&gt;</span>
 </span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="p">);</span>
 </span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="p">}</span>
 </span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
@@ -2263,14 +2326,14 @@ No código acima, se não utilizássemos o fragmento, o código não funcionaria
 </details>
 <p>Ou seja, queremos definir atributos, como no HTML, para o título e adicionar o conteúdo como filho desse componente. Chamamos de filho todos os componentes colocados entre a abertura e fechamento da tag.</p>
 <p>O React passa todas essas informações para o seu componente em um único argumento chamado <strong>props</strong>. Ele é um objeto JavaScript a partir do qual podemos acessar cada propriedade separadamente (lembrando que objetos podem ser utilizados como dicionários). Modifique o <code>src/components/Note/index.jsx</code>:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./index.css&quot;</span><span class="p">;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="hll"><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">Note</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span></span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card&quot;</span><span class="o">&gt;</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">h3</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-title&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h3&gt;</span>
-</span></span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="hll"><span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">className</span><span class="o">=</span><span class="s2">&quot;card-content&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
-</span></span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">h3</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-title&quot;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">title</span><span class="p">}&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">div</span><span class="w"> </span><span class="na">className</span><span class="o">=</span><span class="s">&quot;card-content&quot;</span><span class="p">&gt;{</span><span class="nx">props</span><span class="p">.</span><span class="nx">children</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p">);</span>
 </span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
 </span></code></pre></div>
@@ -2278,7 +2341,7 @@ No código acima, se não utilizássemos o fragmento, o código não funcionaria
 <p>Outro detalhe importante é que o <code>props.title</code> e <code>props.children</code> estão entre chaves. Esse é um recurso do JSX que permite que adicionemos valores do JavaScript nas tags.</p>
 <h2 id="renderizando-multiplos-componentes-a-partir-de-um-array">Renderizando múltiplos componentes a partir de um array</h2>
 <p>Vamos avançar mais um passo na nossa interface. Atualmente temos duas anotações, mas sabemos que essa quantidade é variável. Vamos assumir que temos os dados das anotações em um array. Para renderizar múltiplos componentes podemos utilizar o método <code>map</code>:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2295,11 +2358,11 @@ No código acima, se não utilizássemos o fragmento, o código não funcionaria
 </span></span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="hll"><span class="w">  </span><span class="p">];</span>
 </span></span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
 </span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="hll"><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span></span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="hll"><span class="w">    </span><span class="o">&lt;&gt;</span>
+</span></span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="hll"><span class="w">    </span><span class="p">&lt;&gt;</span>
 </span></span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="hll"><span class="w">      </span><span class="p">{</span><span class="nx">notes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">note</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
-</span></span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="hll"><span class="w">        </span><span class="o">&lt;</span><span class="nx">Note</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Note&gt;</span>
+</span></span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="hll"><span class="w">        </span><span class="p">&lt;</span><span class="nt">Note</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}&gt;{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}&lt;/</span><span class="nt">Note</span><span class="p">&gt;</span>
 </span></span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="hll"><span class="w">      </span><span class="p">))}</span>
-</span></span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="hll"><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span></span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="hll"><span class="w">    </span><span class="p">&lt;/&gt;</span>
 </span></span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="hll"><span class="w">  </span><span class="p">);</span>
 </span></span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="p">}</span>
 </span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
@@ -2311,7 +2374,7 @@ No código acima, se não utilizássemos o fragmento, o código não funcionaria
   <figcaption>Warning</figcaption>
 </figure>
 <p>Quando utilizamos o map, o resultado devolvido é um array contendo os resultados de cada execução da função. Para o React realizar as otimizações de renderização é necessário que cada elemento desse array possua um atributo <code>key</code> com um valor único. Adicione então o <code>key</code> no componente <code>Note</code>:</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
+<div class="language-jsx highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Note</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/Note&quot;</span><span class="p">;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">import</span><span class="w"> </span><span class="s2">&quot;./App.css&quot;</span><span class="p">;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2330,13 +2393,13 @@ No código acima, se não utilizássemos o fragmento, o código não funcionaria
 </span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">  </span><span class="p">];</span>
 </span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
 </span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="o">&lt;&gt;</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span><span class="p">&lt;&gt;</span>
 </span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">      </span><span class="p">{</span><span class="nx">notes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">note</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="hll"><span class="w">        </span><span class="o">&lt;</span><span class="nx">Note</span><span class="w"> </span><span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`note__</span><span class="si">${</span><span class="nx">note</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span><span class="w"> </span><span class="nx">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="hll"><span class="w">        </span><span class="p">&lt;</span><span class="nt">Note</span><span class="w"> </span><span class="na">key</span><span class="o">=</span><span class="p">{</span><span class="sb">`note__</span><span class="si">${</span><span class="nx">note</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span><span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">title</span><span class="p">}&gt;</span>
 </span></span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="hll"><span class="w">          </span><span class="p">{</span><span class="nx">note</span><span class="p">.</span><span class="nx">content</span><span class="p">}</span>
-</span></span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="hll"><span class="w">        </span><span class="o">&lt;</span><span class="err">/Note&gt;</span>
+</span></span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="hll"><span class="w">        </span><span class="p">&lt;/</span><span class="nt">Note</span><span class="p">&gt;</span>
 </span></span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">      </span><span class="p">))}</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="o">&lt;</span><span class="err">/&gt;</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">    </span><span class="p">&lt;/&gt;</span>
 </span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">  </span><span class="p">);</span>
 </span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="p">}</span>
 </span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>
