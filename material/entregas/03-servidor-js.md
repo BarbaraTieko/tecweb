@@ -3,7 +3,9 @@
 ## Servidor JS
 
 !!! success "Entrega"
-    :date:  19/04 (sexta-feira)
+    ~~:date:  19/04 (sexta-feira)~~
+
+    :date:  **Entrega adiada** 21/04 (domingo)
     
     :material-account-group: Individual
 
