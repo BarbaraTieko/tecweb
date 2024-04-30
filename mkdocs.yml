@@ -101,7 +101,9 @@ nav:
       - "Enunciado": projetos/projeto1/projeto1b.md
       - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
       - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
-    - "Projeto 2": projetos/projeto2.md
+    - "Projeto 2": 
+      - "Enunciado": projetos/projeto2.md
+      - "Dicas": projetos/projeto2/dicas.md
     
   - "Avaliação do Curso/Professor": avaliacao.md
     

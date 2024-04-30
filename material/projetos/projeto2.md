@@ -1,7 +1,9 @@
 # Projeto 2: Consumo de APIs
 
 !!! success "Entrega"
-    :date: 30/04 (terça-feira)
+    :date: ~~30/04 (terça-feira)~~
+
+    :date: 05/05 (domingo)
     
     :clock1: Commits até as 23:59
 
