@@ -104,6 +104,7 @@ nav:
     - "Projeto 2": 
       - "Enunciado": projetos/projeto2.md
       - "Dicas": projetos/projeto2/dicas.md
+      - "Deploy": projetos/projeto2/deploy.md
     
   - "Avaliação do Curso/Professor": avaliacao.md
     

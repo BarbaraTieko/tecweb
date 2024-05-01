@@ -98,6 +98,10 @@ Caso o json contenha muitos dados, podemos fazer um tratamento antes de retornar
 
 Esta etapa concluímos os passos 2, 3 e 4 da figura.
 
+!!! note "Teste"
+    Faça um teste para verificar se a endpoint está funcionando corretamente.
+    Abra o Postman e faça uma requisição para a endpoint que acabou de criar, se tudo der certo, você pode fazer a requisicão no React.
+
 ## Fazendo a requisição no React
 
 Para realizar o passo 1 da figura, basta implementar uma função no React que faça a requisição para o Django.
