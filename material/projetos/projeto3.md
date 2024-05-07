@@ -1,20 +1,31 @@
 # Projeto 3: Livre
 
-**Entrega: 29/11/2023**
 
-**Entrega via GitHub Classroom:**
+!!! success "Entrega"
 
-- Github Classroom: [https://classroom.github.com/a/Jt8DU81q](https://classroom.github.com/a/Jt8DU81q){:target="_blank"}
+    :date: 21/05/2024
+    
+    :clock1: Commits até as 23:59
+
+    :material-account-group: Grupos de 3 ou 4 (Não é permitido realizar o projeto individualmente ou em dupla)
+
+    :simple-github: Entrega via Github Classroom [https://classroom.github.com/a/jqlzPrzW](https://classroom.github.com/a/jqlzPrzW){:target="_blank"}
 
 
-**Trabalho em grupos de 3 ou 4**
+!!! info "Repositório"
+    Caso precise de mais de um repositório para o projeto, crie um repositório na conta de um dos integrantes e adicione o link no README do repositório principal (Repositório do GitHub Classroom).
+
+    Além disso, deixe o repositorio público ou adicione os professores como colaboradores.
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
 
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
-    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/SLkuvojSwhm9nB3m7){target="_blank"}
+    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/2x4upVm8mLRjrxZNA){target="_blank"}
+
+    Apenas um integrante do grupo deve preencher o formulário.
+
 
 ## Restrições
 
@@ -35,7 +46,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
     - Vamos classificar as dificuldades em 3 escalas: fácil, médio e difícil.
     - Cada funcionalidade terá uma pontuação: (1) fácil, (1.5) médio e (2) difícil.
     - Para grupos de 3 integrantes, a pontuação total da dificuldade deve alcançar 4 pontos. Ou seja, o grupo pode fazer 4 funcionalidades fáceis, 2 difíceis, 1 difícil e 2 fáceis, ou qualquer outra combinação de pelo menos 4 pontos.
-    - Para os grupos de 4 integrantes, a pontuação total da dificuldade deve alcançar pelo menos 6 pontos.
+    - Para os grupos de 4 integrantes, a pontuação total da dificuldade deve alcançar pelo menos 5 pontos.
     - A dificuldade deve ser validada com os professores.
     - Alguns exemplos de funcionalidades fáceis:
         - CRUD feito em Django;
@@ -48,6 +59,26 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 4. Defina e desenhe a arquitetura do projeto;
 5. Inicie as sprints de desenvolvimento.
 
+
+## Uma sugestão de projeto
+
+Uma sugestão de projeto é continuar o desenvolvimento do projeto 2 ou começar um projeto do zero utilizando React para frontend e Django Rest para backend.
+
+### Funcionalidades para grupos de 3 integrantes
+
+1. **Difícil**: Autenticação de usuário; (2 pontos)
+    - Tela de cadastro
+    - Tela de login
+2. **Fácil**: CRUD de algum recursos (1 ponto)
+    - Armazenar alguma informação no banco de dados atrelada ao usuário logado
+3. **Fácil**: Caprichou no frontend (1 ponto)
+    - Utilizou algum componente pronto ou framework css deixando o projeto com acabamento de um projeto real.
+
+!!! danger "Importante"
+    Caso escolha trabalhar na continuação do projeto 2, você **NÃO** deve trabalhar no repositório do projeto 2. Crie um novo repositório para o projeto 3 via link do GitHub Classroom.
+
+    Além disso, siga o seguinte tutorial para realizar a cópia do repositório do projeto 2 para o projeto 3: [https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository){:target="_blank"} 
+
 ## Pesos
 
 | Avaliação | Peso |
@@ -57,13 +88,16 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 ## Rubrica
 
+!!! danger "Vídeo"
+    Ao finalizer o projeto, grave um vídeo demosntrando as todas as funcionalidades implementadas.
+
 A rubrica a seguir será utilizada na correção do Projeto 3:
 
 | Conceito | Descrição |
 | :------: | :-------- |
 |    A    | Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
 |    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código **e** entregou um vídeo com a demo do projeto |
-|    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura |
+|    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura ou não entregou um vídeo demo|
 |    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
 |    I     | Não entregou ou o código não executa |
 
