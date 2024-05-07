@@ -101,6 +101,10 @@ A rubrica a seguir será utilizada na correção do Projeto 3:
 |    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
 |    I     | Não entregou ou o código não executa |
 
+
+!!! danger "Importante"
+    Caso não tenha commits relevantes no repositório do projeto, o conceito será limitado a C.
+
 ## Trabalho em Equipe
 
 Os questionários de cada sprint devem ser respondidos entre quinta-feira e domingo. Questionários respondidos fora deste período serão considerados como não respondidos. Para cada questionário de avaliação não respondido, será descontado 1 conceito.
@@ -114,3 +118,4 @@ Acesse mais detalhes da avaliação em grupo: [Teamwork](teamwork.md)
 |    C     | Teve avaliação abaixo do esperado em 2 sprints. |
 |    D     | Teve avaliação de desempenho abaixo do esperado em 3 sprints. |
 |    I     | Não respondeu nenhum questionário dentro do prazo. Ou grupo possui menos de 3 integrantes. Ou não possui nenhum contribuição significativa no projeto.|
+
