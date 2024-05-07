@@ -105,6 +105,11 @@ A rubrica a seguir será utilizada na correção do Projeto 3:
 !!! danger "Importante"
     Caso não tenha commits relevantes no repositório do projeto, o conceito será limitado a C.
 
+!!! info "Conceito A+"
+    Para o conceito A+ o grupo deve propor uma funcionalidade e validar com a professora.
+
+    Além disso, o grupo deve adicionar a descrição da funcionalidade para o conceito A+ no arquvo README do repositório principal.
+
 ## Trabalho em Equipe
 
 Os questionários de cada sprint devem ser respondidos entre quinta-feira e domingo. Questionários respondidos fora deste período serão considerados como não respondidos. Para cada questionário de avaliação não respondido, será descontado 1 conceito.
