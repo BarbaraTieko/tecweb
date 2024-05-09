@@ -330,9 +330,34 @@ def api_notes(request):
 
 Com isso, a requisição deve retornar menos notas. Se quiser dar uma olhada no arquivo `notes.json`, lá podemos ver que algumas notas pertencem ao usuário com id `1` e outras notas pertencem ao usuário com id `2`.
 
+# Criando anotações
+
+Agora precisamos vincular uma anotação ao usuário que está autenticado.
+
+Para isso, altere o arquivo `views.py` da seguinte forma:
+
+```python hl_lines="8"
+@api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
+def api_notes(request):
+    if request.method == "POST":
+        new_note_data = request.data
+        title = new_note_data['title']
+        content = new_note_data['content']
+        note = Note(title=title, content=content, user=request.user)
+        note.save()
+
+    notes = Note.objects.filter(user=request.user)
+
+    serialized_note = NoteSerializer(notes, many=True)
+    return Response(serialized_note.data)
+
+# SUAS OUTRAS FUNÇÕES CONTINUAM AQUI
+
+```
 ## Próximos passos
 
-Altere as outras funções da `views.py` que o usuário possa criar, editar e excluir somente as notas que pertençam a este usuário.
+Altere as outras funções da `views.py` que o usuário possa editar e excluir somente as notas que pertençam a este usuário.
 
 Em seguida, tente utilizar isso no frontend.
 Veja o tutorial [How To Add Login Authentication to React Applications](https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications)
