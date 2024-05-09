@@ -34,15 +34,8 @@ Bem-vind@ ao curso de Tecnologias Web 2024/1
 - 05/05: Entrega do [Projeto 2](projetos/projeto2.md)
 - 21/05: Entrega do [Projeto 3](projetos/projeto3.md)
 
-**Lição de Casa**
+## Frameworks CSS
 
-Para usuários do sistema operacional **Windows** :material-microsoft-windows: será necessário realizar a tarefa abaixo.
+Tutorial para utilizar Bootstrap no projeto React.
 
-Por conta de um bloqueio da rede do Insper, será necessário que vocês realizem o tutorial abaixo em uma rede que não seja a do Insper.
-
-Peço que realizem esta tarefa até o dia **13/03**.
-
-[Guia de Instalação WSL e Docker para Windows](https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows){:target="_blank"}
-
-
-
+[Acesse aqui!](https://dev.to/rodrigozan/guia-para-instalar-o-bootstrap-em-um-aplicativo-react-36b){:target="_blank"}

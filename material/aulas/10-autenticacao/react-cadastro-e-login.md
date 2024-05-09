@@ -180,8 +180,9 @@ function App() {
     if (localStorage.getItem("token") === null) {
       navigate("/login");
     }
-    
-    carregaNotas();
+    else {
+        carregaNotas();
+    }
   }, []);
 
   // Restante do código
