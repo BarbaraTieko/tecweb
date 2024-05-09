@@ -54,6 +54,21 @@ Agora, toda nota criada deve pertencer a um usuário.
 
         python manage.py migrate
 
+- Caso se depare com a seguinte mensagem:
+
+    ```
+    It is impossible to add a non-nullable field 'user' to note without specifying a default. This is because the database needs something to populate existing rows.
+    Please select a fix:
+    1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+    2) Quit and manually define a default value in models.py.
+    ```
+
+    - Escolha a opção 1 e pressione `Enter`.
+    - Em seguida, informe o id de algum usuário cadastrado no banco de dados.
+    - Caso não saiba, dê uma olhada na tabela `auth_user` no banco de dados.
+    - Caso não tenha nenhum usuário cadastrado, crie um usuário admin com o comando `python manage.py createsuperuser`.
+
+
 ## Passo 3
 
 Na versão deste projeto feito no Handout [08 - Django - REST](08-django-rest.md), ao tentarmos fazer a requisição: `GET /api/notes`, obtemos algo similar a imagem a seguir:
@@ -66,14 +81,14 @@ Agora queremos alterar as views para permitir as ações de editar, listar, edit
 
 Modifique o arquivo `views.py` da seguinte forma:
 
-```python hl_lines="2 7 12"
-from django.shortcuts import render, redirect
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.response import Response
+```python hl_lines="3 4 12"
 from django.http import Http404
+from django.shortcuts import redirect, render
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
 from .models import Note
 from .serializers import NoteSerializer
-from rest_framework.permissions import IsAuthenticated
 
 # SUAS OUTRAS FUNÇÕES CONTINUAM AQUI
 
@@ -221,6 +236,11 @@ def api_user(request):
 ```
 
 Agora crie pelo menos dois usuários através da endpoint criada.
+
+<figure>
+  <img src="../10-autenticacao/criando-users.png" width="100%" style="margin:auto;" alt="Requisição GET para o endpoint"/>
+</figure>
+
 
 Baixe o seguinte arquivo e coloque-o dentro do projeto [:arrow_down: notes.json](notes.json){target="_blank"}. No projeto veja se existe um arquivo chamado `notes.json`. Ele contém alguns dados de anotações que serão inseridos no banco de dados. O arquivo está considerando que o sistema possui dois usuários criados, pois vamos atribuir as anotações a esses usuários.
 

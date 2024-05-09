@@ -82,7 +82,9 @@ nav:
       - "Implementando a Criação de Anotações": aulas/09-react/parte-04-criacao-notas.md
       - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
       - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
-    - "10 - Autenticação Django REST": aulas/10-autenticacao.md
+    - "10 - Autenticação Django REST": 
+      - "Django REST": aulas/10-autenticacao.md
+      - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows

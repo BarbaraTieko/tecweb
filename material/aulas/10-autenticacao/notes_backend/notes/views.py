@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
-from rest_framework.decorators import api_view
+from django.http import Http404
+from django.shortcuts import redirect, render
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from django.http import Http404, HttpResponse
 from .models import Note
 from .serializers import NoteSerializer
 
