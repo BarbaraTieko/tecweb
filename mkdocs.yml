@@ -110,9 +110,10 @@ nav:
     - "Projeto 3": 
       - "Enunciado": projetos/projeto3.md
       - "Teamwork": projetos/teamwork.md
-    
   - "Avaliação do Professor": avaliacao.md
-  - Simulado: simulado/avaliacao-intermediaria.pdf
+  - Simulado:
+    - "Avaliação Intermediária": simulado/avaliacao-intermediaria.pdf
+    - "Avaliação Final": simulado/avaliacao-final.md
   
 markdown_extensions:
   - abbr
