@@ -1,8 +1,11 @@
 # 01 - Get-it
 
 !!! tip "Dica"
-    Crie um repositório Github para este handout, pois o resultado deste handout já faz parte do primeiro projeto da disciplina.
+    Acesse o Github Classroom a seguir para criar o repositório do Projeto, pois o resultado deste handout já faz parte do primeiro projeto da disciplina.
 
+    [Github Classroom - Projeto 01](https://classroom.github.com/a/0phG7ZQC){:target="_blank"}
+    
+    
 ## Parte 1: Criando o servidor
 
 Vamos começar nosso curso com um exemplo de implementação de uma página bem simples. Durante o desenvolvimento discutiremos alguns dos detalhes e conceitos envolvidos. O objetivo deste handout é introduzir alguns conceitos de tecnologias web que serão importantes ao longo do curso a partir de uma abordagem mão na massa.

@@ -55,37 +55,6 @@ Accept-Language: en-US,en;q=0.9,pt;q=0.8
 titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.
 ```
 
-!!! danger "Atenção"
-    Caso o corpo da requisição não apareça, tente acessar o servidor de um navegador com **aba anônima**.
-
-    Caso o problema persista, altere o código do `servidor.py`, adicionando as linhas abaixo:
-
-    ```python hl_lines="5-10"
-    filepath = CUR_DIR / route
-    if filepath.is_file():
-        response = read_file(filepath)
-    elif route == '':
-        if request.split()[0] == 'POST' and len(request.split("\n\n")) == 1 and 'Content-Length:' in request:
-            content_length = int(request.split('Content-Length: ')[1].split('\n')[0])
-            body_start = request.find('\r\n\r\n') + 4
-            body_received = request[body_start:]
-            bytes_to_read = content_length - len(body_received)
-            request += client_connection.recv(bytes_to_read).decode()
-            
-        response = index()
-    else:
-        response = bytes()
-    ```
-
-    Além disso, altere a função `utils.extract_route` da seguinte forma:
-
-    ```python hl_lines="2-3"
-    def extract_route(request):
-        if len(request) == 0:
-            return ""
-        return request.split()[1][1:]
-    ```
-
 Há dois pontos importantes:
 
 1. A primeira linha da requisição está diferente. Existe um `POST` ao invés de `GET`, mas a rota é a mesma (`/`).
@@ -153,7 +122,7 @@ Até o momento o nosso servidor sempre utiliza o cabeçalho fixo com código 200
 !!! example "EXERCÍCIO"
     Implemente a função `#!python build_response` no arquivo `utils.py`. Ele deve receber os seguintes argumentos: `#!python build_response(body='', code=200, reason='OK', headers='')` (talvez você queira ler isso: https://docs.python.org/3/tutorial/controlflow.html#default-argument-values).
 
-    Acesse o link a seguir para ver um exemplo de `response`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses
+    Acesse o link a seguir para ver um exemplo de `response`: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses){target="_blank"}
 
     Lembre-se de testar a sua função com `python test_utils.py`.
 
