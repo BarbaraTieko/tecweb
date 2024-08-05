@@ -8,12 +8,7 @@ def extract_route(request):
 
 
 def read_file(filepath):
-    if filepath.suffix in ['.txt', '.html', '.css', '.js']:
-        mode = 'r'
-    else:
-        mode = 'rb'
-
-    with open(filepath, mode=mode) as f:
+    with open(filepath, mode='rb') as f:
         return f.read()
 
 
