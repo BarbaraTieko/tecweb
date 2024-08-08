@@ -58,17 +58,22 @@ titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pro
 Há dois pontos importantes:
 
 1. A primeira linha da requisição está diferente. Existe um `POST` ao invés de `GET`, mas a rota é a mesma (`/`).
-2. O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho. 
+2. O corpo da requisição (última linha) possui os dados que o usuário digitou no formulário html.
 
-O valor `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` ao fim da reuisição representado os valores digitados pelo usuário nos campos `input`.
-Note que o que vem após `titulo=` é o que o usuário digitou no campo referente ao título. 
+Queremos pegar o corpo da requisição, `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` e extrair o título e os detalhes da anotação. 
+
+Note que o que vem após `titulo=` é o que o usuário digitou no campo referente ao título. Porém o texto está codificado. O texto `Sorvete+de+banana` deveria ser `Sorvete de banana`. 
 
 Além disso, há o símbolo `&` indicando que um outro valor será apresentado em seguido.
 
 Em seguida, nos deparamos com o texto `detalhes=` que representa o texto digitado pelo usuário no campo `input` referente aos detalhes da anotação.
 
+O mesmo ocorre com o campo `detalhes`. O texto `Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.` deveria ser `Coloque uma banana no congelador e espere. Pronto!`.
+
+Para remover esses caracteres especiais, vamos utilizar a função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus).
+
 !!! example "EXERCÍCIO"
-    Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função `#!python urllib.parse.unquote_plus` [(veja a documentação aqui)](https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus)
+    Vamos utilizar o começo da string de requisição para saber o seu tipo (`GET` ou `POST`).
 
     Modifique a sua função `index` no arquivo `views.py` para conter o seguinte conteúdo:
 
@@ -91,6 +96,12 @@ Em seguida, nos deparamos com o texto `detalhes=` que representa o texto digitad
 
         # O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...
     ```
+
+    Você deverá escrever algum código, onde está escrito `# AQUI É COM VOCÊ`.
+
+    Seu objetivo é preencher o dicionário `params` com os valores recebidos do formulário html. 
+
+    Por exemplo, se o corpo da requisição for `titulo=Sorvete+de+banana&detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.`, o dicionário `params` deve ser preenchido com `{'titulo': 'Sorvete de banana', 'detalhes': 'Coloque uma banana no congelador e espere. Pronto! 1+1=2.'}`.
 
 !!! danger "IMPORTANTE"
     Note que a função `index` agora está recebendo o `request` como argumento (`index(request)`).

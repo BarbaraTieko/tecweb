@@ -27,3 +27,4 @@ Bem-vind@ ao curso de Tecnologias Web 2024/2
 **Algumas Datas**
 
 - 09/08: Entrega do [ELI5](entregas/01-ELI5.md)
+- 16/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)

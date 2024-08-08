@@ -3,18 +3,19 @@
 ## Desafio CSS
 
 !!! success "Entrega"
-    :date: 23/02 (sexta-feira)
+    :date: 16/08 (sexta-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Trios, duplas ou individual
 
-    :simple-github: Entrega via GitHub.
+    :simple-github: Entrega via GitHub. 
 
-    :fontawesome-solid-clipboard-question: [Responda o formulário com as informações do repositório](https://forms.gle/bMQjKWyPY4EJ6pB5A){ :target="_blank"}.
 
+    Um integrante do grupo deve criar um repositório no GitHub para efetuar a entrega da atividade.
+
+    **Importante:** Todos os integrantes do grupo devem possuir contribuições no código.
     
-
 ## Objetivo
 
 <figure markdown="span">
