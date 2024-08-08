@@ -16,7 +16,7 @@
         <link rel="prev" href="../parte3/">
       
       
-        <link rel="next" href="../../../auxiliar/venv/">
+        <link rel="next" href="../../02-desafio-css/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -576,6 +576,70 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            02 - Desafio CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -714,6 +778,27 @@
   
   <span class="md-ellipsis">
     01 - ELI5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
   </span>
   
 
@@ -868,15 +953,17 @@
 <p>Há dois pontos importantes:</p>
 <ol>
 <li>A primeira linha da requisição está diferente. Existe um <code>POST</code> ao invés de <code>GET</code>, mas a rota é a mesma (<code>/</code>).</li>
-<li>O corpo da requisição (última linha) parece um dicionário, mas está um pouco estranho. </li>
+<li>O corpo da requisição (última linha) possui os dados que o usuário digitou no formulário html.</li>
 </ol>
-<p>O valor <code>titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.</code> ao fim da reuisição representado os valores digitados pelo usuário nos campos <code>input</code>.
-Note que o que vem após <code>titulo=</code> é o que o usuário digitou no campo referente ao título. </p>
+<p>Queremos pegar o corpo da requisição, <code>titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.</code> e extrair o título e os detalhes da anotação. </p>
+<p>Note que o que vem após <code>titulo=</code> é o que o usuário digitou no campo referente ao título. Porém o texto está codificado. O texto <code>Sorvete+de+banana</code> deveria ser <code>Sorvete de banana</code>. </p>
 <p>Além disso, há o símbolo <code>&amp;</code> indicando que um outro valor será apresentado em seguido.</p>
 <p>Em seguida, nos deparamos com o texto <code>detalhes=</code> que representa o texto digitado pelo usuário no campo <code>input</code> referente aos detalhes da anotação.</p>
+<p>O mesmo ocorre com o campo <code>detalhes</code>. O texto <code>Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.</code> deveria ser <code>Coloque uma banana no congelador e espere. Pronto!</code>.</p>
+<p>Para remover esses caracteres especiais, vamos utilizar a função <code class="language-python highlight"><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote_plus</span></code> <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus">(veja a documentação aqui)</a>.</p>
 <div class="admonition example">
 <p class="admonition-title">EXERCÍCIO</p>
-<p>Vamos utilizar o começo da string de requisição para saber o seu tipo (<code>GET</code> ou <code>POST</code>). Além disso, vamos processar o corpo da requisição para obter as informações recebidas do usuário. Para isso, você vai precisar da função <code class="language-python highlight"><span class="n">urllib</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">unquote_plus</span></code> <a href="https://docs.python.org/3/library/urllib.parse.html#urllib.parse.unquote_plus">(veja a documentação aqui)</a></p>
+<p>Vamos utilizar o começo da string de requisição para saber o seu tipo (<code>GET</code> ou <code>POST</code>).</p>
 <p>Modifique a sua função <code>index</code> no arquivo <code>views.py</code> para conter o seguinte conteúdo:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="hll"><span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
 </span></span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="hll">    <span class="c1"># A string de request sempre começa com o tipo da requisição (ex: GET, POST)</span>
@@ -896,6 +983,9 @@ Note que o que vem após <code>titulo=</code> é o que o usuário digitou no cam
 </span></span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
 </span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="c1"># O RESTO DO CÓDIGO DA FUNÇÃO index CONTINUA DAQUI PARA BAIXO...</span>
 </span></code></pre></div>
+<p>Você deverá escrever algum código, onde está escrito <code># AQUI É COM VOCÊ</code>.</p>
+<p>Seu objetivo é preencher o dicionário <code>params</code> com os valores recebidos do formulário html. </p>
+<p>Por exemplo, se o corpo da requisição for <code>titulo=Sorvete+de+banana&amp;detalhes=Coloque+uma+banana+no+congelador+e+espere.+Pronto%21+1%2B1%3D2.</code>, o dicionário <code>params</code> deve ser preenchido com <code>{'titulo': 'Sorvete de banana', 'detalhes': 'Coloque uma banana no congelador e espere. Pronto! 1+1=2.'}</code>.</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">IMPORTANTE</p>
