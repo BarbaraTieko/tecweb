@@ -3,7 +3,7 @@
 ## Desafio CSS
 
 !!! success "Entrega"
-    :date: 16/08 (sexta-feira)
+    :date: 19/08 (segunda-feira)
     
     :clock1: Commits até as 23:59
 
