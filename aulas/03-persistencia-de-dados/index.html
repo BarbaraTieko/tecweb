@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.2/aulas/03-persistencia-de-dados/">
       
       
+        <link rel="prev" href="../02-desafio-css/">
+      
+      
+        <link rel="next" href="parte1/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>03 - Persistência de Dados - Tecnologias Web - Insper 2024/2</title>
+        <title>Handout - Tecnologias Web - Insper 2024/2</title>
       
     
     
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03 - Persistência de Dados
+              Handout
             
           </span>
         </div>
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -551,6 +557,307 @@
   
   <span class="md-ellipsis">
     Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 - Persistência de dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Persistência de dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#qual-o-problema-de-usar-arquivos-para-armazenar-os-dados-da-nossa-aplicacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Qual o problema de usar arquivos para armazenar os dados da nossa aplicação?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cenario-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário 3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-solucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      A solução
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bancos-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bancos de Dados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próximos passos
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Instalando o SQLite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando a tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Inserindo dados na tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Consultando e selecionando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Atualizando os dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Apagando dados
   </span>
   
 
@@ -854,6 +1161,10 @@
 
 
 <h1 id="03-persistencia-de-dados">03 - Persistência de Dados</h1>
+<div class="admonition danger">
+<p class="admonition-title">Rodando os testes</p>
+<p>Acesse o link a seguir para rodar os testes <a href="https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387">https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387</a></p>
+</div>
 <p>Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.</p>
 <p>Opa! Espere um pouco. Arquivos?!</p>
 <p>É, arquivos. Por quê? Tem algum problema com isso?</p>
