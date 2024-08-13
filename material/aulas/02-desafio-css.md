@@ -11,10 +11,11 @@
 
     :simple-github: Entrega via GitHub. 
 
-
     Um integrante do grupo deve criar um repositório no GitHub para efetuar a entrega da atividade.
 
     **Importante:** Todos os integrantes do grupo devem possuir contribuições no código.
+
+    :fontawesome-solid-clipboard-question: [Responda o formulário com as informações do repositório](https://forms.gle/ydGYrVF2AFp8vGqJ9){ :target="_blank"}.
     
 ## Objetivo
 
@@ -93,7 +94,7 @@ Baixe os arquivos base no botão abaixo.
 - A sua página deve **obrigatoriamente** estar disponível no GitHub pages seguindo [:point_right: estes passos](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site){:target="_blank"}
 
 - Será considerado o último commit enviado antes do prazo. 
-- O link do repositório deve ser informado em [ :point_right: Formulário](https://forms.gle/bMQjKWyPY4EJ6pB5A){ :target="_blank"}.
+- O link do repositório deve ser informado em [ :point_right: Formulário](https://forms.gle/ydGYrVF2AFp8vGqJ9){ :target="_blank"}.
 
 
 ## Rubrica
