@@ -23,6 +23,7 @@ def load_template(path):
         return f.read()
 
 
+
 def build_response(body='', code=200, reason='OK', headers=''):
     if headers:
         headers = '\n' + headers

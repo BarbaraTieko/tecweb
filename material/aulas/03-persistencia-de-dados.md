@@ -1,5 +1,8 @@
 # 03 - Persistência de Dados
 
+!!! danger "Rodando os testes"
+    Acesse o link a seguir para rodar os testes [https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387](https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387)
+
 Depois das duas últimas aulas, a nossa página já está minimamente utilizável. O usuário consegue fazer uma requisição, o servidor carrega ou salva os novos dados em arquivos e depois devolve a resposta para o navegador.
 
 Opa! Espere um pouco. Arquivos?!
