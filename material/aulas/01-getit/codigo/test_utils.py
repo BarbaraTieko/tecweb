@@ -16,6 +16,11 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/a
 Accept-Encoding: gzip, deflate
 Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7'''
 
+def error_message(msg):
+    marker = '\033[91m'
+    end_marker = '\033[0m'
+    return f'\n{marker}{msg}{end_marker}\n'
+
 
 def target_function(function_name):
     def decorate(clazz):
@@ -160,10 +165,7 @@ class LoadTemplateTestCase(unittest.TestCase):
         self.assert_template_loaded('components/component.html', expected)
 
 
-def error_message(msg):
-    marker = '\033[91m'
-    end_marker = '\033[0m'
-    return f'\n{marker}{msg}{end_marker}\n'
+
 
 
 @target_function('build_response')
