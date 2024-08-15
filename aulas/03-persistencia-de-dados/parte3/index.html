@@ -1013,13 +1013,11 @@
 <p>Para inserir os dados no banco de dados, será necessário construir um comando SQL similar ao comando a seguir:</p>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">dados_pessoais</span><span class="w"> </span><span class="p">(</span><span class="n">nome_da_rua</span><span class="p">,</span><span class="n">cpf</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;R. Quatá&#39;</span><span class="p">,</span><span class="s1">&#39;123.456.789-00&#39;</span><span class="p">);</span>
 </span></code></pre></div>
-<p>Note que os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo <code>Note</code> recebido como argumento.</p>
-<p><strong>Importante!</strong> Antes de rodar os testes apague o arquivo <code>banco-teste.db</code>, caso exista.</p>
-<p>Depois de implementar o método <code class="language-python highlight"><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">note</span><span class="p">)</span></code>, teste-o com o arquivo <code>test_database.py</code>. Se tudo der certo, nenhuma mensagem de erro começando com <code>EXERCÍCIO03</code> deve aparecer.</p>
 <div class="admonition info">
 <p class="admonition-title">Curiosidade</p>
 <p>Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.</p>
 </div>
+<p>Os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo <code>Note</code> recebido como argumento.</p>
 <p>Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método <code>execute</code> do atributo <code>conn</code>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Importante 1</p>
@@ -1032,7 +1030,7 @@
 </div>
 <div class="admonition success">
 <p class="admonition-title">Passando nos testes</p>
-<p>Se tudo der certo, nenhuma mensagem de erro começando com <code>EXERCÍCIO03</code> deve aparecer.</p>
+<p>Rode os testes e se tudo estiver correto, o teste com o nome <code>exercicio_03_add_rows</code> deverá passar com sucesso.</p>
 </div>
 </div>
 <p>Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo <code>exemplo_de_uso.py</code>, execute o arquivo e depois visualize o resultado no DB Browser clicando na aba <code>Browse Data</code> (observação: você vai precisar importar a classe <code class="language-python highlight"><span class="n">Note</span></code> nesse arquivo):</p>
