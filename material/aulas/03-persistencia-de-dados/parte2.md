@@ -38,11 +38,17 @@ Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instan
 - Clique na questão.
 - Em seguida, clique em `Open workspace` que abrirá uma nova aba com o VS Code online.
 
+<figure markdown="span">
+    ![VS Code](img/vscode.png){ width="100%" }
+    <figcaption>VS Code</figcaption>
+</figure>
+
+
 
 !!! example "Exercício 01"
 
-    1. **Criando arquivo:** Crie um arquivo chamado `database.py`. 
-    1. **Importe:** Importe o pacote `#!python sqlite3`.
+    1. **Arquivo database.py** Encontre um arquivo chamado `database.py`. 
+    1. **Importe:** Nesse arquivo, importe o pacote `#!python sqlite3`.
     1. **Criando a Classe** Nesse arquivo, crie uma classe chamada `#!python Database`. 
         
         1. O construtor da classe receberá o nome do banco de dados. 
@@ -53,21 +59,21 @@ Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instan
         Se não se lembrar a sintaxe de classes em Python, procure no Google ou acesse a :point_right:  [documentação](https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables){: target="_blank"}. 
 
 
-    1. **Testando a solução:** Para testar o seu código, faça o download <a href="../test_database.py" download="test_database.py">deste arquivo :arrow_down:</a> e salve na mesma pasta do arquivo `database.py`. 
-        - Executar o comando abaixo no terminal para rodar todos os testes. 
-        === "Windows :material-microsoft-windows:/Linux :simple-linux:"
-            ```bash
-            python test_database.py
-            ```
-        === "MacOS :material-apple:"
-            ```bash
-            python3 test_database.py
-            ```
+    1. **Testando a solução:** Para testar o seu código, procure o ícone a seguir na barra lateral do VS Code.
 
-    !!! success "Exercício passando com sucesso" 
-        Caso nenhuma mensagem de erro começando com `EXERCÍCIO01` apareça, sua solução está passando com sucesso nos testes.
-        
-        As outras mensagens são referentes aos próximos exercícios.
+        <figure markdown="span">
+            ![Testes](img/vscode-test.png){ width="40%" }
+            <figcaption>Testes</figcaption>
+        </figure>
+
+    1. Clique no botão no `Run Test` para rodar os testes. 
+
+        Se tudo der certo, o ícone ficará verde, como na imagem abaixo.
+
+        <figure markdown="span">
+            ![Testes passando](img/run_tests.png){ width="40%" }
+            <figcaption>Testes passando</figcaption>
+        </figure>
 
 ## Criando a tabela
 
@@ -119,7 +125,7 @@ Caso queira, procure um exemplo do uso do método `#!python execute` no link a s
 
 
 !!! example "Exercício 02"
-    Modifique o código do exercício anterior para que ele crie uma tabela no construtor da classe `#!python Database`. 
+    Modifique o código do arquivo `database.py` para que ele crie uma tabela no construtor da classe `#!python Database`. 
     
     Altere o exemplo abaixo, para criar uma tabela que deve se chamar `note` e deve ter as colunas `id` (chave primária do tipo inteiro), `title` (do tipo string), `content` (do tipo string e não pode ser vazia).
 
@@ -134,12 +140,9 @@ Caso queira, procure um exemplo do uso do método `#!python execute` no link a s
 
     Veja um exemplo de como fazer isso: [Documentação SQLite3](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}
 
-    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
+    Rode os testes e se tudo estiver correto, o teste com o nome `exercicio_02_create_table_on_init` deverá passar com sucesso.
 
-    Como no exercício anterior, rode os testes no arquivo `test_database.py` para verificar se a sua implementação está correta. Se tudo der certo, nenhuma mesangem de erro começando com `EXERCÍCIO02` deve aparecer.
-
-
-### Validando o resultado com o DB Browser for SQLite
+### Validando o resultado
 
 Crie um arquivo chamado `exemplo_de_uso.py` na mesma pasta com o seguinte conteúdo:
 
@@ -151,13 +154,14 @@ db = Database('banco')
 
 Após executar este programa, um arquivo chamado `banco.db` deve ter aparecido na sua pasta. Esse arquivo contém todo o seu banco de dados. Na maioria dos bancos de dados os arquivos não ficam tão acessíveis, mas como o SQLite é uma opção mais simples e direta, se quiser apagar o banco, basta apagar esse arquivo (e na verdade é o que fazemos no `test_database.py`).
 
-#### Visualizando o banco de dados (Opção 1 - DB Brower for SQLite)
-Abra o arquivo `banco.db` no DB Browser for SQLite (clique no botão `Open Database` e selecione o arquivo). Você deve ver uma tela parecida com esta:
+#### Visualizando o banco de dados 
 
-![](tela1.png)
+Baixe a extensão SQLite Viewer para o VS Code.
 
-<!-- #### Visualizando o banco de dados (Opção 2 - Extensão VS Code SQLite3 Viewer) -->
+Clique no arquivo `banco.db` e poderemos visualizar o banco de dados.
+Você deve ver uma tela parecida com esta:
 
+![](img/sqlite3viewer.png)
 
 Veja que a tabela foi criada e as colunas estão listadas corretamente.
 

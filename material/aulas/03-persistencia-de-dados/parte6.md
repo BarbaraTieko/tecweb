@@ -17,9 +17,23 @@ Note que depois dessa operação não vai mais existir uma linha com `identifica
 !!! example "Exercício 06"
     Implemente o método `#!python delete(self, note_id)`, que recebe o valor de um `id` e apaga essa entrada do banco de dados. Obs: lembre-se de chamar o método `#!python commit` depois do `#!python execute`.
 
-    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
+    Ao finalizar, rode os testes e se tudo estiver certo, o teste com o nome `exercicio_06_delete_row` deverá passar com sucesso.
 
-    Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO06` deve aparecer.
+!!! example "Exercício 07"
+    Salve os arquivos `database.py` e `exemplo_de_uso.py` no repositório do Projeto 1A e faça um commit.
+
+    <figure>
+        ![Salvando arquivo](img/database_save.png){ width="30%" }
+        <figcaption>Salvando arquivo</figcaption>
+    </figure>
+
+    Além disso, volte para a página do Prairie Learn e clique em `Save and Grade`.
+
+    <figure>
+        ![Save and Grade](img/save-and-grade.png){ width="50%" }
+        <figcaption>Save and Grade</figcaption>
+    </figure>
+
 
 <!-- !!! example "Exercício 07"
     Depois que estiver com todos os testes passando, altere o código construído no [Handout 1](../01-getit.md) para armazenar as notas no banco de dados. -->

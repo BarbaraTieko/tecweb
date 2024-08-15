@@ -31,8 +31,7 @@ A condição do `#!sql WHERE` pode ser bastante complexa. Você pode, por exempl
 
     Novamente você terá que usar o método `execute`. Não se esqueça de chamar o método `commit`, assim como feito no exercício da [inserção de dados](parte3.md).
 
-    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
-    Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO05` deve aparecer.
+    Ao finalizar, rode os testes e se tudo estiver certo, o teste com o nome `exercicio_05_update_row` deverá passar com sucesso.
 
 
 Você pode modificar o arquivo `exemplo_de_uso.py` para atualizar alguma das entradas utilizando o seu novo método.

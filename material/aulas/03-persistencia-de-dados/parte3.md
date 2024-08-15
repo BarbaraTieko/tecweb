@@ -43,14 +43,10 @@ INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00
     INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00');
     ```
 
-    Note que os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo `Note` recebido como argumento.
-
-    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
-
-    Depois de implementar o método `#!python add(self, note)`, teste-o com o arquivo `test_database.py`. Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO03` deve aparecer.
-
     !!! info "Curiosidade"
         Note que a coluna definida como chave primária não está entre os valores. O próprio SQLite atribui o valor da coluna como o próximo número disponível.
+
+    Os valores a serem inseridos no banco de dados devem ser obtidos através do objeto do tipo `Note` recebido como argumento.
 
     Para executar os comandos no banco de dados através do Python, utilizaremos novamente o método `execute` do atributo `conn`.
 
@@ -63,7 +59,7 @@ INSERT INTO dados_pessoais (nome_da_rua,cpf) VALUES ('R. Quatá','123.456.789-00
         Procure um exemplo com `INSERT` na documentação a seguir [:point_right: Documentação](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}.
 
     !!! success "Passando nos testes"
-        Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO03` deve aparecer.
+        Rode os testes e se tudo estiver correto, o teste com o nome `exercicio_03_add_rows` deverá passar com sucesso.
 
 Para testar as novas funcionalidades no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py`, execute o arquivo e depois visualize o resultado no DB Browser clicando na aba `Browse Data` (observação: você vai precisar importar a classe `#!python Note` nesse arquivo):
 

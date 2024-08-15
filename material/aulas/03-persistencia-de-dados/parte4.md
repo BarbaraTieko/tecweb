@@ -37,8 +37,7 @@ for linha in cursor:
         cpf = linha[2]
     ```
 
-    **Importante!** Antes de rodar os testes apague o arquivo `banco-teste.db`, caso exista.
-    Se tudo der certo, nenhuma mensagem de erro começando com `EXERCÍCIO04` deve aparecer.
+    Ao finalizar, rode os testes e se tudo estiver certo, o teste com o nome `exercicio_04_select_rows` deverá passar com sucesso.
     
 
 Para testar a nova funcionalidade no banco de dados, adicione as linhas a seguir no arquivo `exemplo_de_uso.py`:
