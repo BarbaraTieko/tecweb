@@ -15,10 +15,32 @@ conexao = sqlite3.connect(NOME_DO_ARQUIVO_DO_BANCO)
 
 Para mais detalhes, acesse :point_right: [Documentação SQLite3](https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial){: target="_blank"}.
 
-!!! info "Repositório Github"
-    Para esta atividade, continue trabalhando no repositório Github utilizado no handout 01.
+## Preparação para o exercício
+
+Neste handout vamos realizar a implementação do código utilizando a ferramenta Prairie Learn. Nela será possível testar o código utilizando uma versão do VS Code online.
+
+Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387](https://us.prairielearn.com/pl/course_instance/157660/assessment/2438387){: target="_blank"}
+
+<figure markdown="span">
+    ![Login no Prairie Learn](img/prairielearn-login.png){ width="30%" }
+    <figcaption>Login no Prairie Learn</figcaption>
+</figure>
+
+- Escolha a opção de logar com uma conta Microsft.
+- Faça o login utilizando seu email e senha do Insper.
+
+<figure markdown="span">
+    ![Login no Prairie Learn](img/handout03.png){ width="100%" }
+    <figcaption>Exercício</figcaption>
+</figure>
+
+- Clique no exercício `Handout 03 - Persistência de dados`
+- Clique na questão.
+- Em seguida, clique em `Open workspace` que abrirá uma nova aba com o VS Code online.
+
 
 !!! example "Exercício 01"
+
     1. **Criando arquivo:** Crie um arquivo chamado `database.py`. 
     1. **Importe:** Importe o pacote `#!python sqlite3`.
     1. **Criando a Classe** Nesse arquivo, crie uma classe chamada `#!python Database`. 
