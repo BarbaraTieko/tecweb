@@ -69,26 +69,6 @@ Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instan
         
         As outras mensagens são referentes aos próximos exercícios.
 
-!!! danger "Erro de permissão"
-    Caso se depara com o seguinte erro:
-    ```bash
-    PermissionError: [WinError 32] O arquivo já está sendo usado por outro processo
-    ```
-
-    Abra o arquivo `test_database.py` e comente as linhas 42 a 52:
-    ```python hl_lines="4-7"
-    class DatabaseTestCase(unittest.TestCase):
-    def setUp(self):
-        db_file = Path.cwd() / DB_FILENAME
-        try:
-            db_file.unlink()  
-        except FileNotFoundError:
-            pass
-    ```
-
-    Antes de rodar os testes apague o arquivo `banco-teste.db` que foi criado na pasta.
-
-
 ## Criando a tabela
 
 Para o nosso projeto vamos precisar de apenas uma tabela. Essa tabela vai representar as anotações. 
