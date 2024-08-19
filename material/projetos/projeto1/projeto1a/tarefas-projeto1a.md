@@ -50,8 +50,7 @@ Permitir que o usuário apague uma anotação;
 
 - Adicione um botão/link no `card` de cada nota existente para excluir esta nota.
 - Um botão/link geram uma requisição quando o usuário clica nele. Quando adicinar um botão/link faça um teste para ver a requisicão que é gerada.
-- O botão/link deve ter o atributo `name` com o valor `delete_button`. Caso esta propriedade não seja utilizada, o teste de apagar anotações não passará com sucesso.
-- **Dica:** Trabalhar com link (tag <a>) pode ser mais fácil do que trabalhar. Pesquise sobre a tag `#!html <a>`.
+- **Dica:** Trabalhar com link (elemento html <a\>) pode ser mais fácil do que trabalhar com botões (elemento html <\button>). Pesquise sobre a tag `#!html <a>`.
 - Você pode utilizar o método **GET** ou **POST** para esta tarefa.
     - **GET:** Caso opte pelo método **GET** a requisição deve seguir o seguinte formato:
         ```
@@ -83,7 +82,6 @@ Permitir a edição de anotações existentes;
         ```
         GET /update/<NOTA_ID> HTTP/1.1
         ```
-- O botão/link deve ter o atributo `name` com o valor `edit_button`. Caso esta propriedade não seja utilizada, o teste de editar anotações não passará com sucesso.
 - A página de edição deve apresentar um formulário com o `título` e `conteúdo` já preenchidos.
 - Você precisará de um método novo no arquivo `database.py` que recebe como argumento o `id` de uma anotação e retorna esta anotação no formato de um objeto do tipo `Note`. 
 - Esta página deve apresentar dois botões: `Salvar` e `Cancelar`. Caso os nomes sejam diferentes o teste de editar anotações não passará com sucesso.

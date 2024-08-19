@@ -1,17 +1,13 @@
 # Projeto 1: Parte A
 
 !!! success "Entrega"
-    :date: ~~03/03 (domingo)~~
-    
-    :date: ~~05/03 (terça-feira)~~
-
-    :date: 07/03 (quinta-feira)
+    :date: 27/08 (terça-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/6BRGExNc){: target="_blank"}.
+    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/0phG7ZQC){: target="_blank"}.
  
 ## Objetivos :octicons-goal-16:
 
@@ -26,15 +22,6 @@ Durante o primeiro handout nós desenvolvemos o [Get-it](../../aulas/01-getit.md
 
 A rubrica a seguir será utilizada na correção do Projeto 1A:
 
-<!-- | Conceito | Descrição |
-| :------: | :-------- |
-|    I     | Não entregou ou o código não executa |
-|    D     | Não efetuou as configuraçoes do repositório ou Entregou apenas o resultado do handout 01 funcionando e nada mais |
-|    C     | Entregou o handout 01 e 1 das 4 tarefas funcionando |
-|    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
-|    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |
-|    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
-|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. (**Obs.:** Deve ter implementado a etapa do Desafio presente no final do Handout 01)| -->
 | Conceito | Descrição |
 | :------: | :-------- |
 |    I     | Não entregou ou o código não executa |
@@ -43,7 +30,7 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
 |    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
 |    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |
 |    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
-|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. (**Obs.:** Deve ter implementado a etapa do Desafio presente no final do Handout 01)|
+|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. |
 
 
 !!! danger "Conceito A+"
@@ -57,11 +44,6 @@ Este projeto possui correção automática, desta forma, será necessário confi
 
 Antes de iniciar o projeto, você deve configurar o repositório do projeto. Para isso, siga os passos a seguir: 
 
-1. Acesse o link para o [ :point_right: GitHub Classroom](https://classroom.github.com/a/6BRGExNc){: target="_blank"}.
-2. ~~[:point_right: Configurando o WebHook](projeto1a/configurando-webhook.md).~~ (Não é necessário seguir esta etapa.)
-3. [:point_right: Organização do Repositório](projeto1a/organizacao-repositorio.md).
-
-    
 ## Detalhes das Tarefas :material-magnify-plus-outline:
 
-1. Depois das configurações iniciais, agora podemos trabalhas nas tarefas do Projeto 1A. [:point_right: Clique aqui](projeto1a/tarefas-projeto1a.md) para ver os detalhes das tarefas.
+1. Veja mais descrições das tarefas que devem ser entregues no projeto [:point_right: Clique aqui](projeto1a/tarefas-projeto1a.md) para ver os detalhes das tarefas.

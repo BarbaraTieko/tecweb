@@ -29,3 +29,4 @@ Bem-vind@ ao curso de Tecnologias Web 2024/2
 - 09/08: Entrega do [ELI5](entregas/01-ELI5.md)
 - ~~16/08: Entrega do [Desafio CSS]~~
 - 19/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
+- 27/08: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
