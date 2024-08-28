@@ -20,7 +20,7 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando o 
 !!! question choice "Configuração Inicial"
     Antes de começar, vamos preparar o repositório do Projeto 1B.
     
-    1. Acesso o link [Github Classroom](https://classroom.github.com/a/WqLD3zMW){target=_blank} para criar o repositório do **Projeto 1B**.
+    1. Acesso o link [Github Classroom](https://classroom.github.com/a/q1MxyDlK){target=_blank} para criar o repositório do **Projeto 1B**.
     2. Clone o repositório em seu computador.
     3. Crie um arquivo `.gitignore` com o conteúdo a seguir:
         ```
@@ -41,6 +41,7 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando o 
         tests/report/
         .DS_Store
         ```
+        Caso não saiba para que serve o arquivo `.gitignore`, faça uma pesquisa no Google.
     4. Ao longo do handout, trabalhe dentro deste repositório.
     
     - [X] **FINALIZEI** as etapas listadas acima :thumbsup:
