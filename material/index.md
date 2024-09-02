@@ -30,3 +30,4 @@ Bem-vind@ ao curso de Tecnologias Web 2024/2
 - ~~16/08: Entrega do [Desafio CSS]~~
 - 19/08: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
 - 27/08: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
+- 17/09: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
