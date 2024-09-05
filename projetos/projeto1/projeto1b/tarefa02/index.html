@@ -1057,11 +1057,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../aulas/05-bd/windows_docker_install/" class="md-nav__link">
+      <a href="../../../../aulas/05-bd/guia-wsl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Guia de Instalação WSL e Docker para Windows (v2)
+    Guia de Instalação WSL e Docker para Windows
   </span>
   
 
@@ -1685,9 +1685,10 @@
 </figure>
 <h2 id="observacoes">Observações</h2>
 <ul>
-<li>Na edição da anotação, não é necessário implementar a opção de editar uma <code>tag</code>.</li>
 <li>Na tela de listagem de anotações por <code>tag</code>, não é necessário fornecer as opções de deletar ou editar. Basta mostar as anotações.</li>
-<li>Caso não utilize a <strong>relação Many-to-one</strong> descrita abaixo para a implementação desta etapa, será descontado meio conceito do projeto;</li>
+<li>Caso não utilize a <strong>relação Many-to-one</strong> descrita abaixo para a implementação desta etapa, a solução não será considerada válida.</li>
+<li>Não devem existir tags duplicadas no banco de dados.</li>
+<li>O usuário pode criar anotações sem tags. </li>
 </ul>
 <h1 id="relacao-many-to-one">Relação Many-to-One</h1>
 <p>Para implementar o sistema de tags para as anotações será necessário utilizar a relação de Um para muitos do banco de dados.</p>
