@@ -34,10 +34,10 @@ Ao clicar na tag `comida` na listagem de tags, o usuário é levado a outra tela
 
 ## Observações
 
-- Na edição da anotação, não é necessário implementar a opção de editar uma `tag`.
 - Na tela de listagem de anotações por `tag`, não é necessário fornecer as opções de deletar ou editar. Basta mostar as anotações.
-- Caso não utilize a **relação Many-to-one** descrita abaixo para a implementação desta etapa, será descontado meio conceito do projeto;
-
+- Caso não utilize a **relação Many-to-one** descrita abaixo para a implementação desta etapa, a solução não será considerada válida.
+- Não devem existir tags duplicadas no banco de dados.
+- O usuário pode criar anotações sem tags. 
 
 # Relação Many-to-One
 
@@ -53,7 +53,6 @@ Agora, precisamos armazenar no banco de dados as informações referentes a Tags
 
 !!! tip "Não se preocupe"
     Caso tudo isso pareça muito complicado. Não se preocupe. Vocês se aprofundarão no conteúdo de Banco de Dados Relacionais na Disciplina de Mega Dados.
-
 
 Ao criar uma tabela nova para armazenar as informações de tags, nosso banco de dados ficará da seguinte forma:
 
