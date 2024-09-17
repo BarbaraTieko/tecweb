@@ -70,6 +70,8 @@ nav:
       - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
       # - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
     - "06 - Deploy": aulas/06-deploy.md
+    - "07 - Javascript":
+      - "Handout": aulas/07-javascript.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
