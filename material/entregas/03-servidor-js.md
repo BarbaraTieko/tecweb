@@ -4,7 +4,7 @@
 
 !!! success "Entrega"
 
-    :date:  a definir
+    :date:  07/10 (segunda-feira)
     
     :material-account-group: Individual
 
