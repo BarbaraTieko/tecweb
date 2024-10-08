@@ -1,8 +1,8 @@
 # Django REST Framework
 
-Já conversamos um pouco sobre REST na introdução da aula, mas para se aprofundar mais você pode encontrar [excelentes documentações na internet](https://restfulapi.net/).
+Já conversamos um pouco sobre REST na introdução da aula, mas para se aprofundar mais você pode encontrar [excelentes documentações na internet](https://restfulapi.net/){:target="_blank"}.
 
-O objetivo deste handout é disponibilizarmos uma API REST a partir do resultado do nosso Projeto 1B utilizando o [Django REST Framework (DRF)](https://www.django-rest-framework.org/). Vamos começar com as instalações.
+O objetivo deste handout é disponibilizarmos uma API REST a partir do resultado do nosso Projeto 1B utilizando o [Django REST Framework (DRF)](https://www.django-rest-framework.org/){:target="_blank"}. Vamos começar com as instalações.
 
 !!! danger "IMPORTANTE"
     Antes de começar o handout, crie uma branch nova no repositório github do Projeto 1B para a realização deste handout. 
@@ -177,4 +177,4 @@ Digite a sua URL e clique em "GET":
 
 ![](postman2.png)
 
-Os dados devem ser apresentados no quadro inferior. Você pode fazer requisições POST, salvar requisições para automatizar ou simplificar testes, entre muitas outras coisas. O nosso objetivo neste handout não é entrar nesses detalhes, mas recomendo que você [aprenda a utilizar esta ferramenta](https://learning.postman.com/). Ela será uma adição valiosa ao seu kit de ferramentas de desenvolvimento.
+Os dados devem ser apresentados no quadro inferior. Você pode fazer requisições POST, salvar requisições para automatizar ou simplificar testes, entre muitas outras coisas. O nosso objetivo neste handout não é entrar nesses detalhes, mas recomendo que você [aprenda a utilizar esta ferramenta](https://learning.postman.com/){:target="_blank"}. Ela será uma adição valiosa ao seu kit de ferramentas de desenvolvimento.

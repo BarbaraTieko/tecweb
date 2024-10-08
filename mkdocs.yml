@@ -72,6 +72,9 @@ nav:
     - "06 - Deploy": aulas/06-deploy.md
     - "07 - Javascript":
       - "Handout": aulas/07-javascript.md
+    - "08 - Django REST":
+        - "Slides": aulas/08-django-rest/Aula18.pdf
+        - "Handout": aulas/08-django-rest.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
