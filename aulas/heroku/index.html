@@ -10,28 +10,28 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.2/notas/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.2/aulas/heroku/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../../auxiliar/venv/">
       
       
-        <link rel="next" href="../aulas/01-getit/Aula01.pdf">
+        <link rel="next" href="../../entregas/01-ELI5/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
-        <title>Cálculo da média - Tecnologias Web - Insper 2024/2</title>
+        <title>Heroku - Tecnologias Web - Insper 2024/2</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -56,18 +56,18 @@
       
     
     
-      <link rel="stylesheet" href="../css/printing.css">
+      <link rel="stylesheet" href="../../css/printing.css">
     
-      <link rel="stylesheet" href="../css/tecweb.css">
+      <link rel="stylesheet" href="../../css/tecweb.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -76,7 +76,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#calculo-da-media" class="md-skip">
+        <a href="#deploy-da-aplicacao" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Tecnologias Web - Insper 2024/2" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/2" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/2" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2024/2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cálculo da média
+              Heroku
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Tecnologias Web - Insper 2024/2" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/2" data-md-component="logo">
+    <a href="../.." title="Tecnologias Web - Insper 2024/2" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2024/2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -250,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -267,30 +267,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Cálculo da média
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,62 +279,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#conversao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conversão
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#atividades" class="md-nav__link">
-    <span class="md-ellipsis">
-      Atividades
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#projetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Projetos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avaliacoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Avaliações
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -436,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/Aula01.pdf" class="md-nav__link">
+      <a href="../01-getit/Aula01.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/" class="md-nav__link">
+      <a href="../01-getit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/parte1/" class="md-nav__link">
+      <a href="../01-getit/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -499,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/parte2/" class="md-nav__link">
+      <a href="../01-getit/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/parte3/" class="md-nav__link">
+      <a href="../01-getit/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/01-getit/parte4/" class="md-nav__link">
+      <a href="../01-getit/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/02-desafio-css/Aula02.pdf" class="md-nav__link">
+      <a href="../02-desafio-css/Aula02.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte1/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte2/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte3/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte4/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -795,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte5/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -816,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/03-persistencia-de-dados/parte6/" class="md-nav__link">
+      <a href="../03-persistencia-de-dados/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/Aula04.pdf" class="md-nav__link">
+      <a href="../04-django/Aula04.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/" class="md-nav__link">
+      <a href="../04-django/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -922,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte1/" class="md-nav__link">
+      <a href="../04-django/parte1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte2/" class="md-nav__link">
+      <a href="../04-django/parte2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -964,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte3/" class="md-nav__link">
+      <a href="../04-django/parte3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -985,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte4/" class="md-nav__link">
+      <a href="../04-django/parte4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1006,7 +930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte5/" class="md-nav__link">
+      <a href="../04-django/parte5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1027,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/04-django/parte6/" class="md-nav__link">
+      <a href="../04-django/parte6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1091,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/05-bd/Aula05.pdf" class="md-nav__link">
+      <a href="../05-bd/Aula05.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/05-bd/" class="md-nav__link">
+      <a href="../05-bd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/05-bd/guia-wsl/" class="md-nav__link">
+      <a href="../05-bd/guia-wsl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/06-deploy/" class="md-nav__link">
+      <a href="../06-deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/07-javascript/" class="md-nav__link">
+      <a href="../07-javascript/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/08-django-rest/Aula18.pdf" class="md-nav__link">
+      <a href="../08-django-rest/Aula18.pdf" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/08-django-rest/" class="md-nav__link">
+      <a href="../08-django-rest/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1367,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/09-react-vite/" class="md-nav__link">
+      <a href="../09-react-vite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1388,7 +1312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/09-react/parte-01-componentes/" class="md-nav__link">
+      <a href="../09-react/parte-01-componentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1409,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/09-react/parte-02-recebendo-dados/" class="md-nav__link">
+      <a href="../09-react/parte-02-recebendo-dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/09-react/parte-03-carregando-estaticos/" class="md-nav__link">
+      <a href="../09-react/parte-03-carregando-estaticos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/09-react/parte-04-criacao-notas/" class="md-nav__link">
+      <a href="../09-react/parte-04-criacao-notas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1484,17 +1408,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1508,7 +1434,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Material Auxiliar
@@ -1522,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../auxiliar/venv/" class="md-nav__link">
+      <a href="../../auxiliar/venv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1561,10 +1487,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../aulas/heroku/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Heroku
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1573,6 +1519,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeiros-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeiros passos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparando o projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparando o projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurando-os-arquivos-estaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando os arquivos estáticos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outras-modificacoes-nas-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outras modificações nas configurações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-o-arquivo-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando o arquivo requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fazendo-o-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fazendo o deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fazendo o deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacoes-com-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicações com Postgres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1627,7 +1677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entregas/01-ELI5/" class="md-nav__link">
+      <a href="../../entregas/01-ELI5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1648,7 +1698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../aulas/02-desafio-css/" class="md-nav__link">
+      <a href="../02-desafio-css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1669,7 +1719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../entregas/03-servidor-js/" class="md-nav__link">
+      <a href="../../entregas/03-servidor-js/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1767,7 +1817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1a/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1788,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1b/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1b/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1b/tarefa01/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1b/tarefa01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1b/tarefa02/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1b/tarefa02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1915,7 +1965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1b/tarefa03/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1b/tarefa03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1936,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../projetos/projeto1/projeto1b/tarefa04/" class="md-nav__link">
+      <a href="../../projetos/projeto1/projeto1b/tarefa04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2007,7 +2057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simulado/ai/" class="md-nav__link">
+      <a href="../../simulado/ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2055,36 +2105,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conversao" class="md-nav__link">
+  <a href="#primeiros-passos" class="md-nav__link">
     <span class="md-ellipsis">
-      Conversão
+      Primeiros passos
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#atividades" class="md-nav__link">
+  <a href="#preparando-o-projeto" class="md-nav__link">
     <span class="md-ellipsis">
-      Atividades
+      Preparando o projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparando o projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurando-os-arquivos-estaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando os arquivos estáticos
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#projetos" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#outras-modificacoes-nas-configuracoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Projetos
+      Outras modificações nas configurações
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#criando-o-arquivo-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando o arquivo requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#avaliacoes" class="md-nav__link">
+  <a href="#fazendo-o-deploy" class="md-nav__link">
     <span class="md-ellipsis">
-      Avaliações
+      Fazendo o deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fazendo o deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aplicacoes-com-postgres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicações com Postgres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
     </span>
   </a>
   
@@ -2105,63 +2203,168 @@
                   
 
 
-<h1 id="calculo-da-media">Cálculo da média</h1>
-<p>A média é composta por 3 partes: <span class="arithmatex">\(Atividades\)</span> (atividades obrigatórias pontuais), <span class="arithmatex">\(Projetos\)</span> e <span class="arithmatex">\(Avaliações\)</span>:</p>
-<div class="arithmatex">\[Média = \frac{10\cdot Atividades + 50\cdot Projetos + 40\cdot Avaliações}{100}\]</div>
-<p>Caso <span class="arithmatex">\(Atividades &lt; 5\)</span>, <span class="arithmatex">\(Projetos &lt; 5\)</span> ou <span class="arithmatex">\(Avaliações &lt; 5\)</span>:</p>
-<div class="arithmatex">\[Média = \min({Atividades, Projetos, Avaliações})\]</div>
-<h2 id="conversao">Conversão</h2>
-<p>Para fins de cálculo a seguinte conversão será utilizada (note a diferença no valor do conceito D):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Conceito</th>
-<th style="text-align: center;">Nota</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">A+</td>
-<td style="text-align: center;">10</td>
-</tr>
-<tr>
-<td style="text-align: center;">A</td>
-<td style="text-align: center;">9</td>
-</tr>
-<tr>
-<td style="text-align: center;">B+</td>
-<td style="text-align: center;">8</td>
-</tr>
-<tr>
-<td style="text-align: center;">B</td>
-<td style="text-align: center;">7</td>
-</tr>
-<tr>
-<td style="text-align: center;">C+</td>
-<td style="text-align: center;">6</td>
-</tr>
-<tr>
-<td style="text-align: center;">C</td>
-<td style="text-align: center;">5</td>
-</tr>
-<tr>
-<td style="text-align: center;">D</td>
-<td style="text-align: center;">3</td>
-</tr>
-<tr>
-<td style="text-align: center;">I</td>
-<td style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-<h2 id="atividades">Atividades</h2>
-<p>As atividades obrigatórias são requisitos para a aprovação. Para uma atividade ser considerada entregue, o aluno deve obter um conceito mínimo de C. Se esse conceito não for obtido (o que inclui o caso de entrega com atraso), o aluno poderá realizar uma nova entrega após o prazo, mas o conceito da atividade fica limitado a C.</p>
-<h2 id="projetos">Projetos</h2>
-<p>Teremos 3 projetos ao longo do semestre. A média de <span class="arithmatex">\(Projetos\)</span> será calculada a partir da seguinte fórmula:</p>
-<div class="arithmatex">\[Projetos = \frac{40\cdot Projeto1 + 30\cdot Projeto2 + 30\cdot Projeto3}{100}\]</div>
-<h2 id="avaliacoes">Avaliações</h2>
-<p>Teremos 2 avaliações ao longo do semestre. A média de avaliações será calculada como:</p>
-<div class="arithmatex">\[Avaliações = \frac{40\cdot AI + 60\cdot AF}{100}\]</div>
+<h1 id="deploy-da-aplicacao">Deploy da Aplicação</h1>
+<p>Até agora você desenvolveu as suas aplicações e testou o servidor localmente. Neste handout vamos aprender como publicar a nossa aplicação para que qualquer pessoa com acesso à internet possa acessá-la. Existem diversas opções de hospedagem disponíveis. Alguns exemplos são a <a href="https://aws.amazon.com/">Amazon AWS</a>, <a href="https://www.digitalocean.com/">DigitalOcean</a>, <a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, <a href="https://www.linode.com/">Linode</a>, ...</p>
+<p>Cada um tem suas vantagens e desvantagens. Em Tecnologias Web nós utilizaremos o <a href="https://www.heroku.com/">Heroku</a> pela facilidade de deploy de aplicações Python e por possuir uma conta gratuita para projetos pequenos. Se você preferir (ou quiser testar) qualquer outra opção, fique à vontade para utilizá-la.</p>
+<h2 id="primeiros-passos">Primeiros passos</h2>
+<p>Para começar o processo de deploy, crie uma conta no <a href="https://www.heroku.com/">Heroku</a>.</p>
+<p>Instale a interface de linha de comando (CLI) do Heroku: <a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install">Heroku CLI</a>.</p>
+<p>Faça o login na sua conta do Heroku pelo terminal com o comando (você será redirecionado para a página do Heroku para completar o login):</p>
+<div class="language-text highlight"><pre><span></span><code>heroku login
+</code></pre></div>
+<p>Agora você pode criar uma aplicação utilizando o comando (a documentação dos comandos está <a href="https://devcenter.heroku.com/articles/heroku-cli-commands">disponível aqui</a>):</p>
+<div class="language-text highlight"><pre><span></span><code>heroku create
+</code></pre></div>
+<p>Esse comando vai criar uma aplicação com nome aleatório e vai imprimir no terminal algo parecido com isso:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Creating app... done, ⬢ still-cove-69163
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>https://still-cove-69163.herokuapp.com/ | https://git.heroku.com/still-cove-69163.git
+</span></code></pre></div>
+<p>No exemplo acima, a aplicação se chama <code>still-cove-69163</code>. Guarde o nome da sua aplicação.</p>
+<details class="info">
+<summary>Criando uma aplicação com nome específico</summary>
+<p>Você pode escolher o nome da sua aplicação com o comando <code>heroku create nome-da-aplicacao</code>, mas ele precisa ser único <strong>em todo o Heroku</strong>, ou seja, ninguém pode ter criado um projeto com o mesmo nome.</p>
+</details>
+<p>Entre na pasta do seu projeto pelo terminal.</p>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Seu projeto deve estar no git. Se não estiver, crie um repositório antes de seguir para os próximos passos deste handout.</p>
+<p>Quando for criar o repositório, adicione um arquivo chamado <code>.gitignore</code> com o seguinte conteúdo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>env/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>*.egg-info
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>*.pot
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>*.py[co]
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>.tox/
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>__pycache__
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>MANIFEST
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>dist/
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>docs/_build/
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>docs/locale/
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>node_modules/
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>tests/coverage_html/
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>tests/.coverage
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>build/
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>tests/report/
+</span></code></pre></div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Importante 2</p>
+<p>O projeto Django deve estar na raiz do repositório github.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; REPOSITÓRIO GIT
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &gt; getit
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &gt; notes
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    manage.py
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    Procfile
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    requirements.txt
+</span></code></pre></div></p>
+</div>
+<p>O deploy da aplicação é iniciado automaticamente a partir de atualizações em um repositório git do Heroku. Para configurar esse repositório no seu projeto, utilize o comando (<strong>importante 1:</strong> execute este comando na pasta raiz do seu projeto; <strong>importante 2:</strong> troque o <code>still-cove-69163</code> pelo nome do seu app gerado pelo Heroku):</p>
+<div class="language-text highlight"><pre><span></span><code>heroku git:remote -a still-cove-69163
+</code></pre></div>
+<p>Para confirmar se está tudo certo, utilize o comando:</p>
+<div class="language-text highlight"><pre><span></span><code>git remote -v
+</code></pre></div>
+<p>Ele deve listar (além de outros) os seguintes repositórios (claro, com o nome do seu app):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>heroku  https://git.heroku.com/still-cove-69163.git (fetch)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>heroku  https://git.heroku.com/still-cove-69163.git (push)
+</span></code></pre></div>
+<h2 id="preparando-o-projeto">Preparando o projeto</h2>
+<p>Até o momento, nós utilizamos o <code>python manage.py runserver</code> para executar o nosso servidor localmente. Esse comando é apropriado apenas para testes no ambiente de desenvolvimento. Ele não é otimizado para uma aplicação real. Para isso precisamos de um servidor de <strong>Web Server Gateway Interface (WSGI)</strong>, que basicamente é um intermediário entre as requisições que chegam no servidor e o código Python. No nosso projeto nós utilizaremos o <a href="https://gunicorn.org/">Gunicorn (Green Unicorn)</a>. Você pode instalá-lo com (<strong>importante:</strong> lembre-se de ativar o ambiente virtual):</p>
+<div class="language-text highlight"><pre><span></span><code>pip install gunicorn
+</code></pre></div>
+<p>Para testar sua aplicação com o Gunicorn, você pode executar o comando:</p>
+<div class="language-text highlight"><pre><span></span><code>gunicorn getit.wsgi
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">O arquivo <code>wsgi.py</code></p>
+<p>O comando acima executou o Gunicorn com o arquivo de configuração <code>getit/wsgi.py</code>. Normalmente não é necessário alterar esse arquivo, então não vamos entrar em detalhes. O que você precisa saber é que todo projeto Django possui um arquivo <code>wsgi.py</code> dentro da pasta do projeto.</p>
+</div>
+<p>Agora vamos definir o arquivo de configuração do Heroku. Crie um arquivo chamado <code>Procfile</code> (o nome do arquivo não deve ter extensão nenhuma - cuidado se for criar o arquivo em algum editor de texto, pois alguns colocam o <code>.txt</code> automaticamente) na raiz do projeto com o seguinte conteúdo:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>release: python manage.py migrate
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>web: gunicorn getit.wsgi
+</span></code></pre></div>
+<p>A primeira linha faz com que o comando de migração do Django seja executado quando o servidor for carregado. A segunda linha especifica como a aplicação deve ser executada.</p>
+<h3 id="configurando-os-arquivos-estaticos">Configurando os arquivos estáticos</h3>
+<p>Praticamente toda aplicação web possui arquivos estáticos. Desde o primeiro servidor que implementamos foi necessário que o servidor fosse capaz de responder com o conteúdo desses arquivos. Entretanto, passar pela camada do Python para devolver um arquivo estático não é uma boa estratégia para uma aplicação no mundo real. Arquivos estáticos podem ser servidos de maneira <strong>muito</strong> mais eficiente. Por esse motivo, o Django serve arquivos estáticos apenas em ambientes de teste/desenvolvimento, mas não em produção.</p>
+<p>Para que a nossa aplicação funcione com todos os arquivos estáticos será necessário adicionarmos mais algumas dependências e alterarmos algumas configurações. Comece instalando o <a href="http://whitenoise.evans.io/en/stable/">WhiteNoise</a>:</p>
+<div class="language-text highlight"><pre><span></span><code>pip install whitenoise
+</code></pre></div>
+<p>O WhiteNoise é responsável por servir arquivos estáticos no Django de forma eficiente. Ele precisa ser adicionado às configurações do Django. Abra o arquivo <code>getit/settings.py</code> e procure pela lista <code>MIDDLEWARE</code> e adicione o seguinte conteúdo logo depois de <code>'django.middleware.security.SecurityMiddleware',</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>&#39;whitenoise.middleware.WhiteNoiseMiddleware&#39;,
+</code></pre></div>
+<p>Nesse mesmo arquivo, procure por <code>STATIC_URL = '/static/'</code> e adicione a seguinte linha logo em seguida:</p>
+<div class="language-text highlight"><pre><span></span><code>STATIC_ROOT = BASE_DIR / &#39;staticfiles&#39;
+</code></pre></div>
+<p>A primeira modificação faz com que o WhiteNoise seja utilizado pelo Django. A constante <code>STATIC_ROOT</code> define onde o Django deve colocar os arquivos estáticos que serão servidos em produção (por isso você não precisou dele até agora).</p>
+<h3 id="outras-modificacoes-nas-configuracoes">Outras modificações nas configurações</h3>
+<p>Aproveite que está com o <code>settings.py</code> aberto e modifique o valor da constante <code>DEBUG</code> para <code>False</code>. Além disso, procure pela lista <code>ALLOWED_HOSTS</code>. Ela deve ser uma lista vazia. Por questões de segurança, o servidor Django aceita apenas requisições vindas de domínios previamente identificados. Para isso, descubra qual é o domínio do seu app Heroku. A URL do app será parecida com essa: <code>https://still-cove-69163.herokuapp.com/</code> (lembrando que <code>still-cove-69163</code> é o nome da minha aplicação, então você terá que trocar o começo pelo nome gerado para a sua aplicação). Adicione o domínio (o que está entre o <code>https://</code> e a última <code>/</code>) na lista <code>ALLOWED_HOSTS</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">ALLOWED_HOSTS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;still-cove-69163.herokuapp.com&#39;</span><span class="p">,</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Note que também adicionamos o <code class="language-python highlight"><span class="s1">&#39;localhost&#39;</span></code> e o <code class="language-python highlight"><span class="s1">&#39;127.0.0.1&#39;</span></code>. Eles serão necessários para você testar a aplicação no seu computador.</p>
+<h3 id="criando-o-arquivo-requirementstxt">Criando o arquivo <code>requirements.txt</code></h3>
+<p>Cada projeto Python possui dependências diferentes. Quando outra pessoa (ou você mesmo em outro computador) vai executar o seu projeto é necessário executar uma série de <code>pip install</code> com cada uma das dependências. Para simplificar esse processo podemos criar o arquivo <code>requirements.txt</code>. Com esse arquivo basta executar <code>pip install -r requirements.txt</code> para instalar todas as dependências do projeto. O Heroku também utiliza esse mesmo arquivo para configurar o seu projeto no servidor deles. O <code>requirements.txt</code> é basicamente um arquivo texto com a lista das dependências. Ele pode ser criado com o comando:</p>
+<div class="language-text highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Importante</p>
+<p>Note que você deverá executar o comando <code>pip install -r requirements.txt</code> com o ambiente virtual ativado. Após rodar o comando verifique o arquivo <code>requirements.txt</code> que foi criado. Este arquivo deve possuir no máximo 10 linhas. Se esse arquivo possuir muito mais linhas é possível que você não rodou com ambiente virtual ativo.</p>
+</div>
+<h2 id="fazendo-o-deploy">Fazendo o deploy</h2>
+<p>Agora estamos prontos para fazer o deploy! Faça um commit com todas essas modificações e depois faça o push com o comando a seguir:</p>
+<div class="language-text highlight"><pre><span></span><code>git push heroku master
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Se o comando acima não funcionar</p>
+<p>Tente rodar o comando:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git push heroku main
+</span></code></pre></div></p>
+</div>
+<p>Esse processo é um pouco demorado, pois o Heroku vai baixar o código da sua aplicação, aplicar as configurações e executar o servidor. Depois disso existem duas possibilidades:</p>
+<ol>
+<li>Você estava usando o SQLite e agora sua aplicação está disponível no Heroku! Basta acessar o endereço do seu app.</li>
+<li>Você estava usando o Postgres e ocorreu um erro parecido com esse:
+  <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>remote: django.db.utils.OperationalError: could not connect to server: Connection refused
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>remote:   Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>remote:   TCP/IP connections on port 5432?
+</span></code></pre></div></li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Aplicações utilizando o SQLite</p>
+<p>Apesar de ser mais fácil utilizar o SQLite, o Heroku pode apagar e subir uma nova instância da máquina que roda o seu servidor a qualquer momento. Quando ele faz isso, o arquivo do banco de dados é recriado e assim os seus dados são perdidos. Por esse motivo, o SQLite não deve ser utilizado em aplicações reais no Heroku.</p>
+</div>
+<h3 id="aplicacoes-com-postgres">Aplicações com Postgres</h3>
+<p>Agora que você fez o primeiro deploy (por mais que tenha ocorrido um erro) o Heroku identificou que você está publicando uma aplicação Django. Assim, ele já disponibiliza uma instância do Postgres para você! Acesse a sua aplicação no <a href="https://dashboard.heroku.com/apps">dashboard do Heroku</a> e o Postgres deve aparecer nos add-ons instalados:</p>
+<p><a class="glightbox" href="../06-deploy/dashboard.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../06-deploy/dashboard.png" /></a></p>
+<p>Uma opção é acessar os dados de configuração desse banco e alterar manualmente o dicionário <code class="language-python highlight"><span class="n">DATABASES</span></code> nas configurações. Entretanto, isso faria com que o seu código parasse de funcionar em desenvolvimento (no seu computador). Por isso, vamos utilizar o <code>dj-database-url</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>pip install dj-database-url
+</code></pre></div>
+<p>Sempre que você adiciona (ou remove) uma dependência é necessário atualizar o <code>requirements.txt</code>:</p>
+<div class="language-text highlight"><pre><span></span><code>pip freeze &gt; requirements.txt
+</code></pre></div>
+<p>Adicione o <code class="language-python highlight"><span class="kn">import</span></code> no <code>getit/settings.py</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">dj_database_url</span>
+</span></code></pre></div>
+<p>Depois substitua o dicionário <code class="language-python highlight"><span class="n">DATABASES</span></code> por (assumindo que você utilizou a configuração do Postgres apresentada no handout anterior - caso contrário, adapte a URL):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="n">dj_database_url</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="n">default</span><span class="o">=</span><span class="s1">&#39;postgresql://localhost/getit?user=getituser&amp;password=getitsenha&#39;</span><span class="p">,</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="n">conn_max_age</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="n">ssl_require</span><span class="o">=</span><span class="ow">not</span> <span class="n">DEBUG</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="p">)</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Faça um novo commit e dê o push em <code>heroku master</code> novamente. Acesse sua aplicação para verificar que está tudo funcionando.</p>
+<p>Parabéns, você acaba de publicar sua aplicação Django no Heroku e já pode compartilhar com todos os amigos e familiares!</p>
+<div style="width:100%;height:0;padding-bottom:74%;position:relative;"><iframe src="https://giphy.com/embed/vmon3eAOp1WfK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+<p><a href="https://giphy.com/gifs/celebration-excited-loki-vmon3eAOp1WfK"></a></p>
+
+<h2 id="referencias">Referências</h2>
+<ul>
+<li>Deploying to Heroku Server | Django (3.0) Crash Course Tutorials (pt 23): https://www.youtube.com/watch?v=kBwhtEIXGII</li>
+<li>Deploy a Django App to Heroku: https://www.youtube.com/watch?v=GMbVzl_aLxM</li>
+<li>Heroku Postgres - connecting with Django: https://devcenter.heroku.com/articles/heroku-postgresql#connecting-with-django</li>
+<li>Heroku - Django migrations: https://help.heroku.com/GDQ74SU2/django-migrations</li>
+<li>Heroku - Working with Django: https://devcenter.heroku.com/categories/working-with-django</li>
+</ul>
 
 
 
@@ -2208,7 +2411,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
 <script>
@@ -2216,23 +2419,23 @@
 </script>
 
 
-      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../javascripts/progress-check.js"></script>
+        <script src="../../javascripts/progress-check.js"></script>
       
-        <script src="../javascripts/quiz.js"></script>
+        <script src="../../javascripts/quiz.js"></script>
       
-        <script src="../javascripts/short-questions.js"></script>
+        <script src="../../javascripts/short-questions.js"></script>
       
-        <script src="../javascripts/translate-admonitions.js"></script>
+        <script src="../../javascripts/translate-admonitions.js"></script>
       
-        <script src="../javascripts/webhook-config.js"></script>
+        <script src="../../javascripts/webhook-config.js"></script>
       
     
 <!-- Add scripts that need to run afterwards here -->
