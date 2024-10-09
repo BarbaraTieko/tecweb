@@ -81,6 +81,8 @@ nav:
       - "Recebendo Dados": aulas/09-react/parte-02-recebendo-dados.md
       - "Carregando imagens e arquivos estáticos": aulas/09-react/parte-03-carregando-estaticos.md
       - "Implementando a Criação de Anotações": aulas/09-react/parte-04-criacao-notas.md
+      - "Implementando a edição de Anotações": aulas/09-react/parte-05-editando-anotacao.md
+      - "Bônus: implementando a rotação dos cartões": aulas/09-react/parte-06-bonus.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
@@ -99,6 +101,10 @@ nav:
       - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
       - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
       - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
+    - "Projeto 2": 
+      - "Enunciado": projetos/projeto2.md
+      - "Dicas": projetos/projeto2/dicas.md
+      - "Deploy": projetos/projeto2/deploy.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
    

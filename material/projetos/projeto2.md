@@ -1,9 +1,8 @@
 # Projeto 2: Consumo de APIs
 
 !!! success "Entrega"
-    :date: ~~30/04 (terça-feira)~~
 
-    :date: 05/05 (domingo)
+    :date: 29/10 (terça-feira)
     
     :clock1: Commits até as 23:59
 
@@ -12,13 +11,13 @@
     :simple-github: Entrega via Github Classroom
 
 !!! note "Antes de começar"
-    **Inception do Projeto até: 22/04 (segunda-feira)** [[Clique aqui para acessar o formulário]](https://forms.office.com/r/na53vvkuVY){:target="_blank"}
+    **Inception do Projeto até: 17/10 (quinta-feira)** [[Clique aqui para acessar o formulário]](https://forms.gle/8BGv2PYEVNK3KF6UA){:target="_blank"}
 
     **GitHub Classroom:**
     Para este projeto será necessário criar dois repositórios GitHub, um para o frontend :simple-react: e outro para o backend :simple-django:.
 
-    - :simple-react: Frontend: [https://classroom.github.com/a/EhJb_gqY](https://classroom.github.com/a/EhJb_gqY){:target="_blank"}
-    - :simple-django: Backend: [https://classroom.github.com/a/rqIA17I-](https://classroom.github.com/a/rqIA17I-){:target="_blank"}
+    - :simple-react: Frontend: [https://classroom.github.com/a/iobbYnn7](https://classroom.github.com/a/iobbYnn7){:target="_blank"}
+    - :simple-django: Backend: [https://classroom.github.com/a/kJOOF8N6](https://classroom.github.com/a/kJOOF8N6){:target="_blank"}
 
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
@@ -48,7 +47,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 3. Faça alguma requisição para a API escolhida (utilizando o Postman ou via axios) para verificar se ela está funcionando. Pois existem muitas APIs que acabam não funcionando da forma como esperamos;
 4. Liste 2 funcionalidades essenciais;
-5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia 22/04 (quinta-feira). O formulário deve ser preenchido para que o tema seja validado. [Clique aqui para acessar o formulário](https://forms.office.com/r/na53vvkuVY){:target="_blank"}.
+5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia 22/04 (quinta-feira). O formulário deve ser preenchido para que o tema seja validado. [Clique aqui para acessar o formulário](https://forms.gle/8BGv2PYEVNK3KF6UA){:target="_blank"}.
 
 ## Rubrica
 
@@ -77,6 +76,6 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
 
 # Conceito A+
 
-É **importante** que você valide com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
+É **importante** que você valide com a professora em sala de aula e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
 
 O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional. Note que qualquer funcionalidade adicional só será considerada para o A+ e não pode aumentar nenhum dos outros conceitos.
