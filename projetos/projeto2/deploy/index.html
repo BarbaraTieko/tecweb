@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.2/projetos/projeto2/deploy/">
       
       
+        <link rel="prev" href="../dicas/">
+      
+      
+        <link rel="next" href="../../../simulado/ai/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1385,6 +1389,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/09-react/parte-05-editando-anotacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementando a edição de Anotações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../aulas/09-react/parte-06-bonus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bônus: implementando a rotação dos cartões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1614,17 +1660,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1638,7 +1686,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Projetos
@@ -1865,6 +1913,285 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-do-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-do-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo do deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo do deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-postgresql-no-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando PostgreSQL no Render
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-a-aplicacao-com-o-banco-de-dados-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectando a aplicação com o banco de dados PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-configuracoes-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mais configurações do projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mais configurações do projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outras-modificacoes-nas-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outras modificações nas configurações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizando-o-arquivo-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando o arquivo requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-desnecessarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos desnecessários
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-o-projeto-para-o-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviando o projeto para o Render
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-do-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy do frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alterando-localhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alterando localhost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-do-frontend_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2024.2/aulas/09-react/parte-05-editando-anotacao/">
       
       
+        <link rel="prev" href="../parte-04-criacao-notas/">
+      
+      
+        <link rel="next" href="../parte-06-bonus/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Parte 05 editando anotacao - Tecnologias Web - Insper 2024/2</title>
+        <title>Implementando a edição de Anotações - Tecnologias Web - Insper 2024/2</title>
       
     
     
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Parte 05 editando anotacao
+              Implementando a edição de Anotações
             
           </span>
         </div>
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -1249,17 +1255,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
         
           
           <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
@@ -1273,7 +1281,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             09 - React
@@ -1376,6 +1384,174 @@
   
   <span class="md-ellipsis">
     Implementando a Criação de Anotações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Implementando a edição de Anotações
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Implementando a edição de Anotações
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração Inicial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-um-componente-para-a-edicao-de-anotacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando um componente para a edição de anotações
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definindo-uma-nova-rota" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definindo uma nova rota
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navegando-para-a-pagina-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navegando para a página de edição
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envindo-o-id-da-anotacao-para-a-pagina-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envindo o ID da anotação para a página de edição
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-o-id-da-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtendo o ID da anotação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-a-funcao-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usando a função loader
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preenchendo-o-formulario-com-os-dados-da-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preenchendo o formulário com os dados da anotação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirecionando-para-a-pagina-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirecionando para a página inicial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-implementando-a-rotacao-dos-cartoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bônus: implementando a rotação dos cartões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-06-bonus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bônus: implementando a rotação dos cartões
   </span>
   
 
@@ -1878,6 +2054,112 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto2/dicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto2/deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2077,7 +2359,7 @@
                   
 
 
-  <h1>Parte 05 editando anotacao</h1>
+  <h1>Implementando a edição de Anotações</h1>
 
 <p>Para implementar a funcionalidade de edição de anotações, vamos precisar simular a navegação entre páginas. Para isso, vamos utilizar o <a href="https://reactrouter.com/en/main/start/tutorial" target="_blank"><code>react-router-dom</code></a>.</p>
 <h2 id="configuracao-inicial">Configuração Inicial</h2>
