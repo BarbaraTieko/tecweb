@@ -6,7 +6,9 @@
 
     ~~:date:  07/10 (segunda-feira)~~
     
-    :date:  08/10 (terça-feira)
+    ~~:date:  08/10 (terça-feira)~~
+    
+    :date:  13/10 (domingo)
     
     :material-account-group: Individual
 
