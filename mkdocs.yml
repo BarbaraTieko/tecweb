@@ -86,6 +86,7 @@ nav:
     - "10 - Autenticação Django REST": 
       - "Django REST": aulas/10-autenticacao.md
       - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
+    - "Aula de Apoio - Docker & Banco de dados": Aula-Docker-TecWeb.pdf
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
