@@ -34,3 +34,5 @@ Bem-vind@ ao curso de Tecnologias Web 2024/2
 - ~~07/10: Entrega do [Servidor JS]~~
 - ~~08/10: Entrega do [Servidor JS]~~
 - 13/10: Entrega do [Servidor JS](entregas/03-servidor-js.md)
+- ~~29/10: Entrega do [Projeto 2]~~
+- 03/11: Entrega do [Projeto 2](projetos/projeto2.md)
