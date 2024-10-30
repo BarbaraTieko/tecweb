@@ -3,26 +3,27 @@
 
 !!! success "Entrega"
 
-    :date: 21/05/2024
+    :date: 19/11/2024 (terça-feira)
     
     :clock1: Commits até as 23:59
 
-    :material-account-group: Grupos de 3 ou 4 (Não é permitido realizar o projeto individualmente ou em dupla)
+    :material-account-group: Grupos de 3 ou 4 **(Não é permitido realizar o projeto individualmente ou em dupla)**
 
-    :simple-github: Entrega via Github Classroom [https://classroom.github.com/a/jqlzPrzW](https://classroom.github.com/a/jqlzPrzW){:target="_blank"}
+    :simple-github: Entrega via Github Classroom
 
 
-!!! info "Repositório"
-    Caso precise de mais de um repositório para o projeto, crie um repositório na conta de um dos integrantes e adicione o link no README do repositório principal (Repositório do GitHub Classroom).
+!!! info "Github Classroom"
+    Link do Github Classroom: [Projeto 3](https://classroom.github.com/a/jLW-plfN){:target="_blank"}
 
-    Além disso, deixe o repositorio público ou adicione os professores como colaboradores.
+    Caso grupo vá trabalhar com projeto frontend e backend separados, acesse o link a seguir: [Projeto 3 - Frontend](https://classroom.github.com/a/imhTmAOP){:target="_blank"}
+    
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
 
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
-    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/2x4upVm8mLRjrxZNA){target="_blank"}
+    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/dstz82Dp4aQ7s11G6){target="_blank"}
 
     Apenas um integrante do grupo deve preencher o formulário.
 
@@ -33,9 +34,15 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 1. O uso de alguma tecnologia web deve ser **central** para o projeto;
 2. O resultado do projeto deve ser público (o código fonte não precisa ser público):
-3. Você deve planejar a arquitetura do projeto e adicionar uma imagem com essa arquitetura no seu repositório do GitHub (pode escanear um diagrama desenhado à mão, se preferir). Não é obrigatório seguir nenhum formalismo, mas você deve representar em um diagrama quais são os componentes principais do seu projeto e como eles se comunicam entre si. Para este item, pense como vocês explicariam para os professores o projeto de vocês.
-4. Você deve definir um cronograma, que deve ser apresentado no README do seu repositório. Sugestão: crie uma tasklist no README e vá marcando as tarefas conforme forem cumpridas (https://docs.github.com/en/github/managing-your-work-on-github/about-task-lists). **Importante:** seu cronograma deve ter entregas bem definidas para cada semana. Elas podem (e devem?) ser atualizadas ao longo das sprints, mas é importante ter algum planejamento.
-5. Não será permitido o uso de React Native.
+3. Caso o projeto possua frontend desenhe um fluxo de tela de baixa fidelidade (desenho à mão) e adicione no repositório do projeto; Caso o seu projeto não tenha frontend, desenhe a arquiteura do projeto indicando quais tecnologias serão utilizadas e as principais funcionalidades do projeto.
+4. Neste projeto vocês devem utilizar o quadro de tarefas do GitHub;
+5. Vocês devem definir um cronograma, que deve ser apresentado no README do seu repositório. Este cronograma deve indicar o que é esperado ser entregue a cada sprint. No total teremos 3 sprints para o projeto.
+    - Sprint 1: 31/10 ~ 05/11
+    - Sprint 2: 05/11  ~ 12/11
+    - Sprint 3: 12/11 ~ 19/11
+
+Sugestão: crie uma tasklist no README e vá marcando as tarefas conforme forem cumpridas (https://docs.github.com/en/github/managing-your-work-on-github/about-task-lists). **Importante:** seu cronograma deve ter entregas bem definidas para cada sprint. Elas podem (e devem?) ser atualizadas ao longo das sprints, mas é importante ter algum planejamento.
+
 
 ## Roadmap pré-desenvolvimento
 
@@ -49,35 +56,39 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
     - Para os grupos de 4 integrantes, a pontuação total da dificuldade deve alcançar pelo menos 5 pontos.
     - A dificuldade deve ser validada com os professores.
     - Alguns exemplos de funcionalidades fáceis:
-        - CRUD feito em Django;
-        - Funcionalidades no frontend feitas em aulas e projetos passados;
+        - CRUD completo tanto no frontend quanto no backend;
     - Alguns exemplos de funcionalidades médias:
-        - Funcionalidade fácil para frontend, com capricho acima do esperado (Utilizando algum componente pronto ou estilo css);
+        - CRUD completo tanto no frontend quanto no backend utilizando componentes prontos ou frameworks css;
     - Alguns exemplos de funcionalidades difíceis:
-        - Autenticação de usuário;
-        - Utilização de outra linguagem, ferramenta, framework não vistos em sala de aula.
+        - Autenticação de usuário; (Cadastro e Login tanto no frontend quanto no backend)
+        - Funcionalidade que utiliza outra linguagem, ferramenta, framework não vistos em sala de aula.
 4. Defina e desenhe a arquitetura do projeto;
+5. Crie o quadro de tarefas no repositório do projeto e já atribua os responsáveis pelas tarefas;
 5. Inicie as sprints de desenvolvimento.
 
 
-## Uma sugestão de projeto
 
-Uma sugestão de projeto é continuar o desenvolvimento do projeto 2 ou começar um projeto do zero utilizando React para frontend e Django Rest para backend.
+### Quadro de Tarefas
 
-### Funcionalidades para grupos de 3 integrantes
+As duplas deverão ter um quadro de planejamento do projeto para documentar sua evolução.
 
-1. **Difícil**: Autenticação de usuário; (2 pontos)
-    - Tela de cadastro
-    - Tela de login
-2. **Fácil**: CRUD de algum recursos (1 ponto)
-    - Armazenar alguma informação no banco de dados atrelada ao usuário logado
-3. **Fácil**: Caprichou no frontend (1 ponto)
-    - Utilizou algum componente pronto ou framework css deixando o projeto com acabamento de um projeto real.
+Este quadro deve ter as colunas `To Do`, `Doing` e `Done`.
 
-!!! danger "Importante"
-    Caso escolha trabalhar na continuação do projeto 2, você **NÃO** deve trabalhar no repositório do projeto 2. Crie um novo repositório para o projeto 3 via link do GitHub Classroom.
+Cada tarefa deve possuir um título, descrição, responsável, tamanho da camiseta (XS, S, M, L, XL), data de início e data de fim.
 
-    Além disso, siga o seguinte tutorial para realizar a cópia do repositório do projeto 2 para o projeto 3: [https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository#mirroring-a-repository){:target="_blank"} 
+Crie seu quadro de tarefas no repositório do Github Classroom.
+
+Para criar use os comandos;
+
+`Projects -> New Project -> selecione tipo "Team Planning"`
+
+- *Nota limitada a C*: Sem nenhum quadro de tarefas. Houve integrantes que não foram atrelados a nenhuma tarefa.
+- *Conceito B*:  Usaram o quadro de tarefa, toda tarefa passou pelo "To-Do", "Doing" e "Done".  Há tarefas sem dimensionamento de tamanho de camiseta (XS, S, M, L, XL).  
+- *Conceito A*: Tarefas bem granulares (cada pequena atividade); Toda tarefa foi atribuída a um ou mais membros do time; Toda tarefa tem Start Date e End Date.
+
+### Commits
+
+
 
 ## Pesos
 
@@ -89,13 +100,14 @@ Uma sugestão de projeto é continuar o desenvolvimento do projeto 2 ou começar
 ## Rubrica
 
 !!! danger "Vídeo"
-    Ao finalizer o projeto, grave um vídeo demosntrando as todas as funcionalidades implementadas.
+    Ao finalizer o projeto, grave um vídeo demosntrando todas as funcionalidades implementadas.
 
 A rubrica a seguir será utilizada na correção do Projeto 3:
 
 | Conceito | Descrição |
 | :------: | :-------- |
-|    A    | Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
+|    A+    | Criou um arquivo Dockerfile e docker-compose.yml com instruções para rodar o projeto em um container Docker. Além disso, criou uma imagem no DockerHub e adicionou o link no README do repositório principal. |
+|    A    | Fez o deploy do projeto e adicionou o link no README do repositório principal. Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
 |    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código **e** entregou um vídeo com a demo do projeto |
 |    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura ou não entregou um vídeo demo|
 |    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
@@ -103,16 +115,11 @@ A rubrica a seguir será utilizada na correção do Projeto 3:
 
 
 !!! danger "Importante"
-    Caso não tenha commits relevantes no repositório do projeto, o conceito será limitado a C.
-
-!!! info "Conceito A+"
-    Para o conceito A+ o grupo deve propor uma funcionalidade e validar com a professora.
-
-    Além disso, o grupo deve adicionar a descrição da funcionalidade para o conceito A+ no arquvo README do repositório principal.
+    Caso o aluno não tenha commits relevantes no repositório do projeto, o conceito será limitado a C.
 
 ## Trabalho em Equipe
 
-Os questionários de cada sprint devem ser respondidos entre quinta-feira e domingo. Questionários respondidos fora deste período serão considerados como não respondidos. Para cada questionário de avaliação não respondido, será descontado 1 conceito.
+Os questionários de cada sprint devem ser respondidos entre quinta-feira e domingo. Questionários respondidos fora deste período serão considerados como não respondidos. **Para cada questionário de avaliação não respondido, será descontado 1 conceito.**
 
 Acesse mais detalhes da avaliação em grupo: [Teamwork](teamwork.md)
 
