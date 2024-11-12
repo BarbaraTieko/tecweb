@@ -114,6 +114,7 @@ nav:
       - "Teamwork": projetos/teamwork.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
+    - "Avaliação Final": simulado/AF-simulado.pdf
    
   
 markdown_extensions:
