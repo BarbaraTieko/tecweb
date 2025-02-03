@@ -27,6 +27,10 @@ Para fins de cálculo a seguinte conversão será utilizada (note a diferença n
 
 As atividades obrigatórias são requisitos para a aprovação. Para uma atividade ser considerada entregue, o aluno deve obter um conceito mínimo de C. Se esse conceito não for obtido (o que inclui o caso de entrega com atraso), o aluno poderá realizar uma nova entrega após o prazo, mas o conceito da atividade fica limitado a C.
 
+Teremos 3 atividades ao longo do semestre. A média de $Atividades$ será calculada a partir da seguinte fórmula:
+
+$$ Atividades =\frac{10\cdot ELI5 + 10\cdot DesafioCSS + 80\cdot ServidorJS}{100}$$
+
 ## Projetos
 
 Teremos 3 projetos ao longo do semestre. A média de $Projetos$ será calculada a partir da seguinte fórmula:

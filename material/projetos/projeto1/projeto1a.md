@@ -7,7 +7,7 @@
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/0phG7ZQC){: target="_blank"}.
+    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/MWnSLw4W){: target="_blank"}.
  
 ## Objetivos :octicons-goal-16:
 
