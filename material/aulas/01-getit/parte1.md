@@ -27,9 +27,9 @@ Muito bem. Agora podemos começar a desenvolver o nosso protótipo.
 
 Isso nos leva à primeira pergunta: ok, o Fábio vai digitar o endereço no navegador e apertar *Enter*, mas o que acontece depois disso?
 
-MUITA coisa. Vamos começar com uma explicação bastante simplista, mas que deve dar uma ideia geral dos passos. Se você tiver curiosidade, a Mozilla possui um [material muito didático](https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona) para quem está iniciando no desenvolvimento web.
+MUITA coisa. Vamos começar com uma explicação bastante simplista, mas que deve dar uma ideia geral dos passos. Se você tiver curiosidade, a Mozilla possui um [material muito didático](https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona){:target="_blank"} para quem está iniciando no desenvolvimento web.
 
-1. O navegador precisa dos dados da página a ser mostrada, mas a informação está em outro computador, o servidor, que está (muito provavelmente) fisicamente distante. Por isso, o endereço digitado no navegador é utilizado para encontrar a localização do servidor utilizando o [DNS](https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona#dns_explicado).
+1. O navegador precisa dos dados da página a ser mostrada, mas a informação está em outro computador, o servidor, que está (muito provavelmente) fisicamente distante. Por isso, o endereço digitado no navegador é utilizado para encontrar a localização do servidor utilizando o [DNS](https://developer.mozilla.org/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona#dns_explicado){:target="_blank"}.
 2. Agora que o cliente (o computador do Fábio) sabe onde encontrar o servidor, ele entra em contato com o servidor pedindo os dados. Esse pedido é o que chamamos de **requisição**.
 3. Ao receber a requisição, o servidor responde com a página solicitada.
 4. O navegador recebe as partes que formam a página (HTML, CSS, Javascript, imagens, etc.) e mostra (renderiza) para o Fábio.
@@ -40,7 +40,7 @@ Essa é uma lista bastante simplificada do que acontece, mas talvez esse último
 
 Eu sei, me desculpe. Agora sim, vamos começar!
 
-Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842)):
+Vamos implementar um servidor **bastante** simplificado em Python puro, sem nenhuma biblioteca. Para isso, crie uma nova pasta em seu computador e crie dentro dela um arquivo chamado `servidor.py` (pode ser o nome que você preferir) com o seguinte conteúdo (o exemplo deste handout foi baseado [neste código](https://www.codementor.io/@joaojonesventura/building-a-basic-http-server-from-scratch-in-python-1cedkg0842){:target="_blank"}):
 
 !!!danger "Atenção"
     É possível que o endereço `0.0.0.0` não funcione no seu computador. Se isso acontecer, ao invés de acessar `0.0.0.0:8080`, acesse umas das opções a seguir:
@@ -63,7 +63,7 @@ Agora que você chegou nesta linha sem se desesperar, olhe para o terminal. O ú
 
 ## Muito bem, agora vamos entender o código acima
 
-O módulo `#!python socket` é utilizado para lidar com chamadas de rede em baixo nível. A [documentação oficial](https://docs.python.org/3/library/socket.html) pode ser útil para entender as funções utilizadas.
+O módulo `#!python socket` é utilizado para lidar com chamadas de rede em baixo nível. A [documentação oficial](https://docs.python.org/3/library/socket.html){:target="_blank"} pode ser útil para entender as funções utilizadas.
 
 As constantes `#!python SERVER_HOST` e `#!python SERVER_PORT` definem o endereço do servidor (no caso, `0.0.0.0`) e a porta. Um computador pode ser acessado via rede através de uma porta. Por enquanto basta sabermos que um mesmo computador possui muitas portas e é necessário especificar qual porta queremos usar para a nossa conexão.
 
@@ -126,13 +126,35 @@ O seu terminal deve ter mostrado uma saída parecida com esta (testei nos dispos
     Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
     ```
 
+
+!!! question choice
+    O que a linha de código a seguir faz?
+
+    ```python
+    request = client_connection.recv(1024).decode()
+    ```
+
+    Escolhe o opção verdadeira:
+
+    - [ ] Envia uma requisição para o servidor.
+    - [ ] Recebe uma resposta do servidor.
+    - [X] Lê a requisição enviada pelo cliente.
+    - [ ] Lê a resposta enviada pelo servidor.
+
+    !!! details "Resposta"
+        A linha de código lê a requisição enviada pelo cliente. 
+
+        No comando utilizado indicamos que queremos ler no máximo 1024 bytes. O resultado é devolvido como um valor do tipo `#!python bytes`, portanto convertemos ele para uma string utilizando o método `#!python decode()` 
+        
+        Para mais detalhes veja [(socket.recv)](https://docs.python.org/3/library/socket.html#socket.socket.recv){:target="_blank"}.
+
 Sugiro que você também tente acessar o mesmo endereço a partir de navegadores e dispositivos diferentes. Caso você queira testar o acesso de um dispositivo diferente você vai precisar descobrir o IP do servidor.
 
 Nos testes acima eu acessei o servidor a partir do Android e, no meu laptop, do Firefox e do Safari. É importante notar que cada um desses navegadores foi desenvolvido por empresas diferentes, no caso, Google, Mozilla e Apple. Mas então como todos eles conseguem se comunicar com o nosso servidor? É aí que entra o tal do HTTP.
 
 Os 3 exemplos mostrados acima são muito semelhantes, apesar de virem de fabricantes diferentes. Isso acontece porque todos eles seguem o mesmo *protocolo*, o <b>H</b>yper <b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol. O que precisamos saber por enquanto é que ele define como devem ser as requisições e respostas nessa comunicação. Como o HTTP é padronizado, se o seu servidor souber se comunicar em HTTP ele poderá se comunicar com qualquer navegador, independente das implementações específicas.
 
-Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o **cabeçalho (header)** da requisição [(request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests) ou resposta [(response)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses). Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.
+Nos exemplos nós podemos ver que o texto é enviado em um formato parecido com um dicionário: chaves, dois pontos e os valores. Esse conjunto de chaves e valores é o **cabeçalho (header)** da requisição [(request)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#requests){:target="_blank"} ou resposta [(response)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#responses){:target="_blank"}. Como sempre, incentivo que você procure por conta própria mais detalhes sobre esse protocolo. Essa é apenas uma breve introdução.
 
 !!! question choice
     Considere o texto a seguir:
