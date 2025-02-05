@@ -3,7 +3,7 @@
 ## Desafio CSS
 
 !!! success "Entrega"
-    :date: 19/08 (segunda-feira)
+    :date: 14/02 (sexta-feira)
     
     :clock1: Commits até as 23:59
 
@@ -15,7 +15,7 @@
 
     **Importante:** Todos os integrantes do grupo devem possuir contribuições no código.
 
-    :fontawesome-solid-clipboard-question: [Responda o formulário com as informações do repositório](https://forms.gle/ydGYrVF2AFp8vGqJ9){ :target="_blank"}.
+    :fontawesome-solid-clipboard-question: [Responda o formulário com as informações do repositório](https://forms.gle/t1rm5RC8w3yBUb8y5){:target="_blank"}
     
 ## Objetivo
 
@@ -66,26 +66,8 @@ Baixe os arquivos base no botão abaixo.
 - [ ] :no_entry_sign: Não é permitido o uso de frameworks CSS (Bootstrap, Materialize, etc).
 
 !!! tip "Dica"
-    É possível visualizar a página HTML em desenvolvimento no seu navegador utilizando o comando abaixo:
+    Instale a extensão **Live Server** do Visual Studio Code para visualizar a página HTML.
     
-    === "Windows :material-microsoft-windows:/Linux :simple-linux:"
-        ```bash
-        python -m http.server
-        ```
-    === "MacOS :material-apple:"
-        ```bash
-        python3 -m http.server
-        ```
-    
-
-    Este comando deve ser executado no terminal dentro da pasta `docs` do projeto. Após executar o comando, abra o navegador e acesse o endereço `http://localhost:8000`.
-
-!!! danger "Atenção"
-    Acesse a página HTML em uma aba anônima ou utilize o **Hard Refresh/Hard Reload** (1) para garantir que o cache do navegador não está atrapalhando a visualização das alterações. 
-    { .annotate }
-
-    1. Hard Refresh/Hard Reload são atalhos para forçar o navegador a carregar a versão mais recente de uma página. No Windows :material-microsoft-windows: e Linux :simple-linux:, pressione `Ctrl + F5`. No MacOS :material-apple:, pressione `Cmd + Shift + R`. Caso esses atalhos não funcionem, você pode pesquisar o atalho específico para o seu navegador.
-
 
 ## Entrega :material-truck-delivery:
 
@@ -94,7 +76,7 @@ Baixe os arquivos base no botão abaixo.
 - A sua página deve **obrigatoriamente** estar disponível no GitHub pages seguindo [:point_right: estes passos](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site){:target="_blank"}
 
 - Será considerado o último commit enviado antes do prazo. 
-- O link do repositório deve ser informado em [ :point_right: Formulário](https://forms.gle/ydGYrVF2AFp8vGqJ9){ :target="_blank"}.
+- O link do repositório deve ser informado em [ :point_right: Formulário](https://forms.gle/t1rm5RC8w3yBUb8y5){ :target="_blank"}.
 
 
 ## Rubrica
@@ -120,11 +102,14 @@ A nota deste trabalho é a soma dos pontos abaixo. Será feita uma inspeção vi
     - [1 pt] Aparência do cartão correta (sombra, proporções, distâncias, cantos arredondados, etc)
     - [1 pt] Rotação dos cartões
 
-## Observações importantes
+- Descontos:
+    - [-1 pt] Página não disponível no GitHub Pages
+    - No caso de entrega com atraso, a nota ficará limitada a 5 (equivalente ao conceito C).
+    - **Trabalhos não identificados (não respondeu ao formulário) serão considerados atrasados (veja o item acima).** 
+    - A nota de trabalhos com modificações em outros arquivos além do README.md e do `docs/getit.css` será limitada a no máximo 7 (equivalente ao conceito B). Modificações em outros arquivos devem ser explicitamente aprovadas pelo professor.
+    - Caso não haja contribuição de todos os integrantes do grupo, a nota será limitada a 7 (equivalente ao conceito B).
 
-- No caso de entrega com atraso, a nota será a metade da soma dos pontos obtidos.
-- **Trabalhos não identificados (não respondeu ao formulário) serão considerados atrasados (veja o item acima).** 
-- A nota de trabalhos com modificações em outros arquivos além do README.md e do `docs/getit.css` será limitada a no máximo 7 (equivalente ao conceito B). Modificações em outros arquivos devem ser explicitamente aprovadas pelo professor.
+## Observações importantes
 - Para este trabalho você não precisa se preocupar com a versão mobile da página. Ela será testada apenas em um monitor.
 
 

@@ -9,7 +9,7 @@ Vamos implementar agora a funcionalidade de adicionar anotações. O objetivo é
 
 Para começar, modifique o template `index.html` para adicionar o `#!html <form>`:
 
-```html
+```html hl_lines="6-12"
 <!-- DOCTYPE, HTML, HEAD DEVEM CONTINUAR AQUI -->
 <body>
   <img src="img/logo-getit.png">

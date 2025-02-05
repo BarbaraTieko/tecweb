@@ -30,7 +30,7 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
 |    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
 |    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |
 |    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
-|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou o uma página HTML para o código 404. |
+|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou uma página HTML para o código 404. |
 
 
 !!! danger "Conceito A+"
