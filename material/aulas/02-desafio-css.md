@@ -21,7 +21,7 @@
 
 <figure markdown="span">
   ![Resultado do Handout 01](02-desafio-css/img/original.png){ width="80%" }
-  <figcaption>Resultado do Handout 01 - Versão inicial</figcaption>
+  <figcaption>HTML sem estilo CSS implementado</figcaption>
 </figure>
 
 
