@@ -27,6 +27,7 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 **Algumas Datas**
 
 - 07/02: Entrega do [ELI5](entregas/01-ELI5.md)
-- 14/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
+- ~~14/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)~~
+- 17/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
 - 21/02: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 
