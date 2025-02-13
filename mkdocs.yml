@@ -61,6 +61,10 @@ nav:
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
+  - Projetos:
+    - "Projeto 1A": 
+      - "Enunciado": projetos/projeto1/projeto1a.md
+      - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
   
 markdown_extensions:
   - abbr

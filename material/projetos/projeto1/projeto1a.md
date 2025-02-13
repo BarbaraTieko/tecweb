@@ -1,7 +1,7 @@
 # Projeto 1: Parte A
 
 !!! success "Entrega"
-    :date: 27/08 (terça-feira)
+    :date: 21/02 (sexta-feira)
     
     :clock1: Commits até as 23:59
 
@@ -30,19 +30,25 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
 |    C+    | Entregou o handout 01 e 2 das 4 tarefas funcionando |
 |    B     | Entregou o handout 01 e 3 das 4 tarefas funcionando |
 |    B+    | Entregou o handout 01 e as 4 tarefas funcionando    |
-|    A     | Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. Além disso, implementou uma página HTML para o código 404. |
+|    A     | Veja mais detalhes abaixo.|
+|    A+    | Veja mais detalhes abaixo.|
 
+## Conceito A
 
-!!! danger "Conceito A+"
-    O conceito A+ será dado aos trabalhos que superarem as expectativas do conceito A. Ou seja, implementarem alguma funcionalidade adicional (ex: realizar requisições assíncronas em JavaScript para não precisar recarregar a página inteira) .
+- Atingiu o conceito B+ e o repositório está organizado sem arquivos e códigos desnecessários. 
+- Repositório possui commits contínuos e possui mensagens de commit claras e objetivas;
+  - Ha pelo menos um commit por aula studio e um commit por funcionalidade; 
+- Todos os itens do Handout 1 foram implementados;
+- Implementou uma página HTML para o código 404;
+- Implementou a funcionalidade de favoritar anotações;
+- Ordenou as anotações por favorito, ou seja, as anotações favoritas devem aparecer primeiro;
 
-    É importante que você discuta com a professora e deixe claro no README.md do seu repositório o que foi feito no projeto para alcançar o conceito A+.
+## Conceito A+
 
-## Configuração Inicial :gear:
+- Lógica de deletar, editar e favoritar foram implementadas no arquivo `views.py`;
+- Arquivo `servidor.py` possui a responsidade apenas de direcionar as requisições para o arquivo `views.py` de acordo com as rotas.
+- Implementou a funcionalidade de adicionar uma tag a uma anotação;
 
-Este projeto possui correção automática, desta forma, será necessário configurar o repositório do projeto no GitHub.
-
-Antes de iniciar o projeto, você deve configurar o repositório do projeto. Para isso, siga os passos a seguir: 
 
 ## Detalhes das Tarefas :material-magnify-plus-outline:
 
