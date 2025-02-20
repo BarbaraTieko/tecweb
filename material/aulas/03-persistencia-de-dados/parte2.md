@@ -156,9 +156,14 @@ Após executar este programa, um arquivo chamado `banco.db` deve ter aparecido n
 
 #### Visualizando o banco de dados 
 
-Baixe a extensão SQLite Viewer para o VS Code.
+- Baixe a extensão SQLite Viewer para o VS Code no seu computador.
+- Faça o download do arquivo `banco.db` para o seu computador. Para isso, basta clicar com o botão direito no arquivo e selecionar a opção `Download`.
 
-Clique no arquivo `banco.db` e poderemos visualizar o banco de dados.
+![](img/download_banco.png){ width="40%" }
+
+- Abra o arquivo no VS Code.
+- Clique no arquivo `banco.db` e poderemos visualizar o banco de dados.
+
 Você deve ver uma tela parecida com esta:
 
 ![](img/sqlite3viewer.png)
