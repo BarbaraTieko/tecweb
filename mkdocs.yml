@@ -55,6 +55,15 @@ nav:
       - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
       - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
       - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
+    - "04 - Django":
+      - "Slides": "aulas/04-django/Aula04.pdf"
+      - "Handout": aulas/04-django.md
+      - "Handout Parte 1: Iniciando o projeto": aulas/04-django/parte1.md
+      - "Handout Parte 2: Criando nosso primeiro app": aulas/04-django/parte2.md
+      - "Handout Parte 3: Integrando com o banco de dados": aulas/04-django/parte3.md
+      - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
+      - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
+      - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
@@ -65,6 +74,12 @@ nav:
     - "Projeto 1A": 
       - "Enunciado": projetos/projeto1/projeto1a.md
       - "Tarefas": projetos/projeto1/projeto1a/tarefas-projeto1a.md
+    - "Projeto 1B":
+      - "Enunciado": projetos/projeto1/projeto1b.md
+      - "Tarefa 01": projetos/projeto1/projeto1b/tarefa01.md
+      - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
+      - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
+      - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
   
 markdown_extensions:
   - abbr
