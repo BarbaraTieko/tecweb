@@ -1,5 +1,8 @@
 # Django :simple-django:
 
+!!! info "Github classroom"
+    Faça este handout no repositório do Github Classroom do Projeto 1B:[Github Classroom](https://classroom.github.com/a/vVvRdlC5){target=_blank} 
+
 No Projeto 1A implementamos uma aplicação Web utilizando apenas a linguagem Python e sem o uso de nenhum framework. 
 O objetivo do projeto foi entender conceitos e o funcionamento da comunicação cliente-servidor.
 
@@ -20,7 +23,7 @@ Neste handout vamos dar nossos primeiros passos no desenvolvimento web usando o 
 !!! question choice "Configuração Inicial"
     Antes de começar, vamos preparar o repositório do Projeto 1B.
     
-    1. Acesso o link [Github Classroom](https://classroom.github.com/a/q1MxyDlK){target=_blank} para criar o repositório do **Projeto 1B**.
+    1. Acesso o link [Github Classroom](https://classroom.github.com/a/vVvRdlC5){target=_blank} para criar o repositório do **Projeto 1B**.
     2. Clone o repositório em seu computador.
     3. Crie um arquivo `.gitignore` com o conteúdo a seguir:
         ```
