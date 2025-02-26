@@ -2,7 +2,7 @@
 
 
 
-Para esta etapa a professora fará uma discussão no dia 12/09 e vocês devem seguir o handout abaixo:
+Para esta etapa a professora fará uma discussão no dia 13/03 e vocês devem seguir o handout abaixo:
 
 [Próxima Etapa](../../../aulas/06-deploy.md){ .md-button }
 

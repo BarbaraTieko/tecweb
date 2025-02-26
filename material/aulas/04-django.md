@@ -130,3 +130,5 @@ Este handout está dividido nos passos a seguir:
 - [Parte 4: O Django Admin](04-django/parte4.md)
 - [Parte 5: Usando templates](04-django/parte5.md)
 - [Parte 6: Trabalhando com formulários e o método POST](04-django/parte6.md)
+
+ç
