@@ -1,7 +1,7 @@
 # Projeto 1: Parte B
 
 !!! success "Entrega"
-    :date: a definir
+    :date: 18/03 (terça-feira)
     
     :clock1: Commits até as 23:59
 
