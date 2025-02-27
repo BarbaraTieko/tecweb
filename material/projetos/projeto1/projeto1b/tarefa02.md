@@ -34,7 +34,7 @@ Ao clicar na tag `comida` na listagem de tags, o usuário é levado a outra tela
 
 ## Observações
 
-- Na tela de listagem de anotações por `tag`, não é necessário fornecer as opções de deletar ou editar. Basta mostar as anotações.
+- Na página de edição de anotações, deve haver a opção de editar a tag.
 - Caso não utilize a **relação Many-to-one** descrita abaixo para a implementação desta etapa, a solução não será considerada válida.
 - Não devem existir tags duplicadas no banco de dados.
 - O usuário pode criar anotações sem tags. 
