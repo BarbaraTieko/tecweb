@@ -1,6 +1,6 @@
 # JavaScript
 
-Existem diversos tutoriais/vídeos/posts muito mais completos sobre JavaScript disponíveis na internet. O objetivo deste handout é oferecer uma breve introdução ao JavaScript para aqueles que não estiverem familiarizados com a linguagem. É esperado que você seja capaz de se aprofundar na linguagem por conta própria a partir deste ponto. Para isso, disponibilizamos o [servidor de exercícios JS](https://tecweb-js.insper-comp.com.br/){:target="_blank"} para você praticar. **Importante:** os exercícios do servidor são considerados como atividade de aula e devem ser entregues até a [data estipulada aqui](../entregas/03-servidor-js.md).
+Existem diversos tutoriais/vídeos/posts muito mais completos sobre JavaScript disponíveis na internet. O objetivo deste handout é oferecer uma breve introdução ao JavaScript para aqueles que não estiverem familiarizados com a linguagem. É esperado que você seja capaz de se aprofundar na linguagem por conta própria a partir deste ponto. Para isso, disponibilizamos o [servidor de exercícios JS](https://servidor-exercicios-js.vercel.app){:target="_blank"} para você praticar. **Importante:** os exercícios do servidor são considerados como atividade de aula e devem ser entregues até a [data estipulada aqui](../entregas/03-servidor-js.md).
 
 Vamos começar com um aquecimento. Para os exercícios deste handout e do servidor de exercícios JS você pode (e deve) pesquisar o que não souber na internet. Lembre-se de sempre validar as respostas que encontrar em documentações ou páginas confiáveis.
 
@@ -563,7 +563,7 @@ No exemplo acima vemos uma vantagem de utilizar *promises*: você registra o que
 
 ## Ufa, foi bastante informação!
 
-Eu sei. É um bom momento para você descansar um pouco antes de tentar fazer os exercícios do [servidor](https://tecweb-js.insper-comp.com.br/). Ainda existem vários outros recursos disponíveis na linguagem, mas já foi bastante informação de uma vez e espero que você tenha pego a base da linguagem. A partir daqui é com você. Os dois links abaixo são bastante interessantes. Recomendo a leitura de ambos!
+Eu sei. É um bom momento para você descansar um pouco antes de tentar fazer os exercícios do [servidor](https://servidor-exercicios-js.vercel.app). Ainda existem vários outros recursos disponíveis na linguagem, mas já foi bastante informação de uma vez e espero que você tenha pego a base da linguagem. A partir daqui é com você. Os dois links abaixo são bastante interessantes. Recomendo a leitura de ambos!
 
 ## Referências
 

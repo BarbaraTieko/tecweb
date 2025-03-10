@@ -31,7 +31,10 @@ Acesse o link do repositório e faça um fork do projeto.
     ![](06-deploy/fork.png){ width="80%" }
 </figure>
 
-Ao realizar o fork, você terá uma cópia do projeto em seu repositório. Desta forma, você poderá realizar as alterações que desejar sem alterar o projeto original.
+Ao realizar o fork, você terá uma cópia do projeto em seu repositório. Como vocês não possuem permissão para fazer alterações no repositório do exemplo, vocês devem fazer um fork do projeto para que possam fazer as alterações necessárias.
+
+!!! danger "Projeto 1B"
+    Caso esteja realizando as mudanças no Projeto 1B, não será necessário realizar o fork, pois você já possui as permissões necessárias para realizar as alterações no repositório.
 
 <figure markdown="span">
     ![](06-deploy/fork_2.png){ width="80%" }
@@ -348,6 +351,8 @@ DATABASES = {
     Como o serviço do Render é gratuito, talvez tenha que excluir as instâncias do banco de dados e do projeto da editora de livros que acabou de criar para que possa criar novas instâncias para o Projeto 1B.
 
     Ao realizar o deploy do seu projeto 1B, adicione o link para acessar a aplicação no README.md do seu repositório.
+
+    **Obs.:** Caso esteja realizando as mudanças no Projeto 1B, não será necessário realizar o fork, pois você já possui as permissões necessárias para realizar as alterações no repositório.
 
 ## Referências
 

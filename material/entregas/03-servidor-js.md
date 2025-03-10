@@ -3,16 +3,12 @@
 ## Servidor JS
 
 !!! success "Entrega"
-
-    ~~:date:  07/10 (segunda-feira)~~
     
-    ~~:date:  08/10 (terça-feira)~~
-    
-    :date:  13/10 (domingo)
+    :date:  25/03 (terça-feira)
     
     :material-account-group: Individual
 
-    :material-truck-delivery-outline: Entrega via Blackboard.
+    :material-truck-delivery-outline: Entrega via [Github Classroom](https://classroom.github.com/a/TIm8_1ug)
 
-    :notepad_spiral: Para mais informações, veja o link a seguir: [Servidor JS](https://tecweb-js.insper-comp.com.br/){:target="_blank"} 
+    :notepad_spiral: Para mais informações, veja o link a seguir: [Servidor JS](https://servidor-exercicios-js.vercel.app/){:target="_blank"} 
 

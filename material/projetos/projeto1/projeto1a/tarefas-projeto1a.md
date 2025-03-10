@@ -117,5 +117,5 @@ Permitir a edição de anotações existentes;
 ## Conceito A+
 
 - Lógica de deletar, editar e favoritar foram implementadas no arquivo `views.py`;
-- Arquivo `servidor.py` possui a responsidade apenas de direcionar as requisições para o arquivo `views.py` de acordo com as rotas.
+- Arquivo `servidor.py` possui a responsabilidade apenas de direcionar as requisições para o arquivo `views.py` de acordo com as rotas.
 - Implementou a funcionalidade de adicionar uma tag a uma anotação;
