@@ -3,7 +3,7 @@
 !!! danger "Atenção"
     Antes de realizar o simulado faça a preparação necessária.
 
-    Crie o repositório do Github classroom em: [https://classroom.github.com/a/vZ8q6G6U](https://classroom.github.com/a/vZ8q6G6U){:target="_blank"}
+    Crie o repositório do Github classroom em: [https://classroom.github.com/a/Sj85QEG5](https://classroom.github.com/a/Sj85QEG5){:target="_blank"}
 
     Mais instruções estão no README.md do repositório.
 
