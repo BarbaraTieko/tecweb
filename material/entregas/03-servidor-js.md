@@ -4,7 +4,9 @@
 
 !!! success "Entrega"
     
-    :date:  25/03 (terça-feira)
+    ~~:date:  25/03 (terça-feira)~~
+    
+    :date:  07/04 (segunda-feira)
     
     :material-account-group: Individual
 
