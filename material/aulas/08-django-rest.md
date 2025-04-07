@@ -2,14 +2,81 @@
 
 Já conversamos um pouco sobre REST na introdução da aula, mas para se aprofundar mais você pode encontrar [excelentes documentações na internet](https://restfulapi.net/){:target="_blank"}.
 
-O objetivo deste handout é disponibilizarmos uma API REST a partir do resultado do nosso Projeto 1B utilizando o [Django REST Framework (DRF)](https://www.django-rest-framework.org/){:target="_blank"}. Vamos começar com as instalações.
+O objetivo deste handout é disponibilizarmos uma API REST utilizando o [Django REST Framework (DRF)](https://www.django-rest-framework.org/){:target="_blank"}. 
 
-!!! danger "IMPORTANTE"
-    Antes de começar o handout, crie uma branch nova no repositório github do Projeto 1B para a realização deste handout. 
+Vamos criar um projeto Django novo para isso. A estrutura inicial do projeto será bem parecida com a do projeto 1B, pois vamos utilizar o mesmo modelo de anotações. O que muda é que não vamos utilizar o Django para renderizar páginas HTML, mas sim para disponibilizar uma API REST.
 
-## Primeiros passos
+## Criando o projeto
 
-**Lembre-se** de ativar o ambiente virtual!
+Crie uma pasta com o nome que desejar e no terminal entre dentro desta pasta que você acabou de criar. 
+
+- Crie um ambiente virtual
+- Ative o ambiente virtual
+- Instale o Django
+
+```bash
+pip install django
+```
+
+- Crie um projeto Django com o nome `getit`:
+
+```bash
+django-admin startproject getit .
+```
+
+- Crie um app Django:
+
+```bash
+python manage.py startapp notes
+```
+
+- Atualize o arquivo `settings.py` do projeto para adicionar o app `notes` na lista de `INSTALLED_APPS`:
+
+```python
+INSTALLED_APPS = [
+    ...
+    'notes',
+]
+```
+
+- Reutilize o modelo `Note` do projeto 1B. Ou seja, copie o modelo `Note` do projeto 1B e cole no arquivo `notes/models.py` do projeto que você acabou de criar.
+
+- Rode os comandos para criar o banco de dados e aplicar as migrações
+- Crie um superusuário para acessar o admin do Django:
+
+```bash
+python manage.py createsuperuser
+```
+- Cadastre o modelo `Note` no admin do Django. Você precisará editar o arquivo `notes/admin.py`.
+- Acesse a página do admin e crie algumas anotações. 
+
+- Crie um arquivo chamado `urls.py` dentro do app `notes` e adicione o seguinte conteúdo:
+
+```python
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+]
+```
+
+- Atualize o arquivo `urls.py` do projeto `getit` para incluir as URLs do app `notes`:
+
+```python
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('notes.urls')),
+]
+```
+
+Até aqui refizemos a parte inicial do projeto 1B. Agora vamos adicionar o Django REST Framework.
+
+
+## Instalando o Django REST Framework
 
 Instale o DRF e suas dependências:
 
@@ -26,22 +93,6 @@ INSTALLED_APPS = [
     ...
     'rest_framework',
 ]
-```
-
-Aproveite para configurar o `#!python DEBUG` como `#!python True` e substituir o banco de dados pelo SQLite novamente, para facilitar o desenvolvimento:
-
-```python
-# Resto do código...
-DEBUG = True
-
-# Resto do código...
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-# Resto do código...
 ```
 
 ## Criando nosso serializador
@@ -66,21 +117,18 @@ A classe acima será utilizada pelo DRF para serializar objetos do tipo `#!pytho
 
 ## Criando as views da API
 
-O projeto 1B possui rotas e views para renderizar páginas HTML e interagir com o usuário. Agora vamos criar rotas e views para interagir com outras aplicações, como um aplicativo mobile ou um sistema web.
+O projeto 1B possui rotas e views para renderizar páginas HTML e interagir com o usuário. Agora vamos criar rotas e views para interagir com outras aplicações, como um aplicativo mobile ou um projeto Frontend. 
 
 O DRF disponibiliza uma forma bastante [enxuta de criação de views para APIs REST](https://www.django-rest-framework.org/api-guide/viewsets/){:target="_blank"}. Você pode (e até deve?) utilizá-la nos seus projetos, mas ela já encapsula alguns passos importantes. Como o nosso objetivo também é entender o que está acontecendo por baixo dos panos, vamos seguir pelo caminho mais longo.
 
-Altere o arquivo `notes/views.py` adicionando as linhas a seguir:
+Adicione ao arquivo `notes/views.py` as linhas a seguir:
 
-```python hl_lines="2-4 6 10-17"
-from django.shortcuts import render, redirect
+```python
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import Http404
 from .models import Note
 from .serializers import NoteSerializer
-
-# SUAS OUTRAS FUNÇÕES CONTINUAM AQUI
 
 @api_view(['GET', 'POST'])
 def api_note(request, note_id):
@@ -94,15 +142,13 @@ def api_note(request, note_id):
 
 O código acima cria uma view do DRF que aceita GET e POST (vamos deixar o POST para depois). Quando uma requisição GET é recebida, a anotação é carregada do banco de dados, serializada utilizando a classe que criamos anteriormente e então o resultado é devolvido. Agora só falta criarmos a rota no `notes/urls.py`:
 
-```python hl_lines="7"
+```python hl_lines="6"
 from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
     path('api/notes/<int:note_id>/', views.api_note),
-    # Você possivelmente tem outras rotas aqui.
 ]
 ```
 
