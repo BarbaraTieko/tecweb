@@ -130,7 +130,7 @@ from django.http import Http404
 from .models import Note
 from .serializers import NoteSerializer
 
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'PUT'])
 def api_note(request, note_id):
     try:
         note = Note.objects.get(id=note_id)
@@ -148,11 +148,11 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('api/notes/<int:note_id>/', views.api_note),
+    path('notes/<int:note_id>/', views.api_note),
 ]
 ```
 
-Muito bem, agora execute o servidor e acesse a página na rota `api/notes/1` (assumindo que existe pelo menos uma anotação no banco de dados). Troque o número ´1´ por um id existente em seu banco de dados. O resultado deve ser parecido com este:
+Muito bem, agora execute o servidor e acesse a página na rota `notes/1` (assumindo que existe pelo menos uma anotação no banco de dados). Troque o número ´1´ por um id existente em seu banco de dados. O resultado deve ser parecido com este:
 
 ![](view.png)
 
@@ -165,14 +165,14 @@ Deixamos o POST para depois, mas agora precisamos implementá-lo. Modifique a su
 ```python hl_lines="10-14"
 # O resto do código continua aqui pra cima
 
-@api_view(['GET', 'POST'])
+@api_view(['GET', 'PUT'])
 def api_note(request, note_id):
     try:
         note = Note.objects.get(id=note_id)
     except Note.DoesNotExist:
         raise Http404()
 
-    if request.method == 'POST':
+    if request.method == 'PUT':
         new_note_data = request.data
         note.title = new_note_data['title']
         note.content = new_note_data['content']
@@ -199,7 +199,7 @@ Você pode testar o POST entrando na mesma página, preenchendo um dicionário (
     Neste caso, como deletamos a nota, não faz sentido retornar um json com as informações desta nota. Desta forma, tente descobrir como retornor um response com o código 204 (Código indica que o servidor realizou com sucesso a requisição, mas que não há nenhum conteúdo para retornar na resposta).
 
 !!! example "Exercício 2"
-    Implemente uma nova view do DRF para a rota `#!python api/notes/`. Ao receber uma requisição GET ela deve devolver a lista de todas as anotações. Ao receber um POST ela deve criar uma nova anotação e devolver a lista de todas as anotações incluindo a nova.
+    Implemente uma nova view do DRF para a rota `#!python notes/`. Ao receber uma requisição GET ela deve devolver a lista de todas as anotações. Ao receber um POST ela deve criar uma nova anotação e devolver a lista de todas as anotações incluindo a nova.
 
     **Dica:** você pode passar um argumento adicional ao serializador `#!python many=True` quando o primeiro argumento é uma lista de objetos ao invés de um único objeto. O serializador do DRF usa essa informação para criar o JSON corretamente. Para saber mais [leia a documentação](https://www.django-rest-framework.org/api-guide/serializers/#serializing-multiple-objects){:target="_blank"}.
 
