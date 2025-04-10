@@ -75,6 +75,15 @@ nav:
     - "08 - Django REST":
         - "Slides": aulas/08-django-rest/Aula18.pdf
         - "Handout": aulas/08-django-rest.md
+    - "09 - Testes automatizados":
+      - "TDD": aulas/09-TDD/0-tdd.md
+      - "Pytest": aulas/09-TDD/1-pytest.md
+      - "Boas práticas": aulas/09-TDD/2-boaspraticas.md
+      - "Exceptions": aulas/09-TDD/3-exceptions.md
+      - "Fixtures": aulas/09-TDD/4-fixtures.md
+      - "Mocks": aulas/09-TDD/5-mocks.md
+      - "Testando APIs": aulas/09-TDD/6-django.md
+      - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
