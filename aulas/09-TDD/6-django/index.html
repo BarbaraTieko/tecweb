@@ -1515,13 +1515,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-criando-o-teste-unitario-para-a-rota-notesid" class="md-nav__link">
+  <a href="#2-criando-o-teste-de-unidade-para-a-rota-notesid" class="md-nav__link">
     <span class="md-ellipsis">
-      2️⃣ Criando o Teste Unitário para a Rota /notes/ID
+      2️⃣ Criando o Teste de Unidade para a Rota /notes/ID
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2️⃣ Criando o Teste Unitário para a Rota /notes/ID">
+    <nav class="md-nav" aria-label="2️⃣ Criando o Teste de Unidade para a Rota /notes/ID">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1656,7 +1656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997" class="md-nav__link">
+      <a href="https://us.prairielearn.com/pl/course_instance/177889/assessment/2533467" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2266,13 +2266,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-criando-o-teste-unitario-para-a-rota-notesid" class="md-nav__link">
+  <a href="#2-criando-o-teste-de-unidade-para-a-rota-notesid" class="md-nav__link">
     <span class="md-ellipsis">
-      2️⃣ Criando o Teste Unitário para a Rota /notes/ID
+      2️⃣ Criando o Teste de Unidade para a Rota /notes/ID
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2️⃣ Criando o Teste Unitário para a Rota /notes/ID">
+    <nav class="md-nav" aria-label="2️⃣ Criando o Teste de Unidade para a Rota /notes/ID">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2449,7 +2449,7 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">python_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">tests.py test_*.py</span>
 </span></code></pre></div></li>
 </ul>
-<h2 id="2-criando-o-teste-unitario-para-a-rota-notesid"><strong>2️⃣ Criando o Teste Unitário para a Rota <code>/notes/ID</code></strong></h2>
+<h2 id="2-criando-o-teste-de-unidade-para-a-rota-notesid"><strong>2️⃣ Criando o Teste de Unidade para a Rota <code>/notes/ID</code></strong></h2>
 <p>O objetivo do teste é:</p>
 <ul>
 <li>Simular uma requisição <strong>GET</strong> para <code>/notes/ID</code>.</li>
@@ -2545,7 +2545,7 @@
 <li><strong><code>assert response.status_code == 404</code></strong>: Verifica se o código de status da resposta é <code>404 Not Found</code>.</li>
 </ul>
 <h2 id="criando-teste-de-integracao-com-pytest-e-django-rest"><strong>Criando Teste de Integração com pytest e Django REST</strong></h2>
-<p>Agora que já temos os testes unitários, vamos criar um teste de integração para a rota <code>/notes/&lt;id&gt;/</code>. Esse teste vai utilizar o banco de dados real, testando a API como um todo.</p>
+<p>Agora que já temos os testes de unidade, vamos criar um teste de integração para a rota <code>/notes/&lt;id&gt;/</code>. Esse teste vai utilizar o banco de dados real, testando a API como um todo.</p>
 <p>Vamos realizar os mesmos testes que fizemos antes, mas agora com o banco de dados real. Para isso, vamos usar o <code>pytest-django</code>, que já vem configurado para rodar os testes com um banco de dados temporário.</p>
 <p>Crie um arquivo <code>notes/test/integration/test_api_note.py</code> e adicione o seguinte código:</p>
 <h3 id="codigo-do-teste"><strong>📌 Código do Teste</strong></h3>
@@ -2582,9 +2582,9 @@
 <li><strong><code>assert response.data['content'] == note.content</code></strong>: Verifica se o conteúdo retornado na resposta é o mesmo que o conteúdo do aluno criado.</li>
 </ul>
 <h2 id="conclusao"><strong>📌 Conclusão</strong></h2>
-<p>✅ Aprendemos a criar testes unitários e de integração para APIs Django REST.
-✅ Aprendemos que os testes unitários não utilizam um banco de dados real, enquanto os testes de integração utilizam um banco de dados temporário.
-✅ Usamos <strong>Mocks</strong> nos testes unitários para simular conexões com o banco e diferentes cenários.<br />
+<p>✅ Aprendemos a criar testes de unidade e de integração para APIs Django REST.
+✅ Aprendemos que os testes de unidade não utilizam um banco de dados real, enquanto os testes de integração utilizam um banco de dados temporário.
+✅ Usamos <strong>Mocks</strong> nos testes de unidade para simular conexões com o banco e diferentes cenários.<br />
 ✅ Agora temos testes que garantem que a API funciona corretamente! 🚀  </p>
 <p>Isso facilita a <strong>manutenção do código</strong>, garantindo que a API continue funcionando conforme esperado, mesmo com futuras mudanças. 🚀</p>
 <h2 id="diferenca-entre-teste-de-integracao-e-teste-unitario">📊 Diferença entre Teste de Integração e Teste Unitário</h2>
