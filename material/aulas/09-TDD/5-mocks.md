@@ -174,4 +174,6 @@ Agora garantimos que a função **lida corretamente com falhas na API**.
 ✅ Quando queremos **simular erros** sem realmente causar falhas.  
 ✅ Quando precisamos **testar código que depende de outros códigos**.  
 
-Chegamos então no passo final. Agora que sabemos tudo sobre testes automatizados, vamos aplicar esse conhecimento construindo [Testes para APIs Flask](6-flask.md).
+
+Vamos exercitar um pouco fazendo alguns testes? Acesse esses exercícios [Exercício](https://us.prairielearn.com/pl/course_instance/177889/assessment/2533467){:target="_blank"} e faça os testes.
+Chegamos então no passo final. Agora que sabemos tudo sobre testes automatizados, vamos aplicar esse conhecimento construindo [Testes para APIs Django](6-django.md).
