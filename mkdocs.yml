@@ -83,7 +83,7 @@ nav:
       - "Fixtures": aulas/09-TDD/4-fixtures.md
       - "Mocks": aulas/09-TDD/5-mocks.md
       - "Testando APIs": aulas/09-TDD/6-django.md
-      - Exercícios: https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997
+      - Exercícios: https://us.prairielearn.com/pl/course_instance/177889/assessment/2533467
   - "Material Auxiliar":
     - "Usando Python com ambientes virtuais": auxiliar/venv.md
     - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows

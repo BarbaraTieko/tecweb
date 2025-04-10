@@ -50,7 +50,7 @@ python_files = tests.py test_*.py
 ```
 
 
-## **2️⃣ Criando o Teste Unitário para a Rota `/notes/ID`**
+## **2️⃣ Criando o Teste de Unidade para a Rota `/notes/ID`**
 O objetivo do teste é:
 
 - Simular uma requisição **GET** para `/notes/ID`.
@@ -164,7 +164,7 @@ def test_api_note_404_unit():
 
 ## **Criando Teste de Integração com pytest e Django REST**
 
-Agora que já temos os testes unitários, vamos criar um teste de integração para a rota `/notes/<id>/`. Esse teste vai utilizar o banco de dados real, testando a API como um todo.
+Agora que já temos os testes de unidade, vamos criar um teste de integração para a rota `/notes/<id>/`. Esse teste vai utilizar o banco de dados real, testando a API como um todo.
 
 Vamos realizar os mesmos testes que fizemos antes, mas agora com o banco de dados real. Para isso, vamos usar o `pytest-django`, que já vem configurado para rodar os testes com um banco de dados temporário.
 
@@ -213,9 +213,9 @@ def test_api_note_404():
 
 
 ## **📌 Conclusão**
-✅ Aprendemos a criar testes unitários e de integração para APIs Django REST.
-✅ Aprendemos que os testes unitários não utilizam um banco de dados real, enquanto os testes de integração utilizam um banco de dados temporário.
-✅ Usamos **Mocks** nos testes unitários para simular conexões com o banco e diferentes cenários.  
+✅ Aprendemos a criar testes de unidade e de integração para APIs Django REST.
+✅ Aprendemos que os testes de unidade não utilizam um banco de dados real, enquanto os testes de integração utilizam um banco de dados temporário.
+✅ Usamos **Mocks** nos testes de unidade para simular conexões com o banco e diferentes cenários.  
 ✅ Agora temos testes que garantem que a API funciona corretamente! 🚀  
 
 Isso facilita a **manutenção do código**, garantindo que a API continue funcionando conforme esperado, mesmo com futuras mudanças. 🚀
