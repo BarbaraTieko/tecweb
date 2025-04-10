@@ -1,0 +1,2701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Andrew Kurauchi">
+      
+      
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2025.1/aulas/09-TDD/0-tdd/">
+      
+      
+        <link rel="prev" href="../../08-django-rest/">
+      
+      
+        <link rel="next" href="../1-pytest/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>TDD - Tecnologias Web - Insper 2025/1</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/printing.css">
+    
+      <link rel="stylesheet" href="../../../css/tecweb.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#o-que-e-tdd" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Tecnologias Web - Insper 2025/1" class="md-header__button md-logo" aria-label="Tecnologias Web - Insper 2025/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tecnologias Web - Insper 2025/1
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TDD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tecnologias Web - Insper 2025/1" class="md-nav__button md-logo" aria-label="Tecnologias Web - Insper 2025/1" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tecnologias Web - Insper 2025/1
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cálculo da média
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Aulas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Aulas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    01 - Get-it
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            01 - Get-it
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/Aula01.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Criando o servidor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Respondendo com páginas HTML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Separando algumas responsabilidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-getit/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Fazendo um formulário de criação de anotação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            02 - Desafio CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/Aula02.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 - Persistência de dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Persistência de dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Instalando o SQLite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando a tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Inserindo dados na tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Consultando e selecionando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Atualizando os dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-persistencia-de-dados/parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Apagando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    04 - Django
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            04 - Django
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/Aula04.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Iniciando o projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando nosso primeiro app
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Integrando com o banco de dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: O Django Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Usando templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-django/parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Trabalhando com formulários e o método POST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    05 - Containers e Bancos de Dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            05 - Containers e Bancos de Dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bd/Aula05.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bd/guia-wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guia de Instalação WSL e Docker para Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-bd/windows_docker_install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guia de Instalação WSL e Docker para Windows (v2)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    06 - Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    07 - Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            07 - Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    08 - Django REST
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            08 - Django REST
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-django-rest/Aula18.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-django-rest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    09 - Testes automatizados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            09 - Testes automatizados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    TDD
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    TDD
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-o-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como funciona o TDD?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como funciona o TDD?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-do-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Prós do TDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras-do-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Contras do TDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-a-pena-usar-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Vale a pena usar TDD?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-unitario-teste-de-integracao-e-teste-de-ponta-a-ponta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste Unitário, Teste de Integração e Teste de Ponta a Ponta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teste Unitário, Teste de Integração e Teste de Ponta a Ponta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-unitario" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste Unitário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste Unitário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste de Integração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste de Integração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-de-ponta-a-ponta-e2e-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste de Ponta a Ponta (E2E – End-to-End)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste de Ponta a Ponta (E2E – End-to-End)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Resumo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-pytest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pytest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-boaspraticas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boas práticas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-exceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4-fixtures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fixtures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5-mocks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mocks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6-django/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testando APIs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://us.prairielearn.com/pl/course_instance/177857/assessment/2509997" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercícios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Material Auxiliar
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Material Auxiliar
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../auxiliar/venv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Python com ambientes virtuais
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guia de Instalação WSL e Docker para Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entregas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entregas/01-ELI5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    01 - ELI5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-desafio-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    02 - Desafio CSS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../entregas/03-servidor-js/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    03 - Servidor JS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projetos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Projetos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto 1A
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto 1A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1a/tarefas-projeto1a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Projeto 1B
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projeto 1B
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enunciado
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1b/tarefa01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefa 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1b/tarefa02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefa 02
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1b/tarefa03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefa 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projetos/projeto1/projeto1b/tarefa04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tarefa 04
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Simulado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Simulado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../simulado/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avaliação Intermediária
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-funciona-o-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como funciona o TDD?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Como funciona o TDD?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros-do-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Prós do TDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras-do-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Contras do TDD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vale-a-pena-usar-tdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Vale a pena usar TDD?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste-unitario-teste-de-integracao-e-teste-de-ponta-a-ponta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste Unitário, Teste de Integração e Teste de Ponta a Ponta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teste Unitário, Teste de Integração e Teste de Ponta a Ponta">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teste-unitario" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste Unitário
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste Unitário">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-de-integracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste de Integração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste de Integração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste-de-ponta-a-ponta-e2e-end-to-end" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Teste de Ponta a Ponta (E2E – End-to-End)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Teste de Ponta a Ponta (E2E – End-to-End)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-tipico_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário típico:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quando usar?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Resumo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="o-que-e-tdd">O que é TDD?</h1>
+<p><strong>TDD (Test-Driven Development)</strong>, ou <strong>Desenvolvimento Orientado a Testes</strong>, é uma metodologia de programação que segue a ideia de escrever testes antes do código. Em vez de simplesmente criar a funcionalidade e testar depois, no TDD primeiro escrevemos um teste que define o comportamento esperado do código e, só então, implementamos a solução. Se quiser se aprofundar mais sobre TDD, recomendo a leitura do artigo <a href="https://pytest-with-eric.com/tdd/pytest-tdd/#The-TDD-Process-Red-Green-Refactor">How To Practice Test-Driven Development In Python?</a>.</p>
+<h2 id="como-funciona-o-tdd">Como funciona o TDD?</h2>
+<p>O TDD segue um ciclo de três passos, conhecido como <strong>Red-Green-Refactor</strong>:  </p>
+<ol>
+<li>
+<p><strong>Red (Vermelho) - Escreva um teste que falha</strong>  </p>
+<ul>
+<li>Antes de criar a funcionalidade, escrevemos um teste automatizado que descreve o comportamento esperado.  </li>
+<li>Como o código ainda não existe, o teste <strong>vai falhar</strong>. Isso indica que o teste está funcionando corretamente e que precisamos implementar a funcionalidade.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Green (Verde) - Faça o teste passar</strong>  </p>
+<ul>
+<li>Agora escrevemos o código <strong>mais simples possível</strong> para fazer o teste passar.  </li>
+<li>O objetivo aqui não é criar a solução perfeita, mas apenas garantir que o teste seja aprovado.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Refactor (Refatoração) - Melhore o código</strong>  </p>
+<ul>
+<li>Com o teste passando, podemos melhorar o código sem medo, pois os testes garantem que ele ainda funciona corretamente.  </li>
+<li>Esse processo evita códigos desnecessários e ajuda a manter o programa limpo e organizado.  </li>
+</ul>
+</li>
+</ol>
+<p>Esse ciclo se repete continuamente, garantindo que cada nova funcionalidade seja testada antes mesmo de ser escrita.  </p>
+<p>A metodologia <strong>TDD (Test-Driven Development)</strong> tem vantagens e desvantagens que devem ser consideradas ao adotá-la.</p>
+<h3 id="pros-do-tdd">✅ <strong>Prós do TDD</strong></h3>
+<ol>
+<li>
+<p><strong>Código mais confiável e menos bugs</strong>  </p>
+<ul>
+<li>Como os testes são escritos antes do código, os desenvolvedores são forçados a pensar em possíveis falhas desde o início. Isso reduz significativamente a quantidade de bugs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Melhor design e modularidade</strong>  </p>
+<ul>
+<li>Como o código é escrito para passar em testes pequenos e isolados, ele tende a ser mais modular e desacoplado, facilitando manutenção e refatoração.</li>
+</ul>
+</li>
+<li>
+<p><strong>Documentação viva</strong>  </p>
+<ul>
+<li>Os testes atuam como uma documentação do comportamento esperado do código, ajudando outros desenvolvedores a entenderem como cada parte do sistema deve funcionar.</li>
+</ul>
+</li>
+<li>
+<p><strong>Facilidade de refatoração</strong>  </p>
+<ul>
+<li>Como há uma base sólida de testes automatizados, é possível refatorar o código com mais confiança, pois os testes indicarão se algo quebrou.</li>
+</ul>
+</li>
+<li>
+<p><strong>Redução de tempo gasto em depuração</strong>  </p>
+<ul>
+<li>O feedback rápido dos testes ajuda a detectar e corrigir problemas antes que se tornem complexos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Melhor cobertura de testes</strong>  </p>
+<ul>
+<li>Como os testes são criados antes do código, a cobertura tende a ser mais completa do que quando os testes são escritos depois (ou nem são escritos).</li>
+</ul>
+</li>
+<li>
+<p><strong>Facilita a colaboração</strong>  </p>
+<ul>
+<li>Outros desenvolvedores podem trabalhar no código sem medo de quebrá-lo, pois os testes indicam se algo não está funcionando corretamente.</li>
+</ul>
+</li>
+</ol>
+<h3 id="contras-do-tdd">❌ <strong>Contras do TDD</strong></h3>
+<ol>
+<li>
+<p><strong>Maior tempo inicial de desenvolvimento</strong>  </p>
+<ul>
+<li>Escrever testes antes do código pode tornar o início do projeto mais lento, o que pode ser um problema em prazos apertados.</li>
+</ul>
+</li>
+<li>
+<p><strong>Curva de aprendizado</strong>  </p>
+<ul>
+<li>Desenvolvedores que não estão acostumados com TDD podem ter dificuldade inicial em estruturar os testes corretamente e entender a lógica por trás da abordagem.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dificuldade com código legado</strong>  </p>
+<ul>
+<li>Aplicar TDD em projetos que já existem e não possuem uma base de testes pode ser difícil, pois pode ser necessário refatorar o código antes de escrever os testes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Excesso de testes desnecessários</strong>  </p>
+<ul>
+<li>Às vezes, os desenvolvedores acabam escrevendo testes para tudo, mesmo para funcionalidades triviais, o que pode tornar a suíte de testes difícil de manter.</li>
+</ul>
+</li>
+<li>
+<p><strong>Falsa sensação de segurança</strong>  </p>
+<ul>
+<li>Testes bem escritos reduzem bugs, mas não garantem que o sistema atenderá às necessidades do usuário final. Além disso, testes mal planejados podem não cobrir todos os cenários importantes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Testes podem se tornar um fardo</strong>  </p>
+<ul>
+<li>Manter testes atualizados conforme o código evolui pode demandar tempo. Se mudanças frequentes ocorrerem na arquitetura ou nas regras de negócio, os testes precisarão ser constantemente reescritos.</li>
+</ul>
+</li>
+</ol>
+<h3 id="vale-a-pena-usar-tdd">📌 <strong>Vale a pena usar TDD?</strong></h3>
+<p>Depende do contexto.<br />
+- Se o projeto exige <strong>alta qualidade, manutenção fácil e desenvolvimento colaborativo</strong>, TDD pode ser um grande aliado.<br />
+- Para <strong>projetos rápidos ou protótipos</strong>, pode ser mais prático desenvolver primeiro e testar depois.<br />
+- Para <strong>equipes experientes</strong>, TDD funciona melhor, enquanto para iniciantes pode ser um desafio.</p>
+<h2 id="teste-unitario-teste-de-integracao-e-teste-de-ponta-a-ponta">Teste Unitário, Teste de Integração e Teste de Ponta a Ponta</h2>
+<p>Garantir a qualidade de um software é essencial, e para isso existem diferentes tipos de testes automatizados. Três dos mais importantes são: <strong>teste unitário, teste de integração e teste de ponta a ponta (E2E – End-to-End)</strong>. Cada um deles tem um propósito específico dentro do processo de desenvolvimento.  </p>
+<h3 id="teste-unitario">🔹 <strong>Teste Unitário</strong></h3>
+<p>O <strong>teste unitário</strong> é o mais básico e foca em validar <strong>pequenas partes do código de forma isolada</strong>, como funções ou métodos individuais. Ele verifica se cada unidade do programa funciona corretamente sem considerar suas dependências externas.  </p>
+<h4 id="cenario-tipico"><strong>Cenário típico</strong>:</h4>
+<p>Imagine que um sistema tenha uma função para calcular descontos em uma loja virtual. Um teste unitário garantiria que a função retorna o resultado correto para diferentes valores de compra e regras de desconto.</p>
+<h4 id="quando-usar"><strong>Quando usar?</strong></h4>
+<ul>
+<li>Para testar regras de negócio individuais, como cálculos matemáticos e validações simples.  </li>
+<li>Para garantir que uma função específica continua funcionando conforme esperado após alterações no código.  </li>
+<li>Para evitar que pequenos erros se propaguem para outras partes do sistema.  </li>
+</ul>
+<h3 id="teste-de-integracao">🔹 <strong>Teste de Integração</strong></h3>
+<p>O <strong>teste de integração</strong> verifica <strong>como diferentes partes do sistema trabalham juntas</strong>. Ele avalia a comunicação entre módulos, banco de dados, APIs externas e outros componentes.  </p>
+<h4 id="cenario-tipico_1"><strong>Cenário típico</strong>:</h4>
+<p>Suponha que uma aplicação tenha um módulo que recebe dados do usuário e os armazena no banco de dados. O teste de integração verificaria se essa operação acontece corretamente, garantindo que os dados são armazenados e recuperados conforme esperado.  </p>
+<h4 id="quando-usar_1"><strong>Quando usar?</strong></h4>
+<ul>
+<li>Quando há dependências entre módulos, como chamadas a um banco de dados ou a serviços externos.  </li>
+<li>Para verificar se APIs e bibliotecas externas estão sendo utilizadas corretamente.  </li>
+<li>Para garantir que componentes do sistema se comunicam sem falhas.  </li>
+</ul>
+<h3 id="teste-de-ponta-a-ponta-e2e-end-to-end">🔹 <strong>Teste de Ponta a Ponta (E2E – End-to-End)</strong></h3>
+<p>O <strong>teste de ponta a ponta</strong> verifica <strong>todo o fluxo da aplicação</strong>, simulando a experiência do usuário real. Ele garante que o sistema funciona como um todo, testando desde a interface até o processamento dos dados no backend e a resposta do banco de dados.  </p>
+<h4 id="cenario-tipico_2"><strong>Cenário típico</strong>:</h4>
+<p>Em um sistema de e-commerce, um teste E2E validaria o processo completo de compra: um usuário acessa a página de um produto, adiciona-o ao carrinho, preenche os dados de pagamento, conclui a compra e recebe a confirmação. O teste garantiria que todas as etapas funcionam corretamente e que o pedido é registrado no sistema.<br />
+Apesar de muito útil, o teste de ponta a ponta é mais lento e frágil do que os testes unitários e de integração, pois envolvem a execução de todas as etapas do sistema e mudanças na interface do usuário podem quebrar os testes facilmente.</p>
+<h4 id="quando-usar_2"><strong>Quando usar?</strong></h4>
+<ul>
+<li>Para garantir que todas as partes do sistema operam corretamente do ponto de vista do usuário.  </li>
+<li>Para testar fluxos de navegação e processos críticos, como login, compras e pagamentos.  </li>
+<li>Para validar a integração completa entre frontend, backend e banco de dados.  </li>
+</ul>
+<h3 id="resumo">🔹 <strong>Resumo</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de Teste</th>
+<th>O que verifica?</th>
+<th>Exemplo de cenário</th>
+<th>Vantagens</th>
+<th>Desvantagens</th>
+<th>Ferramentas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Teste Unitário</strong></td>
+<td>Uma função ou método isolado</td>
+<td>Validar o cálculo de desconto em uma compra</td>
+<td>Rápido, fácil de rodar e de manter</td>
+<td>Não testa a interação com outros módulos</td>
+<td>pytest, unittest</td>
+</tr>
+<tr>
+<td><strong>Teste de Integração</strong></td>
+<td>Comunicação entre módulos do sistema</td>
+<td>Verificar se um cadastro de usuário é salvo corretamente no banco de dados</td>
+<td>Detecta problemas entre componentes</td>
+<td>Mais lento e exige mais configuração</td>
+<td>pytest + requests, Postman + Newman</td>
+</tr>
+<tr>
+<td><strong>Teste de Ponta a Ponta (E2E)</strong></td>
+<td>Fluxo completo da aplicação</td>
+<td>Simular um processo de compra, do login ao pagamento</td>
+<td>Testa o sistema como um usuário real</td>
+<td>Lento e pode quebrar facilmente</td>
+<td>Selenium</td>
+</tr>
+</tbody>
+</table>
+<p>Cada tipo de teste tem seu papel dentro do processo de desenvolvimento. <strong>Usá-los em conjunto</strong> ajuda a garantir que o sistema seja confiável, desde a menor função até o fluxo completo do usuário. 🚀</p>
+<p>E como aplicamos TDD na prática? Vamos ver em detalhes no <a href="../1-pytest/">próximo conteúdo</a>!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.code.select", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+<script>
+    window.site_url = "https://barbaratieko.github.io/tecweb.2025.1/";
+</script>
+
+
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/progress-check.js"></script>
+      
+        <script src="../../../javascripts/quiz.js"></script>
+      
+        <script src="../../../javascripts/short-questions.js"></script>
+      
+        <script src="../../../javascripts/translate-admonitions.js"></script>
+      
+        <script src="../../../javascripts/webhook-config.js"></script>
+      
+    
+<!-- Add scripts that need to run afterwards here -->
+
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
