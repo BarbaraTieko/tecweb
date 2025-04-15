@@ -12,14 +12,14 @@ Vamos utilizar o `react-router-dom` para criar um sistema de rotas para a nossa 
 - Abra o arquivo `src/main.jsx` e adicione as seguintes linhas de código:
 
 ```jsx hl_lines="3-6 10-15 19"
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import App from './App.jsx'
 import './index.css'
+import App from './App.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,10 +28,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </StrictMode>,
 )
 ```
 
@@ -75,16 +75,16 @@ Copie o arquivo de estilo `src/components/Formulario/index.css` para `src/compon
 Agora vamos definir uma nova rota para a página de edição. Queremos definir a rota `/edit/:noteId` para que possamos editar uma anotação específica.
 Para isso, vamos atualizar o arquivo `src/main.jsx`:
 
-```js hl_lines="8 16-19"
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+```js hl_lines="9 16-19"
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import './index.css'
 import App from './App.jsx'
 import Editar from './components/Editar'
-import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -97,10 +97,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </StrictMode>,
 )
 ```
 
@@ -222,16 +222,16 @@ export default function Editar() {
 
 Definimos a função `loader`, mas precisamos realizar uma configuração para que ao acessar a rota `/edit/:noteId`, a função loader seja executada. Para isso, vamos atualizar o arquivo `src/main.jsx`:
 
-```js hl_lines="8 19"
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+```js hl_lines="9 19"
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import './index.css'
 import App from './App.jsx'
 import Editar, { loader as noteLoader} from './components/Editar'
-import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -245,10 +245,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  </StrictMode>,
 )
 ```
 

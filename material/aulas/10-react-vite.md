@@ -76,7 +76,7 @@ Crie o repositório do Github Classroom para fazer o envio deste handout. [Link 
     ```
 
     <figure markdown="span">
-      ![Página inicial](09-react/img/react-vite-pagina-inicial.png){ width="50%" }
+      ![Página inicial](10-react/img/react-vite-pagina-inicial.png){ width="50%" }
       <figcaption>Página inicial</figcaption>
     </figure>
 
@@ -84,4 +84,4 @@ Crie o repositório do Github Classroom para fazer o envio deste handout. [Link 
 
 Vamos começar criando um componente para o `card`.
 
-[Criando Componentes](09-react/parte-01-componentes.md){ .md-button .md-button--primary }
+[Criando Componentes](10-react/parte-01-componentes.md){ .md-button .md-button--primary }

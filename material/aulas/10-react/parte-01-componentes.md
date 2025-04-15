@@ -27,7 +27,7 @@ Vamos criar nosso primeiro componente, o `Note`. Ele será responsável por most
     - **Linha 1:** o `#!js export default` indica que, ao ser importar esse arquivo, o valor a seguir deve ser devolvido (no caso a `#!js function Note()`). Um exemplo disso pode ser visto no código abaixo, no arquivo `src/App.jsx` no qual `#!js Note` guarda o valor default devolvido pela importação de `./components/Note` (como é uma pasta, ele importa por padrão o arquivo `src/components/Note/index.jsx`);
     - **Linha 2:** o valor de retorno da função é uma tag HTML??? Pois é, na verdade esse arquivo não é JavaScript puro e sim uma sintaxe chamada JSX na qual é possível misturar tags e código JS.
 
-2. Substituia o código no arquivo `src/App.jsx` pelo código abaixo:
+2. Substitua o código no arquivo `src/App.jsx` pelo código abaixo:
 
     ```jsx linenums="1"
     import Note from "./components/Note";
@@ -46,10 +46,9 @@ Vamos criar nosso primeiro componente, o `Note`. Ele será responsável por most
 
     - **Linha 1:** importação do componente `Note`;
     - **Linha 2:** quando é necessário adicionar algum estilo ao componente nós podemos importar arquivos `.css` para que o estilo definido no arquivo seja aplicado;
-    - **Linha 4:** definindo uma função que será o componente da nossa aplicação. Note que ele é exportado na linha 12. Isso é equivalente ao que fizemos em uma linha no arquivo anterior;
+    - **Linha 4:** definindo uma função que será o componente da nossa aplicação. Note que ele é exportado na linha 10. Isso é equivalente ao que fizemos em uma linha no arquivo anterior;
     - **Linha 5:** o valor de retorno é um componente mais complexo;
-    - **Linha 6:** o `className` será traduzido diretamente para o atributo `class` no HTML;
-    - **Linha 7:** utilizamos o componente criado no outro arquivo. Note como o código é **encapsulado**. Não precisamos saber **como** uma anotação é representada. Basta sabermos **o que** esse componente faz, ou seja, ele mostra os dados de uma anotação. 
+    - **Linha 6:** utilizamos o componente criado no outro arquivo. Note como o código é **encapsulado**. Não precisamos saber **como** uma anotação é representada. Basta sabermos **o que** esse componente faz, ou seja, ele mostra os dados de uma anotação. 
     
     Criamos um componente como uma função JavaScript que retorna HTML, para usarmos esse componente, ao invés de chamar a função da forma como estamos acostumados `Note()`, chamamos o componente como se fosse uma tag HTML `<Note />`.
 
