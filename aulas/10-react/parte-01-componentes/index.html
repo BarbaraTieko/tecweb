@@ -10,9 +10,13 @@
         <meta name="author" content="Andrew Kurauchi">
       
       
-        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2025.1/aulas/09-react/parte-01-componentes/">
+        <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2025.1/aulas/10-react/parte-01-componentes/">
       
       
+        <link rel="prev" href="../../10-react-vite/">
+      
+      
+        <link rel="next" href="../parte-02-recebendo-dados/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Parte 01 componentes - Tecnologias Web - Insper 2025/1</title>
+        <title>Componentes - Tecnologias Web - Insper 2025/1</title>
       
     
     
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Parte 01 componentes
+              Componentes
             
           </span>
         </div>
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -1477,6 +1483,279 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    10 - React
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            10 - React
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-react-vite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Criando projeto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aprimorando-o-componente-mostrando-uma-anotacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aprimorando o componente: mostrando uma anotação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#importando-as-fontes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Importando as fontes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizando-o-componente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizando o componente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#renderizando-multiplos-componentes-a-partir-de-um-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Renderizando múltiplos componentes a partir de um array
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recebendo-dados-de-uma-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recebendo dados de uma API
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-02-recebendo-dados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recebendo Dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-03-carregando-estaticos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Carregando imagens e arquivos estáticos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-04-criacao-notas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementando a Criação de Anotações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-05-editando-anotacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Implementando a edição de Anotações
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte-06-bonus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bônus: implementando a rotação dos cartões
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2095,7 +2374,7 @@
                   
 
 
-  <h1>Parte 01 componentes</h1>
+  <h1>Componentes</h1>
 
 <p>Vamos começar fazendo alterações para começarmos a refazer o Projeto 1B utilizando Django REST + React.</p>
 <p>Componentes são a base do React, a extensão <code>.JSX</code> (JavaScript XML, JavaScript Syntax eXtension) é uma extensão de arquivo usada por arquivos JavaScript que permitem a mistura de HTML e JavaScript. Os componentes são funções JavaScript que retornam HTML. </p>
@@ -2122,7 +2401,7 @@
 </ul>
 </li>
 <li>
-<p>Substituia o código no arquivo <code>src/App.jsx</code> pelo código abaixo:</p>
+<p>Substitua o código no arquivo <code>src/App.jsx</code> pelo código abaixo:</p>
 <div class="language-jsx highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -2147,10 +2426,9 @@
 <ul>
 <li><strong>Linha 1:</strong> importação do componente <code>Note</code>;</li>
 <li><strong>Linha 2:</strong> quando é necessário adicionar algum estilo ao componente nós podemos importar arquivos <code>.css</code> para que o estilo definido no arquivo seja aplicado;</li>
-<li><strong>Linha 4:</strong> definindo uma função que será o componente da nossa aplicação. Note que ele é exportado na linha 12. Isso é equivalente ao que fizemos em uma linha no arquivo anterior;</li>
+<li><strong>Linha 4:</strong> definindo uma função que será o componente da nossa aplicação. Note que ele é exportado na linha 10. Isso é equivalente ao que fizemos em uma linha no arquivo anterior;</li>
 <li><strong>Linha 5:</strong> o valor de retorno é um componente mais complexo;</li>
-<li><strong>Linha 6:</strong> o <code>className</code> será traduzido diretamente para o atributo <code>class</code> no HTML;</li>
-<li><strong>Linha 7:</strong> utilizamos o componente criado no outro arquivo. Note como o código é <strong>encapsulado</strong>. Não precisamos saber <strong>como</strong> uma anotação é representada. Basta sabermos <strong>o que</strong> esse componente faz, ou seja, ele mostra os dados de uma anotação. </li>
+<li><strong>Linha 6:</strong> utilizamos o componente criado no outro arquivo. Note como o código é <strong>encapsulado</strong>. Não precisamos saber <strong>como</strong> uma anotação é representada. Basta sabermos <strong>o que</strong> esse componente faz, ou seja, ele mostra os dados de uma anotação. </li>
 </ul>
 <p>Criamos um componente como uma função JavaScript que retorna HTML, para usarmos esse componente, ao invés de chamar a função da forma como estamos acostumados <code>Note()</code>, chamamos o componente como se fosse uma tag HTML <code>&lt;Note /&gt;</code>.</p>
 <div class="admonition info">
