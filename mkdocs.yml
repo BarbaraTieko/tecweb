@@ -109,6 +109,9 @@ nav:
       - "Tarefa 02": projetos/projeto1/projeto1b/tarefa02.md
       - "Tarefa 03": projetos/projeto1/projeto1b/tarefa03.md
       - "Tarefa 04": projetos/projeto1/projeto1b/tarefa04.md
+    - "Projeto 2": 
+      - "Enunciado": projetos/projeto2.md
+      - "Dicas": projetos/projeto2/dicas.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
   
