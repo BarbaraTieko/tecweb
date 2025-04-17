@@ -39,7 +39,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 2. Escolha sua API externa.
 
     !!! tip "Dica"
-        Dica de repositório para procurar APIs: [https://rapidapi.com/](https://rapidapi.com/){:target="_blank"}
+        Dica de repositório para procurar APIs: [https://rapidapi.com/](https://rapidapi.com/hub){:target="_blank"}
 
         Algumas APIs disponíveis pela RapidAPI são pagas, mas tem várias opções gratuitas ou freemium. **Evite utilizar APIs que peçam o cadastro de cartão de crédito.**
 
