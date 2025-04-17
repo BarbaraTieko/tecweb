@@ -52,7 +52,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 **IMPORTANTE**: Faça o commit do fluxo de tela e do README do backend antes do início da implementação do projeto. O fluxo de tela e o README do backend serão avaliados na rubrica do projeto.
 
-## Rubrica
+## Tarefas
 
 A rubrica a seguir será utilizada na correção do Projeto 2:
 
@@ -61,7 +61,9 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
 1. Funcionalidade essencial 1 indicada no Inception;
 2. Funcionalidade essencial 2 indicada no Inception;
 3. Implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.
-4. Colocou em produção (está disponível na internet)
+4. Colocou em produção (está disponível na internet) 
+
+### Rubrica 
 
 - **Conceito I**: Não entregou ou o código não executa;
 - **Conceito D**: Entregou apenas 1 funcionalidade essencial;
