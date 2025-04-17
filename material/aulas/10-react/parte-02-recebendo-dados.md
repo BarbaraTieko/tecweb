@@ -24,7 +24,7 @@ function App() {
     },
   ];
   axios
-    .get("http://localhost:8000/api/notes/")
+    .get("http://localhost:8000/notes/")
     .then((res) => console.log(res));
 
   return (
@@ -101,7 +101,7 @@ import "./App.css";
 
 function App() {
 
-  const notes = axios.get("http://localhost:8000/api/notes/").then((res) => setNotes(res.data));
+  const notes = axios.get("http://localhost:8000/notes/").then((res) => setNotes(res.data));
 
   return (
     <>
@@ -133,7 +133,7 @@ import "./App.css";
 function App() {
   const [notes, setNotes] = useState([]); // Remova o array de notes que existia na versão anterior
 
-  axios.get("http://localhost:8000/api/notes/").then((res) => setNotes(res.data));
+  axios.get("http://localhost:8000/notes/").then((res) => setNotes(res.data));
 
   console.log(notes);
 
@@ -182,7 +182,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }, []);
 

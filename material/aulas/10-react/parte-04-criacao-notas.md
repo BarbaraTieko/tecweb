@@ -46,7 +46,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }, []);
 
@@ -193,7 +193,7 @@ export default function Formulario() {
         }
 
         axios
-            .post("http://localhost:8000/api/notes/", data)
+            .post("http://localhost:8000/notes/", data)
             .catch((error) => console.log(error));
     }
 
@@ -237,7 +237,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }, []);
 
@@ -278,7 +278,7 @@ function App() {
 
   const carregaNotas = () => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }
 
@@ -324,7 +324,7 @@ function App() {
 
   const carregaNotas = () => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }
 
@@ -375,7 +375,7 @@ export default function Formulario(props) {
         }
 
         axios
-            .post("http://localhost:8000/api/notes/", data)
+            .post("http://localhost:8000/notes/", data)
             .then((response) => props.loadNotes())
             .catch((error) => console.log(error));
     }
@@ -424,7 +424,7 @@ export default function Formulario(props) {
         }
 
         axios
-            .post("http://localhost:8000/api/notes/", data)
+            .post("http://localhost:8000/notes/", data)
             .then((response) => {
                 props.loadNotes();
                 setTitulo("");

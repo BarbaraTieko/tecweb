@@ -145,7 +145,7 @@ function App() {
 
   const carregaNotas = () => {
     axios
-      .get("http://localhost:8000/api/notes/")
+      .get("http://localhost:8000/notes/")
       .then((res) => setNotes(res.data));
   }
 
@@ -189,7 +189,7 @@ import AppBar from "../AppBar";
 
 export async function loader({ params }) {
     const note = await axios
-                        .get(`http://localhost:8000/api/notes/${params.noteId}/`)
+                        .get(`http://localhost:8000/notes/${params.noteId}/`)
                         .then((response) => response.data)
     return { note };
 }
@@ -264,7 +264,7 @@ import AppBar from "../AppBar";
 
 export async function loader({ params }) {
     const note = await axios
-                        .get(`http://localhost:8000/api/notes/${params.noteId}/`)
+                        .get(`http://localhost:8000/notes/${params.noteId}/`)
                         .then((response) => response.data)
     return { note };
 }
@@ -309,7 +309,7 @@ import AppBar from "../AppBar";
 
 export async function loader({ params }) {
     const note = await axios
-                        .get(`http://localhost:8000/api/notes/${params.noteId}/`)
+                        .get(`http://localhost:8000/notes/${params.noteId}/`)
                         .then((response) => response.data)
     return { note };
 }
@@ -374,7 +374,7 @@ import AppBar from "../AppBar";
 
 export async function loader({ params }) {
     const note = await axios
-                        .get(`http://localhost:8000/api/notes/${params.noteId}/`)
+                        .get(`http://localhost:8000/notes/${params.noteId}/`)
                         .then((response) => response.data)
     return { note };
 }
