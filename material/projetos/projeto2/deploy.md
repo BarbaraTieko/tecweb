@@ -2,9 +2,7 @@ Para realizar o deploy para o projeto 2 precisaremos efetuar duas etapas: o depl
 
 ## Deploy do backend
 
-Assim como no projeto 1B, vamos realizar o deploy do backend utilizando o serviço Render. Caso você não tenha realizado o deploy do projeto 1B, siga o tutorial em [Deploy do Projeto 1B](../../aulas/06-deploy.md).
-
-Caso tenha realizado o deploy do projeto 1B, apague as instâncias do banco de dados e o projeto 1B do Render para que possa criar novas instâncias para o projeto 2.
+Assim como no projeto 1B, vamos realizar o deploy do backend utilizando o serviço Render. 
 
 ## Resumo do deploy
 
@@ -278,7 +276,7 @@ O seu repositório deve possui um arquivo .gitignore com o seguinte conteúdo:
         ![](../../aulas/06-deploy/criando-postgresql-7.png){ width="80%" }
     </figure>
 
-- Procure o repositório que você fez o fork do projeto e clique em `Connect`.
+- Procure o repositóriodo seu projeto e clique em `Connect`.
 
     <figure markdown="span">
         ![](../../aulas/06-deploy/criando-postgresql-8.png){ width="80%" }
@@ -388,6 +386,10 @@ Sempre que você realizar um commit na branch principal, o Render fará um novo 
 Após realizar o deploy do backend, vamos realizar o deploy do frontend. Para isso, pegue o link gerado para o seu projeto backend no Render e atualize todas as requisições feitas no frontend para a rota `http://localhost:8000` para o link gerado pelo Render.
 
 Faça um commit e um push para o seu repositório no Github.
+
+### Teste
+
+Faça algumas requisições para verificar se o backend está funcionando corretamente. Você pode utilizar o [Postman](https://www.postman.com/).
 
 
 ### Deploy do frontend
