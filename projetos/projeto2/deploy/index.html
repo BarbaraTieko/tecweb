@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb.2025.1/projetos/projeto2/deploy/">
       
       
+        <link rel="prev" href="../dicas/">
+      
+      
+        <link rel="next" href="../../../simulado/ai/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -1867,17 +1871,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1891,7 +1897,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Projetos
@@ -2135,17 +2141,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
         
           
           <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
@@ -2159,7 +2167,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             Projeto 2
@@ -2203,6 +2211,207 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-do-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do backend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-do-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumo do deploy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumo do deploy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-postgresql-no-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando PostgreSQL no Render
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-a-aplicacao-com-o-banco-de-dados-postgresql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectando a aplicação com o banco de dados PostgreSQL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mais-configuracoes-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mais configurações do projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mais configurações do projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#outras-modificacoes-nas-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outras modificações nas configurações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atualizando-o-arquivo-requirementstxt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando o arquivo requirements.txt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivos-desnecessarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos desnecessários
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enviando-o-projeto-para-o-render" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviando o projeto para o Render
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passo-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passo final
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-do-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy do frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alterando-localhost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alterando localhost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-do-frontend_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deploy do frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2432,6 +2641,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#deploy-do-frontend_1" class="md-nav__link">
     <span class="md-ellipsis">
       Deploy do frontend
@@ -2464,8 +2682,7 @@
 
 <p>Para realizar o deploy para o projeto 2 precisaremos efetuar duas etapas: o deploy do frontend e o deploy do backend.</p>
 <h2 id="deploy-do-backend">Deploy do backend</h2>
-<p>Assim como no projeto 1B, vamos realizar o deploy do backend utilizando o serviço Render. Caso você não tenha realizado o deploy do projeto 1B, siga o tutorial em <a href="../../../aulas/06-deploy/">Deploy do Projeto 1B</a>.</p>
-<p>Caso tenha realizado o deploy do projeto 1B, apague as instâncias do banco de dados e o projeto 1B do Render para que possa criar novas instâncias para o projeto 2.</p>
+<p>Assim como no projeto 1B, vamos realizar o deploy do backend utilizando o serviço Render. </p>
 <h2 id="resumo-do-deploy">Resumo do deploy</h2>
 <h3 id="criando-postgresql-no-render">Criando PostgreSQL no Render</h3>
 <p>O primeiro passo é criar um banco de dados PostgreSQL utilizando o Render. </p>
@@ -2707,7 +2924,7 @@ Em seguida, clique em <code>Create Database</code>.</p>
 </figure></p>
 </li>
 <li>
-<p>Procure o repositório que você fez o fork do projeto e clique em <code>Connect</code>.</p>
+<p>Procure o repositóriodo seu projeto e clique em <code>Connect</code>.</p>
 <p><figure markdown="span">
     <a class="glightbox" href="../../../aulas/06-deploy/criando-postgresql-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../aulas/06-deploy/criando-postgresql-8.png" width="80%" /></a>
 </figure></p>
@@ -2799,6 +3016,8 @@ Em seguida, clique em <code>Create Database</code>.</p>
 <h3 id="alterando-localhost">Alterando localhost</h3>
 <p>Após realizar o deploy do backend, vamos realizar o deploy do frontend. Para isso, pegue o link gerado para o seu projeto backend no Render e atualize todas as requisições feitas no frontend para a rota <code>http://localhost:8000</code> para o link gerado pelo Render.</p>
 <p>Faça um commit e um push para o seu repositório no Github.</p>
+<h3 id="teste">Teste</h3>
+<p>Faça algumas requisições para verificar se o backend está funcionando corretamente. Você pode utilizar o <a href="https://www.postman.com/">Postman</a>.</p>
 <h3 id="deploy-do-frontend_1">Deploy do frontend</h3>
 <p>Vamos criar outro web service no Render para o frontend.</p>
 <figure>
