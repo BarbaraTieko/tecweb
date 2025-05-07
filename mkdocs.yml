@@ -113,6 +113,9 @@ nav:
       - "Enunciado": projetos/projeto2.md
       - "Dicas": projetos/projeto2/dicas.md
       - "Deploy": projetos/projeto2/deploy.md
+    - "Projeto 3": 
+      - "Enunciado": projetos/projeto3.md
+      - "Teamwork": projetos/teamwork.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
   

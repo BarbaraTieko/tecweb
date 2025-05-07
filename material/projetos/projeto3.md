@@ -3,7 +3,7 @@
 
 !!! success "Entrega"
 
-    :date: 19/11/2024 (terça-feira)
+    :date: 27/05/2025 (terça-feira)
     
     :clock1: Commits até as 23:59
 
@@ -13,9 +13,13 @@
 
 
 !!! info "Github Classroom"
-    Link do Github Classroom: [Projeto 3](https://classroom.github.com/a/jLW-plfN){:target="_blank"}
+    Link do Github Classroom: [Projeto 3](https://classroom.github.com/a/Yg20oJAA){:target="_blank"}
 
-    Caso grupo vá trabalhar com projeto frontend e backend separados, acesse o link a seguir: [Projeto 3 - Frontend](https://classroom.github.com/a/imhTmAOP){:target="_blank"}
+    Caso grupo vá trabalhar com projeto frontend e backend separados, acesse o link a seguir: [Projeto 3 - Frontend](https://classroom.github.com/a/CJZjAPg8){:target="_blank"}
+
+
+!!! danger "Continuação do Projeto 2"
+    Caso seu grupo vá continuar o desenvolvimento do projeto 2, você **NÃO** deve utilizar o repositório do projeto 2. Você deve copiar os arquivos do projeto 2 para o repositório do projeto 3. 
     
 
 O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum projeto do seu interesse. Você pode desenvolver uma interface web interativa para alguma API, um web crawler/scrapper em conjunto com uma análise dos dados, um web service RESTful, enfim, o que você preferir, desde que o uso de alguma tecnologia web seja central para o projeto.
@@ -23,7 +27,7 @@ O objetivo deste projeto é aplicar os conhecimentos de tecnologias web em algum
 !!! danger "Importante"
     A sua proposta deve ser validada pelo professor antes de iniciar a implementação.
 
-    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/dstz82Dp4aQ7s11G6){target="_blank"}
+    Preencha o formulário a seguir: [Acesse o formulário](https://forms.gle/57jvWd6dAWCRMgef9){target="_blank"}
 
     Apenas um integrante do grupo deve preencher o formulário.
 
@@ -37,9 +41,9 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 3. Caso o projeto possua frontend desenhe um fluxo de tela de baixa fidelidade (desenho à mão) e adicione no repositório do projeto; Caso o seu projeto não tenha frontend, desenhe a arquiteura do projeto indicando quais tecnologias serão utilizadas e as principais funcionalidades do projeto.
 4. Neste projeto vocês devem utilizar o quadro de tarefas do GitHub;
 5. Vocês devem definir um cronograma, que deve ser apresentado no README do seu repositório. Este cronograma deve indicar o que é esperado ser entregue a cada sprint. No total teremos 3 sprints para o projeto.
-    - Sprint 1: 31/10 ~ 05/11
-    - Sprint 2: 05/11  ~ 12/11
-    - Sprint 3: 12/11 ~ 19/11
+    - Sprint 1: 08/05 ~ 13/05
+    - Sprint 2: 15/05  ~ 20/05
+    - Sprint 3: 22/05 ~ 27/05
 
 Sugestão: crie uma tasklist no README e vá marcando as tarefas conforme forem cumpridas (https://docs.github.com/en/github/managing-your-work-on-github/about-task-lists). **Importante:** seu cronograma deve ter entregas bem definidas para cada sprint. Elas podem (e devem?) ser atualizadas ao longo das sprints, mas é importante ter algum planejamento.
 
@@ -88,7 +92,7 @@ Para criar use os comandos;
 
 ### Commits
 
-
+Todos os integrantes devem ter commits significativos no repositório do projeto. Caso a professora não encontre commits significativos de algum integrante, o conceito do projeto poderá ficar limita ao conceito C/D/I.
 
 ## Pesos
 
@@ -106,7 +110,7 @@ A rubrica a seguir será utilizada na correção do Projeto 3:
 
 | Conceito | Descrição |
 | :------: | :-------- |
-|    A+    | Criou um arquivo Dockerfile e docker-compose.yml com instruções para rodar o projeto em um container Docker. Além disso, criou uma imagem no DockerHub e adicionou o link no README do repositório principal. |
+|    A+    | Implementou uma funcionalidade extra de nível médio/difícil |
 |    A    | Fez o deploy do projeto e adicionou o link no README do repositório principal. Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
 |    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código **e** entregou um vídeo com a demo do projeto |
 |    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura ou não entregou um vídeo demo|

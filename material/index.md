@@ -34,5 +34,7 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 - 18/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
 - ~~25/03: Entrega do [Servidor JS]~~
 - 07/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
-- 06/05: Entrega do [Projeto 2](projetos/projeto2.md)
+- ~~06/05: Entrega do [Projeto 2]~~
+- 10/05: Entrega do [Projeto 2](projetos/projeto2.md)
+
 
