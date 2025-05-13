@@ -108,14 +108,21 @@ Todos os integrantes devem ter commits significativos no repositório do projeto
 
 A rubrica a seguir será utilizada na correção do Projeto 3:
 
-| Conceito | Descrição |
-| :------: | :-------- |
-|    A+    | Implementou uma funcionalidade extra de nível médio/difícil |
-|    A    | Fez o deploy do projeto e adicionou o link no README do repositório principal. Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado. |
-|    B     | Entregou todas as funcionalidades prometidas **e** entregou o cronograma com entregas bem definidas **e** entregou o diagrama de arquitetura **e** com um README completo documentando bem o projeto, incluindo instruções para rodar o código **e** entregou um vídeo com a demo do projeto |
-|    C     | Entregou metade das funcionalidades essenciais **ou** não entregou o cronograma com as entregas bem definidas por semana **ou** não entregou o diagrama de arquitetura ou não entregou um vídeo demo|
-|    D     | Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta) |
-|    I     | Não entregou ou o código não executa |
+- **Conceito I**: Não entregou ou o código não executa.
+- **Conceito D**: Entregou apenas 1 funcionalidade essencial (ou a funcionalidade difícil está incompleta).
+- **Conceito C**: 
+    - Entregou metade das funcionalidades essenciais 
+    - **OU** não entregou o cronograma com as entregas bem definidas por semana 
+    - **OU** não entregou o diagrama de arquitetura/fluxo de tela de baixa fidelidade
+    - **OU** não entregou um vídeo demo
+- **Conceito B**: 
+    - Entregou todas as funcionalidades prometidas 
+    - **E** entregou o cronograma com entregas bem definidas 
+    - **E** entregou o diagrama de arquitetura/fluxo de tela de baixa fidelidade 
+    - **E** com um README completo documentando bem o projeto, incluindo instruções para rodar o código 
+    - **E** entregou um vídeo com a demo do projeto 
+- **Conceito A**: Fez o deploy do projeto e adicionou o link no README do repositório principal. Superou as expectativas do conceito B (baseado no capricho da entrega final: repositório organizado, o resultado está público na internet, resultado bem acabado.
+- **Conceito A+**: Implementou uma funcionalidade extra de nível médio/difícil.
 
 
 !!! danger "Importante"
