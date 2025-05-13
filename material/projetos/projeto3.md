@@ -66,7 +66,7 @@ Sugestão: crie uma tasklist no README e vá marcando as tarefas conforme forem 
     - Alguns exemplos de funcionalidades difíceis:
         - Autenticação de usuário; (Cadastro e Login tanto no frontend quanto no backend)
         - Funcionalidade que utiliza outra linguagem, ferramenta, framework não vistos em sala de aula.
-4. Defina e desenhe a arquitetura do projeto;
+4. Defina e desenhe a arquitetura do projeto **ou** o fluxo de tela de baixa fidelidade (desenho à mão) e adicione no repositório do projeto;
 5. Crie o quadro de tarefas no repositório do projeto e já atribua os responsáveis pelas tarefas;
 5. Inicie as sprints de desenvolvimento.
 
