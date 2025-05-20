@@ -121,7 +121,8 @@ nav:
       - "Teamwork": projetos/teamwork.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
-  
+    - "Avaliação Final": simulado/AF-simulado.pdf
+  - "Preparação para Avaliação Final": simulado/AF-preparacao.md 
 markdown_extensions:
   - abbr
   - tables

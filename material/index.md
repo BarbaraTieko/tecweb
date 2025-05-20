@@ -37,5 +37,6 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 - ~~06/05: Entrega do [Projeto 2]~~
 - 10/05: Entrega do [Projeto 2](projetos/projeto2.md)
 - 27/05: Entrega do [Projeto 3](projetos/projeto3.md)
+- 27/05: Preparação do Repositório da [Avaliação Final](simulado/AF-preparacao.md)
 
 
