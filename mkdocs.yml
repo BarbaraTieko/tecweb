@@ -119,6 +119,7 @@ nav:
     - "Projeto 3": 
       - "Enunciado": projetos/projeto3.md
       - "Teamwork": projetos/teamwork.md
+      - "Formulário Teamwork": projetos/formulario.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
     - "Avaliação Final": simulado/AF-simulado.pdf

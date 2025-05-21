@@ -38,5 +38,6 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 - 10/05: Entrega do [Projeto 2](projetos/projeto2.md)
 - 27/05: Entrega do [Projeto 3](projetos/projeto3.md)
 - 27/05: Preparação do Repositório da [Avaliação Final](simulado/AF-preparacao.md)
-
+- 15/05: Responder o [Formulário de Avaliação Teamwork - Sprint 1]
+- 22/05: Responder o [Formulário de Avaliação Teamwork - Sprint 2](https://forms.gle/yihjc7iVPxRJQxdL9)
 
