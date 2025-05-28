@@ -36,8 +36,10 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 - 07/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
 - ~~06/05: Entrega do [Projeto 2]~~
 - 10/05: Entrega do [Projeto 2](projetos/projeto2.md)
-- 27/05: Entrega do [Projeto 3](projetos/projeto3.md)
+- ~~27/05: Entrega do [Projeto 3]~~
+- 01/06: Entrega do [Projeto 3](projetos/projeto3.md)
 - 27/05: Preparação do Repositório da [Avaliação Final](simulado/AF-preparacao.md)
 - 15/05: Responder o [Formulário de Avaliação Teamwork - Sprint 1]
-- 22/05: Responder o [Formulário de Avaliação Teamwork - Sprint 2](https://forms.gle/yihjc7iVPxRJQxdL9)
+- 22/05: Responder o [Formulário de Avaliação Teamwork - Sprint 2]
+- 01/06: Responder o [Formulário de Avaliação Teamwork - Sprint 3](https://forms.gle/w5jFGhmfCFjaVzWo7)
 

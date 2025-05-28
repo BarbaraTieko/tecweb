@@ -3,7 +3,9 @@
 
 !!! success "Entrega"
 
-    :date: 27/05/2025 (terça-feira)
+    ~~~:date: 27/05/2025 (terça-feira)~~
+    
+    :date: 01/06/2025 (domingo)
     
     :clock1: Commits até as 23:59
 
