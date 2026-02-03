@@ -3,7 +3,7 @@
 !!! tip "Dica"
     Acesse o Github Classroom a seguir para criar o repositório do Projeto, pois o resultado deste handout já faz parte do primeiro projeto da disciplina.
 
-    [ :simple-github: Github Classroom - Projeto 01](https://classroom.github.com/a/MWnSLw4W){:target="_blank"}
+    [ :simple-github: Github Classroom - Projeto 01](https://classroom.github.com/a/oj8U22BD){:target="_blank"}
     
     
 ## Parte 1: Criando o servidor

@@ -1,6 +1,6 @@
 # Tecnologias Web
 
-Bem-vind@ ao curso de Tecnologias Web 2025/1
+Bem-vind@ ao curso de Tecnologias Web 2026/1
 
 **Professora**
 
@@ -12,8 +12,7 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 
 **Ninja**
 
-- Gabrielly Carneiro Susko
-- Vitor Hideki Pereira Katakura
+
 
 **Aulas:**
 
@@ -22,12 +21,12 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 
 **Atendimento:**
 
-- QUI 09:30 - 11:00
+- TER 09:30 - 11:00
 
 **Algumas Datas**
 
-- 07/02: Entrega do [ELI5](entregas/01-ELI5.md)
-- ~~14/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)~~
+- 13/02: Entrega do [ELI5](entregas/01-ELI5.md)
+<!-- - ~~14/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)~~
 - 17/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
 - ~~21/02: Entrega do [Projeto 1A]~~
 - 24/02: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
@@ -42,4 +41,4 @@ Bem-vind@ ao curso de Tecnologias Web 2025/1
 - 15/05: Responder o [Formulário de Avaliação Teamwork - Sprint 1]
 - 22/05: Responder o [Formulário de Avaliação Teamwork - Sprint 2]
 - 01/06: Responder o [Formulário de Avaliação Teamwork - Sprint 3](https://forms.gle/w5jFGhmfCFjaVzWo7)
-
+ -->

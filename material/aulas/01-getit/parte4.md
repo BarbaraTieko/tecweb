@@ -169,5 +169,5 @@ Parabéns! Agora você pode tentar fazer alguma das receitas da nossa lista de a
 - [Flexbox Defense](http://www.flexboxdefense.com/)
 - [Flexbox Froggy](https://flexboxfroggy.com)
 - [Grid Garden](https://cssgridgarden.com)
-- [CSS Diner](http://flukeout.github.io/)
-- Se você tem interesse por CSS, você vai gostar disso: https://rupl.github.io/unfold/
+- [CSS Diner](http://flukeout.github.io/){:target="_blank"}
+- Se você tem interesse por CSS, você vai gostar disso: [https://rupl.github.io/unfold/](https://rupl.github.io/unfold/){:target="_blank"}
