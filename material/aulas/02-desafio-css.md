@@ -54,7 +54,7 @@ O seu objetivo :octicons-goal-24: é se aproximar o máximo possível da página
 
 ## Instruções
 
-- [X] Acesse o github classroom pelo link: 
+- [X] Acesse o github classroom pelo link: [https://classroom.github.com/a/h1sj1VrJ](https://classroom.github.com/a/h1sj1VrJ)
 - [X] Você deve modificar apenas o arquivo **getit.css**.
 - [X] Todos os integrantes do grupo devem possuir contribuições no código.
 - [ ] :no_entry_sign: Não é permitido editar os arquivos `index.html` e `getit.js`.
