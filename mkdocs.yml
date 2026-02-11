@@ -44,9 +44,9 @@ nav:
       - "Handout Parte 2: Respondendo com páginas HTML": aulas/01-getit/parte2.md
       - "Handout Parte 3: Separando algumas responsabilidades": aulas/01-getit/parte3.md
       - "Handout Parte 4: Fazendo um formulário de criação de anotação": aulas/01-getit/parte4.md
-  #   - "02 - Desafio CSS": 
-  #     - "Slides": "aulas/02-desafio-css/Aula02.pdf"
-  #     - "Enunciado": aulas/02-desafio-css.md
+    - "02 - Desafio CSS": 
+      - "Slides": "aulas/02-desafio-css/Aula02.pdf"
+      - "Enunciado": aulas/02-desafio-css.md
   #   - "03 - Persistência de dados":
   #     - "Handout": aulas/03-persistencia-de-dados.md
   #     - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
@@ -100,7 +100,7 @@ nav:
   #   - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
-    # - "02 - Desafio CSS": aulas/02-desafio-css.md
+    - "02 - Desafio CSS": aulas/02-desafio-css.md
     # - "03 - Servidor JS" : entregas/03-servidor-js.md
   # - Projetos:
   #   - "Projeto 1A": 

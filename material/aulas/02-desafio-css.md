@@ -3,21 +3,17 @@
 ## Desafio CSS
 
 !!! success "Entrega"
-    :date: ~~14/02 (sexta-feira)~~
     
-    :date: 17/02 (segunda-feira)
+    :date: 23/02 (segunda-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Trios, duplas ou individual
 
-    :simple-github: Entrega via GitHub. 
-
-    Um integrante do grupo deve criar um repositório no GitHub para efetuar a entrega da atividade.
+    :simple-github: Entrega via GitHub Calssroom 
 
     **Importante:** Todos os integrantes do grupo devem possuir contribuições no código.
 
-    :fontawesome-solid-clipboard-question: [Responda o formulário com as informações do repositório](https://forms.gle/t1rm5RC8w3yBUb8y5){:target="_blank"}
     
 ## Objetivo
 
@@ -58,10 +54,7 @@ O seu objetivo :octicons-goal-24: é se aproximar o máximo possível da página
 
 ## Instruções
 
-Baixe os arquivos base no botão abaixo.
-
-[Download :material-download:](02-desafio-css/desafio-css.zip){ .md-button download}
-
+- [X] Acesse o github classroom pelo link: 
 - [X] Você deve modificar apenas o arquivo **getit.css**.
 - [X] Todos os integrantes do grupo devem possuir contribuições no código.
 - [ ] :no_entry_sign: Não é permitido editar os arquivos `index.html` e `getit.js`.
@@ -73,12 +66,8 @@ Baixe os arquivos base no botão abaixo.
 
 ## Entrega :material-truck-delivery:
 
-- A entrega deve ser feita via github. O grupo deve criar um repositório contendo os arquivos necessários.
-
-- A sua página deve **obrigatoriamente** estar disponível no GitHub pages seguindo [:point_right: estes passos](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site){:target="_blank"}
-
-- Será considerado o último commit enviado antes do prazo. 
-- O link do repositório deve ser informado em [ :point_right: Formulário](https://forms.gle/t1rm5RC8w3yBUb8y5){ :target="_blank"}.
+- A entrega deve ser feita via github. 
+- O grupo deve publicar o resultado no GitHub Pages. Para mais detalhes sobre como publicar no GitHub Pages, faça uma busca com algo do tipo "como publicar uma página HTML no GitHub Pages".
 
 
 ## Rubrica
@@ -107,11 +96,11 @@ A nota deste trabalho é a soma dos pontos abaixo. Será feita uma inspeção vi
 - Descontos:
     - [-1 pt] Página não disponível no GitHub Pages
     - No caso de entrega com atraso, a nota ficará limitada a 5 (equivalente ao conceito C).
-    - **Trabalhos não identificados (não respondeu ao formulário) serão considerados atrasados (veja o item acima).** 
     - A nota de trabalhos com modificações em outros arquivos além do README.md e do `docs/getit.css` será limitada a no máximo 7 (equivalente ao conceito B). Modificações em outros arquivos devem ser explicitamente aprovadas pelo professor.
-    - Caso não haja contribuição de todos os integrantes do grupo, a nota será limitada a 7 (equivalente ao conceito B).
+    - Caso não haja contribuição de todos os integrantes do grupo, a nota do grupo ficará limitada a 7 (equivalente ao conceito B).
 
 ## Observações importantes
 - Para este trabalho você não precisa se preocupar com a versão mobile da página. Ela será testada apenas em um monitor.
+- A quantidade de cards na primeira linha pode variar de acordo com a resolução da tela, então não se preocupe se a quantidade de cards na primeira linha for diferente da imagem de referência. O importante é que os espaçamentos, cores, rotações e demais características estejam corretas.
 
 
