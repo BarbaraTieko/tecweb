@@ -19,7 +19,7 @@ Para mais detalhes, acesse :point_right: [Documentação SQLite3](https://docs.p
 
 Neste handout vamos realizar a implementação do código utilizando a ferramenta Prairie Learn. Nela será possível testar o código utilizando uma versão do VS Code online.
 
-Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instance/177889/assessment/2510063](https://us.prairielearn.com/pl/course_instance/177889/assessment/2510063){: target="_blank"}
+Para isso, acesse o link a seguir: [https://us.prairielearn.com/pl/course_instance/210988/assessment/2650148](https://us.prairielearn.com/pl/course_instance/210988/assessment/2650148){: target="_blank"}
 
 <figure markdown="span">
     ![Login no Prairie Learn](img/prairielearn-login.png){ width="30%" }

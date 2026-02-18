@@ -47,14 +47,14 @@ nav:
     - "02 - Desafio CSS": 
       - "Slides": "aulas/02-desafio-css/Aula02.pdf"
       - "Enunciado": aulas/02-desafio-css.md
-  #   - "03 - Persistência de dados":
-  #     - "Handout": aulas/03-persistencia-de-dados.md
-  #     - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
-  #     - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
-  #     - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
-  #     - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
-  #     - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
-  #     - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
+    - "03 - Persistência de dados":
+      - "Handout": aulas/03-persistencia-de-dados.md
+      - "Handout Parte 1: Instalando o SQLite": aulas/03-persistencia-de-dados/parte1.md
+      - "Handout Parte 2: Criando a tabela": aulas/03-persistencia-de-dados/parte2.md
+      - "Handout Parte 3: Inserindo dados na tabela": aulas/03-persistencia-de-dados/parte3.md
+      - "Handout Parte 4: Consultando e selecionando dados": aulas/03-persistencia-de-dados/parte4.md
+      - "Handout Parte 5: Atualizando os dados": aulas/03-persistencia-de-dados/parte5.md
+      - "Handout Parte 6: Apagando dados": aulas/03-persistencia-de-dados/parte6.md
   #   - "04 - Django":
   #     - "Slides": "aulas/04-django/Aula04.pdf"
   #     - "Handout": aulas/04-django.md
