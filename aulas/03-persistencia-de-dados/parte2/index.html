@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://barbaratieko.github.io/tecweb/aulas/03-persistencia-de-dados/parte2/">
       
       
+        <link rel="prev" href="../parte1/">
+      
+      
+        <link rel="next" href="../parte3/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Parte 2: Criando a tabela - Tecnologias Web - Insper 2026/1</title>
+        <title>Handout Parte 2: Criando a tabela - Tecnologias Web - Insper 2026/1</title>
       
     
     
@@ -127,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Parte 2: Criando a tabela
+              Handout Parte 2: Criando a tabela
             
           </span>
         </div>
@@ -283,17 +287,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -307,7 +313,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Aulas
@@ -568,6 +574,295 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    03 - Persistência de dados
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            03 - Persistência de dados
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 1: Instalando o SQLite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando a tabela
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 2: Criando a tabela
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparacao-para-o-exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparação para o exercício
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-a-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criando a tabela
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando a tabela">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enviando-um-comando-sql-para-o-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enviando um comando SQL para o banco de dados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validando-o-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validando o resultado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validando o resultado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizando-o-banco-de-dados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizando o banco de dados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 3: Inserindo dados na tabela
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 4: Consultando e selecionando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 5: Atualizando os dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parte6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Handout Parte 6: Apagando dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -768,7 +1063,7 @@
 <p>Para mais detalhes, acesse <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> <a href="https://docs.python.org/3/library/sqlite3.html?highlight=sqlite#tutorial" target="_blank">Documentação SQLite3</a>.</p>
 <h2 id="preparacao-para-o-exercicio">Preparação para o exercício</h2>
 <p>Neste handout vamos realizar a implementação do código utilizando a ferramenta Prairie Learn. Nela será possível testar o código utilizando uma versão do VS Code online.</p>
-<p>Para isso, acesse o link a seguir: <a href="https://us.prairielearn.com/pl/course_instance/177889/assessment/2510063" target="_blank">https://us.prairielearn.com/pl/course_instance/177889/assessment/2510063</a></p>
+<p>Para isso, acesse o link a seguir: <a href="https://us.prairielearn.com/pl/course_instance/210988/assessment/2650148" target="_blank">https://us.prairielearn.com/pl/course_instance/210988/assessment/2650148</a></p>
 <figure>
     <a class="glightbox" href="../img/prairielearn-login.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Login no Prairie Learn" src="../img/prairielearn-login.png" width="30%" /></a>
     <figcaption>Login no Prairie Learn</figcaption>
