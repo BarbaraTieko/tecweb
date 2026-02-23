@@ -1,15 +1,13 @@
 # Projeto 1: Parte A
 
 !!! success "Entrega"
-    ~~:date: 21/02 (sexta-feira)~~
-    
-    :date: 24/02 (segunda-feira)
+    :date: 05/03 (quinta-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/MWnSLw4W){: target="_blank"}.
+    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/oj8U22BD){: target="_blank"}.
  
 ## Objetivos :octicons-goal-16:
 
@@ -42,14 +40,13 @@ A rubrica a seguir será utilizada na correção do Projeto 1A:
   - Ha pelo menos um commit por aula studio e um commit por funcionalidade; 
 - Todos os itens do Handout 1 foram implementados;
 - Implementou uma página HTML para o código 404;
-- Implementou a funcionalidade de favoritar anotações;
-- Ordenou as anotações por favorito, ou seja, as anotações favoritas devem aparecer primeiro;
 
 ## Conceito A+
 
 - Lógica de deletar, editar e favoritar foram implementadas no arquivo `views.py`;
 - Arquivo `servidor.py` possui a responsabilidade apenas de direcionar as requisições para o arquivo `views.py` de acordo com as rotas.
-- Implementou a funcionalidade de adicionar uma tag a uma anotação;
+- Implementou a funcionalidade de favoritar anotações;
+- Ordenou as anotações por favorito, ou seja, as anotações favoritas devem aparecer primeiro;
 
 
 ## Detalhes das Tarefas :material-magnify-plus-outline:

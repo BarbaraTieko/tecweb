@@ -6,7 +6,7 @@ No handout 01 várias trechos de código pronto foram apresentados e explicaçõ
 Para este projeto, vocês devem implementar as 4 funcionalidades a seguir:
 
 
-## **1. Estilo da página** :dress:
+## **1. Estilo da página** :dress: {#estilo}
 
 - O estilo css já foi implementado na atividade **Desafio CSS**, agora é necessário adicionar este estilo no código do *handout 01*.
 
@@ -111,11 +111,10 @@ Permitir a edição de anotações existentes;
   - Ha pelo menos um commit por aula studio e um commit por funcionalidade; 
 - Todos os itens do Handout 1 foram implementados;
 - Implementou uma página HTML para o código 404;
-- Implementou a funcionalidade de favoritar anotações;
-- Ordenou as anotações por favorito, ou seja, as anotações favoritas devem aparecer primeiro;
 
 ## Conceito A+
 
 - Lógica de deletar, editar e favoritar foram implementadas no arquivo `views.py`;
 - Arquivo `servidor.py` possui a responsabilidade apenas de direcionar as requisições para o arquivo `views.py` de acordo com as rotas.
-- Implementou a funcionalidade de adicionar uma tag a uma anotação;
+- Implementou a funcionalidade de favoritar anotações;
+- Ordenou as anotações por favorito, ou seja, as anotações favoritas devem aparecer primeiro;

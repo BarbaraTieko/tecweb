@@ -10,9 +10,14 @@ Bem-vind@ ao curso de Tecnologias Web 2026/1
 
 - Manoela Campos (manoelaclc1@insper.edu.br)
 
-**Ninja**
+**Ninjas**
 
-
+- Silas Brito 
+    - Presente durante as aulas
+- João Victor Braga
+    - Disponível no MS Teams da disciplina:
+        - SEG 07:30 - 09:30
+        - SEX 16:30 - 18:30
 
 **Aulas:**
 
@@ -27,8 +32,8 @@ Bem-vind@ ao curso de Tecnologias Web 2026/1
 
 - 13/02: Entrega do [ELI5](entregas/01-ELI5.md)
 - 23/02: Entrega do [Desafio CSS](aulas/02-desafio-css.md)
-<!-- - ~~21/02: Entrega do [Projeto 1A]~~
-- 24/02: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
+- 05/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
+<!-- - 24/02: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 - 18/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
 - ~~25/03: Entrega do [Servidor JS]~~
 - 07/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
