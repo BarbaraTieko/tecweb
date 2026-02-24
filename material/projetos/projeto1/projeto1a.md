@@ -1,7 +1,9 @@
 # Projeto 1: Parte A
 
 !!! success "Entrega"
-    :date: 05/03 (quinta-feira)
+    :date: ~~05/03 (quinta-feira)~~
+
+    :date: 07/03 (sábado)
     
     :clock1: Commits até as 23:59
 
