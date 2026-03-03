@@ -99,7 +99,7 @@ A página ainda não está nada elegante, mas já deve mostrar o conteúdo. Ou p
     {% endblock %}
     ```
 
-    Nessas linhas nós indicamos para a engine de template do Django que queremos usar a [template tag `static`](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#static){:target="_blank"} (template tags são as tags entre `{%%}`) e depois a utilizamos para carregar o caminho completo do arquivo estático `notes/img/logo-getit.png`.
+    Nessas linhas nós indicamos para a engine de template do Django que queremos usar a [template tag `static`](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/#static){:target="_blank"} (template tags são as tags entre `{%%}`) e depois a utilizamos para carregar o caminho completo do arquivo estático `notes/img/logo-getit.png`.
 
     Agora sim, a imagem deve ser carregada.
 

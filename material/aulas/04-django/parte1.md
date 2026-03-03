@@ -20,9 +20,9 @@ pasta-do-projeto/
 
 Como já vimos, a pasta `env` contém todos os arquivos referentes ao ambiente virtual. Os outros arquivos são:
 
-- `manage.py`: programa com [diversos comandos](https://docs.djangoproject.com/en/5.0/ref/django-admin/#available-commands){:target="_blank"} que automatizam tarefas relacionadas ao seu projeto Django.
+- `manage.py`: programa com [diversos comandos](https://docs.djangoproject.com/en/6.0/ref/django-admin/#available-commands){:target="_blank"} que automatizam tarefas relacionadas ao seu projeto Django.
 - `getit/__init__.py`: esse é um arquivo vazio. O `__init__.py` é a forma de dizer para o Python que a pasta `getit` é um pacote. Se quiser saber mais, consulte a [documentação do Python](https://docs.python.org/3/tutorial/modules.html#tut-packages){:target="_blank"}.
-- `getit/settings.py`: as configurações do seu projeto estão concentradas neste arquivo. Para saber mais, consulte a [documentação do Django](https://docs.djangoproject.com/en/5.0/topics/settings/){:target="_blank"}. Alguns exemplos: configuração do banco de dados, língua padrão da aplicação, localização das pastas de arquivos estáticos (CSS, JS, imagens, etc.).
+- `getit/settings.py`: as configurações do seu projeto estão concentradas neste arquivo. Para saber mais, consulte a [documentação do Django](https://docs.djangoproject.com/en/6.0/topics/settings/){:target="_blank"}. Alguns exemplos: configuração do banco de dados, língua padrão da aplicação, localização das pastas de arquivos estáticos (CSS, JS, imagens, etc.).
 - `getit/urls.py`: lembra das rotas na parte A? Este arquivo define uma função para ser executada para cada rota da sua aplicação.
 - `getit/asgi.py` e `getit/wsgi.py`: arquivos utilizados para disponibilizar o seu projeto em um servidor.
 

@@ -140,7 +140,7 @@ O Django já tem uma integração com o banco de dados. Para isso nós precisamo
 !!! question choice "Exercício"
     Nossa tabela já está quase pronta, porém, falta a coluna `content`.
     
-    Leia a [documentação do `#!python CharField`](https://docs.djangoproject.com/en/5.0/ref/models/fields/#charfield){:target="_blank"}. Ele não é recomendável para textos grandes. Crie na classe `#!python Note` um atributo `#!python content` com o tipo apropriado.
+    Leia a [documentação do `#!python CharField`](https://docs.djangoproject.com/en/6.0/ref/models/fields/#charfield){:target="_blank"}. Ele não é recomendável para textos grandes. Crie na classe `#!python Note` um atributo `#!python content` com o tipo apropriado.
 
     Existem diversos tipos de colunas que podem ser utilizados nos modelos. Por exemplo, relacionamentos entre entidades (tabelas) podem ser representados com o `models.BooleanField`, `models.DateField`, `models.DecimalField` entre outros.
 

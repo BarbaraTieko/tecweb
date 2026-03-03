@@ -4,7 +4,7 @@ Faça um teste na sua página. Preencha os dados no formulário e clique no bot�
 
 ![](img/csrf.png)
 
-O [*Cross Site Request Forgery*](https://docs.djangoproject.com/en/5.0/ref/csrf/){:target="_blank"} é um tipo de ataque no qual um site malicioso utiliza um link/form/javascript para submeter dados utilizando um usuário logado no seu sistema. Para se proteger desse tipo de ataque, todos os formulários do seu sistema devem enviar, através de um [campo escondido](https://www.w3schools.com/tags/att_input_type_hidden.asp){:target="_blank"}, um token gerado pelo servidor. Assim, o servidor saberá que a requisição foi feita por um cliente confiável.
+O [*Cross Site Request Forgery*](https://docs.djangoproject.com/en/6.0/ref/csrf/){:target="_blank"} é um tipo de ataque no qual um site malicioso utiliza um link/form/javascript para submeter dados utilizando um usuário logado no seu sistema. Para se proteger desse tipo de ataque, todos os formulários do seu sistema devem enviar, através de um [campo escondido](https://www.w3schools.com/tags/att_input_type_hidden.asp){:target="_blank"}, um token gerado pelo servidor. Assim, o servidor saberá que a requisição foi feita por um cliente confiável.
 
 Isso pode soar complexo, mas basta inserir uma template tag no seu formulário. O Django cuida do resto.
 
@@ -26,7 +26,7 @@ Isso pode soar complexo, mas basta inserir uma template tag no seu formulário. 
 
 ## Recebendo requisições POST
 
-O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!python request` recebido como argumento nas suas views possui um [atributo `method`](https://docs.djangoproject.com/en/5.0/ref/request-response/#django.http.HttpRequest.method){:target="_blank"}. Esse atributo é uma string contendo o nome do método em letras maiúsculas (`#!python 'GET'` ou `#!python 'POST'`). Além disso, caso seja uma requisição do tipo POST, haverá também um [atributo `POST`](https://docs.djangoproject.com/en/5.0/ref/request-response/#django.http.HttpRequest.POST){:target="_blank"} com um dicionário (na verdade um *dictionary-like*) cujas chaves são os nomes (atributo `#!html name`) dos inputs e os valores são os valores contidos no input.
+O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!python request` recebido como argumento nas suas views possui um [atributo `method`](https://docs.djangoproject.com/en/6.0/ref/request-response/#django.http.HttpRequest.method){:target="_blank"}. Esse atributo é uma string contendo o nome do método em letras maiúsculas (`#!python 'GET'` ou `#!python 'POST'`). Além disso, caso seja uma requisição do tipo POST, haverá também um [atributo `POST`](https://docs.djangoproject.com/en/6.0/ref/request-response/#django.http.HttpRequest.POST){:target="_blank"} com um dicionário (na verdade um *dictionary-like*) cujas chaves são os nomes (atributo `#!html name`) dos inputs e os valores são os valores contidos no input.
 
 !!! example "Exercício"
     Modifique o arquivo `notes/views.py` com o seguinte conteúdo:
@@ -48,7 +48,7 @@ O próximo passo é diferenciar o tipo da requisição recebida. O objeto `#!pyt
 
     ```
 
-    Como você pode ver no comentário, você tem a tarefa de criar um novo `Note` no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: [https://docs.djangoproject.com/en/5.0/topics/db/queries/#creating-objects](https://docs.djangoproject.com/en/5.0/topics/db/queries/#creating-objects){:target="_blank"}
+    Como você pode ver no comentário, você tem a tarefa de criar um novo `Note` no banco de dados com o título e conteúdo recebidos pela requisição. Esta página da documentação pode ser útil: [https://docs.djangoproject.com/en/6.0/topics/db/queries/#creating-objects](https://docs.djangoproject.com/en/6.0/topics/db/queries/#creating-objects){:target="_blank"}
 
 !!! tips "Outra forma de acessar valores em um dicionário Python"
     No código do exercício anterior, as linha marcadas estão acessando valores em um dicionário.
