@@ -1,15 +1,15 @@
 # Projeto 1: Parte B
 
 !!! success "Entrega"
-    :date: 18/03 (terça-feira)
+    :date: 24/03 (terça-feira)
     
     :clock1: Commits até as 23:59
 
     :material-account-group: Individual
 
-    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/vVvRdlC5){: target="_blank"}.
+    :simple-github: Entrega via [ :point_right: GitHub Classroom](https://classroom.github.com/a/LnEozipc){: target="_blank"}.
 
-Caso não tenha criado o repositório, acesse o link [Github classroom](https://classroom.github.com/a/vVvRdlC5){:target="_blank"} para criar o repositório para este projeto.
+Caso não tenha criado o repositório, acesse o link [Github classroom](https://classroom.github.com/a/LnEozipc){:target="_blank"} para criar o repositório para este projeto.
 
 Na [parte A](projeto1a.md) você implementou o servidor em Python sem a ajuda de nenhum framework. Nesta segunda parte, o objetivo é reimplementar as funcionalidades da parte A utilizando o Django. Além disso, vamos expandir as funcionalidades do sistema, utilizar um banco de dados mais robusto do que o SQLite e finalmente publicar o nosso sistema. Dependendo de quando você estiver lendo este enunciado, você ainda não saberá como fazer todas essas coisas, mas nós teremos alguns handouts para te auxiliar nesse processo.
 

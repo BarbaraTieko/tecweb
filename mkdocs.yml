@@ -64,12 +64,12 @@ nav:
       - "Handout Parte 4: O Django Admin": aulas/04-django/parte4.md
       - "Handout Parte 5: Usando templates": aulas/04-django/parte5.md
       - "Handout Parte 6: Trabalhando com formulários e o método POST": aulas/04-django/parte6.md
-  #   - "05 - Containers e Bancos de Dados":
-  #     - "Slides": "aulas/05-bd/Aula05.pdf"
-  #     - "Handout": aulas/05-bd.md
-  #     - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
-  #     - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
-  #   - "06 - Deploy": aulas/06-deploy.md
+    - "05 - Containers e Bancos de Dados":
+      - "Slides": "aulas/05-bd/Aula05.pdf"
+      - "Handout": aulas/05-bd.md
+      - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
+      - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
+    - "06 - Deploy": aulas/06-deploy.md
   #   - "07 - Javascript":
   #     - "Handout": aulas/07-javascript.md
   #   - "08 - Django REST":
