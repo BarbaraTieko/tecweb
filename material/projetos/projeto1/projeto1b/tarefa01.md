@@ -24,8 +24,8 @@ Implemente a funcionalidade de deletar uma anotação.
     <figcaption>Fluxo para implementar funcionalidade</figcaption>
 </figure>
 
-- Para implementar a funcionalidade de deletar, será necessário entender como definir uma nova rota no arquivo `urls.py`. Acesse o link a seguir e tente descobrir como você deverá realizar esta tareha [https://docs.djangoproject.com/en/5.0/topics/http/urls/#example](https://docs.djangoproject.com/en/5.0/topics/http/urls/#example){:target="_blank"}
-- Talvez você precise de algo deste link [https://docs.djangoproject.com/en/5.0/topics/db/queries/#retrieving-a-single-object-with-get](https://docs.djangoproject.com/en/5.0/topics/db/queries/#retrieving-a-single-object-with-get){:target="_blank"}
+- Para implementar a funcionalidade de deletar, será necessário entender como definir uma nova rota no arquivo `urls.py`. Acesse o link a seguir e tente descobrir como você deverá realizar esta tareha [https://docs.djangoproject.com/en/6.0/topics/http/urls/#example](https://docs.djangoproject.com/en/6.0/topics/http/urls/#example){:target="_blank"}
+- Talvez você precise de algo deste link [https://docs.djangoproject.com/en/6.0/topics/db/queries/#retrieving-a-single-object-with-get](https://docs.djangoproject.com/en/6.0/topics/db/queries/#retrieving-a-single-object-with-get){:target="_blank"}
 
 
 ## Editando uma anotação

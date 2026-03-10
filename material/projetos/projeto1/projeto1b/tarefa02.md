@@ -70,7 +70,7 @@ A tabela `Note` ganha uma coluna nova para armazenar o `id` da `Tag`. Essa colun
 - No backend (no `view.py`), se essa tag já existir, você deve associar a anotação a ela, senão, crie uma nova tag no banco de dados e associe à anotação.
 
 !!! tip "Outro Exemplo"
-    A documentação oficial do Django apresenta um exemplo que pode ser acessa em: [Documentação Oficial Django - Many-to-one](https://docs.djangoproject.com/en/5.0/topics/db/examples/many_to_one/){:target="_blank"}
+    A documentação oficial do Django apresenta um exemplo que pode ser acessa em: [Documentação Oficial Django - Many-to-one](https://docs.djangoproject.com/en/6.0/topics/db/examples/many_to_one/){:target="_blank"}
 
 **Obs.:** O sistema de tags deve utilizar a relação de um para muitos.
 
