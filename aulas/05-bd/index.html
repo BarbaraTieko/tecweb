@@ -1790,7 +1790,7 @@ Para isso, vá na pasta do seu usuário e procure pelo arquivo <code>.zprofile</
 Dentro do terminal do container, execute o comando a seguir para iniciar a linha de comando do Postgres:</p>
 <div class="language-text highlight"><pre><span></span><code>psql -h localhost -U postgres
 </code></pre></div>
-<p>Agora, utilize os comandos a seguir para criar o banco de dados e o usuário que serão utilizados pela sua aplicação (algumas configurações a seguir são recomendadas pela <a href="https://docs.djangoproject.com/en/5.0/ref/databases/#optimizing-postgresql-s-configuration" target="_blank">documentação do Django</a>):</p>
+<p>Agora, utilize os comandos a seguir para criar o banco de dados e o usuário que serão utilizados pela sua aplicação (algumas configurações a seguir são recomendadas pela <a href="https://docs.djangoproject.com/en/6.0/ref/databases/#optimizing-postgresql-s-configuration" target="_blank">documentação do Django</a>):</p>
 <div class="language-text highlight"><pre><span></span><code>CREATE DATABASE getit;
 CREATE USER getituser WITH PASSWORD &#39;getitsenha&#39;;
 ALTER ROLE getituser SET client_encoding TO &#39;utf8&#39;;
