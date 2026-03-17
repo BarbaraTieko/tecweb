@@ -67,8 +67,8 @@ nav:
     - "05 - Containers e Bancos de Dados":
       - "Slides": "aulas/05-bd/Aula05.pdf"
       - "Handout": aulas/05-bd.md
-      - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
-      - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
+      # - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
+      # - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
     - "06 - Deploy": aulas/06-deploy.md
   #   - "07 - Javascript":
   #     - "Handout": aulas/07-javascript.md
