@@ -4,7 +4,7 @@ Este projeto utiliza [MkDocs](https://www.mkdocs.org/) para geração de documen
 
 ## Criando o ambiente virtual
 
-
+teste
 # Crie o ambiente virtual
     
     python -m venv .venv
