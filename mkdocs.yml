@@ -123,6 +123,7 @@ nav:
   #     - "Formulário Teamwork": projetos/formulario.md
   - Simulado:
     - "Avaliação Intermediária": simulado/ai.md
+  - "Preparação para Avaliação Intermediária": aulas/ai-preparacao.md
   #   - "Avaliação Final": simulado/AF-simulado.pdf
   # - "Preparação para Avaliação Final": simulado/AF-preparacao.md 
 markdown_extensions:
