@@ -35,10 +35,9 @@ Bem-vind@ ao curso de Tecnologias Web 2026/1
 - ~~05/03: Entrega do [Projeto 1A]~~
 - 07/03: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
 - 24/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
-<!-- - 24/02: Entrega do [Projeto 1A](projetos/projeto1/projeto1a.md)
-- 18/03: Entrega do [Projeto 1B](projetos/projeto1/projeto1b.md)
-- ~~25/03: Entrega do [Servidor JS]~~
-- 07/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
+- 14/04: Entrega do [Servidor JS](entregas/03-servidor-js.md)
+
+<!-- 
 - ~~06/05: Entrega do [Projeto 2]~~
 - 10/05: Entrega do [Projeto 2](projetos/projeto2.md)
 - ~~27/05: Entrega do [Projeto 3]~~

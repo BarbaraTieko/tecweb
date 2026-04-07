@@ -70,8 +70,8 @@ nav:
       # - "Guia de Instalação WSL e Docker para Windows": aulas/05-bd/guia-wsl.md
       # - "Guia de Instalação WSL e Docker para Windows (v2)": aulas/05-bd/windows_docker_install.md
     - "06 - Deploy": aulas/06-deploy.md
-  #   - "07 - Javascript":
-  #     - "Handout": aulas/07-javascript.md
+    - "07 - Javascript":
+      - "Handout": aulas/07-javascript.md
   #   - "08 - Django REST":
   #       - "Slides": aulas/08-django-rest/Aula18.pdf
   #       - "Handout": aulas/08-django-rest.md
@@ -101,7 +101,7 @@ nav:
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
     - "02 - Desafio CSS": aulas/02-desafio-css.md
-    # - "03 - Servidor JS" : entregas/03-servidor-js.md
+    - "03 - Servidor JS" : entregas/03-servidor-js.md
   - Projetos:
     - "Projeto 1A": 
       - "Enunciado": projetos/projeto1/projeto1a.md
