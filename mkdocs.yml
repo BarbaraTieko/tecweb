@@ -72,9 +72,9 @@ nav:
     - "06 - Deploy": aulas/06-deploy.md
     - "07 - Javascript":
       - "Handout": aulas/07-javascript.md
-  #   - "08 - Django REST":
-  #       - "Slides": aulas/08-django-rest/Aula18.pdf
-  #       - "Handout": aulas/08-django-rest.md
+    - "08 - Django REST":
+        - "Slides": aulas/08-django-rest/Aula18.pdf
+        - "Handout": aulas/08-django-rest.md
   #   - "09 - Testes automatizados":
   #     - "TDD": aulas/09-TDD/0-tdd.md
   #     - "Pytest": aulas/09-TDD/1-pytest.md
