@@ -95,8 +95,8 @@ nav:
   #   - "11 - Autenticação Django REST":
   #     - "Django REST": aulas/10-autenticacao.md
   #     - "React Login": aulas/10-autenticacao/react-cadastro-e-login.md
-  # - "Material Auxiliar":
-  #   - "Usando Python com ambientes virtuais": auxiliar/venv.md
+  - "Material Auxiliar":
+    - "Usando Python com ambientes virtuais": auxiliar/venv.md
   #   - "Guia de Instalação WSL e Docker para Windows": https://github.com/InsperGuides/Guia-Instalacao-WSL-e-Docker---Windows
   - Entregas:
     - "01 - ELI5": entregas/01-ELI5.md
