@@ -2,7 +2,7 @@
 
 !!! success "Entrega"
 
-    :date: 06/05 (terça-feira)
+    :date: 05/05 (terça-feira)
     
     :clock1: Commits até as 23:59
 
@@ -11,13 +11,13 @@
     :simple-github: Entrega via Github Classroom
 
 !!! note "Antes de começar"
-    **Inception do Projeto até: 17/04(quinta-feira)** [[Clique aqui para acessar o formulário]](https://forms.gle/7Zmh4XAwCHyiQuyVA){:target="_blank"}
+    **Inception do Projeto** [[Clique aqui para acessar o formulário]](https://forms.gle/bVDsH7YXbN1qju1o6){:target="_blank"}
 
     **GitHub Classroom:**
     Para este projeto será necessário criar dois repositórios GitHub, um para o frontend :simple-react: e outro para o backend :simple-django:.
 
-    - :simple-react: Frontend: [https://classroom.github.com/a/gc4yI915](https://classroom.github.com/a/gc4yI915){:target="_blank"}
-    - :simple-django: Backend: [https://classroom.github.com/a/TQBeTOip](https://classroom.github.com/a/TQBeTOip){:target="_blank"}
+    - :simple-react: Frontend: [https://classroom.github.com/a/gXelChV6](https://classroom.github.com/a/gXelChV6){:target="_blank"}
+    - :simple-django: Backend: [https://classroom.github.com/a/aEPfXdw_](https://classroom.github.com/a/aEPfXdw_){:target="_blank"}
 
 O objetivo deste projeto é praticar o desenvolvimento e consumo de APIs REST.
 
@@ -47,7 +47,7 @@ O tema deste projeto é aberto, mas ele possui algumas restrições:
 
 3. Faça alguma requisição para a API escolhida (utilizando o Postman ou via axios) para verificar se ela está funcionando. Pois existem muitas APIs que acabam não funcionando da forma como esperamos;
 4. Liste 2 funcionalidades essenciais;
-5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário até o dia 22/04 (quinta-feira). O formulário deve ser preenchido para que o tema seja validado. [Clique aqui para acessar o formulário](https://forms.gle/7Zmh4XAwCHyiQuyVA){:target="_blank"}.
+5. Envie o Inception do Projeto 2 respondendo ao seguinte formulário [Clique aqui para acessar o formulário](https://forms.gle/bVDsH7YXbN1qju1o6){:target="_blank"}.
 6. Faça um fluxo de tela de baixa fidelidade para o frontend. E liste todas endpoints que você vai precisar implementar no backend. O fluxo de tela poderá ser feito no papel, na lousa ou afins. O importante é que você tenha um fluxo de tela definido antes de começar a implementação do frontend. Deixe uma foto do fluxo de tela no repositório do projeto do frontend. A lista de endpoints deverá ser descrita no README do repositório do backend.
 
 **IMPORTANTE**: Faça o commit do fluxo de tela e do README do backend antes do início da implementação do projeto. O fluxo de tela e o README do backend serão avaliados na rubrica do projeto.
@@ -62,7 +62,7 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
 2. Funcionalidade essencial 2 indicada no Inception;
 3. Implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.
 4. Colocou em produção (está disponível na internet) 
-
+<!-- 
 ### Rubrica 
 
 - **Conceito I**: Não entregou ou o código não executa;
@@ -88,8 +88,8 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
 !!! danger "Importante"
     É importante a contribuição de ambos os membros da dupla para a implementação do projeto. Caso a contribuição não seja equilibrada, o conceito final do projeto poderá ser diferente para cada membro da dupla.
 
-    Além da rubrica, caso alguma das restrições citadas no enunciado não seja cumprida, poderão ocorrer descontos no conceito final do projeto.
+    Além da rubrica, caso alguma das restrições citadas no enunciado não seja cumprida, poderão ocorrer descontos no conceito final do projeto. -->
 
-# Participação 
+<!-- # Participação 
 
-Faltas em aulas estúdio e frequência de commits relevantes podem influenciar na nota final do projeto.
+Faltas em aulas estúdio e frequência de commits relevantes podem influenciar na nota final do projeto. -->
