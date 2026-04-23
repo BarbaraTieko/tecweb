@@ -62,8 +62,10 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
 2. Funcionalidade essencial 2 indicada no Inception;
 3. Implementou o frontend usando React. Além disso, implementou estilo CSS ou utiliza algum framework CSS para o frontend.
 4. Colocou em produção (está disponível na internet) 
-<!-- 
+
 ### Rubrica 
+
+Caso grupo não apresente o projeto no dia da entrega, o conceito final do projeto ficará limitada ao conceito C.
 
 - **Conceito I**: Não entregou ou o código não executa;
 - **Conceito D**: Entregou apenas 1 funcionalidade essencial;
@@ -81,15 +83,13 @@ A rubrica a seguir será utilizada na correção do Projeto 2:
     - **E**  Colocou o backend e o frontend em produção.
 - **Conceito A+**:
     - Atingiu o conceito A.
-    - **E** Implementou testes de integração para o projeto backend.
-    - **E** Todas as endpoints da API foram testadas.
-    - **E** Existe mais de um cenário de teste para cada endpoint.
+    - **E** Implementou mais funcionalidades além das funcionalidades essenciais indicadas no Inception. Esta funcionalidade extra deve ser validada pela professora antes de ser implementada.
 
 !!! danger "Importante"
     É importante a contribuição de ambos os membros da dupla para a implementação do projeto. Caso a contribuição não seja equilibrada, o conceito final do projeto poderá ser diferente para cada membro da dupla.
 
-    Além da rubrica, caso alguma das restrições citadas no enunciado não seja cumprida, poderão ocorrer descontos no conceito final do projeto. -->
+    Além da rubrica, caso alguma das restrições citadas no enunciado não seja cumprida, poderão ocorrer descontos no conceito final do projeto.
 
-<!-- # Participação 
+# Participação 
 
-Faltas em aulas estúdio e frequência de commits relevantes podem influenciar na nota final do projeto. -->
+Faltas em aulas estúdio e frequência de commits relevantes podem influenciar na nota final do projeto.
