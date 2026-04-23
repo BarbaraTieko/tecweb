@@ -81,6 +81,7 @@ Caso grupo não apresente o projeto no dia da entrega, o conceito final do proje
 - **Conceito A**:
     - Atingiu o conceito B.
     - **E**  Colocou o backend e o frontend em produção.
+    - **E** Utilizou variáveis de ambiente para armazenar informações sensíveis, como chaves de API, senhas, etc. 
 - **Conceito A+**:
     - Atingiu o conceito A.
     - **E** Implementou mais funcionalidades além das funcionalidades essenciais indicadas no Inception. Esta funcionalidade extra deve ser validada pela professora antes de ser implementada.
@@ -93,3 +94,11 @@ Caso grupo não apresente o projeto no dia da entrega, o conceito final do proje
 # Participação 
 
 Faltas em aulas estúdio e frequência de commits relevantes podem influenciar na nota final do projeto.
+
+# Apresentação dia 05/05
+
+Cada grupo terá 10 minutos para apresentar o projeto. A apresentação deve conter:
+
+- Uma breve explicação do tema escolhido e da API externa utilizada;
+- Demonstração das funcionalidades implementadas;
+- Endpoints implementados no backend;
